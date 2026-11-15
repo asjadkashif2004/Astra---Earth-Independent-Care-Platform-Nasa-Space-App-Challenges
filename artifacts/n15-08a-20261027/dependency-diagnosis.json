@@ -1,0 +1,10 @@
+{
+  "task": "N15-08A",
+  "timer_fix": "unref TypeError resolved; same-handle cancellation regression passes",
+  "remaining_fixture_gap": "VM context omits Node's Buffer global, used in sha256(Buffer.from(prepared.prompt)) before executeLocal",
+  "read_only_reproduction": {"expression": "Buffer.from(\"fixture\")", "vm_default_typeof_Buffer": "undefined", "error": "ReferenceError: Buffer is not defined"},
+  "observed_failures": ["positive mock returned ABSTAIN instead of VERIFIED_QUOTATION", "abstention mock execution count 0 instead of 1", "timeout/missing-model mock execution count 0 instead of 1", "periodic-memory mock execution count 0 instead of 1"],
+  "interpretation": "Confirmed missing dependency consistent with failed positive/pre-execution controls. This does not establish model/runtime incompatibility or that no other QA issues remain.",
+  "after_failure": "No fixture correction, test retry, prompt alteration or native execution",
+  "stop_condition": "Mandatory QA not fully passing; live execution denied"
+}

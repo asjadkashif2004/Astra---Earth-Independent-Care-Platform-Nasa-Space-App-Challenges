@@ -1,0 +1,3 @@
+237 JavaScript files parsed and local imports checked; 0 errors. This is syntax/contract validation, not TypeScript compilation.
+(node:2466) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)

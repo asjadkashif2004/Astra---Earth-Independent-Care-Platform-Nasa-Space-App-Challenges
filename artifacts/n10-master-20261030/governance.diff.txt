@@ -1,0 +1,294 @@
+--- a/AGENTS.md
++++ b/AGENTS.md
+@@ -3,6 +3,7 @@
+ Read `docs/SESSION_HANDOFF.md`, `docs/MODULE_TRACKER.md`, `docs/FEATURE_AUDIT.md`, `docs/MASTER_PLAN.md`, `docs/DECISIONS.md`, and the relevant source before changing code. The primary specification is `research/ASTRA_Deep_Research.md` (read completely before a new architecture change); compare `research/ASTRA_Deep_Research.pdf` for presentation details. Original root research files are preserved.
+ 
+ ## Permanent user approval workflow — effective 2026-10-17
++- **Latest N10 master mission —2026-10-30; implementation BLOCKED / STOP.** Read [report](docs/N10_MASTER_COMPLETION_REPORT.md), [matrix](artifacts/n10-master-20261030/requirement-matrix.json) and [inactive proposal](docs/DE_N10_SYNTHETIC_01.md). Exact N10 is Sleep, cognition and countermeasures; original N01/N03/N07/N09 gates retained. Explicit CORE_AI_PRIORITY N03 boundary requires satisfaction or a separate N10 exception; DE-AC20-01 covers N04/N05 only and N09-D01 does not establish downstream eligibility. Current mission preserves those gates. No N10 feature/app implementation, activation, operational/sealed DB access, designated startup, model or acquisition occurred. One QA-only frontend-smoke import mapping repaired a preexisting data-URL resolution defect. Initial176tests174pass/2fail; affected47/47rerun plus129unchanged passes cover176distinct baseline cases, not N10 acceptance; initial failures preserved. No new browser workflow ran. N10 Not Started/dependency-blocked; all other statuses/reviews and N16 source/evidence unchanged, sealed DB not rehashed. Proposed DE-N10-SYNTHETIC-01 is inactive; separate explicit activation/consolidated implementation approval required. STOP; no automatic next module.
+ - **Latest N16 final engineering mission —2026-10-30; ENGINEERING COMPLETE for authorized synthetic demo / STOP.** Read [current comprehensive report](docs/N16_MASTER_COMPLETION_REPORT.md), [contract](docs/N16_FINAL_ENGINEERING_CONTRACT.md), [standalone demo](artifacts/n16-final-20261030/native/demo.html). Fresh6-start authority; actual4workers/4readOnly connections/4fixed SELECTs/exit0, risk-first real coordinator1886.575312ms/18committed events/4results, cold recovery COMPLETE/replay0. FixedSelect v2 enforces one prepare/step while permitting exactly one risk-only step reauthorization after expected column reads; all other actions/contexts/objects denied. Actual39callbacks:5SELECT/34READ, five args/null source context, risk2compilations/1statement. No global SELECT allowance or authorizer bypass; old F/G/legacy paths unchanged. Risk is authored synthetic/N02_provenance UNKNOWN/actual_N02_event:false; no alert/diagnosis/all-clear. 31samples/12events/43rows reconcile, source full SHA4b1a3d8d.../modes/instance/main-only inventory unchanged, no network/model/operational access.583tests pass/0fail/skip;195preflight syntax files pass, final source checks and preservation in artifact manifest. Reported worker kernel55.082031MiB/max monitored84.996094MiB/runtime counted23.814227MiB; sampled/monitored limitations retained. Recorded standalone HTML/JSON/response/accessible controls delivered; no active Health Agent integration, N02/ack/Earth/Scenario Lab/N14/N15 change. Old5-start latch and G INCONCLUSIVE immutable. Current2unused starts/resources expire; run is gated closed at delivery. Formal N16 stays In Progress: broader graph, N10/N12/N14/conditional N15/transitive/scientific/browser/operational permission gates remain. All other statuses/reviews unchanged, N15 rule inactive/prompt unpromoted. STOP; no automatic new module or integration.
+ - **Latest consolidated N16 engineering mission —2026-10-29; PARTIAL / NATIVE HALTED / STOP.** Read [master report](docs/N16_MASTER_COMPLETION_REPORT.md), [matrix/contract](docs/N16_MASTER_CONTRACT.md), [saved standalone demo](artifacts/n16-master-20261029/native/demo.html). Owner approved finite existing-designated-scope engineering,12total starts/max4per failing stage,512MiB/64MiB/no network. Actual5starts/3successful tools: vitals103/min, qualitygood0.99/artifactfalse/valuewithheld with8/8sample reconciliation, authored baseline68/4.5/min. Two risk attempts failed; second captures step-phase second SQLITE_SELECT authorization callback/code23. One fixed statement prepared, not proof of a second application query; internal reprepare reason unproven. Strict guard/latch retained, budget halted UNAUTHORIZED_SQL; no more native work or unused permission. Coordinator18-event FAILED traces preserve3committed/1failed; second attempt recovers three without replay, cold recovery COMPLETE means complete FAILED evidence, not four-tool success.247deterministic+272focused regressions=519passes/0final failures, syntax/import check clean. Original G stays INCONCLUSIVE/all original evidence intact. No application/Health Agent integration, operational DB, model, monitoring or source/query/containment change. Only preexisting executable edit is QA scripts/check.mjs import parser; new standalone modules/CLI/tests/diffs under report. Memory maxobserved92.203125MiB/runtimecharged19.793901MiB, no hard quota/continuous RSS claim; failed-native exact times absent, reporting fix QA-only. All original N16/full/transitive/scientific gates open and statuses unchanged; N15 rule inactive/prompt unpromoted. Next blocked decision is callback-vs-statement contract compatibility plus fresh consolidated qualification authority, not automatic replay or another micro-task. STOP.
+ - **Latest N16-06H resource-journal correction — 2026-10-29; QA-only PASS / STOP.** Read [completion](docs/N16_06H_COMPLETION.md), [accounting contract](docs/N16_06H_CONTRACT.md).37/37mock/disposable-JSONL controls and three syntax checks pass; native/SQLite/SQL/sealed-source-byte/mount/network actions0. Confirmed pre-ack counter, unsynchronized append/collection and missing final-reconciliation defects; exact historical G row-loss cause still UNCONFIRMED and G stays INCONCLUSIVE. New parent-only resource-journal helper serializes collection/writes with attempted/accepted/appended/durable counters, IDs/hash chain, fsync/readback/close acknowledgement; quality controller requires reconciled counts before committed result/PASS. No filtering/aggregation. Sole existing code change is that controller;586other protected hashes and106table rows unchanged, all G outcomes/journal/traces retained. No worker/query/source/auth/containment changes, source/donor not rehashed. Fsync is OS acknowledgement; hung IO may remain pending after250ms deadline, no native or universal durability certification. No exception/resource renewal or replay. Exactly one next proposal: separately approved fresh one-start get_data_quality qualification with new output/pins and explicit source/512MiB/64MiB resources; do not start it, remaining tools, Health Agent or Qwen automatically. All statuses/reviews/full gates unchanged; N15 rule inactive/prompt unpromoted. STOP.
+--- a/docs/MASTER_PLAN.md
++++ b/docs/MASTER_PLAN.md
+@@ -1,4 +1,8 @@
+ # ASTRA controlled development roadmap
++
++## N10 master mission —2026-10-30; implementation dependency-blocked / STOP
++
++[Report](N10_MASTER_COMPLETION_REPORT.md) maps exact sleep/cognition/countermeasure requirements and interfaces. No active N10 exception covers N03 Partial or unfinished N07/N09; conditional owner approval preserves these gates. Only read-only audit, existing isolated QA and one QA-loader repair completed. Initial174/176passes, affected47/47rerun and129unchanged passes cover176distinct baseline checks; no N10 feature/browser acceptance. [Proposal](DE_N10_SYNTHETIC_01.md) inactive. N10 Not Started/dependency-blocked; all other statuses/prerequisites/reviews and N16 evidence unchanged. No automatic implementation or next module.
+ 
+ ## N16 final authorized engineering —2026-10-30; COMPLETE scope, formal module In Progress / STOP
+ 
+@@ -310,7 +314,7 @@
+ | N07 Public data acquisition foundation — **In Progress;Sleep-EDF/RadLab blocked;STOP** | Allowlist,version/license/attribution/hash manifests,resumable cache,subject/time splits;small public BIDMC/Sleep-EDF/PTT samples and OSDR/RadLab metadata. R36/R51–R54/R67. Three earlier accepted originals,two cards/unexecuted policies retained.Sleep-EDF fixed streaming/EDF foundation exists butPSGis incomplete,no accepted pair/card. | N01 Complete;bounded Sleep-EDF task exhausted;source/access and separate approval for later tasks |72focused passes/1real-pair skip,94-file check.Publisher metadata verified,PSG300sdeadline left1,146,508bytes,no annotation request/retry.N07_BIDMC_COMPLETION/E25 acceptance retained;N07_SLEEP_EDF_COMPLETION/E26 does not close Sleep sample gate.PTT,named metadata,RadLab,cards and verified splits remain.Full N13 remains gated;initial slice eligible for separate approval only under DE-N07-N13-01. |
+ | N08 Binary waveform/CSV ingest and replay | Chunk table/object persistence,1–5 s binary channels, authorized read/ingest, public/CSV replay, decimation, signal quality/R-peaks/derived values, optional BP only from verified source. R08/R12/R16/R35/R36/R53. | N01,N07; N06 for twin | Chunk integrity/order/auth tests, actual public replay UI and beat synchronization with source/license labels, memory/throughput/retention checks; no per-sample JSON. |
+ | N09 Longitudinal simulator and baseline archive — **In Progress; N09-D01 delivered; STOP** | Dated personal baselines, actual24 h circadian/sleep/activity schedules, multiday deficit/drift, independent artifact/contradiction labels, versioned scenario manifests and stop behavior. R07/R20/R34/R35/R37. [N09-D01 completion](N09_D01_COMPLETION.md) covers only the selected-crew fixed HR demo. | N01,N02,N07,N08 for full module; [DE-N09-DEMO-01](DE_N09_DEMO_01.md) supported only the delivered separately approved synthetic scalar slice. No full-module prerequisite waiver or follow-on approval. | Seed/label replay equality, clock-cadence invariance, true multiday evidence, time/crew/scenario separation and no label leakage; preserve primary demo. N09-D01's ownership/provenance/persistence/restart/rollback/role/queue tests and bounded browser evidence pass, but cannot close these full-module gates. |
+-| N10 Sleep, cognition and countermeasures | Sleep-stage/schedule/deficit, consented optional mood/task checks, personal longitudinal task baseline, exercise sessions/workload/adherence/movement, synchronized replay. R28/R53/R55/health domains. | N01,N03,N07,N09 | Actual browser early-click/range/skip/task timing tests, personal scope, daily/stage aggregations, countermeasure histories, no diagnostic score/ranking; explicit device limits. |
++| N10 Sleep, cognition and countermeasures — **Not Started; dependency-blocked; STOP** | Sleep-stage/schedule/deficit, consented optional mood/task checks, personal longitudinal task baseline, exercise sessions/workload/adherence/movement, synchronized replay. R28/R53/R55/health domains. | N01,N03,N07,N09 | Actual browser early-click/range/skip/task timing tests, personal scope, daily/stage aggregations, countermeasure histories, no diagnostic score/ranking; explicit device limits. |
+ | N11 Explainable advanced anomaly evaluation | EWMA and multivariate Isolation Forest or measured equivalent, sensor quality/fusion, reproducible train/eval/registry; temporal model only if better than simpler baseline. R35/R37/R38/R59. | N02,N07–N10 | Precision/recall/false alerts per crew-day/latency/scenario matrix, artifact recall/false failure, subject/time/scenario holdouts, interpretable contributors and CPU budget. Document rejected models. |
+ | N12 Prediction and model evidence | Personal-SD/raw-unit targets, short horizons and deterioration trajectory evidence, abstention/calibrated uncertainty, time/crew/scenario-disjoint evaluation and versioned model cards/artifacts. R09/R24/R39/R56. | N09,N11 | MAE/medianAE/error-by-horizon/coverage, independent calibration, out-of-domain abstention and<250 ms CPU; no disease forecasts. Preserve current limited forecast until replacement verified. |
+ | N13 Research corpus ingestion — **In Progress; N13-01/02/03 delivered; STOP** | Approved HRP/standards/NTRS/OSDR/peer-reviewed documents, full source/version/authority/rights/page/section/chunk hashes. R10/R21/R42/R51/R54. Two originals/frozen corpus and targeted additive curation retained. | N07 for full module; [DE-N07-N13-01](DE_N07_N13_01.md), [N13-02 extension](DE_N07_N13_01_N13_02.md) and [N13-03 continuation](DE_N07_N13_01_N13_03.md) bounded tasks exhausted; no N13 closure waiver | [N13_03_COMPLETION](N13_03_COMPLETION.md): 40 technically reviewed expectations, 0 independent approvals; eight coverage areas/nine exclusions/four numerically excluded tables. 46 focused passes/107-file check/offline verification. Full closure still requires owner acceptance of coverage/exclusions, actual evidence approval of 30–50 expectations and legitimate N07 prerequisite satisfaction/decision. Full N14 remains gated; only the new DE-N13-N14-01 research task is eligible for separate approval. |
+--- a/docs/MODULE_TRACKER.md
++++ b/docs/MODULE_TRACKER.md
+@@ -1,4 +1,12 @@
+ # Module tracker
++
++## N10 master mission delivered —2026-10-30; implementation BLOCKED / STOP
++
++[Report](N10_MASTER_COMPLETION_REPORT.md)/[matrix](../artifacts/n10-master-20261030/requirement-matrix.json):0/10N10 groups fully qualified, no feature implementation. Existing audit/QA and minimal QA-only import mapping correction delivered. Initial174/176passes/2preserved failures; affected47/47rerun plus129unchanged passes cover176distinct baseline cases. Full/browser workflow NOT RUN. [Proposal](DE_N10_SYNTHETIC_01.md) inactive; original dependencies/reviews/N16 artifacts and unrelated statuses preserved. STOP for the explicit sequencing decision.
++
++### Initial preflight authority and boundary
++
++Owner approved one consolidated N10 mission subject to existing active governance. Authoritative scope is Sleep, cognition and countermeasures; original dependencies N01/N03/N07/N09 remain. N03 Partial and unfinished N07/N09 are not covered by an N10 exception; CORE_AI_PRIORITY's explicit N03 boundary and this tracker's prerequisite rule prevent implementation. No application or N16 changes, operational/source database access or exception activation may be inferred. Independently authorized work: read-only scope/interface audit, unchanged isolated memory/temporary regression fixtures, preservation and documentation of a concrete inactive sequencing proposal. Record baseline QA separately from N10 acceptance; preserve all statuses and full review gates. No N10 implementation has started.
+ 
+ ## Final N16 engineering delivered —2026-10-30; authorized scope COMPLETE / STOP
+ 
+@@ -419,7 +427,8 @@
+ | N14 Semantic retrieval and support validation | **In Progress; N14-01/02/03/04/05 bounded slices delivered; inactive/STOP** | [N14-05](N14_05_COMPLETION.md) prepares frozen policies/neutral packet/validation, with zero new questions or independent approvals/evaluation. Lexical stays operational baseline; no production rank/claim/index/evidence change. Original benefit gate unmet; numerical parity, actual independent review/fresh evaluation, full N13, paraphrase support/integration gates remain. No further task, N15/N16 or integration approved |
+ | N15 Offline language-model assistance | **In Progress; N15-10 delivered; inactive/STOP** | [N15-10](N15_10_COMPLETION.md):92focused passes; separate saved-output gate, explicit quotation ACCEPT/attribution only, numeric Hz veto. No reviewed factual rule: factual answers ABSTAIN. N15-08B discrimination failure preserved; no prompt promotion, independent scientific/clinical/release validation or integration. |
+ | N16 Executed Crew Health Agent | **In Progress; authorized synthetic engineering4/4 qualified; STOP** | [Final report](N16_MASTER_COMPLETION_REPORT.md): four actual SQL tools/coordinator/18events/cold recovery0, standalone recorded demo,583focused passes;4fresh native starts and exact source integrity. Earlier partial campaign/G INCONCLUSIVE preserved. No operational/LLM integration or full prerequisite closure; N10/N12/N14 and conditional N15/full gates retained. |
+-| N08,N10–N12,N17–N26 | **Awaiting separate approvals**,no implementation authorized | Existing dependency/verification table in MASTER_PLAN retained |
++| N10 Sleep, cognition and countermeasures | **Not Started; dependency-blocked; STOP** | Conditional consolidated mission approval recorded; original N03/N07/N09 gates unmet; [proposal](DE_N10_SYNTHETIC_01.md) inactive. [Report](N10_MASTER_COMPLETION_REPORT.md). |
++| N08,N11–N12,N17–N26 | **Awaiting separate approvals**,no implementation authorized | Existing dependency/verification table in MASTER_PLAN retained |
+ | AC-20 | **Open / Unverified;release blocker** | N06 integrated3D evidence and N26 final revalidation;minimum judge hardware still undesignated |
+ 
+ Recommended priority branch:N07→N13→N14→optional N15. DE-N07-N13-01 adds only the initial publication-slice sequencing exception;full prerequisite edges remain. Full N16 remains gated on N02,N10,N12,N14,and N15 if used;a static template/allowlist is not an executed agent. N10/N17/N18's N03 prerequisites are outside DE-AC20-01's N04/N05-only exception and need satisfaction or a separately approved explicit exception before implementation. Neither completed-sleep repair nor anatomy deferral closes those gates. No module IDs,medical rules or release criteria are changed.
+--- a/docs/CORE_AI_PRIORITY.md
++++ b/docs/CORE_AI_PRIORITY.md
+@@ -1,4 +1,8 @@
+ # Core AI priority and anatomy deferral — 2026-10-23
++
++## N10 conditional mission —2026-10-30; dependency-blocked / STOP
++
++[Report](N10_MASTER_COMPLETION_REPORT.md) confirms N01/N03/N07/N09 prerequisites and the explicit N03 boundary below. DE-AC20-01 does not cover N10 and N09-D01 supplies no full downstream eligibility. Owner preserves these gates; no N10 implementation started. Audit/existing QA and a minimal QA-loader repair delivered;176distinct baseline cases have passing applicable results, with initial2failures preserved. [Consolidated-build proposal](DE_N10_SYNTHETIC_01.md) inactive. N10 Not Started; N12/N16 readiness and all other statuses/scientific gates unchanged. No N16/LLM/operational authority carries forward.
+ 
+ ## N16 final synthetic engineering complete —2026-10-30; formal gates open / STOP
+ 
+--- a/docs/SESSION_HANDOFF.md
++++ b/docs/SESSION_HANDOFF.md
+@@ -1,4 +1,18 @@
+-# ASTRA session handoff — authorized N16 synthetic engineering COMPLETE; formal N16 In Progress; STOP
++# ASTRA session handoff — N10 implementation dependency-blocked; baseline QA delivered; STOP
++
++## LATEST N10 master mission —2026-10-30; BLOCKED before feature implementation
++
++Read [report](N10_MASTER_COMPLETION_REPORT.md), [matrix](../artifacts/n10-master-20261030/requirement-matrix.json), [inactive exception](DE_N10_SYNTHETIC_01.md) and [verification](../artifacts/n10-master-20261030/final-validation.json).
++
++N10 is Sleep, cognition and countermeasures, including stages/schedules/deficit, consented optional mood/task, personal longitudinal task reference, exercise/workload/adherence/movement and synchronized replay. Original N01/N03/N07/N09 prerequisites remain. No active exception covers N03 Partial/unfinished N07/N09; explicit CORE_AI_PRIORITY/MODULE_TRACKER rules block implementation. Owner's conditional mission preserves those gates. N10 stays Not Started.
++
++Initial unchanged baseline QA176checks174pass/2fail. Root cause: old data-URL smoke harness omitted the authentic fixture-trace import mapping. Added one QA-only mapping; original helper and failures preserved. Affected web/fixture-viewer47/47pass; other129unchanged passes give passing applicable results for176distinct cases, not a clean single rerun or N10 acceptance. Full new/browser workflow NOT RUN.
++
++Only existing executable changed: scripts/frontend-smoke.mjs. No app/service/package/test/N16 implementation, N02/alert/telemetry/Scenario Lab/model/mount/permission changes. Existing tests use memory/fresh temp fixtures; no operational/sealed-source DB access, designated startup, inference or acquisition. No scratch entries remain; sampled resources and limitations are in the report. N16 historical artifacts/source pin retained without opening/rehashing sealed DB.
++
++One concrete unblocking decision: explicitly activate DE-N10-SYNTHETIC-01 and authorize the consolidated synthetic N10 build. Proposal inactive now; no unused N16 startup/resource permission survives.
++
++N16/N15/N14/N13/N07/N09 remain In Progress; N16 synthetic engineering complete. N01/N02/N04 Complete, N03 Partial, N05/N06 Deferred, AC-20 Open/Unverified; all unrelated statuses/reviews unchanged, N15 rule inactive/prompt unpromoted. STOP; no automatic N10 implementation, N16 replay or another module. Earlier checkpoints below are preserved history.
+ 
+ ## LATEST final engineering mission —2026-10-30; ENGINEERING COMPLETE /4STARTS / STOP
+ 
+--- a/docs/DECISIONS.md
++++ b/docs/DECISIONS.md
+@@ -1,4 +1,8 @@
+ # Decisions
++
++## ADR-080 — honor N10 sequencing and repair only baseline QA —2026-10-30
++
++Owner's consolidated N10 approval preserves active governance. [Report](N10_MASTER_COMPLETION_REPORT.md): original N01/N03/N07/N09 requirements remain; no active exception covers N03 Partial or full downstream readiness. No feature implementation/gate relaxation inferred. Existing isolated QA exposed a data-URL import omission; one authentic fixture-trace mapping repairs it without app/N16 changes or weaker assertions. Initial174/176passes/2failures preserved, affected47/47rerun plus129unchanged passes cover176distinct cases. [DE-N10-SYNTHETIC-01](DE_N10_SYNTHETIC_01.md) proposed/inactive. N10 Not Started/dependency-blocked; other statuses, N16 evidence/source boundaries and independent reviews unchanged. STOP; no automatic implementation/activation/next module.
+ 
+ ## ADR-079 — qualify bounded same-statement reauthorization and complete the synthetic demo —2026-10-30
+ 
+--- a/docs/FEATURE_AUDIT.md
++++ b/docs/FEATURE_AUDIT.md
+@@ -1,4 +1,8 @@
+ # ASTRA feature audit — initial2026-10-17, planning updated2026-10-25
++
++## N10 scope audit and baseline QA —2026-10-30; implementation blocked
++
++[Report](N10_MASTER_COMPLETION_REPORT.md)/[matrix](../artifacts/n10-master-20261030/requirement-matrix.json): completed sleep/private task/scalar exercise remain partial foundations. N10 stages/schedules/deficit/consent/task baseline/sessions/workload/adherence/movement/replay/browser scope remains open. No N10 exception covers incomplete N03/N07/N09. One QA-only loader mapping repaired a preexisting import failure:176distinct baseline cases have applicable passing evidence after initial174/176and focused47/47rerun; failures preserved. [Proposal](DE_N10_SYNTHETIC_01.md) inactive. App/N02/N16/research/model/source/status/review boundaries retained. N10 Not Started; STOP.
+ 
+ ## N16 final engineering scope —2026-10-30;4/4SQL tools qualified
+ 
+--- /dev/null
++++ b/docs/DE_N10_SYNTHETIC_01.md
+@@ -0,0 +1,60 @@
++# DE-N10-SYNTHETIC-01 — proposed N10 synthetic-engineering sequencing exception
++
++2026-10-30. **PROPOSED / INACTIVE. No implementation or exception activation is granted by this document.**
++
++## Decision requiring the owner
++
++The N10 master directive authorizes work only within applicable active governance and preserves prerequisite gates. The [roadmap](MASTER_PLAN.md) gives N10 dependencies N01/N03/N07/N09. N01 is Complete; N03 is Partial; N07/N09 are In Progress. [CORE_AI_PRIORITY, N03 dependency boundary](CORE_AI_PRIORITY.md#priority-order-and-dependency-gates) expressly requires a separate prerequisite decision before N10 implementation. DE-AC20-01 applies only to N04/N05. DE-N09-DEMO-01 does not establish downstream N10 eligibility.
++
++This proposal would make **one consolidated N10 synthetic engineering campaign** eligible for separate explicit implementation approval before those prerequisites close. It would not close N03/N07/N09, waive AC-20, complete N10 or authorize work in another module. The [master report and requirement matrix](N10_MASTER_COMPLETION_REPORT.md) retain the full N10 definition.
++
++## Exact proposed scope
++
++- Reuse the existing native Node/SQLite architecture, completed-sleep lifecycle, private check-in interfaces, presentation and canonical provenance.
++- Implement N10 sleep-stage/schedule/deficit data handling, optional consent/skip/task/mood handling, dated personal task references, exercise/workload/adherence/movement records and synchronized replay.
++- Use newly authored, clearly labeled fictional/synthetic fixtures in memory or explicitly designated disposable test directories. No source is an active application database or the sealed N16 designated database.
++- Preserve measured task data as a separate source. Explicit participation must precede optional task/survey collection; skipping yields no invented observation. No actual human/private health record is required for acceptance.
++- Allow directly necessary N10 application source/UI integration, exercised only with authorized fresh synthetic test instances. Never change N02 detection authority, thresholds, source ownership, human acknowledgement or delayed Earth-delivery semantics.
++- Treat missing prerequisite capabilities honestly: no stage inference without supplied source intervals, no invented longitudinal archive, no personal reference without sufficient eligible history, and no adherence denominator without an explicit plan. Descriptive arithmetic is not medical evidence.
++- Permit deterministic unit/API/persistence/failure tests and a bounded real-browser N10 acceptance workflow against isolated synthetic instances, using already available approved tooling. No new installation/download permission follows.
++- Keep prospective N12/N16 input/output interfaces inert; no runtime connection, new tool call or expansion of N16's source/trace/presentation authority.
++
++## Rationale and prerequisites
++
++Synthetic software can validate parsing, permissions, timestamped ledgers, deterministic accounting, failure handling and UI behavior independently of public waveform acquisition or scientifically validated longitudinal simulation. That supports an engineering demonstration only. Real-source, longitudinal, physiological, clinical, generalization and prerequisite closure evidence remain separate.
++
++Before a later authorized campaign:
++
++1. The owner must explicitly activate this exact proposal and authorize the consolidated implementation.
++2. Reverify original N01/N02 contracts, source/role/crew boundaries and the preserved N16 evidence.
++3. Freeze the intended synthetic fixture/protocol versions and label all authored assumptions.
++4. Define the exact sleep-accounting reference and task-reference eligibility rules in a reviewable nonclinical contract. Unknown inputs must remain UNKNOWN; do not introduce medical thresholds.
++5. Designate fresh test roots and finite test/browser/resource bounds. No N16 source/startup/storage permission carries forward.
++6. Preserve original requirement/dependency tables and every independent review gate.
++
++## Exclusions
++
++No access to active operational databases, telemetry paths, private user data, credentials or running production APIs. No source database export, N16 sealed-source reuse, permission relaxation, new exception activation or model inference. No N07 acquisition, N08 waveform work, N09 simulator overhaul, N11/N12 model training, N14/N15 support-policy change or N16 integration. No diagnosis, treatment, clinical normative scores, population ranking, inferred disease, scientific approval or real astronaut connectivity claim.
++
++Existing completed-sleep/forecast abstention and private user-measurement semantics may not be silently reclassified as validated stages, deficit, cognition or clinical baseline evidence.
++
++## Acceptance and expiration
++
++The later campaign must address every requirement group in the matrix, demonstrate actual input → validated record → durable/recovered state → authorized UI/replay output, and pass meaningful positive/negative controls. Real-browser early-click/range/skip/timing, keyboard/focus, loading/empty/error and source-time tests remain mandatory for the implemented frontend; DOM fixtures are not equivalent.
++
++Require persistence rollback/restart, consent/cancellation, crew/role denial, invalid/stale/unknown input, source/time separation, deterministic replay and operational noninterference evidence. Preserve N02, acknowledgement/Earth behavior, N16 original bytes and all unrelated statuses.
++
++Even a successful synthetic campaign may report only engineering completion if original prerequisites or mandatory reviews remain open. Formal N10 closure retains the full roadmap requirements and legitimate prerequisite satisfaction/accommodation; downstream eligibility is not automatic.
++
++If approved, this exception would expire at delivery, explicit stop, revocation or a genuine authorization/integrity boundary of that single campaign. No unused task/resource permission survives. Scope expansion requires an explicit new decision.
++
++## Owner decision — intentionally unfilled
++
++- Decision (ACTIVATE / REJECT / REQUEST CHANGES):
++- Owner identity:
++- Date:
++- Exact approved document/content digest:
++- Rationale and any bounds:
++- Separate consolidated implementation authorization:
++
++No owner decision or independent approval has been recorded here. **STOP: proposal only.**
+--- /dev/null
++++ b/docs/N10_MASTER_COMPLETION_REPORT.md
+@@ -0,0 +1,118 @@
++# N10 master module mission —2026-10-30
++
++**N10 MODULE MISSION RESULT: BLOCKED. Formal N10: Not Started; implementation dependency-blocked.**
++
++N10 is **Sleep, cognition and countermeasures**. The repository explicitly prevents implementation before its incomplete prerequisites are satisfied or validly accommodated. The current owner directive preserves that boundary; no active N10 exception exists. This mission completed the independently authorized scope/interface audit, existing-baseline QA, one minimal QA-loader correction, a concrete inactive exception proposal, preservation checks and handoff. It did not implement N10 features or claim engineering completion.
++
++[Complete per-requirement matrix](../artifacts/n10-master-20261030/requirement-matrix.json) · [Proposed exception](DE_N10_SYNTHETIC_01.md) · [Initial QA summary](../artifacts/n10-master-20261030/qa-summary.json) · [Final preservation/verification](../artifacts/n10-master-20261030/final-validation.json).
++
++## 1. Authoritative definition and governance finding
++
++The [MASTER_PLAN remaining-module table](MASTER_PLAN.md#remaining-modules--one-approval-per-row) defines N10 as:
++
++> Sleep-stage/schedule/deficit, consented optional mood/task checks, personal longitudinal task baseline, exercise sessions/workload/adherence/movement, synchronized replay.
++
++Dependencies are **N01,N03,N07,N09**. Required verification is actual-browser early-click/range/skip/task timing, personal scope, daily/stage aggregations, countermeasure histories, no diagnostic score/ranking and explicit device limits. The primary specification's health-domain table and R28/R53/R55 / FEATURE_AUDIT health-input rows explain these requirements. The full primary Markdown specification was read; its original Markdown/PDF bytes are preserved. No new architecture or presentation change requiring a PDF layout comparison was implemented.
++
++The binding restriction is [CORE_AI_PRIORITY, N03 dependency boundary](CORE_AI_PRIORITY.md#priority-order-and-dependency-gates):
++
++> Do not extend DE-AC20-01 implicitly.
++
++That section requires missing N03/AC-20 evidence or a separately documented narrow exception before N10 starts while N03 is Partial. MODULE_TRACKER's prerequisite paragraph states the same rule. DE-AC20-01 covers N04/N05 only. DE-N09-DEMO-01 permits only the delivered selected-crew scalar slice and explicitly does not make N10 eligible. N16 exceptions do not extend to N10 or provide reusable execution permission.
++
++This is an explicit scope/authority conflict with proceeding now, not a coding difficulty or a new approval rule. Conditional implementation approval is recorded, but its prerequisite condition is unmet. [DE-N10-SYNTHETIC-01](DE_N10_SYNTHETIC_01.md) is a reviewable proposal, **not activated**. No original gate was edited away.
++
++## 2. Complete requirement matrix
++
++S1–V1 are local audit labels, not new official modules or microtasks. The linked JSON matrix records all twelve requested fields for each group: source requirement, existing/missing work, inputs/outputs, integration, security/privacy, determinism, failure handling, QA, authority, dependencies and current mission eligibility.
++
++| Group | Requirement and existing implementation | Missing work / required acceptance | Current result |
++|---|---|---|---|
++| S1 | Sleep stages/daily-stage aggregation. Completed-duration ledger is not staging. | Source intervals, stage/coverage aggregation, malformed/overlap/gap controls and actual UI/replay. | Missing |
++| S2 | Sleep schedule. Existing synthetic fixed07:00UTC daily completion. | Dated per-crew schedule/version and actual/planned comparison; correction/cutoff/stale tests. | Partial baseline |
++| S3 | Sleep deficit. Existing fatigue is a scenario scalar. | Source-bound descriptive accounting/reference, missing-day/coverage behavior, no inferred clinical need. | Missing |
++| C1 | Consented optional mood/task check-ins. Existing fatigue slider and five-trial personal task/private history. | Consent/skip/cancellation/optional mood lifecycle, idempotency and privacy controls. | Partial baseline |
++| C2 | Personal longitudinal task baseline. Existing private means/history, separate synthetic calibration. | Dated per-task/person/device/protocol reference and sufficient chronological history; no ranking. | Missing |
++| E1 | Exercise sessions/workload. Existing daily scalar and exercise-context scenario. | Dated sessions/workload units/provenance, durable history/corrections and UI. | Partial baseline |
++| E2 | Adherence/movement. No plan/session comparison or movement history. | Explicit plan denominator, eligible sessions and movement source/coverage, UNKNOWN controls. | Missing |
++| R1 | Synchronized replay. Existing scalar/sleep replay and knowledge-time safeguards. | Task/schedule/stage/countermeasure cutoff and source-time replay; actual browser tests. | Partial baseline |
++| A1 | Personal scope/provenance/UNKNOWN/durability. Existing N01 privacy, timestamps and sleep rollback/recovery. | Extend guarantees to every missing N10 record/API/consumer; no side effects from reads. | Partial baseline |
++| V1 | Browser timing/range/skip/device limits. Historical N03 early-click/five-trial/save evidence. | Full N10 browser workflow and accessibility/failure acceptance; no score/ranking. | Partial baseline |
++
++**0/10 complete N10 requirement groups qualified; 0 newly implemented.** Six groups have partial reusable behavior and four are missing. Counting old private-task or scalar features as complete N10 would omit mandatory scope.
++
++## 3. Reusable code and inputs/outputs
++
++Sleep producer/ledger/projection code provides deterministic completed-session IDs/values, held observations, daily completion/correction, append-only schema3 and knowledge-time history. It does not stage sleep, personalize the schedule or compute cumulative deficit. Store construction creates/migrates state and is not a read-only production entry point.
++
++Existing API check-ins accept fatigue0–10 and3–10 trials100–3000ms, store private means/history, and preserve user_checkin provenance separately from simulator telemetry. These existing software ranges are not clinical norms. The UI asks for five trials with mouse/touch/Enter, excludes early/range failures and warns that device/browser timing is approximate. No consent/mood/longitudinal-reference/session API was found.
++
++Astronaut reads are self-scoped; Viewer/Researcher cannot read raw private check-ins. Authorized mission review and Demo Administrator same-actor restrictions remain. New sensitive records would require explicit schemas, minimization and consent/authorization instead of inheriting broad telemetry access.
++
++Relevant files inspected: services/telemetry-simulator/sleep.mjs and simulator.mjs; services/api/server.mjs, store.mjs and engine.mjs; packages/contracts.mjs and presentation.mjs; apps/mission-control-web/app.mjs and ui.mjs; services/prediction/forecast.mjs; N02, N09, N12/N16 dependency/interface records; current source/privacy/sleep tests and historical browser checks. Full per-group file references and contracts are in the matrix.
++
++## 4. Executed baseline QA and minimal correction
++
++Execution used unchanged existing suites with memory databases or fresh disposable fixtures under /tmp/astra-n10-master-20261030. No active application API, operational database, N16 sealed source, designated worker or model was used. Store/Engine/createApp construction occurred only in those authorized regression fixtures.
++
++Initial suite: **176tests,174passed,2failed,0skipped/cancelled**,46.875597s launcher duration. Both failures were in tests/web.test.mjs. The QA-only scripts/frontend-smoke.mjs loaded the real application through a data URL but omitted the existing ./fixture-trace.mjs import from its file-URL mapping. Node rejected that relative import with ERR_UNSUPPORTED_RESOLVE_REQUEST.
++
++The original helper and complete failure log are retained. The repair adds that one authentic file-URL mapping. No import is stubbed out, assertion weakened or production behavior changed. The two existing regression tests reproduce the defect and now pass for the default and private-denial roles.
++
++Focused rerun: **47/47passed,0failed/skipped/cancelled**,7.889912s: all7web tests plus40fixture-viewer controls. The other129distinct tests were unchanged initial passes. The **176distinct baseline checks have passing applicable results across both runs**; this is not a claim of a clean176-test single rerun. Original failures remain recorded. No new N10 acceptance result is fabricated.
++
++Coverage includes N01 validation/ownership/private scope, N02 deterministic quality/persistence/failure isolation/acknowledgement, sleep completion/correction/rollback/restart/Earth preservation, synthetic Scenario Lab, forecast abstention, frontend request/replay/error states and saved fixture viewer. Positive reads/check-ins and negative unauthorized/invalid/unknown controls remain intact.
++
++The full npm test glob was not invoked: it contains old designated/native suites with expired startup permissions and historical output paths. Focused selection preserves those boundaries without counting skipped tests as passes. Full N10 end-to-end/browser acceptance is **NOT RUN**: its implementation is blocked and the new workflow does not exist. Historical N03 real-browser early-click/five-trial/save evidence is context only; DOM checks are not browser certification.
++
++## 5. Integrations and downstream effect
++
++Existing telemetry → sleep ledger → projection/replay and voluntary task → private history workflows remain intact and tested. **No new N10 integration is delivered.** N02 retains sole alert authority; no new derived scores enter its thresholds or synthetic telemetry. Continuous-sleep forecasting still abstains and N12's limited forecast remains unchanged.
++
++N12 directly requires N09/N11; N11 depends on N07–N10. This task closes none of those gates. N16's completed synthetic four-tool work remains preserved, while full N16 still requires N02/N10/N12/N14 and conditional N15. No N16 source permission, tool call, UI connection or stack change follows.
++
++N14/N15 are not additional direct N10 prerequisites. Their integration/review boundaries are preserved, not invented as N10 requirements. The unreviewed N15 factual rule stays inactive and its experimental prompt unpromoted.
++
++## 6. Resources and security
++
++The initial baseline launcher durably recorded183samples:
++
++| Observation | Result / scope |
++|---|---|
++| Initial QA duration |46,875.597162ms; existing suites, not an N10 benchmark |
++| Largest sampled tree RSS sum |540,602,368bytes, including parent/children |
++| Child kernel maxRSS |458,985,472bytes; reported per-process maximum, not simultaneous tree peak |
++| Largest sampled temporary allocation |83,535,652bytes; isolated test/copy fixtures |
++| Focused rerun duration |7,889.911916ms from Node; no separate peak-memory certification |
++| Scratch cleanup |No remaining entries after either batch |
++| N16 designated startups / models / acquisition |0 /0 /0 |
++
++Measurements are observations, not enforced N10 ceilings. No expired N16 512MiB/64MiB/startup permission was reused or enlarged. N10 performance readiness remains unmeasured. No system/package/dependency/source permission or mount was changed.
++
++The launcher initiates no external requests; existing tests use in-process request transport and local fixtures. No network-namespace certification is asserted for this general regression process. SQLite activity belongs to authorized memory/temp tests, not an N16 qualification; total test SQL statements were not instrumented.
++
++## 7. Exact changes and preservation
++
++The sole existing executable change is the QA-only scripts/frontend-smoke.mjs mapping. **No application/service/package/test implementation file changed.** New files are this report, inactive exception and fresh matrix/QA/preservation evidence. Governance updates record conditional approval and the blocker while retaining unrelated statuses.
++
++[Final validation](../artifacts/n10-master-20261030/final-validation.json), [changed-file inventory](../artifacts/n10-master-20261030/changed-files.json), [QA-only diff](../artifacts/n10-master-20261030/implementation.diff.txt) and [manifest](../artifacts/n10-master-20261030/evidence-manifest.json) bind original/current bytes.
++
++Preservation covers application/services/tests/contracts, research/model/corpus/index records and historical N16 artifacts. The sealed database was **not opened or rehashed**: its previous SHA4b1a3d8d9bdb832ae54b35a43e4412f18914756984893f8cb181b37955caff73 is retained from unchanged N16 evidence. That retained digest is not a fresh source-integrity measurement.
++
++## 8. Formal closure and one concrete unblocking decision
++
++**N10 remains Not Started; dependency-blocked.** The ordinary QA defect was repaired and retested. The remaining obstacle is explicit governance.
++
++| Prerequisite | Current state / consequence |
++|---|---|
++| N01 |Complete; reusable integrity/privacy foundation |
++| N03 |Partial/AC-20 Open; N10 outside N04/N05-only exception |
++| N07 |In Progress; source/annotation/card/split obligations open |
++| N09 |In Progress; scalar slice does not close schedules/longitudinal/cadence/evaluation gates |
++| N09 transitive N07/N08 |Unfinished; scalar exception does not establish downstream eligibility |
++
++Closure requires every N10 feature, genuine integrations/durable state/UNKNOWN/privacy, actual-browser acceptance, inspectable evidence and legitimate prerequisite satisfaction/accommodation. No independent human review is fabricated or invented as a new N10 gate; scientific assumptions and existing external reviews remain separately identified.
++
++**One decision to unblock a consolidated build:** explicitly activate [DE-N10-SYNTHETIC-01](DE_N10_SYNTHETIC_01.md) and authorize one full N10 synthetic-engineering mission under it. This is one sequencing decision, not a series of microtasks. It preserves full prerequisite/release gates, excludes operational/N16/model access and requires integrated synthetic tests plus actual browser acceptance.
++
++No exception has been activated. STOP after the authorized audit/baseline QA. Do not begin N12, N14, N15, N16 or another module.

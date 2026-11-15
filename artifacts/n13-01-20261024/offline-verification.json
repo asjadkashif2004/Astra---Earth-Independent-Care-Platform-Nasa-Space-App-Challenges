@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "documents": 2,
+  "pages": 471,
+  "sections": 1164,
+  "chunks": 3275,
+  "empty_pages": [],
+  "validated_chunk_anchors": 3275,
+  "corpus_sha256": "9bb1fb5fc112716c16fdb8e3e6a3c5a968b01db5e11b2f5e694f54af5d16b6b7",
+  "network_requests": 0,
+  "review": {
+    "questions": 10,
+    "validated_anchors": 14,
+    "medical_approval": false
+  }
+}

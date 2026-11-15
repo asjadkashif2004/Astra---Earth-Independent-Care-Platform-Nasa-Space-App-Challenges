@@ -1,0 +1,132 @@
+{
+  "status": "failed",
+  "started_at": "2026-10-30T07:19:31.444Z",
+  "checks": [
+    {
+      "name": "N10 actual application navigation, denied consent, skip/cancel and approximate device notice",
+      "status": "passed"
+    },
+    {
+      "name": "N10 real consent, early click and out-of-range timing exclusion",
+      "status": "passed"
+    },
+    {
+      "name": "N10 four genuine five-trial browser sessions and same-device personal reference",
+      "status": "passed"
+    },
+    {
+      "name": "N10 stage/schedule editor, source-bound aggregation and delayed correction replay",
+      "status": "failed",
+      "reason": "DOM condition timed out: document.querySelector(\"#n10-status\")?.textContent.startsWith(\"Saved\")"
+    }
+  ],
+  "screenshots": [
+    "n10-consent-declined.png",
+    "n10-personal-reference.png",
+    "failure-4.png"
+  ],
+  "console_errors": [],
+  "http_errors": [
+    {
+      "url": "http://127.0.0.1:56285/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    }
+  ],
+  "viewports": [],
+  "caveats": [
+    "No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation.",
+    "Pointer/keyboard/rendered DOM checks and screenshots supplement human visual, text-contrast and assistive-technology review; they do not establish WCAG conformance."
+  ],
+  "N10_browser_start": {
+    "pid": 11976,
+    "source": "Existing installed Chrome, disposable profile",
+    "Node": "v24.21.0",
+    "Node_memory": {
+      "rss": 67280896,
+      "heapTotal": 19701760,
+      "heapUsed": 11808792,
+      "external": 4325031,
+      "arrayBuffers": 212131
+    },
+    "at": "2026-10-30T07:19:32.206Z"
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/156.0.8078.73",
+    "revision": "@2f9a11097447f226133bc1a31c787291a5eeab98",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "jsVersion": "15.6.75.25"
+  },
+  "N10_actual_browser_trials": [
+    {
+      "id": "task-a84899e2-0b2a-4567-b375-1cc77fb42ac6",
+      "trials": [
+        208,
+        241,
+        266,
+        290,
+        206
+      ],
+      "hash": "bd72ad5457d977ec2d35f9e7b2b4cd87ae3568006974be8c9bd8737446cb55a1",
+      "source_at": "2026-11-14T11:00:01.000Z",
+      "known_at": "2026-11-14T11:00:01.000Z"
+    },
+    {
+      "id": "task-a444dda9-23d9-4e7e-ac01-62a56b363eeb",
+      "trials": [
+        236,
+        205,
+        204,
+        186,
+        199
+      ],
+      "hash": "49f0ef5a338eba9112defe2baed71ad26a9b874c3bf6629156b3f26bd5d1a501",
+      "source_at": "2026-11-14T11:00:02.000Z",
+      "known_at": "2026-11-14T11:00:02.000Z"
+    },
+    {
+      "id": "task-947ccec9-b3b0-4bcd-a321-08636e8cc3cf",
+      "trials": [
+        193,
+        283,
+        206,
+        258,
+        273
+      ],
+      "hash": "b188ceb66d3752dadbd5990494b560395f4a679d838323ff7a94ea859a5211ad",
+      "source_at": "2026-11-14T11:00:03.000Z",
+      "known_at": "2026-11-14T11:00:03.000Z"
+    },
+    {
+      "id": "task-9a07f591-bf54-45ae-8bc9-fec4436f6631",
+      "trials": [
+        190,
+        233,
+        189,
+        219,
+        200
+      ],
+      "hash": "afb6926171eb8715a90c0eb3f5fa970afbf5e1b534772cd45be3a0bb49a2f269",
+      "source_at": "2026-11-14T11:00:04.000Z",
+      "known_at": "2026-11-14T11:00:04.000Z"
+    }
+  ],
+  "reason": "DOM condition timed out: document.querySelector(\"#n10-status\")?.textContent.startsWith(\"Saved\")",
+  "N10_cleanup": {
+    "application_closed": true,
+    "browser_exited": true,
+    "profile_removed": true,
+    "database_directory_removed": true,
+    "Node_memory": {
+      "rss": 69918720,
+      "heapTotal": 21082112,
+      "heapUsed": 15814544,
+      "external": 4810482,
+      "arrayBuffers": 763078
+    },
+    "N16_designated_starts": 0,
+    "model_executions": 0
+  },
+  "finished_at": "2026-10-30T07:20:41.670Z"
+}

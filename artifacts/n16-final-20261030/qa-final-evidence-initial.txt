@@ -1,0 +1,4 @@
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal: 0 !== false
+at verify-evidence.mjs:89:88
+The file-only audit incorrectly expected a boolean for the operational_database_access counter. The actual recorded contract uses integer zero.
+No worker startup, source access or SQL occurred. The full original runtime output is retained in qa-final-evidence.txt until the corrected run is stored separately.

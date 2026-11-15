@@ -1,0 +1,16 @@
+{
+  "reported_samples": 7,
+  "resource_rows": 5,
+  "event_rows": 3,
+  "raw_sha256": "a75aa2268516135262a82fdd22ea06a7648bf2ce88c271cbb18f37a87a482a05",
+  "old_counter": "Successful collection counted immediately before journal(value), before write/sync/close acknowledgement.",
+  "old_row": "One JSON line per journal call; no filtering or aggregation in code; worker_event lines separate.",
+  "confirmed_static_gaps": [
+    "No shared queue across journal handles or foreground/interval collectors",
+    "Sample counter advances before persistence",
+    "No journal readback/count reconciliation before PASS"
+  ],
+  "historical_missing_record_cause": "UNCONFIRMED",
+  "native_starts": 0,
+  "SQL": 0
+}

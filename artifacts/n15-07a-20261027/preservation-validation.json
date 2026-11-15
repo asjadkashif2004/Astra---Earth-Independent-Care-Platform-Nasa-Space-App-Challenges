@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "task": "N15-07A",
+  "new_live_diagnostic": false,
+  "prior_N15_07": "INCOMPLETE; unchanged; unsupported NOT RUN; no replay/reassessment",
+  "source_files_preserved_by_size_mtime": 598,
+  "intentional_existing_QA_source_changes": [
+    "scripts/n15_research_runtime.py"
+  ],
+  "new_QA_code_files": [
+    "scripts/n15_observer_lifecycle.py",
+    "scripts/n15-selection-diagnostic.mjs",
+    "tests/n15_observer_lifecycle_test.py",
+    "tests/n15-selection-diagnostic.test.mjs"
+  ],
+  "historical_files_preserved_by_size_mtime": 6073,
+  "protected_hashes_unchanged": 12,
+  "external_originals": {
+    "/var/tmp/astra-n15-04b-0zd6xkaq/acquisition/qwen2.5-0.5b-instruct-q4_k_m.gguf": {
+      "size": 491400032,
+      "mtime_ns": 1793051176093409266,
+      "sha256": "74a4da8c9fdbcd15bd1f6d01d621410d31c6fc00986f5eb687824e7b93d7a9db"
+    },
+    "/var/tmp/astra-n15-03-swuxjpfe/llama-b11669-bin-ubuntu-x64.tar.gz": {
+      "size": 17851611,
+      "mtime_ns": 1792949092383727353,
+      "sha256": "cf07c1c112d709bd67e522017471de57ed0ec8bea031d732c5422351c07f65ac"
+    }
+  },
+  "native_provider_hashes_unchanged": [
+    {
+      "name": "llama-completion",
+      "sha256": "7119bef261611b26f326f7c4da4dc3fdeb7bb28e2faf1ec392bda7b21215ef52"
+    },
+    {
+      "name": "libggml-cpu-haswell.so",
+      "sha256": "aec8dcc1487baeac0914aa3f6ba747beb868b61cd398e10c40c39addd2f80b64"
+    },
+    {
+      "name": "libllama-completion-impl.so",
+      "sha256": "ecfa98316c65d1870a6a9108cbf7233bb41d8cf9a2f83b6a0ae0439b79388851"
+    },
+    {
+      "name": "libc.so.6",
+      "sha256": "85e64f97e348786a8fb4d9f3d52fec289e2fb86bba20f0731dfe61990525e0f7"
+    },
+    {
+      "name": "libggml-base.so.0",
+      "sha256": "2c6ac9a8ae7c1455382c50587fe7d275e0607dfdaec4dcdb18689f31f6174c65"
+    },
+    {
+      "name": "libgomp.so.1",
+      "sha256": "645478cbe100d1465b9d45f7047bca3965358f4d399937e544f55ac7a924d5a3"
+    },
+    {
+      "name": "libstdc++.so.6",
+      "sha256": "5bb0d21308f123b6ad46c6f35b42cedfcb8d6d439a53aa3dae04d880aaffdde3"
+    },
+    {
+      "name": "libm.so.6",
+      "sha256": "1c488db6f4fe8cecb72456bc018de000b7a9b539c2994864b0416b5e8371b3d8"
+    },
+    {
+      "name": "libgcc_s.so.1",
+      "sha256": "9d339ecb409578d6a5d587e6c537a8f9589b8a13fefba30d167433a4b5758bee"
+    },
+    {
+      "name": "ld-linux-x86-64.so.2",
+      "sha256": "bda779ea9e9ad234f60315477d7cfd0bdde861cd8ddd9df8cdaf62f18c4cec14"
+    },
+    {
+      "name": "libllama-common.so.0",
+      "sha256": "462f7e9ce1c4c537533f1d4530b37201452599d90128c3c602507b315934e795"
+    },
+    {
+      "name": "libllama.so.0",
+      "sha256": "522213ae6b6019ba8d2673e9254990c52f0a1a5fb047c75bfb93be1b34fad839"
+    },
+    {
+      "name": "libssl.so.3",
+      "sha256": "63b47f444efa588e291e9b650a5ba2ab02f856356f2d50f13a2e477db9119e09"
+    },
+    {
+      "name": "libcrypto.so.3",
+      "sha256": "5385f0436ac2e284ba8c5fb1488874057c29c04be72dea32add832694f381e28"
+    },
+    {
+      "name": "libggml.so.0",
+      "sha256": "8643a58bb37af6fb153e2ea98b48efa227855725ee51c05f4ca76b9867956463"
+    },
+    {
+      "name": "libz.so.1",
+      "sha256": "27fa6c6cb94fb5b099ead61758a300dbc392d1dbf307fff6c16a9b8e57fdc9de"
+    },
+    {
+      "name": "libzstd.so.1",
+      "sha256": "060eeb79531d435306665fd78329d8a9dd579f95876c5960bb67937825362a80"
+    }
+  ],
+  "frozen_native_commands_and_policy": "unchanged AST",
+  "focused_tests": 114,
+  "new_tests": 41,
+  "syntax_files": 5,
+  "documents": 10,
+  "local_links": 685,
+  "module_ids_preserved": 26,
+  "N15": "In Progress",
+  "N16": "Not Started",
+  "network_requests": 0,
+  "downloads": 0,
+  "acquired_runtime_execution": 0,
+  "model_loading": 0,
+  "inference": 0,
+  "storage_policy_renewal": false
+}

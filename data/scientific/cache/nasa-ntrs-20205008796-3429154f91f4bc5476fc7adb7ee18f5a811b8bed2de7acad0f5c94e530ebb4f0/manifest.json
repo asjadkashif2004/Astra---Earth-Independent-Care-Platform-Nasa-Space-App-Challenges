@@ -1,0 +1,62 @@
+{
+  "schema_version": "astra.scientific-source.v1",
+  "source_id": "nasa-ntrs-20205008796",
+  "approval_sha256": "f47d05704a07a2118eea42628b0295859c088f8129d966925f5a9ea8650d3671",
+  "repository": "NASA STI Repository (NTRS)",
+  "publication": {
+    "title": "Market Survey 2020:  Commercial Clinical Decision Support Systems and Wellness Tools",
+    "authors": [
+      "B. Burian",
+      "K. Martin",
+      "T. Shaw"
+    ],
+    "publisher": "NASA Ames Research Center / NASA Human Research Program",
+    "canonical_url": "https://ntrs.nasa.gov/citations/20205008796",
+    "version": "NTRS 20205008796; modified 2025-08-31T18:39:21.7150190+00:00",
+    "published_on": null,
+    "date_note": "The record supplies no publication date. Its 2021-02-01 workshop start is not asserted to be a publication date."
+  },
+  "rights": {
+    "statement": "Work of the US Gov. Public Use Permitted.",
+    "license_id": null,
+    "terms_url": "https://www.sti.nasa.gov/disclaimers/",
+    "harvesting_url": "https://www.sti.nasa.gov/harvesting-data-from-ntrs/",
+    "record_url": "https://ntrs.nasa.gov/citations/20205008796",
+    "reviewed_on": "2026-10-23",
+    "attribution": "NASA STI Compliance and Distribution Services, NASA Ames Research Center; B. Burian, K. Martin and T. Shaw. Market Survey 2020: Commercial Clinical Decision Support Systems and Wellness Tools. NTRS 20205008796; 2021 NASA HRP Investigators' Workshop.",
+    "restrictions": [
+      "This approval covers only the public metadata JSON, not linked documents, vendor websites, images or any other NTRS record.",
+      "Credit NASA STI Compliance and Distribution Services as the metadata source; do not imply NASA endorsement or claim ownership of NASA material.",
+      "No blanket CC0 or Creative Commons license is inferred. The record's determinationType is GOV_PUBLIC_USE_PERMITTED and containsThirdPartyMaterial is false; its separate belongsToUsGov boolean is false. Metadata harvesting is independently expressly permitted by the official harvesting page.",
+      "NASA provides no warranty of accuracy, fitness or third-party rights. This historical market-survey abstract is not a clinical protocol or validation of ASTRA."
+    ]
+  },
+  "scope": {
+    "content_kind": "public_scientific_metadata",
+    "synthetic": false,
+    "contains_patient_data": false,
+    "clinical_use": false,
+    "corpus_ingestion": false,
+    "limitations": [
+      "One historical publication metadata/abstract record; no patient measurements or astronaut health records.",
+      "No waveform dataset, model training, inference, clinical advice, document chunking or knowledge-index integration.",
+      "The original API JSON contains public author/repository administrative identifiers and untrusted links; never follow or execute them.",
+      "The live repository may change administrative index fields. The pinned SHA-256 identifies this snapshot only; changed responses must be rejected and separately reviewed."
+    ]
+  },
+  "original": {
+    "url": "https://ntrs.nasa.gov/api/citations/20205008796",
+    "file": "original.json",
+    "media_type": "application/json",
+    "bytes": 6995,
+    "sha256": "3429154f91f4bc5476fc7adb7ee18f5a811b8bed2de7acad0f5c94e530ebb4f0"
+  },
+  "retrieval": {
+    "started_at": "2026-10-23T14:14:54.138Z",
+    "completed_at": "2026-10-23T14:14:56.235Z",
+    "etag": null,
+    "requests": 1,
+    "method": "HTTPS GET",
+    "redirects": 0
+  }
+}

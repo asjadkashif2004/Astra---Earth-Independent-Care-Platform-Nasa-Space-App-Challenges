@@ -1,0 +1,99 @@
+{
+  "schema_version": "astra.n08.synthetic-fixtures.v1",
+  "records": [
+    {
+      "file": "synthetic-original.bin",
+      "classification": "AUTHORED_SYNTHETIC_ONLY",
+      "bytes": 30486,
+      "sha256": "9f995b6cf02ce9f1b75413ba1e27590edb303624741f86636a12a9af47227560",
+      "recording_id": "SYN-test",
+      "crew_id": "CREW-03",
+      "revision": 1,
+      "original_format": "binary",
+      "normalized_sha256": "328b6096ca2ea89b7c40536de246d4529d0eed2c2616b2d484ae87cfba237bd2",
+      "start_at": "2026-11-14T10:59:00.000Z",
+      "end_at_exclusive": "2026-11-14T10:59:20.000Z",
+      "known_at": "2026-11-14T11:00:00.000Z",
+      "channels": [
+        {
+          "name": "ECG",
+          "unit": "mV"
+        },
+        {
+          "name": "PPG",
+          "unit": "arbitrary_unit"
+        },
+        {
+          "name": "RESP",
+          "unit": "arbitrary_unit"
+        }
+      ],
+      "sample_rate_hz": 125,
+      "sample_count": 2500,
+      "generator": {
+        "generator_version": "n08-demo-v1",
+        "id": "SYN-SYN-test",
+        "kind": "authored_synthetic",
+        "seed": 708,
+        "synthetic": true
+      },
+      "reproduction": {
+        "implementation": "packages/waveforms.mjs:demoWaveform",
+        "implementation_sha256": "8f34c297bb61056af8861dfb029c320e8c048069669777f273085fa4494e71ca",
+        "seconds": 20,
+        "gap": true
+      },
+      "scientific_validation": "NOT_VERIFIED",
+      "clinical_validation": "NOT_VALIDATED",
+      "external_acquisition": false
+    },
+    {
+      "file": "synthetic-original.csv",
+      "classification": "AUTHORED_SYNTHETIC_ONLY",
+      "bytes": 133036,
+      "sha256": "53ae784cdf80b25daf91e6763d96dc1bd53f17ddd8b3f4d0f1cfeb5062e18908",
+      "recording_id": "SYN-e2e-csv",
+      "crew_id": "CREW-03",
+      "revision": 1,
+      "original_format": "csv",
+      "normalized_sha256": "645072a46113546715d664494c0029f3f4978a6d579c4342d8e08ca1e7147c50",
+      "start_at": "2026-11-14T10:59:00.000Z",
+      "end_at_exclusive": "2026-11-14T10:59:20.000Z",
+      "known_at": "2026-11-14T11:00:00.000Z",
+      "channels": [
+        {
+          "name": "ECG",
+          "unit": "mV"
+        },
+        {
+          "name": "PPG",
+          "unit": "arbitrary_unit"
+        },
+        {
+          "name": "RESP",
+          "unit": "arbitrary_unit"
+        }
+      ],
+      "sample_rate_hz": 125,
+      "sample_count": 2500,
+      "generator": {
+        "generator_version": "n08-demo-v1",
+        "id": "SYN-SYN-e2e-csv",
+        "kind": "authored_synthetic",
+        "seed": 708,
+        "synthetic": true
+      },
+      "reproduction": {
+        "implementation": "packages/waveforms.mjs:demoWaveform",
+        "implementation_sha256": "8f34c297bb61056af8861dfb029c320e8c048069669777f273085fa4494e71ca",
+        "seconds": 20,
+        "gap": false
+      },
+      "scientific_validation": "NOT_VERIFIED",
+      "clinical_validation": "NOT_VALIDATED",
+      "external_acquisition": false
+    }
+  ],
+  "originals_unchanged": true,
+  "N07_authentic_sources_not_substituted": true
+}

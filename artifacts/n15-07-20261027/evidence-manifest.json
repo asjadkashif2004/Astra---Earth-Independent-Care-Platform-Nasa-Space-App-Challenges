@@ -1,0 +1,230 @@
+{
+  "task": "N15-07",
+  "files": [
+    {
+      "path": "assessment.json",
+      "bytes": 4226,
+      "sha256": "b3036271e80e78440fedb639d4455aee6ff8e183cede39583bf740b052222b23"
+    },
+    {
+      "path": "astra-n15-07-close-source.txt",
+      "bytes": 6581,
+      "sha256": "c917fc67476a08c446bdb1fe4e95ad4f4c987f5a210def6b42fa7acf36a650d3"
+    },
+    {
+      "path": "astra-n15-07-validate-source.txt",
+      "bytes": 6244,
+      "sha256": "f6a950796685f28df8fb49739b522bc284c4cd0188df62347649368c1c72ae83"
+    },
+    {
+      "path": "control/diagnostic.mjs",
+      "bytes": 13381,
+      "sha256": "f867b8957c1c03002f44a212a0b044bad3e5382a2e1d7ef0e724549b42f5629a"
+    },
+    {
+      "path": "control/eligible-corpus-review.json",
+      "bytes": 57566,
+      "sha256": "cfd9edf975e355bc1d79e17a9078fcfd8e4a60ca6120c3e35fce6072f2b05e8a"
+    },
+    {
+      "path": "control/events.jsonl",
+      "bytes": 178,
+      "sha256": "b8fcbebfdd071d7dbb8fc64ce44c0cf450d7182ce247b585f6acc1afa35b34b2"
+    },
+    {
+      "path": "control/frozen-plan-sha.json",
+      "bytes": 78,
+      "sha256": "df5f0fdef351696b7a2482873beb366e52eecfb2e07a1b4c16ba68e3969ce1b1"
+    },
+    {
+      "path": "control/frozen-plan.json",
+      "bytes": 15139,
+      "sha256": "64e0301155801b2ee5e1c2cfb80e3475e427d8150f719b3eced387e42e449a4c"
+    },
+    {
+      "path": "control/preparation.json",
+      "bytes": 219,
+      "sha256": "926be79b9fddc63d40eee4bbee171f24bf1134089e3779f3ccfffff479db116e"
+    },
+    {
+      "path": "control/preservation-before.json",
+      "bytes": 827095,
+      "sha256": "1041ab646202192e6d70bb3d11a5c5b75d1141c88bda8ee7db649841586b1044"
+    },
+    {
+      "path": "control/qa.json",
+      "bytes": 424,
+      "sha256": "ef1c5aa76086802bc191acff3c2be8677a7c0733193fdec061005e5b2d8f6937"
+    },
+    {
+      "path": "control/run-reservation.json",
+      "bytes": 80,
+      "sha256": "5bcc90564fb99ed1b81313f80190fe800431d525d2a366ba6f2ad0d572605e92"
+    },
+    {
+      "path": "control/supported-raw-cli-answer.json",
+      "bytes": 531,
+      "sha256": "abc53601c879a4d5b70a85fed5755ba7a50c35958adc2824ffd37a741511be41"
+    },
+    {
+      "path": "control/supported-reservation.json",
+      "bytes": 184,
+      "sha256": "923decc01434528da7131fdc07eb9871e2f8bc5136fde1bf81279153636f0995"
+    },
+    {
+      "path": "delivery-accounting.json",
+      "bytes": 307,
+      "sha256": "9a5822178a49a77882c8caa463f3db35625c75621be041c8ecc69882e9a88189"
+    },
+    {
+      "path": "preservation-validation.json",
+      "bytes": 1203,
+      "sha256": "fcb507ec13b86668a9b8ec5843297e91e5ccfceceff589dc37204b927c194c7e"
+    },
+    {
+      "path": "supported/answer.json",
+      "bytes": 531,
+      "sha256": "abc53601c879a4d5b70a85fed5755ba7a50c35958adc2824ffd37a741511be41"
+    },
+    {
+      "path": "supported/controller-resources.jsonl",
+      "bytes": 22172,
+      "sha256": "6c942be5b38c3caeb8b946f6d9bec400d0fe37368d5f6ccb2964025bd1adb5de"
+    },
+    {
+      "path": "supported/execution-request.json",
+      "bytes": 1863,
+      "sha256": "bdf463c1f1b305bf7c8e57114493a04e43dae1c540350008dd4ac7f3c1bfe158"
+    },
+    {
+      "path": "supported/invocation.json",
+      "bytes": 523,
+      "sha256": "49fabcbe4666d6b642868e33820a5429d5d8f5db645f46afd1174abd0b5e9b7b"
+    },
+    {
+      "path": "supported/native-attempt.json",
+      "bytes": 74,
+      "sha256": "65611449c5f53fec8af7c4c79860f2f2b67d11cf8ffe2a487a9e5ccdce71de50"
+    },
+    {
+      "path": "supported/runtime/events.jsonl",
+      "bytes": 433,
+      "sha256": "f6cd439ae06142a721232dad76227d48057cb095586bf3ed8bedf65dd76c8a35"
+    },
+    {
+      "path": "supported/runtime/generation/cleanup.json",
+      "bytes": 125,
+      "sha256": "ce6e67d1fecf79b5224f8b62f9c75ab4a6a88ef02a6bc490e261e9c8d69c5e64"
+    },
+    {
+      "path": "supported/runtime/generation/containment-preflight.json",
+      "bytes": 2525,
+      "sha256": "b74e908482c36d332d5804619678ff97b51ee3f40a43d00c7c9edb5417a9c570"
+    },
+    {
+      "path": "supported/runtime/generation/frozen-execution.json",
+      "bytes": 9802,
+      "sha256": "7e3b87a571f83f38bd03815b3b290ba661f77a91eeb2b0986ecc3e2aae4bc41d"
+    },
+    {
+      "path": "supported/runtime/generation/native-RSS.jsonl",
+      "bytes": 20505,
+      "sha256": "39ea1f3b5e5f8880f668fa666397440dc8b6f83284f748c5f66b6a959199a406"
+    },
+    {
+      "path": "supported/runtime/generation/native-release.json",
+      "bytes": 1976,
+      "sha256": "23c3e08dda7abf81c284afeb91746568bb04f256b8080465c22ae08f8cadcb49"
+    },
+    {
+      "path": "supported/runtime/generation/native-result.json",
+      "bytes": 3699,
+      "sha256": "5795316d93ac1f1ca8b0843e7f1e854d39d5029256a9a3a672465f4c9a32b38f"
+    },
+    {
+      "path": "supported/runtime/generation/native.stderr",
+      "bytes": 49384,
+      "sha256": "4e3cec0e7f9cf4c65e9eb6466890fd3e1e9705acde97d7b37c6f617e0d2af015"
+    },
+    {
+      "path": "supported/runtime/generation/native.stdout",
+      "bytes": 57,
+      "sha256": "5ea819f19e2418d2bb08eafd19a787fbc9c1c8c037f59dd666de2f04502c7a9c"
+    },
+    {
+      "path": "supported/runtime/generation/network-deny.bpf",
+      "bytes": 392,
+      "sha256": "8b97e4880f19e22990d9994580127bd38249e9f51594f1e3f63218edcd286412"
+    },
+    {
+      "path": "supported/runtime/generation/network-policy.json",
+      "bytes": 378,
+      "sha256": "5d5479e747f43b0c3afcdbd5a45d20fcde8b5deda963bd321d97244ec933b46e"
+    },
+    {
+      "path": "supported/runtime/generation/sandbox-mountinfo.txt",
+      "bytes": 8957,
+      "sha256": "5ff56047710ed1d2d09dcd87554a18e96a3a086865b8a7ee6e6707f21391f22b"
+    },
+    {
+      "path": "supported/runtime/generation/sandbox-status.jsonl",
+      "bytes": 218,
+      "sha256": "d0f81c3535b2158f1c2389515db45f53ef87a5c583a5575f7042889eb009420a"
+    },
+    {
+      "path": "supported/runtime/generation-performance.json",
+      "bytes": 149,
+      "sha256": "c1849d33c0be49c96bb3a19068494215c87b91ba79070da17da7bf3d0b498cf8"
+    },
+    {
+      "path": "supported/runtime/grammar-preflight.json",
+      "bytes": 631,
+      "sha256": "99ef7b30909370f5e51d71fd8a5ecc68c83798160baaf6ee2b32a7a9230e5cd1"
+    },
+    {
+      "path": "supported/runtime/native-identity-manifest.json",
+      "bytes": 11357,
+      "sha256": "8f96f8428a2f347f519c6914b7c1454a3facbcd26bf38a5edf1bd313657e96ab"
+    },
+    {
+      "path": "supported/runtime/report.json",
+      "bytes": 5433,
+      "sha256": "4eed7d0b9bcde24104344a89f25a3cfafbbdac283affb5f1c7050430a5c77730"
+    },
+    {
+      "path": "supported/runtime/resources-latest.json",
+      "bytes": 275,
+      "sha256": "64297ce721ce436065bc0540e87a4103f6f8e4ae7b9d60df02a917f149d8902d"
+    },
+    {
+      "path": "supported/runtime/resources.jsonl",
+      "bytes": 4283,
+      "sha256": "465ec5a4779f536f42905ded14a171f8be8441dc5190d8768148ca1b402cdf35"
+    },
+    {
+      "path": "supported/runtime/sandbox-global-preflight.json",
+      "bytes": 425,
+      "sha256": "d53f7a62b4287da1caaba1c5e7bd7b061ef2e01e88bcce7d72e281b8bb7f747d"
+    },
+    {
+      "path": "supported/selection-grammar.json",
+      "bytes": 437,
+      "sha256": "0b0a3a813b5318524d12f48b7f4bd7aa0a70e224705264544a7decef0a7d1dab"
+    },
+    {
+      "path": "supported/selection-input.json",
+      "bytes": 1016,
+      "sha256": "c24c6e8bd3d3e46e21327c8e790330aa1176f1721be7f90ea592b81ea68b63f4"
+    },
+    {
+      "path": "supported/supervisor-process.json",
+      "bytes": 997,
+      "sha256": "d146530d9b37a54fc9e304c2dec129410ceee5a1b52a5fe0f450817845f5999f"
+    },
+    {
+      "path": "supported-offline-assessment.json",
+      "bytes": 1074,
+      "sha256": "ef5098af0fab3984c52bd67ae5966f1a2f7f4e60acb7e3ffa9513e87d6244f7b"
+    }
+  ]
+}

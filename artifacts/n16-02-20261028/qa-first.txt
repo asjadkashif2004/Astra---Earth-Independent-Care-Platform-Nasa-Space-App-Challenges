@@ -1,0 +1,48 @@
+✔ saved four actual results, exact order, UNKNOWN risk and recovery without replay (78.777949ms)
+✔ artifact pins match all retained originals and repeat reads do not append any events (97.564733ms)
+✔ unauthorized scope anonymous rejects BEFORE nonexistent-root IO (0.529786ms)
+✔ unauthorized scope astronaut rejects BEFORE nonexistent-root IO (0.130007ms)
+✔ unauthorized scope system_admin rejects BEFORE nonexistent-root IO (0.213145ms)
+✔ unauthorized scope invented rejects BEFORE nonexistent-root IO (0.107414ms)
+✔ existing viewer read permission is retained (42.078519ms)
+✔ existing astronaut read permission is retained (42.335769ms)
+✔ existing researcher read permission is retained (43.094191ms)
+✔ unknown directory returns honest UNAVAILABLE with no partial result or arbitrary path in output (0.99509ms)
+✔ tampered trace.jsonl fails closed (30.029694ms)
+✔ tampered checkpoint.json fails closed (26.162269ms)
+✔ tampered call-01.json fails closed (27.193915ms)
+✔ tampered call-02.json fails closed (27.500722ms)
+✔ tampered call-03.json fails closed (26.11856ms)
+✔ tampered call-04.json fails closed (26.732936ms)
+✔ incomplete checkpoint/trace, absent result, added file and substituted symlink fail closed (101.707525ms)
+✔ symlinked run directory is never accepted (1.733493ms)
+✔ schema/relationships reject schema even with rehashed event chain (5.591185ms)
+✔ schema/relationships reject event order even with rehashed event chain (4.680615ms)
+✔ schema/relationships reject scope even with rehashed event chain (5.643197ms)
+✔ schema/relationships reject trusted role even with rehashed event chain (6.594052ms)
+✔ schema/relationships reject source hash even with rehashed event chain (5.215193ms)
+✔ schema/relationships reject unexpected event field even with rehashed event chain (4.870275ms)
+✔ schema/relationships reject uncommitted extra event even with rehashed event chain (5.209583ms)
+✔ schema/relationships reject mismatched completion data even with rehashed event chain (6.443999ms)
+✔ schema/relationships reject backwards timestamp even with rehashed event chain (5.481665ms)
+✔ stale source and mismatched result provenance cannot become a verified archive (23.76473ms)
+✔ fixed route permits only GET without arbitrary run/crew/path/query input (39.130273ms)
+✔ actual server route delegates to the isolated adapter, with no Store/Engine operations (46.600053ms)
+✔ actual Health Agent rendering mounts one fixed GET and preserves operational/template labels (56.93738ms)
+✔ view gives accessible text statuses, canonical provenance, recorded timestamps and native keyboard details (47.646038ms)
+✔ renderer keeps FAILED execution distinct from UNKNOWN data (presentation-only fixture) (41.478107ms)
+✔ renderer keeps CANCELLED execution distinct from UNKNOWN data (presentation-only fixture) (41.860938ms)
+✔ renderer keeps TIMEOUT execution distinct from UNKNOWN data (presentation-only fixture) (40.897917ms)
+✔ renderer keeps DENIED execution distinct from UNKNOWN data (presentation-only fixture) (47.089093ms)
+✔ missing/unavailable/malformed response renders no successful execution or values (0.314467ms)
+✔ escaped evidence cannot insert scripts, HTML or action controls (49.110784ms)
+✔ load/error/current-session/navigation controls never dispatch or publish stale responses (44.237673ms)
+✔ presentation code has no operational imports, worker dispatch or writes; archive parser/recovery are read-only (4.907284ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 40
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1229.71529

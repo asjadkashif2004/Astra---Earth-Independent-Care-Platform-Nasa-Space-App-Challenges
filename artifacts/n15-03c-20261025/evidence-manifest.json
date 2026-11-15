@@ -1,0 +1,234 @@
+{
+  "GPL-3.txt": {
+    "bytes": 35149,
+    "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+  },
+  "additional-host-packages.txt": {
+    "bytes": 127,
+    "sha256": "24a3a0af3580e621eacc44e0961773a03fd4ed52a6b58ba63a8dec9cf6c8209d"
+  },
+  "apt-policy.json": {
+    "bytes": 308,
+    "sha256": "390f0958713932d04665260590a41c4b4dc6ae825bbc1ffdc5883e47b6d46f64"
+  },
+  "apt-show.json": {
+    "bytes": 1824,
+    "sha256": "1ea1120c643ca057620d6871784c6f4a5f8e00514fda0b78df5d89562a07d7c6"
+  },
+  "apt-sources.json": {
+    "bytes": 2735,
+    "sha256": "863339e82042db3eb47ad228c5f6b40ee1b7a1fc9771846beff9eee8f50d0ba2"
+  },
+  "archive-preservation.json": {
+    "bytes": 284,
+    "sha256": "afad10601a49c2537e5440a5d4e5314386a23014e65cf89cb34af2de3a6a7b74"
+  },
+  "archive.ubuntu.com_ubuntu_dists_resolute-gpgv.json": {
+    "bytes": 931,
+    "sha256": "fae5d8c5640b9d1ba0aaa5d87e613cb672843c1b6ad81ab3c64dc3845f9f7802"
+  },
+  "archive.ubuntu.com_ubuntu_dists_resolute-libgomp1-0.txt": {
+    "bytes": 1569,
+    "sha256": "eed49624d1baa095ffc8df57a661fd7ee5740252be0d0c7b89d384c97d0bb65e"
+  },
+  "archive.ubuntu.com_ubuntu_dists_resolute-updates-gpgv.json": {
+    "bytes": 939,
+    "sha256": "2c9828ed8ec468756fd4511347f168970731bd872d945751256cab6f7684447d"
+  },
+  "archive.ubuntu.com_ubuntu_dists_resolute-updates_InRelease": {
+    "bytes": 137401,
+    "sha256": "ecd51f434a6cce234a4a9a5d9d6ce45ecbf789abdce3698e4d11e3554c76f175"
+  },
+  "archive.ubuntu.com_ubuntu_dists_resolute_InRelease": {
+    "bytes": 135549,
+    "sha256": "45f95ce276cdba3e41870516a130e03c58b8b7a79e9546b0efe9e526d255740c"
+  },
+  "collection-metadata.py.txt": {
+    "bytes": 2774,
+    "sha256": "cbee340b8c5e55443cf0bf17165b21e68cc31f38d2a2d81160749e5ff5a78044"
+  },
+  "collection-static.py.txt": {
+    "bytes": 6967,
+    "sha256": "5039e2b678dcc55a282540d40195d685737213b2b6b97b32ca1e3f16dcb960ce"
+  },
+  "copyright-comparison.json": {
+    "bytes": 353,
+    "sha256": "e34032c8343217eb24e1c3bb879df3786bc47f0181b52187e2570f0193c3333f"
+  },
+  "elf-dependency-closure.json": {
+    "bytes": 33302,
+    "sha256": "e664997d2205804a86374acacfdb979a205836c4dd274eb5a4d5cec96f4282be"
+  },
+  "elf-ld-linux-x86-64.so.2-dynamic.json": {
+    "bytes": 1259,
+    "sha256": "d479dde8eb9a29cc13e1e3ccd4a31f4f5e16ce98955b32863c627cf05684fedb"
+  },
+  "elf-ld-linux-x86-64.so.2-versions.json": {
+    "bytes": 1909,
+    "sha256": "f28df2c3b3fd98c5c48be33b91699b70e22786e21d5d7ee673a566a51107daaa"
+  },
+  "elf-libc.so.6-dynamic.json": {
+    "bytes": 1894,
+    "sha256": "8c8cb2db29a60d081a73c4d07e143e569a9fb9dd0ccac3a66aa7b88db0a50fef"
+  },
+  "elf-libc.so.6-versions.json": {
+    "bytes": 69717,
+    "sha256": "e762a455a6842c6b0ca32b3c3e22e4e078daa06c9a0c6ee9326c5d0ec7e70cbd"
+  },
+  "elf-libcrypto.so.3-dynamic.json": {
+    "bytes": 1938,
+    "sha256": "91f6b2ec3128dc302d5fc417aec57b5bc9c52fd647991d131c11cde1bb187393"
+  },
+  "elf-libcrypto.so.3-versions.json": {
+    "bytes": 135748,
+    "sha256": "ecb010151aed6657350188f49294425007beb9e95de9ec5ad74f1c6a2009e9f3"
+  },
+  "elf-libgcc_s.so.1-dynamic.json": {
+    "bytes": 1741,
+    "sha256": "ec84d6a080efbabe8121a60e48ad0819e525a6be5a35a42a291b8a051faa8993"
+  },
+  "elf-libgcc_s.so.1-versions.json": {
+    "bytes": 7077,
+    "sha256": "8552d2e0e0a7f8cfdb80bf0ab10e0895a51333148bafd04bcaf0b0c81b127e39"
+  },
+  "elf-libggml-base.so.0-dynamic.json": {
+    "bytes": 1974,
+    "sha256": "c6de6110789a44af6692a7dfc5e54617d2b239e0b457d6f0919da993dd0b473f"
+  },
+  "elf-libggml-base.so.0-versions.json": {
+    "bytes": 18612,
+    "sha256": "9a9af986ebac0daff2e94d2ab0b55eaff0536eeb5d41f71bf18368ba8e2598d7"
+  },
+  "elf-libggml-cpu-haswell.so-dynamic.json": {
+    "bytes": 2059,
+    "sha256": "96570c9faf972eb7af86377b023090567671ffc02175359ef605cad568120abe"
+  },
+  "elf-libggml-cpu-haswell.so-versions.json": {
+    "bytes": 17814,
+    "sha256": "2b1caeae973e1308ab66d1d8ca88cd4a7196b84f067778e91ab9736ec29e8667"
+  },
+  "elf-libggml.so.0-dynamic.json": {
+    "bytes": 1885,
+    "sha256": "a1c8110ab7f1ed620e11261bf978509aec8e8eae4728f5dc7a133472fe84597d"
+  },
+  "elf-libggml.so.0-versions.json": {
+    "bytes": 3026,
+    "sha256": "837134f97d3daeb5b0904df3e98da41637179552d910c384666611a894f32466"
+  },
+  "elf-libllama-common.so.0-dynamic.json": {
+    "bytes": 2371,
+    "sha256": "3eca2325d8480dbe6c824759337043d06c537e275b2b1c6a7a5ed929f389fcef"
+  },
+  "elf-libllama-common.so.0-versions.json": {
+    "bytes": 103706,
+    "sha256": "26eb585e86be24ae6ab3a135c0bf2f105062be32367ce8e4f459d0faac90e238"
+  },
+  "elf-libllama-completion-impl.so-dynamic.json": {
+    "bytes": 2073,
+    "sha256": "664fcfa6b0ca379e60cc834ce9fc99e74d1312163f5f7f2eb6beff47716e8a8d"
+  },
+  "elf-libllama-completion-impl.so-versions.json": {
+    "bytes": 5056,
+    "sha256": "43c43051acb3c51d63cfc106c2e8fd0f2ba91907892d14ab606bf4b5a4abee15"
+  },
+  "elf-libllama.so.0-dynamic.json": {
+    "bytes": 2137,
+    "sha256": "aa4abcdd1f7d69bfca32bd2eb95e1c6e24fd515c4565db97d5e26d7d324f0881"
+  },
+  "elf-libllama.so.0-versions.json": {
+    "bytes": 131669,
+    "sha256": "792b034be771a92be12a4b899513cf70605eb03f4241bf43876196aec8d544d2"
+  },
+  "elf-libm.so.6-dynamic.json": {
+    "bytes": 2163,
+    "sha256": "e13e9b9659681b1d27d8ae8ac42d6c156650e29aeb7f10e0b721bb8a80b7e2e6"
+  },
+  "elf-libm.so.6-versions.json": {
+    "bytes": 31266,
+    "sha256": "49aab65b7553733e23870f71fffeab8fcda6208517f09135995df4e93d072ac8"
+  },
+  "elf-libssl.so.3-dynamic.json": {
+    "bytes": 1855,
+    "sha256": "6465fd3070cc61ddaf45a7c2020a37b7f98fd18c04d45b1e5ee832afb3c97a70"
+  },
+  "elf-libssl.so.3-versions.json": {
+    "bytes": 28637,
+    "sha256": "e27e37cbb72f232fd90098ab29cbadc2f266d6dff1f66817be476b282b999295"
+  },
+  "elf-libstdc++.so.6-dynamic.json": {
+    "bytes": 1914,
+    "sha256": "5da0eeb0e63c95ceaa14a22d19fb1121e7e375ea4b3297c3784c5f238c7c894f"
+  },
+  "elf-libstdc++.so.6-versions.json": {
+    "bytes": 146495,
+    "sha256": "fadcce471b0d92e560c847317fe2858db4bed24b043708b1b7acdadfdbea2619"
+  },
+  "elf-libz.so.1-dynamic.json": {
+    "bytes": 1654,
+    "sha256": "19e42c11d6bb94b79d6be48aa9a17970e2c9cbe0b2d87657e12ce75be3998538"
+  },
+  "elf-libz.so.1-versions.json": {
+    "bytes": 4813,
+    "sha256": "2c53d10916a9b71248499f7d715377dd0413876bd7ca9e36546903edb9552949"
+  },
+  "elf-libzstd.so.1-dynamic.json": {
+    "bytes": 1671,
+    "sha256": "1fb7aa4b2345e251577529a7b1f76d4f3e3afaaaa57ca98d8c3beeef113b062b"
+  },
+  "elf-libzstd.so.1-versions.json": {
+    "bytes": 5366,
+    "sha256": "17542593e5a8a21ce393f1bd4bb54d41816702e82b5374ec8625bbdab164a592"
+  },
+  "elf-llama-completion-dynamic.json": {
+    "bytes": 1819,
+    "sha256": "c9cdd9d2be95ab4d56a3b7c9049701028125f1ebcd765c5fac4f457bc1e72091"
+  },
+  "elf-llama-completion-versions.json": {
+    "bytes": 753,
+    "sha256": "aeab737384f3bbca2f55d571c3dea4ce44525b7f9c9b00720e2ca14a643b8f3e"
+  },
+  "gcc16-copyright-local.txt": {
+    "bytes": 73896,
+    "sha256": "d7815dd2364180835891947d96d808878204dea45b8597602a7952332195fbea"
+  },
+  "host.json": {
+    "bytes": 2246,
+    "sha256": "fd55a9333f3ce25707ac999b42cda324573c1c0406c7c50cee74220ed70bb493"
+  },
+  "installed-packages.json": {
+    "bytes": 526,
+    "sha256": "e86fd01048f6f7d9568b9026560450b8f6277c638161267b77b92d2caad87aff"
+  },
+  "keyring.json": {
+    "bytes": 143,
+    "sha256": "a4b674c24c8749af62c2a2f16d882a26379a70760ecfcc4b9325b8c7fb3bfc54"
+  },
+  "loader-cache.json": {
+    "bytes": 23154,
+    "sha256": "b386f2dfa753f369cb5013d0aab92ebd5c09959f381a3f79fafeee3566a3a7bc"
+  },
+  "network-receipts.json": {
+    "bytes": 1494,
+    "sha256": "218f49b49bb6288bca503385c040246189cb563a6f7d3e9a7d0c3bc87a18bf55"
+  },
+  "network-ubuntu-gcc16-copyright.original": {
+    "bytes": 73896,
+    "sha256": "d7815dd2364180835891947d96d808878204dea45b8597602a7952332195fbea"
+  },
+  "report.json": {
+    "bytes": 7030,
+    "sha256": "322120db362e990308d87a3f1d76dfcd9e48ff0fa99df840fbb69c2b247c8cff"
+  },
+  "repository-chain.json": {
+    "bytes": 3336,
+    "sha256": "4347368418d347c14e9ebf52d2526797e8a5aa1078cf2fa2f95f6769ee73e4ef"
+  },
+  "security.ubuntu.com_ubuntu_dists_resolute-security-gpgv.json": {
+    "bytes": 941,
+    "sha256": "fa698b12b60184108a5ba6a7d516b4d4312fe920e1cbba32ed0a3edadc734727"
+  },
+  "security.ubuntu.com_ubuntu_dists_resolute-security_InRelease": {
+    "bytes": 137403,
+    "sha256": "4dea4260d6cda1e29926a71752502e5ec8c432818d1ba75816cdad08ca14bb66"
+  }
+}

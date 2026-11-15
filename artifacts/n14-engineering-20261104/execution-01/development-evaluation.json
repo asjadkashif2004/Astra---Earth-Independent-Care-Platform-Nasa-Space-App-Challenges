@@ -1,0 +1,2942 @@
+{
+  "schema_version": "astra.n14.development-evaluation.v1",
+  "eligibility": "SEEN_PROVISIONAL",
+  "cases": 40,
+  "independent_cases": 0,
+  "independent_approvals": 0,
+  "promoted": false,
+  "scientific_validation": false,
+  "claim_accuracy": "NOT_ASSESSED; retrieval presence is not support",
+  "summary": {
+    "rich_lexical": {
+      "positive_denominator": 32,
+      "unsupported_not_in_recall": 8,
+      "recall": {
+        "1": 0.7083333333333334,
+        "3": 0.8333333333333333,
+        "5": 0.9427083333333333
+      },
+      "mrr": 0.9140625,
+      "paired": {
+        "3": {
+          "wins": 0,
+          "losses": 0,
+          "ties": 32,
+          "lost_expected": []
+        },
+        "5": {
+          "wins": 0,
+          "losses": 0,
+          "ties": 32,
+          "lost_expected": []
+        }
+      }
+    },
+    "semantic_minilm": {
+      "positive_denominator": 32,
+      "unsupported_not_in_recall": 8,
+      "recall": {
+        "1": 0.5625,
+        "3": 0.7864583333333333,
+        "5": 0.8125
+      },
+      "mrr": 0.7874999999999999,
+      "paired": {
+        "3": {
+          "wins": 5,
+          "losses": 8,
+          "ties": 19,
+          "lost_expected": [
+            {
+              "id": "P03",
+              "units": [
+                "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0"
+              ]
+            },
+            {
+              "id": "P04",
+              "units": [
+                "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+                "evidence-unit-ccd53abd299ed38c49f6bf1d449e40bec3b51168ecf5a37f6d37bb6bef1af03f"
+              ]
+            },
+            {
+              "id": "P05",
+              "units": [
+                "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5"
+              ]
+            },
+            {
+              "id": "P07",
+              "units": [
+                "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888"
+              ]
+            },
+            {
+              "id": "P08",
+              "units": [
+                "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2"
+              ]
+            },
+            {
+              "id": "S02",
+              "units": [
+                "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e"
+              ]
+            },
+            {
+              "id": "S16",
+              "units": [
+                "evidence-unit-181f31f2c96922413bd22b3a3bc86114d1ff261a6bb37f87146408ba302f0bec"
+              ]
+            },
+            {
+              "id": "S19",
+              "units": [
+                "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0"
+              ]
+            },
+            {
+              "id": "S22",
+              "units": [
+                "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+                "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42"
+              ]
+            }
+          ]
+        },
+        "5": {
+          "wins": 1,
+          "losses": 8,
+          "ties": 23,
+          "lost_expected": [
+            {
+              "id": "P03",
+              "units": [
+                "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0"
+              ]
+            },
+            {
+              "id": "P04",
+              "units": [
+                "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+                "evidence-unit-ccd53abd299ed38c49f6bf1d449e40bec3b51168ecf5a37f6d37bb6bef1af03f"
+              ]
+            },
+            {
+              "id": "P05",
+              "units": [
+                "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5"
+              ]
+            },
+            {
+              "id": "P07",
+              "units": [
+                "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888"
+              ]
+            },
+            {
+              "id": "P08",
+              "units": [
+                "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2"
+              ]
+            },
+            {
+              "id": "S02",
+              "units": [
+                "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e"
+              ]
+            },
+            {
+              "id": "S16",
+              "units": [
+                "evidence-unit-181f31f2c96922413bd22b3a3bc86114d1ff261a6bb37f87146408ba302f0bec"
+              ]
+            },
+            {
+              "id": "S19",
+              "units": [
+                "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0"
+              ]
+            },
+            {
+              "id": "S22",
+              "units": [
+                "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+                "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "lexical_weighted_rrf": {
+      "positive_denominator": 32,
+      "unsupported_not_in_recall": 8,
+      "recall": {
+        "1": 0.6666666666666666,
+        "3": 0.9166666666666667,
+        "5": 0.953125
+      },
+      "mrr": 0.9010416666666666,
+      "paired": {
+        "3": {
+          "wins": 5,
+          "losses": 2,
+          "ties": 25,
+          "lost_expected": [
+            {
+              "id": "P07",
+              "units": [
+                "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888"
+              ]
+            },
+            {
+              "id": "S22",
+              "units": [
+                "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42"
+              ]
+            }
+          ]
+        },
+        "5": {
+          "wins": 1,
+          "losses": 0,
+          "ties": 31,
+          "lost_expected": []
+        }
+      }
+    },
+    "append_only_semantic_rescue": {
+      "positive_denominator": 32,
+      "unsupported_not_in_recall": 8,
+      "recall": {
+        "1": 0.7083333333333334,
+        "3": 0.84375,
+        "5": 0.953125
+      },
+      "mrr": 0.9140625,
+      "paired": {
+        "3": {
+          "wins": 1,
+          "losses": 0,
+          "ties": 31,
+          "lost_expected": []
+        },
+        "5": {
+          "wins": 1,
+          "losses": 0,
+          "ties": 31,
+          "lost_expected": []
+        }
+      }
+    }
+  },
+  "rows": [
+    {
+      "id": "P01",
+      "category": "partially_supported",
+      "expected_units": [
+        "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+        "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17"
+          ],
+          "recall": {
+            "1": 0.5,
+            "3": 0.5,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2"
+          ],
+          "recall": {
+            "1": 0.5,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a"
+          ],
+          "recall": {
+            "1": 0.5,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17"
+          ],
+          "recall": {
+            "1": 0.5,
+            "3": 0.5,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "P02",
+      "category": "partially_supported",
+      "expected_units": [
+        "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c",
+        "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c",
+            "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 0,
+            "5": 1
+          },
+          "reciprocal_rank": 0.25
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c"
+          ],
+          "recall": {
+            "1": 0.5,
+            "3": 0.5,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c",
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 0.5,
+            "5": 1
+          },
+          "reciprocal_rank": 0.3333333333333333
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c",
+            "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 0,
+            "5": 1
+          },
+          "reciprocal_rank": 0.25
+        }
+      }
+    },
+    {
+      "id": "P03",
+      "category": "partially_supported",
+      "expected_units": [
+        "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0",
+        "evidence-unit-f6cda12f47bb0af5f10db5cd9b5ffe32b6f1da1da94a51abe792be5e61cd6fca"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0",
+            "evidence-unit-f6cda12f47bb0af5f10db5cd9b5ffe32b6f1da1da94a51abe792be5e61cd6fca",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42"
+          ],
+          "recall": {
+            "1": 0.5,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-f6cda12f47bb0af5f10db5cd9b5ffe32b6f1da1da94a51abe792be5e61cd6fca",
+            "evidence-unit-9f45bd9266e453429880fc7fc609b351b65f353d2d12dc782eac1bc804a9a3ff",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-1b71bf11ab9fe33786fba85a2a53c985051e2d2bc5243c9043253045735daa38"
+          ],
+          "recall": {
+            "1": 0.5,
+            "3": 0.5,
+            "5": 0.5
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-f6cda12f47bb0af5f10db5cd9b5ffe32b6f1da1da94a51abe792be5e61cd6fca",
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42"
+          ],
+          "recall": {
+            "1": 0.5,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0",
+            "evidence-unit-f6cda12f47bb0af5f10db5cd9b5ffe32b6f1da1da94a51abe792be5e61cd6fca",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42"
+          ],
+          "recall": {
+            "1": 0.5,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "P04",
+      "category": "partially_supported",
+      "expected_units": [
+        "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+        "evidence-unit-ccd53abd299ed38c49f6bf1d449e40bec3b51168ecf5a37f6d37bb6bef1af03f",
+        "evidence-unit-461b2446ecb438376f8a159342652903691706e83f81799fd58f985b837a9912"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773",
+            "evidence-unit-ccd53abd299ed38c49f6bf1d449e40bec3b51168ecf5a37f6d37bb6bef1af03f"
+          ],
+          "recall": {
+            "1": 0.3333333333333333,
+            "3": 0.6666666666666666,
+            "5": 0.6666666666666666
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c",
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-b497865ffd374eb3aff4f0bb09c319831db31126314b47ce49d21e70d16e955a",
+            "evidence-unit-461b2446ecb438376f8a159342652903691706e83f81799fd58f985b837a9912"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 0,
+            "5": 0.3333333333333333
+          },
+          "reciprocal_rank": 0.2
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-ccd53abd299ed38c49f6bf1d449e40bec3b51168ecf5a37f6d37bb6bef1af03f",
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 0.6666666666666666,
+            "5": 0.6666666666666666
+          },
+          "reciprocal_rank": 0.5
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773",
+            "evidence-unit-ccd53abd299ed38c49f6bf1d449e40bec3b51168ecf5a37f6d37bb6bef1af03f",
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205"
+          ],
+          "recall": {
+            "1": 0.3333333333333333,
+            "3": 0.6666666666666666,
+            "5": 0.6666666666666666
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "P05",
+      "category": "partially_supported",
+      "expected_units": [
+        "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5",
+        "evidence-unit-a7b5bf6c762d1931567761095ed471520768d45278b7815a08751a11bbea57e5",
+        "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5",
+            "evidence-unit-a7b5bf6c762d1931567761095ed471520768d45278b7815a08751a11bbea57e5",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a"
+          ],
+          "recall": {
+            "1": 0.3333333333333333,
+            "3": 0.6666666666666666,
+            "5": 0.6666666666666666
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-a7b5bf6c762d1931567761095ed471520768d45278b7815a08751a11bbea57e5",
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0",
+            "evidence-unit-f6cda12f47bb0af5f10db5cd9b5ffe32b6f1da1da94a51abe792be5e61cd6fca",
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773",
+            "evidence-unit-b497865ffd374eb3aff4f0bb09c319831db31126314b47ce49d21e70d16e955a"
+          ],
+          "recall": {
+            "1": 0.3333333333333333,
+            "3": 0.3333333333333333,
+            "5": 0.3333333333333333
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-a7b5bf6c762d1931567761095ed471520768d45278b7815a08751a11bbea57e5",
+            "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a"
+          ],
+          "recall": {
+            "1": 0.3333333333333333,
+            "3": 0.6666666666666666,
+            "5": 0.6666666666666666
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5",
+            "evidence-unit-a7b5bf6c762d1931567761095ed471520768d45278b7815a08751a11bbea57e5",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a"
+          ],
+          "recall": {
+            "1": 0.3333333333333333,
+            "3": 0.6666666666666666,
+            "5": 0.6666666666666666
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "P06",
+      "category": "partially_supported",
+      "expected_units": [
+        "evidence-unit-9f45bd9266e453429880fc7fc609b351b65f353d2d12dc782eac1bc804a9a3ff"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-9f45bd9266e453429880fc7fc609b351b65f353d2d12dc782eac1bc804a9a3ff"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-9f45bd9266e453429880fc7fc609b351b65f353d2d12dc782eac1bc804a9a3ff",
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe",
+            "evidence-unit-181f31f2c96922413bd22b3a3bc86114d1ff261a6bb37f87146408ba302f0bec",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-9f45bd9266e453429880fc7fc609b351b65f353d2d12dc782eac1bc804a9a3ff",
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe",
+            "evidence-unit-181f31f2c96922413bd22b3a3bc86114d1ff261a6bb37f87146408ba302f0bec",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-9f45bd9266e453429880fc7fc609b351b65f353d2d12dc782eac1bc804a9a3ff",
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe",
+            "evidence-unit-181f31f2c96922413bd22b3a3bc86114d1ff261a6bb37f87146408ba302f0bec",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "P07",
+      "category": "partially_supported",
+      "expected_units": [
+        "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+        "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1",
+        "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c"
+          ],
+          "recall": {
+            "1": 0.3333333333333333,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1",
+            "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42"
+          ],
+          "recall": {
+            "1": 0.3333333333333333,
+            "3": 0.6666666666666666,
+            "5": 0.6666666666666666
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c"
+          ],
+          "recall": {
+            "1": 0.3333333333333333,
+            "3": 0.6666666666666666,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c"
+          ],
+          "recall": {
+            "1": 0.3333333333333333,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "P08",
+      "category": "partially_supported",
+      "expected_units": [
+        "evidence-unit-181f31f2c96922413bd22b3a3bc86114d1ff261a6bb37f87146408ba302f0bec",
+        "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+        "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2",
+            "evidence-unit-461b2446ecb438376f8a159342652903691706e83f81799fd58f985b837a9912"
+          ],
+          "recall": {
+            "1": 0.3333333333333333,
+            "3": 0.3333333333333333,
+            "5": 0.3333333333333333
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-181f31f2c96922413bd22b3a3bc86114d1ff261a6bb37f87146408ba302f0bec",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-9f45bd9266e453429880fc7fc609b351b65f353d2d12dc782eac1bc804a9a3ff",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-f6cda12f47bb0af5f10db5cd9b5ffe32b6f1da1da94a51abe792be5e61cd6fca"
+          ],
+          "recall": {
+            "1": 0.3333333333333333,
+            "3": 0.3333333333333333,
+            "5": 0.3333333333333333
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2",
+            "evidence-unit-461b2446ecb438376f8a159342652903691706e83f81799fd58f985b837a9912",
+            "evidence-unit-181f31f2c96922413bd22b3a3bc86114d1ff261a6bb37f87146408ba302f0bec",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-9f45bd9266e453429880fc7fc609b351b65f353d2d12dc782eac1bc804a9a3ff"
+          ],
+          "recall": {
+            "1": 0.3333333333333333,
+            "3": 0.6666666666666666,
+            "5": 0.6666666666666666
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2",
+            "evidence-unit-461b2446ecb438376f8a159342652903691706e83f81799fd58f985b837a9912",
+            "evidence-unit-181f31f2c96922413bd22b3a3bc86114d1ff261a6bb37f87146408ba302f0bec",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-9f45bd9266e453429880fc7fc609b351b65f353d2d12dc782eac1bc804a9a3ff"
+          ],
+          "recall": {
+            "1": 0.3333333333333333,
+            "3": 0.6666666666666666,
+            "5": 0.6666666666666666
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S01",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-ac52fd5eac3bfb453905815f40a1ea8ef2e34ad4446507b204deaff924452747",
+            "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-b497865ffd374eb3aff4f0bb09c319831db31126314b47ce49d21e70d16e955a",
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe",
+            "evidence-unit-461b2446ecb438376f8a159342652903691706e83f81799fd58f985b837a9912"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-ac52fd5eac3bfb453905815f40a1ea8ef2e34ad4446507b204deaff924452747",
+            "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-ac52fd5eac3bfb453905815f40a1ea8ef2e34ad4446507b204deaff924452747",
+            "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S02",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1",
+            "evidence-unit-461b2446ecb438376f8a159342652903691706e83f81799fd58f985b837a9912",
+            "evidence-unit-2d8f4189314d8481e6cf6378b9989e3046e27146f99a1e8f7e700b73afdcaae5",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 0,
+            "5": 0
+          },
+          "reciprocal_rank": 0
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 0.5
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S03",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 0.5
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S04",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-a7b5bf6c762d1931567761095ed471520768d45278b7815a08751a11bbea57e5",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62",
+            "evidence-unit-b497865ffd374eb3aff4f0bb09c319831db31126314b47ce49d21e70d16e955a",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-a7b5bf6c762d1931567761095ed471520768d45278b7815a08751a11bbea57e5",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-a7b5bf6c762d1931567761095ed471520768d45278b7815a08751a11bbea57e5",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S05",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62",
+            "evidence-unit-461b2446ecb438376f8a159342652903691706e83f81799fd58f985b837a9912",
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c",
+            "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-461b2446ecb438376f8a159342652903691706e83f81799fd58f985b837a9912",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62",
+            "evidence-unit-461b2446ecb438376f8a159342652903691706e83f81799fd58f985b837a9912",
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62",
+            "evidence-unit-461b2446ecb438376f8a159342652903691706e83f81799fd58f985b837a9912",
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S06",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773",
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-ccd53abd299ed38c49f6bf1d449e40bec3b51168ecf5a37f6d37bb6bef1af03f"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773",
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S07",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-ccd53abd299ed38c49f6bf1d449e40bec3b51168ecf5a37f6d37bb6bef1af03f"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773",
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-ccd53abd299ed38c49f6bf1d449e40bec3b51168ecf5a37f6d37bb6bef1af03f",
+            "evidence-unit-b497865ffd374eb3aff4f0bb09c319831db31126314b47ce49d21e70d16e955a"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-ccd53abd299ed38c49f6bf1d449e40bec3b51168ecf5a37f6d37bb6bef1af03f",
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c",
+            "evidence-unit-b497865ffd374eb3aff4f0bb09c319831db31126314b47ce49d21e70d16e955a"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-ccd53abd299ed38c49f6bf1d449e40bec3b51168ecf5a37f6d37bb6bef1af03f",
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c",
+            "evidence-unit-b497865ffd374eb3aff4f0bb09c319831db31126314b47ce49d21e70d16e955a"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S08",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-461b2446ecb438376f8a159342652903691706e83f81799fd58f985b837a9912",
+        "evidence-unit-b497865ffd374eb3aff4f0bb09c319831db31126314b47ce49d21e70d16e955a"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-461b2446ecb438376f8a159342652903691706e83f81799fd58f985b837a9912",
+            "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2",
+            "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205"
+          ],
+          "recall": {
+            "1": 0.5,
+            "3": 0.5,
+            "5": 0.5
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-b497865ffd374eb3aff4f0bb09c319831db31126314b47ce49d21e70d16e955a",
+            "evidence-unit-461b2446ecb438376f8a159342652903691706e83f81799fd58f985b837a9912",
+            "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2",
+            "evidence-unit-a7b5bf6c762d1931567761095ed471520768d45278b7815a08751a11bbea57e5",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205"
+          ],
+          "recall": {
+            "1": 0.5,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-461b2446ecb438376f8a159342652903691706e83f81799fd58f985b837a9912",
+            "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26"
+          ],
+          "recall": {
+            "1": 0.5,
+            "3": 0.5,
+            "5": 0.5
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-461b2446ecb438376f8a159342652903691706e83f81799fd58f985b837a9912",
+            "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2",
+            "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205"
+          ],
+          "recall": {
+            "1": 0.5,
+            "3": 0.5,
+            "5": 0.5
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S09",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-ac52fd5eac3bfb453905815f40a1ea8ef2e34ad4446507b204deaff924452747",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 0,
+            "5": 1
+          },
+          "reciprocal_rank": 0.25
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-1b71bf11ab9fe33786fba85a2a53c985051e2d2bc5243c9043253045735daa38",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-ac52fd5eac3bfb453905815f40a1ea8ef2e34ad4446507b204deaff924452747",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-ac52fd5eac3bfb453905815f40a1ea8ef2e34ad4446507b204deaff924452747",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 0,
+            "5": 1
+          },
+          "reciprocal_rank": 0.25
+        }
+      }
+    },
+    {
+      "id": "S10",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-461b2446ecb438376f8a159342652903691706e83f81799fd58f985b837a9912"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 0,
+            "5": 1
+          },
+          "reciprocal_rank": 0.25
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2",
+            "evidence-unit-1b71bf11ab9fe33786fba85a2a53c985051e2d2bc5243c9043253045735daa38",
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-461b2446ecb438376f8a159342652903691706e83f81799fd58f985b837a9912"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 0.5
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-461b2446ecb438376f8a159342652903691706e83f81799fd58f985b837a9912"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 0,
+            "5": 1
+          },
+          "reciprocal_rank": 0.25
+        }
+      }
+    },
+    {
+      "id": "S11",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-b497865ffd374eb3aff4f0bb09c319831db31126314b47ce49d21e70d16e955a",
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 0.3333333333333333
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2",
+            "evidence-unit-b497865ffd374eb3aff4f0bb09c319831db31126314b47ce49d21e70d16e955a",
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2",
+            "evidence-unit-b497865ffd374eb3aff4f0bb09c319831db31126314b47ce49d21e70d16e955a",
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S12",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-ac52fd5eac3bfb453905815f40a1ea8ef2e34ad4446507b204deaff924452747"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-ac52fd5eac3bfb453905815f40a1ea8ef2e34ad4446507b204deaff924452747",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-ac52fd5eac3bfb453905815f40a1ea8ef2e34ad4446507b204deaff924452747",
+            "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62",
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-ac52fd5eac3bfb453905815f40a1ea8ef2e34ad4446507b204deaff924452747",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-ac52fd5eac3bfb453905815f40a1ea8ef2e34ad4446507b204deaff924452747",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S13",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c",
+            "evidence-unit-ac52fd5eac3bfb453905815f40a1ea8ef2e34ad4446507b204deaff924452747"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1",
+            "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 0.5
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c",
+            "evidence-unit-ac52fd5eac3bfb453905815f40a1ea8ef2e34ad4446507b204deaff924452747"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c",
+            "evidence-unit-ac52fd5eac3bfb453905815f40a1ea8ef2e34ad4446507b204deaff924452747"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S14",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-ccd53abd299ed38c49f6bf1d449e40bec3b51168ecf5a37f6d37bb6bef1af03f"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-ccd53abd299ed38c49f6bf1d449e40bec3b51168ecf5a37f6d37bb6bef1af03f",
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 0.5
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-ccd53abd299ed38c49f6bf1d449e40bec3b51168ecf5a37f6d37bb6bef1af03f",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c",
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773",
+            "evidence-unit-461b2446ecb438376f8a159342652903691706e83f81799fd58f985b837a9912"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-ccd53abd299ed38c49f6bf1d449e40bec3b51168ecf5a37f6d37bb6bef1af03f",
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c",
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 0.5
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-ccd53abd299ed38c49f6bf1d449e40bec3b51168ecf5a37f6d37bb6bef1af03f",
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c",
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 0.5
+        }
+      }
+    },
+    {
+      "id": "S15",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-181f31f2c96922413bd22b3a3bc86114d1ff261a6bb37f87146408ba302f0bec",
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c",
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 0.5
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-4fc558e3f0a5b72a41b1879a5c6eace0cc47044acc7fcd5103f1693be82a280c",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S16",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-181f31f2c96922413bd22b3a3bc86114d1ff261a6bb37f87146408ba302f0bec"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-181f31f2c96922413bd22b3a3bc86114d1ff261a6bb37f87146408ba302f0bec",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-31cd9e4eaf9e5cd85e76233c92aa9138feff5d85b41197af4f84fc205acc5a4e",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe",
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 0,
+            "5": 0
+          },
+          "reciprocal_rank": 0
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-181f31f2c96922413bd22b3a3bc86114d1ff261a6bb37f87146408ba302f0bec",
+            "evidence-unit-31cd9e4eaf9e5cd85e76233c92aa9138feff5d85b41197af4f84fc205acc5a4e",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 0.5
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-181f31f2c96922413bd22b3a3bc86114d1ff261a6bb37f87146408ba302f0bec",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-31cd9e4eaf9e5cd85e76233c92aa9138feff5d85b41197af4f84fc205acc5a4e",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S17",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-2d8f4189314d8481e6cf6378b9989e3046e27146f99a1e8f7e700b73afdcaae5"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-2d8f4189314d8481e6cf6378b9989e3046e27146f99a1e8f7e700b73afdcaae5"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-2d8f4189314d8481e6cf6378b9989e3046e27146f99a1e8f7e700b73afdcaae5",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-31cd9e4eaf9e5cd85e76233c92aa9138feff5d85b41197af4f84fc205acc5a4e",
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-2d8f4189314d8481e6cf6378b9989e3046e27146f99a1e8f7e700b73afdcaae5",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-31cd9e4eaf9e5cd85e76233c92aa9138feff5d85b41197af4f84fc205acc5a4e",
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-2d8f4189314d8481e6cf6378b9989e3046e27146f99a1e8f7e700b73afdcaae5",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-31cd9e4eaf9e5cd85e76233c92aa9138feff5d85b41197af4f84fc205acc5a4e",
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S18",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-31cd9e4eaf9e5cd85e76233c92aa9138feff5d85b41197af4f84fc205acc5a4e",
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe",
+            "evidence-unit-2d8f4189314d8481e6cf6378b9989e3046e27146f99a1e8f7e700b73afdcaae5",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 0.3333333333333333
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe",
+            "evidence-unit-31cd9e4eaf9e5cd85e76233c92aa9138feff5d85b41197af4f84fc205acc5a4e",
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0",
+            "evidence-unit-2d8f4189314d8481e6cf6378b9989e3046e27146f99a1e8f7e700b73afdcaae5",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe",
+            "evidence-unit-31cd9e4eaf9e5cd85e76233c92aa9138feff5d85b41197af4f84fc205acc5a4e",
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0",
+            "evidence-unit-2d8f4189314d8481e6cf6378b9989e3046e27146f99a1e8f7e700b73afdcaae5",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S19",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0",
+        "evidence-unit-f6cda12f47bb0af5f10db5cd9b5ffe32b6f1da1da94a51abe792be5e61cd6fca"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0",
+            "evidence-unit-f6cda12f47bb0af5f10db5cd9b5ffe32b6f1da1da94a51abe792be5e61cd6fca",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17"
+          ],
+          "recall": {
+            "1": 0.5,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-1b71bf11ab9fe33786fba85a2a53c985051e2d2bc5243c9043253045735daa38",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a",
+            "evidence-unit-f6cda12f47bb0af5f10db5cd9b5ffe32b6f1da1da94a51abe792be5e61cd6fca",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 0.5,
+            "5": 0.5
+          },
+          "reciprocal_rank": 0.3333333333333333
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-f6cda12f47bb0af5f10db5cd9b5ffe32b6f1da1da94a51abe792be5e61cd6fca",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17"
+          ],
+          "recall": {
+            "1": 0.5,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0",
+            "evidence-unit-f6cda12f47bb0af5f10db5cd9b5ffe32b6f1da1da94a51abe792be5e61cd6fca",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17"
+          ],
+          "recall": {
+            "1": 0.5,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S20",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-31cd9e4eaf9e5cd85e76233c92aa9138feff5d85b41197af4f84fc205acc5a4e"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-31cd9e4eaf9e5cd85e76233c92aa9138feff5d85b41197af4f84fc205acc5a4e",
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-9da8950872826d1f8e29cc6e9f00e511e84c5f3de06344171fbbf5984574620f",
+            "evidence-unit-68ac36744018c7b2156884d28942f79e0eee74f214e876133c455004449651be"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-31cd9e4eaf9e5cd85e76233c92aa9138feff5d85b41197af4f84fc205acc5a4e",
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1",
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0",
+            "evidence-unit-a6b82fb953416e4b9187ea89295c4f8f07c5bdd21717302bfb783d048d91cb26",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-31cd9e4eaf9e5cd85e76233c92aa9138feff5d85b41197af4f84fc205acc5a4e",
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-9da8950872826d1f8e29cc6e9f00e511e84c5f3de06344171fbbf5984574620f",
+            "evidence-unit-68ac36744018c7b2156884d28942f79e0eee74f214e876133c455004449651be"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-31cd9e4eaf9e5cd85e76233c92aa9138feff5d85b41197af4f84fc205acc5a4e",
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-9da8950872826d1f8e29cc6e9f00e511e84c5f3de06344171fbbf5984574620f",
+            "evidence-unit-68ac36744018c7b2156884d28942f79e0eee74f214e876133c455004449651be"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S21",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-1b71bf11ab9fe33786fba85a2a53c985051e2d2bc5243c9043253045735daa38"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-1b71bf11ab9fe33786fba85a2a53c985051e2d2bc5243c9043253045735daa38",
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0",
+            "evidence-unit-f6cda12f47bb0af5f10db5cd9b5ffe32b6f1da1da94a51abe792be5e61cd6fca",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-1b71bf11ab9fe33786fba85a2a53c985051e2d2bc5243c9043253045735daa38",
+            "evidence-unit-f6cda12f47bb0af5f10db5cd9b5ffe32b6f1da1da94a51abe792be5e61cd6fca",
+            "evidence-unit-2d8f4189314d8481e6cf6378b9989e3046e27146f99a1e8f7e700b73afdcaae5",
+            "evidence-unit-9f45bd9266e453429880fc7fc609b351b65f353d2d12dc782eac1bc804a9a3ff",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-1b71bf11ab9fe33786fba85a2a53c985051e2d2bc5243c9043253045735daa38",
+            "evidence-unit-f6cda12f47bb0af5f10db5cd9b5ffe32b6f1da1da94a51abe792be5e61cd6fca",
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-1b71bf11ab9fe33786fba85a2a53c985051e2d2bc5243c9043253045735daa38",
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0",
+            "evidence-unit-f6cda12f47bb0af5f10db5cd9b5ffe32b6f1da1da94a51abe792be5e61cd6fca",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S22",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+        "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+        "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1",
+            "evidence-unit-ac52fd5eac3bfb453905815f40a1ea8ef2e34ad4446507b204deaff924452747"
+          ],
+          "recall": {
+            "1": 0.3333333333333333,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5"
+          ],
+          "recall": {
+            "1": 0,
+            "3": 0.3333333333333333,
+            "5": 0.3333333333333333
+          },
+          "reciprocal_rank": 0.5
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1",
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-ac52fd5eac3bfb453905815f40a1ea8ef2e34ad4446507b204deaff924452747"
+          ],
+          "recall": {
+            "1": 0.3333333333333333,
+            "3": 0.6666666666666666,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1",
+            "evidence-unit-ac52fd5eac3bfb453905815f40a1ea8ef2e34ad4446507b204deaff924452747"
+          ],
+          "recall": {
+            "1": 0.3333333333333333,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S23",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-9da8950872826d1f8e29cc6e9f00e511e84c5f3de06344171fbbf5984574620f"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-9da8950872826d1f8e29cc6e9f00e511e84c5f3de06344171fbbf5984574620f",
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-68ac36744018c7b2156884d28942f79e0eee74f214e876133c455004449651be"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-9da8950872826d1f8e29cc6e9f00e511e84c5f3de06344171fbbf5984574620f",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-68ac36744018c7b2156884d28942f79e0eee74f214e876133c455004449651be",
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-9da8950872826d1f8e29cc6e9f00e511e84c5f3de06344171fbbf5984574620f",
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+            "evidence-unit-68ac36744018c7b2156884d28942f79e0eee74f214e876133c455004449651be",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-9da8950872826d1f8e29cc6e9f00e511e84c5f3de06344171fbbf5984574620f",
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-68ac36744018c7b2156884d28942f79e0eee74f214e876133c455004449651be"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "S24",
+      "category": "supported",
+      "expected_units": [
+        "evidence-unit-68ac36744018c7b2156884d28942f79e0eee74f214e876133c455004449651be"
+      ],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-68ac36744018c7b2156884d28942f79e0eee74f214e876133c455004449651be",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1",
+            "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-68ac36744018c7b2156884d28942f79e0eee74f214e876133c455004449651be",
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-9da8950872826d1f8e29cc6e9f00e511e84c5f3de06344171fbbf5984574620f"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-68ac36744018c7b2156884d28942f79e0eee74f214e876133c455004449651be",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1",
+            "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2",
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-68ac36744018c7b2156884d28942f79e0eee74f214e876133c455004449651be",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1",
+            "evidence-unit-7e75ebe7edc05662c027a143596b14338eaaceaecb346e2f9ef6ed3fa65e27d2",
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888"
+          ],
+          "recall": {
+            "1": 1,
+            "3": 1,
+            "5": 1
+          },
+          "reciprocal_rank": 1
+        }
+      }
+    },
+    {
+      "id": "U01",
+      "category": "unsupported",
+      "expected_units": [],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c",
+            "evidence-unit-ac52fd5eac3bfb453905815f40a1ea8ef2e34ad4446507b204deaff924452747",
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c",
+            "evidence-unit-ac52fd5eac3bfb453905815f40a1ea8ef2e34ad4446507b204deaff924452747",
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c",
+            "evidence-unit-ac52fd5eac3bfb453905815f40a1ea8ef2e34ad4446507b204deaff924452747",
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        }
+      }
+    },
+    {
+      "id": "U02",
+      "category": "unsupported",
+      "expected_units": [],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-b497865ffd374eb3aff4f0bb09c319831db31126314b47ce49d21e70d16e955a",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-b497865ffd374eb3aff4f0bb09c319831db31126314b47ce49d21e70d16e955a",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-def9ce99d4934ca65c1918948a1dee40b6d156514383619a9516e7b9e9cec205",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-b497865ffd374eb3aff4f0bb09c319831db31126314b47ce49d21e70d16e955a",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-bf9e713854f6e079da1953694a2f5dff93ea3be52f667a326d1e55b82fc98773"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        }
+      }
+    },
+    {
+      "id": "U03",
+      "category": "unsupported",
+      "expected_units": [],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-9da8950872826d1f8e29cc6e9f00e511e84c5f3de06344171fbbf5984574620f",
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-9da8950872826d1f8e29cc6e9f00e511e84c5f3de06344171fbbf5984574620f",
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-795a821a4ec8e0103b2529ca9883dd58244eda2a5d60fb6f1d8f8108576e7888",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-9da8950872826d1f8e29cc6e9f00e511e84c5f3de06344171fbbf5984574620f",
+            "evidence-unit-9139652cf419de3369fa8b17d3757592d3f6f8930d707118fdcad68af30264d1"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        }
+      }
+    },
+    {
+      "id": "U04",
+      "category": "unsupported",
+      "expected_units": [],
+      "policies": {
+        "rich_lexical": {
+          "units": [],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-9f45bd9266e453429880fc7fc609b351b65f353d2d12dc782eac1bc804a9a3ff",
+            "evidence-unit-181f31f2c96922413bd22b3a3bc86114d1ff261a6bb37f87146408ba302f0bec",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-9f45bd9266e453429880fc7fc609b351b65f353d2d12dc782eac1bc804a9a3ff",
+            "evidence-unit-181f31f2c96922413bd22b3a3bc86114d1ff261a6bb37f87146408ba302f0bec",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-9f45bd9266e453429880fc7fc609b351b65f353d2d12dc782eac1bc804a9a3ff",
+            "evidence-unit-181f31f2c96922413bd22b3a3bc86114d1ff261a6bb37f87146408ba302f0bec",
+            "evidence-unit-972cd65f2d65f576e14585670be935b0f61aa1efff402ddd906b1cbae76643e1",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        }
+      }
+    },
+    {
+      "id": "U05",
+      "category": "unsupported",
+      "expected_units": [],
+      "policies": {
+        "rich_lexical": {
+          "units": [],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "semantic_minilm": {
+          "units": [],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "lexical_weighted_rrf": {
+          "units": [],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "append_only_semantic_rescue": {
+          "units": [],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        }
+      }
+    },
+    {
+      "id": "U06",
+      "category": "unsupported",
+      "expected_units": [],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-9f45bd9266e453429880fc7fc609b351b65f353d2d12dc782eac1bc804a9a3ff",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0",
+            "evidence-unit-f6cda12f47bb0af5f10db5cd9b5ffe32b6f1da1da94a51abe792be5e61cd6fca"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-9f45bd9266e453429880fc7fc609b351b65f353d2d12dc782eac1bc804a9a3ff",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-a93d5eed19465a5b46643f1e8623f9d00dadbd96f2155ead5f204bb561331d62",
+            "evidence-unit-cf17a02dac203e6ff4bfb4dfe72fbace74da4f8f707fa38e1b83c8efe130c39c",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-9f45bd9266e453429880fc7fc609b351b65f353d2d12dc782eac1bc804a9a3ff",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        }
+      }
+    },
+    {
+      "id": "U07",
+      "category": "unsupported",
+      "expected_units": [],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5",
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe",
+            "evidence-unit-181f31f2c96922413bd22b3a3bc86114d1ff261a6bb37f87146408ba302f0bec",
+            "evidence-unit-2d8f4189314d8481e6cf6378b9989e3046e27146f99a1e8f7e700b73afdcaae5",
+            "evidence-unit-70fa5add77b50024499f528f0775b296c8c8419e658dccca6319d7d8df87801a"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-d3de1dfa776d10ec7e458f8bd222811bf83d1052f2de0a6bfb4e765b81e2137f",
+            "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5",
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        }
+      }
+    },
+    {
+      "id": "U08",
+      "category": "unsupported",
+      "expected_units": [],
+      "policies": {
+        "rich_lexical": {
+          "units": [
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "semantic_minilm": {
+          "units": [
+            "evidence-unit-c2604be4bc8d3b08bbe3b0f1b576290cc5b8f4ad6cd474ee9e7047c5ec8556c1",
+            "evidence-unit-2d8f4189314d8481e6cf6378b9989e3046e27146f99a1e8f7e700b73afdcaae5",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-160bbaa0869ed03bb5e49440bf2e63fd2e8ea0eec1ba71985cd51fbcbdeed0a5"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "lexical_weighted_rrf": {
+          "units": [
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        },
+        "append_only_semantic_rescue": {
+          "units": [
+            "evidence-unit-e93819292ebecf0982aee1611d71559b11a1250478a82ace56a055c9617ce31f",
+            "evidence-unit-aeca698f90d560bf4734dd6205a22d71f741c1f3dd74dfab308f458a210dcd42",
+            "evidence-unit-1a760c5cd3f623c4369a9748277e8dbfbd19985ee4e04ffeb540350930307b17",
+            "evidence-unit-dfdc295cca34b2eef395d97e27342f9af4667473e30d1fd076acdc48f3c34a6e",
+            "evidence-unit-bc2a15c4c382fcf8fe699549f6db956be649933ac68bb3c5770d4d4671de4cbe"
+          ],
+          "recall": {
+            "1": null,
+            "3": null,
+            "5": null
+          },
+          "reciprocal_rank": null
+        }
+      }
+    }
+  ],
+  "source_pins": {
+    "packet": "aa93cf5062b03b87dbd57b96e756965fe90f9883854d456167462269c34ed6d4",
+    "semantic": "fff18d9b6efeec3379397e8de889765525b73fcceca95ef8b930e907cdf3dbc4",
+    "queries": "343046e2745049f3472de3e768f505616c5a32535bdb29c240ae6c64427b2bfd"
+  },
+  "lexical_execution": "FRESH_FIXED_BASELINE",
+  "semantic_execution": "ARCHIVED_N14_03_RANK_LIST_REPLAY; no fresh embedding",
+  "hybrid_execution": "FRESH_RANK_FUSION_OF_FRESH_LEXICAL_AND_ARCHIVED_SEMANTIC",
+  "policies_unchanged": true,
+  "all_40_seen": true,
+  "original_24_16_split": "Historical only, not a new held-out partition",
+  "fresh_inference": 0
+}

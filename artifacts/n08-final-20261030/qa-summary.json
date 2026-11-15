@@ -1,0 +1,40 @@
+{
+  "scope": "EXISTING_SOURCE_AND_SECURITY_BASELINE_ONLY_NOT_N08_ACCEPTANCE",
+  "command": [
+    "node",
+    "--experimental-vm-modules",
+    "--test",
+    "--test-isolation=none",
+    "artifacts/n08-final-20261030/baseline-controls.test.mjs",
+    "tests/n07-local.test.mjs",
+    "tests/scientific-acquisition.test.mjs",
+    "tests/osdr-metadata.test.mjs",
+    "tests/bidmc-acquisition.test.mjs",
+    "tests/sleep-edf-acquisition.test.mjs",
+    "tests/telemetry-integrity.test.mjs",
+    "tests/monitoring-integrity.test.mjs",
+    "tests/foundation.test.mjs"
+  ],
+  "exit_code": 0,
+  "counts": {
+    "tests": 224,
+    "pass": 223,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 1
+  },
+  "elapsed_ms": 15464.684432000013,
+  "samples": 62,
+  "maximum_sampled_tree_RSS_bytes": 264982528,
+  "child_kernel_maxRSS_bytes": 232542208,
+  "maximum_sampled_scratch_counted_bytes": 83601408,
+  "scratch_remaining": [],
+  "N08_feature_implementation": false,
+  "N08_browser_and_waveform_qualification": "NOT RUN",
+  "new_external_requests": 0,
+  "N16_native_workers": 0,
+  "models": 0,
+  "operational_or_sealed_database_access": 0,
+  "resource_limits": "180s finite regression batch; sampled/kernel observations, not hard RSS/disk limits or expired N16 allowance.",
+  "database_scope": "Existing in-memory/fresh temporary tests only; no running ASTRA API or operational DB."
+}

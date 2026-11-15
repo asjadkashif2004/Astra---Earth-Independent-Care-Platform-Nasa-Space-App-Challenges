@@ -1,0 +1,11 @@
+{
+  "platform": "win32",
+  "arch": "x64",
+  "release": "10.0.26300",
+  "cpu": "AMD Ryzen 5 7430U with Radeon Graphics         ",
+  "logical_cpus": 12,
+  "total_memory_bytes": 14861852672,
+  "node": "v24.21.0",
+  "minimum_machine_designation": null,
+  "observed_at": "2026-11-04T17:58:09.761Z"
+}

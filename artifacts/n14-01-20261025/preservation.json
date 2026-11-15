@@ -1,0 +1,10 @@
+{
+  "changed": [],
+  "existing_source_and_corpus_files_hashed": 521,
+  "fresh_changed": [],
+  "fresh_preflight_package_and_corpus_hashes": 30,
+  "historical_artifact_file_size_mtime_checks": 5019,
+  "historical_changes": [],
+  "not_a_new_hash_audit_of_every_historical_artifact": true,
+  "protected_subtrees": "not traversed"
+}

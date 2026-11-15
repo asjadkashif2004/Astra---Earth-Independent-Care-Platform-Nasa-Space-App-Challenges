@@ -1,0 +1,45 @@
+✔ ordered 0 samples and separate events reconcile from actual records (4.355114ms)
+✔ ordered 1 samples and separate events reconcile from actual records (24.448694ms)
+✔ ordered 2 samples and separate events reconcile from actual records (2.038819ms)
+✔ ordered 7 samples and separate events reconcile from actual records (4.873448ms)
+✔ ordered 11 samples and separate events reconcile from actual records (6.03883ms)
+✔ delayed collector and writes serialize all foreground/monitor/event work (6.298638ms)
+✔ final flush seals admission, drains delayed writes and waits for close acknowledgement (1.432629ms)
+✔ short writes are completed before appended and durable acknowledgement (0.913854ms)
+✔ write failure fails closed with no durable sample and visible first error (1.010888ms)
+✔ zero-byte write fails closed with no durable sample and visible first error (0.844072ms)
+✔ silent dropped write fails closed with no durable sample and visible first error (0.434595ms)
+✔ flush failure fails closed with no durable sample and visible first error (0.340586ms)
+✔ missing sync acknowledgement fails closed with no durable sample and visible first error (0.261216ms)
+✔ wrong byte acknowledgement fails closed with no durable sample and visible first error (0.327621ms)
+✔ serialization undefined field remains visible, never accepted or appended (0.335506ms)
+✔ serialization nonfinite remains visible, never accepted or appended (0.237842ms)
+✔ serialization function remains visible, never accepted or appended (0.193467ms)
+✔ serialization cycle remains visible, never accepted or appended (0.213596ms)
+✔ filtering/aggregation and labeling samples as events are not permitted (0.472336ms)
+✔ counter and malformed expected totals cannot authorize a PASS (1.300588ms)
+✔ counter fixture corruption rejects rather than silently coercing totals (0.699057ms)
+✔ exact synthetic seven-controller/five-journal case is rejected; events cannot cover missing samples (2.282832ms)
+✔ missing, duplicate, out-of-order, truncated, corrupted and foreign records are detected (1.268677ms)
+✔ fully rehashed tampering is rejected against the retained acknowledged head (0.559933ms)
+✔ final readback detects loss after per-record acknowledgement (0.298256ms)
+✔ post-close corruption and failed close acknowledgement cannot return success (0.630086ms)
+✔ final flush and close failures remain failures after all rows were acknowledged (0.63238ms)
+✔ cancellation during pending writes cancels queued work and exposes incomplete durable counts (1.25433ms)
+✔ termination during finalization cannot produce a late PASS (0.529755ms)
+✔ cancellation after close acknowledgement still blocks pending final readback (0.535386ms)
+✔ hung finalization times out visibly; pending cleanup is never reported complete (252.154573ms)
+✔ failure notification exceptions remain visible and cannot release success (0.451797ms)
+✔ expected counts are snapshotted and finalization is idempotent (0.610158ms)
+✔ unmodified legacy counter advances before persistence and append calls can overlap (5.909458ms)
+✔ real disposable JSONL adapter persists and closes a valid mock journal without SQL (70.317254ms)
+✔ count-validation oracle rejects accept-all and reject-all implementations (2.404032ms)
+✔ controller gates result commit/PASS on final durable reconciliation; protected execution surfaces unchanged (29.575202ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 507.106754

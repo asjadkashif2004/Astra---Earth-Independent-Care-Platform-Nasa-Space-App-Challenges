@@ -1,0 +1,20 @@
+{
+  "application_start_ms": 131.39176299999963,
+  "scenario_start_ms": 55.625920999998925,
+  "sixty_frames_ms": 744.8490660000025,
+  "canonical_observations": 3294,
+  "observations_per_second": 4349.874555659293,
+  "ten_replays_ms": 863.2908709999974,
+  "memory": {
+    "rss": 683651072,
+    "heapTotal": 476446720,
+    "heapUsed": 398060608,
+    "external": 13160765,
+    "arrayBuffers": 8728736
+  },
+  "kernel_max_RSS_KiB": 702028,
+  "database_bytes": 46009776,
+  "N16_starts": 0,
+  "model_executions": 0,
+  "limitation": "Observed process/kernel high-water and scratch size, not hard RSS/disk or target-device guarantees."
+}

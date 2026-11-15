@@ -1,0 +1,105 @@
+{
+  "task": "N15-08",
+  "files": [
+    {
+      "path": "assessment.json",
+      "bytes": 982,
+      "sha256": "c0132354b40f996a430ceadcf8e57f2b77e17967ed39db3c3ba43d9922e787e4"
+    },
+    {
+      "path": "control/STOPPED.json",
+      "bytes": 224,
+      "sha256": "7901842257831aed7887b1b26d85b1b8fc3413bd5a2b0974fb9325fdf4bd0292"
+    },
+    {
+      "path": "control/authorization.json",
+      "bytes": 452,
+      "sha256": "5b16ae37c649621068ca8ad9067b0994381addcc5d10365eb41107e39416e760"
+    },
+    {
+      "path": "control/baseline-plan.json",
+      "bytes": 22347,
+      "sha256": "46cf9f27416cf58fef167908ec836aa7aad443e0821a40de5bcd5f4de75f8f99"
+    },
+    {
+      "path": "control/blocked-candidate.json",
+      "bytes": 20203,
+      "sha256": "eeaa137cdf237561a1de8a3fd28859955204841b852b20915538ae061709f401"
+    },
+    {
+      "path": "control/diagnosis.json",
+      "bytes": 1056,
+      "sha256": "1c01db55cf21924a003fc2baf93cc1db5d7cbd4ac5ea6b289fe9f12e3410bb0b"
+    },
+    {
+      "path": "control/driver.mjs",
+      "bytes": 15232,
+      "sha256": "a51bf03dab91fb7d028617b5b38decb8fd0520f0dbb4a66cdaefb54d21401279"
+    },
+    {
+      "path": "control/preservation-before.json",
+      "bytes": 983302,
+      "sha256": "48a43eca4818b7bec50a3b533001c19ec20d1d025b9349480a39f42866b0e3fa"
+    },
+    {
+      "path": "controller-qa-failure.json",
+      "bytes": 1122,
+      "sha256": "ddba15c88f275215c791f9940b05c7ffe19beff0a9890c65ffa002b59f5a3c5d"
+    },
+    {
+      "path": "delivery-accounting.json",
+      "bytes": 360,
+      "sha256": "392fda72a56b5ad185ed3064c266590f8fb6569b22e79a6b6ab97f12e0e5dfd0"
+    },
+    {
+      "path": "preparation-note.json",
+      "bytes": 444,
+      "sha256": "c924f39afd9c0a41b59b53a13e828c6d2dabd61c1e09c5ee0377bd9e166569ed"
+    },
+    {
+      "path": "preservation.json",
+      "bytes": 1385,
+      "sha256": "52ba344685cc5cfcf0c4fe54a16a941dd47e12953e448b3e7ff409e037cc4d26"
+    },
+    {
+      "path": "qa-results.json",
+      "bytes": 6712,
+      "sha256": "a261494cb9ebad4bb32143c37324b737d24e5d128fdd18dc668b18bfb6b1fd3d"
+    },
+    {
+      "path": "sources/services__research-answer__prompt-experiment.mjs.txt",
+      "bytes": 2196,
+      "sha256": "6706806298237bc7430c72d9616f6cd148f67a92a4e895d9fb576d2690f63fe4"
+    },
+    {
+      "path": "sources/tests__research-prompt-experiment.test.mjs.txt",
+      "bytes": 7439,
+      "sha256": "4cc3e921e467928fcd7705cf498c6765fb91498a223997b51116a6d78c134862"
+    },
+    {
+      "path": "task-sources/astra-n15-08-blocked-freeze.mjs",
+      "bytes": 3665,
+      "sha256": "448d1bd95eca2acb189c370335a860ba07f460dce8897fcd3b0de9948675573e"
+    },
+    {
+      "path": "task-sources/astra-n15-08-close.py",
+      "bytes": 6700,
+      "sha256": "1eceb00fbafda1bbf84876db1eebc71fabc2d9b81f48ee69468d51ec730696ef"
+    },
+    {
+      "path": "task-sources/astra-n15-08-controller.test.mjs",
+      "bytes": 4947,
+      "sha256": "b2234169af1de02dac68372326a50fd571f9ef6bae84d11ec49393c9da1c4cd4"
+    },
+    {
+      "path": "task-sources/astra-n15-08-make-driver.py",
+      "bytes": 8613,
+      "sha256": "b4e1a0cab4b28649fb9e2af161ec14517a02d0f16c3edef0f9143ba14d491e8c"
+    },
+    {
+      "path": "task-sources/astra-n15-08-prepare.py",
+      "bytes": 3941,
+      "sha256": "222162a5783d529d60638d530bb8afabeeabbd13e24769f07d8599d9af91ec9c"
+    }
+  ]
+}

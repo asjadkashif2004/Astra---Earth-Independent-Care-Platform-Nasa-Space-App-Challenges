@@ -1,0 +1,77 @@
+[
+  {
+    "source_directory": "artifacts/n04-p01-final11-20261020/30x-crew-performance-2",
+    "file": "30x-crew-performance-2-10.png",
+    "id": 60,
+    "crew_id": "CREW-02",
+    "metric": "heart_rate",
+    "expected": "66",
+    "screenshot_sha256": "853e4273f0d2ef76a2c73a6a06674b54cfc79b3a80c51d32a41da94874eb339a",
+    "rect": {
+      "x": 6.2249755859375,
+      "y": 7.65838623046875,
+      "width": 49.125,
+      "height": 67.199951171875
+    },
+    "glyph": {
+      "sha256": "d02054a57c0c50048d0e6ddcaa989bfb68c638eb125cdff7a4f38b9069730b28",
+      "width": 46,
+      "height": 35,
+      "ink_pixels": 420
+    },
+    "reviewed_numeric": "66",
+    "reviewed_by": "Codex direct original-PNG inspection",
+    "reviewed_at": "2026-10-19T22:29:27.040855+00:00",
+    "method": "Direct inspection of original PNG pixels at exact target rectangle;bound to screenshot SHA256 and exact thresholded glyph;no image editing or expected-value override"
+  },
+  {
+    "source_directory": "artifacts/n04-p01-final11-20261020/30x-crew-performance-2",
+    "file": "30x-crew-performance-2-20.png",
+    "id": 120,
+    "crew_id": "CREW-03",
+    "metric": "heart_rate",
+    "expected": "69",
+    "screenshot_sha256": "47ccb1338e97798db4ead4c2581b1bac9c481f66fd13817ad4639c7d801b3606",
+    "rect": {
+      "x": 6.2249755859375,
+      "y": 7.65618896484375,
+      "width": 49.125,
+      "height": 67.20001220703125
+    },
+    "glyph": {
+      "sha256": "648b41cc3f24d3c73486866212224eaf9a1ef2958a077cfbe17d3b6415227f73",
+      "width": 44,
+      "height": 34,
+      "ink_pixels": 269
+    },
+    "reviewed_numeric": "69",
+    "reviewed_by": "Codex direct original-PNG inspection",
+    "reviewed_at": "2026-10-19T22:29:27.040907+00:00",
+    "method": "Direct inspection of original PNG pixels at exact target rectangle;bound to screenshot SHA256 and exact thresholded glyph;no image editing or expected-value override"
+  },
+  {
+    "source_directory": "artifacts/n04-p01-final11-20261020/30x-crew-performance-2",
+    "file": "30x-crew-performance-2-30.png",
+    "id": 180,
+    "crew_id": "CREW-04",
+    "metric": "heart_rate",
+    "expected": "69",
+    "screenshot_sha256": "b48281af0d2630c04798fb175bcc9d93b2510dd85c53818a685664dddf64d443",
+    "rect": {
+      "x": 6.2249755859375,
+      "y": 7.414306640625,
+      "width": 49.125,
+      "height": 67.20001220703125
+    },
+    "glyph": {
+      "sha256": "b5904c819baefa29772233b3ff10ecce827bc17c80ecab695cb712b3127f8008",
+      "width": 45,
+      "height": 35,
+      "ink_pixels": 428
+    },
+    "reviewed_numeric": "69",
+    "reviewed_by": "Codex direct original-PNG inspection",
+    "reviewed_at": "2026-10-19T22:29:27.040917+00:00",
+    "method": "Direct inspection of original PNG pixels at exact target rectangle;bound to screenshot SHA256 and exact thresholded glyph;no image editing or expected-value override"
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "schema_version": "astra.n16-06e.evidence.v1",
+  "outcome": "BLOCKED_PREFLIGHT_ZERO_STARTUPS",
+  "notice": "Static code/evidence review only. No worker or SQL/source access. Manifest excludes itself.",
+  "files": {
+    "AGENTS.md": {
+      "bytes": 96778,
+      "sha256": "55816cad7df4927ba916a87ab3dc3fc8567fa36044739e380931a28708dae22d"
+    },
+    "docs/SESSION_HANDOFF.md": {
+      "bytes": 391865,
+      "sha256": "7b1911f53c607451fdf9daacb840341d4eb8bd96e947e55624a47093e7239861"
+    },
+    "docs/MODULE_TRACKER.md": {
+      "bytes": 162200,
+      "sha256": "8dd00bdd1de044895d94cbd91bcc473eae8cdfdb6978d60f511bb275e202406e"
+    },
+    "docs/FEATURE_AUDIT.md": {
+      "bytes": 137561,
+      "sha256": "84210fc85de705a886b15d100ba8f6024983de5bb55c43c8d9d4113b2ff387b8"
+    },
+    "docs/MASTER_PLAN.md": {
+      "bytes": 79630,
+      "sha256": "cdcfd1c0585c5c432ff56ce0784818ec470d32d6e387dcd9ebe6f346e378acee"
+    },
+    "docs/CORE_AI_PRIORITY.md": {
+      "bytes": 52721,
+      "sha256": "49f2f4849fe78899f09c6197ecdfded4bed1325aa7ef4f951d37b3ce1d1120b2"
+    },
+    "docs/DECISIONS.md": {
+      "bytes": 81731,
+      "sha256": "a285545fd6ca52d9e51b2c945782f22b11e776ea090f4668ee329ad04356c8f0"
+    },
+    "docs/DE_N16_DESIGNATED_READ_01.md": {
+      "bytes": 12302,
+      "sha256": "44915cc4dd51e5c771e6539854350a7da81a1f330b16abf91fa5ffd27c723c52"
+    },
+    "docs/N16_06E_COMPLETION.md": {
+      "bytes": 6634,
+      "sha256": "f29bbc8531b8c4347fc2a0a538c646b723ac7c85b26d0a7189505002727acafa"
+    },
+    "artifacts/n16-06e-20261029/final-validation.json": {
+      "bytes": 1601,
+      "sha256": "27250f7168c69305ab4acce7e6e19cc17f446143b23979dd84c58b3750ea24de"
+    },
+    "artifacts/n16-06e-20261029/outcome.json": {
+      "bytes": 3097,
+      "sha256": "312ac8cb1714a1cd77abac1689cbe3a45c5db92a8530f7dd0dbb6bd8484629dd"
+    },
+    "artifacts/n16-06e-20261029/preservation-before.json": {
+      "bytes": 1105394,
+      "sha256": "08ec3f2a2051bf1ee287e589f785d256f0032767a3f6ae01f82aff20d2ca4d09"
+    },
+    "artifacts/n16-06e-20261029/worker-source.txt": {
+      "bytes": 6314,
+      "sha256": "2fac3411b862751097cfce20a06752426dd1548cc68a85a1738dc7c303c449ad"
+    }
+  }
+}

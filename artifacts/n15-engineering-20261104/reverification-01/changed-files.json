@@ -1,0 +1,56 @@
+{
+  "modified_existing": [
+    {
+      "path": "AGENTS.md",
+      "before_sha256": "57c82c2043865866c896234763b6e7f31e1838c2b5610a0e4f516280b28406f9",
+      "after_sha256": "11a88bb7f29f50fd0c6fd5560c46cfc7f2080f790b7c4d58011f2a1863be09bf"
+    },
+    {
+      "path": "docs/CORE_AI_PRIORITY.md",
+      "before_sha256": "e8d84cbebc6c494458c3ae9c39771dbd061493157c8436b405f67fd2c8af9e36",
+      "after_sha256": "fcae801a96638d11bfbf07a8d60f4f17a9ef03ac65f283b421c4ada2662b4fa5"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "before_sha256": "946bf944e567d165d82c04db1cbcbffb93c8d918cfc9c722ad8c22c9ec24a581",
+      "after_sha256": "ce96c23983dc97fc5effee3d48daf7b1c2c5485b7aa439f0ed93f55f22699cd4"
+    },
+    {
+      "path": "docs/FEATURE_AUDIT.md",
+      "before_sha256": "cff1eb924a3776acb0941706f5dc6b83d5378a5821632c52b78aa6d42dfeec1d",
+      "after_sha256": "14743897254288ce092d8d2ba5ecdff15ed1728c063bd46bd3537ed4160aa2b2"
+    },
+    {
+      "path": "docs/MASTER_PLAN.md",
+      "before_sha256": "d4b8dcade829d28eb2b2672c27d22a35d37de3016917b5db0be0c4d40334d14a",
+      "after_sha256": "91b5a7a8be01d317a42c0a2c8bd13f610195d509119bdc68f42a47eb2aa3ef6a"
+    },
+    {
+      "path": "docs/MODULE_TRACKER.md",
+      "before_sha256": "7b852777c2f27bd8c75fff758d3ef2638c0c4e120c04a0adbff4dc2e4476f103",
+      "after_sha256": "4cf765beb8909f4fff0e10e810f79b438216b04e5ac87f1b560baa906cdef720"
+    },
+    {
+      "path": "docs/SESSION_HANDOFF.md",
+      "before_sha256": "a712217b0f266d017b3a3db4bb73584e1dc6bc7e895fdb3c9a59ee27dfd898be",
+      "after_sha256": "33f97df8f0e10cbf3b43bfaf41ec4cecfab5f25e2f09ffa48195c81b33bece4f"
+    },
+    {
+      "path": "docs/DE_N14_N15_01_ENGINEERING_20261104.md",
+      "before_sha256": "a9a2164498e883186f92d08f2140798a7d3778c5ab6f4992ca0d524bd39d47be",
+      "after_sha256": "57e5e521efa8f9d55b82bf455c2f30c93aaf5f6e9cca89d6bd84db071b9245e5"
+    },
+    {
+      "path": "docs/N15_FINAL_ENGINEERING_COMPLETION.md",
+      "before_sha256": "7854b0a0e950b026a42c1d8f6f52b3efd92074398052750d8d5d90663a025c49",
+      "after_sha256": "18ea7e0d08ec542476c7db1ab71699ad61444298d0ed7f6b5c8470e65eaa9136"
+    }
+  ],
+  "production_code_or_test_changes": 0,
+  "model_source_policy_changes": 0,
+  "new_evidence_roots": [
+    "artifacts/n15-engineering-20261104/reverification-01",
+    "artifacts/n15-engineering-20261104/reverified-execution-01"
+  ],
+  "historical_reports_append_only": true
+}

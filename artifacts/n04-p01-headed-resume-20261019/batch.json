@@ -1,0 +1,46 @@
+{
+  "scope": "N04-P01 full-screen headed24-trial collection;capture completion is not blanket acceptance",
+  "started_at": "2026-10-19T06:46:08.931Z",
+  "stages": [
+    {
+      "rate": 1,
+      "context": "overview",
+      "directory": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-headed-resume-20261019\\1x-overview",
+      "status": 0,
+      "command": [
+        "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n03-windows-tools\\node.exe",
+        "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\scripts\\windows-browser-acceptance.mjs",
+        "--p01",
+        "--rate=1",
+        "--context=overview",
+        "--headed",
+        "--native-foreground",
+        "--fullscreen",
+        "--stop-file=C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-headed-resume-20261019\\STOP",
+        "--output=C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-headed-resume-20261019\\1x-overview",
+        "--fixture-db=C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\browser-before-rendered\\fixture.sqlite"
+      ]
+    },
+    {
+      "rate": 1,
+      "context": "crew",
+      "directory": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-headed-resume-20261019\\1x-crew",
+      "status": 1,
+      "command": [
+        "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n03-windows-tools\\node.exe",
+        "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\scripts\\windows-browser-acceptance.mjs",
+        "--p01",
+        "--rate=1",
+        "--context=crew",
+        "--headed",
+        "--native-foreground",
+        "--fullscreen",
+        "--stop-file=C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-headed-resume-20261019\\STOP",
+        "--output=C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-headed-resume-20261019\\1x-crew",
+        "--fixture-db=C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\browser-before-rendered\\fixture.sqlite"
+      ]
+    }
+  ],
+  "status": "stopped after incomplete collection",
+  "finished_at": "2026-10-19T06:56:07.519Z"
+}

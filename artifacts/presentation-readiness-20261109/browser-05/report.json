@@ -1,0 +1,141 @@
+{
+  "status": "failed",
+  "started_at": "2026-11-08T21:59:38.443Z",
+  "checks": [
+    {
+      "name": "Presentation: authenticated dashboard and six real synthetic crew",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: all six crew bind actual backend heart-rate observations",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: actual N08 fixture import, bounded waveform and playback",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: qualified N09 scenario causes deterministic N02 warning",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: human acknowledgement uses actual N02 contract",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: real 3D anatomy selection, heart-rate binding and source context",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: missing source stays UNKNOWN and waveform returns to same crew",
+      "status": "failed",
+      "reason": "The expression evaluated to a falsy value:\n\n  assert.ok(await c.evaluate('/UNKNOWN|[Nn]o mapped measurement/.test('+text('#n06-detail')+')'))\n"
+    }
+  ],
+  "screenshots": [
+    "01-dashboard.png",
+    "02-waveform.png",
+    "03-scenario.png",
+    "04-acknowledged.png",
+    "05-anatomy-linked.png",
+    "failure-7.png"
+  ],
+  "console_errors": [],
+  "http_errors": [
+    {
+      "url": "http://127.0.0.1:54628/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    },
+    {
+      "url": "http://127.0.0.1:54628/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    }
+  ],
+  "viewports": [],
+  "caveats": [
+    "No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation.",
+    "Pointer/keyboard/rendered DOM checks and screenshots supplement human visual, text-contrast and assistive-technology review; they do not establish WCAG conformance."
+  ],
+  "native_zoom_preferences": {
+    "factor": 1,
+    "partition_key": "x",
+    "level": 0,
+    "disposable_profile": true
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/156.0.8078.80",
+    "revision": "@fb096c0011f9d50f0a264a9376420cdea9c421e3",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "jsVersion": "15.6.75.27"
+  },
+  "N05_audits": [],
+  "presentation": {
+    "scope": "Existing synthetic application; no new N12 protocol, Qwen, native embeddings or N16 workers",
+    "timings": {
+      "crew_switch_ms": [
+        9111.2466,
+        8147.02,
+        8772.336199999998,
+        8446.523800000003,
+        8272.0334,
+        8392.298200000005
+      ],
+      "region_ms": [
+        389.26640000000043,
+        378.619999999999,
+        396.64589999999953,
+        390.8796999999977,
+        389.66359999999986,
+        387.14429999999993,
+        520.2100000000064,
+        444.0830999999889
+      ],
+      "waveform_import_ms": 387.06089999999676,
+      "waveform_playback_observed_ms": 931.1891000000032,
+      "scenario_start_and_300s_step_ms": 1424.4170000000013
+    },
+    "fresh_N12_compute": "NOT RUN: calibration/evaluation campaign outside this mission",
+    "AC20": "UNVERIFIED",
+    "risk": {
+      "id": "RISK-75540b34",
+      "crew_id": "CREW-03",
+      "run_id": "85eb04e1-6a41-4670-a218-aaecc91176ee",
+      "source": "N02 deterministic detector"
+    },
+    "acknowledged_at": "2026-11-14T11:06:17.000Z"
+  },
+  "recording": {
+    "status": "NOT SAVED: workflow incomplete",
+    "file": null,
+    "frames": 159,
+    "capped_at_five_minutes": false,
+    "bytes": 530564,
+    "fps": 2,
+    "silent": true,
+    "source": "Actual application browser screenshots encoded by installed Chrome MediaRecorder",
+    "errors": [],
+    "physical_FPS_evidence": false
+  },
+  "reason": "The expression evaluated to a falsy value:\n\n  assert.ok(await c.evaluate('/UNKNOWN|[Nn]o mapped measurement/.test('+text('#n06-detail')+')'))\n",
+  "presentation_temporary_SQLite_bytes": 25526272,
+  "presentation_cleanup": {
+    "browser_exited": true,
+    "profile_removed": true,
+    "database_directory_removed": true,
+    "Node_memory": {
+      "rss": 229466112,
+      "heapTotal": 172556288,
+      "heapUsed": 38227656,
+      "external": 8075908,
+      "arrayBuffers": 3531221
+    },
+    "N16_designated_starts": 0,
+    "Qwen_executions": 0,
+    "model_training": 0,
+    "database_snapshots": 0
+  },
+  "finished_at": "2026-11-08T22:01:00.909Z"
+}

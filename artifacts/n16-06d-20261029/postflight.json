@@ -1,0 +1,122 @@
+{
+  "task": "N16-06D",
+  "outcome": "PASS",
+  "actual_startups": 1,
+  "probe_exit_code": 0,
+  "guard_probes": [
+    {
+      "accepted": true,
+      "code": "EROFS",
+      "denial_kind": "mount_denial",
+      "errno": -30,
+      "expected": "write_denied_on_verified_read_only_mount",
+      "observed": "denied",
+      "operation": "create_root_file",
+      "stage": "root",
+      "syscall": "open"
+    },
+    {
+      "accepted": true,
+      "code": "EROFS",
+      "denial_kind": "mount_denial",
+      "errno": -30,
+      "expected": "write_denied_on_verified_read_only_mount",
+      "observed": "denied",
+      "operation": "create_source_file",
+      "stage": "source_directory",
+      "syscall": "open"
+    },
+    {
+      "accepted": true,
+      "code": "EACCES",
+      "denial_kind": "permission_denial",
+      "errno": -13,
+      "expected": "write_denied_on_verified_read_only_mount",
+      "observed": "denied",
+      "operation": "open_source_readwrite",
+      "stage": "source_file",
+      "syscall": "open"
+    }
+  ],
+  "mount_proof": {
+    "kind": "PROC_SELF_MOUNTINFO",
+    "mountinfo_sha256": "76d0ae03e35ca0c9a5d6d141446da5aa2ce180c4508ac9db13cdaf38ba7173b3",
+    "namespace": "mnt:[4026532224]",
+    "targets": [
+      {
+        "mount_id": 368,
+        "mount_point": "/",
+        "per_mount_options": [
+          "ro",
+          "nosuid",
+          "nodev",
+          "relatime"
+        ],
+        "read_only": true,
+        "target": "root"
+      },
+      {
+        "mount_id": 379,
+        "mount_point": "/fixture",
+        "per_mount_options": [
+          "ro",
+          "nosuid",
+          "nodev",
+          "relatime"
+        ],
+        "read_only": true,
+        "target": "source_directory"
+      },
+      {
+        "mount_id": 379,
+        "mount_point": "/fixture",
+        "per_mount_options": [
+          "ro",
+          "nosuid",
+          "nodev",
+          "relatime"
+        ],
+        "read_only": true,
+        "target": "source_file"
+      }
+    ]
+  },
+  "diagnostic_sha256": "265998d1e807ff844fca0755fd24b9a4c6b634819034be1b5b67261c9989c300",
+  "durable_acknowledgement": true,
+  "native_wall_ms": 216.22722799999997,
+  "worker_kernel_max_RSS": 53182464,
+  "maximum_sampled_owned_RSS": 51818496,
+  "maximum_monitored_process_RSS": 74080256,
+  "max_runtime_counted_storage": 4914099,
+  "resource_samples": 5,
+  "journal_rows": 8,
+  "owned_processes_remaining": 0,
+  "observer_pending": 0,
+  "postflight_matching_processes": [],
+  "source_metadata_unchanged": true,
+  "database_byte_hash_reverified": false,
+  "recorded_source_sha256": "4b1a3d8d9bdb832ae54b35a43e4412f18914756984893f8cb181b37955caff73",
+  "database_byte_reads": 0,
+  "successful_database_opens": 0,
+  "SQLite_connections": 0,
+  "SQL_statements": 0,
+  "network_requests": 0,
+  "protected_old_hashes_preserved": 444,
+  "host_namespaces": {
+    "network_namespace": "net:[4026531833]",
+    "mount_namespace": "mnt:[4026532217]"
+  },
+  "worker_namespaces": {
+    "network_namespace": "net:[4026532229]",
+    "mount_namespace": "mnt:[4026532224]"
+  },
+  "legacy_guard_would_reject_this_run": true,
+  "limitations": [
+    "Containment only; no SQLite readability, WAL, four-tool or production qualification.",
+    "Historical N16-06 errno remains unrecorded; this is a new observation.",
+    "RSS/storage actively monitored, not a hard disk quota or continuous lifetime RSS certificate.",
+    "Source bytes not rehashed because database-byte access is forbidden."
+  ],
+  "next_proposal": "Separately approve one bounded get_current_vitals read-only SQL qualification on the same sealed synthetic source with fresh SQL/resource authority, trusted authorization, provenance, durable trace/recovery and fail-fast behavior; no operational or Health Agent access.",
+  "task_authority": "EXHAUSTED / STOP; no retry or automatic SQL"
+}

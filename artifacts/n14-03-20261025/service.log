@@ -1,0 +1,6 @@
+Running as unit: astra-n14-03-j5nz1ape.service; invocation ID: c42bc3c26b2545a4ad34d500901f720e
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 2.587s
+             CPU time consumed: 2.554s
+                   Memory peak: 503.1M (swap: 0B)

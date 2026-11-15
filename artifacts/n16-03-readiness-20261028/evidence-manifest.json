@@ -1,0 +1,42 @@
+{
+  "docs/N16_03_OPERATIONAL_READINESS.md": {
+    "bytes": 28372,
+    "sha256": "3096ef04f25a98c5c4f189f8e0ff1d09e5c86b10e850c9b90a9192b929055800"
+  },
+  "docs/MASTER_PLAN.md": {
+    "bytes": 71107,
+    "sha256": "b838a92b552bbf6869da5edb17626e1896f678fbc68ff9d67a493b6f0f8df2b0"
+  },
+  "docs/CORE_AI_PRIORITY.md": {
+    "bytes": 45211,
+    "sha256": "3e3d3387c55639c6eaf268e48049a3d29fe4469c73503ef33829da928651319f"
+  },
+  "docs/MODULE_TRACKER.md": {
+    "bytes": 150855,
+    "sha256": "840294e58712c2ac5e5f72ad57c71e525830943aea526e664b24eccf9ce2a503"
+  },
+  "docs/FEATURE_AUDIT.md": {
+    "bytes": 130398,
+    "sha256": "76f43b7d327dc64dc9c1856d839bc908c21d2873c7fb1ef08ae103baaa8bdbcd"
+  },
+  "docs/DECISIONS.md": {
+    "bytes": 72483,
+    "sha256": "09945f1c87c03e81a803e6ef125f54377b3b9d0d6dc3b11459af3feb6db7f162"
+  },
+  "docs/SESSION_HANDOFF.md": {
+    "bytes": 360575,
+    "sha256": "eb5e1d977033396e609dbce6591e494d59ad7d374f33f5d816be6b0dbddd0dd5"
+  },
+  "AGENTS.md": {
+    "bytes": 85965,
+    "sha256": "aaca2835f8a2aa08fbf83ceb892a2993009827bdae5459082cfb77567da586ea"
+  },
+  "artifacts/n16-03-readiness-20261028/preservation-before.json": {
+    "bytes": 67290,
+    "sha256": "e907a659bf753a19f4b99b90239526ac9db9f8738769872fc0adb12249d5b77d"
+  },
+  "artifacts/n16-03-readiness-20261028/validation.json": {
+    "bytes": 903,
+    "sha256": "85e580459c5f715c78c478e7717ef6839c7912225326463e7ff0597ab1e64280"
+  }
+}

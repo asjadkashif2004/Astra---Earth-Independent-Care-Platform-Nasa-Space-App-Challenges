@@ -1,0 +1,14 @@
+{
+  "user_prompt": "Explain in one sentence why sufficient sleep matters for concentration.",
+  "actual_formatted_prompt": "<|im_start|>system\nYou are a helpful assistant. Answer only the general question in one sentence.<|im_end|>\n<|im_start|>user\nExplain in one sentence why sufficient sleep matters for concentration.<|im_end|>\n<|im_start|>assistant\n",
+  "prompt_sha256": "2077a46c0341dfc7e461ee1a02fb4eace658dc0e5a8b22577d8836c41af2fc2e",
+  "manual_template": "Verified Qwen ChatML specials; no execution of embedded Jinja/tools",
+  "context": 1024,
+  "max_output_tokens": 64,
+  "threads": 2,
+  "seed": 42,
+  "temperature": 0,
+  "warmup": false,
+  "single_generation_attempt": true,
+  "security_limitations": "G risk register retained; exact trusted publisher pin, bounded static GGUF inspection and containment are not comprehensive binary/medical clearance."
+}

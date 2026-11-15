@@ -1,0 +1,41 @@
+{
+  "no_package_download": true,
+  "records": [
+    {
+      "id": "ubuntu-gcc16-cves",
+      "url": "https://ubuntu.com/security/cves.json?package=gcc-16&limit=100",
+      "retrieved_at": "2026-10-25T18:47:22.961472+00:00",
+      "complete": false,
+      "error": "TimeoutError: The read operation timed out"
+    },
+    {
+      "id": "ubuntu-gcc16-notices",
+      "url": "https://ubuntu.com/security/notices.json?package=gcc-16&limit=100",
+      "retrieved_at": "2026-10-25T18:47:38.628604+00:00",
+      "complete": false,
+      "error": "HTTPError: HTTP Error 422: Unprocessable Content"
+    },
+    {
+      "id": "ubuntu-gcc16-copyright",
+      "url": "https://changelogs.ubuntu.com/changelogs/pool/main/g/gcc-16/gcc-16_16-20260322-1ubuntu1/copyright",
+      "retrieved_at": "2026-10-25T18:47:39.270260+00:00",
+      "status": 200,
+      "headers": {
+        "server": "nginx/1.14.0 (Ubuntu)",
+        "date": "Sun, 25 Oct 2026 18:47:48 GMT",
+        "content-length": "73896",
+        "strict-transport-security": "max-age=15768000",
+        "last-modified": "Sun, 22 Mar 2026 13:31:34 GMT",
+        "etag": "\"120a8-64d9cefdf3bcd\"",
+        "cache-control": "public,max-age=86400",
+        "x-cache-status": "MISS from content-cache-gs2/0",
+        "accept-ranges": "bytes",
+        "connection": "close"
+      },
+      "bytes": 73896,
+      "sha256": "d7815dd2364180835891947d96d808878204dea45b8597602a7952332195fbea",
+      "complete": true
+    }
+  ],
+  "elapsed_s": 17.490479967000283
+}

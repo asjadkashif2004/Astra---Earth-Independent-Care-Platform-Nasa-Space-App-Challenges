@@ -1,0 +1,9 @@
+{
+  "scope": "MOCK SQL/IO AND FILE-ONLY TRACE QA",
+  "native_worker_starts": 0,
+  "SQLite_connections": 0,
+  "SQL_statements": 0,
+  "source_database_reads": 0,
+  "execution_mutants_detected": true,
+  "quality_mutants_detected": true
+}

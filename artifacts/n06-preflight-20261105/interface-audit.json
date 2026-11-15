@@ -1,0 +1,91 @@
+{
+  "schema_version": "astra.n06.interface-preflight.v1",
+  "asset_hashes": [
+    {
+      "path": "apps/mission-control-web/assets/anatomy/body.glb",
+      "bytes": 3782472,
+      "expected_sha256": "a348767f759c8eb909afb36f9c66238b0de35b8047df80edfd90aa611ce83e7a",
+      "actual_sha256": "a348767f759c8eb909afb36f9c66238b0de35b8047df80edfd90aa611ce83e7a",
+      "match": true
+    },
+    {
+      "path": "apps/mission-control-web/assets/anatomy/organs.glb",
+      "bytes": 3643388,
+      "expected_sha256": "6cfcc83ab4e6f04abe5520f5946bd60bcda581414092ae4bea2a732c72d30443",
+      "actual_sha256": "6cfcc83ab4e6f04abe5520f5946bd60bcda581414092ae4bea2a732c72d30443",
+      "match": true
+    },
+    {
+      "path": "apps/mission-control-web/assets/anatomy/skeleton.glb",
+      "bytes": 8264480,
+      "expected_sha256": "1f6b8e5a8811f181688512f39e6b3ca56696d413af03a0cec489d8093cdd55f0",
+      "actual_sha256": "1f6b8e5a8811f181688512f39e6b3ca56696d413af03a0cec489d8093cdd55f0",
+      "match": true
+    }
+  ],
+  "actual_mesh_ids": [
+    "reference.body",
+    "reference.heart",
+    "reference.lung.left",
+    "reference.lung.right",
+    "reference.skeleton"
+  ],
+  "limitations": [
+    "No separate brain/head mesh",
+    "Heart includes three chamber-wall surfaces, not complete whole-heart anatomy",
+    "Generic adult reference geometry is not personal astronaut reconstruction",
+    "No independent anatomical/clinical review has occurred"
+  ],
+  "interfaces": [
+    {
+      "producer": "N05",
+      "source": "apps/mission-control-web/anatomy.mjs",
+      "existing_contract": "AnatomyScene.update() ignores all physiological data; actual mesh health linkage INACTIVE.",
+      "N06_consumer": "NOT IMPLEMENTED; retain camera/LOD/layers/cleanup",
+      "source_exists": true,
+      "sha256": "1411451acaf6867bc419e42a87178ce5e8ae4ce99e71d449e3baca4393c37029"
+    },
+    {
+      "producer": "N02",
+      "source": "services/api/server.mjs",
+      "existing_contract": "GET /v1/state and /v1/alerts use read permission and scoped snapshots; /v1/crew/{id}/telemetry checks crew permission; SSE is role-scoped.",
+      "N06_consumer": "NOT IMPLEMENTED; read only, never POST acknowledgement/ingest/alert mutation",
+      "source_exists": true,
+      "sha256": "4697062bb8fd693c92cf4cb4e6f4a541f47db3b6e7f5cb2cbac43d61f6668e00"
+    },
+    {
+      "producer": "N08",
+      "source": "services/waveforms/service.mjs",
+      "existing_contract": "Verified same-crew source list/window/chunks with source+knowledge cutoffs and exact hashes; raw waveform-specific scope. twin remains INACTIVE_N06_GATE.",
+      "N06_consumer": "NOT IMPLEMENTED; no new source, interpolation, derived monitoring or source-right extension",
+      "source_exists": true,
+      "sha256": "6e38cf0b1a7847392db0def5ae29a990f73034f0d3063f3088712d09fdf3d4fb"
+    },
+    {
+      "producer": "N09",
+      "source": "services/telemetry-simulator/n09-engine.mjs",
+      "existing_contract": "Authorized status/replay/waveform/context; source cadence and crew scope; replay has source and knowledge cutoffs.",
+      "N06_consumer": "NOT IMPLEMENTED; no scenario mutation or separate N09 implementation",
+      "source_exists": true,
+      "sha256": "b4a1bd86aaf5f85f42606f5a59470c3c6857a54fe91a7abb7407a9005d140684"
+    },
+    {
+      "producer": "N10",
+      "source": "services/n10/projection.mjs",
+      "existing_contract": "Caller/consent-bound private records remain restricted; only nonprivate authored context may be considered.",
+      "N06_consumer": "NOT IMPLEMENTED; no generic cognition/checkin transfer",
+      "source_exists": true,
+      "sha256": "9c23f6fbfabbe2e182f76e5f824bb7867cceae1ae038d7d89c560505bdf0809b"
+    },
+    {
+      "producer": "N16",
+      "source": "services/agent/fixture-trace-view.mjs",
+      "existing_contract": "Fixed recorded historical JSON trace view only; no source database or designated SQL worker execution.",
+      "N06_consumer": "INACTIVE; operational integration unapproved",
+      "source_exists": true,
+      "sha256": "d55db22fb8ab5270717f6ec67c22262ac21b72c4c300baa6fe0626acfdc7757e"
+    }
+  ],
+  "source_verification_evidence": "compatibility-01.tap includes all326original hashes and local runtime pins; no copied GLBs",
+  "status": "READ-ONLY DISCOVERY; no N06 runtime activation"
+}

@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "model_revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+  "expected_weight_sha256": "afdb6f1a0e45b715d0bb9b11772f032c399babd23bfc31fed1c170afc848bdb1",
+  "model_bytes_expected": 23918447,
+  "runtime_packages": 30,
+  "audit": {},
+  "model_acquired": false
+}

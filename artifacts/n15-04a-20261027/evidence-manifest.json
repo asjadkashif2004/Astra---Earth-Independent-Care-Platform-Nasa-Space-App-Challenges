@@ -1,0 +1,71 @@
+{
+  "task": "N15-04A",
+  "scope": "New sanitized text/JSON/QA evidence only, excludes manifest itself; no raw signed Location or model/runtime binaries.",
+  "files": [
+    {
+      "path": "assessment.json",
+      "bytes": 3208,
+      "sha256": "0b406377f6038966d405fd7f4d1fc84bb56bee70d22ad2a7c698b8074fb6c46c"
+    },
+    {
+      "path": "diagnostics-source.txt",
+      "bytes": 2156,
+      "sha256": "897e9b487d383788037f4264a4bd3f13aa46a25ed0dbe828d82a1427e9afeda8"
+    },
+    {
+      "path": "downloader-after-final.txt",
+      "bytes": 5671,
+      "sha256": "9f17b6a48c59583a6c849b314002e36de66956bc9a57daab61983db7bd0c374a"
+    },
+    {
+      "path": "downloader-after.txt",
+      "bytes": 5689,
+      "sha256": "0ef6aa7f9a965be7a041a618f5232b727c70f6262e423b05045a0b3169118739"
+    },
+    {
+      "path": "downloader-before.txt",
+      "bytes": 5346,
+      "sha256": "bdeff765bbc7cf99927e30826b87b0364b0457a96ccb0eeb3767e2dc9910ff72"
+    },
+    {
+      "path": "focused-tests-final.txt",
+      "bytes": 117,
+      "sha256": "7724ad2bf18e436061d2fa53e37f3cda2f78b2d008fb672f650c9aa757ccb9c4"
+    },
+    {
+      "path": "focused-tests.txt",
+      "bytes": 116,
+      "sha256": "dbe758c0c680006d7470814f86ecd9d4edba4c186dac4407b7f7ffa5e00295fc"
+    },
+    {
+      "path": "metadata-progress.jsonl",
+      "bytes": 733,
+      "sha256": "5d6901df1944e81c1d2c0235ee5167b2cd31816d67cf175035ffafb8c959a90b"
+    },
+    {
+      "path": "metadata-source.txt",
+      "bytes": 8350,
+      "sha256": "f16caf65228e1ba197eadfe3a1072258a1182637b22585010aedc6300e5d8246"
+    },
+    {
+      "path": "metadata-summary.json",
+      "bytes": 1160,
+      "sha256": "f152b6934ad09e16012348c96914867b7a9ed5ad454eb0e88210a2cc63976a59"
+    },
+    {
+      "path": "preservation-validation.json",
+      "bytes": 1921,
+      "sha256": "30b05afd5053c97709451028f924710c8b5f96fb3d509f687a1b89f67db945f5"
+    },
+    {
+      "path": "publisher-head.json",
+      "bytes": 1999,
+      "sha256": "db2b7d5ef5b910e838f1888cefa8d8312fce08c1c0d3f36f154773d19377b558"
+    },
+    {
+      "path": "tests-source.txt",
+      "bytes": 10277,
+      "sha256": "f5ee82068e4c7b027ab08d3688b9983a8b7b915717eaa771ea2bf10d62b28edb"
+    }
+  ]
+}

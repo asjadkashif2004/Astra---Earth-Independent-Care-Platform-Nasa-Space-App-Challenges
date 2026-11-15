@@ -1,0 +1,3 @@
+{"elapsed_s": 1.164293433000239, "event": "phase", "name": "metadata-rights-resources-preflight"}
+{"elapsed_s": 23.452321398000095, "event": "phase", "name": "single-approved-model-download"}
+{"elapsed_s": 25.03492475100029, "event": "failure", "stage": "single-approved-model-download", "type": "RuntimeError", "reason": "Single model acquisition did not complete; no retry"}

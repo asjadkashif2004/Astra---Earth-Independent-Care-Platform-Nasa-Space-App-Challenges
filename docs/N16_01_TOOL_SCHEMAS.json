@@ -1,0 +1,121 @@
+{
+  "schema_version": "astra.n16.read-tools.v1",
+  "kind": "closed_tool_contract_not_a_generic_JSON_Schema_validator",
+  "envelope_fields": [
+    "schema_version",
+    "tool",
+    "args"
+  ],
+  "additional_properties": false,
+  "tools": {
+    "get_current_vitals": {
+      "schema_version": "astra.n16.read-tools.v1",
+      "additionalProperties": false,
+      "required": [
+        "crew_id",
+        "metrics"
+      ],
+      "crew_ids": [
+        "CREW-01",
+        "CREW-02",
+        "CREW-03",
+        "CREW-04",
+        "CREW-05",
+        "CREW-06"
+      ],
+      "metrics": [
+        "heart_rate",
+        "respiratory_rate",
+        "spo2"
+      ],
+      "limit": [
+        1,
+        20
+      ]
+    },
+    "get_data_quality": {
+      "schema_version": "astra.n16.read-tools.v1",
+      "additionalProperties": false,
+      "required": [
+        "crew_id",
+        "metrics"
+      ],
+      "crew_ids": [
+        "CREW-01",
+        "CREW-02",
+        "CREW-03",
+        "CREW-04",
+        "CREW-05",
+        "CREW-06"
+      ],
+      "metrics": [
+        "heart_rate",
+        "respiratory_rate",
+        "spo2"
+      ],
+      "limit": [
+        1,
+        20
+      ]
+    },
+    "get_personal_baseline": {
+      "schema_version": "astra.n16.read-tools.v1",
+      "additionalProperties": false,
+      "required": [
+        "crew_id",
+        "metrics"
+      ],
+      "crew_ids": [
+        "CREW-01",
+        "CREW-02",
+        "CREW-03",
+        "CREW-04",
+        "CREW-05",
+        "CREW-06"
+      ],
+      "metrics": [
+        "heart_rate",
+        "respiratory_rate",
+        "spo2"
+      ],
+      "limit": [
+        1,
+        20
+      ]
+    },
+    "get_open_risk_events": {
+      "schema_version": "astra.n16.read-tools.v1",
+      "additionalProperties": false,
+      "required": [
+        "crew_id",
+        "limit"
+      ],
+      "crew_ids": [
+        "CREW-01",
+        "CREW-02",
+        "CREW-03",
+        "CREW-04",
+        "CREW-05",
+        "CREW-06"
+      ],
+      "metrics": [
+        "heart_rate",
+        "respiratory_rate",
+        "spo2"
+      ],
+      "limit": [
+        1,
+        20
+      ]
+    }
+  },
+  "limits": {
+    "fixture": 1000000,
+    "args": 4096,
+    "result": 65536,
+    "trace": 1000000,
+    "calls": 4,
+    "toolMs": 1000,
+    "runMs": 10000
+  }
+}

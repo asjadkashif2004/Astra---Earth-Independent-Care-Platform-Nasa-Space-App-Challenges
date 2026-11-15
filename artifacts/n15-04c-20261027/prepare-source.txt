@@ -1,0 +1,85 @@
+"""Prepare reuse-only controllers; does not execute acquired code or access network."""
+from pathlib import Path
+import ast, hashlib, json
+
+project = Path('/mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai')
+old = project / 'artifacts/n15-04b-20261027'
+pins = json.loads((old / 'evidence-manifest.json').read_text())['files']
+def frozen(name):
+    p = old / name
+    expected = next(r['sha256'] for r in pins if r['path'] == name)
+    assert hashlib.sha256(p.read_bytes()).hexdigest() == expected
+    return p.read_text()
+
+common = frozen('common-source.txt').replace('N15-04B', 'N15-04C').replace('n15-04b', 'n15-04c')
+tree = ast.parse(common)
+setup = next(n for n in tree.body if isinstance(n, ast.FunctionDef) and n.name == 'setup')
+replacement = '''def setup(which):
+    global base,root,start,halt,active,active_lock,failures,samples,peaks,state,count_roots,admitted_external,observer
+    resource.setrlimit(resource.RLIMIT_AS,(RSS_LIMIT,RSS_LIMIT));resource.setrlimit(resource.RLIMIT_CORE,(0,0))
+    fd=os.open(MARK,os.O_WRONLY|os.O_CREAT|os.O_EXCL|os.O_NOFOLLOW,0o600)
+    base=Path(tempfile.mkdtemp(prefix='astra-n15-04c-',dir='/var/tmp'));base.chmod(0o700)
+    with os.fdopen(fd,'w') as f:
+        json.dump({'task':'N15-04C','scratch':str(base),'phase':'attempt_started','downloads':0,'native_commands':0},f);f.flush();os.fsync(f.fileno())
+    root=base/which;root.mkdir(exist_ok=False)
+    for name in ['tmp','home','cache','work','work/tmp','work/tmp/home','work/tmp/cache']:(root/name).mkdir(exist_ok=True)
+    start=time.monotonic();halt=threading.Event();active={};active_lock=threading.RLock();failures=[];samples=[];peaks={}
+    state={'task':'N15-04C','phase':which,'scratch':str(base),'status':'PREFLIGHT','started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'native_commands':0,'network_bytes':0,'network_requests':0,'runtime_acquisition_bytes':0,'model_acquisition_bytes':0,'limits':{'storage':1500000000,'storage_stop':WATERMARK,'process_RSS':RSS_LIMIT,'native_wall_s':120},'resource_authority':'N15-04C-only monitored Choice B; overshoot possible','N15':'In Progress','N16':'Not Started'}
+    count_roots=[base,Path('/var/tmp/astra-n15-04b-0zd6xkaq'),RUNTIME,GOMP,ZLIB,Path('/var/tmp/astra-n15-03h-0oauyxf2')]
+    count_roots += [PROJECT/p for p in ['artifacts/n15-metadata-20261025','artifacts/n15-03e-20261026','artifacts/n15-03g-20261027','artifacts/n15-03h-20261027','artifacts/n15-04a-20261027','artifacts/n15-04b-20261027']]
+    admitted_external=[PROJECT/'artifacts/n15-03f-20261027/static-dependency-closure.json',source,PROJECT/'scripts/n15_backend_config.py',PROJECT/'tests/n15_backend_config_test.py']
+    admitted_external += list(Path('/tmp').glob('astra-n15-04c-*'))
+    samples.append(scan());atomic('resources-latest.json',samples[-1])
+    observer=threading.Thread(target=observe,daemon=True);observer.start()
+    print(json.dumps({'phase':which,'scratch':str(base)}),flush=True)
+'''
+lines = common.splitlines(keepends=True)
+common = ''.join(lines[:setup.lineno - 1]) + replacement + ''.join(lines[setup.end_lineno:])
+
+infer = frozen('infer-source.txt')
+infer = infer.replace('"""One first-generation request plus one non-generative missing-model check."""',
+                      '"""N15-04C: exactly one reuse-only request, with a validated backend FILE setting."""')
+infer = infer.replace('n15_04b_common', 'n15_04c_common').replace('/tmp/astra-n15-04b-common.py', '/tmp/astra-n15-04c-common.py')
+infer = infer.replace("c.setup('infer')", "import n15_backend_config as backend_config\nc.setup('infer')\nB_BASE=Path('/var/tmp/astra-n15-04b-0zd6xkaq')")
+infer = infer.replace("'GGML_BACKEND_PATH', '/qualified/runtime'", "'GGML_BACKEND_PATH', backend_config.BACKEND_PATH")
+infer = infer.replace("(c.base/'acquisition/report.json')", "(B_BASE/'acquisition/report.json')")
+infer = infer.replace("model_path=c.base/'acquisition'/FILE", "model_path=B_BASE/'acquisition'/FILE")
+infer = infer.replace("c.base/'model-notices/model-license.txt'", "B_BASE/'model-notices/model-license.txt'")
+infer = infer.replace("'sha256':row['sha256']})", "'sha256':row['sha256'],'needed':row.get('needed',[])})")
+needle = "    notices=json.loads"
+before = '''    c.phase('backend-file-static-configuration')
+    backend_check=backend_config.validate_backend_file(backend_config.BACKEND_PATH,manifest)
+    backend_row=next(r for r in manifest if r['name']==backend_config.BACKEND_NAME)
+    static={}
+    for label,argv in [('backend-ELF',['/usr/bin/readelf','-h',backend_row['source']]),('backend-dynamic',['/usr/bin/readelf','-d',backend_row['source']]),('backend-versions',['/usr/bin/readelf','-V',backend_row['source']]),('loader-disassembly',['/usr/bin/objdump','-d','--demangle','--disassemble=ggml_backend_load_all_from_path',next(r['source'] for r in manifest if r['name']=='libggml.so.0')])]:
+        result=c.trusted(argv,label)
+        if result['exit_code']:raise RuntimeError('Static inspection failed '+label)
+        static[label]=result['stdout']
+    actual_needed=re.findall(r'\\(NEEDED\\).*?\\[(.*?)\\]',static['backend-dynamic'])
+    if actual_needed!=backend_row['needed']:raise RuntimeError('Backend actual DT_NEEDED differs from approved closure')
+    if 'getenv@plt' not in static['loader-disassembly'] or 'ggml_backend_load@plt' not in static['loader-disassembly']:raise RuntimeError('Pinned backend-loader semantics unavailable')
+    cpu=Path('/proc/cpuinfo').read_text()
+    flags=set(re.search(r'^flags\\s*:\\s*(.*)$',cpu,re.M)[1].split())
+    required={'sse4_2','avx','avx2','fma','f16c'}
+    if not required<=flags:raise RuntimeError('Haswell CPU feature requirements not met')
+    originals=[(c.RUNTIME/'llama-b11669-bin-ubuntu-x64.tar.gz','cf07c1c112d709bd67e522017471de57ed0ec8bea031d732c5422351c07f65ac'),(c.GOMP/'libgomp1_16-20260322-1ubuntu1_amd64.deb','add19738c63794d2aa9ac529d3b8aebe2e88980faecb6c1c59f07aefd6c3c314'),(c.ZLIB/'zlib1g_1.3.dfsg+really1.3.1-1ubuntu3.2_amd64.deb','10084666f747247550c3e82f9a12cbfd9184c19241a42eb34d8893ecb8e03b35')]
+    for p,digest in originals:
+        c.gate()
+        if c.sha(p)!=digest:raise RuntimeError('Retained original hash mismatch '+str(p))
+    c.atomic('backend-static-preflight.json',{'status':'PASS','backend':backend_check,'actual_DT_NEEDED':actual_needed,'ABI_proof_reused':'F namespace edges; all 17 file hashes reverified','required_CPU_features_present':sorted(required),'original_hashes':[{'path':str(p),'sha256':digest} for p,digest in originals],'model':{'path':str(model_path),'bytes':model_path.stat().st_size,'sha256':SHA},'loader_semantics':'Pinned libggml disassembly getenv => ggml_backend_load; prior directory dlopen EISDIR retained','native_execution_so_far':0})
+'''
+assert infer.count(needle)==1
+infer = infer.replace(needle, before+needle)
+# Stop at the single generation result. N15-04C does not authorize another command.
+start = infer.index("    c.phase('one-non-generative-missing-model-check')")
+end = infer.index("    c.state['status']='PASS'", start)
+infer = infer[:start] + "    if not result['Haswell_backend_initialized']:raise RuntimeError('No verified backend-library initialization')\n" + infer[end:]
+assert "'GGML_BACKEND_PATH', '/qualified/runtime'" not in infer
+assert "run_sandbox('missing-model'" not in infer
+assert infer.count("run_sandbox('generation'")==1
+for name, payload in [('common',common),('infer',infer)]:
+    path=Path('/tmp/astra-n15-04c-'+name+'.py')
+    if path.exists():raise RuntimeError('Refuse controller overwrite '+str(path))
+    ast.parse(payload)
+    path.write_text(payload)
+    print(name, len(payload), hashlib.sha256(payload.encode()).hexdigest())

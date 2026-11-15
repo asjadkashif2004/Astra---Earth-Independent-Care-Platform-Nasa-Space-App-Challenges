@@ -1,0 +1,52 @@
+{
+  "schema_version": "astra.n12.preflight-changes.v1",
+  "modified": [
+    {
+      "path": "AGENTS.md",
+      "before": "554113b8e0c4123462e7026575220bace5a43f16313ee8823ffbede9409ccf02",
+      "after": "68d57ceb79256e5a97c97527f172531980aeb320c1f42077d4d08e6857309334"
+    },
+    {
+      "path": "docs/CORE_AI_PRIORITY.md",
+      "before": "49abed306e834ee1ffdfe4f8c2e6a3ea966f85404e88ddf4b9294679bc5ab683",
+      "after": "f0db8c005f44a2045516fc4a5a75eee4518fff17632fd2951723ae5e9bd132c5"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "before": "4a92da041d8a45f60790fee6cc2f2949afdef51191cf23c11e4c1ff68af9b39d",
+      "after": "2733591346f4f1b29339cf014b2d7dbee45e3615b38c6cf01557d34e795bc860"
+    },
+    {
+      "path": "docs/FEATURE_AUDIT.md",
+      "before": "5aba802c3c344f47b2569b635a986e897cc722175ee4c08b2b5226560d20c688",
+      "after": "ac7d7dcaa6f33f3f1a29c2ae7734f8423ed43d679d29997d2300acb90b0b8d0c"
+    },
+    {
+      "path": "docs/MASTER_PLAN.md",
+      "before": "80d8bf674ec75fcf37ab29c8c27169c97ee77e041080d3ecf89f6570ad52d1d8",
+      "after": "7957423e630cf0f125da1cb7f024193291d51d07345102d35e0089c35c38c939"
+    },
+    {
+      "path": "docs/MODULE_TRACKER.md",
+      "before": "b873c3c9a4e8ceac5488fd02609d50b89845d24c6ee681c1f8f248c83725aadf",
+      "after": "8405deffd61e52ad281a83ee8c740b78565bb81b14d96759cda9b6adaa57d5eb"
+    },
+    {
+      "path": "docs/SESSION_HANDOFF.md",
+      "before": "bb06d067a8dc6139dfb0c3d259802c936912e4cbba6e45564b2c100cac951264",
+      "after": "586c31220a230f5f958a84f1c935164975ddf591f7913d5576e70b94a2fe7a7e"
+    }
+  ],
+  "added_documents": [
+    {
+      "path": "docs/DE_N12_SYNTHETIC_01.md",
+      "sha256": "c13b1cd56f823719ca6f1ed5d0d9afcbb4903a34be023d65e51a808fe8f666e9"
+    },
+    {
+      "path": "docs/N12_FINAL_ENGINEERING_COMPLETION.md",
+      "sha256": "64fc82429bde2b70902bbecba194ba7b330320149b696d5a519f2d8102575a58"
+    }
+  ],
+  "preexisting_executable_test_model_calibration_changes": [],
+  "new_N12_runtime_implementation": false
+}

@@ -1,0 +1,743 @@
+{
+  "status": "passed",
+  "started_at": "2026-11-04T10:59:29.810Z",
+  "checks": [
+    {
+      "name": "N12 connected research registry, empty state and invalid request feedback",
+      "status": "passed"
+    },
+    {
+      "name": "N12 genuine native forecast and evaluation commit with connected chart/model evidence",
+      "status": "passed"
+    },
+    {
+      "name": "N12 metric and horizon controls compute bound results using verified evaluation cache",
+      "status": "passed"
+    },
+    {
+      "name": "N12 missing-source UNKNOWN and rejected candidate are shown without invented predictions",
+      "status": "passed"
+    },
+    {
+      "name": "N12 source and knowledge replay cutoffs withhold future results and recover saved evidence",
+      "status": "passed"
+    },
+    {
+      "name": "N12 source corrections supersede owned records while preserving original commitment",
+      "status": "passed"
+    },
+    {
+      "name": "N12 cancellation terminates actual pending worker without false completion",
+      "status": "passed"
+    },
+    {
+      "name": "N12 actual restart and refresh recover committed result without replay",
+      "status": "passed"
+    },
+    {
+      "name": "N12 failed registry clears stale graph and retry reads genuine saved evidence",
+      "status": "passed"
+    },
+    {
+      "name": "N12 real keyboard controls and four responsive viewports",
+      "status": "passed"
+    },
+    {
+      "name": "N12 Earth view and unauthorized roles cannot compute or see another owner results",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    "n12-forecast.png",
+    "n12-correction.png",
+    "n12-1920x1080.png",
+    "n12-1366x768.png",
+    "n12-768x1024.png",
+    "n12-390x844.png"
+  ],
+  "console_errors": [],
+  "http_errors": [
+    {
+      "url": "http://127.0.0.1:58462/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    },
+    {
+      "url": "http://127.0.0.1:58462/v1/models/prediction-experiments",
+      "status": 422,
+      "stage": "N12 connected research registry, empty state and invalid request feedback"
+    },
+    {
+      "url": "http://127.0.0.1:58462/v1/models/prediction-experiments",
+      "status": 503,
+      "stage": "N12 failed registry clears stale graph and retry reads genuine saved evidence"
+    },
+    {
+      "url": "http://127.0.0.1:58462/v1/models/prediction-experiments",
+      "status": 403,
+      "stage": "N12 Earth view and unauthorized roles cannot compute or see another owner results"
+    },
+    {
+      "url": "http://127.0.0.1:58462/v1/models/prediction-experiments/b0adfb8a-a4be-4cb5-b723-d8d9854cb18b",
+      "status": 403,
+      "stage": "N12 Earth view and unauthorized roles cannot compute or see another owner results"
+    }
+  ],
+  "viewports": [
+    {
+      "page": "N12 synthetic predictions",
+      "width": 1920,
+      "height": 1080,
+      "overflow": false
+    },
+    {
+      "page": "N12 synthetic predictions",
+      "width": 1366,
+      "height": 768,
+      "overflow": false
+    },
+    {
+      "page": "N12 synthetic predictions",
+      "width": 768,
+      "height": 1024,
+      "overflow": false
+    },
+    {
+      "page": "N12 synthetic predictions",
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    }
+  ],
+  "caveats": [
+    "No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation.",
+    "Pointer/keyboard/rendered DOM checks and screenshots supplement human visual, text-contrast and assistive-technology review; they do not establish WCAG conformance."
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/156.0.8078.80",
+    "revision": "@fb096c0011f9d50f0a264a9376420cdea9c421e3",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "jsVersion": "15.6.75.27"
+  },
+  "N12_recovery": {
+    "id": "b0adfb8a-a4be-4cb5-b723-d8d9854cb18b",
+    "result_hash": "3373f7c84acac2f613dac74d7af7f5ac99af0dd90400c7fae9c4ee550cdd00d1",
+    "events": 32,
+    "replay_executions": 0
+  },
+  "N12_keyboard": [
+    {
+      "width": 1920,
+      "id": "n12-metric",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 1920,
+      "id": "n12-horizon",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 1920,
+      "id": "n12-method",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 1366,
+      "id": "n12-metric",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 1366,
+      "id": "n12-horizon",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 1366,
+      "id": "n12-method",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 768,
+      "id": "n12-metric",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 768,
+      "id": "n12-horizon",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 768,
+      "id": "n12-method",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 390,
+      "id": "n12-metric",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 390,
+      "id": "n12-horizon",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 390,
+      "id": "n12-method",
+      "visible": true,
+      "outline": "3px"
+    }
+  ],
+  "N12_resources": {
+    "elapsed_ms": 72645.3967,
+    "Node_memory": {
+      "rss": 279134208,
+      "heapTotal": 167235584,
+      "heapUsed": 44940328,
+      "external": 30352195,
+      "arrayBuffers": 26310560
+    },
+    "kernel_max_RSS_KiB": 304044,
+    "retained_N12_bytes": 9263265,
+    "jobs": [
+      {
+        "id": "b0adfb8a-a4be-4cb5-b723-d8d9854cb18b",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "5e77fd5f-c153-419a-a355-fdc4193e1a4c",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "1bce6de3-fc3d-4037-8c8c-cb744367db21",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "46f710b8-c761-4442-84ab-f0c1c3f4be00",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "78264103-e0b6-4c86-b97f-30fe606c65eb",
+        "status": "COMPLETED"
+      },
+      {
+        "id": "a3573c58-e99e-4bd5-8cff-696c8e074e62",
+        "status": "CANCELLED"
+      }
+    ],
+    "native_worker_threads": 3,
+    "N16_worker_starts": 0,
+    "Qwen": 0,
+    "scope": "Shared process RSS observed, not hard peak or AC20; no SQLite snapshot export"
+  },
+  "N12_jobs_before_cleanup": [
+    {
+      "id": "b0adfb8a-a4be-4cb5-b723-d8d9854cb18b",
+      "status": "COMPLETED",
+      "error": null,
+      "events": [
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "b0adfb8a-a4be-4cb5-b723-d8d9854cb18b",
+          "seq": 1,
+          "kind": "STARTED",
+          "known_at": "2026-11-14T11:00:00.000Z",
+          "host_at": "2026-11-04T10:59:33.965Z",
+          "payload": {
+            "config_hash": "3e91b648b40be0e09da0547b8d4b29ecdb563e40ce66910c8ed0d9d73c6c89d1",
+            "policy_hash": "04e1286927f4f083812cc181d0193fd5daf505d70344c3561ea2d8f2300740df"
+          },
+          "previous_hash": "GENESIS",
+          "hash": "a5e4bd881146963f1a4bd8d68e4e0c3cc48f4c028d4844f06591e584be17c06f"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "b0adfb8a-a4be-4cb5-b723-d8d9854cb18b",
+          "seq": 2,
+          "kind": "WORKER_ONLINE",
+          "known_at": "2026-11-14T11:00:00.000Z",
+          "host_at": "2026-11-04T10:59:34.042Z",
+          "payload": {
+            "thread_id": 1
+          },
+          "previous_hash": "a5e4bd881146963f1a4bd8d68e4e0c3cc48f4c028d4844f06591e584be17c06f",
+          "hash": "4540bf61e3ffd135d34f9223a908633d11f6e4160fcbb16efd0d01836570237d"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "b0adfb8a-a4be-4cb5-b723-d8d9854cb18b",
+          "seq": 3,
+          "kind": "PHASE",
+          "known_at": "2026-11-14T11:00:00.000Z",
+          "host_at": "2026-11-04T10:59:34.094Z",
+          "payload": {
+            "stage": "SOURCE_VALIDATION"
+          },
+          "previous_hash": "4540bf61e3ffd135d34f9223a908633d11f6e4160fcbb16efd0d01836570237d",
+          "hash": "b2783df8e9bb1a0bcace6a658c8f7ea8aef65a13c3d17551e61c966de30dacde"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "b0adfb8a-a4be-4cb5-b723-d8d9854cb18b",
+          "seq": 4,
+          "kind": "PHASE",
+          "known_at": "2026-11-14T11:00:00.000Z",
+          "host_at": "2026-11-04T10:59:37.966Z",
+          "payload": {
+            "stage": "REFERENCE_FIT"
+          },
+          "previous_hash": "b2783df8e9bb1a0bcace6a658c8f7ea8aef65a13c3d17551e61c966de30dacde",
+          "hash": "a7f14ee4c9c75033316bdae7343c8e42356c1580c9e7079b46e969ea2d65aebc"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "b0adfb8a-a4be-4cb5-b723-d8d9854cb18b",
+          "seq": 5,
+          "kind": "PHASE",
+          "known_at": "2026-11-14T11:00:00.000Z",
+          "host_at": "2026-11-04T10:59:38.352Z",
+          "payload": {
+            "stage": "CALIBRATION"
+          },
+          "previous_hash": "a7f14ee4c9c75033316bdae7343c8e42356c1580c9e7079b46e969ea2d65aebc",
+          "hash": "03d7f3b76207e4734ff34e98db905172b8defcb403ad0b3003ecdfa5cd22191e"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "b0adfb8a-a4be-4cb5-b723-d8d9854cb18b",
+          "seq": 6,
+          "kind": "PHASE",
+          "known_at": "2026-11-14T11:00:00.000Z",
+          "host_at": "2026-11-04T10:59:40.426Z",
+          "payload": {
+            "stage": "EVALUATED"
+          },
+          "previous_hash": "03d7f3b76207e4734ff34e98db905172b8defcb403ad0b3003ecdfa5cd22191e",
+          "hash": "811efc7055c79301f343c71a628fce2625448bc22103013e91edfc9b846ebf99"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "b0adfb8a-a4be-4cb5-b723-d8d9854cb18b",
+          "seq": 7,
+          "kind": "PREDICTION_COMPUTED",
+          "known_at": "2026-11-14T11:00:00.000Z",
+          "host_at": "2026-11-04T10:59:41.386Z",
+          "payload": {
+            "forecast_hash": "d616df6e66fee911c8229ca38db6f8e5ffcf47f5a80c8cded18a07726ae1124d",
+            "validated_forecast_ms": 118.52540000000045
+          },
+          "previous_hash": "811efc7055c79301f343c71a628fce2625448bc22103013e91edfc9b846ebf99",
+          "hash": "f27ef56d62b51f15daf8e1c7e95be9372b0dc4f9b7624286d433f5e518859049"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "b0adfb8a-a4be-4cb5-b723-d8d9854cb18b",
+          "seq": 8,
+          "kind": "COMMITTED",
+          "known_at": "2026-11-14T11:00:00.000Z",
+          "host_at": "2026-11-04T10:59:41.388Z",
+          "payload": {
+            "result_hash": "3373f7c84acac2f613dac74d7af7f5ac99af0dd90400c7fae9c4ee550cdd00d1",
+            "evaluation_hash": "e05ca0b3d2c180419283ed4aca4321efd6be8ad79195b4758f5a2a9027492fc9",
+            "worker_exit": 0
+          },
+          "previous_hash": "f27ef56d62b51f15daf8e1c7e95be9372b0dc4f9b7624286d433f5e518859049",
+          "hash": "3401b5d368a80ac9f47818a98c01f6c8284e6ef1305f68abd0ca9eb3f31df383"
+        }
+      ]
+    },
+    {
+      "id": "5e77fd5f-c153-419a-a355-fdc4193e1a4c",
+      "status": "COMPLETED",
+      "error": null,
+      "events": [
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "5e77fd5f-c153-419a-a355-fdc4193e1a4c",
+          "seq": 1,
+          "kind": "STARTED",
+          "known_at": "2026-11-14T11:00:00.000Z",
+          "host_at": "2026-11-04T10:59:44.724Z",
+          "payload": {
+            "config_hash": "85635cc8dd560593c4eff9bb945881b14dbd2ddecc0470dcfc8053828a8e23c5",
+            "policy_hash": "04e1286927f4f083812cc181d0193fd5daf505d70344c3561ea2d8f2300740df"
+          },
+          "previous_hash": "GENESIS",
+          "hash": "4c30f02a390b2c14e04d34597da5a10f680eb735f3f2e017b27cd2f172242508"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "5e77fd5f-c153-419a-a355-fdc4193e1a4c",
+          "seq": 2,
+          "kind": "CACHE_VERIFIED",
+          "known_at": "2026-11-14T11:00:00.000Z",
+          "host_at": "2026-11-04T10:59:45.594Z",
+          "payload": {
+            "evaluation_hash": "e05ca0b3d2c180419283ed4aca4321efd6be8ad79195b4758f5a2a9027492fc9"
+          },
+          "previous_hash": "4c30f02a390b2c14e04d34597da5a10f680eb735f3f2e017b27cd2f172242508",
+          "hash": "f6be5cc096a5428e8b90ea56f653768ce7ca7f1368f5f572dd0d97f74b102dcd"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "5e77fd5f-c153-419a-a355-fdc4193e1a4c",
+          "seq": 3,
+          "kind": "PREDICTION_COMPUTED",
+          "known_at": "2026-11-14T11:00:00.000Z",
+          "host_at": "2026-11-04T10:59:45.594Z",
+          "payload": {
+            "forecast_hash": "e4c7d86689287fde2a49e686f46dc58e1b8fb610b05ff48298ce3c76d23e3957",
+            "validated_forecast_ms": 144.97339999999895
+          },
+          "previous_hash": "f6be5cc096a5428e8b90ea56f653768ce7ca7f1368f5f572dd0d97f74b102dcd",
+          "hash": "95a163cfc39578d8ca3b1be99e3227be811ea8683f6c971d01949441f6375918"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "5e77fd5f-c153-419a-a355-fdc4193e1a4c",
+          "seq": 4,
+          "kind": "COMMITTED",
+          "known_at": "2026-11-14T11:00:00.000Z",
+          "host_at": "2026-11-04T10:59:45.596Z",
+          "payload": {
+            "result_hash": "6eb1727fdfd1b12bfe99fe4ba6a11a7e548b32187e36731ca0e9a5b50946f442",
+            "evaluation_hash": "e05ca0b3d2c180419283ed4aca4321efd6be8ad79195b4758f5a2a9027492fc9",
+            "worker_exit": 0
+          },
+          "previous_hash": "95a163cfc39578d8ca3b1be99e3227be811ea8683f6c971d01949441f6375918",
+          "hash": "220050c90c2e730c28066f83ca6f4a6b8d1fa30db0188b89db9bec3781b09b62"
+        }
+      ]
+    },
+    {
+      "id": "1bce6de3-fc3d-4037-8c8c-cb744367db21",
+      "status": "COMPLETED",
+      "error": null,
+      "events": [
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "1bce6de3-fc3d-4037-8c8c-cb744367db21",
+          "seq": 1,
+          "kind": "STARTED",
+          "known_at": "2026-11-14T11:00:00.000Z",
+          "host_at": "2026-11-04T10:59:48.870Z",
+          "payload": {
+            "config_hash": "78cd92e8b4cf18d1ce08f4cfdd385d070f850d9044579c49c050221277d6baeb",
+            "policy_hash": "04e1286927f4f083812cc181d0193fd5daf505d70344c3561ea2d8f2300740df"
+          },
+          "previous_hash": "GENESIS",
+          "hash": "0fefa8d35a21d35aff32220b1fa7c2468e45ebc9cb93fa820efd8bc70b45c0c7"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "1bce6de3-fc3d-4037-8c8c-cb744367db21",
+          "seq": 2,
+          "kind": "CACHE_VERIFIED",
+          "known_at": "2026-11-14T11:00:00.000Z",
+          "host_at": "2026-11-04T10:59:49.655Z",
+          "payload": {
+            "evaluation_hash": "e05ca0b3d2c180419283ed4aca4321efd6be8ad79195b4758f5a2a9027492fc9"
+          },
+          "previous_hash": "0fefa8d35a21d35aff32220b1fa7c2468e45ebc9cb93fa820efd8bc70b45c0c7",
+          "hash": "4e8319ea4f08b3ee87949d94cc985409075eaa3552ab33d7eeed1a64d7f5542d"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "1bce6de3-fc3d-4037-8c8c-cb744367db21",
+          "seq": 3,
+          "kind": "PREDICTION_COMPUTED",
+          "known_at": "2026-11-14T11:00:00.000Z",
+          "host_at": "2026-11-04T10:59:49.655Z",
+          "payload": {
+            "forecast_hash": "84dbd7c9e97d2db2692d643f7c058282c8952577637649a633cefa1f08e1912f",
+            "validated_forecast_ms": 155.52070000000094
+          },
+          "previous_hash": "4e8319ea4f08b3ee87949d94cc985409075eaa3552ab33d7eeed1a64d7f5542d",
+          "hash": "9c62dfb38e4532f738b52559d125d771494b629c4f7209a80e0f1a4611fc739c"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "1bce6de3-fc3d-4037-8c8c-cb744367db21",
+          "seq": 4,
+          "kind": "COMMITTED",
+          "known_at": "2026-11-14T11:00:00.000Z",
+          "host_at": "2026-11-04T10:59:49.657Z",
+          "payload": {
+            "result_hash": "80bca3c940dcd3fea7e62dd161f391ab3024a998ee985e8434e568495036ff4e",
+            "evaluation_hash": "e05ca0b3d2c180419283ed4aca4321efd6be8ad79195b4758f5a2a9027492fc9",
+            "worker_exit": 0
+          },
+          "previous_hash": "9c62dfb38e4532f738b52559d125d771494b629c4f7209a80e0f1a4611fc739c",
+          "hash": "4f8c85995cca7144fca03920659570973b1b12ba6d6ae0faa4cdc77f1109887a"
+        }
+      ]
+    },
+    {
+      "id": "46f710b8-c761-4442-84ab-f0c1c3f4be00",
+      "status": "COMPLETED",
+      "error": null,
+      "events": [
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "46f710b8-c761-4442-84ab-f0c1c3f4be00",
+          "seq": 1,
+          "kind": "STARTED",
+          "known_at": "2026-11-14T11:00:00.000Z",
+          "host_at": "2026-11-04T10:59:53.765Z",
+          "payload": {
+            "config_hash": "9e27c2b699ad166686cc10fe68e597b71fb8a9875e1207d4a622a97cb44d0857",
+            "policy_hash": "04e1286927f4f083812cc181d0193fd5daf505d70344c3561ea2d8f2300740df"
+          },
+          "previous_hash": "GENESIS",
+          "hash": "9e11725aa081b6be2f9a162f1e766e095460b04bd85f774988efa5f33f1e4536"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "46f710b8-c761-4442-84ab-f0c1c3f4be00",
+          "seq": 2,
+          "kind": "CACHE_VERIFIED",
+          "known_at": "2026-11-14T11:00:00.000Z",
+          "host_at": "2026-11-04T10:59:54.590Z",
+          "payload": {
+            "evaluation_hash": "e05ca0b3d2c180419283ed4aca4321efd6be8ad79195b4758f5a2a9027492fc9"
+          },
+          "previous_hash": "9e11725aa081b6be2f9a162f1e766e095460b04bd85f774988efa5f33f1e4536",
+          "hash": "932fd73b15755580f49e5999df665d39a1b4286e2023b07d19e38d70cebaee6c"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "46f710b8-c761-4442-84ab-f0c1c3f4be00",
+          "seq": 3,
+          "kind": "PREDICTION_COMPUTED",
+          "known_at": "2026-11-14T11:00:00.000Z",
+          "host_at": "2026-11-04T10:59:54.590Z",
+          "payload": {
+            "forecast_hash": "ed04dc5485bc13ed83233ef737f81bef8c8699842f82df1c0238d3a0d863c0a0",
+            "validated_forecast_ms": 126.26470000000336
+          },
+          "previous_hash": "932fd73b15755580f49e5999df665d39a1b4286e2023b07d19e38d70cebaee6c",
+          "hash": "a046888410ee3c47a53b375aad956c27cab8c5b38552408e00dc518e11f4eb45"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "46f710b8-c761-4442-84ab-f0c1c3f4be00",
+          "seq": 4,
+          "kind": "COMMITTED",
+          "known_at": "2026-11-14T11:00:00.000Z",
+          "host_at": "2026-11-04T10:59:54.592Z",
+          "payload": {
+            "result_hash": "8800655acdbfe28caf00d90a692a33178708de13c70be625bc0d556069aeb0bb",
+            "evaluation_hash": "e05ca0b3d2c180419283ed4aca4321efd6be8ad79195b4758f5a2a9027492fc9",
+            "worker_exit": 0
+          },
+          "previous_hash": "a046888410ee3c47a53b375aad956c27cab8c5b38552408e00dc518e11f4eb45",
+          "hash": "ce18ffd37bbd532bd1d0d631d1bca41b0de837421054dafa9de3ae37cd53f2f2"
+        }
+      ]
+    },
+    {
+      "id": "78264103-e0b6-4c86-b97f-30fe606c65eb",
+      "status": "COMPLETED",
+      "error": null,
+      "events": [
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "78264103-e0b6-4c86-b97f-30fe606c65eb",
+          "seq": 1,
+          "kind": "STARTED",
+          "known_at": "2026-11-14T11:00:01.000Z",
+          "host_at": "2026-11-04T11:00:02.716Z",
+          "payload": {
+            "config_hash": "b853f72d32c1638819ccf03dd449aa29fa8e82125d510d85031d9b11f3245c1c",
+            "policy_hash": "04e1286927f4f083812cc181d0193fd5daf505d70344c3561ea2d8f2300740df"
+          },
+          "previous_hash": "GENESIS",
+          "hash": "449678eec56fe49a87d0a0289ced50d1ba976b47de340b1a6b9d6fd5e00e627e"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "78264103-e0b6-4c86-b97f-30fe606c65eb",
+          "seq": 2,
+          "kind": "WORKER_ONLINE",
+          "known_at": "2026-11-14T11:00:01.000Z",
+          "host_at": "2026-11-04T11:00:05.917Z",
+          "payload": {
+            "thread_id": 2
+          },
+          "previous_hash": "449678eec56fe49a87d0a0289ced50d1ba976b47de340b1a6b9d6fd5e00e627e",
+          "hash": "973d3202b58c967edf36a56b01e9f44d23c257ba59f79d56be46f3eafed17fbb"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "78264103-e0b6-4c86-b97f-30fe606c65eb",
+          "seq": 3,
+          "kind": "PHASE",
+          "known_at": "2026-11-14T11:00:01.000Z",
+          "host_at": "2026-11-04T11:00:05.942Z",
+          "payload": {
+            "stage": "SOURCE_VALIDATION"
+          },
+          "previous_hash": "973d3202b58c967edf36a56b01e9f44d23c257ba59f79d56be46f3eafed17fbb",
+          "hash": "0c5916c0c53a8791e9178f6a88a3426daada51ec773ee9bde5623bf9160bc24d"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "78264103-e0b6-4c86-b97f-30fe606c65eb",
+          "seq": 4,
+          "kind": "PHASE",
+          "known_at": "2026-11-14T11:00:01.000Z",
+          "host_at": "2026-11-04T11:00:09.832Z",
+          "payload": {
+            "stage": "REFERENCE_FIT"
+          },
+          "previous_hash": "0c5916c0c53a8791e9178f6a88a3426daada51ec773ee9bde5623bf9160bc24d",
+          "hash": "aeb597cd486b2489cff625a0025b9756be732b2a51b9b98df7a577afa51405c5"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "78264103-e0b6-4c86-b97f-30fe606c65eb",
+          "seq": 5,
+          "kind": "PHASE",
+          "known_at": "2026-11-14T11:00:01.000Z",
+          "host_at": "2026-11-04T11:00:09.858Z",
+          "payload": {
+            "stage": "CALIBRATION"
+          },
+          "previous_hash": "aeb597cd486b2489cff625a0025b9756be732b2a51b9b98df7a577afa51405c5",
+          "hash": "767397d7a8b086c5b9cc700cb4bc8909fbbb602fbc4d2975767d3b9d7bead0e9"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "78264103-e0b6-4c86-b97f-30fe606c65eb",
+          "seq": 6,
+          "kind": "PHASE",
+          "known_at": "2026-11-14T11:00:01.000Z",
+          "host_at": "2026-11-04T11:00:12.884Z",
+          "payload": {
+            "stage": "EVALUATED"
+          },
+          "previous_hash": "767397d7a8b086c5b9cc700cb4bc8909fbbb602fbc4d2975767d3b9d7bead0e9",
+          "hash": "ffec8970d4d3e41629b1807997c530882ebb9971563d6fee5d4db0bf8d104b7f"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "78264103-e0b6-4c86-b97f-30fe606c65eb",
+          "seq": 7,
+          "kind": "PREDICTION_COMPUTED",
+          "known_at": "2026-11-14T11:00:01.000Z",
+          "host_at": "2026-11-04T11:00:13.737Z",
+          "payload": {
+            "forecast_hash": "08b450c2e8c628618e5869c2faa5b4c3cd891ade773d891a6a6b8b4be0de3f94",
+            "validated_forecast_ms": 118.81109999999899
+          },
+          "previous_hash": "ffec8970d4d3e41629b1807997c530882ebb9971563d6fee5d4db0bf8d104b7f",
+          "hash": "1da1c2686a7ad3c44905072ec17fcac0f1a141c6ff7df0b37e916a6ca6eb251f"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "78264103-e0b6-4c86-b97f-30fe606c65eb",
+          "seq": 8,
+          "kind": "COMMITTED",
+          "known_at": "2026-11-14T11:00:01.000Z",
+          "host_at": "2026-11-04T11:00:13.739Z",
+          "payload": {
+            "result_hash": "3b60a4976b6e364011163dfbc4eac08e8e4356d6131b6affa8911901ac8555e4",
+            "evaluation_hash": "45a9427dc8f2193c5940d9622f53d8cf3b3a4c7083c034139918b6f9336f5d6e",
+            "worker_exit": 0
+          },
+          "previous_hash": "1da1c2686a7ad3c44905072ec17fcac0f1a141c6ff7df0b37e916a6ca6eb251f",
+          "hash": "4f6d99c22c34c4adb029a942a067505d2e5eac01788a65789c5f744cd49278c8"
+        }
+      ]
+    },
+    {
+      "id": "a3573c58-e99e-4bd5-8cff-696c8e074e62",
+      "status": "CANCELLED",
+      "error": "CANCELLED",
+      "events": [
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "a3573c58-e99e-4bd5-8cff-696c8e074e62",
+          "seq": 1,
+          "kind": "STARTED",
+          "known_at": "2026-11-14T11:00:01.000Z",
+          "host_at": "2026-11-04T11:00:16.441Z",
+          "payload": {
+            "config_hash": "1f8b89a0a77b3853bd20fa64703f29daef1dfde590b71019cbb24987aa8e8471",
+            "policy_hash": "04e1286927f4f083812cc181d0193fd5daf505d70344c3561ea2d8f2300740df"
+          },
+          "previous_hash": "GENESIS",
+          "hash": "e8b48cc2fbb0080587600632d3a685d61243e3a0802ce535e8da010edf35a46c"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "a3573c58-e99e-4bd5-8cff-696c8e074e62",
+          "seq": 2,
+          "kind": "WORKER_ONLINE",
+          "known_at": "2026-11-14T11:00:01.000Z",
+          "host_at": "2026-11-04T11:00:20.437Z",
+          "payload": {
+            "thread_id": 3
+          },
+          "previous_hash": "e8b48cc2fbb0080587600632d3a685d61243e3a0802ce535e8da010edf35a46c",
+          "hash": "a9add65e6a974271fdd67708f35c5ffa3e4788fc4d702549dafc1637ee75f27e"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "a3573c58-e99e-4bd5-8cff-696c8e074e62",
+          "seq": 3,
+          "kind": "PHASE",
+          "known_at": "2026-11-14T11:00:01.000Z",
+          "host_at": "2026-11-04T11:00:20.464Z",
+          "payload": {
+            "stage": "SOURCE_VALIDATION"
+          },
+          "previous_hash": "a9add65e6a974271fdd67708f35c5ffa3e4788fc4d702549dafc1637ee75f27e",
+          "hash": "3f1d91d8b26fd06174240594a7e80efd06154d7b692ea39424308680c214cf4b"
+        },
+        {
+          "schema_version": "astra.n12.event.v1",
+          "job_id": "a3573c58-e99e-4bd5-8cff-696c8e074e62",
+          "seq": 4,
+          "kind": "CANCELLED",
+          "known_at": "2026-11-14T11:00:01.000Z",
+          "host_at": "2026-11-04T11:00:20.747Z",
+          "payload": {
+            "error": "CANCELLED",
+            "no_false_completion": true
+          },
+          "previous_hash": "3f1d91d8b26fd06174240594a7e80efd06154d7b692ea39424308680c214cf4b",
+          "hash": "9fbe1b140f27c422789f7092ac9b0b8515cbe3793678d536b788c6dc2858b3e5"
+        }
+      ]
+    }
+  ],
+  "N12_cleanup": {
+    "application_closed": true,
+    "browser_exited": true,
+    "profile_removed": true,
+    "database_directory_removed": true,
+    "Node_memory": {
+      "rss": 253739008,
+      "heapTotal": 164663296,
+      "heapUsed": 53200304,
+      "external": 8135513,
+      "arrayBuffers": 4062358
+    },
+    "N16_designated_starts": 0,
+    "Qwen_executions": 0
+  },
+  "finished_at": "2026-11-04T11:00:46.165Z"
+}

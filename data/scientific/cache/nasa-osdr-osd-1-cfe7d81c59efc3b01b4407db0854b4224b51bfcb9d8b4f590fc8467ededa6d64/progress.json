@@ -1,0 +1,12 @@
+{
+  "schema_version": "astra.acquisition-progress.v1",
+  "source_id": "nasa-osdr-osd-1",
+  "approval_sha256": "9b86e8ab62d477642136b9490949fc4182e4a25e4f91c63177e26a2864dce312",
+  "bytes": 8054,
+  "prefix_sha256": "cfe7d81c59efc3b01b4407db0854b4224b51bfcb9d8b4f590fc8467ededa6d64",
+  "etag": null,
+  "started_at": "2026-10-23T14:42:42.359Z",
+  "last_received_at": "2026-10-23T14:42:44.379Z",
+  "requests": 1,
+  "response_complete": true
+}

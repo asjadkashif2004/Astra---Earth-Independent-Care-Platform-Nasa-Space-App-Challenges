@@ -1,0 +1,19 @@
+{
+  "synthetic": true,
+  "steps": [
+    {
+      "label": "anchored",
+      "code": "ENOENT",
+      "syscall": "open"
+    },
+    {
+      "label": "named",
+      "code": "ENOENT",
+      "syscall": "open"
+    },
+    {
+      "label": "reacquired",
+      "result": "OPENED"
+    }
+  ]
+}

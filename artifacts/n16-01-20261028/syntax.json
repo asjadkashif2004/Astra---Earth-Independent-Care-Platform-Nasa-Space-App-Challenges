@@ -1,0 +1,37 @@
+[
+  {
+    "file": "services/agent/read-contract.mjs",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "file": "services/agent/read-context.mjs",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "file": "services/agent/read-tools.mjs",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "file": "services/agent/read-tool-worker.mjs",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "file": "services/agent/execution-trace.mjs",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "file": "scripts/n16-readonly-demo.mjs",
+    "exit_code": 0,
+    "stderr": ""
+  },
+  {
+    "file": "tests/n16-readonly.test.mjs",
+    "exit_code": 0,
+    "stderr": ""
+  }
+]

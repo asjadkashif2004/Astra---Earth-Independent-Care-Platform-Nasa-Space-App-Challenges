@@ -1,0 +1,3236 @@
+{
+  "schema_version": "astra.n11.v1",
+  "id": "710e0226-c58b-4ec4-aeae-86d002fdc8d1",
+  "actor": "demo-demo_admin",
+  "crew_id": "CREW-03",
+  "status": "COMPLETED",
+  "known_at": "2026-11-14T11:00:00.000Z",
+  "host_at": "2026-10-31T06:23:24.450Z",
+  "before": "2026-11-14T11:00:00.000Z",
+  "at": "2026-11-14T11:00:00.000Z",
+  "config": {
+    "schema_version": "astra.n11.v1",
+    "request_id": "smoke-02",
+    "crew_id": "CREW-03",
+    "seed": 42017,
+    "before": "2026-11-14T11:00:00.000Z",
+    "excluded_indices": [],
+    "supersedes": null,
+    "source_run_id": null,
+    "waveform": null,
+    "policy_hash": "ceac615c1bddcc152dba12dd0756d8a0f47a6c3f748757822d7b1d85fcb2cf6b"
+  },
+  "revision": 1,
+  "supersedes": null,
+  "source_context": {
+    "N07": {
+      "schema_version": "astra.n11.source-context.v1",
+      "retained_inventory_sha256": "cb76d62bd42e88479625b23e92996ecdc5e85cad3e640b748bbf837141b7853c",
+      "verification": "PINNED_RETAINED_DESCRIPTOR; original intake verified by N07, not a fresh scientific review",
+      "originals": [
+        {
+          "id": "nasa-ntrs-20205008796",
+          "title": "Market Survey 2020:  Commercial Clinical Decision Support Systems and Wellness Tools",
+          "version": "NTRS 20205008796; modified 2025-08-31T18:39:21.7150190+00:00",
+          "sha256": "3429154f91f4bc5476fc7adb7ee18f5a811b8bed2de7acad0f5c94e530ebb4f0",
+          "rights": {
+            "statement": "Work of the US Gov. Public Use Permitted.",
+            "license_id": null,
+            "terms_url": "https://www.sti.nasa.gov/disclaimers/",
+            "harvesting_url": "https://www.sti.nasa.gov/harvesting-data-from-ntrs/",
+            "record_url": "https://ntrs.nasa.gov/citations/20205008796",
+            "reviewed_on": "2026-10-23",
+            "attribution": "NASA STI Compliance and Distribution Services, NASA Ames Research Center; B. Burian, K. Martin and T. Shaw. Market Survey 2020: Commercial Clinical Decision Support Systems and Wellness Tools. NTRS 20205008796; 2021 NASA HRP Investigators' Workshop.",
+            "restrictions": [
+              "This approval covers only the public metadata JSON, not linked documents, vendor websites, images or any other NTRS record.",
+              "Credit NASA STI Compliance and Distribution Services as the metadata source; do not imply NASA endorsement or claim ownership of NASA material.",
+              "No blanket CC0 or Creative Commons license is inferred. The record's determinationType is GOV_PUBLIC_USE_PERMITTED and containsThirdPartyMaterial is false; its separate belongsToUsGov boolean is false. Metadata harvesting is independently expressly permitted by the official harvesting page.",
+              "NASA provides no warranty of accuracy, fitness or third-party rights. This historical market-survey abstract is not a clinical protocol or validation of ASTRA."
+            ]
+          },
+          "scope": "public_scientific_metadata",
+          "review": "NOT_INDEPENDENTLY_SCIENTIFICALLY_APPROVED"
+        },
+        {
+          "id": "nasa-osdr-osd-1",
+          "title": "Expression data from drosophila melanogaster",
+          "version": "OSD-1 BioData API v2 snapshot; study release version unavailable; sha256:cfe7d81c59efc3b01b4407db0854b4224b51bfcb9d8b4f590fc8467ededa6d64",
+          "sha256": "cfe7d81c59efc3b01b4407db0854b4224b51bfcb9d8b4f590fc8467ededa6d64",
+          "rights": {
+            "statement": "NASA dataset-specific catalogue: accessLevel public; license https://www.usa.gov/government-works. No study-specific SPDX license is supplied by the selected API response.",
+            "license_id": null,
+            "terms_url": "https://science.data.nasa.gov/about/license",
+            "harvesting_url": "https://visualization.osdr.nasa.gov/biodata/api/",
+            "record_url": "https://data.nasa.gov/dataset/expression-data-from-drosophila-melanogaster-a0600",
+            "reviewed_on": "2026-10-23",
+            "attribution": "Data are courtesy of the NASA Open Science Data Repository. Expression data from drosophila melanogaster, OSD-1 / GLDS-1. Credit the named investigators/publication authors and NASA OSDR; no NASA endorsement is implied.",
+            "restrictions": [
+              "This approval covers only one public nonhuman OSD-1 aggregate metadata JSON, not raw omics, sample records, images, linked articles or other studies.",
+              "The official dataset-specific catalogue links to OSD-1 and lists public access plus the government-works use URL. USAGov warns that third-party works, endorsement and international-rights limits can apply; hosting alone is not a license.",
+              "NASA Science Data Licenses states that unrestricted NASA-led mission data falls under its CC0 default, with source-specific notices taking precedence. The selected metadata identifies NASA, STS-121 and NASA funding; no restrictive notice is present. This record preserves the catalogue's actual statement and does not relabel it as an explicit study-level CC0 grant.",
+              "No redistribution or clinical-use permission for referenced raw measurements or publications is asserted. Future payload acquisition requires a fresh source/file-specific review.",
+              "The compact API has no explicit license or access-control field; public access was checked on the exact anonymous HTTPS endpoint and the NASA catalogue. Licence/access changes or identity/hash differences must fail closed."
+            ]
+          },
+          "scope": "public_nonhuman_study_metadata",
+          "review": "NOT_INDEPENDENTLY_SCIENTIFICALLY_APPROVED"
+        },
+        {
+          "id": "physionet-bidmc-01-numerics",
+          "title": "BIDMC PPG and Respiration Dataset — record 01 numerics",
+          "version": "1.0.0; bidmc_01_Numerics.csv",
+          "sha256": "27d43794cf2e7150db10e8bfe61d2bfdb26873a8f1629ffc5fbee5c9a4eb6ef5",
+          "rights": {
+            "statement": "Open Data Commons Attribution License v1.0 (ODC-By-1.0); preserve the accompanying legacy PhysioNet modified-data notice and attribution. Verbatim original only.",
+            "license_id": "ODC-By-1.0",
+            "terms_url": "https://physionet.org/content/bidmc/view-license/1.0.0/",
+            "harvesting_url": "https://archive.physionet.org/copying.shtml#data",
+            "record_url": "https://physionet.org/content/bidmc/1.0.0/",
+            "reviewed_on": "2026-10-23",
+            "attribution": "Contains information from the BIDMC PPG and Respiration Dataset v1.0.0,Marco Pimentel,Alistair Johnson,Peter Charlton and David Clifton,PhysioNet,DOI:10.13026/C2208R,made available under the ODC Attribution License v1.0.Cite Pimentel et al.,Towards a Robust Estimation of Respiratory Rate from Pulse Oximeters,DOI:10.1109/TBME.2016.2613124,and the PhysioNet resource citation listed in the source README.",
+            "restrictions": [
+              "Retain the ODC-By license URI,attribution and all accompanying source notices with redistributed bytes/documentation;no sublicense or additional restriction on granted database rights.",
+              "Original CSV is unmodified and retained verbatim.The source's existing MIMIC-II extraction/Matlab/CSV modification notice is retained separately,unchanged.",
+              "Future modified data must be distinctly named and identified with source/changes under the legacy policy;this task produces no modified signal dataset.",
+              "Database licensing does not waive privacy,personality,trademark or other content rights.No re-identification,patient linkage or implied clinical/PhysioNet endorsement."
+            ],
+            "legacy_notice_url": "https://physionet.org/files/bidmc/1.0.0/LICENSE",
+            "legacy_notice_sha256": "76576a17b505dce71773415a18e965982bc8c0c9a60da71f1adb9df7644332a0"
+          },
+          "scope": "public_patient_derived_physiological_numerics",
+          "review": "NOT_INDEPENDENTLY_SCIENTIFICALLY_APPROVED"
+        }
+      ],
+      "missing": [
+        {
+          "id": "sleep-edfx-SC4001E0-PSG",
+          "reason": "Original transfer incomplete; existing partial cannot be promoted; fresh exact-source acquisition/recovery authority required."
+        },
+        {
+          "id": "sleep-edfx-SC4001EC-Hypnogram",
+          "reason": "Not requested after PSG failure; no accepted original annotation or paired card."
+        },
+        {
+          "id": "ptt-ppg",
+          "reason": "Exact file/use/size/group metadata review and separate acquisition approval required."
+        },
+        {
+          "id": "radlab-BPD",
+          "reason": "Retained oversized JSON and HTTP500 HTML reviews did not yield a complete approved original; no current availability claim."
+        },
+        {
+          "id": "OSD-575",
+          "reason": "Catalogue only; specific metadata, rights, release and payload not acquired. OSD-1 is not a substitute."
+        },
+        {
+          "id": "OSD-656",
+          "reason": "Catalogue only; specific metadata, rights, release and payload not acquired. OSD-1 is not a substitute."
+        }
+      ],
+      "training_measurements": null,
+      "scientific_clearance": false
+    },
+    "N08": {
+      "status": "UNKNOWN",
+      "reason": "NO_AUTHORIZED_SOURCE_SELECTED"
+    },
+    "N09": {
+      "status": "UNKNOWN",
+      "reason": "NO_RUN_SELECTED"
+    },
+    "N10": {
+      "status": "AVAILABLE",
+      "sleep": {
+        "status": "UNKNOWN",
+        "history": [
+          {
+            "day": "2026-11-08",
+            "schedule": {
+              "status": "UNKNOWN",
+              "reason": "No dated schedule"
+            },
+            "actual": {
+              "status": "UNKNOWN",
+              "reason": "No canonical completed session"
+            },
+            "status": "UNKNOWN",
+            "difference_hours": null,
+            "descriptive_shortfall_hours": null
+          },
+          {
+            "day": "2026-11-09",
+            "schedule": {
+              "status": "UNKNOWN",
+              "reason": "No dated schedule"
+            },
+            "actual": {
+              "status": "UNKNOWN",
+              "reason": "No canonical completed session"
+            },
+            "status": "UNKNOWN",
+            "difference_hours": null,
+            "descriptive_shortfall_hours": null
+          },
+          {
+            "day": "2026-11-10",
+            "schedule": {
+              "status": "UNKNOWN",
+              "reason": "No dated schedule"
+            },
+            "actual": {
+              "status": "UNKNOWN",
+              "reason": "No canonical completed session"
+            },
+            "status": "UNKNOWN",
+            "difference_hours": null,
+            "descriptive_shortfall_hours": null
+          },
+          {
+            "day": "2026-11-11",
+            "schedule": {
+              "status": "UNKNOWN",
+              "reason": "No dated schedule"
+            },
+            "actual": {
+              "status": "UNKNOWN",
+              "reason": "No canonical completed session"
+            },
+            "status": "UNKNOWN",
+            "difference_hours": null,
+            "descriptive_shortfall_hours": null
+          },
+          {
+            "day": "2026-11-12",
+            "schedule": {
+              "status": "UNKNOWN",
+              "reason": "No dated schedule"
+            },
+            "actual": {
+              "status": "UNKNOWN",
+              "reason": "No canonical completed session"
+            },
+            "status": "UNKNOWN",
+            "difference_hours": null,
+            "descriptive_shortfall_hours": null
+          },
+          {
+            "day": "2026-11-13",
+            "schedule": {
+              "status": "UNKNOWN",
+              "reason": "No dated schedule"
+            },
+            "actual": {
+              "status": "UNKNOWN",
+              "reason": "No canonical completed session"
+            },
+            "status": "UNKNOWN",
+            "difference_hours": null,
+            "descriptive_shortfall_hours": null
+          },
+          {
+            "day": "2026-11-14",
+            "schedule": {
+              "status": "UNKNOWN",
+              "reason": "No dated schedule"
+            },
+            "actual": {
+              "status": "KNOWN",
+              "hours": 7.87,
+              "start_at": "2026-11-13T23:07:48.000Z",
+              "end_at": "2026-11-14T07:00:00.000Z",
+              "record_id": "SLEEP-a309a375f7a6d33d2a9d8e0184c20630:r1",
+              "session_id": "SLEEP-a309a375f7a6d33d2a9d8e0184c20630",
+              "revision": 1,
+              "source": {
+                "kind": "simulator",
+                "device_id": "SIM-SLEEP-CREW-03",
+                "sampling_hz": 0.000011574074074074073,
+                "clock": "mission_simulation"
+              },
+              "quality": {
+                "status": "good",
+                "confidence": 0.98,
+                "artifact": false
+              },
+              "provenance": {
+                "synthetic": true,
+                "scenario_id": "nominal",
+                "seed": 42017,
+                "generator_version": "completed-sleep-v1"
+              },
+              "observed_at": "2026-11-14T07:00:00.000Z",
+              "known_at": "2026-11-14T11:00:00.000Z"
+            },
+            "status": "UNKNOWN",
+            "difference_hours": null,
+            "descriptive_shortfall_hours": null
+          }
+        ],
+        "cumulative_shortfall_hours": null,
+        "covered_days": 0,
+        "requested_days": 7,
+        "formula": "max(0, authored planned hours - canonical observed hours), summed only with complete day coverage; no clinical sleep debt."
+      },
+      "exercise": {
+        "plans": [],
+        "sessions": [],
+        "plan_results": [],
+        "adherence": {
+          "status": "UNKNOWN",
+          "eligible_plans": 0,
+          "resolved_plans": 0,
+          "completed_plans": 0,
+          "percent": null,
+          "denominator": "Non-cancelled authored plans for the selected UTC day; missing records are not confirmed nonadherence."
+        },
+        "movement": {
+          "status": "UNKNOWN",
+          "steps": null,
+          "coverage_seconds": null,
+          "records": [],
+          "reason": "No complete non-overlapping verified movement evidence."
+        }
+      },
+      "private_cognition": "EXCLUDED"
+    },
+    "source_cutoff": "2026-11-14T11:00:00.000Z",
+    "known_at": "2026-11-14T11:00:00.000Z",
+    "scope": "Synthetic shadow; context is not clinical support or additional training data"
+  },
+  "events": [
+    {
+      "schema_version": "astra.n11.event.v1",
+      "job_id": "710e0226-c58b-4ec4-aeae-86d002fdc8d1",
+      "seq": 1,
+      "kind": "STARTED",
+      "known_at": "2026-11-14T11:00:00.000Z",
+      "host_at": "2026-10-31T06:23:24.450Z",
+      "payload": {
+        "config_hash": "d29d375f12496ab17031523b773926c69a2c7b032126504f32083e809a376d64",
+        "policy_hash": "ceac615c1bddcc152dba12dd0756d8a0f47a6c3f748757822d7b1d85fcb2cf6b",
+        "parent_result_hash": null
+      },
+      "previous_hash": "GENESIS",
+      "hash": "ca923039b13b7466e884600fd8116676f092a80cdae4c1359df1aab3874b1dc6"
+    },
+    {
+      "schema_version": "astra.n11.event.v1",
+      "job_id": "710e0226-c58b-4ec4-aeae-86d002fdc8d1",
+      "seq": 2,
+      "kind": "WORKER_ONLINE",
+      "known_at": "2026-11-14T11:00:00.000Z",
+      "host_at": "2026-10-31T06:23:24.482Z",
+      "payload": {
+        "thread_id": 1
+      },
+      "previous_hash": "ca923039b13b7466e884600fd8116676f092a80cdae4c1359df1aab3874b1dc6",
+      "hash": "1279fd25f8a9a368d99428f295c7a03db18c8444eb58a0d06c644f170c683a71"
+    },
+    {
+      "schema_version": "astra.n11.event.v1",
+      "job_id": "710e0226-c58b-4ec4-aeae-86d002fdc8d1",
+      "seq": 3,
+      "kind": "PHASE",
+      "known_at": "2026-11-14T11:00:00.000Z",
+      "host_at": "2026-10-31T06:23:24.579Z",
+      "payload": {
+        "stage": "SOURCE_VALIDATION"
+      },
+      "previous_hash": "1279fd25f8a9a368d99428f295c7a03db18c8444eb58a0d06c644f170c683a71",
+      "hash": "4ad4e90aecc37323cdcca10361310f95ff34d9a0654abc0fcb8a8638252445f4"
+    },
+    {
+      "schema_version": "astra.n11.event.v1",
+      "job_id": "710e0226-c58b-4ec4-aeae-86d002fdc8d1",
+      "seq": 4,
+      "kind": "PHASE",
+      "known_at": "2026-11-14T11:00:00.000Z",
+      "host_at": "2026-10-31T06:23:24.937Z",
+      "payload": {
+        "stage": "REFERENCE_FIT"
+      },
+      "previous_hash": "4ad4e90aecc37323cdcca10361310f95ff34d9a0654abc0fcb8a8638252445f4",
+      "hash": "c9b5979b86eff7a795d3398a39c4be115deaebc77cb88bb613b28b0d207526f8"
+    },
+    {
+      "schema_version": "astra.n11.event.v1",
+      "job_id": "710e0226-c58b-4ec4-aeae-86d002fdc8d1",
+      "seq": 5,
+      "kind": "PHASE",
+      "known_at": "2026-11-14T11:00:00.000Z",
+      "host_at": "2026-10-31T06:23:24.944Z",
+      "payload": {
+        "stage": "CANDIDATE_FIT"
+      },
+      "previous_hash": "c9b5979b86eff7a795d3398a39c4be115deaebc77cb88bb613b28b0d207526f8",
+      "hash": "43f6f89fe8f22d73922a9ca09dcffc216db5e07eed4cdf3bcda7719d217bb93f"
+    },
+    {
+      "schema_version": "astra.n11.event.v1",
+      "job_id": "710e0226-c58b-4ec4-aeae-86d002fdc8d1",
+      "seq": 6,
+      "kind": "PHASE",
+      "known_at": "2026-11-14T11:00:00.000Z",
+      "host_at": "2026-10-31T06:23:25.520Z",
+      "payload": {
+        "stage": "EVALUATED"
+      },
+      "previous_hash": "43f6f89fe8f22d73922a9ca09dcffc216db5e07eed4cdf3bcda7719d217bb93f",
+      "hash": "8c1c2487a26709da664d59bace57529fba893ec712770ce1e9c98f8a79bca13f"
+    },
+    {
+      "schema_version": "astra.n11.event.v1",
+      "job_id": "710e0226-c58b-4ec4-aeae-86d002fdc8d1",
+      "seq": 7,
+      "kind": "COMMITTED",
+      "known_at": "2026-11-14T11:00:00.000Z",
+      "host_at": "2026-10-31T06:23:25.690Z",
+      "payload": {
+        "result_hash": "4a6fdabb34cf6229e3fc20fc149a29c7d0ba889f96a81894ee12aae9dccfc2eb",
+        "worker_exit": 0,
+        "thread_id": 1,
+        "worker_duration_ms": 1239.2716500000001
+      },
+      "previous_hash": "8c1c2487a26709da664d59bace57529fba893ec712770ce1e9c98f8a79bca13f",
+      "hash": "38488193840dd10a2ff13511f9012dfd377e322e3c96196f52e5f8e537e25ebb"
+    }
+  ],
+  "result": {
+    "hash": "4a6fdabb34cf6229e3fc20fc149a29c7d0ba889f96a81894ee12aae9dccfc2eb",
+    "status": "COMPLETE",
+    "metrics": [
+      {
+        "method": "tier_a",
+        "partition": "train",
+        "event_confusion": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 4,
+          "fn": 0
+        },
+        "precision": null,
+        "recall": null,
+        "false_alert_episodes": 0,
+        "observed_crew_days": 0.027777777777777776,
+        "false_alerts_per_observed_crew_day": 0,
+        "latency_seconds": [],
+        "unknown_frames": 0,
+        "unscorable_negative_units": 0,
+        "scenario_matrix": [
+          {
+            "unit_id": "train-CREW-01-nominal",
+            "scenario": "nominal",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "train-CREW-01-post-exercise",
+            "scenario": "post-exercise",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "train-CREW-02-nominal",
+            "scenario": "nominal",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "train-CREW-02-post-exercise",
+            "scenario": "post-exercise",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": null
+          }
+        ],
+        "denominator_note": "Eligible adjacent source samples at declared cadence, not proof of continuous sensing. Partly UNKNOWN negative units are unscorable, not true-negatives. FP counts unmatched alert episodes; post-onset detection deduplicates to one event. Latency starts at separate authored onset."
+      },
+      {
+        "method": "tier_a",
+        "partition": "validation",
+        "event_confusion": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 0,
+          "fn": 0
+        },
+        "precision": null,
+        "recall": null,
+        "false_alert_episodes": 0,
+        "observed_crew_days": 0,
+        "false_alerts_per_observed_crew_day": null,
+        "latency_seconds": [],
+        "unknown_frames": 80,
+        "unscorable_negative_units": 4,
+        "scenario_matrix": [
+          {
+            "unit_id": "validation-CREW-03-sensor-dropout",
+            "scenario": "sensor-dropout",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-03-contradictory-sensors",
+            "scenario": "contradictory-sensors",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-04-sensor-dropout",
+            "scenario": "sensor-dropout",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-04-contradictory-sensors",
+            "scenario": "contradictory-sensors",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          }
+        ],
+        "denominator_note": "Eligible adjacent source samples at declared cadence, not proof of continuous sensing. Partly UNKNOWN negative units are unscorable, not true-negatives. FP counts unmatched alert episodes; post-onset detection deduplicates to one event. Latency starts at separate authored onset."
+      },
+      {
+        "method": "tier_a",
+        "partition": "test",
+        "event_confusion": {
+          "tp": 4,
+          "fp": 0,
+          "tn": 0,
+          "fn": 0
+        },
+        "precision": 1,
+        "recall": 1,
+        "false_alert_episodes": 0,
+        "observed_crew_days": 0.02638888888888889,
+        "false_alerts_per_observed_crew_day": 0,
+        "latency_seconds": [
+          120,
+          150,
+          120,
+          150
+        ],
+        "unknown_frames": 2,
+        "unscorable_negative_units": 0,
+        "scenario_matrix": [
+          {
+            "unit_id": "test-CREW-05-cardiorespiratory-drift",
+            "scenario": "cardiorespiratory-drift",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": true,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": 120
+          },
+          {
+            "unit_id": "test-CREW-05-controlled-hr-rise",
+            "scenario": "controlled-hr-rise",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": true,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": 150
+          },
+          {
+            "unit_id": "test-CREW-06-cardiorespiratory-drift",
+            "scenario": "cardiorespiratory-drift",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": true,
+            "false_alert_episodes": 0,
+            "eligible_frames": 20,
+            "latency_seconds": 120
+          },
+          {
+            "unit_id": "test-CREW-06-controlled-hr-rise",
+            "scenario": "controlled-hr-rise",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": true,
+            "false_alert_episodes": 0,
+            "eligible_frames": 20,
+            "latency_seconds": 150
+          }
+        ],
+        "denominator_note": "Eligible adjacent source samples at declared cadence, not proof of continuous sensing. Partly UNKNOWN negative units are unscorable, not true-negatives. FP counts unmatched alert episodes; post-onset detection deduplicates to one event. Latency starts at separate authored onset."
+      },
+      {
+        "method": "tier_a",
+        "partition": "seen_robustness",
+        "event_confusion": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 1,
+          "fn": 0
+        },
+        "precision": null,
+        "recall": null,
+        "false_alert_episodes": 0,
+        "observed_crew_days": 1.9930555555555556,
+        "false_alerts_per_observed_crew_day": 0,
+        "latency_seconds": [],
+        "unknown_frames": 1,
+        "unscorable_negative_units": 1,
+        "scenario_matrix": [
+          {
+            "unit_id": "seen_robustness-CREW-05-nominal",
+            "scenario": "nominal",
+            "partition": "seen_robustness",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 289,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "seen_robustness-CREW-06-nominal",
+            "scenario": "nominal",
+            "partition": "seen_robustness",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 288,
+            "latency_seconds": null
+          }
+        ],
+        "denominator_note": "Eligible adjacent source samples at declared cadence, not proof of continuous sensing. Partly UNKNOWN negative units are unscorable, not true-negatives. FP counts unmatched alert episodes; post-onset detection deduplicates to one event. Latency starts at separate authored onset."
+      },
+      {
+        "method": "tier_a",
+        "partition": "all",
+        "event_confusion": {
+          "tp": 4,
+          "fp": 0,
+          "tn": 5,
+          "fn": 0
+        },
+        "precision": 1,
+        "recall": 1,
+        "false_alert_episodes": 0,
+        "observed_crew_days": 2.047222222222222,
+        "false_alerts_per_observed_crew_day": 0,
+        "latency_seconds": [
+          120,
+          150,
+          120,
+          150
+        ],
+        "unknown_frames": 83,
+        "unscorable_negative_units": 5,
+        "scenario_matrix": [
+          {
+            "unit_id": "train-CREW-01-nominal",
+            "scenario": "nominal",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "train-CREW-01-post-exercise",
+            "scenario": "post-exercise",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "train-CREW-02-nominal",
+            "scenario": "nominal",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "train-CREW-02-post-exercise",
+            "scenario": "post-exercise",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-03-sensor-dropout",
+            "scenario": "sensor-dropout",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-03-contradictory-sensors",
+            "scenario": "contradictory-sensors",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-04-sensor-dropout",
+            "scenario": "sensor-dropout",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-04-contradictory-sensors",
+            "scenario": "contradictory-sensors",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "test-CREW-05-cardiorespiratory-drift",
+            "scenario": "cardiorespiratory-drift",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": true,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": 120
+          },
+          {
+            "unit_id": "test-CREW-05-controlled-hr-rise",
+            "scenario": "controlled-hr-rise",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": true,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": 150
+          },
+          {
+            "unit_id": "test-CREW-06-cardiorespiratory-drift",
+            "scenario": "cardiorespiratory-drift",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": true,
+            "false_alert_episodes": 0,
+            "eligible_frames": 20,
+            "latency_seconds": 120
+          },
+          {
+            "unit_id": "test-CREW-06-controlled-hr-rise",
+            "scenario": "controlled-hr-rise",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": true,
+            "false_alert_episodes": 0,
+            "eligible_frames": 20,
+            "latency_seconds": 150
+          },
+          {
+            "unit_id": "seen_robustness-CREW-05-nominal",
+            "scenario": "nominal",
+            "partition": "seen_robustness",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 289,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "seen_robustness-CREW-06-nominal",
+            "scenario": "nominal",
+            "partition": "seen_robustness",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 288,
+            "latency_seconds": null
+          }
+        ],
+        "denominator_note": "Eligible adjacent source samples at declared cadence, not proof of continuous sensing. Partly UNKNOWN negative units are unscorable, not true-negatives. FP counts unmatched alert episodes; post-onset detection deduplicates to one event. Latency starts at separate authored onset."
+      },
+      {
+        "method": "ewma",
+        "partition": "train",
+        "event_confusion": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 2,
+          "fn": 0
+        },
+        "precision": null,
+        "recall": null,
+        "false_alert_episodes": 0,
+        "observed_crew_days": 0.013888888888888888,
+        "false_alerts_per_observed_crew_day": 0,
+        "latency_seconds": [],
+        "unknown_frames": 42,
+        "unscorable_negative_units": 2,
+        "scenario_matrix": [
+          {
+            "unit_id": "train-CREW-01-nominal",
+            "scenario": "nominal",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "train-CREW-01-post-exercise",
+            "scenario": "post-exercise",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 0,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "train-CREW-02-nominal",
+            "scenario": "nominal",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "train-CREW-02-post-exercise",
+            "scenario": "post-exercise",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 0,
+            "latency_seconds": null
+          }
+        ],
+        "denominator_note": "Eligible adjacent source samples at declared cadence, not proof of continuous sensing. Partly UNKNOWN negative units are unscorable, not true-negatives. FP counts unmatched alert episodes; post-onset detection deduplicates to one event. Latency starts at separate authored onset."
+      },
+      {
+        "method": "ewma",
+        "partition": "validation",
+        "event_confusion": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 0,
+          "fn": 0
+        },
+        "precision": null,
+        "recall": null,
+        "false_alert_episodes": 0,
+        "observed_crew_days": 0,
+        "false_alerts_per_observed_crew_day": null,
+        "latency_seconds": [],
+        "unknown_frames": 80,
+        "unscorable_negative_units": 4,
+        "scenario_matrix": [
+          {
+            "unit_id": "validation-CREW-03-sensor-dropout",
+            "scenario": "sensor-dropout",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-03-contradictory-sensors",
+            "scenario": "contradictory-sensors",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-04-sensor-dropout",
+            "scenario": "sensor-dropout",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-04-contradictory-sensors",
+            "scenario": "contradictory-sensors",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          }
+        ],
+        "denominator_note": "Eligible adjacent source samples at declared cadence, not proof of continuous sensing. Partly UNKNOWN negative units are unscorable, not true-negatives. FP counts unmatched alert episodes; post-onset detection deduplicates to one event. Latency starts at separate authored onset."
+      },
+      {
+        "method": "ewma",
+        "partition": "test",
+        "event_confusion": {
+          "tp": 4,
+          "fp": 0,
+          "tn": 0,
+          "fn": 0
+        },
+        "precision": 1,
+        "recall": 1,
+        "false_alert_episodes": 0,
+        "observed_crew_days": 0.02638888888888889,
+        "false_alerts_per_observed_crew_day": 0,
+        "latency_seconds": [
+          180,
+          120,
+          180,
+          120
+        ],
+        "unknown_frames": 2,
+        "unscorable_negative_units": 0,
+        "scenario_matrix": [
+          {
+            "unit_id": "test-CREW-05-cardiorespiratory-drift",
+            "scenario": "cardiorespiratory-drift",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": true,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": 180
+          },
+          {
+            "unit_id": "test-CREW-05-controlled-hr-rise",
+            "scenario": "controlled-hr-rise",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": true,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": 120
+          },
+          {
+            "unit_id": "test-CREW-06-cardiorespiratory-drift",
+            "scenario": "cardiorespiratory-drift",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": true,
+            "false_alert_episodes": 0,
+            "eligible_frames": 20,
+            "latency_seconds": 180
+          },
+          {
+            "unit_id": "test-CREW-06-controlled-hr-rise",
+            "scenario": "controlled-hr-rise",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": true,
+            "false_alert_episodes": 0,
+            "eligible_frames": 20,
+            "latency_seconds": 120
+          }
+        ],
+        "denominator_note": "Eligible adjacent source samples at declared cadence, not proof of continuous sensing. Partly UNKNOWN negative units are unscorable, not true-negatives. FP counts unmatched alert episodes; post-onset detection deduplicates to one event. Latency starts at separate authored onset."
+      },
+      {
+        "method": "ewma",
+        "partition": "seen_robustness",
+        "event_confusion": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 0,
+          "fn": 0
+        },
+        "precision": null,
+        "recall": null,
+        "false_alert_episodes": 0,
+        "observed_crew_days": 1.9027777777777777,
+        "false_alerts_per_observed_crew_day": 0,
+        "latency_seconds": [],
+        "unknown_frames": 25,
+        "unscorable_negative_units": 2,
+        "scenario_matrix": [
+          {
+            "unit_id": "seen_robustness-CREW-05-nominal",
+            "scenario": "nominal",
+            "partition": "seen_robustness",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 277,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "seen_robustness-CREW-06-nominal",
+            "scenario": "nominal",
+            "partition": "seen_robustness",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 276,
+            "latency_seconds": null
+          }
+        ],
+        "denominator_note": "Eligible adjacent source samples at declared cadence, not proof of continuous sensing. Partly UNKNOWN negative units are unscorable, not true-negatives. FP counts unmatched alert episodes; post-onset detection deduplicates to one event. Latency starts at separate authored onset."
+      },
+      {
+        "method": "ewma",
+        "partition": "all",
+        "event_confusion": {
+          "tp": 4,
+          "fp": 0,
+          "tn": 2,
+          "fn": 0
+        },
+        "precision": 1,
+        "recall": 1,
+        "false_alert_episodes": 0,
+        "observed_crew_days": 1.9430555555555555,
+        "false_alerts_per_observed_crew_day": 0,
+        "latency_seconds": [
+          180,
+          120,
+          180,
+          120
+        ],
+        "unknown_frames": 149,
+        "unscorable_negative_units": 8,
+        "scenario_matrix": [
+          {
+            "unit_id": "train-CREW-01-nominal",
+            "scenario": "nominal",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "train-CREW-01-post-exercise",
+            "scenario": "post-exercise",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 0,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "train-CREW-02-nominal",
+            "scenario": "nominal",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "train-CREW-02-post-exercise",
+            "scenario": "post-exercise",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 0,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-03-sensor-dropout",
+            "scenario": "sensor-dropout",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-03-contradictory-sensors",
+            "scenario": "contradictory-sensors",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-04-sensor-dropout",
+            "scenario": "sensor-dropout",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-04-contradictory-sensors",
+            "scenario": "contradictory-sensors",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "test-CREW-05-cardiorespiratory-drift",
+            "scenario": "cardiorespiratory-drift",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": true,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": 180
+          },
+          {
+            "unit_id": "test-CREW-05-controlled-hr-rise",
+            "scenario": "controlled-hr-rise",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": true,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": 120
+          },
+          {
+            "unit_id": "test-CREW-06-cardiorespiratory-drift",
+            "scenario": "cardiorespiratory-drift",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": true,
+            "false_alert_episodes": 0,
+            "eligible_frames": 20,
+            "latency_seconds": 180
+          },
+          {
+            "unit_id": "test-CREW-06-controlled-hr-rise",
+            "scenario": "controlled-hr-rise",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": true,
+            "false_alert_episodes": 0,
+            "eligible_frames": 20,
+            "latency_seconds": 120
+          },
+          {
+            "unit_id": "seen_robustness-CREW-05-nominal",
+            "scenario": "nominal",
+            "partition": "seen_robustness",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 277,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "seen_robustness-CREW-06-nominal",
+            "scenario": "nominal",
+            "partition": "seen_robustness",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 276,
+            "latency_seconds": null
+          }
+        ],
+        "denominator_note": "Eligible adjacent source samples at declared cadence, not proof of continuous sensing. Partly UNKNOWN negative units are unscorable, not true-negatives. FP counts unmatched alert episodes; post-onset detection deduplicates to one event. Latency starts at separate authored onset."
+      },
+      {
+        "method": "isolation_forest",
+        "partition": "train",
+        "event_confusion": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 2,
+          "fn": 0
+        },
+        "precision": null,
+        "recall": null,
+        "false_alert_episodes": 0,
+        "observed_crew_days": 0.013888888888888888,
+        "false_alerts_per_observed_crew_day": 0,
+        "latency_seconds": [],
+        "unknown_frames": 42,
+        "unscorable_negative_units": 2,
+        "scenario_matrix": [
+          {
+            "unit_id": "train-CREW-01-nominal",
+            "scenario": "nominal",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "train-CREW-01-post-exercise",
+            "scenario": "post-exercise",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 0,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "train-CREW-02-nominal",
+            "scenario": "nominal",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "train-CREW-02-post-exercise",
+            "scenario": "post-exercise",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 0,
+            "latency_seconds": null
+          }
+        ],
+        "denominator_note": "Eligible adjacent source samples at declared cadence, not proof of continuous sensing. Partly UNKNOWN negative units are unscorable, not true-negatives. FP counts unmatched alert episodes; post-onset detection deduplicates to one event. Latency starts at separate authored onset."
+      },
+      {
+        "method": "isolation_forest",
+        "partition": "validation",
+        "event_confusion": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 0,
+          "fn": 0
+        },
+        "precision": null,
+        "recall": null,
+        "false_alert_episodes": 0,
+        "observed_crew_days": 0,
+        "false_alerts_per_observed_crew_day": null,
+        "latency_seconds": [],
+        "unknown_frames": 80,
+        "unscorable_negative_units": 4,
+        "scenario_matrix": [
+          {
+            "unit_id": "validation-CREW-03-sensor-dropout",
+            "scenario": "sensor-dropout",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-03-contradictory-sensors",
+            "scenario": "contradictory-sensors",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-04-sensor-dropout",
+            "scenario": "sensor-dropout",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-04-contradictory-sensors",
+            "scenario": "contradictory-sensors",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          }
+        ],
+        "denominator_note": "Eligible adjacent source samples at declared cadence, not proof of continuous sensing. Partly UNKNOWN negative units are unscorable, not true-negatives. FP counts unmatched alert episodes; post-onset detection deduplicates to one event. Latency starts at separate authored onset."
+      },
+      {
+        "method": "isolation_forest",
+        "partition": "test",
+        "event_confusion": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 0,
+          "fn": 4
+        },
+        "precision": null,
+        "recall": 0,
+        "false_alert_episodes": 0,
+        "observed_crew_days": 0.02638888888888889,
+        "false_alerts_per_observed_crew_day": 0,
+        "latency_seconds": [],
+        "unknown_frames": 2,
+        "unscorable_negative_units": 0,
+        "scenario_matrix": [
+          {
+            "unit_id": "test-CREW-05-cardiorespiratory-drift",
+            "scenario": "cardiorespiratory-drift",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "test-CREW-05-controlled-hr-rise",
+            "scenario": "controlled-hr-rise",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "test-CREW-06-cardiorespiratory-drift",
+            "scenario": "cardiorespiratory-drift",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 20,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "test-CREW-06-controlled-hr-rise",
+            "scenario": "controlled-hr-rise",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 20,
+            "latency_seconds": null
+          }
+        ],
+        "denominator_note": "Eligible adjacent source samples at declared cadence, not proof of continuous sensing. Partly UNKNOWN negative units are unscorable, not true-negatives. FP counts unmatched alert episodes; post-onset detection deduplicates to one event. Latency starts at separate authored onset."
+      },
+      {
+        "method": "isolation_forest",
+        "partition": "seen_robustness",
+        "event_confusion": {
+          "tp": 0,
+          "fp": 44,
+          "tn": 0,
+          "fn": 0
+        },
+        "precision": 0,
+        "recall": null,
+        "false_alert_episodes": 44,
+        "observed_crew_days": 1.9027777777777777,
+        "false_alerts_per_observed_crew_day": 23.124087591240876,
+        "latency_seconds": [],
+        "unknown_frames": 25,
+        "unscorable_negative_units": 0,
+        "scenario_matrix": [
+          {
+            "unit_id": "seen_robustness-CREW-05-nominal",
+            "scenario": "nominal",
+            "partition": "seen_robustness",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 23,
+            "eligible_frames": 277,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "seen_robustness-CREW-06-nominal",
+            "scenario": "nominal",
+            "partition": "seen_robustness",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 21,
+            "eligible_frames": 276,
+            "latency_seconds": null
+          }
+        ],
+        "denominator_note": "Eligible adjacent source samples at declared cadence, not proof of continuous sensing. Partly UNKNOWN negative units are unscorable, not true-negatives. FP counts unmatched alert episodes; post-onset detection deduplicates to one event. Latency starts at separate authored onset."
+      },
+      {
+        "method": "isolation_forest",
+        "partition": "all",
+        "event_confusion": {
+          "tp": 0,
+          "fp": 44,
+          "tn": 2,
+          "fn": 4
+        },
+        "precision": 0,
+        "recall": 0,
+        "false_alert_episodes": 44,
+        "observed_crew_days": 1.9430555555555555,
+        "false_alerts_per_observed_crew_day": 22.644746247319514,
+        "latency_seconds": [],
+        "unknown_frames": 149,
+        "unscorable_negative_units": 6,
+        "scenario_matrix": [
+          {
+            "unit_id": "train-CREW-01-nominal",
+            "scenario": "nominal",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "train-CREW-01-post-exercise",
+            "scenario": "post-exercise",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 0,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "train-CREW-02-nominal",
+            "scenario": "nominal",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "train-CREW-02-post-exercise",
+            "scenario": "post-exercise",
+            "partition": "train",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 0,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-03-sensor-dropout",
+            "scenario": "sensor-dropout",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-03-contradictory-sensors",
+            "scenario": "contradictory-sensors",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-04-sensor-dropout",
+            "scenario": "sensor-dropout",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "validation-CREW-04-contradictory-sensors",
+            "scenario": "contradictory-sensors",
+            "partition": "validation",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 1,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "test-CREW-05-cardiorespiratory-drift",
+            "scenario": "cardiorespiratory-drift",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "test-CREW-05-controlled-hr-rise",
+            "scenario": "controlled-hr-rise",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 21,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "test-CREW-06-cardiorespiratory-drift",
+            "scenario": "cardiorespiratory-drift",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 20,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "test-CREW-06-controlled-hr-rise",
+            "scenario": "controlled-hr-rise",
+            "partition": "test",
+            "expected_review": true,
+            "observed_review": false,
+            "false_alert_episodes": 0,
+            "eligible_frames": 20,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "seen_robustness-CREW-05-nominal",
+            "scenario": "nominal",
+            "partition": "seen_robustness",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 23,
+            "eligible_frames": 277,
+            "latency_seconds": null
+          },
+          {
+            "unit_id": "seen_robustness-CREW-06-nominal",
+            "scenario": "nominal",
+            "partition": "seen_robustness",
+            "expected_review": false,
+            "observed_review": false,
+            "false_alert_episodes": 21,
+            "eligible_frames": 276,
+            "latency_seconds": null
+          }
+        ],
+        "denominator_note": "Eligible adjacent source samples at declared cadence, not proof of continuous sensing. Partly UNKNOWN negative units are unscorable, not true-negatives. FP counts unmatched alert episodes; post-onset detection deduplicates to one event. Latency starts at separate authored onset."
+      }
+    ],
+    "quality_metrics": {
+      "numeric_artifact_confusion": {
+        "tp": 40,
+        "fn": 0,
+        "fp": 0,
+        "tn": 747
+      },
+      "artifact_recall": 1,
+      "false_artifact_rate": 0,
+      "false_sensor_failure_rate": 0,
+      "limitations": "Numeric rule is evaluated independently of declared flags; authored synthetic labels, not external sensor validation."
+    },
+    "performance": {
+      "total_ms": 943.62689,
+      "inference_batches": 830,
+      "p95_batch_ms": 1.215893000000051,
+      "maximum_observed_batch_ms": 3.434361000000081,
+      "target_ms": 50,
+      "scope": "One fictional crew frame incl quality/EWMA/forest/TierA; includes model hash validation; observed CPU only"
+    },
+    "model_cards": [
+      {
+        "method": "ewma",
+        "policy_hash": "ceac615c1bddcc152dba12dd0756d8a0f47a6c3f748757822d7b1d85fcb2cf6b",
+        "source_hash": "b87771852b63659acf55f24f1d84c4df043cbc7b1fa587facd368a1c5fa964ea",
+        "reference_hash": "626fd5e1675585cc03fb155ec53b6f02284ba77bb05d618a0635ec0f450fa89e",
+        "features": [
+          "heart_rate",
+          "hrv",
+          "spo2",
+          "respiratory_rate",
+          "temperature",
+          "fatigue",
+          "reaction_time"
+        ],
+        "training_units": [
+          "train-CREW-01-nominal",
+          "train-CREW-01-post-exercise",
+          "train-CREW-02-nominal",
+          "train-CREW-02-post-exercise"
+        ],
+        "status": "NOT_PROMOTED",
+        "reason": "Synthetic shadow comparison only; actual metrics and rejected/promoted distinctions retained. Independent scientific/source/release acceptance pending.",
+        "clinical_validation": false
+      },
+      {
+        "method": "isolation_forest",
+        "policy_hash": "ceac615c1bddcc152dba12dd0756d8a0f47a6c3f748757822d7b1d85fcb2cf6b",
+        "source_hash": "b87771852b63659acf55f24f1d84c4df043cbc7b1fa587facd368a1c5fa964ea",
+        "reference_hash": "626fd5e1675585cc03fb155ec53b6f02284ba77bb05d618a0635ec0f450fa89e",
+        "features": [
+          "heart_rate",
+          "hrv",
+          "spo2",
+          "respiratory_rate",
+          "temperature",
+          "fatigue",
+          "reaction_time"
+        ],
+        "training_units": [
+          "train-CREW-01-nominal",
+          "train-CREW-01-post-exercise",
+          "train-CREW-02-nominal",
+          "train-CREW-02-post-exercise"
+        ],
+        "status": "NOT_PROMOTED",
+        "reason": "Synthetic shadow comparison only; actual metrics and rejected/promoted distinctions retained. Independent scientific/source/release acceptance pending.",
+        "clinical_validation": false
+      }
+    ],
+    "references": {
+      "hash": "626fd5e1675585cc03fb155ec53b6f02284ba77bb05d618a0635ec0f450fa89e",
+      "before": "2026-11-11T11:00:00.000Z",
+      "crew_id": "CREW-03",
+      "metrics": {
+        "heart_rate": {
+          "center": 67.58519637668294,
+          "scale": 4.758740560072654,
+          "method": "median/MAD",
+          "count": 720,
+          "window_days": 30,
+          "version": "n11-reference-v1",
+          "synthetic": true,
+          "unit": "/min",
+          "eligible_count": 720,
+          "excluded_indices": [],
+          "trained_through": "2026-11-11T10:00:00.000Z"
+        },
+        "hrv": {
+          "center": 54.72382776739926,
+          "scale": 5.535619833325735,
+          "method": "median/MAD",
+          "count": 720,
+          "window_days": 30,
+          "version": "n11-reference-v1",
+          "synthetic": true,
+          "unit": "ms",
+          "eligible_count": 720,
+          "excluded_indices": [],
+          "trained_through": "2026-11-11T10:00:00.000Z"
+        },
+        "spo2": {
+          "center": 98.11558757421346,
+          "scale": 0.6409297910135946,
+          "method": "median/MAD",
+          "count": 717,
+          "window_days": 30,
+          "version": "n11-reference-v1",
+          "synthetic": true,
+          "unit": "%",
+          "eligible_count": 717,
+          "excluded_indices": [
+            144,
+            647,
+            689
+          ],
+          "trained_through": "2026-11-11T10:00:00.000Z"
+        },
+        "respiratory_rate": {
+          "center": 13.893852954209255,
+          "scale": 1.4934909162596641,
+          "method": "median/MAD",
+          "count": 720,
+          "window_days": 30,
+          "version": "n11-reference-v1",
+          "synthetic": true,
+          "unit": "/min",
+          "eligible_count": 720,
+          "excluded_indices": [],
+          "trained_through": "2026-11-11T10:00:00.000Z"
+        },
+        "temperature": {
+          "center": 36.68727259890518,
+          "scale": 0.22417136438291405,
+          "method": "median/MAD",
+          "count": 720,
+          "window_days": 30,
+          "version": "n11-reference-v1",
+          "synthetic": true,
+          "unit": "Cel",
+          "eligible_count": 720,
+          "excluded_indices": [],
+          "trained_through": "2026-11-11T10:00:00.000Z"
+        },
+        "sleep_duration": {
+          "center": 7.778290000659976,
+          "scale": 0.5902057432276917,
+          "method": "median/MAD",
+          "count": 720,
+          "window_days": 30,
+          "version": "n11-reference-v1",
+          "synthetic": true,
+          "unit": "h",
+          "eligible_count": 720,
+          "excluded_indices": [],
+          "trained_through": "2026-11-11T10:00:00.000Z"
+        },
+        "fatigue": {
+          "center": 2.6109250050666133,
+          "scale": 0.6504701289914685,
+          "method": "median/MAD",
+          "count": 720,
+          "window_days": 30,
+          "version": "n11-reference-v1",
+          "synthetic": true,
+          "unit": "{score}",
+          "eligible_count": 720,
+          "excluded_indices": [],
+          "trained_through": "2026-11-11T10:00:00.000Z"
+        },
+        "reaction_time": {
+          "center": 259.2017873267704,
+          "scale": 20.91808017927163,
+          "method": "median/MAD",
+          "count": 720,
+          "window_days": 30,
+          "version": "n11-reference-v1",
+          "synthetic": true,
+          "unit": "ms",
+          "eligible_count": 720,
+          "excluded_indices": [],
+          "trained_through": "2026-11-11T10:00:00.000Z"
+        },
+        "exercise": {
+          "center": 108.86254576875726,
+          "scale": 12.043648991662657,
+          "method": "median/MAD",
+          "count": 720,
+          "window_days": 30,
+          "version": "n11-reference-v1",
+          "synthetic": true,
+          "unit": "min",
+          "eligible_count": 720,
+          "excluded_indices": [],
+          "trained_through": "2026-11-11T10:00:00.000Z"
+        },
+        "radiation": {
+          "center": 0.01589634072930257,
+          "scale": 0.0020435049551297884,
+          "method": "median/MAD",
+          "count": 720,
+          "window_days": 30,
+          "version": "n11-reference-v1",
+          "synthetic": true,
+          "unit": "mSv/h",
+          "eligible_count": 720,
+          "excluded_indices": [],
+          "trained_through": "2026-11-11T10:00:00.000Z"
+        }
+      },
+      "excluded_indices": []
+    },
+    "decisions": [
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:00:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "77f00c24eaeb62edba7599ee254cc672c108bf3b56b34136c65c8faaf2d77e9d",
+        "ewma": {
+          "status": "KNOWN",
+          "review": false,
+          "score": 0.04724729407457422
+        },
+        "isolation_forest": {
+          "status": "KNOWN",
+          "review": false,
+          "score": 0.4506528159850814
+        },
+        "tier_a": {
+          "status": "KNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": false,
+          "missing_values": false,
+          "declared": "good",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [
+          {
+            "metric": "hrv",
+            "value": 55.77,
+            "unit": "ms",
+            "center": 54.72382776739926,
+            "scale": 5.535619833325735,
+            "deviation": 0.18898917629829687,
+            "source_at": "2026-11-12T11:00:00.000Z",
+            "reference_hash": "626fd5e1675585cc03fb155ec53b6f02284ba77bb05d618a0635ec0f450fa89e"
+          },
+          {
+            "metric": "reaction_time",
+            "value": 262.14,
+            "unit": "ms",
+            "center": 259.2017873267704,
+            "scale": 20.91808017927163,
+            "deviation": 0.14046282680095878,
+            "source_at": "2026-11-12T11:00:00.000Z",
+            "reference_hash": "626fd5e1675585cc03fb155ec53b6f02284ba77bb05d618a0635ec0f450fa89e"
+          },
+          {
+            "metric": "respiratory_rate",
+            "value": 14.07,
+            "unit": "/min",
+            "center": 13.893852954209255,
+            "scale": 1.4934909162596641,
+            "deviation": 0.11794316515288406,
+            "source_at": "2026-11-12T11:00:00.000Z",
+            "reference_hash": "626fd5e1675585cc03fb155ec53b6f02284ba77bb05d618a0635ec0f450fa89e"
+          }
+        ],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:00:30.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "8d1fb0ae4318cbd3b80f37aedf39be07c87df913113bc08ab06d6a9c25df992e",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": null,
+          "missing_values": true,
+          "declared": "missing",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:01:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "08ef689e7a83b7767f84830bd9f0b80ef4545d100109ac03995afcdd00c8f879",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": null,
+          "missing_values": true,
+          "declared": "missing",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:01:30.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "69c26738842f8f188f7030c63425620de2ed64f97dd34828c4c068cb3d8e868e",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": null,
+          "missing_values": true,
+          "declared": "missing",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:02:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "ef013c928f706eee026c3c0d227d2f39fac13b9e3e446fbc5342b3f9742bff90",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": null,
+          "missing_values": true,
+          "declared": "missing",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:02:30.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "bcbd47b39436d692b2940187d7be6a48ce9b8384476b6a8efa5997fe70d2738e",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": null,
+          "missing_values": true,
+          "declared": "missing",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:03:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "ea85e12cff3e3010f1204d34ed695d27c09c484aeaabfd7679abf2896016cef0",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": null,
+          "missing_values": true,
+          "declared": "missing",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:03:30.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "a4be9b3256f3aa0d3e951129cfa5b7af50f69a6c15a36ace76b3001ea654272b",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": null,
+          "missing_values": true,
+          "declared": "missing",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:04:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "e380446275fea133341d9411f0716d43dd3981932db01efea4972ce06bb1fa0b",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": null,
+          "missing_values": true,
+          "declared": "missing",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:04:30.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "eaff3494d61e2161df49de95bc7a276f545104f7340cf6fb96a4c05df1593ad1",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": null,
+          "missing_values": true,
+          "declared": "missing",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:05:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "0210d362235bdb7c95a4ea7b2980e925525c31255a2f088c84c815d3803cd106",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": null,
+          "missing_values": true,
+          "declared": "missing",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:05:30.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "4610bab054589c9a386137020d85b69338a526659f323d61ab30f64af3bc9763",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": null,
+          "missing_values": true,
+          "declared": "missing",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:06:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "10fcf553eed5835c7a974f4e089b8bf26e728fae3dc5cc5b7d974e52b9e98aa6",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": null,
+          "missing_values": true,
+          "declared": "missing",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:06:30.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "d34095d64df510de78c31073a050d77aac8495f09deb21b61207606fd7e7ba18",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": null,
+          "missing_values": true,
+          "declared": "missing",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:07:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "8ff95af2c5e01433d43add95cac0e7e4da54a6a743fb26966c0cd6db7f366083",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": null,
+          "missing_values": true,
+          "declared": "missing",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:07:30.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "d8fee6f8473d5b6e0c67bfcdbe3e45b6135d160970740f5eef2ba24df90d4af2",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": null,
+          "missing_values": true,
+          "declared": "missing",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:08:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "992564aae7a8a565cb45cf19cef6f1c21bd98e1b01ab14bc1eba836c23dc2690",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": null,
+          "missing_values": true,
+          "declared": "missing",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:08:30.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "1a4acb308d8bd72e8a9ac676987dd3a080a80f879eea527f5fe51430ddc1b3bc",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": null,
+          "missing_values": true,
+          "declared": "missing",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:09:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "b04e8daa12d85e81253ff77ec7006dd3b26de655a60a5a3be120fa3d65fd1021",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": null,
+          "missing_values": true,
+          "declared": "missing",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:09:30.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "d95401a2690420bbc5afb76e97e6019735b494eccffc452dbebdd9622cd19fc3",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": null,
+          "missing_values": true,
+          "declared": "missing",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-sensor-dropout",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:10:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "0fc47d055919b57f505e77601d9df0ffba14f340f7842472e2f03dbdffe207f7",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "MISSING_VALUE_OR_REFERENCE",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": null,
+          "missing_values": true,
+          "declared": "missing",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:00:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "f8415a002c7d2bc3b1bd5d386a27e1145d248ca96a9aa6a46d18918e93eed161",
+        "ewma": {
+          "status": "KNOWN",
+          "review": false,
+          "score": 0.04724729407457422
+        },
+        "isolation_forest": {
+          "status": "KNOWN",
+          "review": false,
+          "score": 0.4506528159850814
+        },
+        "tier_a": {
+          "status": "KNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": false,
+          "missing_values": false,
+          "declared": "good",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [
+          {
+            "metric": "hrv",
+            "value": 55.77,
+            "unit": "ms",
+            "center": 54.72382776739926,
+            "scale": 5.535619833325735,
+            "deviation": 0.18898917629829687,
+            "source_at": "2026-11-12T11:00:00.000Z",
+            "reference_hash": "626fd5e1675585cc03fb155ec53b6f02284ba77bb05d618a0635ec0f450fa89e"
+          },
+          {
+            "metric": "reaction_time",
+            "value": 262.14,
+            "unit": "ms",
+            "center": 259.2017873267704,
+            "scale": 20.91808017927163,
+            "deviation": 0.14046282680095878,
+            "source_at": "2026-11-12T11:00:00.000Z",
+            "reference_hash": "626fd5e1675585cc03fb155ec53b6f02284ba77bb05d618a0635ec0f450fa89e"
+          },
+          {
+            "metric": "respiratory_rate",
+            "value": 14.07,
+            "unit": "/min",
+            "center": 13.893852954209255,
+            "scale": 1.4934909162596641,
+            "deviation": 0.11794316515288406,
+            "source_at": "2026-11-12T11:00:00.000Z",
+            "reference_hash": "626fd5e1675585cc03fb155ec53b6f02284ba77bb05d618a0635ec0f450fa89e"
+          }
+        ],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:00:30.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "3f3f0953d9c5c60225ce3806c7c77d9fc398f1bf98ee7f83816bf09045456032",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": true,
+          "missing_values": false,
+          "declared": "suspect",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:01:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "193c8d1ccd6af1d33d1280bf69bfd4b8bf8c57b4331efdd7d5a65de88b04bc88",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": true,
+          "missing_values": false,
+          "declared": "suspect",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:01:30.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "129733947fb98a4d96346be2e3ed89e2f2936d8c59d59cec279fe4183dc24e7e",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": true,
+          "missing_values": false,
+          "declared": "suspect",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:02:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "7d8be2ac675b0223eb839042b3dd1c6796dea7e713b81dac361ce6ec807b55f4",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": true,
+          "missing_values": false,
+          "declared": "suspect",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:02:30.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "45f01e0f75e870f4c41f5b157b133ba82bd6a3aea5990f0336c029a34de09417",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": true,
+          "missing_values": false,
+          "declared": "suspect",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:03:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "4d2e70449b9ae84a57ddf5c1743ae66f5e5aa26eff93f15f12ff2b6b3de7d27e",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": true,
+          "missing_values": false,
+          "declared": "suspect",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:03:30.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "d2be84d8e251d0c08b97635593bbf0cd087b0d1aa19c35fc51e0735b48f1c6f5",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": true,
+          "missing_values": false,
+          "declared": "suspect",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:04:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "b015650122c39eaa63ac46d01642082ff634b27a9548d526e13a633166b9911f",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": true,
+          "missing_values": false,
+          "declared": "suspect",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:04:30.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "dc1bac5de0bb0af248ba56ee2d2f548abab9f267f8e4d84ebebc24146bcf10ae",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": true,
+          "missing_values": false,
+          "declared": "suspect",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:05:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "dc8c452592b49d966c82c8398f043324005654471feb9cde094f6ad049ebbc2e",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": true,
+          "missing_values": false,
+          "declared": "suspect",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:05:30.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "3bb93a149e2d0e4d2c1dbba5410589591e1e2c00885ef9333fe2a692f6c3c489",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": true,
+          "missing_values": false,
+          "declared": "suspect",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:06:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "82b11764988a8057ed9216922af8bfe9555ce5f7a360c20fa62182339a3e1be4",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": true,
+          "missing_values": false,
+          "declared": "suspect",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:06:30.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "09dd7023b27132121b5dbe0d67c7e0d2bd80afc1cbbef04c3822b2d4c13e3539",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": true,
+          "missing_values": false,
+          "declared": "suspect",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:07:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "9b309147be192a4b8cb2d47dfd3bc4a7429d75d5b03b00227d047431342fff8d",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": true,
+          "missing_values": false,
+          "declared": "suspect",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:07:30.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "f74ab3000458c913edaf03ec9ee57d7fe1cd42511d393537f67fcb749800cf8b",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": true,
+          "missing_values": false,
+          "declared": "suspect",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:08:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "e2894a3758634da3d32889f38ba6f6be02a0e68cbc4e6f1244ea54b246923830",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": true,
+          "missing_values": false,
+          "declared": "suspect",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:08:30.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "5c7f2af8b4cbf760243c22f35901d3e79185ea6b95dfcc950047f190f7445e01",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": true,
+          "missing_values": false,
+          "declared": "suspect",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:09:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "f672fe325e2cfbf32382f65bf2baadd50d0851e3166ab64c327ad810124962e8",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": true,
+          "missing_values": false,
+          "declared": "suspect",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:09:30.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "dd5811958506668a9f287e0d33826b1b406864bdffabb220f75013b8db400ab1",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": true,
+          "missing_values": false,
+          "declared": "suspect",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      },
+      {
+        "unit_id": "validation-CREW-03-contradictory-sensors",
+        "crew_id": "CREW-03",
+        "at": "2026-11-12T11:10:00.000Z",
+        "known_at": "2026-11-14T11:00:00.000Z",
+        "source_hash": "dc55a594764e4250ab23ccacad82f3ca67e952fd65a3997a447f2bcdb65eae51",
+        "ewma": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "isolation_forest": {
+          "status": "UNKNOWN",
+          "reason": "UNVERIFIED_QUALITY",
+          "review": false
+        },
+        "tier_a": {
+          "status": "UNKNOWN",
+          "review": false,
+          "score": null
+        },
+        "quality": {
+          "numeric_artifact": true,
+          "missing_values": false,
+          "declared": "suspect",
+          "interpretation": "Narrow numeric consistency heuristic; not a validated artifact classifier"
+        },
+        "contributors": [],
+        "clinical_diagnosis": null
+      }
+    ],
+    "dataset": {
+      "hash": "b87771852b63659acf55f24f1d84c4df043cbc7b1fa587facd368a1c5fa964ea",
+      "frames": 830,
+      "partitions": [
+        {
+          "id": "train-CREW-01-nominal",
+          "partition": "train",
+          "crew_id": "CREW-01",
+          "start_at": "2026-11-11T11:00:00.000Z",
+          "end_at": "2026-11-11T11:10:00.000Z"
+        },
+        {
+          "id": "train-CREW-01-post-exercise",
+          "partition": "train",
+          "crew_id": "CREW-01",
+          "start_at": "2026-11-11T11:00:00.000Z",
+          "end_at": "2026-11-11T11:10:00.000Z"
+        },
+        {
+          "id": "train-CREW-02-nominal",
+          "partition": "train",
+          "crew_id": "CREW-02",
+          "start_at": "2026-11-11T11:00:00.000Z",
+          "end_at": "2026-11-11T11:10:00.000Z"
+        },
+        {
+          "id": "train-CREW-02-post-exercise",
+          "partition": "train",
+          "crew_id": "CREW-02",
+          "start_at": "2026-11-11T11:00:00.000Z",
+          "end_at": "2026-11-11T11:10:00.000Z"
+        },
+        {
+          "id": "validation-CREW-03-sensor-dropout",
+          "partition": "validation",
+          "crew_id": "CREW-03",
+          "start_at": "2026-11-12T11:00:00.000Z",
+          "end_at": "2026-11-12T11:10:00.000Z"
+        },
+        {
+          "id": "validation-CREW-03-contradictory-sensors",
+          "partition": "validation",
+          "crew_id": "CREW-03",
+          "start_at": "2026-11-12T11:00:00.000Z",
+          "end_at": "2026-11-12T11:10:00.000Z"
+        },
+        {
+          "id": "validation-CREW-04-sensor-dropout",
+          "partition": "validation",
+          "crew_id": "CREW-04",
+          "start_at": "2026-11-12T11:00:00.000Z",
+          "end_at": "2026-11-12T11:10:00.000Z"
+        },
+        {
+          "id": "validation-CREW-04-contradictory-sensors",
+          "partition": "validation",
+          "crew_id": "CREW-04",
+          "start_at": "2026-11-12T11:00:00.000Z",
+          "end_at": "2026-11-12T11:10:00.000Z"
+        },
+        {
+          "id": "test-CREW-05-cardiorespiratory-drift",
+          "partition": "test",
+          "crew_id": "CREW-05",
+          "start_at": "2026-11-13T11:00:00.000Z",
+          "end_at": "2026-11-13T11:10:00.000Z"
+        },
+        {
+          "id": "test-CREW-05-controlled-hr-rise",
+          "partition": "test",
+          "crew_id": "CREW-05",
+          "start_at": "2026-11-13T11:00:00.000Z",
+          "end_at": "2026-11-13T11:10:00.000Z"
+        },
+        {
+          "id": "test-CREW-06-cardiorespiratory-drift",
+          "partition": "test",
+          "crew_id": "CREW-06",
+          "start_at": "2026-11-13T11:00:00.000Z",
+          "end_at": "2026-11-13T11:10:00.000Z"
+        },
+        {
+          "id": "test-CREW-06-controlled-hr-rise",
+          "partition": "test",
+          "crew_id": "CREW-06",
+          "start_at": "2026-11-13T11:00:00.000Z",
+          "end_at": "2026-11-13T11:10:00.000Z"
+        },
+        {
+          "id": "seen_robustness-CREW-05-nominal",
+          "partition": "seen_robustness",
+          "crew_id": "CREW-05",
+          "start_at": "2026-11-13T11:00:00.000Z",
+          "end_at": "2026-11-14T11:00:00.000Z"
+        },
+        {
+          "id": "seen_robustness-CREW-06-nominal",
+          "partition": "seen_robustness",
+          "crew_id": "CREW-06",
+          "start_at": "2026-11-13T11:00:00.000Z",
+          "end_at": "2026-11-14T11:00:00.000Z"
+        }
+      ],
+      "independence": "MECHANICALLY_DISJOINT_MAIN_PARTITIONS; seen robustness separately identified; no biological or scientific independence"
+    },
+    "temporal_extension": {
+      "status": "NOT_JUSTIFIED",
+      "reason": "No reviewed public-signal/generalization evidence or demonstrated requirement for a temporal model; simpler methods measured first."
+    },
+    "downstream": {
+      "schema_version": "astra.n11.shadow-evidence.v1",
+      "N12": "INACTIVE",
+      "N16": "INACTIVE",
+      "may_create_N02_alert": false
+    },
+    "independent_scientific_review": "PENDING",
+    "clinical_conclusion": null
+  },
+  "last_error": null,
+  "recovered_from_saved_result": true,
+  "replay_executions": 0,
+  "synthetic": true
+}

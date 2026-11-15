@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "reason": null,
+  "exit_code": 0,
+  "elapsed_ms": 3012,
+  "samples": 6,
+  "disk_final": {
+    "apparent": 388747406,
+    "allocated": 393633792,
+    "includes_reused_runtime_and_original_archives": true
+  },
+  "max_disk_sampled_bytes": 393621504,
+  "per_pid_rss_highwater_bytes": {
+    "23305": 2396160,
+    "23306": 1425408,
+    "23307": 27054080
+  },
+  "aggregate_cgroup_peak_bytes": 18272256,
+  "observer_peak_rss_bytes": 620953600
+}

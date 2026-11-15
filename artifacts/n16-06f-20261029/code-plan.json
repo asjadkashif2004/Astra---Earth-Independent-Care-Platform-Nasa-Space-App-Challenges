@@ -1,0 +1,34 @@
+{
+  "task": "N16-06F",
+  "mode": "n16-06f-single-select-v1",
+  "maximum_startups": 1,
+  "call": {
+    "tool": "get_current_vitals",
+    "crew_id": "CREW-03",
+    "metrics": [
+      "heart_rate"
+    ]
+  },
+  "code_pins": {
+    "scripts/n16-single-select-qualification.mjs": "c6f93ec3e5fe24085ab3707c5fc1b2ed707009120f62854e69814be03543e7a6",
+    "services/agent/designated-worker.mjs": "b41c4ecec39ac40039e32e698549c495cec2654c0fce8edde22ec32ecf07a21e",
+    "services/agent/designated-source.mjs": "d5383c10610c777d500254ddcde3113d69e21d1451d9fe64df9873ee2695bb2f",
+    "services/agent/single-select-contract.mjs": "23ea39448f2e6d4476624ec6a29ab6b52e8642be3ab8fafc68e9b5a112c36fde",
+    "services/agent/single-select-source.mjs": "c758e38ffe26eebf6301d0f919cc50a44d0f6414cf6894dd2acc3e694e0cd7d9",
+    "services/agent/single-select-runtime.mjs": "e9bbacc8a06bc4caaa1e1bde501bebd09dc5edcb48583bdd4afff3bfd177aed4",
+    "services/agent/designated-contract.mjs": "6a8beeae2ce4687b216e15ced65adeef8faab3b308816b7c93f45aedbdecd9c5",
+    "services/agent/sqlite-fixture-contract.mjs": "a5f496d16326fda1df8d9eeec0d8a015970a8854023257f659b8df464e6b0d1c",
+    "services/agent/read-contract.mjs": "1b7ce5f7d1362eb776d2eb9e4aede141b99c4fc0729c0b02c47f8a2156b071f6",
+    "services/agent/read-context.mjs": "fa643178b9920feb186f4762ffe6da54041813cf4f71f84ed54b34568a769f44",
+    "services/agent/execution-trace.mjs": "0f1c8dd816c6641c5b6581e823b006a09663600a394b2c75a569d04fa39ac138",
+    "services/agent/containment-diagnostics.mjs": "58bfbb12dc5c1ee1be5057acc26b5d7ff2d04c640e63284ffbbeccb0ba00de7b",
+    "services/agent/qualification-batch.mjs": "ae1cacad6b5da3073b24f569cb4cdf9251128c36efbf560b87430ccd9e938bc5",
+    "services/agent/dependency-pins.mjs": "57b1f5988946314ed5b1bd30a36f01b15e0c597896aea905ae938f23cfafc374",
+    "packages/contracts.mjs": "d5f3809213fc95bd77a7831006a557b2220af249a5ff3be36df6d9ebf57eef18",
+    "docs/N16_05_SOURCE_SPEC.json": "f28e5829bb4f7354a2ab6c6202efc23a0985d1dcb6ac401522f4716fb62a1669",
+    "tests/n16-single-select.test.mjs": "5a121c88b48cc379b3266b38040dee778b6ec9c0c0312ea038e4726fa3e55251",
+    "tests/n16-containment-qa.test.mjs": "c1f083aec8b5d4dd06e1f4526eed1e6b1e29402bc0de48bdaf5b0e225a822f92",
+    "tests/n16-dependency-pins.test.mjs": "e7500dbb8edaad5fad55c1243356aa979117c55855a86ec2a1c98031f05fcbfc"
+  },
+  "requirements": "Exactly one observation SELECT, no setup/metadata/transaction SQL; equivalent safeguards limited to the byte-pinned sealed rollback-journal synthetic archive."
+}

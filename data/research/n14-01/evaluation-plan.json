@@ -1,0 +1,25 @@
+{
+  "schema_version": "astra.n14.frozen-evaluation.v1",
+  "frozen_before_ranking": true,
+  "packet_sha256": "aa93cf5062b03b87dbd57b96e756965fe90f9883854d456167462269c34ed6d4",
+  "model_revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+  "family_policy": "Group shared core claims, direct variants and shared positive evidence. Broad topic overlap alone does not make all sleep research one family. This is held-out queries, not held-out publications or populations.",
+  "families": [
+    {"id":"sleep-loss-observations", "set":"tuning", "cases":["S01","S02","S03","P01","U07","U08"]},
+    {"id":"circadian-phase-background", "set":"holdout", "cases":["S05","S12","S13","P02","U01"]},
+    {"id":"workload-performance", "set":"tuning", "cases":["S06","S07","S08","S09","S14","S15","P04","U02"]},
+    {"id":"inertia-naps-clearance", "set":"holdout", "cases":["S04","S10","S11","S16","P08","U05"]},
+    {"id":"personalization", "set":"tuning", "cases":["S18","P05"]},
+    {"id":"countermeasure-orders", "set":"tuning", "cases":["P06","U04"]},
+    {"id":"measurement-agenda", "set":"tuning", "cases":["S17"]},
+    {"id":"sleep-accommodation", "set":"holdout", "cases":["S19","S20","S21","P03"]},
+    {"id":"lighting-design", "set":"tuning", "cases":["S22","S23","S24","P07","U03"]},
+    {"id":"complete-consensus", "set":"holdout", "cases":["U06"]}
+  ],
+  "scoring": {"lexical_topic_weight":3,"lexical_content_weight":1,"lexical_minimum":3,"semantic_minimum":0,"unit_deduplication":"maximum window score; stable unit ID tie break","tuning_grid":"singleton fixed settings; no holdout-driven changes"},
+  "claim_policy":"Only literal original-bound source text with role and qualifiers; no cosine entailment. Arbitrary paraphrases and clinical/excluded requests abstain.",
+  "recall_denominator":"Each supported/partial case averages recall of its provisional referenced units; unsupported cases excluded from recall, evaluated for abstention.",
+  "benefit_gate":"holdout macro recall@3 strictly greater, recall@5 no lower; otherwise no demonstrated benefit",
+  "independent_review":"pending for all40; labels are provisional technical expectations",
+  "numerical_tolerances":{"repeat_max_abs":0.000001,"norm_error":0.00001,"independent_same_graph_max_abs":0.0001,"independent_same_graph_min_cosine":0.99999}
+}

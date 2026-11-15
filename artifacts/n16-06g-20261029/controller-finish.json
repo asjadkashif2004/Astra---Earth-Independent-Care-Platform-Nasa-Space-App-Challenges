@@ -1,0 +1,8 @@
+{
+  "task": "N16-06G",
+  "controller_invocations": 1,
+  "retry": false,
+  "outer_timeout": false,
+  "exit_code": 0,
+  "controller_wall_seconds": 1.67241408100017
+}

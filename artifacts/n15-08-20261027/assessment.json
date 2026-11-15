@@ -1,0 +1,34 @@
+{
+  "task": "N15-08",
+  "outcome": "BLOCKED_QA",
+  "live_cases": {
+    "supported": "NOT_RUN",
+    "unsupported": "NOT_RUN"
+  },
+  "prompt_policy": "astra.n15-08.prompt.v1",
+  "system_sha256": "ce7dcbc0ca55c768e9f53de39fb9dbde9d737af33f4141b9fd483e43ba4a60d7",
+  "candidate_sha256": "eeaa137cdf237561a1de8a3fd28859955204841b852b20915538ae061709f401",
+  "prompt_contract_tests": {
+    "passed": 78,
+    "failed": 0
+  },
+  "additional_controller_tests": {
+    "passed": 0,
+    "failed": 6,
+    "cause": "mock timer lacks unref()"
+  },
+  "total_focused_tests": 84,
+  "native_commands": 0,
+  "model_loading": 0,
+  "live_generations": 0,
+  "downloads": 0,
+  "network": 0,
+  "native_timing_RSS_tokens": "NOT_MEASURED",
+  "discrimination": "NOT_EVALUATED; previous B baseline unchanged",
+  "returned_quotations": 0,
+  "returned_citations": 0,
+  "positive_live_quotation_gate": "OPEN",
+  "N15": "In Progress",
+  "N16": "Not Started",
+  "resource_authority": "expired at blocked delivery"
+}

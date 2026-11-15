@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "new_focused_tests": 12,
+  "command": "PYTHONDONTWRITEBYTECODE=1 python3 tests/n15_backend_config_test.py -v",
+  "execution": "Completed once before native execution; observed 12/12 passing, 0 failures.",
+  "controls": [
+    "regular pinned file ACCEPT",
+    "original directory setting REJECT",
+    "noncanonical path REJECT",
+    "source directory REJECT",
+    "source symlink REJECT",
+    "missing source fails closed",
+    "corrupted file REJECT",
+    "false manifest digest REJECT",
+    "absent/duplicate whitelist REJECT",
+    "absent/duplicate dependency REJECT",
+    "wrong ELF identity REJECT",
+    "wrong backend name REJECT"
+  ],
+  "syntax_parsed": [
+    "scripts/n15_backend_config.py",
+    "tests/n15_backend_config_test.py",
+    "common-source.txt",
+    "infer-source.txt"
+  ],
+  "accounting_QA": "Prior 30/30 result reused; unchanged helper SHA checked by controller, no repeated suite.",
+  "native_commands_in_tests": 0
+}

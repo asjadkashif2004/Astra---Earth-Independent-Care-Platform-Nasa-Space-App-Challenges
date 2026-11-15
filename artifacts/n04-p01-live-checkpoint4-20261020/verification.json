@@ -1,0 +1,42 @@
+{
+  "at": "2026-10-19T21:37:37.822773+00:00",
+  "scope": "Post-batch source, historical evidence and accepted-evidence fingerprint comparison;no tests rerun",
+  "source_files_checked": 90,
+  "source_mismatches": [],
+  "historical_files_checked": 717,
+  "historical_mismatches": [],
+  "input_fixture_unchanged": true,
+  "new_accepted_evidence_mismatches": [],
+  "accepted_before": 9,
+  "newly_accepted": [
+    "1x-crew-performance-1",
+    "1x-crew-performance-2",
+    "1x-crew-performance-3",
+    "30x-overview-standard-1"
+  ],
+  "total_accepted": 13,
+  "remaining_ids": [
+    "30x-overview-standard-2",
+    "30x-overview-standard-3",
+    "30x-overview-performance-1",
+    "30x-overview-performance-2",
+    "30x-overview-performance-3",
+    "30x-crew-standard-1",
+    "30x-crew-standard-2",
+    "30x-crew-standard-3",
+    "30x-crew-performance-1",
+    "30x-crew-performance-2",
+    "30x-crew-performance-3"
+  ],
+  "preflight_sha256": "50f76fecee324fb1d6f459499b4a2b778470f5897602e3b3f5f7ae063af71015",
+  "outcome_sha256": {
+    "1x-crew-performance-1": "0506009ce5eca7a713a188861c242e6f0f1f078f7f193abf53e93300458b89aa",
+    "1x-crew-performance-2": "7b00a32ebd5478ad552e02e1190b91a668a1f0b35134401747aeb5387d6ede46",
+    "1x-crew-performance-3": "81a697d4915611a1c7fe5fba90f8b8066c776b55f9e0baa695208739d7297a69",
+    "30x-overview-standard-1": "c26f43740966ccb98b459ec465e2dbea1f76ac0a1036c079b406f435fcec4bc7"
+  },
+  "n03": "Partial",
+  "n04": "Partial",
+  "ac20": "Open / Unverified",
+  "final_visual_approval": "Pending;provisional visual acceptance/freeze preserved"
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "astra.section-curation-plan.v1",
+  "task": "N13-02",
+  "governance": "DE-N07-N13-01-N13-02",
+  "base_corpus_sha256": "9bb1fb5fc112716c16fdb8e3e6a3c5a968b01db5e11b2f5e694f54af5d16b6b7",
+  "reviewed_on": "2026-10-24",
+  "review_method": "ASTRA engineering assistant targeted original-text review;not independent human medical approval or rendered-PDF inspection",
+  "independent_human_review": {"status":"pending","reviewer":null,"approval_evidence":null},
+  "sections": [
+    {"key":"hrp-summary","document_id":"nasa-hrp-sleep-2016","title":"II. Executive summary","context":"HRP2016 risk synthesis","start":{"page":4,"quote":"II. EXECUTIVE SUMMARY"},"end":{"page":6,"quote":"III. INTRODUCTION"}},
+    {"key":"hrp-flight-sleep","document_id":"nasa-hrp-sleep-2016","title":"IV.A.1 Occurrence of sleep loss during spaceflight","context":"IV.Evidence / A.Spaceflight Evidence","start":{"page":10,"quote":"1. Occurrence of Sleep Loss During Spaceflight"},"end":{"page":13,"quote":"2. Occurrence of Sleep Inertia During Spaceflight"}},
+    {"key":"hrp-flight-inertia","document_id":"nasa-hrp-sleep-2016","title":"IV.A.2 Sleep inertia during spaceflight","context":"IV.Evidence / A.Spaceflight Evidence","start":{"page":13,"quote":"2. Occurrence of Sleep Inertia During Spaceflight"},"end":{"page":13,"quote":"3. Occurrence of Circadian Desynchronization During Spaceflight"}},
+    {"key":"hrp-flight-circadian","document_id":"nasa-hrp-sleep-2016","title":"IV.A.3 Circadian desynchronization during spaceflight","context":"IV.Evidence / A.Spaceflight Evidence","start":{"page":13,"quote":"3. Occurrence of Circadian Desynchronization During Spaceflight"},"end":{"page":16,"quote":"4. Occurrence of Work Overload During Spaceflight"}},
+    {"key":"hrp-flight-workload","document_id":"nasa-hrp-sleep-2016","title":"IV.A.4 Work overload during spaceflight","context":"IV.Evidence / A.Spaceflight Evidence;qualitative observations are not universal causal estimates","start":{"page":16,"quote":"4. Occurrence of Work Overload During Spaceflight"},"end":{"page":17,"quote":"5. Occurrence of reduced sleep quality arising from sleep loss, circadian"}},
+    {"key":"hrp-flight-performance","document_id":"nasa-hrp-sleep-2016","title":"IV.A source-numbered 6:alertness/performance","context":"IV.Evidence / A.Spaceflight Evidence;retain duplicate source numbering rather than silently renumbering","start":{"page":19,"quote":"6. Occurrence of reduced alertness an d performance arising from sleep loss, circadian"},"end":{"page":22,"quote":"6. Sex differences in response to conditions of sleep loss, circadian desynchronization,"}},
+    {"key":"hrp-ground-sleep","document_id":"nasa-hrp-sleep-2016","title":"IV.B.1 Ground-based sleep-loss evidence","context":"IV.Evidence / B.Ground-based evidence;Earth populations are not astronaut-specific validation","start":{"page":24,"quote":"1. Sleep loss"},"end":{"page":30,"quote":"2. Sleep Inertia"}},
+    {"key":"hrp-ground-inertia","document_id":"nasa-hrp-sleep-2016","title":"IV.B.2 Ground-based sleep inertia","context":"IV.Evidence / B.Ground-based evidence","start":{"page":30,"quote":"2. Sleep Inertia"},"end":{"page":31,"quote":"3. Circadian Desynchronization"}},
+    {"key":"hrp-ground-circadian","document_id":"nasa-hrp-sleep-2016","title":"IV.B.3 Ground-based circadian desynchronization","context":"IV.Evidence / B.Ground-based evidence","start":{"page":31,"quote":"3. Circadian Desynchronization"},"end":{"page":34,"quote":"4. Work Overload"}},
+    {"key":"hrp-ground-workload","document_id":"nasa-hrp-sleep-2016","title":"IV.B.4 Ground-based workload","context":"IV.Evidence / B.Ground-based evidence","start":{"page":34,"quote":"4. Work Overload"},"end":{"page":35,"quote":"5. Ground-based operational evidence describing reduced performance under conditions"}},
+    {"key":"hrp-scheduling","document_id":"nasa-hrp-sleep-2016","title":"IV.B.6.C Scheduling countermeasures","context":"Ground-based countermeasure research,not an individual schedule prescription","start":{"page":49,"quote":"C. Scheduling countermeasures"},"end":{"page":51,"quote":"V. COMPUTER-BASED MODELING AND SIMULATION"}},
+    {"key":"hrp-gaps","document_id":"nasa-hrp-sleep-2016","title":"VII. Gaps","context":"Research agenda as described in the2016 publication","start":{"page":57,"quote":"VII. GAPS"},"end":{"page":58,"quote":"VIII. CONCLUSION"}},
+    {"key":"hrp-conclusion","document_id":"nasa-hrp-sleep-2016","title":"VIII. Conclusion","context":"Dated synthesis and remaining countermeasure uncertainty","start":{"page":58,"quote":"VIII. CONCLUSION"},"end":{"page":60,"quote":"IX. REFERENCES"}},
+    {"key":"std-sleep","document_id":"nasa-std-3001-v2-f","title":"7.9.1 Sleep Accommodation","context":"NASA system-design requirement and separate rationale","start":{"page":134,"quote":"7.9.1 Sleep Accommodation"},"end":{"page":134,"quote":"7.9.2  Behavioral Health and Privacy"}},
+    {"key":"std-privacy","document_id":"nasa-std-3001-v2-f","title":"7.9.2 Behavioral Health and Privacy","context":"NASA system-design requirement and rationale;not ASTRA privacy certification","start":{"page":134,"quote":"7.9.2  Behavioral Health and Privacy"},"end":{"page":135,"quote":"7.9.3 Partial-g Sleeping"}},
+    {"key":"std-partial-g","document_id":"nasa-std-3001-v2-f","title":"7.9.3 Partial-g Sleeping","context":"Gravity-dependent sleep accommodation design","start":{"page":135,"quote":"7.9.3 Partial-g Sleeping"},"end":{"page":135,"quote":"7.10 Clothing"}},
+    {"key":"std-window","document_id":"nasa-std-3001-v2-f","title":"8.6.3 Window Light Blocking","context":"Hardware-design requirement;not an individual exposure measurement","start":{"page":151,"quote":"8.6.3 Window Light Blocking"},"end":{"page":151,"quote":"8.6.4 Window Accessory Replacement/Operation without Tools"}},
+    {"key":"std-attenuation","document_id":"nasa-std-3001-v2-f","title":"8.7.2 Environmental Lighting Attenuation","context":"Separate from the preceding illuminance table and numbered table notes","start":{"page":152,"quote":"8.7.2  Environmental Lighting Attenuation"},"end":{"page":153,"quote":"8.7.3  Task-Specific Exterior Lighting"}},
+    {"key":"std-circadian","document_id":"nasa-std-3001-v2-f","title":"8.7.8 Physiological Effects of Light (Circadian Entrainment)","context":"Requirement V2 8055,rationale,table and notes have distinct roles","start":{"page":155,"quote":"8.7.8 Physiological Effects of Light (Circadian Entrainment)"},"end":{"page":156,"quote":"8.7.9 Lighting Controls"}}
+  ],
+  "rejected_heading_candidates": [
+    {"document_id":"nasa-hrp-sleep-2016","page":11,"prefix":"64  Actigraphy II","reason":"A sample-count/table entry,not an anatomical/scientific section heading."},
+    {"document_id":"nasa-hrp-sleep-2016","page":25,"prefix":"31 individuals (18F)","reason":"Study participant-count prose,not a new section;retain under ground sleep-loss evidence."},
+    {"document_id":"nasa-hrp-sleep-2016","page":32,"prefix":"12 individuals were evaluated","reason":"Study participant-count prose,not a new section;retain ground circadian context."},
+    {"document_id":"nasa-std-3001-v2-f","page":156,"prefix":"1. Melanopic EDI","reason":"Numbered table note,not a section heading."},
+    {"document_id":"nasa-std-3001-v2-f","page":156,"prefix":"2. During all waking hours","reason":"Numbered table note,not a section heading."},
+    {"document_id":"nasa-std-3001-v2-f","page":156,"prefix":"3. During scheduled pre-sleep","reason":"Numbered table note,not a section heading."},
+    {"document_id":"nasa-std-3001-v2-f","page":156,"prefix":"4. Melanopic Equivalent","reason":"Numbered table definition,not a section heading."},
+    {"document_id":"nasa-std-3001-v2-f","page":156,"prefix":"5. CIE Position Statement","reason":"Table reference,not a section heading or acquired independent source."},
+    {"document_id":"nasa-std-3001-v2-f","page":156,"prefix":"6. Brown, T.; Brainard","reason":"Table bibliographic note,not a section heading or an acquired third publication."}
+  ],
+  "ambiguities": [
+    {"id":"lighting-table","document_id":"nasa-std-3001-v2-f","page":156,"quote":"Table 8.7-2","status":"numeric_table_mapping_unverified","explanation":"Preserve cells/glyphs/notes;do not infer reliable row-column relationships,personal exposure or a clinical light prescription from plain extraction."},
+    {"id":"performance-table","document_id":"nasa-hrp-sleep-2016","page":20,"quote":"20","status":"figure_or_table_semantics_unverified","explanation":"Boundary is known within the performance section;individual study-table row/column meanings are not validated by this task."},
+    {"id":"duplicate-numbering","document_id":"nasa-hrp-sleep-2016","page":22,"quote":"6. Sex differences","status":"source_numbering_retained","explanation":"The report repeats source number6 for a different subsection;use original/page-bound identities and retain the source numbering rather than guessing a corrected number."}
+  ]
+}

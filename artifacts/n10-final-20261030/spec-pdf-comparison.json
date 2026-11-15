@@ -1,0 +1,83 @@
+{
+  "source": "research/ASTRA_Deep_Research.pdf",
+  "sha256": "ff83bd6e4e9e5764bf4f13ca3792cc1509f667a8dcec579f6b4f6fb9eb05e592",
+  "total_pages": 38,
+  "inspected_pages": [
+    {
+      "physical_page": 1,
+      "width": 612.0,
+      "height": 792.0,
+      "relevant_text_lines": []
+    },
+    {
+      "physical_page": 2,
+      "width": 612.0,
+      "height": 792.0,
+      "relevant_text_lines": [
+        "Short-horizon risk/trend forecasts with uncertainty, sleep/fatigue and cognitive",
+        "effects, bone changes, behavioral-health issues, and inadequate sleep or irregular schedules. "
+      ]
+    },
+    {
+      "physical_page": 3,
+      "width": 612.0,
+      "height": 792.0,
+      "relevant_text_lines": [
+        "Sleep/circadian",
+        "Sleep duration, stage",
+        "Sleep-EDF; NASA",
+        "Sleep/fatigue trend and",
+        "Cognitive/",
+        "cognitive spaceflight",
+        "Exercise/",
+        "Exercise session,",
+        "Countermeasure/"
+      ]
+    },
+    {
+      "physical_page": 4,
+      "width": 612.0,
+      "height": 792.0,
+      "relevant_text_lines": [
+        "Recent spaceflight research also supports including cognition while emphasizing uncertainty. A 2026 study",
+        "ASTRA should therefore offer short reaction-time/cognitive tests as personal longitudinal measurements,"
+      ]
+    },
+    {
+      "physical_page": 5,
+      "width": 612.0,
+      "height": 792.0,
+      "relevant_text_lines": [
+        "NASA-STD-3001 Volume 2 Human factors, interfaces and environmental-health context. ",
+        "PhysioNet Sleep-EDF Expanded Sleep recordings and expert sleep-stage annotations. ",
+        "study Cognitive/neurophysiological research context. "
+      ]
+    },
+    {
+      "physical_page": 6,
+      "width": 612.0,
+      "height": 792.0,
+      "relevant_text_lines": [
+        "Renderer"
+      ]
+    },
+    {
+      "physical_page": 7,
+      "width": 612.0,
+      "height": 792.0,
+      "relevant_text_lines": [
+        "\"scenario_id\": \"sleep-debt-cardio-drift\","
+      ]
+    },
+    {
+      "physical_page": 8,
+      "width": 612.0,
+      "height": 792.0,
+      "relevant_text_lines": [
+        "\"metric\": \"sleep_duration\",",
+        "\"scenario_id\": \"sleep-debt-cardio-drift\""
+      ]
+    }
+  ],
+  "comparison": "Source PDF retains sleep/cognitive/exercise domain separation and measurement-driven interface context. Existing ASTRA UI patterns and latest owner dark/blue directive govern the N10 section. No medical review, external-source verification or pixel-exact PDF rendering is claimed."
+}

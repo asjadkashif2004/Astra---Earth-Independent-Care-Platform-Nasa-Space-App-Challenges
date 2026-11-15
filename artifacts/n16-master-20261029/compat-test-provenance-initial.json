@@ -1,0 +1,37 @@
+[
+  {
+    "original": "tests/n16-single-select.test.mjs",
+    "original_sha256": "f8e74657a05be4af291b71469e3accb3e255a9f6315c0b7da797fad5a9987cf1",
+    "staged": "artifacts/n16-master-20261029/compat/n16-single-select.test.mjs",
+    "staged_sha256": "a1e6edff86868ec99a3bab3eac7540da4c52c6970ffeccb231d048833a393814",
+    "changes": "Import/base URI resolution and QA output destinations only; assertion bodies and production files unchanged."
+  },
+  {
+    "original": "tests/n16-single-quality.test.mjs",
+    "original_sha256": "ba5a4ee44e4075a084e0355ba665c1f3d5eeef9511daee5f8e926587fc333796",
+    "staged": "artifacts/n16-master-20261029/compat/n16-single-quality.test.mjs",
+    "staged_sha256": "0673785738d6445fb6f2565084b6034e8d24e7ef6cc6c0a9de41eeab954d88ca",
+    "changes": "Import/base URI resolution and QA output destinations only; assertion bodies and production files unchanged."
+  },
+  {
+    "original": "tests/n16-containment-qa.test.mjs",
+    "original_sha256": "c1f083aec8b5d4dd06e1f4526eed1e6b1e29402bc0de48bdaf5b0e225a822f92",
+    "staged": "artifacts/n16-master-20261029/compat/n16-containment-qa.test.mjs",
+    "staged_sha256": "dfcebb691bea58308d633bd6961094b24b604b1b4a0d0523ee7c0b075ee947e5",
+    "changes": "Import/base URI resolution and QA output destinations only; assertion bodies and production files unchanged."
+  },
+  {
+    "original": "tests/n16-dependency-pins.test.mjs",
+    "original_sha256": "e7500dbb8edaad5fad55c1243356aa979117c55855a86ec2a1c98031f05fcbfc",
+    "staged": "artifacts/n16-master-20261029/compat/n16-dependency-pins.test.mjs",
+    "staged_sha256": "433f13de59b1503844cd17871b891b29ace9a3bcf1dbd04bbfc58d2c06e955c3",
+    "changes": "Import/base URI resolution and QA output destinations only; assertion bodies and production files unchanged."
+  },
+  {
+    "original": "tests/n16-resource-journal.test.mjs",
+    "original_sha256": "faff730a3414cf9eee7d13038807d691f2fc6f4c8033347a5c1dc2ab8af025b8",
+    "staged": "artifacts/n16-master-20261029/compat/n16-resource-journal.test.mjs",
+    "staged_sha256": "4e8198f27edbcff6da2b85d936f3f24bf92d71b782cd401eb63339f1351d333e",
+    "changes": "Import/base URI resolution and QA output destinations only; assertion bodies and production files unchanged."
+  }
+]

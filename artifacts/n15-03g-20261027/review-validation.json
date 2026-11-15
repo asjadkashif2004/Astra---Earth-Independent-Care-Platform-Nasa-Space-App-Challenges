@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "scope": "New metadata/review records, citation/reference existence, documentation links and pre-existing source/history size+mtime; no runtime/integrity/ABI/suite reruns.",
+  "review_rows": 17,
+  "source_fix_ancestry_rows_reused": 13,
+  "notice_groups": 9,
+  "residual_risks": 7,
+  "metadata_request_attempts": 1,
+  "external_collection_window_s_approximately": 5,
+  "complete_new_external_metadata_bodies": 0,
+  "runtime_model_package_acquisition_bytes": 0,
+  "native_commands": 0,
+  "integrity_ABI_tests_repeated": 0,
+  "markdown_documents": 10,
+  "local_links_resolved": 589,
+  "notice_and_evidence_references": 23,
+  "preservation": {
+    "source": {
+      "files": 512,
+      "size_mtime_unchanged": true,
+      "hashes_recomputed": false
+    },
+    "history": {
+      "files": 5777,
+      "size_mtime_unchanged": true,
+      "hashes_recomputed": false
+    }
+  },
+  "module_ids_retained_in_MASTER_PLAN": [
+    "N01",
+    "N02",
+    "N03",
+    "N04",
+    "N05",
+    "N06",
+    "N07",
+    "N08",
+    "N09",
+    "N10",
+    "N11",
+    "N12",
+    "N13",
+    "N14",
+    "N15",
+    "N16",
+    "N17",
+    "N18",
+    "N19",
+    "N20",
+    "N21",
+    "N22",
+    "N23",
+    "N24",
+    "N25",
+    "N26"
+  ],
+  "outcome": "A",
+  "execution_authorized": false,
+  "storage_authorization_renewed": false,
+  "N15": "Not Started",
+  "N16": "Not Started",
+  "all_other_module_statuses_changed": false,
+  "changed_governance_documents": [
+    "AGENTS.md",
+    "docs/N15_03G_STARTUP_READINESS.md",
+    "docs/MODULE_TRACKER.md",
+    "docs/SESSION_HANDOFF.md",
+    "docs/DE_N14_N15_01.md",
+    "docs/N15_01_PLAN.md",
+    "docs/DECISIONS.md",
+    "docs/MASTER_PLAN.md",
+    "docs/FEATURE_AUDIT.md",
+    "docs/CORE_AI_PRIORITY.md"
+  ],
+  "limitations": [
+    "Preservation uses file size/mtime; not a fresh content-hash proof.",
+    "Existing archive/library integrity and ABI passes are reused, not repeated.",
+    "No complete current vulnerability clearance or runtime/provider/isolation execution result."
+  ]
+}

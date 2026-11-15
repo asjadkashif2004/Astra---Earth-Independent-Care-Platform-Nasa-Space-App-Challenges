@@ -1,0 +1,17 @@
+{
+  "status": "COMPLETED",
+  "hash": "56464a2cffa9cddfd6700f9f1713c78993a0b66f1dfdac2edf9cba72cb7ee097",
+  "read_mutations": 0,
+  "event_count": 7,
+  "events_after": 7,
+  "replay_executions": 0,
+  "recovered": true,
+  "recovery_ms": 237.663115,
+  "memory": {
+    "rss": 99913728,
+    "heapTotal": 33480704,
+    "heapUsed": 18728184,
+    "external": 4052799,
+    "arrayBuffers": 212131
+  }
+}

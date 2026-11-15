@@ -1,0 +1,67 @@
+✔ N07-02: only the exact OSD-1 aggregate URL is added; child endpoints,other studies,queries,hosts and cross-source approval reject (11.386638ms)
+✔ N07-02: strict approval rejects unknown fields,rights upgrades,invented dates,clinical scope and unbounded resources (1.833797ms)
+✔ N07-02: shipped original verifies organism,identity,measurement context and actual dates with unavailable counts preserved (65.74437ms)
+✔ N07-02: absent/error metadata fails closed;other/mixed studies and unsafe child references are rejected (1.201805ms)
+✔ N07-02: unknown,human,mixed or altered organism and missing reviewed NASA context are not accepted (0.867389ms)
+✔ N07-02: newly introduced source-license/access fields require review rather than silently inheriting old permission (2.15228ms)
+✔ N07-02: optional unavailable fields become null;prose counts and concatenated investigator names never fabricate units or labels (0.474893ms)
+✔ N07-02: malformed types,calendar dates,mission order and release timestamps reject (2.191717ms)
+✔ N07-02: source/title/author and UTF-8/hash integrity gates reject modified content or a misleading source manifest (2.75584ms)
+✔ N07-02: OSDR uses the original guarded cache and atomically retains one source without following metadata links (39.450785ms)
+✔ N07-02: 403/503 and invalid 200 metadata never publish an original;cache failures cannot create medical data (38.139228ms)
+✔ N07-02: card and split policy are bound to source SHA,approval,receipt and actual study identity (5.384448ms)
+✔ N07-02: dataset-card tampering cannot invent sample counts,version,organism or downloaded measurements (6.145375ms)
+✔ N07-02: split validation rejects fabricated assignments/counts/labels/readiness and leakage-prone policies (14.830105ms)
+✔ N07-02: proposed train/validation/test roles expose independent-mission and technical-replicate limitations without executing a split (1.972754ms)
+✖ N07-02: shipped dataset documentation is complete,offline and reproducible with unchanged original/manifest bytes (265.178105ms)
+✖ N07-02: CLI selects only the two reviewed sources and preserves original NTRS default verification (219.484422ms)
+✔ N07: exact-resource allowlist rejects unknown hosts, IDs, userinfo, schemes, ports, fragments, query strings and alternate references (1.221277ms)
+✔ N07: strict approval requires complete attribution, actual use conditions, version/date limitations, bounded size/type/hash and nonclinical scope (1.812094ms)
+✔ N07: exact source identity/public-rights/author/version fields are checked after hashing; HTML, invalid UTF-8 and altered bytes reject (2.0774ms)
+✔ N07: original bytes, provenance and receipt commit together; repeated offline verification/acquire never refetch or overwrite (37.3304ms)
+✔ N07: interruption resumes only the verified prefix with exact Range and If-Range; original sequence and receipt survive restart (34.470712ms)
+✔ N07: crash recovery truncates only an uncommitted partial tail; committed prefix integrity remains mandatory (32.256469ms)
+✔ N07: corrupt partials and approval drift fail before any network; they cannot become accepted originals (42.26969ms)
+✔ N07: redirects, HTML, compressed responses, unsupported headers and size overrun reject without a retry (115.943241ms)
+✔ N07: resumed 200, wrong range and changed/missing strong ETag never mix representations (86.740983ms)
+✔ N07: early clean EOF retains a safe partial for explicit resume rather than accepting incomplete data (31.491047ms)
+✔ N07: without an ETag, exact range plus final pinned SHA permits safe resume and rejects mixed source bytes (58.311112ms)
+✔ N07: full-size SHA mismatch is rejected permanently; snapshot change never updates the pin or original (18.426866ms)
+✔ N07: deadlines cover pending headers/body and external cancellation; no background commit after timeout (41.613211ms)
+✔ N07: request count is durable and bounded across explicit resume attempts; there is no automatic retry (38.075413ms)
+✔ N07: monotonic deadline bounds an endless empty-chunk stream even if microtasks delay the timeout callback (111.640056ms)
+✔ N07: explicit mid-stream cancellation retains only committed bytes and a new invocation resumes safely (28.982035ms)
+✔ N07: concurrent/stale locks fail safely without removing someone else's lock (4.207778ms)
+✔ N07: symbolic roots and symbolic partial files cannot escape the dedicated cache (21.810835ms)
+✔ N07: completed manifests, original bytes and receipt hashes are rechecked; tampering never triggers a repair download (91.432775ms)
+✔ N07: interrupted directory promotion resumes offline; full bytes without confirmed response completion are insufficient (56.683402ms)
+✔ N07: untrusted links and instruction-like strings are preserved as inert original bytes, never followed or executed (19.019209ms)
+✔ N07: shipped single NASA metadata snapshot verifies offline against the reviewed source and its complete manifest (40.296022ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 37
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1756.352054
+
+✖ failing tests:
+
+test at tests/osdr-metadata.test.mjs:103:1
+✖ N07-02: shipped dataset documentation is complete,offline and reproducible with unchanged original/manifest bytes (265.178105ms)
+  SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at TestContext.<anonymous> (file:///mnt/c/Users/basim/OneDrive/Desktop/ASTRA-Space-Medical-AI/tests/osdr-metadata.test.mjs:107:145)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/osdr-metadata.test.mjs:110:1
+✖ N07-02: CLI selects only the two reviewed sources and preserves original NTRS default verification (219.484422ms)
+  SyntaxError: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at TestContext.<anonymous> (file:///mnt/c/Users/basim/OneDrive/Desktop/ASTRA-Space-Medical-AI/tests/osdr-metadata.test.mjs:112:19)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)

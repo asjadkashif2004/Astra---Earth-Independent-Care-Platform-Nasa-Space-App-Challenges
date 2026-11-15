@@ -1,0 +1,13 @@
+--- services/agent/single-select-runtime.mjs F
++++ services/agent/single-select-runtime.mjs G
+@@ -10,7 +10,9 @@
+   if(!Object.values(blocked).every(Boolean)||readFileSync('/proc/net/route','utf8').trim().split('\n').length!==1)fail('SINGLE_ISOLATION_FAILED');
+   const spec=readFileSync('/code/docs/N16_05_SOURCE_SPEC.json');
+   const stats=()=>({rss:process.memoryUsage().rss,kernel_max_rss:process.resourceUsage().maxRSS*1024});
+-  const value=await executeSingle(request,{
++  const execute=request.schema_version==='n16-06g-single-quality-v1'
++    ?(await import('./single-quality-contract.mjs')).executeQuality:executeSingle;
++  const value=await execute(request,{
+     inspect:()=>inspectSealedSource('/fixture',spec,request.expected_instance),
+     guard:()=>probeContainment({readMountInfo:()=>readFileSync('/proc/self/mountinfo','utf8'),mountNamespace:()=>readlinkSync('/proc/self/ns/mnt'),
+       createRootFile:()=>writeFileSync('/must-not-write','x'),createSourceFile:()=>writeFileSync('/fixture/must-not-create','x'),

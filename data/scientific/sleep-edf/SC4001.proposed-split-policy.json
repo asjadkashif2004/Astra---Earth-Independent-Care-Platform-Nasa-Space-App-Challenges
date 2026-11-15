@@ -1,0 +1,33 @@
+{
+  "schema_version": "astra.split-proposal.v1",
+  "dataset": "Sleep-EDF Expanded 1.0.0",
+  "doi": "10.13026/C2X676",
+  "source_subject_number_from_documented_filename": "00",
+  "night_number_from_documented_filename": 1,
+  "recording_id": "SC4001",
+  "global_subject_identity": null,
+  "status": "blocked_incomplete_source",
+  "complete_physiological_recordings_acquired": 0,
+  "verified_observation_count": null,
+  "verified_absolute_recording_time": null,
+  "timezone": null,
+  "policy": {
+    "unit": "Source subject;all related nights,windows,channels and duplicate derivatives stay together.",
+    "subject_group_key_proposed": "sleep-edfx/SC/00",
+    "random_epoch_split_allowed": false,
+    "training_only_preprocessing": true,
+    "chronological_boundaries_required": true,
+    "cross_release_duplicate_review_required": true,
+    "ratios": null,
+    "seed": null,
+    "target": null
+  },
+  "assignments": [],
+  "executed": false,
+  "independently_validated": false,
+  "limitations": [
+    "The PSG is incomplete and its full publisher hash cannot be verified;annotations were not requested.",
+    "One proposed night cannot establish independent subject train/validation/test groups.",
+    "Filename-derived local IDs do not prove biological independence or real-world identity."
+  ]
+}

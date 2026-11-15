@@ -1,0 +1,15 @@
+{
+  "args": [
+    "gpgv",
+    "--homedir",
+    "/tmp/astra-n15-03e-gpg-quwj1k39",
+    "--keyring",
+    "/usr/share/keyrings/ubuntu-archive-keyring.gpg",
+    "--status-fd",
+    "1",
+    "/tmp/astra-n15-03e-metadata/ubuntu-security-InRelease.original"
+  ],
+  "exit_code": 0,
+  "stdout": "[GNUPG:] NEWSIG\n[GNUPG:] KEY_CONSIDERED F6ECB3762474EDA9D21B7022871920D1991BC93C 0\n[GNUPG:] SIG_ID 5iE8Bd7bpAcYM5VKoQC6K7sDLPw 2026-10-25 1792934883\n[GNUPG:] GOODSIG 871920D1991BC93C Ubuntu Archive Automatic Signing Key (2018) <ftpmaster@ubuntu.com>\n[GNUPG:] VALIDSIG F6ECB3762474EDA9D21B7022871920D1991BC93C 2026-10-25 1792934883 0 4 0 1 10 01 F6ECB3762474EDA9D21B7022871920D1991BC93C\n",
+  "stderr": "gpgv: Signature made Sun Oct 25 18:28:03 2026 PKT\ngpgv:                using RSA key F6ECB3762474EDA9D21B7022871920D1991BC93C\ngpgv: Good signature from \"Ubuntu Archive Automatic Signing Key (2018) <ftpmaster@ubuntu.com>\"\n"
+}

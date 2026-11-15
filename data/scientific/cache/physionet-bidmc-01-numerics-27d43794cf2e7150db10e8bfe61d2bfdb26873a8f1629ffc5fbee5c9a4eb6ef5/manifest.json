@@ -1,0 +1,66 @@
+{
+  "schema_version": "astra.scientific-source.v1",
+  "source_id": "physionet-bidmc-01-numerics",
+  "approval_sha256": "5344111b804432ac1c8836bae3c82db60d8ccce7e72a0938fd779586d78bbfde",
+  "repository": "PhysioNet BIDMC PPG and Respiration Dataset",
+  "publication": {
+    "title": "BIDMC PPG and Respiration Dataset — record 01 numerics",
+    "authors": [
+      "Marco Pimentel",
+      "Alistair Johnson",
+      "Peter Charlton",
+      "David Clifton"
+    ],
+    "publisher": "PhysioNet",
+    "canonical_url": "https://physionet.org/content/bidmc/1.0.0/",
+    "version": "1.0.0; bidmc_01_Numerics.csv",
+    "published_on": "2018-06-20",
+    "date_note": "Dataset release date,not a patient's recording time.The CSV supplies elapsed seconds only."
+  },
+  "rights": {
+    "statement": "Open Data Commons Attribution License v1.0 (ODC-By-1.0); preserve the accompanying legacy PhysioNet modified-data notice and attribution. Verbatim original only.",
+    "license_id": "ODC-By-1.0",
+    "terms_url": "https://physionet.org/content/bidmc/view-license/1.0.0/",
+    "harvesting_url": "https://archive.physionet.org/copying.shtml#data",
+    "record_url": "https://physionet.org/content/bidmc/1.0.0/",
+    "reviewed_on": "2026-10-23",
+    "attribution": "Contains information from the BIDMC PPG and Respiration Dataset v1.0.0,Marco Pimentel,Alistair Johnson,Peter Charlton and David Clifton,PhysioNet,DOI:10.13026/C2208R,made available under the ODC Attribution License v1.0.Cite Pimentel et al.,Towards a Robust Estimation of Respiratory Rate from Pulse Oximeters,DOI:10.1109/TBME.2016.2613124,and the PhysioNet resource citation listed in the source README.",
+    "restrictions": [
+      "Retain the ODC-By license URI,attribution and all accompanying source notices with redistributed bytes/documentation;no sublicense or additional restriction on granted database rights.",
+      "Original CSV is unmodified and retained verbatim.The source's existing MIMIC-II extraction/Matlab/CSV modification notice is retained separately,unchanged.",
+      "Future modified data must be distinctly named and identified with source/changes under the legacy policy;this task produces no modified signal dataset.",
+      "Database licensing does not waive privacy,personality,trademark or other content rights.No re-identification,patient linkage or implied clinical/PhysioNet endorsement."
+    ],
+    "legacy_notice_url": "https://physionet.org/files/bidmc/1.0.0/LICENSE",
+    "legacy_notice_sha256": "76576a17b505dce71773415a18e965982bc8c0c9a60da71f1adb9df7644332a0"
+  },
+  "scope": {
+    "content_kind": "public_patient_derived_physiological_numerics",
+    "synthetic": false,
+    "contains_patient_data": true,
+    "clinical_use": false,
+    "corpus_ingestion": false,
+    "limitations": [
+      "Public historical ICU-derived numerics,not private/live patient data or astronaut measurements.No direct identifying fields appear in this selected CSV;independent anonymization certification is not claimed.",
+      "Only one complete 1Hz numerics file;no ECG/PPG/respiration waveform,breath annotation,demographics or second recording acquired.",
+      "Hospital selection bias,treatment/sensor effects and terrestrial-to-spaceflight domain shift prohibit astronaut threshold calibration or disease inference.",
+      "NaN stays missing;no interpolation,imputation or independent clinical-quality score is generated.",
+      "Publisher SHA256SUMS review exceeded the15s deadline;not retried.Hash is computed from complete official HTTPS review bytes,not independently matched to publisher checksum."
+    ]
+  },
+  "original": {
+    "url": "https://physionet.org/files/bidmc/1.0.0/bidmc_csv/bidmc_01_Numerics.csv",
+    "file": "original.csv",
+    "media_type": "text/plain",
+    "bytes": 7644,
+    "sha256": "27d43794cf2e7150db10e8bfe61d2bfdb26873a8f1629ffc5fbee5c9a4eb6ef5"
+  },
+  "retrieval": {
+    "started_at": "2026-10-23T15:32:16.439Z",
+    "completed_at": "2026-10-23T15:32:23.482Z",
+    "etag": "\"5b2a8bbd-1ddc\"",
+    "requests": 1,
+    "method": "HTTPS GET",
+    "redirects": 0
+  }
+}

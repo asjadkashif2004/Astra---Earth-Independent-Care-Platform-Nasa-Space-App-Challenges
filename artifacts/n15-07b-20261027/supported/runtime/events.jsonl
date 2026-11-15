@@ -1,0 +1,4 @@
+{"elapsed_s": 4.111269271000083, "event": "phase", "name": "verify-reused-model-and-native-identities"}
+{"elapsed_s": 41.547522771000104, "event": "phase", "name": "one-offline-research-selection"}
+{"elapsed_s": 45.89521464099994, "event": "phase", "name": "verify-actual-blocked-filesystem-and-network-view"}
+{"elapsed_s": 49.881122772000026, "event": "first_output", "case": "generation", "release_elapsed_s": 3.17282555099996}

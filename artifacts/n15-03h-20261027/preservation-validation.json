@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "scope": "Single existing startup evidence, truthful RSS interpretation, references, status/dependency boundary and preservation validation. No native re-execution.",
+  "native_commands": 1,
+  "downloads_bytes": 0,
+  "helper_tests": "30/30 PASS",
+  "native_only_RSS_measured": false,
+  "provider_loading": "Fixed zlib and approved libgomp actual init traces plus prehashed RO binds",
+  "source_history_preservation": {
+    "source_data_packages": {
+      "files": 583,
+      "size_mtime_unchanged": true,
+      "hashes_recomputed": false
+    },
+    "historical_artifacts": {
+      "files": 5783,
+      "size_mtime_unchanged": true,
+      "hashes_recomputed": false
+    }
+  },
+  "module_ids_in_MASTER_PLAN": [
+    "N01",
+    "N02",
+    "N03",
+    "N04",
+    "N05",
+    "N06",
+    "N07",
+    "N08",
+    "N09",
+    "N10",
+    "N11",
+    "N12",
+    "N13",
+    "N14",
+    "N15",
+    "N16",
+    "N17",
+    "N18",
+    "N19",
+    "N20",
+    "N21",
+    "N22",
+    "N23",
+    "N24",
+    "N25",
+    "N26"
+  ],
+  "markdown_documents": 10,
+  "local_links_resolved": 599,
+  "changed_review_governance_documents": [
+    "AGENTS.md",
+    "docs/N15_03H_NATIVE_STARTUP.md",
+    "docs/MODULE_TRACKER.md",
+    "docs/SESSION_HANDOFF.md",
+    "docs/DE_N14_N15_01.md",
+    "docs/N15_01_PLAN.md",
+    "docs/DECISIONS.md",
+    "docs/MASTER_PLAN.md",
+    "docs/FEATURE_AUDIT.md",
+    "docs/CORE_AI_PRIORITY.md"
+  ],
+  "inclusive_delivery_accounting": {
+    "apparent_bytes": 97640763,
+    "allocated_bytes": 98971648,
+    "watermark_bytes": 1350000000,
+    "storage_policy": "Monitored; no hard quota; delivery includes complete changed documents, duplicate-counted aliases conservatively."
+  },
+  "N15": "Not Started",
+  "N16": "Not Started",
+  "other_module_statuses_changed": false,
+  "H_storage_authorization_expires_at_delivery": true
+}

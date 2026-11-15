@@ -1,0 +1,45 @@
+{
+  "status": "failed",
+  "started_at": "2026-11-04T10:52:10.933Z",
+  "checks": [
+    {
+      "name": "N12 connected research registry, empty state and invalid request feedback",
+      "status": "passed"
+    },
+    {
+      "name": "N12 genuine native forecast and evaluation commit with connected chart/model evidence",
+      "status": "failed",
+      "reason": "DOM condition timed out: document.querySelector(\"#n12-result\")?.textContent.includes(\"COMPLETED\")"
+    }
+  ],
+  "screenshots": [
+    "failure-2.png"
+  ],
+  "console_errors": [],
+  "http_errors": [
+    {
+      "url": "http://127.0.0.1:64166/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    },
+    {
+      "url": "http://127.0.0.1:64166/v1/models/prediction-experiments",
+      "status": 422,
+      "stage": "N12 connected research registry, empty state and invalid request feedback"
+    }
+  ],
+  "viewports": [],
+  "caveats": [
+    "No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation.",
+    "Pointer/keyboard/rendered DOM checks and screenshots supplement human visual, text-contrast and assistive-technology review; they do not establish WCAG conformance."
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/156.0.8078.80",
+    "revision": "@fb096c0011f9d50f0a264a9376420cdea9c421e3",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "jsVersion": "15.6.75.27"
+  },
+  "reason": "DOM condition timed out: document.querySelector(\"#n12-result\")?.textContent.includes(\"COMPLETED\")",
+  "finished_at": "2026-11-04T10:52:37.042Z"
+}

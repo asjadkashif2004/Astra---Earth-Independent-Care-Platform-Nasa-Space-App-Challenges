@@ -1,0 +1,13 @@
+{
+  "status": "READY_FOR_EXTERNAL_REVIEW_NOT_APPROVED",
+  "reviewer_identity": null,
+  "qualifications": null,
+  "reviewed_at": null,
+  "scientific_decisions": null,
+  "owner_coverage_acceptance": null,
+  "actual_independently_approved_expectations": 0,
+  "canonical_packet": "data/corpus/n13-03/derived/REVIEW_PACKET.md",
+  "canonical_packet_sha256": "aa93cf5062b03b87dbd57b96e756965fe90f9883854d456167462269c34ed6d4",
+  "blank_form": "published/bundle-df7aff6aedc45aaa9f042e8b258d6ad16dcbb007a9189a21819c7b7254f79e1e/review-form.json",
+  "notes": "Case decision can approve a correct abstention boundary without accepting the unsupported factual assertion. All intake remains unauthenticated until real independent evidence/owner decisions are established. No external review was fabricated."
+}

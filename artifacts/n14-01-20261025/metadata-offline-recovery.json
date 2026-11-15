@@ -1,0 +1,6 @@
+{
+  "sha256": "a6a110a11878d913958ad0698a2f8697a9f50a4c8770a143d8a223e338883760",
+  "bytes": 5650,
+  "method": "Complete saved JSON and automatic HTTPResponse EOF closure; no network retry",
+  "original_failure_preserved": "preflight-failure.json"
+}

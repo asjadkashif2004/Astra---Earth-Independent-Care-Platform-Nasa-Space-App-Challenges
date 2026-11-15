@@ -1,0 +1,18 @@
+Checking: N10 actual application navigation, denied consent, skip/cancel and approximate device notice
+Checking: N10 real consent, early click and out-of-range timing exclusion
+Checking: N10 four genuine five-trial browser sessions and same-device personal reference
+Checking: N10 stage/schedule editor, source-bound aggregation and delayed correction replay
+Checking: N10 exercise input, transparent adherence and explicit unknown movement
+Checking: N10 save failure retains inputs and never reports a committed result
+Checking: N10 responsive keyboard controls, crew switching and no cross-crew result reuse
+Checking: N10 consent withdrawal removes optional raw history, cancels task and blocks collection
+Checking: N10 real restart/recovery preserves committed ledger without replay or read-side writes
+Checking: N10 real unauthorised-role denial and astronaut self scope
+{
+  "status": "passed",
+  "browser": "Chrome/156.0.8078.73",
+  "checks": 10,
+  "failed": [],
+  "screenshots": 9,
+  "report": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n10-final-20261030\\browser-04\\report.json"
+}

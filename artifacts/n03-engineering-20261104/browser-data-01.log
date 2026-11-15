@@ -1,0 +1,11 @@
+Checking: N03 exact six-metric values for all six canonical crew and four environment values
+Checking: N03 real-browser suspended-page handlers cancel reads and recover without stale presentation
+Checking: N03 real-browser error notice has a named region and recovers actual readiness
+{
+  "status": "passed",
+  "browser": "Chrome/156.0.8078.80",
+  "checks": 3,
+  "failed": [],
+  "screenshots": 0,
+  "report": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n03-engineering-20261104\\browser-data-01\\report.json"
+}

@@ -1,0 +1,567 @@
+{
+  "run": {
+    "schema_version": "astra.n09.run.v1",
+    "id": "0b18a9ff-49d2-4228-be8e-2c2ccbb5401e",
+    "status": "RUNNING",
+    "execution_status": "RUNNING",
+    "last_failure": null,
+    "revision": 2,
+    "seed": 42017,
+    "definition_version": "n09-source-time-v1",
+    "started_at": "2026-11-14T11:00:00.000Z",
+    "known_at": "2026-11-14T11:00:00.000Z",
+    "host_started_at": "2026-10-30T20:36:42.579Z",
+    "source_now": "2026-11-14T11:02:00.000Z",
+    "mission_now": "2026-11-14T11:02:00.000Z",
+    "data_source": "CURRENT_N09_OBSERVATIONS",
+    "elapsed_seconds": 120,
+    "duration_seconds": 600,
+    "cadence_seconds": 30,
+    "frames": 5,
+    "assignments": [
+      {
+        "crew_id": "CREW-01",
+        "scenario_id": "nominal",
+        "onset_seconds": 0,
+        "elapsed_seconds": 120,
+        "status": "RUNNING"
+      },
+      {
+        "crew_id": "CREW-02",
+        "scenario_id": "nominal",
+        "onset_seconds": 0,
+        "elapsed_seconds": 120,
+        "status": "RUNNING"
+      },
+      {
+        "crew_id": "CREW-03",
+        "scenario_id": "cardiorespiratory-drift",
+        "onset_seconds": 0,
+        "elapsed_seconds": 120,
+        "status": "RUNNING"
+      },
+      {
+        "crew_id": "CREW-04",
+        "scenario_id": "nominal",
+        "onset_seconds": 0,
+        "elapsed_seconds": 120,
+        "status": "RUNNING"
+      },
+      {
+        "crew_id": "CREW-05",
+        "scenario_id": "nominal",
+        "onset_seconds": 0,
+        "elapsed_seconds": 120,
+        "status": "RUNNING"
+      },
+      {
+        "crew_id": "CREW-06",
+        "scenario_id": "nominal",
+        "onset_seconds": 0,
+        "elapsed_seconds": 120,
+        "status": "RUNNING"
+      }
+    ],
+    "crew": [
+      {
+        "id": "CREW-01",
+        "values": {
+          "heart_rate": 66.9,
+          "hrv": 52.85,
+          "spo2": 97.76,
+          "respiratory_rate": 13.32,
+          "temperature": 36.63,
+          "sleep_duration": 7.52,
+          "fatigue": 2.53,
+          "reaction_time": 250.66,
+          "exercise": 106.54,
+          "radiation": 0.016
+        },
+        "quality": "good",
+        "status": "green",
+        "observed_at": "2026-11-14T11:02:00.000Z",
+        "metric_quality": {
+          "heart_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "hrv": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "spo2": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "respiratory_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "temperature": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "sleep_duration": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "fatigue": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "reaction_time": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "exercise": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "radiation": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          }
+        }
+      },
+      {
+        "id": "CREW-02",
+        "values": {
+          "heart_rate": 66.83,
+          "hrv": 53.68,
+          "spo2": 97.93,
+          "respiratory_rate": 13.56,
+          "temperature": 36.66,
+          "sleep_duration": 7.67,
+          "fatigue": 2.67,
+          "reaction_time": 259.6,
+          "exercise": 109.95,
+          "radiation": 0.016
+        },
+        "quality": "good",
+        "status": "green",
+        "observed_at": "2026-11-14T11:02:00.000Z",
+        "metric_quality": {
+          "heart_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "hrv": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "spo2": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "respiratory_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "temperature": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "sleep_duration": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "fatigue": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "reaction_time": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "exercise": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "radiation": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          }
+        }
+      },
+      {
+        "id": "CREW-03",
+        "values": {
+          "heart_rate": 83.05,
+          "hrv": 55.6,
+          "spo2": 96.31,
+          "respiratory_rate": 18.54,
+          "temperature": 36.67,
+          "sleep_duration": 7.87,
+          "fatigue": 2.58,
+          "reaction_time": 260.76,
+          "exercise": 110.52,
+          "radiation": 0.016
+        },
+        "quality": "good",
+        "status": "green",
+        "observed_at": "2026-11-14T11:02:00.000Z",
+        "metric_quality": {
+          "heart_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "hrv": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "spo2": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "respiratory_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "temperature": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "sleep_duration": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "fatigue": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "reaction_time": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "exercise": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "radiation": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          }
+        }
+      },
+      {
+        "id": "CREW-04",
+        "values": {
+          "heart_rate": 69.07,
+          "hrv": 55.76,
+          "spo2": 98.27,
+          "respiratory_rate": 14.21,
+          "temperature": 36.75,
+          "sleep_duration": 7.76,
+          "fatigue": 2.77,
+          "reaction_time": 263.45,
+          "exercise": 111.18,
+          "radiation": 0.016
+        },
+        "quality": "good",
+        "status": "green",
+        "observed_at": "2026-11-14T11:02:00.000Z",
+        "metric_quality": {
+          "heart_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "hrv": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "spo2": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "respiratory_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "temperature": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "sleep_duration": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "fatigue": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "reaction_time": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "exercise": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "radiation": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          }
+        }
+      },
+      {
+        "id": "CREW-05",
+        "values": {
+          "heart_rate": 69.01,
+          "hrv": 56.81,
+          "spo2": 98.25,
+          "respiratory_rate": 14.62,
+          "temperature": 36.8,
+          "sleep_duration": 8.03,
+          "fatigue": 2.94,
+          "reaction_time": 272.21,
+          "exercise": 115.65,
+          "radiation": 0.016
+        },
+        "quality": "good",
+        "status": "green",
+        "observed_at": "2026-11-14T11:02:00.000Z",
+        "metric_quality": {
+          "heart_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "hrv": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "spo2": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "respiratory_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "temperature": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "sleep_duration": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "fatigue": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "reaction_time": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "exercise": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "radiation": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          }
+        }
+      },
+      {
+        "id": "CREW-06",
+        "values": {
+          "heart_rate": 70.63,
+          "hrv": 58.94,
+          "spo2": 98.49,
+          "respiratory_rate": 14.7,
+          "temperature": 36.79,
+          "sleep_duration": 8.07,
+          "fatigue": 2.97,
+          "reaction_time": 270.52,
+          "exercise": 114.51,
+          "radiation": 0.016
+        },
+        "quality": "good",
+        "status": "green",
+        "observed_at": "2026-11-14T11:02:00.000Z",
+        "metric_quality": {
+          "heart_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "hrv": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "spo2": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "respiratory_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "temperature": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "sleep_duration": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "fatigue": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "reaction_time": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "exercise": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "radiation": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          }
+        }
+      }
+    ],
+    "calibration_hash": "78ec839343fd2de395f67ba3efd0aa4ba3d17181390d2b5daa1470b569ba4d05",
+    "config_hash": "58853338cf1f2481d737a40c08c88da826fd350b56dbd3ab204da6a965c47935",
+    "synthetic": true,
+    "clinical_validation": false,
+    "completed_days": {
+      "CREW-01": [],
+      "CREW-02": [],
+      "CREW-03": [],
+      "CREW-04": [],
+      "CREW-05": [],
+      "CREW-06": []
+    },
+    "waveform": null,
+    "alert_authority": "N02 only; no diagnosis or automatic acknowledgement",
+    "recovered_after_restart": true
+  },
+  "hash": "6709b304217d9ee2f9967b882c720b14d48b6404834fe5ef4f2d808c6e6f0f2e",
+  "observations": 330,
+  "replayed_ticks": 0,
+  "cold_ms": 498.7125390000001
+}

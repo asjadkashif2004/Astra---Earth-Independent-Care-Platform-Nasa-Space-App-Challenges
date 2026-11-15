@@ -1,0 +1,16 @@
+{
+  "mode": "source_quotation",
+  "numeric_literals": [],
+  "question": "Quote the complete source passage window-ac8d6151e692badfd03a7755d10976b91434022f57fb270e7a0e92855eb7eb84.",
+  "requested_window_id": "window-ac8d6151e692badfd03a7755d10976b91434022f57fb270e7a0e92855eb7eb84",
+  "requirements": {
+    "comparator": null,
+    "conditions": [],
+    "numeric": "not_requested",
+    "qualifiers": [],
+    "relationship": "reproduce_complete_span",
+    "subject": "window-ac8d6151e692badfd03a7755d10976b91434022f57fb270e7a0e92855eb7eb84",
+    "unit": null
+  },
+  "schema_version": "astra.research-relevance-request.v1"
+}

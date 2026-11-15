@@ -1,0 +1,6 @@
+{
+  "resource_journal_samples": 7,
+  "maximum_observed_sample_gap_seconds": 0.2533777349999582,
+  "minimum_host_MemAvailable": 6269263872,
+  "note": "Configured250ms polling; observed scheduling jitter is recorded, not a hard realtime guarantee. Runtime/model never executed."
+}

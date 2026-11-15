@@ -1,0 +1,10 @@
+{
+  "args": [
+    "apt-cache",
+    "policy",
+    "libgomp1"
+  ],
+  "returncode": 0,
+  "stdout": "libgomp1:\n  Installed: (none)\n  Candidate: 16-20260322-1ubuntu1\n  Version table:\n     16-20260322-1ubuntu1 500\n        500 http://archive.ubuntu.com/ubuntu resolute/main amd64 Packages\n",
+  "stderr": ""
+}

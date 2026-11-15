@@ -1,0 +1,12 @@
+✔ N03 session end aborts global health reads and ignores a transport which delivers after abort (806.429026ms)
+✔ N03 suspended page cancels requests and stops polling; resume refreshes actual state (789.430133ms)
+✔ N03 cached landing resumes its disposed scene without starting authenticated requests (532.845781ms)
+✔ N03 request timeout rejects late projections instead of applying their optimistic payload (698.872488ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3844.815862

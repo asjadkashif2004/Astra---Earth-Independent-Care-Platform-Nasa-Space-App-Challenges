@@ -1,0 +1,63 @@
+{
+  "task": "N15-04A",
+  "recommendation": "PASS",
+  "scope": "Metadata qualification for separate exact-host policy approval; not allowlist activation, download, destination TLS/content verification or inference.",
+  "observed_hostname": "us.aws.cdn.hf.co",
+  "scheme": "https",
+  "publisher_status": 302,
+  "provenance": "TLS-authenticated exact pinned huggingface.co response delegates this first hop; commit/size/weight SHA-256/Xet headers and path marker agree with preserved publisher metadata.",
+  "historical_rejected_hostname": "Still unrecorded; fresh HEAD is not retrospective proof.",
+  "source_requests": 2,
+  "collection_s": 0.709432774000561,
+  "body_bytes_read": 0,
+  "destination_requests": 0,
+  "redirects_followed": 0,
+  "retries": 0,
+  "optional_docs": "Publisher documentation endpoint returned302, not followed; no content available or used as proof.",
+  "publisher_TLS": "Default CA and hostname checks passed for huggingface.co",
+  "destination_TLS": "Not tested: no request permitted",
+  "expected_model": {
+    "revision": "9217f5db79a29953eb74d5343926648285ec7e67",
+    "filename": "qwen2.5-0.5b-instruct-q4_k_m.gguf",
+    "bytes": 491400032,
+    "sha256": "74a4da8c9fdbcd15bd1f6d01d621410d31c6fc00986f5eb687824e7b93d7a9db"
+  },
+  "actual_model_integrity": "UNVERIFIED: no model acquired",
+  "expiry": {
+    "observed_claim_utc": "2026-10-26T22:28:50+00:00",
+    "relative_to_publisher_Date_s": 3600.0,
+    "signature_verified": false,
+    "raw_query_or_signature_values_retained": false
+  },
+  "chain": "Only current first hop; subsequent hops/host stability unverified",
+  "diagnostic_changes": {
+    "new_QA_helper": "scripts/n15_redirect_diagnostics.py",
+    "new_QA_test": "tests/n15_redirect_diagnostics_test.py",
+    "isolated_worker": "/tmp/astra-n15-04-download.py",
+    "reporting_only": true,
+    "allowed_AST_unchanged": true,
+    "allowed_AST_sha256": "73ff244dcabba98efbd1c0fb6eb81c0d8ed0d5d904bf57dd41b24f10c46d3cd8",
+    "before_worker_sha256": "bdeff765bbc7cf99927e30826b87b0364b0457a96ccb0eeb3767e2dc9910ff72",
+    "after_worker_sha256": "9f17b6a48c59583a6c849b314002e36de66956bc9a57daab61983db7bd0c374a",
+    "actual_host_still_blocked_by_guard": true,
+    "focused_tests": "18/18 PASS; offline only",
+    "guard_URL_size_hash_constants_unchanged": true
+  },
+  "policy_recommendation": {
+    "applied": false,
+    "one_future_exact_hostname": "us.aws.cdn.hf.co",
+    "port": 443,
+    "scheme": "https",
+    "canonical_publisher_URL_must_remain_pinned": true,
+    "path_prefix": "/xet-bridge-us/",
+    "expected_Xet_object_marker": "0663b826e09042345d6e2069d9655cd3ae84812d8f39a5894bed7b24fc0e86cc",
+    "no_wildcard_or_arbitrary_CDN_URL": true,
+    "full_original_length_SHA256_gate_required": true,
+    "unexpected_followup_host": "STOP, sanitized logging, no automatic retry"
+  },
+  "next_explicit_approval": "One-time exact-host policy change plus one fresh exact-model acquisition under fresh explicit resource/storage approval. Conditional inference/missing-model check requires explicit renewal too if combined.",
+  "resource_storage_authorization_renewed": false,
+  "N15": "Not Started",
+  "N16": "Not Started",
+  "other_module_statuses_changed": false
+}

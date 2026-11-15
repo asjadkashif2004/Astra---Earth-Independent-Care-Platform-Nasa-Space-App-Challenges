@@ -1,0 +1,354 @@
+{
+  "official_family_count": 11,
+  "implemented": 11,
+  "authorized_engineering_qualified": 11,
+  "full_original_qualified": 10,
+  "partial": [
+    "R60"
+  ],
+  "formal_N03": "Partial",
+  "AC20": "Open / Unverified",
+  "requirements": [
+    {
+      "requirement_id": "R02",
+      "authoritative_specification": [
+        "docs/MASTER_PLAN.md:N03 roadmap row",
+        "docs/REQUIREMENTS.md:R02",
+        "research/ASTRA_Deep_Research.md",
+        "docs/N03_COMPLETION.md",
+        "docs/DE_AC20_01.md"
+      ],
+      "official_purpose": "Earth-independent received presentation / F08",
+      "existing_implementation": "Selected reception projection, timestamps and recorded evidence",
+      "remaining_work_delivered": "No source-identity or reception change; lifecycle cancellation prevents late responses crossing sessions",
+      "required_inputs": "N02 state/SSE/ground snapshot",
+      "required_outputs": "Gray/UNKNOWN before receipt; received-only badge/cases",
+      "backend_contract": "/v1/state; /v1/stream/missions/:id",
+      "frontend_contract": "Overview, Crew, Health agent, Communications",
+      "source_requirements": "Authorized fictional application sources and actual approximate voluntary task input only. Authentic NASA corpus/model/source permissions unchanged; no clinical eligibility inferred.",
+      "privacy_authorization": "Trusted existing server session/RBAC/crew scope; personal history restrictions; no client-granted access.",
+      "integration_dependencies": [
+        "N01 Complete",
+        "N02 Complete",
+        "Existing approved N04 and synthetic N08-N12 frontend portions only"
+      ],
+      "acceptance_evidence": "browser-07/report.json: actual N02 and delayed durable delivery; frontend-correctness.test.mjs",
+      "governance_authority": "Owner consolidated N03 directive 2026-11-04; no new sequencing exception; DE-AC20-01 unchanged",
+      "independent_review_requirements": "No scientific review fabricated or waived. Physical machine designation and authentic performance evidence/owner acceptance pending for R60/AC20.",
+      "implemented": true,
+      "authorized_engineering_status": "PASS",
+      "full_original_status": "PASS",
+      "formal_closure_condition": "Preserve this qualified N03 frontend portion; no global scientific/module gate closed."
+    },
+    {
+      "requirement_id": "R19",
+      "authoritative_specification": [
+        "docs/MASTER_PLAN.md:N03 roadmap row",
+        "docs/REQUIREMENTS.md:R19",
+        "research/ASTRA_Deep_Research.md",
+        "docs/N03_COMPLETION.md",
+        "docs/DE_AC20_01.md"
+      ],
+      "official_purpose": "N02 case review integration",
+      "existing_implementation": "Pending/failed/recovered cases and human acknowledgement",
+      "remaining_work_delivered": "Preserve conflict and pending semantics under navigation/session cleanup",
+      "required_inputs": "N02 persisted alert/case/enrichment state",
+      "required_outputs": "Actual report or pending/unavailable, one authorized acknowledgement",
+      "backend_contract": "/v1/agent/cases; /v1/alerts/:id/ack",
+      "frontend_contract": "Health agent review controls",
+      "source_requirements": "Authorized fictional application sources and actual approximate voluntary task input only. Authentic NASA corpus/model/source permissions unchanged; no clinical eligibility inferred.",
+      "privacy_authorization": "Trusted existing server session/RBAC/crew scope; personal history restrictions; no client-granted access.",
+      "integration_dependencies": [
+        "N01 Complete",
+        "N02 Complete",
+        "Existing approved N04 and synthetic N08-N12 frontend portions only"
+      ],
+      "acceptance_evidence": "browser-07/report.json: conflict/acknowledgement and disk restart; integration.test.mjs",
+      "governance_authority": "Owner consolidated N03 directive 2026-11-04; no new sequencing exception; DE-AC20-01 unchanged",
+      "independent_review_requirements": "No scientific review fabricated or waived. Physical machine designation and authentic performance evidence/owner acceptance pending for R60/AC20.",
+      "implemented": true,
+      "authorized_engineering_status": "PASS",
+      "full_original_status": "PASS",
+      "formal_closure_condition": "Preserve this qualified N03 frontend portion; no global scientific/module gate closed."
+    },
+    {
+      "requirement_id": "R20",
+      "authoritative_specification": [
+        "docs/MASTER_PLAN.md:N03 roadmap row",
+        "docs/REQUIREMENTS.md:R20",
+        "research/ASTRA_Deep_Research.md",
+        "docs/N03_COMPLETION.md",
+        "docs/DE_AC20_01.md"
+      ],
+      "official_purpose": "Scenario controls",
+      "existing_implementation": "Seeded presets, selected-crew scalar demo and actual stop",
+      "remaining_work_delivered": "No new scenario model; real existing controls qualified with mobile transition-aware pointer input",
+      "required_inputs": "Fictional scenario ID, seed, target crew",
+      "required_outputs": "Actual current scenario and quality/status",
+      "backend_contract": "/v1/scenarios/:id/start; /v1/scenarios/:id/stop",
+      "frontend_contract": "Scenario Lab",
+      "source_requirements": "Authorized fictional application sources and actual approximate voluntary task input only. Authentic NASA corpus/model/source permissions unchanged; no clinical eligibility inferred.",
+      "privacy_authorization": "Trusted existing server session/RBAC/crew scope; personal history restrictions; no client-granted access.",
+      "integration_dependencies": [
+        "N01 Complete",
+        "N02 Complete",
+        "Existing approved N04 and synthetic N08-N12 frontend portions only"
+      ],
+      "acceptance_evidence": "browser-07/report.json: exercise/dropout/suspect/stop; n09.test.mjs",
+      "governance_authority": "Owner consolidated N03 directive 2026-11-04; no new sequencing exception; DE-AC20-01 unchanged",
+      "independent_review_requirements": "No scientific review fabricated or waived. Physical machine designation and authentic performance evidence/owner acceptance pending for R60/AC20.",
+      "implemented": true,
+      "authorized_engineering_status": "PASS",
+      "full_original_status": "PASS",
+      "formal_closure_condition": "Preserve this qualified N03 frontend portion; no global scientific/module gate closed."
+    },
+    {
+      "requirement_id": "R24",
+      "authoritative_specification": [
+        "docs/MASTER_PLAN.md:N03 roadmap row",
+        "docs/REQUIREMENTS.md:R24",
+        "research/ASTRA_Deep_Research.md",
+        "docs/N03_COMPLETION.md",
+        "docs/DE_AC20_01.md"
+      ],
+      "official_purpose": "Models/audit/health and honest service state / F13",
+      "existing_implementation": "Independent panel loads, structured503 readiness, role restrictions",
+      "remaining_work_delivered": "Named service-availability landmark; global reads aborted at session end/suspension",
+      "required_inputs": "Actual health/model/audit responses",
+      "required_outputs": "Unknown/degraded/denied/recovered states",
+      "backend_contract": "/v1/health; /v1/models; /v1/audit",
+      "frontend_contract": "Service notice, Evidence & provenance",
+      "source_requirements": "Authorized fictional application sources and actual approximate voluntary task input only. Authentic NASA corpus/model/source permissions unchanged; no clinical eligibility inferred.",
+      "privacy_authorization": "Trusted existing server session/RBAC/crew scope; personal history restrictions; no client-granted access.",
+      "integration_dependencies": [
+        "N01 Complete",
+        "N02 Complete",
+        "Existing approved N04 and synthetic N08-N12 frontend portions only"
+      ],
+      "acceptance_evidence": "browser-data-01/report.json: named service recovery; frontend-correctness and n03-lifecycle tests",
+      "governance_authority": "Owner consolidated N03 directive 2026-11-04; no new sequencing exception; DE-AC20-01 unchanged",
+      "independent_review_requirements": "No scientific review fabricated or waived. Physical machine designation and authentic performance evidence/owner acceptance pending for R60/AC20.",
+      "implemented": true,
+      "authorized_engineering_status": "PASS",
+      "full_original_status": "PASS",
+      "formal_closure_condition": "Preserve this qualified N03 frontend portion; no global scientific/module gate closed."
+    },
+    {
+      "requirement_id": "R25",
+      "authoritative_specification": [
+        "docs/MASTER_PLAN.md:N03 roadmap row",
+        "docs/REQUIREMENTS.md:R25",
+        "research/ASTRA_Deep_Research.md",
+        "docs/N03_COMPLETION.md",
+        "docs/DE_AC20_01.md"
+      ],
+      "official_purpose": "Six crew profiles and health status",
+      "existing_implementation": "Backend-bound six canonical profiles, units, quality and history",
+      "remaining_work_delivered": "All36 displayed values checked; invalid/wrong crew and seven-role behavior qualified",
+      "required_inputs": "Authorized canonical crew and metric observations",
+      "required_outputs": "Correct crew/metric values or UNKNOWN",
+      "backend_contract": "/v1/state; /v1/crew/:id/telemetry",
+      "frontend_contract": "Overview and Crew detail",
+      "source_requirements": "Authorized fictional application sources and actual approximate voluntary task input only. Authentic NASA corpus/model/source permissions unchanged; no clinical eligibility inferred.",
+      "privacy_authorization": "Trusted existing server session/RBAC/crew scope; personal history restrictions; no client-granted access.",
+      "integration_dependencies": [
+        "N01 Complete",
+        "N02 Complete",
+        "Existing approved N04 and synthetic N08-N12 frontend portions only"
+      ],
+      "acceptance_evidence": "browser-data-01/report.json:36 actual values; browser-07/report.json: role scope; web.test.mjs",
+      "governance_authority": "Owner consolidated N03 directive 2026-11-04; no new sequencing exception; DE-AC20-01 unchanged",
+      "independent_review_requirements": "No scientific review fabricated or waived. Physical machine designation and authentic performance evidence/owner acceptance pending for R60/AC20.",
+      "implemented": true,
+      "authorized_engineering_status": "PASS",
+      "full_original_status": "PASS",
+      "formal_closure_condition": "Preserve this qualified N03 frontend portion; no global scientific/module gate closed."
+    },
+    {
+      "requirement_id": "R26",
+      "authoritative_specification": [
+        "docs/MASTER_PLAN.md:N03 roadmap row",
+        "docs/REQUIREMENTS.md:R26",
+        "research/ASTRA_Deep_Research.md",
+        "docs/N03_COMPLETION.md",
+        "docs/DE_AC20_01.md"
+      ],
+      "official_purpose": "Mission clock, Earth/orbit/environment",
+      "existing_implementation": "Existing N04 Earth, clock, environment and labels",
+      "remaining_work_delivered": "No redesign; source correctness, fallback and quality/reduced-motion independence qualified",
+      "required_inputs": "Mission/source time, environment, comms link",
+      "required_outputs": "Observed clock/context with synthetic limitations",
+      "backend_contract": "/v1/state; existing scene runtime",
+      "frontend_contract": "Overview, existing schematic",
+      "source_requirements": "Authorized fictional application sources and actual approximate voluntary task input only. Authentic NASA corpus/model/source permissions unchanged; no clinical eligibility inferred.",
+      "privacy_authorization": "Trusted existing server session/RBAC/crew scope; personal history restrictions; no client-granted access.",
+      "integration_dependencies": [
+        "N01 Complete",
+        "N02 Complete",
+        "Existing approved N04 and synthetic N08-N12 frontend portions only"
+      ],
+      "acceptance_evidence": "browser-data-01/report.json: four environment values; browser-07/report.json: graphics/fallback; scenes.test.mjs",
+      "governance_authority": "Owner consolidated N03 directive 2026-11-04; no new sequencing exception; DE-AC20-01 unchanged",
+      "independent_review_requirements": "No scientific review fabricated or waived. Physical machine designation and authentic performance evidence/owner acceptance pending for R60/AC20.",
+      "implemented": true,
+      "authorized_engineering_status": "PASS",
+      "full_original_status": "PASS",
+      "formal_closure_condition": "Preserve this qualified N03 frontend portion; no global scientific/module gate closed."
+    },
+    {
+      "requirement_id": "R27",
+      "authoritative_specification": [
+        "docs/MASTER_PLAN.md:N03 roadmap row",
+        "docs/REQUIREMENTS.md:R27",
+        "research/ASTRA_Deep_Research.md",
+        "docs/N03_COMPLETION.md",
+        "docs/DE_AC20_01.md"
+      ],
+      "official_purpose": "Alert/AI/link presentation",
+      "existing_implementation": "N02 case/alert/link status distinct from model or crew health",
+      "remaining_work_delivered": "Session cleanup and landmark fix retain recorded evidence and restricted modules",
+      "required_inputs": "Recorded N02 state and existing research descriptors",
+      "required_outputs": "Alerts/cases/link status; inactive/UNKNOWN research states",
+      "backend_contract": "N02 cases/comms; existing read-only N11/N12 registries",
+      "frontend_contract": "Health agent, Communications, Crew, Evidence",
+      "source_requirements": "Authorized fictional application sources and actual approximate voluntary task input only. Authentic NASA corpus/model/source permissions unchanged; no clinical eligibility inferred.",
+      "privacy_authorization": "Trusted existing server session/RBAC/crew scope; personal history restrictions; no client-granted access.",
+      "integration_dependencies": [
+        "N01 Complete",
+        "N02 Complete",
+        "Existing approved N04 and synthetic N08-N12 frontend portions only"
+      ],
+      "acceptance_evidence": "browser-07/report.json: actual alert/queue/Earth and inactive research; integration.test.mjs",
+      "governance_authority": "Owner consolidated N03 directive 2026-11-04; no new sequencing exception; DE-AC20-01 unchanged",
+      "independent_review_requirements": "No scientific review fabricated or waived. Physical machine designation and authentic performance evidence/owner acceptance pending for R60/AC20.",
+      "implemented": true,
+      "authorized_engineering_status": "PASS",
+      "full_original_status": "PASS",
+      "formal_closure_condition": "Preserve this qualified N03 frontend portion; no global scientific/module gate closed."
+    },
+    {
+      "requirement_id": "R28",
+      "authoritative_specification": [
+        "docs/MASTER_PLAN.md:N03 roadmap row",
+        "docs/REQUIREMENTS.md:R28",
+        "research/ASTRA_Deep_Research.md",
+        "docs/N03_COMPLETION.md",
+        "docs/DE_AC20_01.md"
+      ],
+      "official_purpose": "Historical timeline/replay",
+      "existing_implementation": "Source-time charts, reliable gaps, Earth cutoff and N08 replay",
+      "remaining_work_delivered": "Session/page ownership, cancellation and cold source recovery qualified",
+      "required_inputs": "Stored crew observations and approved authored waveform",
+      "required_outputs": "Source-bound historic output without source mutation",
+      "backend_contract": "/v1/crew/:id/telemetry; existing waveform APIs",
+      "frontend_contract": "Mission replay and Signal archive",
+      "source_requirements": "Authorized fictional application sources and actual approximate voluntary task input only. Authentic NASA corpus/model/source permissions unchanged; no clinical eligibility inferred.",
+      "privacy_authorization": "Trusted existing server session/RBAC/crew scope; personal history restrictions; no client-granted access.",
+      "integration_dependencies": [
+        "N01 Complete",
+        "N02 Complete",
+        "Existing approved N04 and synthetic N08-N12 frontend portions only"
+      ],
+      "acceptance_evidence": "browser-07/report.json: stored replay/play/pause/cold recovery; n08-frontend.test.mjs",
+      "governance_authority": "Owner consolidated N03 directive 2026-11-04; no new sequencing exception; DE-AC20-01 unchanged",
+      "independent_review_requirements": "No scientific review fabricated or waived. Physical machine designation and authentic performance evidence/owner acceptance pending for R60/AC20.",
+      "implemented": true,
+      "authorized_engineering_status": "PASS",
+      "full_original_status": "PASS",
+      "formal_closure_condition": "Preserve this qualified N03 frontend portion; no global scientific/module gate closed."
+    },
+    {
+      "requirement_id": "R29",
+      "authoritative_specification": [
+        "docs/MASTER_PLAN.md:N03 roadmap row",
+        "docs/REQUIREMENTS.md:R29",
+        "research/ASTRA_Deep_Research.md",
+        "docs/N03_COMPLETION.md",
+        "docs/DE_AC20_01.md"
+      ],
+      "official_purpose": "Responsiveness, reduced motion and accessibility",
+      "existing_implementation": "Accepted N04 layout/navigation, native semantics and focus",
+      "remaining_work_delivered": "Named service region, suspend/resume cleanup; fresh96 reflow/AX/axe/contrast audits",
+      "required_inputs": "Authorized UI state and browser preferences",
+      "required_outputs": "Accessible real controls, errors and stable focus",
+      "backend_contract": "Existing authorized APIs only",
+      "frontend_contract": "All11 existing workspaces and Landing",
+      "source_requirements": "Authorized fictional application sources and actual approximate voluntary task input only. Authentic NASA corpus/model/source permissions unchanged; no clinical eligibility inferred.",
+      "privacy_authorization": "Trusted existing server session/RBAC/crew scope; personal history restrictions; no client-granted access.",
+      "integration_dependencies": [
+        "N01 Complete",
+        "N02 Complete",
+        "Existing approved N04 and synthetic N08-N12 frontend portions only"
+      ],
+      "acceptance_evidence": "browser-07/report.json; browser-zoom-01/report.json; browser-data-01/report.json; scenes/frontend/lifecycle tests",
+      "governance_authority": "Owner consolidated N03 directive 2026-11-04; no new sequencing exception; DE-AC20-01 unchanged",
+      "independent_review_requirements": "No scientific review fabricated or waived. Physical machine designation and authentic performance evidence/owner acceptance pending for R60/AC20.",
+      "implemented": true,
+      "authorized_engineering_status": "PASS",
+      "full_original_status": "PASS",
+      "formal_closure_condition": "Preserve this qualified N03 frontend portion; no global scientific/module gate closed."
+    },
+    {
+      "requirement_id": "R55",
+      "authoritative_specification": [
+        "docs/MASTER_PLAN.md:N03 roadmap row",
+        "docs/REQUIREMENTS.md:R55",
+        "research/ASTRA_Deep_Research.md",
+        "docs/N03_COMPLETION.md",
+        "docs/DE_AC20_01.md"
+      ],
+      "official_purpose": "Voluntary fatigue/cognition UI",
+      "existing_implementation": "Personal browser reaction/fatigue timing and private history",
+      "remaining_work_delivered": "Five real timed trials plus privacy/cleanup/reload controls; no raw cache",
+      "required_inputs": "Actual approximate browser task timing, actor-bound personal record",
+      "required_outputs": "Saved personal task with nonclinical label; no synthetic telemetry mutation",
+      "backend_contract": "/v1/checkins; /v1/crew/:id/checkins",
+      "frontend_contract": "Crew check-in; authorized N10 context only",
+      "source_requirements": "Authorized fictional application sources and actual approximate voluntary task input only. Authentic NASA corpus/model/source permissions unchanged; no clinical eligibility inferred.",
+      "privacy_authorization": "Trusted existing server session/RBAC/crew scope; personal history restrictions; no client-granted access.",
+      "integration_dependencies": [
+        "N01 Complete",
+        "N02 Complete",
+        "Existing approved N04 and synthetic N08-N12 frontend portions only"
+      ],
+      "acceptance_evidence": "browser-07/report.json: five timed trials and cache privacy; n10-frontend.test.mjs; web.test.mjs",
+      "governance_authority": "Owner consolidated N03 directive 2026-11-04; no new sequencing exception; DE-AC20-01 unchanged",
+      "independent_review_requirements": "No scientific review fabricated or waived. Physical machine designation and authentic performance evidence/owner acceptance pending for R60/AC20.",
+      "implemented": true,
+      "authorized_engineering_status": "PASS",
+      "full_original_status": "PASS",
+      "formal_closure_condition": "Preserve this qualified N03 frontend portion; no global scientific/module gate closed."
+    },
+    {
+      "requirement_id": "R60",
+      "authoritative_specification": [
+        "docs/MASTER_PLAN.md:N03 roadmap row",
+        "docs/REQUIREMENTS.md:R60",
+        "research/ASTRA_Deep_Research.md",
+        "docs/N03_COMPLETION.md",
+        "docs/DE_AC20_01.md"
+      ],
+      "official_purpose": "Browser, visual, offline and FPS acceptance",
+      "existing_implementation": "Historical N03/N04 evidence preserved",
+      "remaining_work_delivered": "Fresh workflow, reflow, zoom, bounded accessibility and reference performance; physical collector/validator delivered",
+      "required_inputs": "Existing installed Chrome; isolated fictional stores; separately required physical evidence",
+      "required_outputs": "Inspectable browser/QA records, conservative hardware NOT_VERIFIED",
+      "backend_contract": "No new operational API or model execution",
+      "frontend_contract": "Current existing application only",
+      "source_requirements": "Authorized fictional application sources and actual approximate voluntary task input only. Authentic NASA corpus/model/source permissions unchanged; no clinical eligibility inferred.",
+      "privacy_authorization": "Trusted existing server session/RBAC/crew scope; personal history restrictions; no client-granted access.",
+      "integration_dependencies": [
+        "N01 Complete",
+        "N02 Complete",
+        "Existing approved N04 and synthetic N08-N12 frontend portions only"
+      ],
+      "acceptance_evidence": "browser-07/report.json; browser-zoom-01/report.json; browser-data-01/report.json; measurements.json; qa-summary.json",
+      "governance_authority": "Owner consolidated N03 directive 2026-11-04; no new sequencing exception; DE-AC20-01 unchanged",
+      "independent_review_requirements": "No scientific review fabricated or waived. Physical machine designation and authentic performance evidence/owner acceptance pending for R60/AC20.",
+      "implemented": true,
+      "authorized_engineering_status": "PASS",
+      "full_original_status": "PARTIAL",
+      "formal_closure_condition": "R60 physical AC20/prerequisite/release conditions remain open; N17 physical offline and N06/N26 integrated acceptance are separate."
+    }
+  ]
+}

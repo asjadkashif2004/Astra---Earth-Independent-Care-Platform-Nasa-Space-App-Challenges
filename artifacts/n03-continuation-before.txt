@@ -1,0 +1,30 @@
+✔ N03 F08: Earth projection never substitutes onboard readings, alerts or cases before receipt (415.274565ms)
+✔ N03: quality/freshness/readiness gates override optimistic status without changing canonical provenance (77.261297ms)
+✔ N03: snapshots reject malformed identity/reception data; charts discard stale and held measurements (66.722983ms)
+✔ N03: all six actual profiles navigate to their own values; every existing workspace has real template targets (606.82431ms)
+✔ N03 F08: actual Earth view toggle updates the badge immediately and hides onboard agent cases (492.736959ms)
+✔ N03/N01: received history remains independent when new onboard evidence has not reached Earth (1117.803688ms)
+✔ N03/N01: Astronaut sees one profile, correct counts and no other private crew history requests (149.872667ms)
+✔ N03/N01: actual Viewer/Researcher templates never request raw private check-in history (276.259921ms)
+✔ N03/N02: 202 pending and failed enrichment remain visible; recovery requires one actual human acknowledgement (458.002772ms)
+✔ N03/N02: acknowledgement 409 never claims success or queues a report (413.815222ms)
+✔ N03 F13: health503, lost API and recovery update actual UI instead of asserting availability (451.225546ms)
+✔ N03: late forecast/history responses cannot populate another crew selection (207.007581ms)
+✔ N03: streaming updates preserve focused controls and an unsaved link form (248.663564ms)
+✔ N03: stale session responses and cached protected cases cannot survive session expiry (404.950748ms)
+✔ N03: stopping only the active known scenario preserves imported ownership and existing records (95.915999ms)
+✔ N03: existing scenario start/stop controls submit the actual active ID and recover their enabled state (218.090039ms)
+✔ N03: failed research and history requests render unavailable states without reusing an earlier answer (182.428169ms)
+✖ N03 acceptance: replay and check-in breadcrumbs identify the actual workspace (166.901001ms)
+✖ N03 acceptance: private check-in requests show persistent loading and403 failure without old records (151.62608ms)
+✖ N03 acceptance: empty and failed replay keep the slider disabled and state the actual availability (141.076072ms)
+✖ N03 acceptance: model503 and audit403 do not relabel valid provenance as unavailable (140.792885ms)
+✔ N03 acceptance:400 and403 writes retain entered link settings and never report success (297.162299ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 18
+ℹ fail 4
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7199.52563

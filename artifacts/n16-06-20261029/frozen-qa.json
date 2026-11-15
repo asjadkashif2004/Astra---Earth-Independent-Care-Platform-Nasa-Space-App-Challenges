@@ -1,0 +1,23 @@
+{
+  "tests_sha256": "fb2d50e58e26435735696e821eba2010e41ad21ab67bb7137da03d517e8e707b",
+  "source": "astra.n16.designated-synthetic.elevated.v1",
+  "source_sha256": "4b1a3d8d9bdb832ae54b35a43e4412f18914756984893f8cb181b37955caff73",
+  "caps": {
+    "db": 1048576,
+    "wal": 4194304,
+    "storage": 67108864,
+    "rss": 536870912,
+    "toolMs": 1000,
+    "runMs": 10000,
+    "transactionMs": 250,
+    "cleanupMs": 250,
+    "result": 65536
+  },
+  "tools": [
+    "get_current_vitals",
+    "get_data_quality",
+    "get_personal_baseline",
+    "get_open_risk_events"
+  ],
+  "source_manifest_sha256": "5dab2628827a80b3af1f0a5d37ef64763144aba1510e7b0c7ea653a3f5ac286c"
+}

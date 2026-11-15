@@ -1,0 +1,106 @@
+✔ N11 recomputed outer hash cannot disguise missing metrics (170.810926ms)
+✔ N11 recomputed outer hash cannot disguise forged metric (241.562372ms)
+✔ N11 recomputed outer hash cannot disguise wrong explanation (162.546736ms)
+✔ N11 recomputed outer hash cannot disguise wrong source (169.38539ms)
+✔ N11 recomputed outer hash cannot disguise wrong schema (70.928898ms)
+✔ N11 recomputed outer hash cannot disguise altered baseline (162.46761ms)
+✔ N11 recomputed outer hash cannot disguise promoted model (272.213022ms)
+✔ N11 recomputed outer hash cannot disguise fake clinical conclusion (203.628134ms)
+✔ N11 recomputed outer hash cannot disguise downstream activation (191.630346ms)
+✔ N11 recomputed outer hash cannot disguise missing decisions (159.22429ms)
+✔ N11 recomputed outer hash cannot disguise wrong trained source (163.14295ms)
+✔ N11 recomputed outer hash cannot disguise extra result field (38.295115ms)
+✔ N11 valid genuine result and sufficient/insufficient prior reference controls (219.98705ms)
+✔ N11 mocked wrong phase never becomes committed (114.208151ms)
+✔ N11 mocked duplicate phase never becomes committed (109.453289ms)
+✔ N11 mocked incomplete result never becomes committed (105.679317ms)
+✔ N11 mocked invalid result never becomes committed (98.178601ms)
+✔ N11 mocked serialization failure never becomes committed (98.230249ms)
+✔ N11 mocked exit before result never becomes committed (97.294215ms)
+✔ N11 complete store loss still drains worker and resolves cancellation without claiming durability (100.38471ms)
+✔ N11 missing/truncated/tampered durable trace and result fail closed in disposable stores (2231.305394ms)
+✔ N11 abrupt real-process termination recovers INTERRUPTED without launching a replacement worker (589.323271ms)
+✔ N11 retained capacity counts actual UTF-8 bytes and failed jobs cannot bypass the16-job bound (224.243881ms)
+✔ N11 demo-disabled server denies even an authenticated test session before any job mutation (93.294014ms)
+✔ N11 missing positive worker-online evidence cannot commit a plausible model result (101.08616ms)
+✔ N11 contract rejects version (89.13865ms)
+✔ N11 contract rejects role in JSON (86.89972ms)
+✔ N11 contract rejects SQL (88.79645ms)
+✔ N11 contract rejects path (87.095554ms)
+✔ N11 contract rejects wrong crew (86.426029ms)
+✔ N11 contract rejects bad seed (86.265154ms)
+✔ N11 contract rejects NaN (88.18848ms)
+✔ N11 contract rejects fraction (90.603997ms)
+✔ N11 contract rejects timestamp (86.377919ms)
+✔ N11 contract rejects future (86.969115ms)
+✔ N11 contract rejects policy (85.624797ms)
+✔ N11 contract rejects duplicate exclusion (87.966477ms)
+✔ N11 contract rejects too many exclusions (90.224143ms)
+✔ N11 contract rejects out of range exclusion (87.095823ms)
+✔ N11 contract rejects traversal (87.401425ms)
+✔ N11 contract rejects source substitute (87.588401ms)
+✔ N11 contract rejects empty identity (89.253487ms)
+✔ N11 explicit role/identity controls reject all unauthorized callers (87.847262ms)
+✔ N11 references are learned from eligible past-only observations with immutable exclusions and versions (136.824799ms)
+✔ N11 EWMA exact numeric update, persistence and input rejection (0.862932ms)
+✔ N11 real isolation trees fit reproducibly and distinguish dense points from remote points (28.508713ms)
+✔ N11 missing is UNKNOWN without fabricated values or a clinical review (0.313817ms)
+✔ N11 suspect is UNKNOWN without fabricated values or a clinical review (0.452534ms)
+✔ N11 artifact is UNKNOWN without fabricated values or a clinical review (0.175814ms)
+✔ N11 confidence is UNKNOWN without fabricated values or a clinical review (0.130519ms)
+✔ N11 exercise is UNKNOWN without fabricated values or a clinical review (0.175013ms)
+✔ N11 numeric artifact check is independent of declared artifact labels (0.407695ms)
+✔ N11 units/times/source and out-of-order/stale gaps fail conservatively (0.682207ms)
+✔ N11 dataset rejects wrong generator (56.068457ms)
+✔ N11 dataset rejects group contamination (51.357265ms)
+✔ N11 dataset rejects future (48.118903ms)
+✔ N11 dataset rejects label injection (50.321202ms)
+✔ N11 dataset rejects wrong unit (46.321644ms)
+✔ N11 dataset rejects duplicate (53.030796ms)
+✔ N11 dataset rejects wrong dates (48.656769ms)
+✔ N11 corpus rebuild is deterministic and separates inference features from authored targets (395.799831ms)
+✔ N11 metric zero denominators and UNKNOWN negatives cannot manufacture a passing result (0.329116ms)
+✔ N11 N07 retained provenance remains metadata-only; tamper never touches originals (6.474628ms)
+✔ N11 accept-all/reject-all and static scoring substitutes fail meaningful controls (48.961012ms)
+✔ N11 genuine worker commits a bound report while N02/telemetry/crew/comms stay unchanged (1918.455753ms)
+✔ N11 cancellation/timeout terminate owned workers without false results; repeated cancel is safe (320.496844ms)
+✔ N11 worker startup failure is durable and cannot create a false completion (99.874056ms)
+✔ N11 result/trace persistence failures roll back results and preserve N02 authority (1488.357954ms)
+✖ N11 source/crew bound N08/N09 and nonprivate N10 context are genuine integrations (233.186868ms)
+✔ N11 correction versions and cold process recovery preserve old results without replay (3943.723125ms)
+✔ N11 actual API validates authentication/schema/query/scope and preserves old models API (1534.24966ms)
+✔ N11 existing evidence page mounts real empty/permission/error states without automatic model execution (548.735414ms)
+ℹ tests 72
+ℹ suites 0
+ℹ pass 71
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 20765.102475
+
+✖ failing tests:
+
+test at tests/n11.test.mjs:40:1
+✖ N11 source/crew bound N08/N09 and nonprivate N10 context are genuine integrations (233.186868ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'AVAILABLE'
+  - 'UNKNOWN'
+  
+      at TestContext.<anonymous> (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/n11.test.mjs:41:309)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'AVAILABLE',
+    expected: 'UNKNOWN',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,470 @@
+[
+  {
+    "file": "1x-crew-standard-1-0.png",
+    "path": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\probe-crew-after\\1x-crew-standard-1-0.png",
+    "targets": [
+      {
+        "id": 0,
+        "crew_id": "CREW-01",
+        "metric": "heart_rate",
+        "expected": "67",
+        "rect": {
+          "x": 6.78125,
+          "y": 7.904052734375,
+          "width": 49.125,
+          "height": 66
+        }
+      },
+      {
+        "id": 1,
+        "crew_id": "CREW-01",
+        "metric": "hrv",
+        "expected": "53",
+        "rect": {
+          "x": 649.84375,
+          "y": 7.904052734375,
+          "width": 49.125,
+          "height": 66
+        }
+      },
+      {
+        "id": 2,
+        "crew_id": "CREW-01",
+        "metric": "spo2",
+        "expected": "98.0",
+        "rect": {
+          "x": 1292.90625,
+          "y": 7.904052734375,
+          "width": 83.59375,
+          "height": 66
+        }
+      },
+      {
+        "id": 3,
+        "crew_id": "CREW-01",
+        "metric": "respiratory_rate",
+        "expected": "13",
+        "rect": {
+          "x": 6.78125,
+          "y": 291.904052734375,
+          "width": 49.125,
+          "height": 66
+        }
+      },
+      {
+        "id": 4,
+        "crew_id": "CREW-01",
+        "metric": "sleep_duration",
+        "expected": "7.8",
+        "rect": {
+          "x": 649.84375,
+          "y": 291.904052734375,
+          "width": 59.03125,
+          "height": 66
+        }
+      },
+      {
+        "id": 5,
+        "crew_id": "CREW-01",
+        "metric": "temperature",
+        "expected": "36.7",
+        "rect": {
+          "x": 1292.90625,
+          "y": 291.904052734375,
+          "width": 83.59375,
+          "height": 66
+        }
+      }
+    ]
+  },
+  {
+    "file": "1x-crew-standard-1-1.png",
+    "path": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\probe-crew-after\\1x-crew-standard-1-1.png",
+    "targets": [
+      {
+        "id": 6,
+        "crew_id": "CREW-01",
+        "metric": "heart_rate",
+        "expected": "67",
+        "rect": {
+          "x": 6.78125,
+          "y": 6.4375,
+          "width": 49.125,
+          "height": 66
+        }
+      },
+      {
+        "id": 7,
+        "crew_id": "CREW-01",
+        "metric": "hrv",
+        "expected": "54",
+        "rect": {
+          "x": 649.84375,
+          "y": 6.4375,
+          "width": 49.125,
+          "height": 66
+        }
+      },
+      {
+        "id": 8,
+        "crew_id": "CREW-01",
+        "metric": "spo2",
+        "expected": "97.8",
+        "rect": {
+          "x": 1292.90625,
+          "y": 6.4375,
+          "width": 83.59375,
+          "height": 66
+        }
+      },
+      {
+        "id": 9,
+        "crew_id": "CREW-01",
+        "metric": "respiratory_rate",
+        "expected": "14",
+        "rect": {
+          "x": 6.78125,
+          "y": 290.4375,
+          "width": 49.125,
+          "height": 66
+        }
+      },
+      {
+        "id": 10,
+        "crew_id": "CREW-01",
+        "metric": "sleep_duration",
+        "expected": "7.7",
+        "rect": {
+          "x": 649.84375,
+          "y": 290.4375,
+          "width": 59.03125,
+          "height": 66
+        }
+      },
+      {
+        "id": 11,
+        "crew_id": "CREW-01",
+        "metric": "temperature",
+        "expected": "36.7",
+        "rect": {
+          "x": 1292.90625,
+          "y": 290.4375,
+          "width": 83.59375,
+          "height": 66
+        }
+      }
+    ]
+  },
+  {
+    "file": "1x-crew-standard-1-2.png",
+    "path": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\probe-crew-after\\1x-crew-standard-1-2.png",
+    "targets": [
+      {
+        "id": 12,
+        "crew_id": "CREW-01",
+        "metric": "heart_rate",
+        "expected": "68",
+        "rect": {
+          "x": 6.78125,
+          "y": 6.4375,
+          "width": 49.125,
+          "height": 66
+        }
+      },
+      {
+        "id": 13,
+        "crew_id": "CREW-01",
+        "metric": "hrv",
+        "expected": "54",
+        "rect": {
+          "x": 649.84375,
+          "y": 6.4375,
+          "width": 49.125,
+          "height": 66
+        }
+      },
+      {
+        "id": 14,
+        "crew_id": "CREW-01",
+        "metric": "spo2",
+        "expected": "97.9",
+        "rect": {
+          "x": 1292.90625,
+          "y": 6.4375,
+          "width": 83.59375,
+          "height": 66
+        }
+      },
+      {
+        "id": 15,
+        "crew_id": "CREW-01",
+        "metric": "respiratory_rate",
+        "expected": "13",
+        "rect": {
+          "x": 6.78125,
+          "y": 290.4375,
+          "width": 49.125,
+          "height": 66
+        }
+      },
+      {
+        "id": 16,
+        "crew_id": "CREW-01",
+        "metric": "sleep_duration",
+        "expected": "7.6",
+        "rect": {
+          "x": 649.84375,
+          "y": 290.4375,
+          "width": 59.03125,
+          "height": 66
+        }
+      },
+      {
+        "id": 17,
+        "crew_id": "CREW-01",
+        "metric": "temperature",
+        "expected": "36.7",
+        "rect": {
+          "x": 1292.90625,
+          "y": 290.4375,
+          "width": 83.59375,
+          "height": 66
+        }
+      }
+    ]
+  },
+  {
+    "file": "1x-crew-performance-1-0.png",
+    "path": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\probe-crew-after\\1x-crew-performance-1-0.png",
+    "targets": [
+      {
+        "id": 0,
+        "crew_id": "CREW-01",
+        "metric": "heart_rate",
+        "expected": "68",
+        "rect": {
+          "x": 6.78125,
+          "y": 6.8465576171875,
+          "width": 49.125,
+          "height": 66
+        }
+      },
+      {
+        "id": 1,
+        "crew_id": "CREW-01",
+        "metric": "hrv",
+        "expected": "56",
+        "rect": {
+          "x": 649.84375,
+          "y": 6.8465576171875,
+          "width": 49.125,
+          "height": 66
+        }
+      },
+      {
+        "id": 2,
+        "crew_id": "CREW-01",
+        "metric": "spo2",
+        "expected": "97.9",
+        "rect": {
+          "x": 1292.90625,
+          "y": 6.8465576171875,
+          "width": 83.59375,
+          "height": 66
+        }
+      },
+      {
+        "id": 3,
+        "crew_id": "CREW-01",
+        "metric": "respiratory_rate",
+        "expected": "14",
+        "rect": {
+          "x": 6.78125,
+          "y": 290.8465576171875,
+          "width": 49.125,
+          "height": 66
+        }
+      },
+      {
+        "id": 4,
+        "crew_id": "CREW-01",
+        "metric": "sleep_duration",
+        "expected": "7.8",
+        "rect": {
+          "x": 649.84375,
+          "y": 290.8465576171875,
+          "width": 59.03125,
+          "height": 66
+        }
+      },
+      {
+        "id": 5,
+        "crew_id": "CREW-01",
+        "metric": "temperature",
+        "expected": "36.7",
+        "rect": {
+          "x": 1292.90625,
+          "y": 290.8465576171875,
+          "width": 83.59375,
+          "height": 66
+        }
+      }
+    ]
+  },
+  {
+    "file": "1x-crew-performance-1-1.png",
+    "path": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\probe-crew-after\\1x-crew-performance-1-1.png",
+    "targets": [
+      {
+        "id": 6,
+        "crew_id": "CREW-01",
+        "metric": "heart_rate",
+        "expected": "66",
+        "rect": {
+          "x": 6.78125,
+          "y": 6.4375,
+          "width": 49.125,
+          "height": 66
+        }
+      },
+      {
+        "id": 7,
+        "crew_id": "CREW-01",
+        "metric": "hrv",
+        "expected": "54",
+        "rect": {
+          "x": 649.84375,
+          "y": 6.4375,
+          "width": 49.125,
+          "height": 66
+        }
+      },
+      {
+        "id": 8,
+        "crew_id": "CREW-01",
+        "metric": "spo2",
+        "expected": "98.0",
+        "rect": {
+          "x": 1292.90625,
+          "y": 6.4375,
+          "width": 83.59375,
+          "height": 66
+        }
+      },
+      {
+        "id": 9,
+        "crew_id": "CREW-01",
+        "metric": "respiratory_rate",
+        "expected": "14",
+        "rect": {
+          "x": 6.78125,
+          "y": 290.4375,
+          "width": 49.125,
+          "height": 66
+        }
+      },
+      {
+        "id": 10,
+        "crew_id": "CREW-01",
+        "metric": "sleep_duration",
+        "expected": "7.8",
+        "rect": {
+          "x": 649.84375,
+          "y": 290.4375,
+          "width": 59.03125,
+          "height": 66
+        }
+      },
+      {
+        "id": 11,
+        "crew_id": "CREW-01",
+        "metric": "temperature",
+        "expected": "36.7",
+        "rect": {
+          "x": 1292.90625,
+          "y": 290.4375,
+          "width": 83.59375,
+          "height": 66
+        }
+      }
+    ]
+  },
+  {
+    "file": "1x-crew-performance-1-2.png",
+    "path": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\probe-crew-after\\1x-crew-performance-1-2.png",
+    "targets": [
+      {
+        "id": 12,
+        "crew_id": "CREW-01",
+        "metric": "heart_rate",
+        "expected": "67",
+        "rect": {
+          "x": 6.78125,
+          "y": 6.4375,
+          "width": 49.125,
+          "height": 66
+        }
+      },
+      {
+        "id": 13,
+        "crew_id": "CREW-01",
+        "metric": "hrv",
+        "expected": "54",
+        "rect": {
+          "x": 649.84375,
+          "y": 6.4375,
+          "width": 49.125,
+          "height": 66
+        }
+      },
+      {
+        "id": 14,
+        "crew_id": "CREW-01",
+        "metric": "spo2",
+        "expected": "98.1",
+        "rect": {
+          "x": 1292.90625,
+          "y": 6.4375,
+          "width": 83.59375,
+          "height": 66
+        }
+      },
+      {
+        "id": 15,
+        "crew_id": "CREW-01",
+        "metric": "respiratory_rate",
+        "expected": "13",
+        "rect": {
+          "x": 6.78125,
+          "y": 290.4375,
+          "width": 49.125,
+          "height": 66
+        }
+      },
+      {
+        "id": 16,
+        "crew_id": "CREW-01",
+        "metric": "sleep_duration",
+        "expected": "7.8",
+        "rect": {
+          "x": 649.84375,
+          "y": 290.4375,
+          "width": 59.03125,
+          "height": 66
+        }
+      },
+      {
+        "id": 17,
+        "crew_id": "CREW-01",
+        "metric": "temperature",
+        "expected": "36.7",
+        "rect": {
+          "x": 1292.90625,
+          "y": 290.4375,
+          "width": 83.59375,
+          "height": 66
+        }
+      }
+    ]
+  }
+]

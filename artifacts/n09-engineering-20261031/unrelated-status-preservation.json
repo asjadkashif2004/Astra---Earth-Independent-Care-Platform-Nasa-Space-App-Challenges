@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "unrelated_rows_preserved": 62,
+  "N09_rows_updated": 3,
+  "formal_N09": "In Progress",
+  "other_module_statuses": "UNCHANGED",
+  "independent_scientific_medical_reviews": "UNCHANGED/PENDING",
+  "N15_rule": "INACTIVE",
+  "N15_experimental_prompt": "UNPROMOTED"
+}

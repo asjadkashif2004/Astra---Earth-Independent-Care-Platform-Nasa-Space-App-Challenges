@@ -1,0 +1,41 @@
+﻿{
+    "reports":  [
+                    {
+                        "images":  60,
+                        "directory":  "after-1x-overview",
+                        "numbers":  1320,
+                        "ocr_matched":  1312
+                    },
+                    {
+                        "images":  120,
+                        "directory":  "after-1x-overview-standard-resume",
+                        "numbers":  2640,
+                        "ocr_matched":  2608
+                    },
+                    {
+                        "images":  180,
+                        "directory":  "after-1x-overview-performance",
+                        "numbers":  3960,
+                        "ocr_matched":  3893
+                    },
+                    {
+                        "images":  360,
+                        "directory":  "after-1x-crew",
+                        "numbers":  2160,
+                        "ocr_matched":  2123
+                    },
+                    {
+                        "images":  360,
+                        "directory":  "after-30x-overview",
+                        "numbers":  7920,
+                        "ocr_matched":  7765
+                    },
+                    {
+                        "images":  360,
+                        "directory":  "after-30x-crew",
+                        "numbers":  2160,
+                        "ocr_matched":  2117
+                    }
+                ],
+    "scope":  "Offline OCR only;exact glyph/source/latency assessment remains separate"
+}

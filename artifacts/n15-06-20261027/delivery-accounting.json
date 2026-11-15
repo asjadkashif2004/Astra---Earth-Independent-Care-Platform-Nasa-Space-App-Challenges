@@ -1,0 +1,7 @@
+{
+  "apparent_bytes": 610821544,
+  "allocated_bytes": 612708352,
+  "watermark": 1350000000,
+  "ceiling": 1500000000,
+  "policy": "Monitored not hard quota. Reused model/runtime/cache/corpus/index, retained task scratch/evidence, changed QA/controllers/docs included; conservative duplicate counting."
+}

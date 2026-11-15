@@ -1,0 +1,8 @@
+{
+  "tests": 6,
+  "pass": 6,
+  "fail": 0,
+  "command": "PYTHONDONTWRITEBYTECODE=1 python3 tests/n15_research_runtime_test.py -v",
+  "native_executions": 0,
+  "fixture_note": "case aliases must identify same file, matching contents from another inode rejected"
+}

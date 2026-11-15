@@ -1,0 +1,262 @@
+{
+  "status": "passed",
+  "started_at": "2026-10-30T20:28:40.220Z",
+  "checks": [
+    {
+      "name": "N09 actual Scenario Lab, empty state and malformed configuration feedback",
+      "status": "passed"
+    },
+    {
+      "name": "N09 real N08 synthetic import and verified waveform source selection",
+      "status": "passed"
+    },
+    {
+      "name": "N09 genuine multi-crew startup, canonical generation and actual N02 warning/UNKNOWN",
+      "status": "passed"
+    },
+    {
+      "name": "N09 actual bounded waveform display preserves original source and gaps",
+      "status": "passed"
+    },
+    {
+      "name": "N09 per-crew and run pause/resume keep source clock and staleness honest",
+      "status": "passed"
+    },
+    {
+      "name": "N09 historical source/knowledge cutoffs and append-only exclusions",
+      "status": "passed"
+    },
+    {
+      "name": "N09 dated calibration and consent-preserving N10 context are actual reads",
+      "status": "passed"
+    },
+    {
+      "name": "N09 stop/reset and genuine multiday completion with source-bound N10 records",
+      "status": "passed"
+    },
+    {
+      "name": "N09 real restart recovers exact committed frames without replay or duplicate sources",
+      "status": "passed"
+    },
+    {
+      "name": "N09 API failure/recovery and permission/privacy denial",
+      "status": "passed"
+    },
+    {
+      "name": "N09 four viewports, source/provenance visibility and native keyboard focus",
+      "status": "passed"
+    },
+    {
+      "name": "N09 Earth exclusion, preserved selected-HR controls and no implicit operational integration",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    "n09-multi-crew.png",
+    "n09-waveform.png",
+    "n09-multiday.png",
+    "n09-1920x1080.png",
+    "n09-1366x768.png",
+    "n09-768x1024.png",
+    "n09-390x844.png",
+    "n09-final.png"
+  ],
+  "console_errors": [],
+  "http_errors": [
+    {
+      "url": "http://127.0.0.1:60675/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    },
+    {
+      "url": "http://127.0.0.1:60675/v1/scenarios/cardiorespiratory-drift/start",
+      "status": 422,
+      "stage": "N09 actual Scenario Lab, empty state and malformed configuration feedback"
+    },
+    {
+      "url": "http://127.0.0.1:60675/v1/scenarios/runs/569b0135-1a78-4224-88d9-3f196acf6f8a",
+      "status": 503,
+      "stage": "N09 API failure/recovery and permission/privacy denial"
+    },
+    {
+      "url": "http://127.0.0.1:60675/v1/scenarios/nominal/start",
+      "status": 403,
+      "stage": "N09 API failure/recovery and permission/privacy denial"
+    },
+    {
+      "url": "http://127.0.0.1:60675/v1/scenarios/nominal/start",
+      "status": 403,
+      "stage": "N09 API failure/recovery and permission/privacy denial"
+    }
+  ],
+  "viewports": [
+    {
+      "page": "N09 Scenario Lab",
+      "width": 1920,
+      "height": 1080,
+      "overflow": false
+    },
+    {
+      "page": "N09 Scenario Lab",
+      "width": 1366,
+      "height": 768,
+      "overflow": false
+    },
+    {
+      "page": "N09 Scenario Lab",
+      "width": 768,
+      "height": 1024,
+      "overflow": false
+    },
+    {
+      "page": "N09 Scenario Lab",
+      "width": 390,
+      "height": 844,
+      "overflow": false
+    }
+  ],
+  "caveats": [
+    "No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation.",
+    "Pointer/keyboard/rendered DOM checks and screenshots supplement human visual, text-contrast and assistive-technology review; they do not establish WCAG conformance."
+  ],
+  "N09_browser_start": {
+    "pid": 14668,
+    "source": "Existing installed Chrome, disposable profile",
+    "Node": "v24.21.0",
+    "Node_memory": {
+      "rss": 67694592,
+      "heapTotal": 19963904,
+      "heapUsed": 12758760,
+      "external": 4325031,
+      "arrayBuffers": 212131
+    },
+    "at": "2026-10-30T20:28:40.661Z"
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/156.0.8078.74",
+    "revision": "@d331de35ca8ab1358c7a17e4bd41627d55eaef51",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "jsVersion": "15.6.75.25"
+  },
+  "N09_sleep_correction": {
+    "session_id": "SLEEP-7b0561b8f58b775376a0681053d0ddda",
+    "revision": 2,
+    "earlier_frame_hash": "54630dc925b072361ccecfd906d5adbccd971a5dceaa0f368b09a8b47511f784",
+    "earlier_replay_unchanged": true,
+    "execution": "existing authorized synthetic service, then real UI refresh"
+  },
+  "N09_recovery": {
+    "run_id": "569b0135-1a78-4224-88d9-3f196acf6f8a",
+    "frames": 73,
+    "frame_hash": "803baa501b95f502eaa30cee7ddfd3bd119c9ab0c290feb32e81ec931c8a7c39",
+    "observation_count": 4903,
+    "replayed_ticks": 0
+  },
+  "N09_keyboard": [
+    {
+      "width": 1920,
+      "id": "n09-duration",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 1920,
+      "id": "n09-cadence",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 1920,
+      "id": "",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 1366,
+      "id": "n09-duration",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 1366,
+      "id": "n09-cadence",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 1366,
+      "id": "",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 768,
+      "id": "n09-duration",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 768,
+      "id": "n09-cadence",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 768,
+      "id": "",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 390,
+      "id": "n09-duration",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 390,
+      "id": "n09-cadence",
+      "visible": true,
+      "outline": "3px"
+    },
+    {
+      "width": 390,
+      "id": "",
+      "visible": true,
+      "outline": "3px"
+    }
+  ],
+  "N09_resources": {
+    "elapsed_ms": 25760.595400000002,
+    "Node_memory": {
+      "rss": 269611008,
+      "heapTotal": 175448064,
+      "heapUsed": 46893488,
+      "external": 4946445,
+      "arrayBuffers": 904810
+    },
+    "kernel_max_RSS_KiB": 271900,
+    "SQL_run_count": 3,
+    "observations": 4903,
+    "N16_worker_starts": 0,
+    "model_executions": 0,
+    "external_acquisition": 0
+  },
+  "N09_cleanup": {
+    "application_closed": true,
+    "browser_exited": true,
+    "profile_removed": true,
+    "database_directory_removed": true,
+    "Node_memory": {
+      "rss": 266203136,
+      "heapTotal": 178462720,
+      "heapUsed": 84671800,
+      "external": 4387456,
+      "arrayBuffers": 314301
+    },
+    "N16_designated_starts": 0,
+    "model_executions": 0
+  },
+  "finished_at": "2026-10-30T20:29:07.465Z"
+}

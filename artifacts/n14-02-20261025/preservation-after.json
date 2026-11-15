@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "before": {
+    "groups": {
+      "data/corpus": {
+        "files": 28,
+        "sha256": "a57e671556b1a0d7513b9da418a59ded6b3bc6c6757f0a9a0f9c526e339bf1e7"
+      },
+      "data/research/n14-01": {
+        "files": 5,
+        "sha256": "947f78bcbc395efbb0f31a09468d9bf6150722f1318a8d45fbdc502b9808abcc"
+      },
+      "artifacts/n14-01-20261025": {
+        "files": 66,
+        "sha256": "6c708f397e02b05deb8fd1c2366bef7f3732fd03ea3ebf96319efbdf7259bb75"
+      },
+      "apps": {
+        "files": 32,
+        "sha256": "c29e60a38a07c4329dda7a1a0b1ee76288c93f51f8a4eefd24a71313ea215349"
+      },
+      "packages": {
+        "files": 346,
+        "sha256": "bf0f6f90f05e3085a279bfe9d15f16a8e3ba9876d7ea423295ce85167a59974a"
+      },
+      "knowledge": {
+        "files": 1,
+        "sha256": "c7439e7cbcfbb1349debe57d5015123f4e22fd99243c5a82323276954e18656f"
+      }
+    },
+    "files": {
+      "package.json": "434a4063c50549787fa340bc4d30808f0ba1a905f5e4c378fbcf86d6f94c2f2b",
+      "package-lock.json": "2fa1da04318a3bb88449eaf2093700c41d41068a7ce2c4c91b1c312a9c36b4e7",
+      "services/research-retrieval/encoder.mjs": "93e28abaf637bb482d8f45a841743bb04fc761e6aa2a71bb6501403f65232d79",
+      "services/research-retrieval/contract.mjs": "a7786ebd82aaae3a71f81f5648d49bb855e04c347883d166ff4afd9f77e233b3",
+      "services/research-retrieval/numerics.mjs": "46288d24121b1571ed42b038bac54706a0b0b81c983ae862504700a1805e809b",
+      "services/research-retrieval/offline.mjs": "5ff0cf7a8ad6b3f83b165e07ed70930361e37302fb19f179df599ac9d6b7c3a9",
+      "scripts/n14-experiment.mjs": "1cbb3819f4864f572b14f273ca6e948951bcec78044e366bc7501257a8a6c34d"
+    },
+    "retrieval_prefix_sha256": "2a603f7e5e24072e6713883279c12a996f7a3b4c3b218bce21deb2ec4a7b47a9"
+  },
+  "after": {
+    "groups": {
+      "data/corpus": {
+        "files": 28,
+        "sha256": "a57e671556b1a0d7513b9da418a59ded6b3bc6c6757f0a9a0f9c526e339bf1e7"
+      },
+      "data/research/n14-01": {
+        "files": 5,
+        "sha256": "947f78bcbc395efbb0f31a09468d9bf6150722f1318a8d45fbdc502b9808abcc"
+      },
+      "artifacts/n14-01-20261025": {
+        "files": 66,
+        "sha256": "6c708f397e02b05deb8fd1c2366bef7f3732fd03ea3ebf96319efbdf7259bb75"
+      },
+      "apps": {
+        "files": 32,
+        "sha256": "c29e60a38a07c4329dda7a1a0b1ee76288c93f51f8a4eefd24a71313ea215349"
+      },
+      "packages": {
+        "files": 346,
+        "sha256": "bf0f6f90f05e3085a279bfe9d15f16a8e3ba9876d7ea423295ce85167a59974a"
+      },
+      "knowledge": {
+        "files": 1,
+        "sha256": "c7439e7cbcfbb1349debe57d5015123f4e22fd99243c5a82323276954e18656f"
+      }
+    },
+    "files": {
+      "package.json": "434a4063c50549787fa340bc4d30808f0ba1a905f5e4c378fbcf86d6f94c2f2b",
+      "package-lock.json": "2fa1da04318a3bb88449eaf2093700c41d41068a7ce2c4c91b1c312a9c36b4e7",
+      "services/research-retrieval/encoder.mjs": "93e28abaf637bb482d8f45a841743bb04fc761e6aa2a71bb6501403f65232d79",
+      "services/research-retrieval/contract.mjs": "a7786ebd82aaae3a71f81f5648d49bb855e04c347883d166ff4afd9f77e233b3",
+      "services/research-retrieval/numerics.mjs": "46288d24121b1571ed42b038bac54706a0b0b81c983ae862504700a1805e809b",
+      "services/research-retrieval/offline.mjs": "5ff0cf7a8ad6b3f83b165e07ed70930361e37302fb19f179df599ac9d6b7c3a9",
+      "scripts/n14-experiment.mjs": "1cbb3819f4864f572b14f273ca6e948951bcec78044e366bc7501257a8a6c34d"
+    },
+    "retrieval_prefix_sha256": "2a603f7e5e24072e6713883279c12a996f7a3b4c3b218bce21deb2ec4a7b47a9"
+  },
+  "scope": "File-content/group membership equality; no new byte-hash claim about older non-N14 artifacts; protected configuration and runtime databases excluded."
+}

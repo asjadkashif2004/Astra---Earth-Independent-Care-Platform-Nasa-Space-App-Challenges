@@ -1,0 +1,1119 @@
+[
+  {
+    "name": "llama-b11669/libggml-cpu-cooperlake.so",
+    "type": "file",
+    "size": 1573640,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "b8dd831324fcc7e872ed66f840ead7f3cf7c571904db9b61574fb19ce00a935e",
+    "ELF": true,
+    "needed": [
+      "libggml-base.so.0",
+      "libgomp.so.1",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "ff974c261166e52082b172ba62871a9f6affb7fd"
+    ],
+    "proposed_scope": "OTHER_CPU_VARIANT_REQUIRES_SEPARATE_SELECTION"
+  },
+  {
+    "name": "llama-b11669/libllama-quantize-impl.so",
+    "type": "file",
+    "size": 81840,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "8dd43c1fb15f2e6096237a5cc3aa52694b04978c176f10db28c27d15d6c1adcc",
+    "ELF": true,
+    "needed": [
+      "libllama-common.so.0",
+      "libllama.so.0",
+      "libggml-base.so.0",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [
+      "libllama-quantize-impl.so"
+    ],
+    "build_ids": [
+      "1ed75a5e85833bd4330b7ebee06d2afa367a91ec"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/llama-completion",
+    "type": "file",
+    "size": 15968,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "7119bef261611b26f326f7c4da4dc3fdeb7bb28e2faf1ec392bda7b21215ef52",
+    "ELF": true,
+    "needed": [
+      "libllama-completion-impl.so",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "c931e0e8b74366dd2514e2bb08d0ef73eb0f89bc"
+    ],
+    "proposed_scope": "COMPLETION_SUBSET_CANDIDATE"
+  },
+  {
+    "name": "llama-b11669/llama-tts",
+    "type": "file",
+    "size": 44960,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "a414cb6ced4f89e11b71f7b1c4ccc2f616b43ad0ad58b70e2c08b8b4f1e528ee",
+    "ELF": true,
+    "needed": [
+      "libllama-common.so.0",
+      "libmtmd.so.0",
+      "libllama.so.0",
+      "libggml-base.so.0",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "0e1b0473aa8adac1671d48538167b79838bd1169"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/llama-fit-params",
+    "type": "file",
+    "size": 15968,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "b2ad073a0c093706e5dfdfe2c9864d199ed921e49ea0383a7d0013e2ad8a81c8",
+    "ELF": true,
+    "needed": [
+      "libllama-fit-params-impl.so",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "647ca89423714903b3a03f575a4c33c43d7fe5df"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/libllama-fit-params-impl.so",
+    "type": "file",
+    "size": 39760,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "5531413154cedff558afc2705c61d00a63382b2c1af2d563c0c3534625626ab3",
+    "ELF": true,
+    "needed": [
+      "libllama-common.so.0",
+      "libllama.so.0",
+      "libggml-base.so.0",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [
+      "libllama-fit-params-impl.so"
+    ],
+    "build_ids": [
+      "1829a9218164ed40a163eb17509f5e6df12d43dc"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/LICENSE",
+    "type": "file",
+    "size": 1078,
+    "mode": "0o644",
+    "link": "",
+    "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d",
+    "ELF": false,
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/libllama-server-impl.so",
+    "type": "file",
+    "size": 7533552,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "9119be58c6ffa251c824cdf51677215735d6f4bdab131b17e7e549ff4e1ddcf1",
+    "ELF": true,
+    "needed": [
+      "libllama-common.so.0",
+      "libmtmd.so.0",
+      "libllama.so.0",
+      "libggml.so.0",
+      "libggml-base.so.0",
+      "libssl.so.3",
+      "libcrypto.so.3",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "SONAME": [
+      "libllama-server-impl.so"
+    ],
+    "build_ids": [
+      "198335a7633f4c82b5a1d12b11ab14c678591bf6"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/llama-minicpmv-cli",
+    "type": "file",
+    "size": 16952,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "053ff1b820407b8a1836b0b05d1ffcc91e56b6531f08d9b00b8dfb97a41de294",
+    "ELF": true,
+    "needed": [
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "402f0db616d9020ec04581ac869090d87f0450cc"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/libggml-cpu-piledriver.so",
+    "type": "file",
+    "size": 1347848,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "c8fec8f0f12d6a1a222c35d265618c582eacc3fd933a76dbd65c587114ed65f0",
+    "ELF": true,
+    "needed": [
+      "libggml-base.so.0",
+      "libgomp.so.1",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "3b33630df001bafa5fb40b9981ce48b7f75f9171"
+    ],
+    "proposed_scope": "OTHER_CPU_VARIANT_REQUIRES_SEPARATE_SELECTION"
+  },
+  {
+    "name": "llama-b11669/llama-mtmd-debug",
+    "type": "file",
+    "size": 54376,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "a44b89623ddfab933b51e331a2832167c17ddf207466bb1f8d301606f5e47685",
+    "ELF": true,
+    "needed": [
+      "libllama-common.so.0",
+      "libmtmd.so.0",
+      "libllama.so.0",
+      "libggml.so.0",
+      "libggml-base.so.0",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "192390f33924c2bcc130ceb9fecc636f16c08af6"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/libggml-cpu-zen4.so",
+    "type": "file",
+    "size": 1573640,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "ccb8fff995e04e532dc535eba4d9a84cccd5acd7612326db14710d302f4a8e2f",
+    "ELF": true,
+    "needed": [
+      "libggml-base.so.0",
+      "libgomp.so.1",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "1293d8a975659513537d1d6819698989aadee947"
+    ],
+    "proposed_scope": "OTHER_CPU_VARIANT_REQUIRES_SEPARATE_SELECTION"
+  },
+  {
+    "name": "llama-b11669/llama-gemma3-cli",
+    "type": "file",
+    "size": 16952,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "053ff1b820407b8a1836b0b05d1ffcc91e56b6531f08d9b00b8dfb97a41de294",
+    "ELF": true,
+    "needed": [
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "402f0db616d9020ec04581ac869090d87f0450cc"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/llama-tokenize",
+    "type": "file",
+    "size": 45168,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "10dfb17e6c44071e50df872fd898d77c6c2445cb049324b4ecdbecab52c9495a",
+    "ELF": true,
+    "needed": [
+      "libllama-common.so.0",
+      "libllama.so.0",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "0e39ef8cd56034fc20d915434aa1d81c899d54a2"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/libllama.so.0.7.0",
+    "type": "file",
+    "size": 5095048,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "522213ae6b6019ba8d2673e9254990c52f0a1a5fb047c75bfb93be1b34fad839",
+    "ELF": true,
+    "needed": [
+      "libggml.so.0",
+      "libggml-base.so.0",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "SONAME": [
+      "libllama.so.0"
+    ],
+    "build_ids": [
+      "ed8f53528179aff4d89146a0ef605df187b213fc"
+    ],
+    "proposed_scope": "COMPLETION_SUBSET_CANDIDATE"
+  },
+  {
+    "name": "llama-b11669/libllama-completion-impl.so",
+    "type": "file",
+    "size": 144864,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "ecfa98316c65d1870a6a9108cbf7233bb41d8cf9a2f83b6a0ae0439b79388851",
+    "ELF": true,
+    "needed": [
+      "libllama-common.so.0",
+      "libllama.so.0",
+      "libggml-base.so.0",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [
+      "libllama-completion-impl.so"
+    ],
+    "build_ids": [
+      "c4a53eb273d5442e34e94a0c4e9b0acf3575819b"
+    ],
+    "proposed_scope": "COMPLETION_SUBSET_CANDIDATE"
+  },
+  {
+    "name": "llama-b11669/llama-results",
+    "type": "file",
+    "size": 50264,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "c26f6968ab1c1ad04ef1a7e2feb6139c8802bbb8f1df422c98250aa66170fd0b",
+    "ELF": true,
+    "needed": [
+      "libllama-common.so.0",
+      "libllama.so.0",
+      "libggml-base.so.0",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "0faaa58d68378f47fd94a43544473c2941cbdd87"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/llama-server",
+    "type": "file",
+    "size": 17864,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "3f2b53013c2eb596c8aca87e4740240a41f95bcebf72e61084d6d5ba0db761cc",
+    "ELF": true,
+    "needed": [
+      "libllama-server-impl.so",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "59b4ac7ac48aceca05f0429ef18c9687b035f163"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/libggml-rpc.so",
+    "type": "file",
+    "size": 319776,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "e28139e2d982fb057b88d243e5b2e9d72c52f8b98ae910b1cf751240ef1f9803",
+    "ELF": true,
+    "needed": [
+      "libggml-base.so.0",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "70002db5512d9f5b9a6a760b93a7e41dd7e714f4"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/llama-batched-bench",
+    "type": "file",
+    "size": 15976,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "3b70e62c5c5cf43c8c436622a845ad4b80c01837d6ba3a10c90e39b219bbd2ab",
+    "ELF": true,
+    "needed": [
+      "libllama-batched-bench-impl.so",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "7622e0c7165384e1a9e69f71c31dc1acf955e4bb"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/llama-llava-cli",
+    "type": "file",
+    "size": 16952,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "053ff1b820407b8a1836b0b05d1ffcc91e56b6531f08d9b00b8dfb97a41de294",
+    "ELF": true,
+    "needed": [
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "402f0db616d9020ec04581ac869090d87f0450cc"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/libggml-base.so.0.27.0",
+    "type": "file",
+    "size": 897792,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "2c6ac9a8ae7c1455382c50587fe7d275e0607dfdaec4dcdb18689f31f6174c65",
+    "ELF": true,
+    "needed": [
+      "libgomp.so.1",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [
+      "libggml-base.so.0"
+    ],
+    "build_ids": [
+      "e41b703b266413c80577c8075ab3caa8131f2dfb"
+    ],
+    "proposed_scope": "COMPLETION_SUBSET_CANDIDATE"
+  },
+  {
+    "name": "llama-b11669/libggml-cpu-alderlake.so",
+    "type": "file",
+    "size": 1416296,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "703dc62b89d2a6d700b8d276b3b4ae994caa3a315588b6038b4511549c4a308b",
+    "ELF": true,
+    "needed": [
+      "libggml-base.so.0",
+      "libgomp.so.1",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "4bf96b76a619f64d35853bb7be91819de44a5f16"
+    ],
+    "proposed_scope": "OTHER_CPU_VARIANT_REQUIRES_SEPARATE_SELECTION"
+  },
+  {
+    "name": "llama-b11669/libggml-cpu-sse42.so",
+    "type": "file",
+    "size": 954536,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "81d37cdf3002c8f8f9d44e90fff3d058c4952782aaec1d97bcb375c4db10c659",
+    "ELF": true,
+    "needed": [
+      "libggml-base.so.0",
+      "libgomp.so.1",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "387f2836f92486da3dce4db2d2be0a57e0fc09f1"
+    ],
+    "proposed_scope": "OTHER_CPU_VARIANT_REQUIRES_SEPARATE_SELECTION"
+  },
+  {
+    "name": "llama-b11669/llama-qwen2vl-cli",
+    "type": "file",
+    "size": 16952,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "053ff1b820407b8a1836b0b05d1ffcc91e56b6531f08d9b00b8dfb97a41de294",
+    "ELF": true,
+    "needed": [
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "402f0db616d9020ec04581ac869090d87f0450cc"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/libggml-cpu-haswell.so",
+    "type": "file",
+    "size": 1416296,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "aec8dcc1487baeac0914aa3f6ba747beb868b61cd398e10c40c39addd2f80b64",
+    "ELF": true,
+    "needed": [
+      "libggml-base.so.0",
+      "libgomp.so.1",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "a460beba5dcc1be260338c0faef3fdee19982be2"
+    ],
+    "proposed_scope": "COMPLETION_SUBSET_CANDIDATE"
+  },
+  {
+    "name": "llama-b11669/libllama-perplexity-impl.so",
+    "type": "file",
+    "size": 171912,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "a6e6bedf9708c9c0299b73f818fbf6896a59cdf2225103b814504f45fdf2a18d",
+    "ELF": true,
+    "needed": [
+      "libllama-common.so.0",
+      "libllama.so.0",
+      "libggml-base.so.0",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [
+      "libllama-perplexity-impl.so"
+    ],
+    "build_ids": [
+      "7d8de04b5870db32a5d72769720b7a45e295c511"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/llama",
+    "type": "file",
+    "size": 62376,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "ac97f1e759e69a2a29eb190311d72ad8ef617d67bd2809b1e69ef75698d047c4",
+    "ELF": true,
+    "needed": [
+      "libllama-cli-impl.so",
+      "libllama-completion-impl.so",
+      "libllama-bench-impl.so",
+      "libllama-batched-bench-impl.so",
+      "libllama-fit-params-impl.so",
+      "libllama-quantize-impl.so",
+      "libllama-perplexity-impl.so",
+      "libllama-server-impl.so",
+      "libllama-common.so.0",
+      "libllama.so.0",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "e4e439d9f044440156fdfc03dd287ea697e18904"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/libmtmd.so.0.7.0",
+    "type": "file",
+    "size": 1938632,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "5dc23ec9996bacb9d2791e06848cce30e33901d131a0c61f9cf2b821a587b17e",
+    "ELF": true,
+    "needed": [
+      "libllama.so.0",
+      "libggml.so.0",
+      "libggml-base.so.0",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "SONAME": [
+      "libmtmd.so.0"
+    ],
+    "build_ids": [
+      "41e9d3359991e36a81f9668977084547134eeb33"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/libllama-cli-impl.so",
+    "type": "file",
+    "size": 259600,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "2cdd7c33a556ea1b7f395e9d07ae4e36738fe7bbcb1d9fbe2561d6c611b5d04d",
+    "ELF": true,
+    "needed": [
+      "libllama-server-impl.so",
+      "libllama-common.so.0",
+      "libllama.so.0",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [
+      "libllama-cli-impl.so"
+    ],
+    "build_ids": [
+      "a3da762c454c75ec58943ce3d2d5dc796d30e781"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/libggml-cpu-cannonlake.so",
+    "type": "file",
+    "size": 1565672,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "b194dc5db78e21796342e573643006bcbd5ac3618b9ccbd08537bae0755c6972",
+    "ELF": true,
+    "needed": [
+      "libggml-base.so.0",
+      "libgomp.so.1",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "5d2ebccb3c27ed88b0f4f5017f8e982a55e70038"
+    ],
+    "proposed_scope": "OTHER_CPU_VARIANT_REQUIRES_SEPARATE_SELECTION"
+  },
+  {
+    "name": "llama-b11669/llama-imatrix",
+    "type": "file",
+    "size": 221232,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "f94936055229e72fc49c09508db219b9823506177ad8b92e7d7ac095b9a15dda",
+    "ELF": true,
+    "needed": [
+      "libllama-common.so.0",
+      "libllama.so.0",
+      "libggml-base.so.0",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "e26ef0168521656a7d36eff0d5eefdbbc4beb304"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/llama-perplexity",
+    "type": "file",
+    "size": 15968,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "1c06240ed8594fd377d655aef2dab0865431e3e779c06638474c96b38e6d74a0",
+    "ELF": true,
+    "needed": [
+      "libllama-perplexity-impl.so",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "49051922e1df277a63ea789961437f52e5b90c72"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/libggml-cpu-sapphirerapids.so",
+    "type": "file",
+    "size": 1839968,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "8a5d42ed076b212839c656d1e20731fb17b57b9f7ada0197680c735d70f15de2",
+    "ELF": true,
+    "needed": [
+      "libggml-base.so.0",
+      "libgomp.so.1",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "311c01f98586ea736e0002e21c5f5065e0f09629"
+    ],
+    "proposed_scope": "OTHER_CPU_VARIANT_REQUIRES_SEPARATE_SELECTION"
+  },
+  {
+    "name": "llama-b11669/libllama-common.so.0.7.0",
+    "type": "file",
+    "size": 6499104,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "462f7e9ce1c4c537533f1d4530b37201452599d90128c3c602507b315934e795",
+    "ELF": true,
+    "needed": [
+      "libllama.so.0",
+      "libssl.so.3",
+      "libcrypto.so.3",
+      "libggml.so.0",
+      "libggml-base.so.0",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "SONAME": [
+      "libllama-common.so.0"
+    ],
+    "build_ids": [
+      "e07789063e3a7b9b587a60f5ce98df0c55cfd3cc"
+    ],
+    "proposed_scope": "COMPLETION_SUBSET_CANDIDATE"
+  },
+  {
+    "name": "llama-b11669/llama-cli",
+    "type": "file",
+    "size": 1478376,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "3b7167843ffb0f3677be964dc80cfc59a0167c82e11eff62f6334f66e831f209",
+    "ELF": true,
+    "needed": [
+      "libllama-cli-impl.so",
+      "libssl.so.3",
+      "libcrypto.so.3",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "191168f199d8fdbac28f46d4b2c1d2cc90d6298d"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/libggml-cpu-cascadelake.so",
+    "type": "file",
+    "size": 1577664,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "47b94135ee53c347bf90461ea7f9c3a055fa19b9462ff220c90f4cfdfdf79a5c",
+    "ELF": true,
+    "needed": [
+      "libggml-base.so.0",
+      "libgomp.so.1",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "a6d13c9a88b41af1ae568fea603cb06b469c2c86"
+    ],
+    "proposed_scope": "OTHER_CPU_VARIANT_REQUIRES_SEPARATE_SELECTION"
+  },
+  {
+    "name": "llama-b11669/libggml-cpu-sandybridge.so",
+    "type": "file",
+    "size": 1350944,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "03a91516104c443a739804eef17c2d02bc6fe428b5399813c7e97e2282d29007",
+    "ELF": true,
+    "needed": [
+      "libggml-base.so.0",
+      "libgomp.so.1",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "d5581f93797f759eb2141157dccdce4a8a5a7261"
+    ],
+    "proposed_scope": "OTHER_CPU_VARIANT_REQUIRES_SEPARATE_SELECTION"
+  },
+  {
+    "name": "llama-b11669/libllama-bench-impl.so",
+    "type": "file",
+    "size": 490560,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "aff2161cd84581fcc01f63c0d50755cf214f85e2b7a370df93b32f4d394bce38",
+    "ELF": true,
+    "needed": [
+      "libllama-common.so.0",
+      "libllama.so.0",
+      "libggml.so.0",
+      "libggml-base.so.0",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [
+      "libllama-bench-impl.so"
+    ],
+    "build_ids": [
+      "e7ce137715fb7a2895d7a07b9bf72ba0ce922da9"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/libggml-cpu-ivybridge.so",
+    "type": "file",
+    "size": 1351944,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "d2f79bcea05ed9fcf1b9e25bfaa9725655265cb7d7e0df79ffc9e996d1298820",
+    "ELF": true,
+    "needed": [
+      "libggml-base.so.0",
+      "libgomp.so.1",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "3b1aaab21d39b8f26ca25359d9a4d4f6ca6c82ca"
+    ],
+    "proposed_scope": "OTHER_CPU_VARIANT_REQUIRES_SEPARATE_SELECTION"
+  },
+  {
+    "name": "llama-b11669/llama-mtmd-cli",
+    "type": "file",
+    "size": 96488,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "26582fa62309cc1c95a604d6b4e971dd46cea2073d681d454ce5cb2a57910228",
+    "ELF": true,
+    "needed": [
+      "libllama-common.so.0",
+      "libmtmd.so.0",
+      "libllama.so.0",
+      "libggml.so.0",
+      "libggml-base.so.0",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "d20989cc6411bb5565924429b92002a107c7b282"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/ggml-rpc-server",
+    "type": "file",
+    "size": 195504,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "14c986a62dd4d37672bc5789b01717db590a0dbe6c58219a67c722624621128d",
+    "ELF": true,
+    "needed": [
+      "libggml.so.0",
+      "libggml-base.so.0",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "2b61984c31e9b7b1ff6756c146c8bad8ebbca7a1"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/libllama-batched-bench-impl.so",
+    "type": "file",
+    "size": 48904,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "9b4858393df3784ea6ae5ac8175666220d267fc4122c58bb542fa56e39732918",
+    "ELF": true,
+    "needed": [
+      "libllama-common.so.0",
+      "libllama.so.0",
+      "libggml-base.so.0",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [
+      "libllama-batched-bench-impl.so"
+    ],
+    "build_ids": [
+      "93cfce22192ed867c67cd80ed4c87d788c98fea4"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/libggml.so.0.27.0",
+    "type": "file",
+    "size": 51040,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "8643a58bb37af6fb153e2ea98b48efa227855725ee51c05f4ca76b9867956463",
+    "ELF": true,
+    "needed": [
+      "libggml-base.so.0",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [
+      "libggml.so.0"
+    ],
+    "build_ids": [
+      "097f8f7f2aa564274a7c4460bfc9562fe307f4d5"
+    ],
+    "proposed_scope": "COMPLETION_SUBSET_CANDIDATE"
+  },
+  {
+    "name": "llama-b11669/libggml-cpu-skylakex.so",
+    "type": "file",
+    "size": 1565672,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "b34c8498cfb5368fd968699df833f956adb35432118074b45c962454ca229515",
+    "ELF": true,
+    "needed": [
+      "libggml-base.so.0",
+      "libgomp.so.1",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "9fbecc61e9e928d401f99b628469b960ab397377"
+    ],
+    "proposed_scope": "OTHER_CPU_VARIANT_REQUIRES_SEPARATE_SELECTION"
+  },
+  {
+    "name": "llama-b11669/llama-quantize",
+    "type": "file",
+    "size": 17864,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "f96817a1b89d49d011bfe10bd35248f38d1cbb0a6398bf86c890e59c3a6e68cd",
+    "ELF": true,
+    "needed": [
+      "libllama-quantize-impl.so",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "5e6d9559a4531888ea2aafa3d34dadf297ded689"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/libggml-cpu-icelake.so",
+    "type": "file",
+    "size": 1577664,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "eb79f0f5193557c52480cac8c85deb0f0e6793dd1cbd05793752071e5be10205",
+    "ELF": true,
+    "needed": [
+      "libggml-base.so.0",
+      "libgomp.so.1",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6",
+      "ld-linux-x86-64.so.2"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "be6769fd34a31f762ba038851409b38c498d2cb0"
+    ],
+    "proposed_scope": "OTHER_CPU_VARIANT_REQUIRES_SEPARATE_SELECTION"
+  },
+  {
+    "name": "llama-b11669/llama-gguf-split",
+    "type": "file",
+    "size": 48224,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "d371cd59cb824765a02ba4e9eb2d4590f80d866e47558a3426778d66836f1d33",
+    "ELF": true,
+    "needed": [
+      "libllama-common.so.0",
+      "libllama.so.0",
+      "libggml-base.so.0",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "8e6440cb285e81b17f1ff45e8c47060972af7cdb"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  },
+  {
+    "name": "llama-b11669/libggml-cpu-x64.so",
+    "type": "file",
+    "size": 950536,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "2d1e8194f441ed4263bb28834cf44801a5e5e0a2592732fab5a2adc76b83290f",
+    "ELF": true,
+    "needed": [
+      "libggml-base.so.0",
+      "libgomp.so.1",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "0e102e410963f39c2b74ff96c18cc37fbddd52ab"
+    ],
+    "proposed_scope": "OTHER_CPU_VARIANT_REQUIRES_SEPARATE_SELECTION"
+  },
+  {
+    "name": "llama-b11669/llama-bench",
+    "type": "file",
+    "size": 17864,
+    "mode": "0o755",
+    "link": "",
+    "sha256": "eb5a346dc5117b50de235458fb3f36523f6701e9a304cf6be4503ce39b9a69de",
+    "ELF": true,
+    "needed": [
+      "libllama-bench-impl.so",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "SONAME": [],
+    "build_ids": [
+      "97888f97c43b2d3749a5ad25de23469d587d9878"
+    ],
+    "proposed_scope": "ARCHIVE_ONLY_NOT_PROPOSED_FOR_STARTUP"
+  }
+]

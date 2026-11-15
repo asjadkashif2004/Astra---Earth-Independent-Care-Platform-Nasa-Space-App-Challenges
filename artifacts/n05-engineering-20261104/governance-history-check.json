@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "path": "AGENTS.md",
+      "prior_body_reconstructs_exactly": true,
+      "other_status_rows_unchanged": true,
+      "N05_rows_changed": 0,
+      "prior_sha256": "cc65c45661789aebe19b6a225e28f7d58731154e7768c9d5dd2bd6718bd38966"
+    },
+    {
+      "path": "docs/MASTER_PLAN.md",
+      "prior_body_reconstructs_exactly": true,
+      "other_status_rows_unchanged": true,
+      "N05_rows_changed": 1,
+      "prior_sha256": "d23e49bbaaaa84c6670fe03ae096ffffc5844c46c9161cc958811bd8d4790174"
+    },
+    {
+      "path": "docs/MODULE_TRACKER.md",
+      "prior_body_reconstructs_exactly": true,
+      "other_status_rows_unchanged": true,
+      "N05_rows_changed": 1,
+      "prior_sha256": "af18535ea8838880c830c953e331c48c5db67e679a75c97efc50f5732a9cfca2"
+    },
+    {
+      "path": "docs/CORE_AI_PRIORITY.md",
+      "prior_body_reconstructs_exactly": true,
+      "other_status_rows_unchanged": true,
+      "N05_rows_changed": 1,
+      "prior_sha256": "6e27b330feb21b37c591176ab010a509a16715332e56bc6ecbb4bf1693c66a8a"
+    },
+    {
+      "path": "docs/FEATURE_AUDIT.md",
+      "prior_body_reconstructs_exactly": true,
+      "other_status_rows_unchanged": true,
+      "N05_rows_changed": 0,
+      "prior_sha256": "d03e9fcf31877f5fdfa997b9fdc3dbba395466d607fef4f251b4039a4e3f1f7d"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "prior_body_reconstructs_exactly": true,
+      "other_status_rows_unchanged": true,
+      "N05_rows_changed": 0,
+      "prior_sha256": "fb0207f370c0eb944ebc6d8afc06917424ac443b28d79cd29f77eb4974f75e61"
+    },
+    {
+      "path": "docs/SESSION_HANDOFF.md",
+      "prior_body_reconstructs_exactly": true,
+      "other_status_rows_unchanged": true,
+      "N05_rows_changed": 0,
+      "prior_sha256": "86d869767d2fdfcb0db21ebfa87883380fec595ce1b2d57a4e552dfb9c548184"
+    }
+  ]
+}

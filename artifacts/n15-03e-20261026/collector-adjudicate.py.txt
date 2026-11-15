@@ -1,0 +1,33 @@
+from pathlib import Path
+import json,re,shutil,subprocess
+S=Path('/tmp/astra-n15-03e-static');N=Path('/tmp/astra-n15-03e-metadata')
+def save(n,x):(S/n).write_text(x if isinstance(x,str) else json.dumps(x,indent=2)+'\n')
+receipt=json.loads((N/'security-index-receipt.json').read_text());assert receipt['complete']
+comparison=json.loads((N/'ubuntu-security-selected-packages.json').read_text())
+stanza=next(x for x in (N/'ubuntu-security-Packages.txt').read_text().split('\n\n') if x.startswith('Package: zlib1g\n'))
+save('proposed-patched-zlib-stanza.txt',stanza+'\n')
+installed='1:1.3.dfsg+really1.3.1-1ubuntu3.1';fixed='1:1.3.dfsg+really1.3.1-1ubuntu3.2'
+assert installed in json.loads((S/'host-packages.json').read_text())['stdout']
+assert comparison['rows']['zlib1g'][0]['Version']==fixed
+assert subprocess.run(['dpkg','--compare-versions',installed,'lt',fixed]).returncode==0
+finding={'notice':'USN-8954-1','CVE':'CVE-2026-85091','published':'2026-10-22','review_date':'2026-10-26','official_source':'https://ubuntu.com/security/notices/USN-8954-1','source_method':'Official notice inspected through web tool; this is a reviewer record, not raw publisher-response bytes or a publisher SHA. Exact fixed version independently corroborated by verified signed Packages metadata.','description':'zlib non-blocking-write handling heap-buffer-overflow issue; publisher describes possible denial of service/arbitrary code execution with crafted input','package':'zlib1g:amd64','source_package':'zlib','installed_version':installed,'publisher_fixed_version':fixed,'installed_less_than_fixed':True,'classification':'KNOWN_UNREMEDIATED_PACKAGE_SECURITY_DEPENDENCY','actual_dependency_evidence':'Same current libcrypto.so.3 hash as prior static closure; DT_NEEDED includes libz.so.1; current libz host path/hash and installed zlib1g version recorded.','reachability':'Not tested. No claim that help/version exercises vulnerable non-blocking-write functions, no exploit/PoC/native execution. Package security gate not cleared.','severity':'Not independently established from this USN; no invented score','proposed_fixed_package':comparison['rows']['zlib1g'][0]|{'size':61786,'depends':'libc6 (>= 2.14)','installed_size_KiB':169,'downloaded':False,'actual_package_hash_verified':False},'no_system_or_package_change':True}
+save('zlib-security-finding.json',finding)
+gcc=json.loads((S/'ubuntu-package-assessment.json').read_text())
+gcc['unknowns']=[x for x in gcc['unknowns'] if 'New complete main/' not in x and 'cached package status' not in x]
+gcc['current_signed_index_review']={'complete_index_verified':True,'date':'2026-10-25','libgomp_gcc_runtime_entries':'No entries in this security pocket; not absence of vulnerabilities or full -updates status','libc_OpenSSL':'Installed versions match this signed security pocket, not a full CVE assessment','zlib':'Installed version below security fixed package; concrete current dependency obstacle'}
+save('ubuntu-package-assessment.json',gcc)
+components=json.loads((S/'component-notice-inventory.json').read_text())
+for r in components:
+ if r['component']=='libz.so.1':r['security']='KNOWN_UNREMEDIATED_PACKAGE: USN-8954-1/CVE-2026-85091, installed...ubuntu3.1 below publisher-fixed...ubuntu3.2; no startup-path exploitability claim.'
+save('component-notice-inventory.json',components)
+save('NOTICE_INVENTORY.md','# N15-03E component/notice inventory\n\n'+ '\n\n'.join('## '+r['component']+'\n\nIdentity: '+r['identity']+'\n\nLicense/notices: '+r['license']+'\n\nSecurity: '+r['security'] for r in components)+'\n\nFuture distribution must retain applicable copyright/permission/license/disclaimer/NOTICE texts, identify modifications and provide corresponding source/relinking rights where required. Runtime exceptions do not relicense libraries or waive source obligations. No distribution approval or comprehensive legal certification.\n')
+matrix=(S/'ADVISORY_MATRIX.md').read_text()
+matrix=matrix.replace('| Current Ubuntu native source packages | Unknown complete set | Unknown | InRelease2026-10-25 | UNKNOWN; changed signed index/current source-specific vulnerability snapshot not acquired |','| USN-8954-1 | CVE-2026-85091 | Not independently established | 2026-10-22 | KNOWN_UNREMEDIATED_PACKAGE: installed zlib...ubuntu3.1 below fixed...ubuntu3.2; reachability in help/version untested |\n| Current remaining Ubuntu native source packages | Unknown complete set | Unknown | Verified index2026-10-25 | Full source-specific CVE assessment remains UNKNOWN; matched publication/absent entries do not certify safety |')
+save('ADVISORY_MATRIX.md',matrix)
+decision=json.loads((S/'review-decision.json').read_text())
+shutil.copyfile(S/'review-decision.json',S/'review-decision-before-signed-index.json')
+decision.update(decision='BLOCKED',reason='Concrete required host dependency is below Ubuntu publisher-fixed zlib package version for USN-8954-1/CVE-2026-85091. Other essential current package/CVE and notice closure remains incomplete. This is not a claim that help/version triggers the vulnerability.',zlib_security_finding=finding,source_package_assessment=gcc,new_signed_security_metadata='Fresh October25security release and complete signed main/amd64package index verified; installed zlib below fixed version',startup_qualified=False)
+decision['network']['requests']+=1;decision['network']['complete']+=1;decision['network']['body_bytes']+=receipt['bytes'];decision['network']['elapsed_s']+=receipt['elapsed_s'];decision['network']['scope']='14 finite direct metadata requests; 13 original URLs plus one signed-index follow-up, each once. Official USN web inspection/discovery is separate and not included in collector body/time totals.'
+decision['smallest_next_proposal']='One separately approved isolated staging/static-qualification task for exact Ubuntu zlib1g:amd64=1:1.3.dfsg+really1.3.1-1ubuntu3.2, publisher size61786/SHA10084666f747247550c3e82f9a12cbfd9184c19241a42eb34d8893ecb8e03b35, with explicit acquisition/storage bounds; preserve runtime/libgomp pins, no OS install/native/model execution. This resolves the concrete dependency obstacle only; finish remaining current-source advisory/notice checks before a separately approved startup.'
+save('review-decision.json',decision)
+print(json.dumps({'decision':decision['decision'],'blocker':finding['CVE'],'installed':installed,'fixed':fixed,'metadata':decision['network'],'startup_qualified':False,'N15':'Not Started'}))

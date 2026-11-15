@@ -1,0 +1,11 @@
+{
+  "args": [
+    "readelf",
+    "--notes",
+    "--wide",
+    "/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669/libllama-perplexity-impl.so"
+  ],
+  "exit_code": 0,
+  "stdout": "\nDisplaying notes found in: .note.gnu.property\n  Owner                Data size \tDescription\n  GNU                  0x00000010\tNT_GNU_PROPERTY_TYPE_0\t      Properties: x86 feature: IBT, SHSTK\n\nDisplaying notes found in: .note.gnu.build-id\n  Owner                Data size \tDescription\n  GNU                  0x00000014\tNT_GNU_BUILD_ID (unique build ID bitstring)\t    Build ID: 7d8de04b5870db32a5d72769720b7a45e295c511\n",
+  "stderr": ""
+}

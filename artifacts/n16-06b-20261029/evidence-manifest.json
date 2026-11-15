@@ -1,0 +1,99 @@
+{
+  "schema_version": "astra.n16-06b.evidence.v1",
+  "outcome": "BLOCKED_PREFLIGHT_ZERO_STARTUPS",
+  "notice": "Preflight/static evidence only, no actual guard/mount/resource qualification or current database byte hash; manifest excludes itself.",
+  "files": {
+    "AGENTS.md": {
+      "bytes": 93309,
+      "sha256": "30de4c4ae494e8ac8eb16668a2d95946b152d4e27a1cd9dc9d68c6ed4f7bd3c8"
+    },
+    "artifacts/n16-06b-20261029/final-validation.json": {
+      "bytes": 2088,
+      "sha256": "687615eaaea316b8f1b476333560598100adb75fc1e788ca31a81b51867eadf6"
+    },
+    "artifacts/n16-06b-20261029/outcome.json": {
+      "bytes": 3428,
+      "sha256": "9e210398f30b58d5aabf1e06f52f63eed61d4f49764769cebe534812ba9f6a85"
+    },
+    "artifacts/n16-06b-20261029/preflight-metadata.json": {
+      "bytes": 1416,
+      "sha256": "b5e9663e0ae469d0ba1645498bd4e3c66e153002006f7952e446325f95b26645"
+    },
+    "artifacts/n16-06b-20261029/preflight-qa.txt": {
+      "bytes": 4160,
+      "sha256": "7e3a6bef8900689e8c55d73f93f3a9675cb786cc8fc6efb63182c1d02c319c65"
+    },
+    "artifacts/n16-06b-20261029/preflight-stderr.txt": {
+      "bytes": 56,
+      "sha256": "9b5588e69846d5acbc9723612d10760e17ef7bb9e8c860af7021b567ad336f38"
+    },
+    "artifacts/n16-06b-20261029/preflight-stdout.json": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "artifacts/n16-06b-20261029/preservation-before.json": {
+      "bytes": 1066688,
+      "sha256": "1f099093f793c5571e949096afe15377e7b287feb5f23460010941e21a53dee4"
+    },
+    "artifacts/n16-06b-20261029/probe-plan.json": {
+      "bytes": 1364,
+      "sha256": "092d8f2c5f7bdc83248fcdd558760d09ecf7296519ab345aabf6882e999b2ce0"
+    },
+    "artifacts/n16-06b-20261029/source-snapshots/n16-containment-only.mjs.txt": {
+      "bytes": 3439,
+      "sha256": "e1062bb3fb054f5bc22a67802e60ead738110885073db57531e5771df5244094"
+    },
+    "artifacts/n16-06b-20261029/source-snapshots/n16-containment-probe.mjs.txt": {
+      "bytes": 17327,
+      "sha256": "bafd9060a49fab11a60d85993884dcd9d138f1e626ccda33be370a0f7f0b1b7c"
+    },
+    "artifacts/n16-06b-20261029/stopped.json": {
+      "bytes": 189,
+      "sha256": "daae400b6f241abda7e0cddee1f50e111541bbe0defd305db59c6ae9f3a1be10"
+    },
+    "artifacts/n16-06b-20261029/syntax.json": {
+      "bytes": 321,
+      "sha256": "56fdae21cace392818bd9c1e95fb4b3c3861848f1e79a158d202bdf61212f79f"
+    },
+    "docs/CORE_AI_PRIORITY.md": {
+      "bytes": 50273,
+      "sha256": "dbb0f2404f361f070f1ebd748f5c171aec15128a7a938e5a9729e36d42442a29"
+    },
+    "docs/DECISIONS.md": {
+      "bytes": 78477,
+      "sha256": "9a252b1559132c33191b8dceb13ca19e697b16c110d9427cd926096e42061724"
+    },
+    "docs/DE_N16_DESIGNATED_READ_01.md": {
+      "bytes": 10238,
+      "sha256": "4512a275811644b5e01f8b9a96228307c3bedff013a7c9fc333fa8b33db0fd8d"
+    },
+    "docs/FEATURE_AUDIT.md": {
+      "bytes": 135134,
+      "sha256": "65c623e4fc1ed20f65f524911362fddda4715e3a828ebd78d73cf01bd6b76ec4"
+    },
+    "docs/MASTER_PLAN.md": {
+      "bytes": 76612,
+      "sha256": "8631224012272697bd11015b51c1811fe91b8ccaa90faeb1fd2450a560bd7caf"
+    },
+    "docs/MODULE_TRACKER.md": {
+      "bytes": 158774,
+      "sha256": "cbfd6108545626104f0a06c1c42856246e2652eb12e884dbcda7fe8046dacaee"
+    },
+    "docs/N16_06B_COMPLETION.md": {
+      "bytes": 6220,
+      "sha256": "3cd7ca6b84606befff2f0a6eab1f9cc7b75515fb36233fdf2d135f62d63664ad"
+    },
+    "docs/SESSION_HANDOFF.md": {
+      "bytes": 382217,
+      "sha256": "95cfdbeb388455e889267a9f7c32e57c2e22111d47afca66b4615725e1398775"
+    },
+    "scripts/n16-containment-only.mjs": {
+      "bytes": 3439,
+      "sha256": "e1062bb3fb054f5bc22a67802e60ead738110885073db57531e5771df5244094"
+    },
+    "scripts/n16-containment-probe.mjs": {
+      "bytes": 17327,
+      "sha256": "bafd9060a49fab11a60d85993884dcd9d138f1e626ccda33be370a0f7f0b1b7c"
+    }
+  }
+}

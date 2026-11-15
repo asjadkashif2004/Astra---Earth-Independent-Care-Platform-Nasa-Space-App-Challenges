@@ -1,0 +1,682 @@
+<div class="eyebrow">SYNTHETIC / FIXTURE DEMO · ARCHIVED</div><h2 id="fixture-trace-heading">Recorded read-only tool execution</h2><p>Saved N16-01 fixture reads. No tools run when this panel opens. No LLM selected or executed these tools. Separate from operational cases, N02 alerts and Earth delivery.</p><p role="status" aria-live="polite" aria-atomic="true"><strong>VERIFIED ARCHIVE</strong> · Four recorded calls · recovery COMPLETE · replayed calls: 0</p>
+    <dl class="fixture-trace-meta"><dt>Verified crew scope</dt><dd>CREW-03 · onboard fixture only</dd>
+    <dt>Saved execution (host UTC)</dt><dd>2026-10-28T07:36:48.532Z to 2026-10-28T07:36:49.582Z</dd>
+    <dt>Recorded mission as_of</dt><dd>2026-11-14T11:00:00.000Z · fixed simulation clock; not current telemetry</dd>
+    <dt>Earth reception</dt><dd>Not recorded · onboard archive; not delivered Earth evidence</dd>
+    <dt>Run ID</dt><dd>9392250d-93a4-45d4-a871-0dd590190774</dd>
+    <dt>Fixture SHA-256</dt><dd>7ee532bcf759f051ad0cd0f4932493770802e19df1b4dc67c052433f85da3774</dd></dl>
+    <ol class="fixture-trace-calls"><li><article aria-labelledby="fixture-call-01"><h3 id="fixture-call-01">get_current_vitals</h3>
+      <p><span class="tag">Execution: COMPLETED</span> <span class="tag">Data: KNOWN</span></p><p>heart_rate: 103 /min · respiratory_rate: 14 /min · spo2: 98.1 %</p>
+      <p class="evidence-foot">Recorded start 2026-10-28T07:36:48.586Z · end 2026-10-28T07:36:48.837Z · 231.478 ms</p>
+      <details><summary>Inspect get_current_vitals result and provenance</summary><pre tabindex="0" role="region" aria-label="get_current_vitals recorded provenance">{
+  &quot;validated_arguments&quot;: {
+    &quot;crew_id&quot;: &quot;CREW-03&quot;,
+    &quot;metrics&quot;: [
+      &quot;heart_rate&quot;,
+      &quot;respiratory_rate&quot;,
+      &quot;spo2&quot;
+    ]
+  },
+  &quot;result&quot;: {
+    &quot;call_id&quot;: &quot;call-01&quot;,
+    &quot;clinical_support&quot;: false,
+    &quot;crew_id&quot;: &quot;CREW-03&quot;,
+    &quot;data&quot;: {
+      &quot;items&quot;: [
+        {
+          &quot;data_status&quot;: &quot;KNOWN&quot;,
+          &quot;metric&quot;: &quot;heart_rate&quot;,
+          &quot;provenance&quot;: {
+            &quot;age_ms&quot;: 0,
+            &quot;event_id&quot;: &quot;N16:elevated:CREW-03:heart_rate&quot;,
+            &quot;freshness&quot;: &quot;fresh&quot;,
+            &quot;integrity&quot;: &quot;verified&quot;,
+            &quot;observed_at&quot;: &quot;2026-11-14T11:00:00.000Z&quot;,
+            &quot;quality&quot;: {
+              &quot;artifact&quot;: false,
+              &quot;confidence&quot;: 0.99,
+              &quot;status&quot;: &quot;good&quot;
+            },
+            &quot;reason&quot;: null,
+            &quot;received_ts&quot;: &quot;2026-11-14T11:00:00.000Z&quot;,
+            &quot;record_sha256&quot;: &quot;ed64e67d97d406b701d51d7bf3f057ab688d8594eccdcf0c8d3962fe62d8b79c&quot;,
+            &quot;source&quot;: {
+              &quot;clock&quot;: &quot;mission_simulation&quot;,
+              &quot;device_id&quot;: &quot;FIXTURE-CREW-03&quot;,
+              &quot;kind&quot;: &quot;simulator&quot;,
+              &quot;runtime_hz&quot;: 1,
+              &quot;sampling_hz&quot;: 1
+            },
+            &quot;source_provenance&quot;: {
+              &quot;generator_version&quot;: &quot;n16-authored-fixture-v1&quot;,
+              &quot;scenario_id&quot;: &quot;n16-fixture-elevated&quot;,
+              &quot;seed&quot;: 42017,
+              &quot;synthetic&quot;: true
+            },
+            &quot;status&quot;: &quot;KNOWN&quot;
+          },
+          &quot;reason&quot;: null,
+          &quot;unit&quot;: &quot;/min&quot;,
+          &quot;value&quot;: 103
+        },
+        {
+          &quot;data_status&quot;: &quot;KNOWN&quot;,
+          &quot;metric&quot;: &quot;respiratory_rate&quot;,
+          &quot;provenance&quot;: {
+            &quot;age_ms&quot;: 0,
+            &quot;event_id&quot;: &quot;N16:elevated:CREW-03:respiratory_rate&quot;,
+            &quot;freshness&quot;: &quot;fresh&quot;,
+            &quot;integrity&quot;: &quot;verified&quot;,
+            &quot;observed_at&quot;: &quot;2026-11-14T11:00:00.000Z&quot;,
+            &quot;quality&quot;: {
+              &quot;artifact&quot;: false,
+              &quot;confidence&quot;: 0.99,
+              &quot;status&quot;: &quot;good&quot;
+            },
+            &quot;reason&quot;: null,
+            &quot;received_ts&quot;: &quot;2026-11-14T11:00:00.000Z&quot;,
+            &quot;record_sha256&quot;: &quot;a5b5b95243eca804df080554e8b2c7aa81d436ad49cbf44cad1d5a61eb6ae5c4&quot;,
+            &quot;source&quot;: {
+              &quot;clock&quot;: &quot;mission_simulation&quot;,
+              &quot;device_id&quot;: &quot;FIXTURE-CREW-03&quot;,
+              &quot;kind&quot;: &quot;simulator&quot;,
+              &quot;runtime_hz&quot;: 1,
+              &quot;sampling_hz&quot;: 1
+            },
+            &quot;source_provenance&quot;: {
+              &quot;generator_version&quot;: &quot;n16-authored-fixture-v1&quot;,
+              &quot;scenario_id&quot;: &quot;n16-fixture-elevated&quot;,
+              &quot;seed&quot;: 42017,
+              &quot;synthetic&quot;: true
+            },
+            &quot;status&quot;: &quot;KNOWN&quot;
+          },
+          &quot;reason&quot;: null,
+          &quot;unit&quot;: &quot;/min&quot;,
+          &quot;value&quot;: 14
+        },
+        {
+          &quot;data_status&quot;: &quot;KNOWN&quot;,
+          &quot;metric&quot;: &quot;spo2&quot;,
+          &quot;provenance&quot;: {
+            &quot;age_ms&quot;: 0,
+            &quot;event_id&quot;: &quot;N16:elevated:CREW-03:spo2&quot;,
+            &quot;freshness&quot;: &quot;fresh&quot;,
+            &quot;integrity&quot;: &quot;verified&quot;,
+            &quot;observed_at&quot;: &quot;2026-11-14T11:00:00.000Z&quot;,
+            &quot;quality&quot;: {
+              &quot;artifact&quot;: false,
+              &quot;confidence&quot;: 0.99,
+              &quot;status&quot;: &quot;good&quot;
+            },
+            &quot;reason&quot;: null,
+            &quot;received_ts&quot;: &quot;2026-11-14T11:00:00.000Z&quot;,
+            &quot;record_sha256&quot;: &quot;2693e5aae6d20eeff95e7c0e65e044c3c2181acc07ff07a9094fc31393c5729a&quot;,
+            &quot;source&quot;: {
+              &quot;clock&quot;: &quot;mission_simulation&quot;,
+              &quot;device_id&quot;: &quot;FIXTURE-CREW-03&quot;,
+              &quot;kind&quot;: &quot;simulator&quot;,
+              &quot;runtime_hz&quot;: 1,
+              &quot;sampling_hz&quot;: 1
+            },
+            &quot;source_provenance&quot;: {
+              &quot;generator_version&quot;: &quot;n16-authored-fixture-v1&quot;,
+              &quot;scenario_id&quot;: &quot;n16-fixture-elevated&quot;,
+              &quot;seed&quot;: 42017,
+              &quot;synthetic&quot;: true
+            },
+            &quot;status&quot;: &quot;KNOWN&quot;
+          },
+          &quot;reason&quot;: null,
+          &quot;unit&quot;: &quot;%&quot;,
+          &quot;value&quot;: 98.1
+        }
+      ]
+    },
+    &quot;data_status&quot;: &quot;KNOWN&quot;,
+    &quot;duration_ms&quot;: 231.478205,
+    &quot;execution_status&quot;: &quot;COMPLETED&quot;,
+    &quot;inference_performed&quot;: false,
+    &quot;mission_id&quot;: &quot;MARS-DEMO-01&quot;,
+    &quot;provenance&quot;: {
+      &quot;adapter_version&quot;: &quot;astra.n16.read-tools.v1&quot;,
+      &quot;as_of&quot;: &quot;2026-11-14T11:00:00.000Z&quot;,
+      &quot;clock&quot;: &quot;mission_simulation&quot;,
+      &quot;earth_receipt_reason&quot;: &quot;onboard_only&quot;,
+      &quot;earth_received_at&quot;: null,
+      &quot;fixture_id&quot;: &quot;elevated&quot;,
+      &quot;fixture_sha256&quot;: &quot;7ee532bcf759f051ad0cd0f4932493770802e19df1b4dc67c052433f85da3774&quot;,
+      &quot;scenario_id&quot;: &quot;n16-fixture-elevated&quot;,
+      &quot;scenario_run_id&quot;: &quot;N16-FIXTURE-ELEVATED&quot;,
+      &quot;view&quot;: &quot;onboard&quot;
+    },
+    &quot;read_receipt&quot;: {
+      &quot;actual_file_reads&quot;: 1,
+      &quot;bytes_read&quot;: 27196,
+      &quot;fixture_sha256&quot;: &quot;7ee532bcf759f051ad0cd0f4932493770802e19df1b4dc67c052433f85da3774&quot;,
+      &quot;thread_id&quot;: 1
+    },
+    &quot;research_only&quot;: true,
+    &quot;run_id&quot;: &quot;9392250d-93a4-45d4-a871-0dd590190774&quot;,
+    &quot;schema_version&quot;: &quot;astra.n16.read-result.v1&quot;,
+    &quot;synthetic&quot;: true,
+    &quot;tool&quot;: &quot;get_current_vitals&quot;
+  }
+}</pre></details></article></li><li><article aria-labelledby="fixture-call-02"><h3 id="fixture-call-02">get_data_quality</h3>
+      <p><span class="tag">Execution: COMPLETED</span> <span class="tag">Data: KNOWN</span></p><p>heart_rate: good, fresh at recorded mission time · respiratory_rate: good, fresh at recorded mission time · spo2: good, fresh at recorded mission time</p>
+      <p class="evidence-foot">Recorded start 2026-10-28T07:36:48.883Z · end 2026-10-28T07:36:49.091Z · 188.261 ms</p>
+      <details><summary>Inspect get_data_quality result and provenance</summary><pre tabindex="0" role="region" aria-label="get_data_quality recorded provenance">{
+  &quot;validated_arguments&quot;: {
+    &quot;crew_id&quot;: &quot;CREW-03&quot;,
+    &quot;metrics&quot;: [
+      &quot;heart_rate&quot;,
+      &quot;respiratory_rate&quot;,
+      &quot;spo2&quot;
+    ]
+  },
+  &quot;result&quot;: {
+    &quot;call_id&quot;: &quot;call-02&quot;,
+    &quot;clinical_support&quot;: false,
+    &quot;crew_id&quot;: &quot;CREW-03&quot;,
+    &quot;data&quot;: {
+      &quot;items&quot;: [
+        {
+          &quot;data_status&quot;: &quot;KNOWN&quot;,
+          &quot;freshness&quot;: &quot;fresh&quot;,
+          &quot;integrity&quot;: &quot;verified&quot;,
+          &quot;metric&quot;: &quot;heart_rate&quot;,
+          &quot;provenance&quot;: {
+            &quot;age_ms&quot;: 0,
+            &quot;event_id&quot;: &quot;N16:elevated:CREW-03:heart_rate&quot;,
+            &quot;freshness&quot;: &quot;fresh&quot;,
+            &quot;integrity&quot;: &quot;verified&quot;,
+            &quot;observed_at&quot;: &quot;2026-11-14T11:00:00.000Z&quot;,
+            &quot;quality&quot;: {
+              &quot;artifact&quot;: false,
+              &quot;confidence&quot;: 0.99,
+              &quot;status&quot;: &quot;good&quot;
+            },
+            &quot;reason&quot;: null,
+            &quot;received_ts&quot;: &quot;2026-11-14T11:00:00.000Z&quot;,
+            &quot;record_sha256&quot;: &quot;ed64e67d97d406b701d51d7bf3f057ab688d8594eccdcf0c8d3962fe62d8b79c&quot;,
+            &quot;source&quot;: {
+              &quot;clock&quot;: &quot;mission_simulation&quot;,
+              &quot;device_id&quot;: &quot;FIXTURE-CREW-03&quot;,
+              &quot;kind&quot;: &quot;simulator&quot;,
+              &quot;runtime_hz&quot;: 1,
+              &quot;sampling_hz&quot;: 1
+            },
+            &quot;source_provenance&quot;: {
+              &quot;generator_version&quot;: &quot;n16-authored-fixture-v1&quot;,
+              &quot;scenario_id&quot;: &quot;n16-fixture-elevated&quot;,
+              &quot;seed&quot;: 42017,
+              &quot;synthetic&quot;: true
+            },
+            &quot;status&quot;: &quot;KNOWN&quot;
+          },
+          &quot;quality&quot;: {
+            &quot;artifact&quot;: false,
+            &quot;confidence&quot;: 0.99,
+            &quot;status&quot;: &quot;good&quot;
+          },
+          &quot;reason&quot;: null,
+          &quot;unit&quot;: &quot;/min&quot;,
+          &quot;value&quot;: null
+        },
+        {
+          &quot;data_status&quot;: &quot;KNOWN&quot;,
+          &quot;freshness&quot;: &quot;fresh&quot;,
+          &quot;integrity&quot;: &quot;verified&quot;,
+          &quot;metric&quot;: &quot;respiratory_rate&quot;,
+          &quot;provenance&quot;: {
+            &quot;age_ms&quot;: 0,
+            &quot;event_id&quot;: &quot;N16:elevated:CREW-03:respiratory_rate&quot;,
+            &quot;freshness&quot;: &quot;fresh&quot;,
+            &quot;integrity&quot;: &quot;verified&quot;,
+            &quot;observed_at&quot;: &quot;2026-11-14T11:00:00.000Z&quot;,
+            &quot;quality&quot;: {
+              &quot;artifact&quot;: false,
+              &quot;confidence&quot;: 0.99,
+              &quot;status&quot;: &quot;good&quot;
+            },
+            &quot;reason&quot;: null,
+            &quot;received_ts&quot;: &quot;2026-11-14T11:00:00.000Z&quot;,
+            &quot;record_sha256&quot;: &quot;a5b5b95243eca804df080554e8b2c7aa81d436ad49cbf44cad1d5a61eb6ae5c4&quot;,
+            &quot;source&quot;: {
+              &quot;clock&quot;: &quot;mission_simulation&quot;,
+              &quot;device_id&quot;: &quot;FIXTURE-CREW-03&quot;,
+              &quot;kind&quot;: &quot;simulator&quot;,
+              &quot;runtime_hz&quot;: 1,
+              &quot;sampling_hz&quot;: 1
+            },
+            &quot;source_provenance&quot;: {
+              &quot;generator_version&quot;: &quot;n16-authored-fixture-v1&quot;,
+              &quot;scenario_id&quot;: &quot;n16-fixture-elevated&quot;,
+              &quot;seed&quot;: 42017,
+              &quot;synthetic&quot;: true
+            },
+            &quot;status&quot;: &quot;KNOWN&quot;
+          },
+          &quot;quality&quot;: {
+            &quot;artifact&quot;: false,
+            &quot;confidence&quot;: 0.99,
+            &quot;status&quot;: &quot;good&quot;
+          },
+          &quot;reason&quot;: null,
+          &quot;unit&quot;: &quot;/min&quot;,
+          &quot;value&quot;: null
+        },
+        {
+          &quot;data_status&quot;: &quot;KNOWN&quot;,
+          &quot;freshness&quot;: &quot;fresh&quot;,
+          &quot;integrity&quot;: &quot;verified&quot;,
+          &quot;metric&quot;: &quot;spo2&quot;,
+          &quot;provenance&quot;: {
+            &quot;age_ms&quot;: 0,
+            &quot;event_id&quot;: &quot;N16:elevated:CREW-03:spo2&quot;,
+            &quot;freshness&quot;: &quot;fresh&quot;,
+            &quot;integrity&quot;: &quot;verified&quot;,
+            &quot;observed_at&quot;: &quot;2026-11-14T11:00:00.000Z&quot;,
+            &quot;quality&quot;: {
+              &quot;artifact&quot;: false,
+              &quot;confidence&quot;: 0.99,
+              &quot;status&quot;: &quot;good&quot;
+            },
+            &quot;reason&quot;: null,
+            &quot;received_ts&quot;: &quot;2026-11-14T11:00:00.000Z&quot;,
+            &quot;record_sha256&quot;: &quot;2693e5aae6d20eeff95e7c0e65e044c3c2181acc07ff07a9094fc31393c5729a&quot;,
+            &quot;source&quot;: {
+              &quot;clock&quot;: &quot;mission_simulation&quot;,
+              &quot;device_id&quot;: &quot;FIXTURE-CREW-03&quot;,
+              &quot;kind&quot;: &quot;simulator&quot;,
+              &quot;runtime_hz&quot;: 1,
+              &quot;sampling_hz&quot;: 1
+            },
+            &quot;source_provenance&quot;: {
+              &quot;generator_version&quot;: &quot;n16-authored-fixture-v1&quot;,
+              &quot;scenario_id&quot;: &quot;n16-fixture-elevated&quot;,
+              &quot;seed&quot;: 42017,
+              &quot;synthetic&quot;: true
+            },
+            &quot;status&quot;: &quot;KNOWN&quot;
+          },
+          &quot;quality&quot;: {
+            &quot;artifact&quot;: false,
+            &quot;confidence&quot;: 0.99,
+            &quot;status&quot;: &quot;good&quot;
+          },
+          &quot;reason&quot;: null,
+          &quot;unit&quot;: &quot;%&quot;,
+          &quot;value&quot;: null
+        }
+      ]
+    },
+    &quot;data_status&quot;: &quot;KNOWN&quot;,
+    &quot;duration_ms&quot;: 188.2612610000001,
+    &quot;execution_status&quot;: &quot;COMPLETED&quot;,
+    &quot;inference_performed&quot;: false,
+    &quot;mission_id&quot;: &quot;MARS-DEMO-01&quot;,
+    &quot;provenance&quot;: {
+      &quot;adapter_version&quot;: &quot;astra.n16.read-tools.v1&quot;,
+      &quot;as_of&quot;: &quot;2026-11-14T11:00:00.000Z&quot;,
+      &quot;clock&quot;: &quot;mission_simulation&quot;,
+      &quot;earth_receipt_reason&quot;: &quot;onboard_only&quot;,
+      &quot;earth_received_at&quot;: null,
+      &quot;fixture_id&quot;: &quot;elevated&quot;,
+      &quot;fixture_sha256&quot;: &quot;7ee532bcf759f051ad0cd0f4932493770802e19df1b4dc67c052433f85da3774&quot;,
+      &quot;scenario_id&quot;: &quot;n16-fixture-elevated&quot;,
+      &quot;scenario_run_id&quot;: &quot;N16-FIXTURE-ELEVATED&quot;,
+      &quot;view&quot;: &quot;onboard&quot;
+    },
+    &quot;read_receipt&quot;: {
+      &quot;actual_file_reads&quot;: 1,
+      &quot;bytes_read&quot;: 27196,
+      &quot;fixture_sha256&quot;: &quot;7ee532bcf759f051ad0cd0f4932493770802e19df1b4dc67c052433f85da3774&quot;,
+      &quot;thread_id&quot;: 2
+    },
+    &quot;research_only&quot;: true,
+    &quot;run_id&quot;: &quot;9392250d-93a4-45d4-a871-0dd590190774&quot;,
+    &quot;schema_version&quot;: &quot;astra.n16.read-result.v1&quot;,
+    &quot;synthetic&quot;: true,
+    &quot;tool&quot;: &quot;get_data_quality&quot;
+  }
+}</pre></details></article></li><li><article aria-labelledby="fixture-call-03"><h3 id="fixture-call-03">get_personal_baseline</h3>
+      <p><span class="tag">Execution: COMPLETED</span> <span class="tag">Data: KNOWN</span></p><p>heart_rate: authored reference center 68 /min · respiratory_rate: authored reference center 14 /min · spo2: authored reference center 98.1 %. Not a learned personal baseline archive.</p>
+      <p class="evidence-foot">Recorded start 2026-10-28T07:36:49.135Z · end 2026-10-28T07:36:49.327Z · 173.631 ms</p>
+      <details><summary>Inspect get_personal_baseline result and provenance</summary><pre tabindex="0" role="region" aria-label="get_personal_baseline recorded provenance">{
+  &quot;validated_arguments&quot;: {
+    &quot;crew_id&quot;: &quot;CREW-03&quot;,
+    &quot;metrics&quot;: [
+      &quot;heart_rate&quot;,
+      &quot;respiratory_rate&quot;,
+      &quot;spo2&quot;
+    ]
+  },
+  &quot;result&quot;: {
+    &quot;call_id&quot;: &quot;call-03&quot;,
+    &quot;clinical_support&quot;: false,
+    &quot;crew_id&quot;: &quot;CREW-03&quot;,
+    &quot;data&quot;: {
+      &quot;items&quot;: [
+        {
+          &quot;data_status&quot;: &quot;KNOWN&quot;,
+          &quot;metric&quot;: &quot;heart_rate&quot;,
+          &quot;provenance&quot;: {
+            &quot;basis&quot;: &quot;Authored synthetic schema reference; not a learned personal or 30-day archive.&quot;,
+            &quot;record_sha256&quot;: &quot;5702af440185b52196f423fb19c2030b499d1167f4737b983dadc79fb8dc53f4&quot;,
+            &quot;synthetic&quot;: true
+          },
+          &quot;unit&quot;: &quot;/min&quot;,
+          &quot;value&quot;: {
+            &quot;basis&quot;: &quot;Authored synthetic schema reference; not a learned personal or 30-day archive.&quot;,
+            &quot;center&quot;: 68,
+            &quot;count&quot;: null,
+            &quot;method&quot;: &quot;authored_fixture_reference&quot;,
+            &quot;scale&quot;: 4.5,
+            &quot;synthetic&quot;: true,
+            &quot;unit&quot;: &quot;/min&quot;,
+            &quot;version&quot;: &quot;n16-fixture-baseline-v1&quot;,
+            &quot;window_days&quot;: null
+          }
+        },
+        {
+          &quot;data_status&quot;: &quot;KNOWN&quot;,
+          &quot;metric&quot;: &quot;respiratory_rate&quot;,
+          &quot;provenance&quot;: {
+            &quot;basis&quot;: &quot;Authored synthetic schema reference; not a learned personal or 30-day archive.&quot;,
+            &quot;record_sha256&quot;: &quot;46e9959ff692cd4b52eca43b60569ec884e730ed98d655d2ccf0595c6de63d4a&quot;,
+            &quot;synthetic&quot;: true
+          },
+          &quot;unit&quot;: &quot;/min&quot;,
+          &quot;value&quot;: {
+            &quot;basis&quot;: &quot;Authored synthetic schema reference; not a learned personal or 30-day archive.&quot;,
+            &quot;center&quot;: 14,
+            &quot;count&quot;: null,
+            &quot;method&quot;: &quot;authored_fixture_reference&quot;,
+            &quot;scale&quot;: 1.5,
+            &quot;synthetic&quot;: true,
+            &quot;unit&quot;: &quot;/min&quot;,
+            &quot;version&quot;: &quot;n16-fixture-baseline-v1&quot;,
+            &quot;window_days&quot;: null
+          }
+        },
+        {
+          &quot;data_status&quot;: &quot;KNOWN&quot;,
+          &quot;metric&quot;: &quot;spo2&quot;,
+          &quot;provenance&quot;: {
+            &quot;basis&quot;: &quot;Authored synthetic schema reference; not a learned personal or 30-day archive.&quot;,
+            &quot;record_sha256&quot;: &quot;a0de822f9ef5af6234ca4bdad9112fca680049b198ce7258add9146e36424cfe&quot;,
+            &quot;synthetic&quot;: true
+          },
+          &quot;unit&quot;: &quot;%&quot;,
+          &quot;value&quot;: {
+            &quot;basis&quot;: &quot;Authored synthetic schema reference; not a learned personal or 30-day archive.&quot;,
+            &quot;center&quot;: 98.1,
+            &quot;count&quot;: null,
+            &quot;method&quot;: &quot;authored_fixture_reference&quot;,
+            &quot;scale&quot;: 0.65,
+            &quot;synthetic&quot;: true,
+            &quot;unit&quot;: &quot;%&quot;,
+            &quot;version&quot;: &quot;n16-fixture-baseline-v1&quot;,
+            &quot;window_days&quot;: null
+          }
+        }
+      ]
+    },
+    &quot;data_status&quot;: &quot;KNOWN&quot;,
+    &quot;duration_ms&quot;: 173.63127099999986,
+    &quot;execution_status&quot;: &quot;COMPLETED&quot;,
+    &quot;inference_performed&quot;: false,
+    &quot;mission_id&quot;: &quot;MARS-DEMO-01&quot;,
+    &quot;provenance&quot;: {
+      &quot;adapter_version&quot;: &quot;astra.n16.read-tools.v1&quot;,
+      &quot;as_of&quot;: &quot;2026-11-14T11:00:00.000Z&quot;,
+      &quot;clock&quot;: &quot;mission_simulation&quot;,
+      &quot;earth_receipt_reason&quot;: &quot;onboard_only&quot;,
+      &quot;earth_received_at&quot;: null,
+      &quot;fixture_id&quot;: &quot;elevated&quot;,
+      &quot;fixture_sha256&quot;: &quot;7ee532bcf759f051ad0cd0f4932493770802e19df1b4dc67c052433f85da3774&quot;,
+      &quot;scenario_id&quot;: &quot;n16-fixture-elevated&quot;,
+      &quot;scenario_run_id&quot;: &quot;N16-FIXTURE-ELEVATED&quot;,
+      &quot;view&quot;: &quot;onboard&quot;
+    },
+    &quot;read_receipt&quot;: {
+      &quot;actual_file_reads&quot;: 1,
+      &quot;bytes_read&quot;: 27196,
+      &quot;fixture_sha256&quot;: &quot;7ee532bcf759f051ad0cd0f4932493770802e19df1b4dc67c052433f85da3774&quot;,
+      &quot;thread_id&quot;: 3
+    },
+    &quot;research_only&quot;: true,
+    &quot;run_id&quot;: &quot;9392250d-93a4-45d4-a871-0dd590190774&quot;,
+    &quot;schema_version&quot;: &quot;astra.n16.read-result.v1&quot;,
+    &quot;synthetic&quot;: true,
+    &quot;tool&quot;: &quot;get_personal_baseline&quot;
+  }
+}</pre></details></article></li><li><article aria-labelledby="fixture-call-04"><h3 id="fixture-call-04">get_open_risk_events</h3>
+      <p><span class="tag">Execution: COMPLETED</span> <span class="tag">Data: UNKNOWN</span></p><p>UNKNOWN: no verified N02 risk record supplied; coverage unknown. No alert or all-clear is inferred.</p>
+      <p class="evidence-foot">Recorded start 2026-10-28T07:36:49.368Z · end 2026-10-28T07:36:49.568Z · 181.208 ms</p>
+      <details><summary>Inspect get_open_risk_events result and provenance</summary><pre tabindex="0" role="region" aria-label="get_open_risk_events recorded provenance">{
+  &quot;validated_arguments&quot;: {
+    &quot;crew_id&quot;: &quot;CREW-03&quot;,
+    &quot;limit&quot;: 20
+  },
+  &quot;result&quot;: {
+    &quot;call_id&quot;: &quot;call-04&quot;,
+    &quot;clinical_support&quot;: false,
+    &quot;crew_id&quot;: &quot;CREW-03&quot;,
+    &quot;data&quot;: {
+      &quot;coverage&quot;: &quot;unknown&quot;,
+      &quot;inference_performed&quot;: false,
+      &quot;reason&quot;: &quot;No independently preserved N02 event is supplied by this authored schema fixture; no detector was run.&quot;,
+      &quot;record_origin&quot;: &quot;unavailable&quot;,
+      &quot;records&quot;: [],
+      &quot;requested_limit&quot;: 20
+    },
+    &quot;data_status&quot;: &quot;UNKNOWN&quot;,
+    &quot;duration_ms&quot;: 181.2080759999999,
+    &quot;execution_status&quot;: &quot;COMPLETED&quot;,
+    &quot;inference_performed&quot;: false,
+    &quot;mission_id&quot;: &quot;MARS-DEMO-01&quot;,
+    &quot;provenance&quot;: {
+      &quot;adapter_version&quot;: &quot;astra.n16.read-tools.v1&quot;,
+      &quot;as_of&quot;: &quot;2026-11-14T11:00:00.000Z&quot;,
+      &quot;clock&quot;: &quot;mission_simulation&quot;,
+      &quot;earth_receipt_reason&quot;: &quot;onboard_only&quot;,
+      &quot;earth_received_at&quot;: null,
+      &quot;fixture_id&quot;: &quot;elevated&quot;,
+      &quot;fixture_sha256&quot;: &quot;7ee532bcf759f051ad0cd0f4932493770802e19df1b4dc67c052433f85da3774&quot;,
+      &quot;scenario_id&quot;: &quot;n16-fixture-elevated&quot;,
+      &quot;scenario_run_id&quot;: &quot;N16-FIXTURE-ELEVATED&quot;,
+      &quot;view&quot;: &quot;onboard&quot;
+    },
+    &quot;read_receipt&quot;: {
+      &quot;actual_file_reads&quot;: 1,
+      &quot;bytes_read&quot;: 27196,
+      &quot;fixture_sha256&quot;: &quot;7ee532bcf759f051ad0cd0f4932493770802e19df1b4dc67c052433f85da3774&quot;,
+      &quot;thread_id&quot;: 4
+    },
+    &quot;research_only&quot;: true,
+    &quot;run_id&quot;: &quot;9392250d-93a4-45d4-a871-0dd590190774&quot;,
+    &quot;schema_version&quot;: &quot;astra.n16.read-result.v1&quot;,
+    &quot;synthetic&quot;: true,
+    &quot;tool&quot;: &quot;get_open_risk_events&quot;
+  }
+}</pre></details></article></li></ol>
+    <details><summary>Inspect committed event order and archive hashes</summary><pre tabindex="0" role="region" aria-label="Recorded trace order and hashes">{
+  &quot;recorded_scope&quot;: {
+    &quot;as_of&quot;: &quot;2026-11-14T11:00:00.000Z&quot;,
+    &quot;fixture_id&quot;: &quot;elevated&quot;,
+    &quot;fixture_sha256&quot;: &quot;7ee532bcf759f051ad0cd0f4932493770802e19df1b4dc67c052433f85da3774&quot;,
+    &quot;manifest_sha256&quot;: &quot;3b4e8aea6bafe5c0bec619266985407fb095bf302637cb177d2d14c35c5a7a13&quot;,
+    &quot;mission_id&quot;: &quot;MARS-DEMO-01&quot;,
+    &quot;policy&quot;: &quot;n16-fixture-read-v1&quot;,
+    &quot;principal&quot;: {
+      &quot;crew_id&quot;: null,
+      &quot;demo&quot;: true,
+      &quot;id&quot;: &quot;n16-local-demo-admin&quot;,
+      &quot;role&quot;: &quot;demo_admin&quot;
+    },
+    &quot;scenario_run_id&quot;: &quot;N16-FIXTURE-ELEVATED&quot;,
+    &quot;view&quot;: &quot;onboard&quot;
+  },
+  &quot;recovery&quot;: {
+    &quot;status&quot;: &quot;COMPLETE&quot;,
+    &quot;committed_events&quot;: 18,
+    &quot;replayed_calls&quot;: 0
+  },
+  &quot;artifact_hashes&quot;: {
+    &quot;trace.jsonl&quot;: {
+      &quot;bytes&quot;: 16696,
+      &quot;sha256&quot;: &quot;044440f5c1a7c04fe7501e24fba46b362e1dbfafbda98ac804972fd30e7e3c62&quot;
+    },
+    &quot;checkpoint.json&quot;: {
+      &quot;bytes&quot;: 133,
+      &quot;sha256&quot;: &quot;f4e1a57e72c4551b7292c7022e6d89f41981865ec7bd768ff7c65b6e59e74213&quot;
+    },
+    &quot;call-01.json&quot;: {
+      &quot;bytes&quot;: 3062,
+      &quot;sha256&quot;: &quot;aebd7d02f8a353941ce086ca411f3c4a0db518f5f26d3f9618583847d17c839d&quot;
+    },
+    &quot;call-02.json&quot;: {
+      &quot;bytes&quot;: 3388,
+      &quot;sha256&quot;: &quot;336357bb62be6630996ad2c4afea9fa849bc4fac9d023e1c6ad0412aa8483eb2&quot;
+    },
+    &quot;call-03.json&quot;: {
+      &quot;bytes&quot;: 2503,
+      &quot;sha256&quot;: &quot;9d1a1875deda837f89cde123a0126b43c27d5a1da29f1979376c63195b0c23ff&quot;
+    },
+    &quot;call-04.json&quot;: {
+      &quot;bytes&quot;: 1151,
+      &quot;sha256&quot;: &quot;b8d92eacde303364100529ba6773657b868d5751b053b3531971eea4d607adff&quot;
+    }
+  },
+  &quot;timeline&quot;: [
+    {
+      &quot;seq&quot;: 1,
+      &quot;at&quot;: &quot;2026-10-28T07:36:48.532Z&quot;,
+      &quot;type&quot;: &quot;RUN_STARTED&quot;,
+      &quot;call_id&quot;: null,
+      &quot;hash&quot;: &quot;afc34b25c603c17de749ba261055037feb3a5fd686cd44152061c56145c792bb&quot;
+    },
+    {
+      &quot;seq&quot;: 2,
+      &quot;at&quot;: &quot;2026-10-28T07:36:48.556Z&quot;,
+      &quot;type&quot;: &quot;CALL_REQUESTED&quot;,
+      &quot;call_id&quot;: &quot;call-01&quot;,
+      &quot;hash&quot;: &quot;85e5d8690213ce161cce473403b66f96d16bc250d1b2592b26105faf4325aa27&quot;
+    },
+    {
+      &quot;seq&quot;: 3,
+      &quot;at&quot;: &quot;2026-10-28T07:36:48.572Z&quot;,
+      &quot;type&quot;: &quot;CALL_VALIDATED&quot;,
+      &quot;call_id&quot;: &quot;call-01&quot;,
+      &quot;hash&quot;: &quot;77c020447715dcdc737edd855977b4d9171a36f7a71d982c9ee6bd85552d2775&quot;
+    },
+    {
+      &quot;seq&quot;: 4,
+      &quot;at&quot;: &quot;2026-10-28T07:36:48.586Z&quot;,
+      &quot;type&quot;: &quot;CALL_STARTED&quot;,
+      &quot;call_id&quot;: &quot;call-01&quot;,
+      &quot;hash&quot;: &quot;d50bb189f9f29753d66f29049b8c65aa0c61aa86e84109271c6c7dac2756624a&quot;
+    },
+    {
+      &quot;seq&quot;: 5,
+      &quot;at&quot;: &quot;2026-10-28T07:36:48.837Z&quot;,
+      &quot;type&quot;: &quot;CALL_COMPLETED&quot;,
+      &quot;call_id&quot;: &quot;call-01&quot;,
+      &quot;hash&quot;: &quot;fc3e8bafd2036867456ebff5d37f44221b8b324b5ba432d13398ecc9e4315f88&quot;
+    },
+    {
+      &quot;seq&quot;: 6,
+      &quot;at&quot;: &quot;2026-10-28T07:36:48.853Z&quot;,
+      &quot;type&quot;: &quot;CALL_REQUESTED&quot;,
+      &quot;call_id&quot;: &quot;call-02&quot;,
+      &quot;hash&quot;: &quot;f1e50e11c673833786346a64514450c7c349f4302208985d3a03a51def91c4ea&quot;
+    },
+    {
+      &quot;seq&quot;: 7,
+      &quot;at&quot;: &quot;2026-10-28T07:36:48.868Z&quot;,
+      &quot;type&quot;: &quot;CALL_VALIDATED&quot;,
+      &quot;call_id&quot;: &quot;call-02&quot;,
+      &quot;hash&quot;: &quot;31538e262d13a39db362796133a3176e5e56c2168e41a39c71ea949f4b1f7d56&quot;
+    },
+    {
+      &quot;seq&quot;: 8,
+      &quot;at&quot;: &quot;2026-10-28T07:36:48.883Z&quot;,
+      &quot;type&quot;: &quot;CALL_STARTED&quot;,
+      &quot;call_id&quot;: &quot;call-02&quot;,
+      &quot;hash&quot;: &quot;8bb9c46a529f3c73befad570702b9084714a18bbea49856d9cc3054dba50b294&quot;
+    },
+    {
+      &quot;seq&quot;: 9,
+      &quot;at&quot;: &quot;2026-10-28T07:36:49.091Z&quot;,
+      &quot;type&quot;: &quot;CALL_COMPLETED&quot;,
+      &quot;call_id&quot;: &quot;call-02&quot;,
+      &quot;hash&quot;: &quot;cc2632da337cb69ca6b76f6642f8bee0135a5b801ee1ba453f0fac6520022e2f&quot;
+    },
+    {
+      &quot;seq&quot;: 10,
+      &quot;at&quot;: &quot;2026-10-28T07:36:49.106Z&quot;,
+      &quot;type&quot;: &quot;CALL_REQUESTED&quot;,
+      &quot;call_id&quot;: &quot;call-03&quot;,
+      &quot;hash&quot;: &quot;d259e3811fa3bd18aba7bf1b4e535e993979c15f1f50890c4b6b3fd524e2d752&quot;
+    },
+    {
+      &quot;seq&quot;: 11,
+      &quot;at&quot;: &quot;2026-10-28T07:36:49.121Z&quot;,
+      &quot;type&quot;: &quot;CALL_VALIDATED&quot;,
+      &quot;call_id&quot;: &quot;call-03&quot;,
+      &quot;hash&quot;: &quot;c01807a645607b9b56f1bca5a7983884de8df875ece7cf4c59ce5093e3fdbcc0&quot;
+    },
+    {
+      &quot;seq&quot;: 12,
+      &quot;at&quot;: &quot;2026-10-28T07:36:49.135Z&quot;,
+      &quot;type&quot;: &quot;CALL_STARTED&quot;,
+      &quot;call_id&quot;: &quot;call-03&quot;,
+      &quot;hash&quot;: &quot;0549ed669e7d4033785e0018ee9480e4e28c115d9305a3b26e768fd61be7525b&quot;
+    },
+    {
+      &quot;seq&quot;: 13,
+      &quot;at&quot;: &quot;2026-10-28T07:36:49.327Z&quot;,
+      &quot;type&quot;: &quot;CALL_COMPLETED&quot;,
+      &quot;call_id&quot;: &quot;call-03&quot;,
+      &quot;hash&quot;: &quot;2f4e78bccf29e81dfba2171063a9a382999c11b3035f2c4ac136b6f569e6566b&quot;
+    },
+    {
+      &quot;seq&quot;: 14,
+      &quot;at&quot;: &quot;2026-10-28T07:36:49.339Z&quot;,
+      &quot;type&quot;: &quot;CALL_REQUESTED&quot;,
+      &quot;call_id&quot;: &quot;call-04&quot;,
+      &quot;hash&quot;: &quot;e2191387dcaa3994b3f0aa23c1efd1802929d85cd6afd82aee4ff2e99884fcce&quot;
+    },
+    {
+      &quot;seq&quot;: 15,
+      &quot;at&quot;: &quot;2026-10-28T07:36:49.354Z&quot;,
+      &quot;type&quot;: &quot;CALL_VALIDATED&quot;,
+      &quot;call_id&quot;: &quot;call-04&quot;,
+      &quot;hash&quot;: &quot;c1f133fa55f4f7e766493018b15a315dfcae407f0b68ece4b495c529ed7afb46&quot;
+    },
+    {
+      &quot;seq&quot;: 16,
+      &quot;at&quot;: &quot;2026-10-28T07:36:49.368Z&quot;,
+      &quot;type&quot;: &quot;CALL_STARTED&quot;,
+      &quot;call_id&quot;: &quot;call-04&quot;,
+      &quot;hash&quot;: &quot;d2ce6a4785fcdada8c692dddb7ef185c94bfddd10a4082b5a221b6cac55ba5ed&quot;
+    },
+    {
+      &quot;seq&quot;: 17,
+      &quot;at&quot;: &quot;2026-10-28T07:36:49.568Z&quot;,
+      &quot;type&quot;: &quot;CALL_COMPLETED&quot;,
+      &quot;call_id&quot;: &quot;call-04&quot;,
+      &quot;hash&quot;: &quot;6bf327ff3ecee9d219a17e555b24e7ee6080e0aa6d5de3fcd7ca5ef0a78ea4db&quot;
+    },
+    {
+      &quot;seq&quot;: 18,
+      &quot;at&quot;: &quot;2026-10-28T07:36:49.582Z&quot;,
+      &quot;type&quot;: &quot;RUN_ENDED&quot;,
+      &quot;call_id&quot;: null,
+      &quot;hash&quot;: &quot;13581a1f9c11fdca7fb9ecd2fd8bbcec5449ac21135c8310e2b1c327cc1e6fe4&quot;
+    }
+  ]
+}</pre></details>
+    <p class="evidence-foot">Freshness and quality describe the saved mission as_of only. KNOWN means available fixture data, not clinical truth. Authored baselines, UNKNOWN risk coverage, and existing review gates remain unchanged.</p>

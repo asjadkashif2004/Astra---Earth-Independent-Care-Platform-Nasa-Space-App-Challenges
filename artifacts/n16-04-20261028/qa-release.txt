@@ -1,0 +1,43 @@
+✔ contract is exactly four tools and deterministic authored fixture data (1521.102724ms)
+✔ actual authorized SQL reads for CREW-01 (272.921178ms)
+✔ actual authorized SQL reads for CREW-02 (290.751314ms)
+✔ actual authorized SQL reads for CREW-03 (222.279737ms)
+✔ actual authorized SQL reads for CREW-04 (260.81669ms)
+✔ actual authorized SQL reads for CREW-05 (245.64384ms)
+✔ actual authorized SQL reads for CREW-06 (249.611311ms)
+✔ four actual SQL tools produce18 durable events and cold recovery without replay (950.351375ms)
+✔ missing data remains UNKNOWN (255.582669ms)
+✔ stale data remains UNKNOWN (264.055726ms)
+✔ malformed data remains UNKNOWN (262.251245ms)
+✔ untrusted data remains UNKNOWN (268.079722ms)
+✔ quality provenance and empty fixture risk scope never become new health conclusions (529.089928ms)
+✔ unauthorized anonymous never spawns reader (10.205551ms)
+✔ unauthorized system_admin never spawns reader (10.414673ms)
+✔ unauthorized astronaut never spawns reader (9.89451ms)
+✔ unauthorized invented never spawns reader (9.197826ms)
+✔ authorized self-read succeeds without caller role overrides (320.564212ms)
+✔ invalid names, arguments, crew and paths reject before SQL (10.130484ms)
+✔ tampering, symlinks, extra files and hardlinks fail before a reader starts (203.49745ms)
+✔ SQL authorizer and read-only filesystem reject writes/schema/attach/unapproved reads with unchanged files (296.52595ms)
+✔ byte-identical unauthorized database replacement is rejected by source-instance identity (50.528784ms)
+✔ WAL concurrent writer: stable old snapshot, committed new value, checkpoint busy and reader-only noninterference (1193.735467ms)
+✔ exclusive synthetic writer produces bounded BUSY without changing reader permissions (455.597329ms)
+✔ missing WAL cannot silently return older generation; missing SHM behavior is recorded without sidecar writes (763.515439ms)
+✔ missing database never creates a replacement source (303.295958ms)
+✔ timeouts, cancellation and pre-aborted calls terminate only owned processes and withhold results (1378.104168ms)
+✔ held read snapshot enforces its own transaction deadline (544.016074ms)
+✔ trace start and completion checkpoint failures fail closed with zero/unpublished SQL results (327.090083ms)
+✔ cold trace recovery detects corrupt results and incomplete checkpoints without replay (19.049767ms)
+✔ CLI has no arbitrary source, SQL, role or operational path option (0.569963ms)
+✔ single-call public execution binds actual SQL receipt, caller scope and durable result (365.056668ms)
+✔ reader concurrency denial cannot start a second SQL process (337.059538ms)
+✔ result persistence failure never commits or publishes a completed result (270.629948ms)
+✔ all immutable original fixture hashes survive qualification unchanged (10.934135ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 35
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12611.670215

@@ -1,0 +1,14 @@
+{
+  "phase": "first local original-to-card smoke execution",
+  "sources_validated": 3,
+  "publication_result": "FAILED_FINAL_READBACK",
+  "code": "ENOENT",
+  "syscall": "open",
+  "sanitized_path": "task-output/bundle-9b7d52787430a11ef0b164811ea2079e027353c15aa46339c7ebda2d4065660b",
+  "stack_stage": "readPinned -> recoverBundle -> publishBundle",
+  "subsequent_file_only_fresh_process_recovery": "VERIFIED_COMMITTED_BUNDLE",
+  "cause_evidence": "rename-diagnostic.json reproduces same-context anchored/named open ENOENT; open after closing/reacquiring handles succeeds",
+  "source_mutation": false,
+  "database_network_or_model_execution": false,
+  "note": "Saved from the observed tool result; not a retroactive successful publication. No claim of a general filesystem guarantee."
+}

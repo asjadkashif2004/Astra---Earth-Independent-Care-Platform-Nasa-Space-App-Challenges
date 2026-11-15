@@ -1,0 +1,20 @@
+Checking: N09 actual Scenario Lab, empty state and malformed configuration feedback
+Checking: N09 real N08 synthetic import and verified waveform source selection
+Checking: N09 genuine multi-crew startup, canonical generation and actual N02 warning/UNKNOWN
+Checking: N09 actual bounded waveform display preserves original source and gaps
+Checking: N09 per-crew and run pause/resume keep source clock and staleness honest
+Checking: N09 historical source/knowledge cutoffs and append-only exclusions
+Checking: N09 dated calibration and consent-preserving N10 context are actual reads
+Checking: N09 stop/reset and genuine multiday completion with source-bound N10 records
+Checking: N09 real restart recovers exact committed frames without replay or duplicate sources
+Checking: N09 API failure/recovery and permission/privacy denial
+Checking: N09 four viewports, source/provenance visibility and native keyboard focus
+Checking: N09 Earth exclusion, preserved selected-HR controls and no implicit operational integration
+{
+  "status": "passed",
+  "browser": "Chrome/156.0.8078.74",
+  "checks": 12,
+  "failed": [],
+  "screenshots": 8,
+  "report": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n09-engineering-20261031\\browser-02\\report.json"
+}

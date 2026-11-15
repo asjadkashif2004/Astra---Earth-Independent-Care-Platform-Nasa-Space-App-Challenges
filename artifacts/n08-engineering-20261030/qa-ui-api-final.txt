@@ -1,0 +1,23 @@
+✔ complete Mission Day: drift → evidence → case → human ack → blackout → restart → Earth (721.745201ms)
+✔ seven-role permission matrix does not grant viewer writes or system admin medical access (0.451006ms)
+✔ an interrupted tick rolls back observations, queue and simulation clock together (109.639851ms)
+✔ escalation produces a fresh case and cannot reuse an earlier human acknowledgement (394.803384ms)
+✔ HTTP API enforces sessions, role scope, service-token ingest and same-origin writes (277.7618ms)
+✔ W4 actual application navigation loads UNKNOWN from backend with honest inactive twin labels (277.925294ms)
+✔ W4/W5 real source window renders SVG extrema/gap and authenticated metadata (294.187041ms)
+✔ W9 viewer sees denied state and launches no waveform request (212.358009ms)
+✔ W9 researcher sees denied state and launches no waveform request (211.771694ms)
+✔ W4 historical empty cutoff and invalid range remain honest without writes (311.203935ms)
+✔ W4 old asynchronous list cannot replace a newer historical projection (220.357694ms)
+✔ W4 list success followed by failed window cannot be reported as Loaded/PASS (229.707866ms)
+✔ W4 disposing a pending replay prevents stale rendering in another workspace (248.549407ms)
+✔ W2 UI refuses import without explicit authored-source confirmation (219.319688ms)
+✔ W4 changing source clears old samples while the actual replacement window is pending (218.325017ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4206.132389

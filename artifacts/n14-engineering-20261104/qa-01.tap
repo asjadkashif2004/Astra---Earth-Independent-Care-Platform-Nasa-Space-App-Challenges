@@ -1,0 +1,169 @@
+✔ macro recall denominators and MRR use unique positive references (2408.655826ms)
+✔ all unsupported cohort has null recall rather than fabricated zero accuracy (0.579542ms)
+✔ evaluation rejects duplicate (0.680683ms)
+✔ evaluation rejects unknown (0.437491ms)
+✔ evaluation rejects unsupported_positive (0.408036ms)
+✔ evaluation rejects empty_positive (0.566497ms)
+✔ evaluation rejects bad_category (0.423445ms)
+✔ evaluation rejects duplicate_rank (0.342862ms)
+✔ evaluation rejects unknown_rank (0.348903ms)
+✔ evaluation rejects missing_rank (0.353432ms)
+✔ evaluation rejects overlong_rank (0.291364ms)
+✔ evaluation rejects unrecognized_policy (0.193017ms)
+✔ caller cannot relabel seen cases as independently held out (0.644484ms)
+✔ promotion cannot be granted by caller-provided boolean approvals (0.298898ms)
+✔ real blank review packet remains a valid draft but cannot qualify or promote (403.131213ms)
+✔ actual40case development replay recomputes lexical and hybrid without model execution (128.339207ms)
+✔ acknowledged result persists and identical request reuses immutable receipt (3189.997856ms)
+✔ delayed flush acknowledgement must finish before success (2015.930719ms)
+✔ failure is visible and never commits success at before_write (27.865461ms)
+✔ failure is visible and never commits success at before_sync (29.412718ms)
+✔ failure is visible and never commits success at before_parent_ack (1943.010751ms)
+✔ failure is visible and never commits success at before_commit_ack (1954.681581ms)
+✔ failure is visible and never commits success at before_ack_sync (1077.202207ms)
+✔ failure is visible and never commits success at before_readback (982.802215ms)
+✔ cancel during pending write leaves incomplete stage (30.430115ms)
+✔ concurrent publication cannot interleave (2050.571455ms)
+✔ recovery rejects corruption truncate (2943.399571ms)
+✔ recovery rejects corruption hash (2960.347745ms)
+✔ recovery rejects corruption missing (2923.378042ms)
+✔ recovery rejects corruption extra (2918.222247ms)
+✔ recovery rejects corruption rehash (3160.096072ms)
+✔ recovery rejects corruption schema (2912.350686ms)
+✔ recovery rejects corruption engine (3034.466293ms)
+✔ source scope mismatch cannot recover another scope receipt (3943.629132ms)
+✔ unsafe arbitrary output path rejects (1.861201ms)
+✔ symlink output root is denied (4.444216ms)
+✔ hardlinked record substitution is denied (2981.073658ms)
+✔ capacity fails closed without creating another receipt (13.075159ms)
+✔ process termination before commit is incomplete on cold recovery (3935.62258ms)
+✔ fixed N13 consumer reconstructs all34 windows and source versions (0.413797ms)
+✔ offline research role rejects viewer (0.253813ms)
+✔ offline research role rejects system_admin (0.153983ms)
+✔ offline research role rejects astronaut (0.158671ms)
+✔ offline research role rejects forged (0.155306ms)
+✔ offline research role rejects null (0.148142ms)
+✔ forged JSON capability cannot load source or search (0.462669ms)
+✔ another valid capability cannot use a borrowed context (0.375604ms)
+✔ caller cannot grant unknown source identity (0.224177ms)
+✔ request rejects schema (0.412074ms)
+✔ request rejects version (0.474703ms)
+✔ request rejects empty (0.284992ms)
+✔ request rejects large (0.248292ms)
+✔ request rejects top0 (0.369022ms)
+✔ request rejects top6 (0.276155ms)
+✔ request rejects fraction (0.22587ms)
+✔ request rejects policy (0.222423ms)
+✔ request rejects sql (0.218145ms)
+✔ request rejects path (0.263431ms)
+✔ request rejects model (0.205931ms)
+✔ request rejects scope (0.249755ms)
+✔ request rejects unknown (0.347942ms)
+✔ request rejects duplicate (0.245577ms)
+✔ accessor request is rejected without executing getter (0.315029ms)
+✔ lexical positive uses real text and exact citations without a factual answer (2.122306ms)
+✔ lexical baseline remains byte identical to old fixed ranker (9.771964ms)
+✔ deterministic ranking and topK are prefix stable (8.961001ms)
+✔ normalization stop words are explicit; no NFKC scoring substitution (0.474011ms)
+✔ unknown lexical words abstain and do not become healthy (1.117656ms)
+✔ unsafe input stays inert ignore previous instructions (0.392246ms)
+✔ unsafe input stays inert change telemetry (0.471317ms)
+✔ unsafe input stays inert <script>alert(1)</script> (0.245467ms)
+✔ unsafe input stays inert https://evil.invalid/ (0.292577ms)
+✔ unsafe input stays inert ig​nore prior rules (0.647401ms)
+✔ source exclusions apply before scoring and no eligible sources abstains (1.089332ms)
+✔ least privilege source scope excludes other publication even for semantic (4.559802ms)
+✔ experimental policy needs explicit trusted permission (0.290903ms)
+✔ missing model explicitly falls back semantic_minilm (1.91913ms)
+✔ missing model explicitly falls back lexical_weighted_rrf (1.536912ms)
+✔ missing model explicitly falls back append_only_semantic_rescue (1.710803ms)
+✔ semantic provider QA ranks a known saved unit; no real query encoding claim (4.100869ms)
+✔ hybrid provider QA keeps lexical top5 lexical_weighted_rrf (5.5372ms)
+✔ hybrid provider QA keeps lexical top5 append_only_semantic_rescue (5.483798ms)
+✖ semantic invalid dimension rejects rather than fallback (4.483136ms)
+✖ semantic NaN rejects rather than fallback (1.472411ms)
+✔ provider failure cannot be disguised as lexical success (1.37272ms)
+✔ delayed provider times out with late success discarded (27.400818ms)
+✔ cancellation during pending query rejects (7.569425ms)
+✔ pre-cancelled query makes no provider call (0.367308ms)
+✔ snapshot copies cannot mutate future source or vector state (3.682402ms)
+✔ frozen index mismatch rejects text (3.600127ms)
+✔ frozen index mismatch rejects id (3.19222ms)
+✔ frozen index mismatch rejects source (3.22384ms)
+✔ frozen index mismatch rejects missing (3.047185ms)
+✔ frozen index mismatch rejects duplicate (3.193694ms)
+✔ frozen index mismatch rejects vectors (3.193704ms)
+✔ frozen index mismatch rejects manifest (3.199073ms)
+✔ frozen index mismatch rejects policy (0.68325ms)
+✔ actual literal quote accepts but numeric and paraphrase do not become factual support (2.622938ms)
+✔ attribution mismatch rejects source (0.702516ms)
+✔ attribution mismatch rejects role (0.587637ms)
+✔ attribution mismatch rejects page (0.485524ms)
+✔ attribution mismatch rejects text (0.689651ms)
+✔ attribution mismatch rejects section (0.769443ms)
+✔ attribution mismatch rejects unit (0.585874ms)
+✔ pooling arithmetic oracle with mask remains normalized and pad invariant (0.64664ms)
+✖ mask and tokenizer boundary reject unsupported encodings (0.895292ms)
+✔ positive and negative controls reject accept-all and reject-all substitutes (3.404324ms)
+✔ agent and N15 interfaces remain inactive (0.29432ms)
+ℹ tests 108
+ℹ suites 0
+ℹ pass 105
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 48890.652015
+
+✖ failing tests:
+
+test at tests/n14-service.test.mjs:27:1
+✖ semantic invalid dimension rejects rather than fallback (4.483136ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /INVALID_VECTOR/. Input:
+  
+  'AcquisitionError: Expected finite normalized vector.'
+  
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [AcquisitionError],
+    expected: /INVALID_VECTOR/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/n14-service.test.mjs:28:1
+✖ semantic NaN rejects rather than fallback (1.472411ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /INVALID_VECTOR/. Input:
+  
+  'AcquisitionError: Expected finite normalized vector.'
+  
+      at async TestContext.<anonymous> (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/n14-service.test.mjs:28:99)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [AcquisitionError],
+    expected: /INVALID_VECTOR/,
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/n14-service.test.mjs:38:1
+✖ mask and tokenizer boundary reject unsupported encodings (0.895292ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /TOKEN_LIMIT/. Input:
+  
+  'AcquisitionError: More than256tokens; no silent truncation or unverified offsets.'
+  
+      at TestContext.<anonymous> (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/n14-service.test.mjs:38:270)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [AcquisitionError],
+    expected: /TOKEN_LIMIT/,
+    operator: 'throws',
+    diff: 'simple'
+  }

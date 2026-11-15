@@ -1,0 +1,21 @@
+{
+  "recorded_at": "2026-10-19T21:33:08.144850+00:00",
+  "accepted_before": 9,
+  "newly_accepted": [
+    "1x-crew-performance-1",
+    "1x-crew-performance-2",
+    "1x-crew-performance-3"
+  ],
+  "total_accepted": 12,
+  "remaining": 12,
+  "status": "active;first three trials fully verified before final approved trial",
+  "outcomes": [
+    "artifacts/n04-p01-live-checkpoint4-20261020/1x-crew-performance-1/outcome.json",
+    "artifacts/n04-p01-live-checkpoint4-20261020/1x-crew-performance-2/outcome.json",
+    "artifacts/n04-p01-live-checkpoint4-20261020/1x-crew-performance-3/outcome.json"
+  ],
+  "next_approved_id": "30x-overview-standard-1",
+  "n03": "Partial",
+  "n04": "Partial",
+  "ac20": "Open / Unverified"
+}

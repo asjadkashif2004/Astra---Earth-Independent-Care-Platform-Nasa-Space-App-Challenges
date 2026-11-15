@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050508">
+  <meta name="description" content="ASTRA Command — an offline-capable, explainable crew health research simulation.">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/mission.css">
+  <link rel="stylesheet" href="/anatomy.css">
+  <title>ASTRA Command · Crew Health Intelligence</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to mission workspace</a>
+  <div id="app"><div class="boot-screen"><div class="boot-mark">A<span>✦</span></div><p>ASTRA COMMAND</p><span>Establishing local systems…</span></div></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="monitor-announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+  <div id="risk-announcement" class="sr-only" role="alert" aria-live="assertive" aria-atomic="true"></div>
+  <script type="module" src="/app.mjs"></script>
+</body>
+</html>

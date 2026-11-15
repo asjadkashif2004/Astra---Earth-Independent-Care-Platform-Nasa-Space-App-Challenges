@@ -1,0 +1,19 @@
+.n10-workspace{--n10-accent:#91caff;display:grid;gap:22px;min-width:0;color:#e5e6ef}
+.n10-workspace .panel{padding:24px;border:1px solid #343844;background:linear-gradient(130deg,#15171f,#101118);border-radius:18px;min-width:0}
+.n10-controls,.n10-fields,.n10-workspace form{display:flex;flex-wrap:wrap;gap:14px;align-items:end}
+.n10-workspace label{display:flex;flex-direction:column;gap:7px;font-size:13px;flex:1 1 180px;min-width:0;color:#d3d6e3}
+.n10-workspace input,.n10-workspace select{font:inherit;min-height:42px;padding:10px;max-width:100%;min-width:0;border:1px solid #535c72;border-radius:8px;background:#090c13;color:#edf5ff}
+.n10-workspace input[type=checkbox]{width:20px;height:20px;min-height:20px;accent-color:var(--n10-accent)}
+.n10-workspace button{white-space:normal;min-height:44px}.n10-workspace :focus-visible{outline:3px solid var(--n10-accent);outline-offset:3px}
+.n10-workspace .button.primary{background:#234d7a;color:#fff;border:1px solid var(--n10-accent)}
+.n10-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.n10-workspace p{font-size:14px;line-height:1.65;margin:10px 0;color:#c3c8d8;overflow-wrap:anywhere}
+.n10-workspace h2{font-size:20px;color:#f3f4f9;margin-bottom:14px}
+.n10-workspace pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:260px;overflow:auto;font-size:12px;color:#cbd2e5;padding:12px;background:#080b12}
+.n10-stage{display:grid;grid-template-columns:110px minmax(40px,1fr) 120px;gap:10px;align-items:center;margin:14px 0;font-size:12px}.n10-stage meter{width:100%;accent-color:var(--n10-accent)}
+.n10-history-row{border-top:1px solid #343844;padding:18px 0}.n10-history-row strong{overflow-wrap:anywhere}.n10-workspace details summary{padding:12px;cursor:pointer}
+#n10-status{padding:16px;border-left:3px solid var(--n10-accent);background:#101b2a}
+#n10-target{margin:16px 0;width:100%;max-width:650px;color:#e8f4ff;border-color:#5f92bd}
+.n10-workspace button:disabled,.n10-workspace input:disabled{opacity:.55;cursor:not-allowed}
+@media(max-width:900px){.n10-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.n10-workspace .panel{padding:16px}.n10-workspace form{display:grid;grid-template-columns:minmax(0,1fr)}.n10-stage{grid-template-columns:1fr}.n10-controls{display:grid;grid-template-columns:minmax(0,1fr)}}

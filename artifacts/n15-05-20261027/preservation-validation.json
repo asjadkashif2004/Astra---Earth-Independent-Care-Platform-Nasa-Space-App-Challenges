@@ -1,0 +1,38 @@
+{
+  "validation_status": "PASS",
+  "task_outcome": "PARTIAL",
+  "main_answer": "ABSTAIN",
+  "live_positive_quotation_gate": "OPEN",
+  "focused_tests": {
+    "Node": 53,
+    "Python": 7,
+    "pass": 60,
+    "fail": 0
+  },
+  "native_generations": 1,
+  "pre_native_wrapper_failures": 1,
+  "prior_native_commands": 0,
+  "schema_was_not_repaired_or_relaxed": true,
+  "original_preservation": {
+    "source": {
+      "files": 587,
+      "size_mtime_unchanged": true,
+      "whole_tree_content_hashes_recomputed": false
+    },
+    "history": {
+      "files": 5920,
+      "size_mtime_unchanged": true,
+      "whole_tree_content_hashes_recomputed": false
+    }
+  },
+  "frozen_final_source_plan_hashes_match": true,
+  "new_application_dependencies": 0,
+  "network_requests": 0,
+  "docs_checked": 11,
+  "local_links_checked": 659,
+  "module_ids_retained": 26,
+  "N15": "In Progress",
+  "N16": "Not Started",
+  "other_module_statuses_or_reviews_changed": false,
+  "resource_authority_expires_at_delivery": true
+}

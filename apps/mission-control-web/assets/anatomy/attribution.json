@@ -1,0 +1,14 @@
+{
+  "source_release": "BodyParts3D 4.3 / objects set 4.3 / FMA3.0",
+  "source_url": "https://lifesciencedb.jp/bp3d/",
+  "license": "CC-BY-SA-2.1-JP",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.1/jp/",
+  "credit": "BodyParts3D, \u00a9 2008 The Database Center for Life Science, licensed under CC Attribution-Share Alike 2.1 Japan",
+  "scope": "Generic adult male reference anatomy. Not an astronaut reconstruction, clinical anatomical certification or physiological simulation. Static geometry; no HR/RR animation or evidence mapping.",
+  "limitations": [
+    "Source model may contain anatomical/concept-assignment errors; independent anatomical expert review not performed.",
+    "Whole-heart compound mapping is incomplete; preview explicitly selects three named chamber-wall surfaces.",
+    "Skin is an adult male reference; no claims about individual crew anatomy or sex.",
+    "No texture maps, compression extensions, skinning or animations. Derived meshes retain CC BY-SA 2.1 Japan."
+  ]
+}

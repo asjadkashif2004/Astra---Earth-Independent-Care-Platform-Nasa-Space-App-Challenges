@@ -1,0 +1,18 @@
+services:
+  astra:
+    build: .
+    network_mode: host
+    environment:
+      HOST: 127.0.0.1
+      PORT: 3000
+      ASTRA_SPEED: 30
+      ASTRA_DB: /app/data/runtime/astra.sqlite
+    volumes:
+      - astra-runtime:/app/data/runtime
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+volumes:
+  astra-runtime:

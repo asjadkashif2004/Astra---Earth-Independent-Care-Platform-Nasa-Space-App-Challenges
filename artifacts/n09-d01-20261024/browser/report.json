@@ -1,0 +1,227 @@
+{
+  "status": "passed",
+  "started_at": "2026-10-24T17:24:43.995Z",
+  "checks": [
+    {
+      "name": "N09-D01 real selector, fixed profile, keyboard focus and two viewport layouts",
+      "status": "passed"
+    },
+    {
+      "name": "N09-D01 actual persistence, synchronized displays, template and human acknowledgement",
+      "status": "passed"
+    },
+    {
+      "name": "N09-D01 stop retains blackout/queue and Earth shows no unreceived alert before delayed delivery",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    "scenario-1920x1080.png",
+    "scenario-390x844.png",
+    "scenario-pending.png",
+    "scenario-detected.png",
+    "case-human-acknowledged.png",
+    "delayed-earth-queue.png"
+  ],
+  "console_errors": [],
+  "http_errors": [
+    {
+      "url": "http://127.0.0.1:62965/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    }
+  ],
+  "viewports": [
+    {
+      "page": "Scenario Lab N09-D01",
+      "width": 1920,
+      "height": 1080,
+      "document_overflow": false
+    },
+    {
+      "page": "Scenario Lab N09-D01",
+      "width": 390,
+      "height": 844,
+      "document_overflow": false
+    }
+  ],
+  "caveats": [
+    "No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation.",
+    "Pointer/keyboard/rendered DOM checks and screenshots supplement human visual, text-contrast and assistive-technology review; they do not establish WCAG conformance."
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/155.0.8059.86",
+    "revision": "@804d6b05f089b27af8342622a36558c49401a1d4",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "jsVersion": "15.5.35.25"
+  },
+  "profile": {
+    "run_id": "610473b9-79ad-47e1-bf91-3ba0d998e6cd",
+    "target_crew_id": "CREW-01",
+    "profile": {
+      "id": "controlled-hr-rise",
+      "version": "demo-hr-v1",
+      "onset_seconds": 30,
+      "ramp_seconds": 60,
+      "plateau_seconds": 240,
+      "return_seconds": 60,
+      "total_seconds": 390,
+      "baseline_scale_units": 5
+    },
+    "seed": 42017,
+    "started_at": "2026-11-14T11:00:00.000Z",
+    "start_tick": 1,
+    "scheduled_end_at": "2026-11-14T11:06:30.000Z",
+    "status": "active",
+    "quality_gaps": false,
+    "current_run": true,
+    "elapsed_seconds": 30,
+    "phase": "ramp",
+    "monitoring_state": "pending",
+    "reason": "Within expected personal pattern",
+    "detector_pending": {
+      "at": 1794654030000,
+      "source": "simulator:SIM-CREW-01:baseline-v1",
+      "sign": 1,
+      "since": null,
+      "singleSince": null,
+      "redSince": null,
+      "singleRedSince": null,
+      "samples": [
+        {
+          "at": 1794654030000,
+          "z": 0.095787758,
+          "event_id": "610473b9-79ad-47e1-bf91-3ba0d998e6cd:2:CREW-01:heart_rate"
+        }
+      ],
+      "rateSign": 0,
+      "rateSince": null
+    },
+    "risk": null,
+    "case_state": null,
+    "source_observed_at": "2026-11-14T11:00:30.000Z"
+  },
+  "detector": {
+    "schema_version": "astra.risk-event.v1",
+    "id": "RISK-71143bd9",
+    "crew_id": "CREW-01",
+    "created_at": "2026-11-14T11:03:30.000Z",
+    "run_id": "610473b9-79ad-47e1-bf91-3ba0d998e6cd",
+    "severity": "warning",
+    "status": "open",
+    "detector": {
+      "name": "personalized_robust_baseline",
+      "version": "robust-personal-v2",
+      "method": "median/MAD + two-sided deviation + observation-time persistence + rate + context",
+      "score": 0.6950000000000001
+    },
+    "evidence": [
+      {
+        "metric": "heart_rate",
+        "value": 89.22,
+        "unit": "/min",
+        "baseline_center": 66.23854395160556,
+        "baseline_scale": 4.608689621866803,
+        "baseline_version": "baseline-v1",
+        "standardized_deviation": 4.987,
+        "persistence_seconds": 150,
+        "direction": "above_personal_baseline",
+        "rules": [
+          "persistent_deviation",
+          "persistent_single_signal"
+        ],
+        "single_persistence_seconds": 120,
+        "severe_persistence_seconds": 120,
+        "single_red_persistence_seconds": 0,
+        "rate_of_change_sd_per_minute": -0.041,
+        "rate_persistence_seconds": 0,
+        "rate_window_seconds": 60,
+        "rate_start": {
+          "observed_at": "2026-11-14T11:02:30.000Z",
+          "event_id": "610473b9-79ad-47e1-bf91-3ba0d998e6cd:6:CREW-01:heart_rate",
+          "standardized_deviation": 5.027775344,
+          "value": 89.41,
+          "unit": "/min",
+          "source": {
+            "kind": "simulator",
+            "device_id": "SIM-CREW-01",
+            "sampling_hz": 0.03333333333333333,
+            "runtime_hz": 1,
+            "clock": "mission_simulation"
+          },
+          "provenance": {
+            "synthetic": true,
+            "scenario_id": "controlled-hr-rise",
+            "seed": 42017,
+            "generator_version": "1.0.0"
+          },
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          }
+        },
+        "event_id": "610473b9-79ad-47e1-bf91-3ba0d998e6cd:8:CREW-01:heart_rate",
+        "observed_at": "2026-11-14T11:03:30.000Z",
+        "received_ts": "2026-11-14T11:03:30.000Z",
+        "source": {
+          "kind": "simulator",
+          "device_id": "SIM-CREW-01",
+          "sampling_hz": 0.03333333333333333,
+          "runtime_hz": 1,
+          "clock": "mission_simulation"
+        },
+        "quality": {
+          "status": "good",
+          "confidence": 0.98,
+          "artifact": false,
+          "stale": false
+        },
+        "provenance": {
+          "synthetic": true,
+          "scenario_id": "controlled-hr-rise",
+          "seed": 42017,
+          "generator_version": "1.0.0"
+        }
+      }
+    ],
+    "data_quality": "good",
+    "uncertainty": {
+      "score": 0.6950000000000001,
+      "interpretation": "heuristic evidence strength, not a clinical probability",
+      "limitations": "Synthetic baseline and heuristic thresholds; no clinical calibration."
+    },
+    "display": {
+      "body_region": "thorax",
+      "status_text": "Persistent single-signal deviation — human review required"
+    },
+    "safety": {
+      "diagnosis": null,
+      "requires_human_acknowledgement": true
+    },
+    "provenance": {
+      "synthetic": true,
+      "scenario_id": "controlled-hr-rise",
+      "seed": 42017,
+      "generator_version": "1.0.0",
+      "mission_scenario_id": "controlled-hr-rise"
+    },
+    "risk_event_id": "RISK-71143bd9"
+  },
+  "display_match": {
+    "crew_id": "CREW-01",
+    "overview_hr": "89",
+    "crew_health_hr": "89",
+    "matched": true
+  },
+  "delivery": {
+    "id": "report-CASE-RISK-71143bd9",
+    "observed_at": 1794654210000,
+    "transmitted_at": 1794654270000,
+    "deliver_at": 1794654330151,
+    "received_at": 1794654360000,
+    "guard": "human acknowledgement and configured mission delay"
+  },
+  "finished_at": "2026-10-24T17:24:51.360Z"
+}

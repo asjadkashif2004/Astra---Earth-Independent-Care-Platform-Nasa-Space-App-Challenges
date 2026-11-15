@@ -1,0 +1,18 @@
+{
+  "schema_version": "astra.publication-receipt.v1",
+  "id": "nasa-hrp-sleep-2016",
+  "url": "https://ntrs.nasa.gov/api/citations/20160003864/downloads/20160003864.pdf",
+  "filename": "20160003864.pdf",
+  "bytes": 967704,
+  "sha256": "252d4993a040ab8b989664b1da7a3143a5fd8169fac65b67f1f43231250ef1f5",
+  "started_at": "2026-10-24T08:09:55.133Z",
+  "completed_at": "2026-10-24T08:09:58.439Z",
+  "network_ms": 3306,
+  "http_status": 200,
+  "requests": 1,
+  "redirects": 0,
+  "response_complete": true,
+  "publisher_checksum": null,
+  "checksum_note": "SHA-256 computed from complete local original; no independent publisher checksum supplied.",
+  "etag": "\"e2782f25dce41e7df26f21e7035e3068\""
+}

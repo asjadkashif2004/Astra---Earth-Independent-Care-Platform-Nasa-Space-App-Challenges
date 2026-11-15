@@ -1,0 +1,23 @@
+
+Version symbols section '.gnu.version' contains 20 entries:
+ Addr: 0x0000000000000802  Offset: 0x00000802  Link: 6 (.dynsym)
+  000:   0 (*local*)       2 (GLIBC_2.2.5)   3 (GLIBC_2.34)    4 (GLIBC_2.14) 
+  004:   2 (GLIBC_2.2.5)   5 (CXXABI_1.3.9)   6 (GLIBCXX_3.4.21)    7 (GLIBC_2.4)  
+  008:   2 (GLIBC_2.2.5)   6 (GLIBCXX_3.4.21)    8 (GLIBC_2.3.4)   9 (CXXABI_1.3) 
+  00c:   1 (*global*)      a (GCC_3.0)       1 (*global*)      1 (*global*)   
+  010:   2 (GLIBC_2.2.5)   6 (GLIBCXX_3.4.21)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+
+Version needs section '.gnu.version_r' contains 3 entries:
+ Addr: 0x0000000000000830  Offset: 0x00000830  Link: 7 (.dynstr)
+  000000: Version: 1  File: libgcc_s.so.1  Cnt: 1
+  0x0010:   Name: GCC_3.0  Flags: none  Version: 10
+  0x0020: Version: 1  File: libstdc++.so.6  Cnt: 3
+  0x0030:   Name: CXXABI_1.3  Flags: none  Version: 9
+  0x0040:   Name: GLIBCXX_3.4.21  Flags: none  Version: 6
+  0x0050:   Name: CXXABI_1.3.9  Flags: none  Version: 5
+  0x0060: Version: 1  File: libc.so.6  Cnt: 5
+  0x0070:   Name: GLIBC_2.3.4  Flags: none  Version: 8
+  0x0080:   Name: GLIBC_2.4  Flags: none  Version: 7
+  0x0090:   Name: GLIBC_2.14  Flags: none  Version: 4
+  0x00a0:   Name: GLIBC_2.34  Flags: none  Version: 3
+  0x00b0:   Name: GLIBC_2.2.5  Flags: none  Version: 2

@@ -1,0 +1,1914 @@
+{
+  "schema_version": "astra.n12.v1",
+  "id": "984ecfb6-97a4-434d-aaa0-a0abc6e069b5",
+  "status": "COMPLETED",
+  "crew_id": "CREW-03",
+  "known_at": "2026-11-14T11:00:00.000Z",
+  "before": "2026-11-14T11:00:01.000Z",
+  "at": "2026-11-14T11:00:01.000Z",
+  "config": {
+    "schema_version": "astra.n12.v1",
+    "request_id": "d33067a9-af84-4c19-81f2-6a1f873b5e14",
+    "crew_id": "CREW-03",
+    "metric": "heart_rate",
+    "horizon_minutes": 30,
+    "method": "persistence",
+    "before": "2026-11-14T11:00:00.000Z",
+    "case_id": "nominal",
+    "issue_minute": 60,
+    "source_revision": 1,
+    "seed": 42017,
+    "supersedes": null,
+    "waveform": null,
+    "source_run_id": null,
+    "policy_hash": "04e1286927f4f083812cc181d0193fd5daf505d70344c3561ea2d8f2300740df"
+  },
+  "events": [
+    {
+      "schema_version": "astra.n12.event.v1",
+      "job_id": "984ecfb6-97a4-434d-aaa0-a0abc6e069b5",
+      "seq": 1,
+      "kind": "STARTED",
+      "known_at": "2026-11-14T11:00:00.000Z",
+      "host_at": "2026-11-04T11:14:14.335Z",
+      "payload": {
+        "config_hash": "5b2eac72d404fabd67c6ef727051cba31655b88627db29118eff8829a5bf91cb",
+        "policy_hash": "04e1286927f4f083812cc181d0193fd5daf505d70344c3561ea2d8f2300740df"
+      },
+      "previous_hash": "GENESIS",
+      "hash": "e7f57e3ba3bd001b2e11db7337c86a4fe1357f6dbcfcfdd354b40e75aaeba180"
+    },
+    {
+      "schema_version": "astra.n12.event.v1",
+      "job_id": "984ecfb6-97a4-434d-aaa0-a0abc6e069b5",
+      "seq": 2,
+      "kind": "WORKER_ONLINE",
+      "known_at": "2026-11-14T11:00:00.000Z",
+      "host_at": "2026-11-04T11:14:14.410Z",
+      "payload": {
+        "thread_id": 1
+      },
+      "previous_hash": "e7f57e3ba3bd001b2e11db7337c86a4fe1357f6dbcfcfdd354b40e75aaeba180",
+      "hash": "dad4ce9f27a0388cb7025665768b8b25f77962aee75e24675852f8869f499daa"
+    },
+    {
+      "schema_version": "astra.n12.event.v1",
+      "job_id": "984ecfb6-97a4-434d-aaa0-a0abc6e069b5",
+      "seq": 3,
+      "kind": "PHASE",
+      "known_at": "2026-11-14T11:00:00.000Z",
+      "host_at": "2026-11-04T11:14:14.461Z",
+      "payload": {
+        "stage": "SOURCE_VALIDATION"
+      },
+      "previous_hash": "dad4ce9f27a0388cb7025665768b8b25f77962aee75e24675852f8869f499daa",
+      "hash": "60cbb56478c6e7b09205a877ba2012fa2a1719f1aac7d96131e4b94a93d9d298"
+    },
+    {
+      "schema_version": "astra.n12.event.v1",
+      "job_id": "984ecfb6-97a4-434d-aaa0-a0abc6e069b5",
+      "seq": 4,
+      "kind": "PHASE",
+      "known_at": "2026-11-14T11:00:00.000Z",
+      "host_at": "2026-11-04T11:14:17.862Z",
+      "payload": {
+        "stage": "REFERENCE_FIT"
+      },
+      "previous_hash": "60cbb56478c6e7b09205a877ba2012fa2a1719f1aac7d96131e4b94a93d9d298",
+      "hash": "d1c4f931b27d37a154a54c122b05e5dd7fb42098f889e9d561fb47fa112a5bc6"
+    },
+    {
+      "schema_version": "astra.n12.event.v1",
+      "job_id": "984ecfb6-97a4-434d-aaa0-a0abc6e069b5",
+      "seq": 5,
+      "kind": "PHASE",
+      "known_at": "2026-11-14T11:00:00.000Z",
+      "host_at": "2026-11-04T11:14:18.178Z",
+      "payload": {
+        "stage": "CALIBRATION"
+      },
+      "previous_hash": "d1c4f931b27d37a154a54c122b05e5dd7fb42098f889e9d561fb47fa112a5bc6",
+      "hash": "3f2b508b633c9c65a37e594731b9f45948e64b7cea1601775aa8bc538080d103"
+    },
+    {
+      "schema_version": "astra.n12.event.v1",
+      "job_id": "984ecfb6-97a4-434d-aaa0-a0abc6e069b5",
+      "seq": 6,
+      "kind": "PHASE",
+      "known_at": "2026-11-14T11:00:00.000Z",
+      "host_at": "2026-11-04T11:14:19.992Z",
+      "payload": {
+        "stage": "EVALUATED"
+      },
+      "previous_hash": "3f2b508b633c9c65a37e594731b9f45948e64b7cea1601775aa8bc538080d103",
+      "hash": "26a3339495b284f2d2eff4ce388e0bb56bc2803afb44c98560d486daa79a27b3"
+    },
+    {
+      "schema_version": "astra.n12.event.v1",
+      "job_id": "984ecfb6-97a4-434d-aaa0-a0abc6e069b5",
+      "seq": 7,
+      "kind": "PREDICTION_COMPUTED",
+      "known_at": "2026-11-14T11:00:00.000Z",
+      "host_at": "2026-11-04T11:14:20.855Z",
+      "payload": {
+        "forecast_hash": "d616df6e66fee911c8229ca38db6f8e5ffcf47f5a80c8cded18a07726ae1124d",
+        "validated_forecast_ms": 99.15049999999974
+      },
+      "previous_hash": "26a3339495b284f2d2eff4ce388e0bb56bc2803afb44c98560d486daa79a27b3",
+      "hash": "b0dd02023e8a0366806ca1286fa03ae8efeea79f07331616aa71b3f844d3d01c"
+    },
+    {
+      "schema_version": "astra.n12.event.v1",
+      "job_id": "984ecfb6-97a4-434d-aaa0-a0abc6e069b5",
+      "seq": 8,
+      "kind": "COMMITTED",
+      "known_at": "2026-11-14T11:00:00.000Z",
+      "host_at": "2026-11-04T11:14:20.858Z",
+      "payload": {
+        "result_hash": "8d9edfe58973493915264aa67266f300ba0682252403b4f46e1dd90a8b6fcfdf",
+        "evaluation_hash": "b9104c3f4b69d7cdd3dd7737a3692aca854b65875dfc313020e7eaaf58674938",
+        "worker_exit": 0
+      },
+      "previous_hash": "b0dd02023e8a0366806ca1286fa03ae8efeea79f07331616aa71b3f844d3d01c",
+      "hash": "11a3798151f1435957d0bc860051749eca1eb7bdb51a13affd8076bf28563cff"
+    }
+  ],
+  "result": {
+    "schema_version": "astra.n12.result.v1",
+    "crew_id": "CREW-03",
+    "config_hash": "5b2eac72d404fabd67c6ef727051cba31655b88627db29118eff8829a5bf91cb",
+    "evaluation_hash": "b9104c3f4b69d7cdd3dd7737a3692aca854b65875dfc313020e7eaaf58674938",
+    "model_key": "persistence:heart_rate:30",
+    "model": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-persistence",
+      "version": "n12-synthetic-v1",
+      "method": "persistence",
+      "metric": "heart_rate",
+      "horizon_minutes": 30,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "last-observation",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "ENGINEERING_BASELINE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "Fixed comparison baseline; no medical approval",
+      "matched_cases": 14,
+      "hash": "191d414467349f1e465b022d73a721b1a7075742c604ffbe158a911ab76bb1ff"
+    },
+    "forecast": {
+      "schema_version": "astra.n12.forecast.v1",
+      "crew_id": "CREW-03",
+      "metric": "heart_rate",
+      "unit": "/min",
+      "issue_at": "2026-11-12T12:00:00.000Z",
+      "target_at": "2026-11-12T12:30:00.000Z",
+      "horizon_minutes": 30,
+      "method": "persistence",
+      "model_hash": "191d414467349f1e465b022d73a721b1a7075742c604ffbe158a911ab76bb1ff",
+      "reference_hash": "f253a0b62f3b254f0812f0f2aa55da2d360e1eecb1cb85b30ba4d9c477ac5bd8",
+      "source_hash": "fe67279703478a685e5a8f860e36a8cf5dc32399ba1ba5e956b201ce9b021c9e",
+      "observations": [
+        {
+          "at": "2026-11-12T11:30:00.000Z",
+          "known_at": "2026-11-12T11:30:00.000Z",
+          "value": 68.29,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "bd14f3f7fa3f26484c20d3120ee40f1bc7bf75d979c94378ee1d71f2a1b65f59"
+        },
+        {
+          "at": "2026-11-12T11:31:00.000Z",
+          "known_at": "2026-11-12T11:31:00.000Z",
+          "value": 67.39,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "fc1ef37340ff181c0083cf3c6845e349e20e8f662622994ceeccf3bb885f9b6b"
+        },
+        {
+          "at": "2026-11-12T11:32:00.000Z",
+          "known_at": "2026-11-12T11:32:00.000Z",
+          "value": 67.82,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "228883e5e88e3cacfdb00aaa3c108bbfcabe32c9840a021a3334ebcbf70f84d7"
+        },
+        {
+          "at": "2026-11-12T11:33:00.000Z",
+          "known_at": "2026-11-12T11:33:00.000Z",
+          "value": 67.89,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "5726672b53609066f014490c7ca98ce63ace78a49c251073595c5a9072c8bf6e"
+        },
+        {
+          "at": "2026-11-12T11:34:00.000Z",
+          "known_at": "2026-11-12T11:34:00.000Z",
+          "value": 67.79,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "281e0b9f9cd94b4764adeec22c879d229257b094d0033fe748788ec7b6c7c191"
+        },
+        {
+          "at": "2026-11-12T11:35:00.000Z",
+          "known_at": "2026-11-12T11:35:00.000Z",
+          "value": 67.47,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "265c3786a6a15e1a1fbe6b3f1f23cf8a2668953ae3eb14b53d86ba7db23134ac"
+        },
+        {
+          "at": "2026-11-12T11:36:00.000Z",
+          "known_at": "2026-11-12T11:36:00.000Z",
+          "value": 67.1,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "a4c3ee1271167afd20a95e0f5bdd439312f8cb7187fc9157f720502293b3fa18"
+        },
+        {
+          "at": "2026-11-12T11:37:00.000Z",
+          "known_at": "2026-11-12T11:37:00.000Z",
+          "value": 68.31,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "c6eb4b069eda03bdf8cd0294edf5d543bd80144e18147f5ae737c3ac7c1f0d7e"
+        },
+        {
+          "at": "2026-11-12T11:38:00.000Z",
+          "known_at": "2026-11-12T11:38:00.000Z",
+          "value": 67.64,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "2d9f7d11e6a507a64c3ca326bd128381ad8665502340ae14a0bac5dbe4bfb09e"
+        },
+        {
+          "at": "2026-11-12T11:39:00.000Z",
+          "known_at": "2026-11-12T11:39:00.000Z",
+          "value": 69.14,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "0bc2d322a136cfaff9ab0791eb26a2b138adff629f30b595509011448d7c9bd5"
+        },
+        {
+          "at": "2026-11-12T11:40:00.000Z",
+          "known_at": "2026-11-12T11:40:00.000Z",
+          "value": 68.67,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "bd276bd41269362c58df3f1ddbf45af5d4d868b9d3605213a45f722209532ee1"
+        },
+        {
+          "at": "2026-11-12T11:41:00.000Z",
+          "known_at": "2026-11-12T11:41:00.000Z",
+          "value": 68,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "324309717e15f01bdd6207d60ab11aacd9b477140194c269e1878305f3b6579b"
+        },
+        {
+          "at": "2026-11-12T11:42:00.000Z",
+          "known_at": "2026-11-12T11:42:00.000Z",
+          "value": 68.47,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "b4bc0f89b9d28bf48a3688690de5a680a3834f254b64aa8225c1547a86c45859"
+        },
+        {
+          "at": "2026-11-12T11:43:00.000Z",
+          "known_at": "2026-11-12T11:43:00.000Z",
+          "value": 68.85,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "af374efc2fd673b2042f60f33ec70d8c072c24d8ec9cbaf2cc671eafcfe9bbf2"
+        },
+        {
+          "at": "2026-11-12T11:44:00.000Z",
+          "known_at": "2026-11-12T11:44:00.000Z",
+          "value": 67.82,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "bca11137d895dffaf0c769347bca11ea07b67313cefe234fcbc882855ec7ab66"
+        },
+        {
+          "at": "2026-11-12T11:45:00.000Z",
+          "known_at": "2026-11-12T11:45:00.000Z",
+          "value": 67.44,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "de28a4ab564a8a69947ecf0e6d67942eebaf38b4e613772eb5a48c3c7c32d504"
+        },
+        {
+          "at": "2026-11-12T11:46:00.000Z",
+          "known_at": "2026-11-12T11:46:00.000Z",
+          "value": 68.32,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "512a873289cea3cdae406359902f56cd6d2913f6b47f0ad2a97769cf165578e4"
+        },
+        {
+          "at": "2026-11-12T11:47:00.000Z",
+          "known_at": "2026-11-12T11:47:00.000Z",
+          "value": 67.54,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "a63d467b48fbdfb7a441af628af9d371bc0bfe6b18872b905b5c0795ab95be38"
+        },
+        {
+          "at": "2026-11-12T11:48:00.000Z",
+          "known_at": "2026-11-12T11:48:00.000Z",
+          "value": 67.91,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "691cee1e37dab3396c6f2a725fa29c7494ed0046fef85ee17a0468d30c2070d2"
+        },
+        {
+          "at": "2026-11-12T11:49:00.000Z",
+          "known_at": "2026-11-12T11:49:00.000Z",
+          "value": 67.53,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "8ba06e9a1e028abf6e2b2f4dccfc9395033bc00ab1f73541f1c3de3d69bfc501"
+        },
+        {
+          "at": "2026-11-12T11:50:00.000Z",
+          "known_at": "2026-11-12T11:50:00.000Z",
+          "value": 67.99,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "e55e63aeeb7f5c0f4f599c0f701aebfb1dde72e3c3dcb5aebab4637b72ad6af9"
+        },
+        {
+          "at": "2026-11-12T11:51:00.000Z",
+          "known_at": "2026-11-12T11:51:00.000Z",
+          "value": 67.38,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "319fe61f623b1279534358abfeb0db2a1ca3caad702c6cd7fea24714396de36f"
+        },
+        {
+          "at": "2026-11-12T11:52:00.000Z",
+          "known_at": "2026-11-12T11:52:00.000Z",
+          "value": 67.93,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "3cbf40057432a171f9ddca5e2ae4f7d6a326d485d5971fb67692894fb865b41a"
+        },
+        {
+          "at": "2026-11-12T11:53:00.000Z",
+          "known_at": "2026-11-12T11:53:00.000Z",
+          "value": 67.65,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "2ed74c387b2ce568027c8bb5855f2b156e0a510e40791f2978f33e8be44710a4"
+        },
+        {
+          "at": "2026-11-12T11:54:00.000Z",
+          "known_at": "2026-11-12T11:54:00.000Z",
+          "value": 67.74,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "73f083e789fb68a9af094085e3bb9c701188da496c1d3f12a575f0fe6c5f35b0"
+        },
+        {
+          "at": "2026-11-12T11:55:00.000Z",
+          "known_at": "2026-11-12T11:55:00.000Z",
+          "value": 67.84,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "4125c5ab18f2264f4afcd26eaf88aa1c3cbc6c379ebb9f47e4a768777ca914a2"
+        },
+        {
+          "at": "2026-11-12T11:56:00.000Z",
+          "known_at": "2026-11-12T11:56:00.000Z",
+          "value": 67.27,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "dd42cdb5a92b04175e983308f4bc0a74b993a0735f4f752fc6989ee273eda240"
+        },
+        {
+          "at": "2026-11-12T11:57:00.000Z",
+          "known_at": "2026-11-12T11:57:00.000Z",
+          "value": 67.88,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "27fa88e1710cf18fe8096836046cf6151d4ac7831db1561c5d60d4e3e8f9338d"
+        },
+        {
+          "at": "2026-11-12T11:58:00.000Z",
+          "known_at": "2026-11-12T11:58:00.000Z",
+          "value": 67.12,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "23e198f9a0ed2c708cd3a50e306e03601c5c71a4e465c41a63abd1d7da122360"
+        },
+        {
+          "at": "2026-11-12T11:59:00.000Z",
+          "known_at": "2026-11-12T11:59:00.000Z",
+          "value": 67.98,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "05ef2b25ba28596407a7bddd9664a755e7e01ebf01167477e8953d7109898ec8"
+        },
+        {
+          "at": "2026-11-12T12:00:00.000Z",
+          "known_at": "2026-11-12T12:00:00.000Z",
+          "value": 67.39,
+          "quality": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false
+          },
+          "revision": 1,
+          "hash": "0a0eabd5ce9780aea040beb095d024ef8e1350d7fc7f78a4c6e8f62a13cdfba2"
+        }
+      ],
+      "coverage": 1,
+      "synthetic": true,
+      "source_type": "HISTORICAL_AUTHORED_SYNTHETIC_BACKTEST",
+      "clinical_conclusion": null,
+      "may_create_N02_alert": false,
+      "status": "AVAILABLE",
+      "reason": null,
+      "estimate": 67.39,
+      "personal_baseline_sd": -0.02757092890644915,
+      "slope_per_minute": 0,
+      "uncertainty": {
+        "lower": 66.48,
+        "upper": 68.3,
+        "personal_sd_lower": -0.21946830846215773,
+        "personal_sd_upper": 0.16432645064925944,
+        "calibration_hash": "a9397b0168a397ec8e127bb303c3c43ed2b14cf9027c60d9bcc63922806fd4fc",
+        "n": 12,
+        "nominal_target": 0.9,
+        "interpretation": "Calibration-only absolute residual interval; real-world coverage UNVERIFIED; not a clinical probability"
+      },
+      "trajectory": {
+        "status": "NO_PROJECTED_REFERENCE_CROSSING",
+        "current_sd": -0.02757092890644915,
+        "target_sd": -0.02757092890644915,
+        "reference_band": 2,
+        "meaning": "Authored descriptive band; absence is not medical safety",
+        "actual_N02_event": false
+      },
+      "hash": "d616df6e66fee911c8229ca38db6f8e5ffcf47f5a80c8cded18a07726ae1124d"
+    },
+    "metrics": [
+      {
+        "partition": "calibration",
+        "method": "persistence",
+        "metric": "heart_rate",
+        "horizon_minutes": 30,
+        "attempted": 16,
+        "scored": 12,
+        "abstained": 4,
+        "mae": 0.40166666666666134,
+        "median_absolute_error": 0.32499999999999574,
+        "empirical_interval_coverage": null,
+        "interval_denominator": 0,
+        "abstention_rate": 0.25,
+        "trajectory_confusion": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 12,
+          "fn": 0
+        },
+        "trajectory_unscorable": 4
+      },
+      {
+        "partition": "test",
+        "method": "persistence",
+        "metric": "heart_rate",
+        "horizon_minutes": 30,
+        "attempted": 40,
+        "scored": 14,
+        "abstained": 26,
+        "mae": 0.4685714285714267,
+        "median_absolute_error": 0.4200000000000017,
+        "empirical_interval_coverage": 0.8571428571428571,
+        "interval_denominator": 14,
+        "abstention_rate": 0.65,
+        "trajectory_confusion": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 14,
+          "fn": 0
+        },
+        "trajectory_unscorable": 26
+      },
+      {
+        "partition": "seen_robustness",
+        "method": "persistence",
+        "metric": "heart_rate",
+        "horizon_minutes": 30,
+        "attempted": 24,
+        "scored": 22,
+        "abstained": 2,
+        "mae": 0.5586363636363626,
+        "median_absolute_error": 0.5300000000000011,
+        "empirical_interval_coverage": 0.8636363636363636,
+        "interval_denominator": 22,
+        "abstention_rate": 0.08333333333333333,
+        "trajectory_confusion": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 22,
+          "fn": 0
+        },
+        "trajectory_unscorable": 2
+      },
+      {
+        "partition": "analytical_controls",
+        "method": "persistence",
+        "metric": "heart_rate",
+        "horizon_minutes": 30,
+        "attempted": 24,
+        "scored": 24,
+        "abstained": 0,
+        "mae": 1.6496319866937028,
+        "median_absolute_error": 1.6629238491997498,
+        "empirical_interval_coverage": 0,
+        "interval_denominator": 24,
+        "abstention_rate": 0,
+        "trajectory_confusion": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 24,
+          "fn": 0
+        },
+        "trajectory_unscorable": 0
+      }
+    ],
+    "known_at": "2026-11-14T11:00:00.000Z",
+    "host_recorded_at": "2026-11-04T11:14:20.840Z",
+    "counterfactual_backtest": true,
+    "scientific_review": "PENDING",
+    "operational_promotion": false,
+    "resources": {
+      "duration_ms": 6500.9668,
+      "validated_forecast_ms": 99.15049999999974,
+      "resource_samples": [
+        {
+          "seq": 1,
+          "rss_bytes": 75259904,
+          "elapsed_ms": 0.2256999999999607
+        },
+        {
+          "seq": 2,
+          "rss_bytes": 80408576,
+          "elapsed_ms": 32.05420000000049
+        },
+        {
+          "seq": 3,
+          "rss_bytes": 86462464,
+          "elapsed_ms": 62.551800000000185
+        },
+        {
+          "seq": 4,
+          "rss_bytes": 88911872,
+          "elapsed_ms": 93.8757000000005
+        },
+        {
+          "seq": 5,
+          "rss_bytes": 90853376,
+          "elapsed_ms": 123.79780000000028
+        },
+        {
+          "seq": 6,
+          "rss_bytes": 96866304,
+          "elapsed_ms": 149.04849999999988
+        },
+        {
+          "seq": 7,
+          "rss_bytes": 89591808,
+          "elapsed_ms": 173.76640000000043
+        },
+        {
+          "seq": 8,
+          "rss_bytes": 89915392,
+          "elapsed_ms": 208.3116
+        },
+        {
+          "seq": 9,
+          "rss_bytes": 97816576,
+          "elapsed_ms": 233.46489999999994
+        },
+        {
+          "seq": 10,
+          "rss_bytes": 98377728,
+          "elapsed_ms": 260.5785999999998
+        },
+        {
+          "seq": 11,
+          "rss_bytes": 107487232,
+          "elapsed_ms": 287.5686999999998
+        },
+        {
+          "seq": 12,
+          "rss_bytes": 95428608,
+          "elapsed_ms": 311.6693000000005
+        },
+        {
+          "seq": 13,
+          "rss_bytes": 94990336,
+          "elapsed_ms": 336.8185000000003
+        },
+        {
+          "seq": 14,
+          "rss_bytes": 95490048,
+          "elapsed_ms": 377.2404000000006
+        },
+        {
+          "seq": 15,
+          "rss_bytes": 95608832,
+          "elapsed_ms": 405.46660000000065
+        },
+        {
+          "seq": 16,
+          "rss_bytes": 95563776,
+          "elapsed_ms": 441.59820000000036
+        },
+        {
+          "seq": 17,
+          "rss_bytes": 95670272,
+          "elapsed_ms": 473.0586000000003
+        },
+        {
+          "seq": 18,
+          "rss_bytes": 95723520,
+          "elapsed_ms": 504.4499000000005
+        },
+        {
+          "seq": 19,
+          "rss_bytes": 95891456,
+          "elapsed_ms": 536.6181999999999
+        },
+        {
+          "seq": 20,
+          "rss_bytes": 96018432,
+          "elapsed_ms": 567.8939
+        },
+        {
+          "seq": 21,
+          "rss_bytes": 95678464,
+          "elapsed_ms": 593.0603000000001
+        },
+        {
+          "seq": 22,
+          "rss_bytes": 96288768,
+          "elapsed_ms": 631.1212999999998
+        },
+        {
+          "seq": 23,
+          "rss_bytes": 96362496,
+          "elapsed_ms": 659.4917000000005
+        },
+        {
+          "seq": 24,
+          "rss_bytes": 96542720,
+          "elapsed_ms": 692.9246000000003
+        },
+        {
+          "seq": 25,
+          "rss_bytes": 96800768,
+          "elapsed_ms": 724.4133000000002
+        },
+        {
+          "seq": 26,
+          "rss_bytes": 96878592,
+          "elapsed_ms": 763.0808000000006
+        },
+        {
+          "seq": 27,
+          "rss_bytes": 96772096,
+          "elapsed_ms": 794.5005000000001
+        },
+        {
+          "seq": 28,
+          "rss_bytes": 96894976,
+          "elapsed_ms": 825.2384000000002
+        },
+        {
+          "seq": 29,
+          "rss_bytes": 96993280,
+          "elapsed_ms": 861.8159000000005
+        },
+        {
+          "seq": 30,
+          "rss_bytes": 97017856,
+          "elapsed_ms": 890.4556000000002
+        },
+        {
+          "seq": 31,
+          "rss_bytes": 97017856,
+          "elapsed_ms": 915.4504999999999
+        },
+        {
+          "seq": 32,
+          "rss_bytes": 97087488,
+          "elapsed_ms": 944.3602000000001
+        },
+        {
+          "seq": 33,
+          "rss_bytes": 97345536,
+          "elapsed_ms": 977.2871000000005
+        },
+        {
+          "seq": 34,
+          "rss_bytes": 97357824,
+          "elapsed_ms": 1010.0882000000001
+        },
+        {
+          "seq": 35,
+          "rss_bytes": 97423360,
+          "elapsed_ms": 1048.8173000000006
+        },
+        {
+          "seq": 36,
+          "rss_bytes": 97423360,
+          "elapsed_ms": 1077.7582000000002
+        },
+        {
+          "seq": 37,
+          "rss_bytes": 96538624,
+          "elapsed_ms": 1116.0496000000003
+        },
+        {
+          "seq": 38,
+          "rss_bytes": 96641024,
+          "elapsed_ms": 1149.2795999999998
+        },
+        {
+          "seq": 39,
+          "rss_bytes": 96677888,
+          "elapsed_ms": 1177.0322999999999
+        },
+        {
+          "seq": 40,
+          "rss_bytes": 96911360,
+          "elapsed_ms": 1208.8071
+        },
+        {
+          "seq": 41,
+          "rss_bytes": 97243136,
+          "elapsed_ms": 1240.1603000000005
+        },
+        {
+          "seq": 42,
+          "rss_bytes": 97255424,
+          "elapsed_ms": 1272.1382000000003
+        },
+        {
+          "seq": 43,
+          "rss_bytes": 97333248,
+          "elapsed_ms": 1296.7543999999998
+        },
+        {
+          "seq": 44,
+          "rss_bytes": 97349632,
+          "elapsed_ms": 1326.8765000000003
+        },
+        {
+          "seq": 45,
+          "rss_bytes": 98689024,
+          "elapsed_ms": 1358.7948000000006
+        },
+        {
+          "seq": 46,
+          "rss_bytes": 102379520,
+          "elapsed_ms": 1392.1356000000005
+        },
+        {
+          "seq": 47,
+          "rss_bytes": 106184704,
+          "elapsed_ms": 1424.1122000000005
+        },
+        {
+          "seq": 48,
+          "rss_bytes": 108699648,
+          "elapsed_ms": 1455.8833000000004
+        },
+        {
+          "seq": 49,
+          "rss_bytes": 110247936,
+          "elapsed_ms": 1487.4319000000005
+        },
+        {
+          "seq": 50,
+          "rss_bytes": 110235648,
+          "elapsed_ms": 1519.3288000000002
+        },
+        {
+          "seq": 51,
+          "rss_bytes": 112406528,
+          "elapsed_ms": 1552.8787000000002
+        },
+        {
+          "seq": 52,
+          "rss_bytes": 119021568,
+          "elapsed_ms": 1585.1344
+        },
+        {
+          "seq": 53,
+          "rss_bytes": 112082944,
+          "elapsed_ms": 1616.732
+        },
+        {
+          "seq": 54,
+          "rss_bytes": 107208704,
+          "elapsed_ms": 1648.8479000000007
+        },
+        {
+          "seq": 55,
+          "rss_bytes": 107012096,
+          "elapsed_ms": 1680.5513
+        },
+        {
+          "seq": 56,
+          "rss_bytes": 107233280,
+          "elapsed_ms": 1712.1397000000006
+        },
+        {
+          "seq": 57,
+          "rss_bytes": 107536384,
+          "elapsed_ms": 1743.9036000000006
+        },
+        {
+          "seq": 58,
+          "rss_bytes": 107540480,
+          "elapsed_ms": 1774.8492999999999
+        },
+        {
+          "seq": 59,
+          "rss_bytes": 107720704,
+          "elapsed_ms": 1806.3739999999998
+        },
+        {
+          "seq": 60,
+          "rss_bytes": 107745280,
+          "elapsed_ms": 1838.6082000000006
+        },
+        {
+          "seq": 61,
+          "rss_bytes": 107900928,
+          "elapsed_ms": 1869.8481000000002
+        },
+        {
+          "seq": 62,
+          "rss_bytes": 107970560,
+          "elapsed_ms": 1900.9520000000002
+        },
+        {
+          "seq": 63,
+          "rss_bytes": 109846528,
+          "elapsed_ms": 1931.6257999999998
+        },
+        {
+          "seq": 64,
+          "rss_bytes": 108380160,
+          "elapsed_ms": 1963.1000000000004
+        },
+        {
+          "seq": 65,
+          "rss_bytes": 107646976,
+          "elapsed_ms": 1994.0581000000002
+        },
+        {
+          "seq": 66,
+          "rss_bytes": 107864064,
+          "elapsed_ms": 2025.4951
+        },
+        {
+          "seq": 67,
+          "rss_bytes": 108261376,
+          "elapsed_ms": 2055.8662000000004
+        },
+        {
+          "seq": 68,
+          "rss_bytes": 108265472,
+          "elapsed_ms": 2086.8468000000003
+        },
+        {
+          "seq": 69,
+          "rss_bytes": 108363776,
+          "elapsed_ms": 2117.3391
+        },
+        {
+          "seq": 70,
+          "rss_bytes": 108363776,
+          "elapsed_ms": 2149.4670000000006
+        },
+        {
+          "seq": 71,
+          "rss_bytes": 108363776,
+          "elapsed_ms": 2180.3722
+        },
+        {
+          "seq": 72,
+          "rss_bytes": 108371968,
+          "elapsed_ms": 2211.0915000000005
+        },
+        {
+          "seq": 73,
+          "rss_bytes": 108441600,
+          "elapsed_ms": 2242.5247
+        },
+        {
+          "seq": 74,
+          "rss_bytes": 108441600,
+          "elapsed_ms": 2273.1035
+        },
+        {
+          "seq": 75,
+          "rss_bytes": 108441600,
+          "elapsed_ms": 2303.8653000000004
+        },
+        {
+          "seq": 76,
+          "rss_bytes": 108441600,
+          "elapsed_ms": 2335.4825
+        },
+        {
+          "seq": 77,
+          "rss_bytes": 108441600,
+          "elapsed_ms": 2367.0829000000003
+        },
+        {
+          "seq": 78,
+          "rss_bytes": 108441600,
+          "elapsed_ms": 2399.2592000000004
+        },
+        {
+          "seq": 79,
+          "rss_bytes": 108445696,
+          "elapsed_ms": 2431.4129000000003
+        },
+        {
+          "seq": 80,
+          "rss_bytes": 108445696,
+          "elapsed_ms": 2462.6264
+        },
+        {
+          "seq": 81,
+          "rss_bytes": 108462080,
+          "elapsed_ms": 2492.9202999999998
+        },
+        {
+          "seq": 82,
+          "rss_bytes": 108494848,
+          "elapsed_ms": 2524.4782999999998
+        },
+        {
+          "seq": 83,
+          "rss_bytes": 108630016,
+          "elapsed_ms": 2554.9849000000004
+        },
+        {
+          "seq": 84,
+          "rss_bytes": 108695552,
+          "elapsed_ms": 2586.045
+        },
+        {
+          "seq": 85,
+          "rss_bytes": 108761088,
+          "elapsed_ms": 2618.2446
+        },
+        {
+          "seq": 86,
+          "rss_bytes": 108838912,
+          "elapsed_ms": 2649.2988000000005
+        },
+        {
+          "seq": 87,
+          "rss_bytes": 108916736,
+          "elapsed_ms": 2682.1714
+        },
+        {
+          "seq": 88,
+          "rss_bytes": 109002752,
+          "elapsed_ms": 2714.0008
+        },
+        {
+          "seq": 89,
+          "rss_bytes": 109043712,
+          "elapsed_ms": 2744.5836
+        },
+        {
+          "seq": 90,
+          "rss_bytes": 109191168,
+          "elapsed_ms": 2775.3568999999998
+        },
+        {
+          "seq": 91,
+          "rss_bytes": 109244416,
+          "elapsed_ms": 2806.1704
+        },
+        {
+          "seq": 92,
+          "rss_bytes": 109326336,
+          "elapsed_ms": 2836.9164
+        },
+        {
+          "seq": 93,
+          "rss_bytes": 109375488,
+          "elapsed_ms": 2868.0933000000005
+        },
+        {
+          "seq": 94,
+          "rss_bytes": 108814336,
+          "elapsed_ms": 2900.5632000000005
+        },
+        {
+          "seq": 95,
+          "rss_bytes": 109056000,
+          "elapsed_ms": 2932.6479
+        },
+        {
+          "seq": 96,
+          "rss_bytes": 109244416,
+          "elapsed_ms": 2963.5528000000004
+        },
+        {
+          "seq": 97,
+          "rss_bytes": 109314048,
+          "elapsed_ms": 2995.093
+        },
+        {
+          "seq": 98,
+          "rss_bytes": 113180672,
+          "elapsed_ms": 3026.3374000000003
+        },
+        {
+          "seq": 99,
+          "rss_bytes": 116584448,
+          "elapsed_ms": 3057.5425999999998
+        },
+        {
+          "seq": 100,
+          "rss_bytes": 115720192,
+          "elapsed_ms": 3087.9441000000006
+        },
+        {
+          "seq": 101,
+          "rss_bytes": 117915648,
+          "elapsed_ms": 3119.0225
+        },
+        {
+          "seq": 102,
+          "rss_bytes": 128540672,
+          "elapsed_ms": 3150.1469000000006
+        },
+        {
+          "seq": 103,
+          "rss_bytes": 116375552,
+          "elapsed_ms": 3180.4145
+        },
+        {
+          "seq": 104,
+          "rss_bytes": 115707904,
+          "elapsed_ms": 3212.066
+        },
+        {
+          "seq": 105,
+          "rss_bytes": 113704960,
+          "elapsed_ms": 3243.8163000000004
+        },
+        {
+          "seq": 106,
+          "rss_bytes": 109867008,
+          "elapsed_ms": 3275.7472
+        },
+        {
+          "seq": 107,
+          "rss_bytes": 109756416,
+          "elapsed_ms": 3307.4007
+        },
+        {
+          "seq": 108,
+          "rss_bytes": 109821952,
+          "elapsed_ms": 3339.7367000000004
+        },
+        {
+          "seq": 109,
+          "rss_bytes": 109854720,
+          "elapsed_ms": 3370.9508000000005
+        },
+        {
+          "seq": 110,
+          "rss_bytes": 109875200,
+          "elapsed_ms": 3402.2768000000005
+        },
+        {
+          "seq": 111,
+          "rss_bytes": 109875200,
+          "elapsed_ms": 3433.4154
+        },
+        {
+          "seq": 112,
+          "rss_bytes": 109891584,
+          "elapsed_ms": 3464.4039000000002
+        },
+        {
+          "seq": 113,
+          "rss_bytes": 109899776,
+          "elapsed_ms": 3495.1901
+        },
+        {
+          "seq": 114,
+          "rss_bytes": 110039040,
+          "elapsed_ms": 3526.3267000000005
+        },
+        {
+          "seq": 115,
+          "rss_bytes": 110112768,
+          "elapsed_ms": 3557.4652000000006
+        },
+        {
+          "seq": 116,
+          "rss_bytes": 110120960,
+          "elapsed_ms": 3588.0152
+        },
+        {
+          "seq": 117,
+          "rss_bytes": 110157824,
+          "elapsed_ms": 3619.4994000000006
+        },
+        {
+          "seq": 118,
+          "rss_bytes": 110657536,
+          "elapsed_ms": 3651.1295
+        },
+        {
+          "seq": 119,
+          "rss_bytes": 109928448,
+          "elapsed_ms": 3682.5880000000006
+        },
+        {
+          "seq": 120,
+          "rss_bytes": 109965312,
+          "elapsed_ms": 3713.8912
+        },
+        {
+          "seq": 121,
+          "rss_bytes": 109969408,
+          "elapsed_ms": 3745.5906000000004
+        },
+        {
+          "seq": 122,
+          "rss_bytes": 109973504,
+          "elapsed_ms": 3777.4434
+        },
+        {
+          "seq": 123,
+          "rss_bytes": 110669824,
+          "elapsed_ms": 3808.0206
+        },
+        {
+          "seq": 124,
+          "rss_bytes": 110161920,
+          "elapsed_ms": 3842.5094
+        },
+        {
+          "seq": 125,
+          "rss_bytes": 110657536,
+          "elapsed_ms": 3871.4113000000007
+        },
+        {
+          "seq": 126,
+          "rss_bytes": 116465664,
+          "elapsed_ms": 3903.8953999999994
+        },
+        {
+          "seq": 127,
+          "rss_bytes": 118640640,
+          "elapsed_ms": 3934.496800000001
+        },
+        {
+          "seq": 128,
+          "rss_bytes": 122560512,
+          "elapsed_ms": 3966.6062999999995
+        },
+        {
+          "seq": 129,
+          "rss_bytes": 127315968,
+          "elapsed_ms": 3998.3929000000007
+        },
+        {
+          "seq": 130,
+          "rss_bytes": 127324160,
+          "elapsed_ms": 4029.1373999999996
+        },
+        {
+          "seq": 131,
+          "rss_bytes": 127406080,
+          "elapsed_ms": 4061.8588
+        },
+        {
+          "seq": 132,
+          "rss_bytes": 127406080,
+          "elapsed_ms": 4093.389000000001
+        },
+        {
+          "seq": 133,
+          "rss_bytes": 127426560,
+          "elapsed_ms": 4124.646000000001
+        },
+        {
+          "seq": 134,
+          "rss_bytes": 127459328,
+          "elapsed_ms": 4155.615
+        },
+        {
+          "seq": 135,
+          "rss_bytes": 127606784,
+          "elapsed_ms": 4186.3141
+        },
+        {
+          "seq": 136,
+          "rss_bytes": 127930368,
+          "elapsed_ms": 4218.205599999999
+        },
+        {
+          "seq": 137,
+          "rss_bytes": 127995904,
+          "elapsed_ms": 4248.741400000001
+        },
+        {
+          "seq": 138,
+          "rss_bytes": 127995904,
+          "elapsed_ms": 4280.4424
+        },
+        {
+          "seq": 139,
+          "rss_bytes": 127995904,
+          "elapsed_ms": 4312.171
+        },
+        {
+          "seq": 140,
+          "rss_bytes": 127995904,
+          "elapsed_ms": 4343.932000000001
+        },
+        {
+          "seq": 141,
+          "rss_bytes": 128159744,
+          "elapsed_ms": 4374.741400000001
+        },
+        {
+          "seq": 142,
+          "rss_bytes": 128131072,
+          "elapsed_ms": 4405.9658
+        },
+        {
+          "seq": 143,
+          "rss_bytes": 128131072,
+          "elapsed_ms": 4437.8964
+        },
+        {
+          "seq": 144,
+          "rss_bytes": 127475712,
+          "elapsed_ms": 4469.3087
+        },
+        {
+          "seq": 145,
+          "rss_bytes": 127475712,
+          "elapsed_ms": 4500.9617
+        },
+        {
+          "seq": 146,
+          "rss_bytes": 127512576,
+          "elapsed_ms": 4532.154700000001
+        },
+        {
+          "seq": 147,
+          "rss_bytes": 127516672,
+          "elapsed_ms": 4563.3714
+        },
+        {
+          "seq": 148,
+          "rss_bytes": 127680512,
+          "elapsed_ms": 4595.1363
+        },
+        {
+          "seq": 149,
+          "rss_bytes": 127725568,
+          "elapsed_ms": 4626.7255000000005
+        },
+        {
+          "seq": 150,
+          "rss_bytes": 127885312,
+          "elapsed_ms": 4658.092500000001
+        },
+        {
+          "seq": 151,
+          "rss_bytes": 127885312,
+          "elapsed_ms": 4689.1651999999995
+        },
+        {
+          "seq": 152,
+          "rss_bytes": 127885312,
+          "elapsed_ms": 4720.800800000001
+        },
+        {
+          "seq": 153,
+          "rss_bytes": 127885312,
+          "elapsed_ms": 4751.569800000001
+        },
+        {
+          "seq": 154,
+          "rss_bytes": 127893504,
+          "elapsed_ms": 4783.0923
+        },
+        {
+          "seq": 155,
+          "rss_bytes": 127897600,
+          "elapsed_ms": 4814.829600000001
+        },
+        {
+          "seq": 156,
+          "rss_bytes": 127897600,
+          "elapsed_ms": 4845.9146
+        },
+        {
+          "seq": 157,
+          "rss_bytes": 127897600,
+          "elapsed_ms": 4877.9424
+        },
+        {
+          "seq": 158,
+          "rss_bytes": 127897600,
+          "elapsed_ms": 4910.403400000001
+        },
+        {
+          "seq": 159,
+          "rss_bytes": 127909888,
+          "elapsed_ms": 4941.4637999999995
+        },
+        {
+          "seq": 160,
+          "rss_bytes": 127909888,
+          "elapsed_ms": 4972.2538
+        },
+        {
+          "seq": 161,
+          "rss_bytes": 127909888,
+          "elapsed_ms": 5003.2109
+        },
+        {
+          "seq": 162,
+          "rss_bytes": 127664128,
+          "elapsed_ms": 5034.6718
+        },
+        {
+          "seq": 163,
+          "rss_bytes": 127811584,
+          "elapsed_ms": 5065.789500000001
+        },
+        {
+          "seq": 164,
+          "rss_bytes": 127811584,
+          "elapsed_ms": 5097.582200000001
+        },
+        {
+          "seq": 165,
+          "rss_bytes": 128024576,
+          "elapsed_ms": 5128.689700000001
+        },
+        {
+          "seq": 166,
+          "rss_bytes": 128024576,
+          "elapsed_ms": 5159.4125
+        },
+        {
+          "seq": 167,
+          "rss_bytes": 128024576,
+          "elapsed_ms": 5190.1918000000005
+        },
+        {
+          "seq": 168,
+          "rss_bytes": 128356352,
+          "elapsed_ms": 5221.886399999999
+        },
+        {
+          "seq": 169,
+          "rss_bytes": 128421888,
+          "elapsed_ms": 5253.2413
+        },
+        {
+          "seq": 170,
+          "rss_bytes": 128425984,
+          "elapsed_ms": 5284.387000000001
+        },
+        {
+          "seq": 171,
+          "rss_bytes": 128425984,
+          "elapsed_ms": 5315.9686
+        },
+        {
+          "seq": 172,
+          "rss_bytes": 128425984,
+          "elapsed_ms": 5346.4915
+        },
+        {
+          "seq": 173,
+          "rss_bytes": 128425984,
+          "elapsed_ms": 5377.149600000001
+        },
+        {
+          "seq": 174,
+          "rss_bytes": 128434176,
+          "elapsed_ms": 5408.4789
+        },
+        {
+          "seq": 175,
+          "rss_bytes": 128442368,
+          "elapsed_ms": 5439.8994999999995
+        },
+        {
+          "seq": 176,
+          "rss_bytes": 128454656,
+          "elapsed_ms": 5470.8042000000005
+        },
+        {
+          "seq": 177,
+          "rss_bytes": 128454656,
+          "elapsed_ms": 5501.9388
+        },
+        {
+          "seq": 178,
+          "rss_bytes": 128454656,
+          "elapsed_ms": 5533.164699999999
+        },
+        {
+          "seq": 179,
+          "rss_bytes": 128462848,
+          "elapsed_ms": 5564.485700000001
+        },
+        {
+          "seq": 180,
+          "rss_bytes": 128466944,
+          "elapsed_ms": 5595.6119
+        },
+        {
+          "seq": 181,
+          "rss_bytes": 128880640,
+          "elapsed_ms": 5627.161400000001
+        },
+        {
+          "seq": 182,
+          "rss_bytes": 128307200,
+          "elapsed_ms": 5655.3896
+        },
+        {
+          "seq": 183,
+          "rss_bytes": 130764800,
+          "elapsed_ms": 5689.4738
+        },
+        {
+          "seq": 184,
+          "rss_bytes": 131997696,
+          "elapsed_ms": 5720.8737
+        },
+        {
+          "seq": 185,
+          "rss_bytes": 133341184,
+          "elapsed_ms": 5752.6579
+        },
+        {
+          "seq": 186,
+          "rss_bytes": 135741440,
+          "elapsed_ms": 5783.6633
+        },
+        {
+          "seq": 187,
+          "rss_bytes": 128180224,
+          "elapsed_ms": 5851.1396
+        }
+      ],
+      "resource_sample_count": 187,
+      "worker_thread_id": 1,
+      "worker_exit": 0,
+      "cache_reused": false,
+      "network_requests": 0,
+      "limitations": "RSS sampled for shared process, not hard peak; no OS network sandbox. No network code in fixed worker. SQLite acknowledgement is OS-level."
+    },
+    "hash": "8d9edfe58973493915264aa67266f300ba0682252403b4f46e1dd90a8b6fcfdf"
+  },
+  "source_context": {
+    "schema_version": "astra.n12.context.v1",
+    "N07": {
+      "schema_version": "astra.n11.source-context.v1",
+      "retained_inventory_sha256": "cb76d62bd42e88479625b23e92996ecdc5e85cad3e640b748bbf837141b7853c",
+      "verification": "PINNED_RETAINED_DESCRIPTOR; original intake verified by N07, not a fresh scientific review",
+      "originals": [
+        {
+          "id": "nasa-ntrs-20205008796",
+          "title": "Market Survey 2020:  Commercial Clinical Decision Support Systems and Wellness Tools",
+          "version": "NTRS 20205008796; modified 2025-08-31T18:39:21.7150190+00:00",
+          "sha256": "3429154f91f4bc5476fc7adb7ee18f5a811b8bed2de7acad0f5c94e530ebb4f0",
+          "rights": {
+            "statement": "Work of the US Gov. Public Use Permitted.",
+            "license_id": null,
+            "terms_url": "https://www.sti.nasa.gov/disclaimers/",
+            "harvesting_url": "https://www.sti.nasa.gov/harvesting-data-from-ntrs/",
+            "record_url": "https://ntrs.nasa.gov/citations/20205008796",
+            "reviewed_on": "2026-10-23",
+            "attribution": "NASA STI Compliance and Distribution Services, NASA Ames Research Center; B. Burian, K. Martin and T. Shaw. Market Survey 2020: Commercial Clinical Decision Support Systems and Wellness Tools. NTRS 20205008796; 2021 NASA HRP Investigators' Workshop.",
+            "restrictions": [
+              "This approval covers only the public metadata JSON, not linked documents, vendor websites, images or any other NTRS record.",
+              "Credit NASA STI Compliance and Distribution Services as the metadata source; do not imply NASA endorsement or claim ownership of NASA material.",
+              "No blanket CC0 or Creative Commons license is inferred. The record's determinationType is GOV_PUBLIC_USE_PERMITTED and containsThirdPartyMaterial is false; its separate belongsToUsGov boolean is false. Metadata harvesting is independently expressly permitted by the official harvesting page.",
+              "NASA provides no warranty of accuracy, fitness or third-party rights. This historical market-survey abstract is not a clinical protocol or validation of ASTRA."
+            ]
+          },
+          "scope": "public_scientific_metadata",
+          "review": "NOT_INDEPENDENTLY_SCIENTIFICALLY_APPROVED"
+        },
+        {
+          "id": "nasa-osdr-osd-1",
+          "title": "Expression data from drosophila melanogaster",
+          "version": "OSD-1 BioData API v2 snapshot; study release version unavailable; sha256:cfe7d81c59efc3b01b4407db0854b4224b51bfcb9d8b4f590fc8467ededa6d64",
+          "sha256": "cfe7d81c59efc3b01b4407db0854b4224b51bfcb9d8b4f590fc8467ededa6d64",
+          "rights": {
+            "statement": "NASA dataset-specific catalogue: accessLevel public; license https://www.usa.gov/government-works. No study-specific SPDX license is supplied by the selected API response.",
+            "license_id": null,
+            "terms_url": "https://science.data.nasa.gov/about/license",
+            "harvesting_url": "https://visualization.osdr.nasa.gov/biodata/api/",
+            "record_url": "https://data.nasa.gov/dataset/expression-data-from-drosophila-melanogaster-a0600",
+            "reviewed_on": "2026-10-23",
+            "attribution": "Data are courtesy of the NASA Open Science Data Repository. Expression data from drosophila melanogaster, OSD-1 / GLDS-1. Credit the named investigators/publication authors and NASA OSDR; no NASA endorsement is implied.",
+            "restrictions": [
+              "This approval covers only one public nonhuman OSD-1 aggregate metadata JSON, not raw omics, sample records, images, linked articles or other studies.",
+              "The official dataset-specific catalogue links to OSD-1 and lists public access plus the government-works use URL. USAGov warns that third-party works, endorsement and international-rights limits can apply; hosting alone is not a license.",
+              "NASA Science Data Licenses states that unrestricted NASA-led mission data falls under its CC0 default, with source-specific notices taking precedence. The selected metadata identifies NASA, STS-121 and NASA funding; no restrictive notice is present. This record preserves the catalogue's actual statement and does not relabel it as an explicit study-level CC0 grant.",
+              "No redistribution or clinical-use permission for referenced raw measurements or publications is asserted. Future payload acquisition requires a fresh source/file-specific review.",
+              "The compact API has no explicit license or access-control field; public access was checked on the exact anonymous HTTPS endpoint and the NASA catalogue. Licence/access changes or identity/hash differences must fail closed."
+            ]
+          },
+          "scope": "public_nonhuman_study_metadata",
+          "review": "NOT_INDEPENDENTLY_SCIENTIFICALLY_APPROVED"
+        },
+        {
+          "id": "physionet-bidmc-01-numerics",
+          "title": "BIDMC PPG and Respiration Dataset — record 01 numerics",
+          "version": "1.0.0; bidmc_01_Numerics.csv",
+          "sha256": "27d43794cf2e7150db10e8bfe61d2bfdb26873a8f1629ffc5fbee5c9a4eb6ef5",
+          "rights": {
+            "statement": "Open Data Commons Attribution License v1.0 (ODC-By-1.0); preserve the accompanying legacy PhysioNet modified-data notice and attribution. Verbatim original only.",
+            "license_id": "ODC-By-1.0",
+            "terms_url": "https://physionet.org/content/bidmc/view-license/1.0.0/",
+            "harvesting_url": "https://archive.physionet.org/copying.shtml#data",
+            "record_url": "https://physionet.org/content/bidmc/1.0.0/",
+            "reviewed_on": "2026-10-23",
+            "attribution": "Contains information from the BIDMC PPG and Respiration Dataset v1.0.0,Marco Pimentel,Alistair Johnson,Peter Charlton and David Clifton,PhysioNet,DOI:10.13026/C2208R,made available under the ODC Attribution License v1.0.Cite Pimentel et al.,Towards a Robust Estimation of Respiratory Rate from Pulse Oximeters,DOI:10.1109/TBME.2016.2613124,and the PhysioNet resource citation listed in the source README.",
+            "restrictions": [
+              "Retain the ODC-By license URI,attribution and all accompanying source notices with redistributed bytes/documentation;no sublicense or additional restriction on granted database rights.",
+              "Original CSV is unmodified and retained verbatim.The source's existing MIMIC-II extraction/Matlab/CSV modification notice is retained separately,unchanged.",
+              "Future modified data must be distinctly named and identified with source/changes under the legacy policy;this task produces no modified signal dataset.",
+              "Database licensing does not waive privacy,personality,trademark or other content rights.No re-identification,patient linkage or implied clinical/PhysioNet endorsement."
+            ],
+            "legacy_notice_url": "https://physionet.org/files/bidmc/1.0.0/LICENSE",
+            "legacy_notice_sha256": "76576a17b505dce71773415a18e965982bc8c0c9a60da71f1adb9df7644332a0"
+          },
+          "scope": "public_patient_derived_physiological_numerics",
+          "review": "NOT_INDEPENDENTLY_SCIENTIFICALLY_APPROVED"
+        }
+      ],
+      "missing": [
+        {
+          "id": "sleep-edfx-SC4001E0-PSG",
+          "reason": "Original transfer incomplete; existing partial cannot be promoted; fresh exact-source acquisition/recovery authority required."
+        },
+        {
+          "id": "sleep-edfx-SC4001EC-Hypnogram",
+          "reason": "Not requested after PSG failure; no accepted original annotation or paired card."
+        },
+        {
+          "id": "ptt-ppg",
+          "reason": "Exact file/use/size/group metadata review and separate acquisition approval required."
+        },
+        {
+          "id": "radlab-BPD",
+          "reason": "Retained oversized JSON and HTTP500 HTML reviews did not yield a complete approved original; no current availability claim."
+        },
+        {
+          "id": "OSD-575",
+          "reason": "Catalogue only; specific metadata, rights, release and payload not acquired. OSD-1 is not a substitute."
+        },
+        {
+          "id": "OSD-656",
+          "reason": "Catalogue only; specific metadata, rights, release and payload not acquired. OSD-1 is not a substitute."
+        }
+      ],
+      "training_measurements": null,
+      "scientific_clearance": false
+    },
+    "N08": {
+      "status": "UNKNOWN",
+      "reason": "NO_AUTHORIZED_SOURCE_SELECTED"
+    },
+    "N09": {
+      "status": "UNKNOWN",
+      "reason": "NO_RUN_SELECTED"
+    },
+    "N10": {
+      "status": "AVAILABLE",
+      "sleep": {
+        "status": "UNKNOWN",
+        "history": [
+          {
+            "day": "2026-11-06",
+            "schedule": {
+              "status": "UNKNOWN",
+              "reason": "No dated schedule"
+            },
+            "actual": {
+              "status": "UNKNOWN",
+              "reason": "No canonical completed session"
+            },
+            "status": "UNKNOWN",
+            "difference_hours": null,
+            "descriptive_shortfall_hours": null
+          },
+          {
+            "day": "2026-11-07",
+            "schedule": {
+              "status": "UNKNOWN",
+              "reason": "No dated schedule"
+            },
+            "actual": {
+              "status": "UNKNOWN",
+              "reason": "No canonical completed session"
+            },
+            "status": "UNKNOWN",
+            "difference_hours": null,
+            "descriptive_shortfall_hours": null
+          },
+          {
+            "day": "2026-11-08",
+            "schedule": {
+              "status": "UNKNOWN",
+              "reason": "No dated schedule"
+            },
+            "actual": {
+              "status": "UNKNOWN",
+              "reason": "No canonical completed session"
+            },
+            "status": "UNKNOWN",
+            "difference_hours": null,
+            "descriptive_shortfall_hours": null
+          },
+          {
+            "day": "2026-11-09",
+            "schedule": {
+              "status": "UNKNOWN",
+              "reason": "No dated schedule"
+            },
+            "actual": {
+              "status": "UNKNOWN",
+              "reason": "No canonical completed session"
+            },
+            "status": "UNKNOWN",
+            "difference_hours": null,
+            "descriptive_shortfall_hours": null
+          },
+          {
+            "day": "2026-11-10",
+            "schedule": {
+              "status": "UNKNOWN",
+              "reason": "No dated schedule"
+            },
+            "actual": {
+              "status": "UNKNOWN",
+              "reason": "No canonical completed session"
+            },
+            "status": "UNKNOWN",
+            "difference_hours": null,
+            "descriptive_shortfall_hours": null
+          },
+          {
+            "day": "2026-11-11",
+            "schedule": {
+              "status": "UNKNOWN",
+              "reason": "No dated schedule"
+            },
+            "actual": {
+              "status": "UNKNOWN",
+              "reason": "No canonical completed session"
+            },
+            "status": "UNKNOWN",
+            "difference_hours": null,
+            "descriptive_shortfall_hours": null
+          },
+          {
+            "day": "2026-11-12",
+            "schedule": {
+              "status": "UNKNOWN",
+              "reason": "No dated schedule"
+            },
+            "actual": {
+              "status": "UNKNOWN",
+              "reason": "No canonical completed session"
+            },
+            "status": "UNKNOWN",
+            "difference_hours": null,
+            "descriptive_shortfall_hours": null
+          }
+        ],
+        "cumulative_shortfall_hours": null,
+        "covered_days": 0,
+        "requested_days": 7,
+        "formula": "max(0, authored planned hours - canonical observed hours), summed only with complete day coverage; no clinical sleep debt."
+      },
+      "exercise": {
+        "plans": [],
+        "sessions": [],
+        "plan_results": [],
+        "adherence": {
+          "status": "UNKNOWN",
+          "eligible_plans": 0,
+          "resolved_plans": 0,
+          "completed_plans": 0,
+          "percent": null,
+          "denominator": "Non-cancelled authored plans for the selected UTC day; missing records are not confirmed nonadherence."
+        },
+        "movement": {
+          "status": "UNKNOWN",
+          "steps": null,
+          "coverage_seconds": null,
+          "records": [],
+          "reason": "No complete non-overlapping verified movement evidence."
+        }
+      },
+      "private_cognition": "EXCLUDED"
+    },
+    "source_cutoff": "2026-11-12T12:00:00.000Z",
+    "known_at": "2026-11-14T11:00:00.000Z",
+    "scope": "Synthetic shadow; context is not clinical support or additional training data",
+    "N11": {
+      "source_sha256": "49473da025efd1af0f28cbf2b4e802e6b3eedcd081810e757a9152607e20a1a7",
+      "schema_version": "astra.n11.engineering-disposition.v1",
+      "result_hash": "56464a2cffa9cddfd6700f9f1713c78993a0b66f1dfdac2edf9cba72cb7ee097",
+      "policy_hash": "ceac615c1bddcc152dba12dd0756d8a0f47a6c3f748757822d7b1d85fcb2cf6b",
+      "thresholds_retuned": false,
+      "isolation_forest": {
+        "status": "REJECTED_FOR_PROMOTION",
+        "reason": "No demonstrated benefit on inspected synthetic cases: test0TP/4FN;44false alert episodes on separately reported seen nominal days",
+        "model_hash": "d9ce01bcdf5625314df59f77ca99af0d826981292f117e11f86ff28e1015477b"
+      },
+      "ewma": {
+        "status": "RESEARCH_COMPARISON_ONLY_NOT_PROMOTED",
+        "reason": "4/4authored positive events, no proven benefit over existing TierA; no clinical validation"
+      },
+      "temporal_extension": "NOT_JUSTIFIED",
+      "human_scientific_review": "PENDING",
+      "operational_promotion_authorized": false,
+      "isolation_forest_inference": "DISABLED"
+    },
+    "downstream": {
+      "N16": "INACTIVE",
+      "N14": "INACTIVE",
+      "N15": "INACTIVE",
+      "may_create_N02_alert": false
+    },
+    "actual_recording_at": "2026-11-14T11:00:00.000Z",
+    "forecast_features": "ONLY_VALIDATED_SAME_METRIC_WINDOW; contexts never injected"
+  },
+  "last_error": null,
+  "recovered_from_saved_result": true,
+  "replay_executions": 0,
+  "synthetic": true
+}

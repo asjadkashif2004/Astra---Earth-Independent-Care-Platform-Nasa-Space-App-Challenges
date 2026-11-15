@@ -1,0 +1,297 @@
+{
+  "schema_version": "astra.n06.qualification.v1",
+  "synthetic": true,
+  "clinical_validation": false,
+  "native_model_starts": 0,
+  "N16_designated_starts": 0,
+  "database_snapshots": 0,
+  "startup_ms": 315.41405799999995,
+  "pipeline_read_ms": 94.39008400000012,
+  "result": {
+    "crew_id": "CREW-03",
+    "as_of": "2026-11-14T11:00:30.000Z",
+    "mapping": {
+      "id": "cardiovascular",
+      "mesh": "reference.heart",
+      "name": "Cardiovascular · heart surfaces",
+      "metrics": [
+        "heart_rate",
+        "hrv"
+      ],
+      "units": {
+        "heart_rate": "/min",
+        "hrv": "ms"
+      },
+      "channels": [
+        "ECG",
+        "PPG"
+      ],
+      "version": "astra.n06.link.v1",
+      "crew_scope": "authorized fictional crew",
+      "source_contract": "astra.telemetry.v1 / N02 read only",
+      "quality": "verified synthetic, good, no artifact, known by cutoff and fresh at source time",
+      "limitation": "Three reference chamber-wall surfaces, not a complete heart. HR/HRV do not establish heart disease."
+    },
+    "metrics": [
+      {
+        "metric": "heart_rate",
+        "unit": "/min",
+        "status": "KNOWN",
+        "value": 67.77,
+        "coverage": 1,
+        "source_at": "2026-11-14T11:00:30.000Z",
+        "known_at": "2026-11-14T11:00:30.000Z",
+        "event_id": "5a37edd9-a726-43a2-81d4-573a934f6ac0:1:CREW-03:heart_rate",
+        "quality": {
+          "status": "good",
+          "confidence": 0.98,
+          "artifact": false
+        },
+        "source": {
+          "kind": "simulator",
+          "device_id": "SIM-CREW-03",
+          "sampling_hz": 0.03333333333333333,
+          "runtime_hz": 1,
+          "clock": "mission_simulation"
+        },
+        "provenance": {
+          "synthetic": true,
+          "scenario_id": "nominal",
+          "seed": 42,
+          "generator_version": "n09-source-time-v1"
+        }
+      },
+      {
+        "metric": "hrv",
+        "unit": "ms",
+        "status": "KNOWN",
+        "value": 55.32,
+        "coverage": 1,
+        "source_at": "2026-11-14T11:00:30.000Z",
+        "known_at": "2026-11-14T11:00:30.000Z",
+        "event_id": "5a37edd9-a726-43a2-81d4-573a934f6ac0:1:CREW-03:hrv",
+        "quality": {
+          "status": "good",
+          "confidence": 0.98,
+          "artifact": false
+        },
+        "source": {
+          "kind": "simulator",
+          "device_id": "SIM-CREW-03",
+          "sampling_hz": 0.03333333333333333,
+          "runtime_hz": 1,
+          "clock": "mission_simulation"
+        },
+        "provenance": {
+          "synthetic": true,
+          "scenario_id": "nominal",
+          "seed": 42,
+          "generator_version": "n09-source-time-v1"
+        }
+      }
+    ],
+    "waveform": {
+      "hash": "b6ef6f3cc10b91f2d0075a98bd9dd36c5aef5480321bdf1d9a458732a73dfdf1",
+      "revision": 1,
+      "window_until_ms": 12000,
+      "quality": {
+        "declared": "good",
+        "coverage": 0.9166666666666666,
+        "missing_samples": 125,
+        "engineering_format": "VALID",
+        "scientific_source": "AUTHORED_SYNTHETIC",
+        "clinical_validation": "NOT_VALIDATED"
+      }
+    },
+    "scenario": {
+      "status": "AVAILABLE",
+      "run_id": "5a37edd9-a726-43a2-81d4-573a934f6ac0",
+      "source_at": "2026-11-14T11:00:30.000Z",
+      "known_at": "2026-11-14T11:00:30.000Z",
+      "elapsed_seconds": 30,
+      "source_version": "n09-source-time-v1",
+      "frame_hash": "a07d2b1800c9f2a8b63335e13254c36282ce0f99598aab5f00aa3a9f4aacd531",
+      "crew_id": "CREW-03",
+      "state_at_cutoff": "RUNNING",
+      "synthetic": true
+    },
+    "projection_sha256": "783b5c0eafb3a7989f71b7d83003e1aaae17e38e9bac0e8cb0f83229eacb8971"
+  },
+  "read_mutations": 0,
+  "multi_crew_calls": 84,
+  "latencies_ms": [
+    63.67328799999996,
+    65.28120999999987,
+    79.02473499999996,
+    67.29348600000003,
+    86.64233100000001,
+    59.35884800000008,
+    62.11775499999999,
+    64.4662310000001,
+    62.643003000000135,
+    59.905839000000014,
+    59.26834600000029,
+    56.5733409999998,
+    58.22838899999988,
+    60.972236000000066,
+    67.69058700000005,
+    61.809208000000126,
+    77.2815300000002,
+    88.96229799999992,
+    57.52121399999987,
+    69.32656299999962,
+    88.090956,
+    58.11004299999968,
+    57.806376,
+    61.121399999999994,
+    58.056531999999606,
+    56.48196800000005,
+    64.30311500000016,
+    58.3186410000003,
+    58.23806599999989,
+    63.18767899999966,
+    60.68156399999998,
+    57.481037000000015,
+    61.02597400000013,
+    57.41023200000018,
+    58.641403999999966,
+    62.5662870000001,
+    57.54133200000024,
+    57.43636100000003,
+    60.75322899999992,
+    55.9443839999999,
+    58.85101200000008,
+    62.80148400000053,
+    58.07274199999938,
+    59.129321000000346,
+    62.99953100000039,
+    57.377058000000034,
+    56.31995900000038,
+    65.50484999999935,
+    61.36188099999981,
+    62.688428999999815,
+    70.22305699999924,
+    58.81261900000027,
+    58.62311899999986,
+    58.79880200000025,
+    58.29710900000009,
+    59.453858999999284,
+    63.05872199999976,
+    59.13289799999984,
+    59.63986699999987,
+    61.86041000000023,
+    56.07717700000012,
+    58.87476700000025,
+    64.93277699999999,
+    60.53728900000078,
+    59.58816300000035,
+    62.405580999999984,
+    57.897508999999445,
+    59.8682660000004,
+    63.58056100000067,
+    61.41945599999963,
+    61.039943999999196,
+    62.21911699999964,
+    58.9358229999998,
+    60.22972899999968,
+    61.01212099999975,
+    59.63610499999959,
+    59.6768119999997,
+    62.78226799999993,
+    62.593433000000005,
+    61.50412700000015,
+    65.38004300000011,
+    56.40609300000051,
+    58.95990900000015,
+    66.23361999999997
+  ],
+  "read_p95_ms": 77.2815300000002,
+  "negative_control": {
+    "region": "skeleton",
+    "status": "UNKNOWN",
+    "metrics": []
+  },
+  "temporary_database_bytes": 7761920,
+  "cold_recovery": {
+    "duration_ms": 1181.3366029999997,
+    "hash": "783b5c0eafb3a7989f71b7d83003e1aaae17e38e9bac0e8cb0f83229eacb8971",
+    "read_mutations": 0,
+    "scenario": "5a37edd9-a726-43a2-81d4-573a934f6ac0",
+    "metrics": [
+      {
+        "metric": "heart_rate",
+        "unit": "/min",
+        "status": "KNOWN",
+        "value": 67.77,
+        "coverage": 1,
+        "source_at": "2026-11-14T11:00:30.000Z",
+        "known_at": "2026-11-14T11:00:30.000Z",
+        "event_id": "5a37edd9-a726-43a2-81d4-573a934f6ac0:1:CREW-03:heart_rate",
+        "quality": {
+          "status": "good",
+          "confidence": 0.98,
+          "artifact": false
+        },
+        "source": {
+          "kind": "simulator",
+          "device_id": "SIM-CREW-03",
+          "sampling_hz": 0.03333333333333333,
+          "runtime_hz": 1,
+          "clock": "mission_simulation"
+        },
+        "provenance": {
+          "synthetic": true,
+          "scenario_id": "nominal",
+          "seed": 42,
+          "generator_version": "n09-source-time-v1"
+        }
+      },
+      {
+        "metric": "hrv",
+        "unit": "ms",
+        "status": "KNOWN",
+        "value": 55.32,
+        "coverage": 1,
+        "source_at": "2026-11-14T11:00:30.000Z",
+        "known_at": "2026-11-14T11:00:30.000Z",
+        "event_id": "5a37edd9-a726-43a2-81d4-573a934f6ac0:1:CREW-03:hrv",
+        "quality": {
+          "status": "good",
+          "confidence": 0.98,
+          "artifact": false
+        },
+        "source": {
+          "kind": "simulator",
+          "device_id": "SIM-CREW-03",
+          "sampling_hz": 0.03333333333333333,
+          "runtime_hz": 1,
+          "clock": "mission_simulation"
+        },
+        "provenance": {
+          "synthetic": true,
+          "scenario_id": "nominal",
+          "seed": 42,
+          "generator_version": "n09-source-time-v1"
+        }
+      }
+    ],
+    "status": "AVAILABLE",
+    "new_commitments": 0,
+    "read_projection_recomputed": true
+  },
+  "sampled_RSS_bytes": [
+    84074496,
+    105840640,
+    130428928,
+    165613568,
+    165691392,
+    165662720,
+    165576704,
+    165695488,
+    167858176
+  ],
+  "max_observed_parent_RSS_bytes": 167858176,
+  "measurement_limits": "Observed finite Node/SQLite workloads. Parent RSS samples exclude browser/child and are not hard peaks. Read projections recompute; committed source observations are not replayed.",
+  "temporary_root_removed": true,
+  "total_ms": 7076.783517
+}

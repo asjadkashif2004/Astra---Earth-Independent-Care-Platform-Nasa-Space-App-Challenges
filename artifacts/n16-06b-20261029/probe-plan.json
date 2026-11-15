@@ -1,0 +1,28 @@
+{
+  "task": "N16-06B",
+  "maximum_startups": 1,
+  "code_pins": {
+    "scripts/n16-containment-probe.mjs": "bafd9060a49fab11a60d85993884dcd9d138f1e626ccda33be370a0f7f0b1b7c",
+    "scripts/n16-containment-only.mjs": "e1062bb3fb054f5bc22a67802e60ead738110885073db57531e5771df5244094",
+    "services/agent/containment-diagnostics.mjs": "58bfbb12dc5c1ee1be5057acc26b5d7ff2d04c640e63284ffbbeccb0ba00de7b",
+    "services/agent/read-contract.mjs": "1b7ce5f7d1362eb776d2eb9e4aede141b99c4fc0729c0b02c47f8a2156b071f6",
+    "packages/contracts.mjs": "d5f3809213fc95bd77a7831006a557b2220af249a5ff3be36df6d9ebf57eef18",
+    "services/agent/qualification-batch.mjs": "ae1cacad6b5da3073b24f569cb4cdf9251128c36efbf560b87430ccd9e938bc5",
+    "services/agent/read-context.mjs": "fa643178b9920feb186f4762ffe6da54041813cf4f71f84ed54b34568a769f44"
+  },
+  "source_id": "astra.n16.designated-synthetic.elevated.v1",
+  "expected_source_sha256": "4b1a3d8d9bdb832ae54b35a43e4412f18914756984893f8cb181b37955caff73",
+  "database_byte_reads_authorized": false,
+  "SQLite_authorized": false,
+  "SQL_authorized": false,
+  "resource_targets": {
+    "RSS_bytes": 536870912,
+    "monitored_storage_bytes": 67108864,
+    "wall_ms": 1000,
+    "Node_heap_MB": 64
+  },
+  "static_startup_sites": 1,
+  "static_probe_calls": 1,
+  "worker_imports_SQLite": false,
+  "prior_protected_hashes_unchanged": 412
+}

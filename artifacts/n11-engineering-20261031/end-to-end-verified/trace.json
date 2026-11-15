@@ -1,0 +1,98 @@
+[
+  {
+    "schema_version": "astra.n11.event.v1",
+    "job_id": "4ba95fe2-7f13-4bac-994e-ab274e145c72",
+    "seq": 1,
+    "kind": "STARTED",
+    "known_at": "2026-11-14T11:00:00.000Z",
+    "host_at": "2026-10-31T06:55:41.606Z",
+    "payload": {
+      "config_hash": "81ebe34bae2a034fce74d6496c243eab93809519fa28fff9c342e9e9e3eb7857",
+      "policy_hash": "ceac615c1bddcc152dba12dd0756d8a0f47a6c3f748757822d7b1d85fcb2cf6b",
+      "parent_result_hash": null
+    },
+    "previous_hash": "GENESIS",
+    "hash": "3d7b6af5409eff39e80e6508079b27ea32eaeda147b5183b70730517bddc6cca"
+  },
+  {
+    "schema_version": "astra.n11.event.v1",
+    "job_id": "4ba95fe2-7f13-4bac-994e-ab274e145c72",
+    "seq": 2,
+    "kind": "WORKER_ONLINE",
+    "known_at": "2026-11-14T11:00:00.000Z",
+    "host_at": "2026-10-31T06:55:41.642Z",
+    "payload": {
+      "thread_id": 1
+    },
+    "previous_hash": "3d7b6af5409eff39e80e6508079b27ea32eaeda147b5183b70730517bddc6cca",
+    "hash": "901c461fa40c920c0604ca02a3dff6dd1585aa0a02080b4464a94f94cac290ba"
+  },
+  {
+    "schema_version": "astra.n11.event.v1",
+    "job_id": "4ba95fe2-7f13-4bac-994e-ab274e145c72",
+    "seq": 3,
+    "kind": "PHASE",
+    "known_at": "2026-11-14T11:00:00.000Z",
+    "host_at": "2026-10-31T06:55:41.758Z",
+    "payload": {
+      "stage": "SOURCE_VALIDATION"
+    },
+    "previous_hash": "901c461fa40c920c0604ca02a3dff6dd1585aa0a02080b4464a94f94cac290ba",
+    "hash": "7d973c9681c21dcaeefb77c88f2b7bb28c8310425a63ec658d41e900a93b3bcd"
+  },
+  {
+    "schema_version": "astra.n11.event.v1",
+    "job_id": "4ba95fe2-7f13-4bac-994e-ab274e145c72",
+    "seq": 4,
+    "kind": "PHASE",
+    "known_at": "2026-11-14T11:00:00.000Z",
+    "host_at": "2026-10-31T06:55:42.146Z",
+    "payload": {
+      "stage": "REFERENCE_FIT"
+    },
+    "previous_hash": "7d973c9681c21dcaeefb77c88f2b7bb28c8310425a63ec658d41e900a93b3bcd",
+    "hash": "555e741764c1ad301865ab489b4d0259e42a38f6a22821040b5f2fc54c6ab864"
+  },
+  {
+    "schema_version": "astra.n11.event.v1",
+    "job_id": "4ba95fe2-7f13-4bac-994e-ab274e145c72",
+    "seq": 5,
+    "kind": "PHASE",
+    "known_at": "2026-11-14T11:00:00.000Z",
+    "host_at": "2026-10-31T06:55:42.154Z",
+    "payload": {
+      "stage": "CANDIDATE_FIT"
+    },
+    "previous_hash": "555e741764c1ad301865ab489b4d0259e42a38f6a22821040b5f2fc54c6ab864",
+    "hash": "dc852b494790cb21d132fd02bdda6b1928356637a4aea5e62d93f0c5da8b1434"
+  },
+  {
+    "schema_version": "astra.n11.event.v1",
+    "job_id": "4ba95fe2-7f13-4bac-994e-ab274e145c72",
+    "seq": 6,
+    "kind": "PHASE",
+    "known_at": "2026-11-14T11:00:00.000Z",
+    "host_at": "2026-10-31T06:55:42.738Z",
+    "payload": {
+      "stage": "EVALUATED"
+    },
+    "previous_hash": "dc852b494790cb21d132fd02bdda6b1928356637a4aea5e62d93f0c5da8b1434",
+    "hash": "af9ca36b1c763b22b79b26c9e75bee79513fe1927373ed2662c660f07689d68e"
+  },
+  {
+    "schema_version": "astra.n11.event.v1",
+    "job_id": "4ba95fe2-7f13-4bac-994e-ab274e145c72",
+    "seq": 7,
+    "kind": "COMMITTED",
+    "known_at": "2026-11-14T11:00:00.000Z",
+    "host_at": "2026-10-31T06:55:43.047Z",
+    "payload": {
+      "result_hash": "56464a2cffa9cddfd6700f9f1713c78993a0b66f1dfdac2edf9cba72cb7ee097",
+      "worker_exit": 0,
+      "thread_id": 1,
+      "worker_duration_ms": 1439.950011
+    },
+    "previous_hash": "af9ca36b1c763b22b79b26c9e75bee79513fe1927373ed2662c660f07689d68e",
+    "hash": "6c4c5f7d4f2ff3b5633b8245d0c11f466772f30328d0f5f9caefb8e191d654c4"
+  }
+]

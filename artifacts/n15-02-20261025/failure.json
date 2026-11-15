@@ -1,0 +1,11 @@
+{
+  "reason": "'NoneType' object has no attribute 'raw'",
+  "type": "AttributeError",
+  "last_request": {
+    "name": "candidate-tag",
+    "url": "https://api.github.com/repos/ggml-org/llama.cpp/git/ref/tags/v0.7.0",
+    "started_utc": "2026-10-25T16:36:31.952728+00:00"
+  },
+  "body_bytes": 36053,
+  "elapsed_seconds": 1.7357459519989789
+}

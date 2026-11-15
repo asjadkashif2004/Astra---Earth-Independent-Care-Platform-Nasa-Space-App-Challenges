@@ -1,0 +1,116 @@
+{
+  "status": "failed",
+  "started_at": "2026-11-08T21:48:51.112Z",
+  "checks": [
+    {
+      "name": "Presentation: authenticated dashboard and six real synthetic crew",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: all six crew bind actual backend heart-rate observations",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: actual N08 fixture import, bounded waveform and playback",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: qualified N09 scenario causes deterministic N02 warning",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: human acknowledgement uses actual N02 contract",
+      "status": "failed",
+      "reason": "DOM condition timed out: [...document.querySelectorAll(\"[data-ack=\\\"RISK-b6c0499a\\\"]\")].some(n=>!n.disabled&&n.getClientRects().length&&getComputedStyle(n).visibility!=='hidden')"
+    }
+  ],
+  "screenshots": [
+    "01-dashboard.png",
+    "02-waveform.png",
+    "03-scenario.png",
+    "failure-5.png"
+  ],
+  "console_errors": [],
+  "http_errors": [
+    {
+      "url": "http://127.0.0.1:64305/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    },
+    {
+      "url": "http://127.0.0.1:64305/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    }
+  ],
+  "viewports": [],
+  "caveats": [
+    "No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation.",
+    "Pointer/keyboard/rendered DOM checks and screenshots supplement human visual, text-contrast and assistive-technology review; they do not establish WCAG conformance."
+  ],
+  "native_zoom_preferences": {
+    "factor": 1,
+    "partition_key": "x",
+    "level": 0,
+    "disposable_profile": true
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/156.0.8078.80",
+    "revision": "@fb096c0011f9d50f0a264a9376420cdea9c421e3",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "jsVersion": "15.6.75.27"
+  },
+  "N05_audits": [],
+  "presentation": {
+    "scope": "Existing synthetic application; no new N12 protocol, Qwen, native embeddings or N16 workers",
+    "timings": {
+      "crew_switch_ms": [
+        9721.6283,
+        10118.999500000002,
+        8643.6184,
+        9778.689600000002,
+        9243.7811,
+        8213.832300000002
+      ],
+      "region_ms": [
+        370.40430000000015,
+        387.69360000000233,
+        386.1173999999992,
+        387.00160000000324,
+        389.0728999999992,
+        383.86279999999533
+      ],
+      "waveform_import_ms": 389.8628999999928,
+      "waveform_playback_observed_ms": 897.3559000000096,
+      "scenario_start_and_300s_step_ms": 1405.251900000003
+    },
+    "fresh_N12_compute": "NOT RUN: calibration/evaluation campaign outside this mission",
+    "AC20": "UNVERIFIED",
+    "risk": {
+      "id": "RISK-b6c0499a",
+      "crew_id": "CREW-03",
+      "run_id": "3e4546a5-30d0-4238-8114-7c8a2556f980",
+      "source": "N02 deterministic detector"
+    }
+  },
+  "reason": "DOM condition timed out: [...document.querySelectorAll(\"[data-ack=\\\"RISK-b6c0499a\\\"]\")].some(n=>!n.disabled&&n.getClientRects().length&&getComputedStyle(n).visibility!=='hidden')",
+  "presentation_temporary_SQLite_bytes": 10534912,
+  "presentation_cleanup": {
+    "browser_exited": true,
+    "profile_removed": true,
+    "database_directory_removed": true,
+    "Node_memory": {
+      "rss": 146026496,
+      "heapTotal": 87724032,
+      "heapUsed": 19960648,
+      "external": 5975222,
+      "arrayBuffers": 1933627
+    },
+    "N16_designated_starts": 0,
+    "Qwen_executions": 0,
+    "model_training": 0,
+    "database_snapshots": 0
+  },
+  "finished_at": "2026-11-08T21:50:30.349Z"
+}

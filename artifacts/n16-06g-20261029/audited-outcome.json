@@ -1,0 +1,115 @@
+{
+  "task": "N16-06G",
+  "outcome": "INCONCLUSIVE",
+  "controller_reported_outcome": "PASS",
+  "single_SQL_execution": "PASS",
+  "source_integrity": "PASS",
+  "committed_result_trace": "PASS",
+  "qualification_gap": "Resource journal sample count cannot be reconciled: seven samples reported, only five resource rows persisted. No exception or loss cause is recorded; do not infer a ceiling breach or full resource-evidence PASS.",
+  "reported_resource_samples": 7,
+  "persisted_resource_rows": 5,
+  "persisted_worker_event_rows": 3,
+  "total_journal_rows": 8,
+  "journal_sha256": "a75aa2268516135262a82fdd22ea06a7648bf2ce88c271cbb18f37a87a482a05",
+  "actual_native_starts": 1,
+  "readOnly_connections": 1,
+  "application_SELECT_statements": 1,
+  "authorizer_SELECT_actions": 1,
+  "authorizer_READ_actions": 6,
+  "native_wall_ms": 502.927857,
+  "DB_open_read_close_ms": 1.0160580000000436,
+  "worker_kernel_max_RSS": 57696256,
+  "reported_max_process_RSS": 75382784,
+  "reported_max_counted_storage": 6580155,
+  "reported_limits_exceeded": false,
+  "persisted_max_parent_RSS": 75382784,
+  "persisted_max_storage": 6580155,
+  "source_before": {
+    "directory_mode": "0500",
+    "file_mode": "0400",
+    "inventory": [
+      "source.sqlite"
+    ],
+    "journal_mode": "closed_rollback",
+    "schema_sha256": "21bd7f9b770f67e1d6528daa6bd7e71864095fdababee8435be927826bff082a",
+    "source_bytes": 65536,
+    "source_id": "astra.n16.designated-synthetic.elevated.v1",
+    "source_identity": {
+      "directory": {
+        "dev": "2096",
+        "ino": "63495"
+      },
+      "file": {
+        "birth_ns": "1793250393100073704",
+        "change_ns": "1793250393104073704",
+        "dev": "2096",
+        "ino": "63607"
+      }
+    },
+    "source_sha256": "4b1a3d8d9bdb832ae54b35a43e4412f18914756984893f8cb181b37955caff73",
+    "spec_sha256": "f28e5829bb4f7354a2ab6c6202efc23a0985d1dcb6ac401522f4716fb62a1669"
+  },
+  "source_after": {
+    "directory_mode": "0500",
+    "file_mode": "0400",
+    "inventory": [
+      "source.sqlite"
+    ],
+    "journal_mode": "closed_rollback",
+    "schema_sha256": "21bd7f9b770f67e1d6528daa6bd7e71864095fdababee8435be927826bff082a",
+    "source_bytes": 65536,
+    "source_id": "astra.n16.designated-synthetic.elevated.v1",
+    "source_identity": {
+      "directory": {
+        "dev": "2096",
+        "ino": "63495"
+      },
+      "file": {
+        "birth_ns": "1793250393100073704",
+        "change_ns": "1793250393104073704",
+        "dev": "2096",
+        "ino": "63607"
+      }
+    },
+    "source_sha256": "4b1a3d8d9bdb832ae54b35a43e4412f18914756984893f8cb181b37955caff73",
+    "spec_sha256": "f28e5829bb4f7354a2ab6c6202efc23a0985d1dcb6ac401522f4716fb62a1669"
+  },
+  "source_rehashed_before_after": true,
+  "sidecars_created": 0,
+  "trace_id": "592cefe1-a29c-4129-95db-6ca1ab29a8db",
+  "host_namespaces": {
+    "network": "net:[4026531833]",
+    "mount": "mnt:[4026532217]"
+  },
+  "worker_namespaces": {
+    "network": "net:[4026532231]",
+    "mount": "mnt:[4026532226]"
+  },
+  "owned_remaining": 0,
+  "observer_pending": 0,
+  "postflight_matching_processes": [],
+  "old_hashes_preserved": 526,
+  "intentional_existing_changes": [
+    {
+      "file": "services/agent/single-select-contract.mjs",
+      "before": "23ea39448f2e6d4476624ec6a29ab6b52e8642be3ab8fafc68e9b5a112c36fde",
+      "after": "c560f10852e3b1ff2a7859cdc6fbf547df0aad5067e6988e7db581b284a525ac"
+    },
+    {
+      "file": "services/agent/single-select-runtime.mjs",
+      "before": "e9bbacc8a06bc4caaa1e1bde501bebd09dc5edcb48583bdd4afff3bfd177aed4",
+      "after": "742d24ec8cc580d7f9b7190eb63ca09d49d0efd897242f881f24752eb484ffdc"
+    },
+    {
+      "file": "tests/n16-single-select.test.mjs",
+      "before": "5a121c88b48cc379b3266b38040dee778b6ec9c0c0312ea038e4726fa3e55251",
+      "after": "f8e74657a05be4af291b71469e3accb3e255a9f6315c0b7da797fad5a9987cf1"
+    }
+  ],
+  "network_requests": 0,
+  "downloads_or_installs": 0,
+  "post_execution_code_changes_or_retries": false,
+  "sample_gap_cause": "UNCONFIRMED. Static journal() opens/appends per call; foreground and interval samples can overlap. Actual missing-write mechanism not established.",
+  "next_proposal": "One QA-only resource-journal serialization and sample-count reconciliation repair with deterministic concurrent-write/failure/flush controls; no SQL, worker, source data, model, resource renewal or replay.",
+  "task_authority": "EXHAUSTED / STOP; the single startup has been consumed"
+}

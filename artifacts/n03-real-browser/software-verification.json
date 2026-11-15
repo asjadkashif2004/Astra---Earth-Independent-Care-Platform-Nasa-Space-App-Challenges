@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-18",
+  "scope": "N03 actual-browser continuation only",
+  "full_tests": {"command": "npm test", "exit_code": 0, "passed": 102, "failed": 0, "cancelled": 0, "skipped": 0, "duration_ms": 25352.047477},
+  "windows_full_tests": {"command": "portable Windows Node --test --test-isolation=none tests/*.test.mjs", "exit_code": 0, "passed": 102, "failed": 0, "cancelled": 0, "skipped": 0, "duration_ms": 14700.2551},
+  "focused_frontend": {"passed": 24, "failed": 0, "duration_ms": 9104.778493},
+  "new_regressions_before_repair": {"selected_tests": 2, "passed": 0, "failed": 2},
+  "syntax_import": {"command": "npm run check", "exit_code": 0, "files": 41, "errors": 0},
+  "evaluation": {"command": "npm run evaluate", "exit_code": 0, "scenario_runs": 30, "TP": 10, "FP": 0, "TN": 20, "FN": 0, "main_scenario_seconds": [220,230,210,220,230], "forecast_windows": 25, "forecast_mae_bpm": 2.1669880337130665, "forecast_coverage": 0.96},
+  "cpu_benchmark": {"command": "npm run benchmark", "exit_code": 0, "database": "in-memory", "detector_batch_p95_ms": 1.49, "ingest_batch_p95_ms": 2.197, "observations_per_second": 45193, "complete_tick_p95_ms": 60.254, "frontend_projection_p95_ms": 0.089, "audit_valid": true},
+  "runtime_scope_before_manifest_refresh": {"compared": 33, "unchanged": 31, "changed": ["apps/mission-control-web/app.mjs", "apps/mission-control-web/styles.css"]},
+  "limits": ["CPU timings are not HTTP, browser paint or display FPS.", "Synthetic evaluations do not establish clinical validity.", "Syntax/import validation is not TypeScript, lint or a framework build.", "Benchmark host timing varies; browser initialization occurred near this CPU run."]
+}

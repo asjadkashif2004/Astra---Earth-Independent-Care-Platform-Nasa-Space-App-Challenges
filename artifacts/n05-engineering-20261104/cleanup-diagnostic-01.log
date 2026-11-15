@@ -1,0 +1,9 @@
+Checking: N05 verified original assets render five actual meshes with positive GPU draw controls
+{
+  "status": "passed",
+  "browser": "Chrome/156.0.8078.80",
+  "checks": 1,
+  "failed": [],
+  "screenshots": 1,
+  "report": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n05-engineering-20261104\\cleanup-diagnostic-01\\report.json"
+}

@@ -1,0 +1,39 @@
+{
+  "focused_command": "node --test --test-isolation=none --test-name-pattern='N04-P01 QA:|browser probe|captured glyph|global fast' tests/n04-p01.test.mjs tests/n04-p01-qa.test.mjs",
+  "linux": {
+    "node": "v24.21.0",
+    "passed": 8,
+    "failed": 0,
+    "skipped": 0,
+    "duration_ms": 367.055555
+  },
+  "windows": {
+    "passed": 8,
+    "failed": 0,
+    "skipped": 0,
+    "duration_ms": 187.0513
+  },
+  "syntax": {
+    "command": "node --check on each listed file",
+    "files": [
+      "scripts/browser-n04-p01.mjs",
+      "scripts/n04-p01-probe.mjs",
+      "scripts/n04-p01-correlation.mjs",
+      "scripts/n04-p01-assess.mjs",
+      "tests/n04-p01-qa.test.mjs"
+    ],
+    "passed": 5,
+    "failed": 0
+  },
+  "qa_source_sha256": {
+    "scripts/browser-n04-p01.mjs": "9b52426a9c430673579db5bd9469e3b495d938a671fcb88969bcae75cfcbb8b0",
+    "scripts/n04-p01-probe.mjs": "3bcc67890d3840e47f0d092b5528f4d55485a017a39135c8870f9b0855c5082c",
+    "scripts/n04-p01-correlation.mjs": "a0923d6dfc07c8516379ed822e14e9bc3900ca185121612ed4850e0c6b99dc69",
+    "scripts/n04-p01-assess.mjs": "9cf6fff46f49071c03c7c754ec7ee0dd344fb6ca1be4c2926484dfeccb653b4b",
+    "tests/n04-p01-qa.test.mjs": "bf7924c5fea0255e848e281adbec98166494c918b776569e897beeabb0a81509"
+  },
+  "browser_trials_executed": 0,
+  "full_regressions_rerun": false,
+  "review_anchors": 7,
+  "unresolved_manual_reviews": []
+}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "protected_existing_file_hashes": 46,
+  "N15_08B_manifest_hashes": 103,
+  "canonical_index_window_match": true,
+  "original_page_span_match": true,
+  "page_numbering": "one-based physical ordinal",
+  "original_publication_sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+  "N15_10_gate_unchanged": true,
+  "N14_02_contract_unchanged": true,
+  "native_commands": 0,
+  "model_loading": 0,
+  "network_requests": 0,
+  "actual_reviewers": 0,
+  "independent_approval": false,
+  "rule_active": false,
+  "N15": "In Progress",
+  "N16": "Not Started",
+  "errors": []
+}

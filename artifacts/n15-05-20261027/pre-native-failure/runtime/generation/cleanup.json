@@ -1,0 +1,5 @@
+{
+  "owned_wrapper_reaped": false,
+  "private_PID1_still_present": false,
+  "all_namespace_descendants_die_with_PID1": true
+}

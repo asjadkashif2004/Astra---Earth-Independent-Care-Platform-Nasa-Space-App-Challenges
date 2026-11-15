@@ -1,0 +1,5 @@
+{
+  "old_worker_sha256": "2fac3411b862751097cfce20a06752426dd1548cc68a85a1738dc7c303c449ad",
+  "new_worker_sha256": "b41c4ecec39ac40039e32e698549c495cec2654c0fce8edde22ec32ecf07a21e",
+  "reason": "Explicit single-mode branch; legacy block unchanged. Existing controller pin alone updated so existing callers still verify current worker; dynamic import adds no modules to legacy startup."
+}

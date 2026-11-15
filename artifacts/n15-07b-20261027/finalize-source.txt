@@ -1,0 +1,88 @@
+from pathlib import Path
+from urllib.parse import unquote
+import hashlib,json,os,re,stat,sys
+sys.dont_write_bytecode=True
+p=Path('/mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai').resolve()
+sys.path.insert(0,str(p/'scripts'))
+import n15_probe_accounting as accounting
+pointer=json.loads(Path('/tmp/astra-n15-07b-root.json').read_text());control=Path(pointer['control']);out=Path(pointer['artifacts'])
+def sha(path):
+ h=hashlib.sha256()
+ with path.open('rb') as f:
+  for b in iter(lambda:f.read(1048576),b''):h.update(b)
+ return h.hexdigest()
+def save(name,data):
+ with (out/name).open('x') as f:json.dump(data,f,indent=2);f.write('\n');f.flush();os.fsync(f.fileno())
+assessment=json.loads((out/'assessment.json').read_text());assert assessment['outcome']=='PARTIAL'
+assert assessment['execution_qualification']=='PASS' and assessment['native_generation_attempts']==2
+assert [c['outcome']['outcome'] for c in assessment['cases']]==['conservative_miss','correct_abstention']
+assert not assessment['discrimination_demonstrated']
+for case in assessment['cases']:
+ assert case['raw_model_output']=='{"decision":"ABSTAIN","evidence_ids":[]} [end of text]\n\n\n'
+ assert case['runtime_status']=='PASS' and case['native_exit_code']==0
+ assert case['observer_lifecycle']['completed'] and not case['observer_lifecycle']['observer_alive']
+ assert case['resources']['owned_processes_remaining']==0 and case['accounting_failures']==[]
+ root=out/case['case_id'];cleanup=json.loads((root/'runtime/generation/cleanup.json').read_text())
+ assert cleanup['owned_wrapper_reaped'] and not cleanup['private_PID1_still_present']
+ sup=json.loads((root/'supervisor-process.json').read_text());assert sup['exit_code']==0
+before=json.loads((control/'preservation-before.json').read_text())
+for group in ['source','history']:
+ for name,expected in before[group].items():
+  s=(p/name).stat();assert {'size':s.st_size,'mtime_ns':s.st_mtime_ns}==expected,(group,name)
+for name,digest in before['pins'].items():assert sha(p/name)==digest,name
+docs=['AGENTS.md','docs/SESSION_HANDOFF.md','docs/MODULE_TRACKER.md','docs/MASTER_PLAN.md','docs/FEATURE_AUDIT.md',
+ 'docs/DECISIONS.md','docs/DE_N14_N15_01.md','docs/N15_01_PLAN.md','docs/CORE_AI_PRIORITY.md',
+ 'docs/N15_07B_PLAN.md','docs/N15_07B_COMPLETION.md']
+links=0
+for name in docs:
+ file=p/name;text=file.read_text();assert 'N15-07B' in text,name
+ for target in re.findall(r'\[[^\]]*\]\(([^)]+)\)',text):
+  target=target.strip('<>')
+  if re.match(r'^(https?://|mailto:|#)',target):continue
+  target=unquote(target.split('#',1)[0])
+  if target:assert (file.parent/target).exists(),(name,target)
+  links+=1
+tracker=(p/'docs/MODULE_TRACKER.md').read_text()
+for expected in ['| N15 Offline language-model assistance | **In Progress;',
+ '| N04 Cinematic Mission Control | **Complete**','| N03 Frontend correctness | **Partial**',
+ '| AC-20 | **Open / Unverified;','| N05 Anatomical assets and renderer foundation | **In Progress — Deferred**',
+ '| N06 Data-linked anatomical interaction | **Not Started — Deferred**']:
+ assert expected in tracker,expected
+ids=set(re.findall(r'\bN(?:0[1-9]|1[0-9]|2[0-6])\b',(p/'docs/MASTER_PLAN.md').read_text()));assert len(ids)==26
+# Delivery count includes cached artifacts, all retained related scratch, task
+# evidence and extra pinned files. It deliberately overcounts overlapping files
+# rather than claiming a unique disk footprint or a hard quota.
+stage=json.loads((control/'storage-preflight.json').read_text());roots=[Path(x) for x in stage['roots']]
+for pattern in ['astra-n15-05-*','astra-n15-06-*']:
+ for root in Path('/var/tmp').glob(pattern):
+  if root.is_dir() and not root.is_symlink() and root not in roots:roots.append(root)
+a=b=0
+for root in roots:
+ x,y=accounting.disk_usage(root);a+=x;b+=y;s=root.lstat();a+=s.st_size;b+=s.st_blocks*512
+ for parent,dirs,files in os.walk(root,followlinks=False):
+  for name in dirs+files:
+   s=(Path(parent)/name).lstat()
+   if stat.S_ISLNK(s.st_mode):a+=s.st_size;b+=s.st_blocks*512
+extra=[p/name for name in before['pins']]
+identity=json.loads((p/'artifacts/n15-04c-20261027/infer/native-identity-manifest.json').read_text())
+extra.extend(Path(row['source']) for row in identity['native_files']+identity['notices'])
+for file in extra:
+ s=file.stat();a+=s.st_size;b+=s.st_blocks*512
+assert max(a,b)<1350000000,(a,b)
+save('delivery-accounting.json',{'status':'PASS','apparent_bytes':a,'allocated_bytes':b,'watermark':1350000000,
+ 'ceiling':1500000000,'method':'conservative related-root plus extra pinned-file totals; overlaps overcounted',
+ 'native_runtime_counted_max_allocated':max(c['resources']['final_allocated'] for c in assessment['cases']),
+ 'network_requests':0,'downloads':0,'no_hard_quota_claim':True})
+save('final-validation.json',{'status':'PASS','task_outcome':'PARTIAL','execution_qualification':'PASS',
+ 'native_requests':2,'discrimination_demonstrated':False,'positive_live_quotation_gate':'OPEN',
+ 'existing_source_data_files_size_mtime':len(before['source']),'historical_files_size_mtime':len(before['history']),
+ 'protected_hashes_unchanged':len(before['pins']),'current_focused_tests':41,'documents':len(docs),
+ 'local_links':links,'module_ids':len(ids),'N15':'In Progress','N16':'Not Started',
+ 'other_statuses_and_review_gates':'unchanged','no_automatic_continuation':True})
+(out/'finalize-source.txt').write_bytes(Path(__file__).read_bytes())
+files=[{'path':str(f.relative_to(out)),'bytes':f.stat().st_size,'sha256':sha(f)} for f in sorted(out.rglob('*'))
+       if f.is_file() and f.name!='evidence-manifest.json']
+save('evidence-manifest.json',{'task':'N15-07B','files':files})
+print(json.dumps({'status':'PASS','task_outcome':'PARTIAL','execution':'PASS','source_files':len(before['source']),
+ 'historical_files':len(before['history']),'protected_hashes':len(before['pins']),'documents':len(docs),
+ 'local_links':links,'delivery_allocated_bytes':b,'evidence_files':len(files)},indent=2))

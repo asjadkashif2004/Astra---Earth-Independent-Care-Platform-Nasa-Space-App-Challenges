@@ -1,0 +1,10 @@
+{
+  "run_id": "9392250d-93a4-45d4-a871-0dd590190774",
+  "trace_events": 18,
+  "trace_files": 6,
+  "total_trace_bytes": 26933,
+  "trace_duration_ms": 1050,
+  "actual_fixture_file_reads": 4,
+  "actual_fixture_bytes_read": 108784,
+  "fixture_sha256": "7ee532bcf759f051ad0cd0f4932493770802e19df1b4dc67c052433f85da3774"
+}

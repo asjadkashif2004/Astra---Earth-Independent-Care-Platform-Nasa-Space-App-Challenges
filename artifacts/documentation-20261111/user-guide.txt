@@ -1,0 +1,719 @@
+PAGE 1
+RESEARCH PROTOTYPE · STUDY EDITION
+Complete User Guide
+Autonomous Space Telemedicine & Research Assistant
+Learn what the current application does, how to operate it, and how to explain it honestly. No
+programming knowledge is assumed.
+Figure U1. Mission overview with fictional crew and source-bound synthetic observations. Actual retained application capture, 9 Nov
+2026; not a new execution.
+What is ASTRA?
+ASTRA is an offline-first research prototype for exploring crew health during a space mission. It combines
+monitoring, fictional mission scenarios, a selectable 3D body, recorded signal replay, trend research and
+local scientific evidence tools. A long communication delay makes clear onboard information and human
+oversight valuable.
+What you are demonstrating:
+ working software with simulated crew data. The six astronauts are
+fictional. A real API request does not mean a real sensor measured an astronaut. ASTRA does not
+diagnose disease, prescribe treatment or claim flight certification.
+Who uses which part?
+Crew and mission staff view observations and review alerts. Researchers inspect model evidence and
+source quotations. The current login is a local demonstration identity system, not a production identity
+service.
+Learn / do
+Pages
+Start, login and navigation
+2–3
+Dashboard, alerts and scenarios
+4–5
+Anatomy, waveforms and personal records
+6–8
+Research boundaries and five-minute demo
+9–10
+Keys, troubleshooting and quick reference
+11–12
+Source trail:
+ package.json · apps/mission-control-web/app.mjs · services/api/server.mjs ·
+docs/ASTRA_FINAL_DEMO_READINESS.md
+SOURCE REVIEW · 11 NOV 2026
+ASTRA
+ / Complete User Guide
+Offline research demonstration • not a certified medical system
+1 / 12
+
+
+PAGE 2
+COMPLETE USER GUIDE / 02
+Start safely: Windows or WSL
+A 
+terminal
+ is a window where you type commands. Node.js runs ASTRA. npm runs named commands
+from 
+package.json
+. One Node process serves both the backend and the browser interface; there is no
+second frontend server.
+1 · Check the existing installation
+node --version
+npm --version
+Use Node 
+24.21.0 or newer on the Node 24 line, below 25
+. Keep the repository’s existing packages,
+Three.js vendor files and local assets. No new install is needed for the previously prepared demo.
+2 · WSL / Ubuntu: open the project terminal and run
+cd /mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai
+demo_dir=$(mktemp -d /tmp/astra-presentation-XXXXXXXX)
+export ASTRA_DB="$demo_dir/astra.sqlite"
+export HOST=127.0.0.1 PORT=3000 ASTRA_SPEED=1
+npm start
+Or Windows PowerShell
+Set-Location 'C:\Users\basim\OneDrive\Desktop\ASTRA-Space-Medical-AI'
+$demoName='astra-presentation-'+[guid]::NewGuid().ToString('N')
+$demoRoot=Join-Path ([IO.Path]::GetTempPath()) $demoName
+New-Item -ItemType Directory -Path $demoRoot | Out-Null
+$env:ASTRA_DB=Join-Path $demoRoot 'astra.sqlite'
+$env:HOST='127.0.0.1'; $env:PORT='3000'; $env:ASTRA_SPEED='1'
+npm start
+The actual npm start script is 
+node services/api/server.mjs
+; typing that directly is equivalent. If
+Windows Node is not on PATH, the prepared alternative is 
+.\artifacts\n03-windows-tools\node.exe
+services/api/server.mjs
+.
+3 · Open, stop and restart
+1. 
+Open 
+http://127.0.0.1:3000
+ in the browser. Keep the terminal open.
+2. 
+Press 
+Ctrl+C
+ in that terminal to stop. To recover, run npm start again with the 
+same ASTRA_DB path
+.
+Do not create another temp directory unless you want a fresh demo.
+3. 
+If port 3000 is occupied, set PORT to 3001 in your current shell, then use http://127.0.0.1:3001. Do not
+stop an unrelated process.
+Settings:
+ ASTRA_DB chooses the SQLite data file; HOST binds to your own laptop; PORT chooses
+the local address; ASTRA_SPEED=1 keeps the mission clock at 1×. Without these settings, the CLI
+defaults to data/runtime/astra.sqlite and speed 30. Use the isolated path above to protect existing
+runtime data.
+Source trail:
+ package.json → scripts.start / engines · services/api/server.mjs → CLI environment readers
+SOURCE REVIEW · 11 NOV 2026
+ASTRA
+ / Complete User Guide
+Offline research demonstration • not a certified medical system
+2 / 12
+
+
+PAGE 3
+COMPLETE USER GUIDE / 03
+Login, roles and navigation
+Login without revealing a secret
+1. 
+Open the local URL. Choose the 
+Demo administrator
+ role in the demo login form.
+2. 
+Submit the login form. This creates a local browser session. There is no password to publish in this
+guide.
+3. 
+Use the navigation menu. On narrow screens open the menu first. Use the visible Logout control to
+end the session.
+A 
+role
+ determines permitted actions. Authentication answers “who is this session?” Authorization answers
+“may this session do that?” A valid role does not grant every feature or another person’s private cognition
+data.
+Role
+Main scope / limits
+Demo administrator
+Presentation controls, scenario and communications configuration, review and
+acknowledgement; not unrestricted private cognition.
+Astronaut
+Own fictional CREW-03 data, permitted check-ins and acknowledgement. Cross-
+crew reads are denied.
+Mission control / Flight surgeon
+Mission review and acknowledgement; additional audit/model permissions differ.
+Private access still needs the relevant policy.
+Researcher
+Research/model evidence and permitted reads; not alert acknowledgement or raw
+waveform access.
+Viewer / System administrator
+Viewer is read-only. System administrator has system/audit scope, not automatic
+health-read permission.
+Where to go
+Workspace
+What you can do
+Mission overview
+Six crew cards, monitoring and source/communications state.
+Crew health
+Select a crew member; see vitals, evidence, history, anatomy and available
+trends.
+Sleep & resilience
+Sleep, exercise and consent-controlled personal context.
+Signal archive
+Permitted synthetic waveform imports and recording replay.
+Health agent / Communications
+Existing template cases; acknowledgement-linked reports and delayed Earth
+receipt.
+Research library / Scenario lab
+Older local knowledge search; qualified fictional mission scenarios.
+Evidence & provenance
+Source metadata, audit visibility and scoped model evidence.
+Session expiry:
+ sessions last up to two hours. A 401 response means login is required; 403 means
+this role or crew scope is forbidden. Log in again when required. Do not bypass a denied request by
+changing IDs in the address or developer tools.
+Source trail:
+ services/api/auth.mjs → createSession/getIdentity · packages/contracts.mjs → PERMISSIONS · apps/mission-control-
+web/app.mjs → NAV, api()
+SOURCE REVIEW · 11 NOV 2026
+ASTRA
+ / Complete User Guide
+Offline research demonstration • not a certified medical system
+3 / 12
+
+
+PAGE 4
+COMPLETE USER GUIDE / 04
+Dashboard, vitals and alerts
+Figure U2. An acknowledged synthetic event, distinct from eventual Earth delivery. Actual retained application capture, 9 Nov 2026;
+not a new execution.
+Read the observations, not just the color
+1. 
+Open Mission overview. Choose one of the six fictional crew members, then open Crew health.
+2. 
+Check metric, unit, observation time and quality. Open Mission replay and move its timeline slider for
+stored history; use the live view to return to current eligible data.
+3. 
+Open the recorded alert evidence for that crew. An alert is a persisted monitoring event; it may remain
+recorded after current measurements change.
+Measurement
+Meaning / unit
+Heart rate / heart-rate variability
+Beats per minute (/min) / variability in milliseconds (ms).
+SpO
+₂
+ / respiration / temperature
+Oxygen-saturation percentage / breaths per minute / degrees
+Celsius.
+Sleep / fatigue / reaction / exercise
+Hours / authored 0–10 score / milliseconds / minutes.
+Radiation
+Contextual dose-rate reading in mSv/h; not an organ-damage
+estimate.
+Monitoring states
+Green:
+ no currently qualifying rule event; not a
+medical all-clear.
+Amber / Red:
+ a deterministic review/escalation
+rule met its persistence requirement.
+Gray / UNKNOWN:
+ missing, stale, suspect or
+insufficient data. Never interpret this as healthy.
+Acknowledge correctly
+With an acknowledgement-capable role, open the
+alert and select its acknowledgement action. Wait
+for confirmation. If case preparation is still pending,
+wait and retry the visible action. Do not claim
+success after a conflict or error.
+Why Earth may still show older data
+Acknowledgement records a human decision locally. A report then follows the durable communications
+queue. Default one-way delay is 12 mission minutes, plus transmission and small jitter; blackout or retry
+can delay it further. Acknowledgement, transmission and receipt are separate events. Use
+Communications to inspect the queue and Spacecraft/Earth received views. Its privileged synthetic
+controls configure delay, bandwidth, loss and blackout; changing a setting does not mean Earth already
+received a report.
+Source trail:
+ services/anomaly/detector.mjs → evaluateCrew/TIER_A · services/api/engine.mjs → acknowledge ·
+services/comms/scheduler.mjs
+SOURCE REVIEW · 11 NOV 2026
+ASTRA
+ / Complete User Guide
+Offline research demonstration • not a certified medical system
+4 / 12
+
+
+PAGE 5
+COMPLETE USER GUIDE / 05
+Run a fictional health scenario
+Figure U3. Scenario Lab operates the actual synthetic mission service. Actual retained application capture, 9 Nov 2026; not a new
+execution.
+A 
+simulation
+ generates measurements in software. A seed is a starting number that makes a run
+repeatable. These are useful for testing alerts, missing-data handling and recovery; they do not establish
+real medical performance.
+Reliable presentation sequence
+1. 
+Open Scenario lab as Demo administrator. Select 
+CREW-03 / Amara Okafor
+.
+2. 
+Choose 
+Cardiorespiratory drift
+. Use duration 
+600 seconds
+, cadence 
+30 seconds
+ and seed 
+42017
+in the available fields. Start the run.
+3. 
+Use the manual advance/step control for 
+300 seconds
+. This is mission time, not five minutes of
+waiting.
+4. 
+Return to Crew health for CREW-03. Inspect real generated measurements and the recorded N02
+event. Acknowledge through N02’s approved action.
+5. 
+Pause/resume using Scenario lab. Stop ends progression but retains history and alerts. Reset starts a
+new run; it does not erase earlier evidence.
+Preset group
+What it exercises
+Nominal / controlled HR rise
+Stable conditions or a single changing metric.
+Cardiorespiratory drift / sleep-debt cardio drift
+Coordinated authored changes with persistence.
+Sleep fatigue / post exercise
+Sleep context or activity-associated changes.
+Radiation spike
+Environmental context; not automatic clinical localization.
+Sensor dropout / contradictory sensors
+Missing and suspect data; expect honest UNKNOWN.
+Communication blackout
+Delayed delivery while onboard monitoring remains separate.
+Clock warning:
+ a paused source can become stale, so UNKNOWN may be correct. The
+mission/source clock differs from your laptop’s wall clock. A scenario’s authored event is not an
+observed emergency, and a demo score is not a clinical probability.
+If a command fails
+Wait for the pending operation to finish; check the selected run and current revision. The UI refreshes run
+state before a new command. An uncertain retry must preserve its request identity. Avoid double-clicking
+Start or repeatedly changing runs during a pending command.
+Source trail:
+ services/telemetry-simulator/n09-model.mjs · services/telemetry-simulator/n09-engine.mjs · apps/mission-control-
+web/n09.mjs · docs/demo/PRESENTATION_CHECKLIST.md
+SOURCE REVIEW · 11 NOV 2026
+ASTRA
+ / Complete User Guide
+Offline research demonstration • not a certified medical system
+5 / 12
+
+
+PAGE 6
+COMPLETE USER GUIDE / 06
+Use the interactive 3D anatomy
+Figure U4. A selected reference region with source-bound fictional crew data. Actual retained application capture, 5 Nov 2026 (N06
+acceptance; historical 30× fixture); not a new execution. BodyParts3D © 2008 The Database Center for Life Science; 
+CC BY-SA 2.1
+Japan
+ (
+source
+); geometry unchanged.
+1. 
+Open Crew health and verify the selected crew identity. Wait for the 3D model to finish loading.
+2. 
+Drag to rotate; use the wheel or touch pinch to zoom. Keyboard and visible camera controls provide
+alternatives. Reset restores framing.
+3. 
+Use layers to show/hide available surfaces. Switch detailed/coarse quality (LOD: level of detail) when
+needed.
+4. 
+Click an actual supported mesh, or use the named region buttons. Read the linked panel’s crew, units,
+source time, quality and monitoring evidence.
+5. 
+Open available history or Signal archive from the panel. Clear selection or choose another region.
+Changing crew must clear/replace old values.
+Region
+Permitted linked information
+Cardiovascular / heart reference
+Heart rate and HRV; compatible ECG/PPG recording if present.
+Left / right lung reference
+Respiration and SpO
+₂
+; compatible RESP recording if present.
+Body / skeleton
+Body temperature / no mapped skeleton measurement: UNKNOWN.
+Head / thorax context
+Conceptual controls without extra organ geometry: completed non-private
+sleep context / HR and respiration.
+A navigation aid, not a diagnosis.
+ The generic licensed model is not a scan of the selected person.
+Heart surfaces are incomplete. Highlighting a heart region does not prove heart disease. HR/RR-
+driven illustrative timing freezes when eligible source data are unavailable; it is not a validated organ-
+motion model.
+If graphics fail, use the textual region controls and details. Follow the reload/recovery control after context
+loss. Reduced-motion settings are respected. Do not keep opening duplicate tabs to solve a slow load:
+retained tests observed about 
+8–9 seconds
+ for initial crew switching with 3D remounting.
+Source trail:
+ apps/mission-control-web/anatomy.mjs · apps/mission-control-web/anatomy-runtime.mjs · packages/anatomy-link.mjs ·
+services/api/anatomy.mjs
+SOURCE REVIEW · 11 NOV 2026
+ASTRA
+ / Complete User Guide
+Offline research demonstration • not a certified medical system
+6 / 12
+
+
+PAGE 7
+COMPLETE USER GUIDE / 07
+View signals and replay recordings
+Figure U5. Signal archive preserves recording, channel, units and archive time. Actual retained application capture, 9 Nov 2026; not a
+new execution.
+A 
+waveform
+ is a series of sampled values drawn over time. Its sampling rate tells you how many values
+were recorded each second. ASTRA’s supported demo recordings are explicitly synthetic, not a live
+astronaut ECG.
+Import and inspect an authorized synthetic recording
+1. 
+Open Signal archive; confirm the crew selection. Use the built-in synthetic example workflow or select
+an already authorized ASTRAWV1 binary / ASTRACSVv1 file.
+2. 
+Confirm synthetic provenance, then click Generate & import once for the example or import the
+selected file with a permitted role. Do not upload real patient files.
+3. 
+Choose the recording and channel: ECG, PPG or RESP only where that source provides them.
+Inspect units, sampling frequency, source identity and timestamps.
+4. 
+Drag the archive cursor, use start/seek controls and Play/Pause. The chart follows recording time, not
+“live sensor” time.
+5. 
+Inspect missing intervals and quality flags. A gap is unavailable data, not a zero reading or an
+interpolated medical finding.
+What to expect and what may be unavailable
+The compact parser accepts bounded recordings: up to 256,000 bytes, 1–60 seconds, 1–3 channels and
+50–500 Hz. A compatible source is required; selecting a cardiovascular region cannot manufacture an
+ECG. No validated blood-pressure estimate is inferred from PPG.
+History cutoff:
+ a recording is visible only when it was known by the selected archive cutoff. After
+import the UI can advance an unchanged cutoff and announce that update. An intentionally chosen
+historical cutoff remains yours; choose a compatible cutoff to view a newly imported source.
+Common errors
+No recording: import an eligible synthetic example or show unavailable. Wrong channel: select one
+supplied by the recording. Blank signal: check cursor, cutoff and gaps. Denied import: use an authorized
+role, not a service token or a file-path workaround. Large or malformed files are rejected cleanly.
+Source trail:
+ packages/waveforms.mjs · services/waveforms/service.mjs · apps/mission-control-web/waveforms.mjs
+SOURCE REVIEW · 11 NOV 2026
+ASTRA
+ / Complete User Guide
+Offline research demonstration • not a certified medical system
+7 / 12
+
+
+PAGE 8
+COMPLETE USER GUIDE / 08
+Sleep, exercise and private check-ins
+Open 
+Sleep & resilience
+ for descriptive records. Open the voluntary cognitive check-in from its existing
+utility control. These functions track context and authored demonstration inputs; they do not diagnose
+sleep disorders, depression or cognitive impairment.
+Sleep records and schedules
+1. 
+Select the intended fictional crew. Read
+completed sleep intervals, any available stages
+and coverage.
+2. 
+Use the relevant form to record an allowed
+sleep interval or planned schedule. Check units
+and dates before saving.
+3. 
+Review actual duration, schedule comparison
+and descriptive shortfall. Missing coverage
+must remain visible.
+Exercise and movement
+1. 
+Open the exercise context. Inspect the plan and
+eligible completed sessions.
+2. 
+Enter a permitted synthetic session or plan
+using the labeled fields.
+3. 
+Review duration, workload and adherence
+history. These are descriptions of records, not a
+fitness prescription.
+Voluntary cognition and mood
+1. 
+Read the consent explanation before starting. Enable only the participation/sharing choices you
+intend.
+2. 
+Complete the timed reaction task’s five trials when its target signals readiness. Early clicks are not
+valid reaction measurements.
+3. 
+Save only through the provided action. Mood/fatigue inputs are optional. Personal reference
+calculations need sufficient eligible same-person history.
+4. 
+Inspect your permitted history. A different role or actor must not gain private data simply by selecting
+another crew member.
+Choose eligible crew + record type
+Consent / actor / device and source checks
+Append a versioned record → descriptive view
+Figure U6. Consent and source-bound records remain separate from operational diagnosis.
+Privacy rule:
+ administrator does not mean unrestricted access to private cognitive results. Current
+consent and actor/device policy still apply. N06’s conceptual head context uses completed non-
+private sleep context, not private reaction or mood records.
+If the form reports missing data, consent required or access denied, correct the permitted input or stop
+that workflow. Do not replace unavailable values with a fabricated “normal” score. Historical views also
+respect when a record became known.
+Source trail:
+ services/n10/contracts.mjs · services/n10/ledger.mjs · services/n10/projection.mjs · apps/mission-control-web/n10.mjs
+SOURCE REVIEW · 11 NOV 2026
+ASTRA
+ / Complete User Guide
+Offline research demonstration • not a certified medical system
+8 / 12
+
+
+PAGE 9
+COMPLETE USER GUIDE / 09
+Research, forecasts and AI: know the
+limits
+Feature / location
+How to use it honestly
+Crew health: conditional trends
+Inspect an available trend and its coverage/horizon. Persistence repeats a last
+value; OLS fits a line; Theil–Sen uses a median slope. Missing/stale inputs can
+produce UNKNOWN. The legacy trend and full N12 research protocol differ.
+Evidence & provenance: N11/N12
+Read permitted existing model evidence and saved results. Isolation Forest was
+rejected. N12 has zero operational promotions. Do not click fresh Compute, train,
+calibrate or evaluate for this presentation.
+Research library: in the app
+Search the older local knowledge summaries. This screen is not the
+independently governed N13 exact-publication corpus interface. Do not equate
+summary citations with proven medical answers.
+N13/N14: research/backend only
+Use the offline CLI below for source verification and exact-window lexical lookup.
+No new dedicated NASA-corpus screen is available in the main application.
+N15: research/backend only
+Local Qwen execution was historically demonstrated. Current native execution
+and positive factual-support rules are inactive. Qwen is not actively answering in
+the app.
+Health agent: main app
+Shows deterministic N02 case summaries and suggested review steps, marked
+generated_by_llm:false. It is not the operational N16 four-tool coordinator.
+N16: separate recorded demo
+Open the retained standalone HTML to explain four fixed synthetic SQL tools.
+This replays a record; do not launch sealed-source workers.
+Permitted local evidence lookup · WSL terminal
+node scripts/n14-offline.mjs verify
+node scripts/n14-offline.mjs query --policy=rich_lexical \
+  
+--top_k=3 --query="light circadian sleep"
+Example of exact source text: “Further research is needed in this area” (NASA HRP sleep report, 2016,
+physical PDF page 4). This is a research caveat, not a personal diagnosis. Read the returned source
+identifier, exact quotation and citation. 
+A valid quotation proves attribution, not that an answer is
+relevant or medically supported.
+ Unsupported numerical or medical questions must abstain in the
+governed answering path; search hits alone are not an answer.
+AI vocabulary:
+ retrieval finds text; an embedding represents text numerically; an LLM generates
+text. Current lexical lookup is deterministic. Semantic/hybrid research stays experimental;
+unreviewed factual rules are not activated by finding a NASA citation.
+Recorded agent: 
+artifacts/n16-final-20261030/native/demo.html
+. N12 backup evidence and the silent
+presentation video are linked from the final demo guide; use existing records rather than starting a new
+model campaign.
+Source trail:
+ services/prediction/forecast.mjs · services/n12/forecast.mjs · services/research-retrieval/research-service.mjs ·
+services/research-answer/governed-service.mjs · services/agent/agent.mjs
+SOURCE REVIEW · 11 NOV 2026
+ASTRA
+ / Complete User Guide
+Offline research demonstration • not a certified medical system
+9 / 12
+
+
+PAGE 10
+COMPLETE USER GUIDE / 10
+Your five-minute demonstration
+Prepare the isolated database and browser before judges arrive. Import the authorized synthetic
+waveform example and check that the chosen crew has a source. Do not spend presentation time
+downloading packages, fitting models or seeking new scientific approvals.
+Time
+Action and expected result
+0:00–0:35
+Launch with the page 2 commands; choose Demo administrator. Show Mission overview. Say:
+“Six fictional crew members; locally generated observations.”
+0:35–1:20
+Select CREW-03. Show metric units, source times and quality. Open Scenario lab; start
+Cardiorespiratory drift with 600 s duration, 30 s cadence and seed 42017. Advance 300 s.
+1:20–2:05
+Return to CREW-03, open the genuine persisted N02 alert and evidence. Acknowledge with
+the permitted role. Explain that human acknowledgement queues a report; Earth has not
+instantly received it.
+2:05–3:00
+Open the loaded anatomy. Select Cardiovascular; rotate/reset and inspect the actual crew-
+linked heart rate. Explain source quality and the conceptual, non-diagnostic mapping.
+3:00–3:40
+Open matching Signal archive/history where available. Show source/channel, timestamp, gaps
+and Play/Pause. It is an imported synthetic recording, not a live ECG.
+3:40–4:20
+Switch crew and show that values change or become UNKNOWN. If a conditional trend is
+eligible, show its research label. Otherwise use the saved N12 evidence backup; do not run
+Compute.
+4:20–5:00
+Show the prepared N14 lexical quotation lookup, or its retained actual output. State citation ≠
+factual entailment. End with the offline architecture, human review and current limitations.
+Presentation fallback ladder
+1. 
+If a screen is still loading, allow the observed 8–9 seconds for a crew/3D remount. Show the source-
+bound textual panel while it loads.
+2. 
+If a session expires, log in again. If the backend fails, stop and restart using the same ASTRA_DB;
+refresh the browser after the server is ready.
+3. 
+If a waveform is absent or a trend abstains, explain the truthful unavailable state. Use an existing
+saved result or the recorded backup; never replace it with a made-up number.
+Safe opening line:
+ “ASTRA is an offline-first research prototype. Today I will demonstrate synthetic
+crew monitoring, human acknowledgement, source-bound anatomy and waveform replay—not a
+clinically validated autonomous doctor.”
+Retained backup: 
+docs/ASTRA_FINAL_DEMO_READINESS.md
+ links the actual successful silent recording and
+standalone research/agent records. The video is historical evidence, not a new recording of this
+documentation build.
+Source trail:
+ docs/demo/PRESENTATION_CHECKLIST.md · artifacts/presentation-readiness-20261109/final-validation.json
+SOURCE REVIEW · 11 NOV 2026
+ASTRA
+ / Complete User Guide
+Offline research demonstration • not a certified medical system
+10 / 12
+
+
+PAGE 11
+COMPLETE USER GUIDE / 11
+Keys, setup and troubleshooting
+Service / setting
+Required for this demo?
+OpenAI / cloud Qwen / Supabase
+No. No supported demo path calls these services or needs their keys.
+Hugging Face / NASA API
+No runtime token/key. Existing local assets and downloaded-source records
+are separate from a new acquisition.
+Local Qwen weights
+No remote AI key, but native execution still requires current
+resource/sandbox approval; presently inactive.
+SQLite credentials
+None. Local file permissions and safe ASTRA_DB selection matter.
+ASTRA_INGEST_TOKEN
+Optional service credential for external scalar telemetry ingestion only. Not
+needed for the simulator or authorized waveform UI import. Unset means
+that service path is disabled.
+Configure actual settings in the terminal environment before starting. The server does not establish an
+automatic .env loader. Never paste a secret into source code or these PDFs.
+Symptom
+What to do
+npm start / dependency failure
+Check the project directory and Node 24.21+ (<25). Retain the prepared
+packages/vendor assets. Do not run a blind upgrade or download campaign.
+Port 3000 in use
+Choose PORT=3001 and open its matching URL. Keep HOST=127.0.0.1.
+Backend unreachable / blank page
+Read the launch terminal error; check URL/port. Restart the same DB path. If the
+old service worker shell persists, reload once online.
+Database unavailable
+Check ASTRA_DB points to your new writable temp directory. Do not
+rename/delete a locked existing database or select a sealed fixture.
+No data / UNKNOWN
+Check crew, source times, source quality and monitoring readiness. A paused or
+missing source can correctly be UNKNOWN.
+Scenario unresponsive
+Wait for pending operation; inspect current run, clock and role. Do not repeatedly
+issue a new Start.
+Waveform missing / invisible
+Check crew, recording, provided channel, cursor, cutoff and missing intervals.
+Import only an eligible synthetic example.
+3D fails / WebGL unavailable
+Use textual region controls. Check local assets, browser graphics support and
+explicit reload after context loss. Coarse LOD can reduce cost.
+3D slow / navigation seems delayed
+Allow the measured initial 8–9 s remount. Avoid duplicate tabs. Use coarse
+quality and reduced motion where appropriate.
+AI unavailable
+Expected for restricted Qwen, unreviewed support rules and operational N16.
+Use permitted lexical lookup or recorded evidence instead.
+Logout hidden / session expired
+Use the current responsive menu/Logout control; zoom/reflow is supported. 401:
+login again. 403: use a permitted role, not a bypass.
+Source trail:
+ services/api/server.mjs · services/api/auth.mjs · docs/ASTRA_FINAL_DEMO_READINESS.md
+SOURCE REVIEW · 11 NOV 2026
+ASTRA
+ / Complete User Guide
+Offline research demonstration • not a certified medical system
+11 / 12
+
+
+PAGE 12
+COMPLETE USER GUIDE / 12
+One-page quick reference
+Launch a fresh isolated WSL demo
+cd /mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai
+demo_dir=$(mktemp -d /tmp/astra-presentation-XXXXXXXX)
+export ASTRA_DB="$demo_dir/astra.sqlite"
+export HOST=127.0.0.1 PORT=3000 ASTRA_SPEED=1
+npm start
+Open:
+ http://127.0.0.1:3000 · 
+Role:
+ Demo administrator.
+Stop:
+ Ctrl+C. 
+Recover:
+ keep the same ASTRA_DB and rerun npm start. A new temp directory creates a
+different demo, not recovery.
+Navigation you can rehearse
+Overview → CREW-03 → Scenario lab / drift / advance 300 s
+Crew health → N02 evidence → human acknowledgement
+Anatomy / cardiovascular → Signal archive / replay
+Switch crew → research evidence / exact lexical quotation
+Figure U7. The recommended live demonstration remains within authorized synthetic interfaces.
+What to show judges
+Actual synthetic observations, units and time.
+Deterministic alert persistence and human
+acknowledgement.
+Crew-bound 3D selection, history and honest
+UNKNOWN.
+Offline source attribution and recovery.
+What not to claim
+Real astronaut sensors or clinical diagnosis.
+AI emergency detection or a promoted Isolation
+Forest.
+Validated forecasting, Qwen answering in the
+app or active N16 dispatch.
+NASA endorsement, AC-20 PASS or flight
+certification.
+Where to look when something fails
+The server terminal contains launch/runtime errors. The browser’s Developer Tools Console/Network can
+help explain a failed request; do not expose session tokens in a presentation. Existing acceptance reports
+and backups live in artifacts/. Runtime observations live at your chosen ASTRA_DB, not in those
+historical report folders.
+Next study resource:
+ 
+ASTRA - Technical Architecture and Project Report.pdf
+, in the project root. It
+explains the code, algorithms, database, scientific boundaries and 30 judges’ questions.
+Source trail:
+ docs/ASTRA_FINAL_DEMO_READINESS.md · docs/demo/PRESENTATION_CHECKLIST.md · package.json ·
+services/api/server.mjs
+SOURCE REVIEW · 11 NOV 2026
+ASTRA
+ / Complete User Guide
+Offline research demonstration • not a certified medical system
+12 / 12

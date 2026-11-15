@@ -1,0 +1,1447 @@
+{
+  "status": "passed",
+  "started_at": "2026-10-18T04:46:08.263Z",
+  "checks": [
+    {
+      "name": "landing at four viewports, disclaimers and native keyboard focus",
+      "status": "passed"
+    },
+    {
+      "name": "six crew, initial health and desktop overflow",
+      "status": "passed"
+    },
+    {
+      "name": "all six selections and existing workspaces",
+      "status": "passed"
+    },
+    {
+      "name": "exact six crew identities, metric values and source labels",
+      "status": "passed"
+    },
+    {
+      "name": "all nine workspaces at desktop, laptop, tablet and mobile",
+      "status": "passed"
+    },
+    {
+      "name": "research citations, abstention, pending response and unavailable recovery",
+      "status": "passed"
+    },
+    {
+      "name": "scenario controls propagate exercise, missing and suspect quality without false Green",
+      "status": "passed"
+    },
+    {
+      "name": "actual replay slider follows stored observation times and independent evidence panels fail honestly",
+      "status": "passed"
+    },
+    {
+      "name": "pending/failure/recovery, Earth separation and actual acknowledgement",
+      "status": "passed"
+    },
+    {
+      "name": "disk restart preserves human acknowledgement and queued report; delayed Earth receipt remains separate",
+      "status": "passed"
+    },
+    {
+      "name": "400/403 rejected writes retain unsaved input",
+      "status": "passed"
+    },
+    {
+      "name": "delayed history cannot replace the next selected crew",
+      "status": "passed"
+    },
+    {
+      "name": "health503, API disconnect and recovery",
+      "status": "passed"
+    },
+    {
+      "name": "native twin rotation, layer selection and chart controls",
+      "status": "passed"
+    },
+    {
+      "name": "streamed updates preserve native focused control and dirty communications input",
+      "status": "passed"
+    },
+    {
+      "name": "five browser-timed voluntary trials and save preserve synthetic telemetry",
+      "status": "passed"
+    },
+    {
+      "name": "browser accessibility tree names and representative opaque text contrast",
+      "status": "passed"
+    },
+    {
+      "name": "actual browser graphics submission, frame timing, memory and cleanup sample",
+      "status": "passed"
+    },
+    {
+      "name": "keyboard, mobile overflow and reduced motion",
+      "status": "passed"
+    },
+    {
+      "name": "unsupported WebGL fallback retains monitoring",
+      "status": "passed"
+    },
+    {
+      "name": "observed DOM-update latency (100ms polling upper bound, not paint/FPS)",
+      "status": "passed"
+    },
+    {
+      "name": "automatic monitoring produces actual timed SSE updates after process-equivalent restart",
+      "status": "passed"
+    },
+    {
+      "name": "expired sessions, actual role selection and least-privilege views",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    "landing-1920x1080.png",
+    "landing-1366x768.png",
+    "landing-768x1024.png",
+    "landing-390x844.png",
+    "overview-desktop.png",
+    "profile-CREW-01.png",
+    "profile-CREW-02.png",
+    "profile-CREW-03.png",
+    "profile-CREW-04.png",
+    "profile-CREW-05.png",
+    "profile-CREW-06.png",
+    "overview-1920x1080.png",
+    "crew-1920x1080.png",
+    "agent-1920x1080.png",
+    "comms-1920x1080.png",
+    "knowledge-1920x1080.png",
+    "scenario-1920x1080.png",
+    "sources-1920x1080.png",
+    "replay-1920x1080.png",
+    "checkin-1920x1080.png",
+    "overview-1366x768.png",
+    "crew-1366x768.png",
+    "agent-1366x768.png",
+    "comms-1366x768.png",
+    "knowledge-1366x768.png",
+    "scenario-1366x768.png",
+    "sources-1366x768.png",
+    "replay-1366x768.png",
+    "checkin-1366x768.png",
+    "overview-768x1024.png",
+    "crew-768x1024.png",
+    "agent-768x1024.png",
+    "comms-768x1024.png",
+    "knowledge-768x1024.png",
+    "scenario-768x1024.png",
+    "sources-768x1024.png",
+    "replay-768x1024.png",
+    "checkin-768x1024.png",
+    "overview-390x844.png",
+    "crew-390x844.png",
+    "agent-390x844.png",
+    "comms-390x844.png",
+    "knowledge-390x844.png",
+    "scenario-390x844.png",
+    "sources-390x844.png",
+    "replay-390x844.png",
+    "checkin-390x844.png",
+    "research-unavailable.png",
+    "sensor-dropout.png",
+    "contradictory-sensors.png",
+    "independent-provenance-failures.png",
+    "earth-received-after-restart.png",
+    "twin-controls.png",
+    "focused-dirty-form.png",
+    "checkin-saved.png",
+    "webgl-performance-sample.png",
+    "actual-context-loss-fallback.png",
+    "overview-mobile-reduced.png",
+    "fallback-mobile.png",
+    "text-fallback-mobile.png",
+    "automatic-monitoring-live.png"
+  ],
+  "console_errors": [],
+  "http_errors": [
+    {
+      "url": "http://127.0.0.1:41533/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    },
+    {
+      "url": "http://127.0.0.1:41533/v1/rag/query",
+      "status": 503,
+      "stage": "research citations, abstention, pending response and unavailable recovery"
+    },
+    {
+      "url": "http://127.0.0.1:41533/v1/models",
+      "status": 503,
+      "stage": "actual replay slider follows stored observation times and independent evidence panels fail honestly"
+    },
+    {
+      "url": "http://127.0.0.1:41533/v1/audit",
+      "status": 403,
+      "stage": "actual replay slider follows stored observation times and independent evidence panels fail honestly"
+    },
+    {
+      "url": "http://127.0.0.1:41533/v1/alerts/RISK-a2f18d33/ack",
+      "status": 409,
+      "stage": "pending/failure/recovery, Earth separation and actual acknowledgement"
+    },
+    {
+      "url": "http://127.0.0.1:41533/v1/comms/control",
+      "status": 400,
+      "stage": "400/403 rejected writes retain unsaved input"
+    },
+    {
+      "url": "http://127.0.0.1:41533/v1/comms/control",
+      "status": 403,
+      "stage": "400/403 rejected writes retain unsaved input"
+    },
+    {
+      "url": "http://127.0.0.1:41533/v1/health",
+      "status": 503,
+      "stage": "health503, API disconnect and recovery"
+    },
+    {
+      "url": "http://127.0.0.1:41533/v1/auth/me",
+      "status": 401,
+      "stage": "expired sessions, actual role selection and least-privilege views"
+    },
+    {
+      "url": "http://127.0.0.1:41533/v1/crew/CREW-01/checkins",
+      "status": 403,
+      "stage": "expired sessions, actual role selection and least-privilege views"
+    },
+    {
+      "url": "http://127.0.0.1:41533/v1/crew/CREW-01/checkins",
+      "status": 403,
+      "stage": "expired sessions, actual role selection and least-privilege views"
+    },
+    {
+      "url": "http://127.0.0.1:41533/v1/crew/CREW-01/checkins",
+      "status": 403,
+      "stage": "expired sessions, actual role selection and least-privilege views"
+    }
+  ],
+  "viewports": [
+    {
+      "page": "landing",
+      "width": 1920,
+      "height": 1080,
+      "document_overflow": false
+    },
+    {
+      "page": "landing",
+      "width": 1366,
+      "height": 768,
+      "document_overflow": false
+    },
+    {
+      "page": "landing",
+      "width": 768,
+      "height": 1024,
+      "document_overflow": false
+    },
+    {
+      "page": "landing",
+      "width": 390,
+      "height": 844,
+      "document_overflow": false
+    },
+    {
+      "page": "overview",
+      "width": 1920,
+      "height": 1080,
+      "document_overflow": false
+    },
+    {
+      "page": "crew",
+      "width": 1920,
+      "height": 1080,
+      "document_overflow": false
+    },
+    {
+      "page": "agent",
+      "width": 1920,
+      "height": 1080,
+      "document_overflow": false
+    },
+    {
+      "page": "comms",
+      "width": 1920,
+      "height": 1080,
+      "document_overflow": false
+    },
+    {
+      "page": "knowledge",
+      "width": 1920,
+      "height": 1080,
+      "document_overflow": false
+    },
+    {
+      "page": "scenario",
+      "width": 1920,
+      "height": 1080,
+      "document_overflow": false
+    },
+    {
+      "page": "sources",
+      "width": 1920,
+      "height": 1080,
+      "document_overflow": false
+    },
+    {
+      "page": "replay",
+      "width": 1920,
+      "height": 1080,
+      "document_overflow": false
+    },
+    {
+      "page": "checkin",
+      "width": 1920,
+      "height": 1080,
+      "document_overflow": false
+    },
+    {
+      "page": "overview",
+      "width": 1366,
+      "height": 768,
+      "document_overflow": false
+    },
+    {
+      "page": "crew",
+      "width": 1366,
+      "height": 768,
+      "document_overflow": false
+    },
+    {
+      "page": "agent",
+      "width": 1366,
+      "height": 768,
+      "document_overflow": false
+    },
+    {
+      "page": "comms",
+      "width": 1366,
+      "height": 768,
+      "document_overflow": false
+    },
+    {
+      "page": "knowledge",
+      "width": 1366,
+      "height": 768,
+      "document_overflow": false
+    },
+    {
+      "page": "scenario",
+      "width": 1366,
+      "height": 768,
+      "document_overflow": false
+    },
+    {
+      "page": "sources",
+      "width": 1366,
+      "height": 768,
+      "document_overflow": false
+    },
+    {
+      "page": "replay",
+      "width": 1366,
+      "height": 768,
+      "document_overflow": false
+    },
+    {
+      "page": "checkin",
+      "width": 1366,
+      "height": 768,
+      "document_overflow": false
+    },
+    {
+      "page": "overview",
+      "width": 768,
+      "height": 1024,
+      "document_overflow": false
+    },
+    {
+      "page": "crew",
+      "width": 768,
+      "height": 1024,
+      "document_overflow": false
+    },
+    {
+      "page": "agent",
+      "width": 768,
+      "height": 1024,
+      "document_overflow": false
+    },
+    {
+      "page": "comms",
+      "width": 768,
+      "height": 1024,
+      "document_overflow": false
+    },
+    {
+      "page": "knowledge",
+      "width": 768,
+      "height": 1024,
+      "document_overflow": false
+    },
+    {
+      "page": "scenario",
+      "width": 768,
+      "height": 1024,
+      "document_overflow": false
+    },
+    {
+      "page": "sources",
+      "width": 768,
+      "height": 1024,
+      "document_overflow": false
+    },
+    {
+      "page": "replay",
+      "width": 768,
+      "height": 1024,
+      "document_overflow": false
+    },
+    {
+      "page": "checkin",
+      "width": 768,
+      "height": 1024,
+      "document_overflow": false
+    },
+    {
+      "page": "overview",
+      "width": 390,
+      "height": 844,
+      "document_overflow": false
+    },
+    {
+      "page": "crew",
+      "width": 390,
+      "height": 844,
+      "document_overflow": false
+    },
+    {
+      "page": "agent",
+      "width": 390,
+      "height": 844,
+      "document_overflow": false
+    },
+    {
+      "page": "comms",
+      "width": 390,
+      "height": 844,
+      "document_overflow": false
+    },
+    {
+      "page": "knowledge",
+      "width": 390,
+      "height": 844,
+      "document_overflow": false
+    },
+    {
+      "page": "scenario",
+      "width": 390,
+      "height": 844,
+      "document_overflow": false
+    },
+    {
+      "page": "sources",
+      "width": 390,
+      "height": 844,
+      "document_overflow": false
+    },
+    {
+      "page": "replay",
+      "width": 390,
+      "height": 844,
+      "document_overflow": false
+    },
+    {
+      "page": "checkin",
+      "width": 390,
+      "height": 844,
+      "document_overflow": false
+    }
+  ],
+  "caveats": [
+    "No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation.",
+    "Pointer/keyboard/rendered DOM checks and screenshots supplement human visual, text-contrast and assistive-technology review; they do not establish WCAG conformance."
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "HeadlessChrome/155.0.8059.84",
+    "revision": "@5869fe313571d75152b77813cf0a4ee26a4e6df0",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.8059.84 Safari/537.36",
+    "jsVersion": "15.5.35.25"
+  },
+  "crew_verification": [
+    {
+      "id": "CREW-01",
+      "name": "Elena Voss",
+      "metrics": [
+        "heart_rate",
+        "hrv",
+        "spo2",
+        "respiratory_rate",
+        "sleep_duration",
+        "temperature"
+      ],
+      "matched_backend": true,
+      "synthetic": true
+    },
+    {
+      "id": "CREW-02",
+      "name": "Marcus Chen",
+      "metrics": [
+        "heart_rate",
+        "hrv",
+        "spo2",
+        "respiratory_rate",
+        "sleep_duration",
+        "temperature"
+      ],
+      "matched_backend": true,
+      "synthetic": true
+    },
+    {
+      "id": "CREW-03",
+      "name": "Amara Okafor",
+      "metrics": [
+        "heart_rate",
+        "hrv",
+        "spo2",
+        "respiratory_rate",
+        "sleep_duration",
+        "temperature"
+      ],
+      "matched_backend": true,
+      "synthetic": true
+    },
+    {
+      "id": "CREW-04",
+      "name": "Yuki Tanaka",
+      "metrics": [
+        "heart_rate",
+        "hrv",
+        "spo2",
+        "respiratory_rate",
+        "sleep_duration",
+        "temperature"
+      ],
+      "matched_backend": true,
+      "synthetic": true
+    },
+    {
+      "id": "CREW-05",
+      "name": "Rafael Costa",
+      "metrics": [
+        "heart_rate",
+        "hrv",
+        "spo2",
+        "respiratory_rate",
+        "sleep_duration",
+        "temperature"
+      ],
+      "matched_backend": true,
+      "synthetic": true
+    },
+    {
+      "id": "CREW-06",
+      "name": "Noor Hassan",
+      "metrics": [
+        "heart_rate",
+        "hrv",
+        "spo2",
+        "respiratory_rate",
+        "sleep_duration",
+        "temperature"
+      ],
+      "matched_backend": true,
+      "synthetic": true
+    }
+  ],
+  "keyboard_browser_boundary_transitions": 9,
+  "delivery": {
+    "message_id": "report-CASE-RISK-a2f18d33",
+    "observed_at": 1794654480000,
+    "deliver_at": 1794655350339,
+    "received_at": 1794655380000,
+    "survived_disk_restart": true
+  },
+  "accessibility": {
+    "named_controls": 27,
+    "formal_wcag_conformance": false,
+    "contrast_samples": [
+      {
+        "selector": "#main h1",
+        "ratio": 17.29807999610115,
+        "gradient_ancestor": true
+      },
+      {
+        "selector": "#connection",
+        "ratio": 8.792075500028194,
+        "gradient_ancestor": true
+      },
+      {
+        "selector": ".status.green",
+        "ratio": 10.095694536245151,
+        "gradient_ancestor": true
+      }
+    ]
+  },
+  "rendering_performance": {
+    "duration_ms": 30042,
+    "draw_submissions": 396,
+    "draw_submissions_per_second": 13.181545835829839,
+    "raf_intervals_ms": [
+      83.30000000000291,
+      83.39999999999418,
+      83.40000000000873,
+      66.59999999999127,
+      66.60000000000582,
+      83.39999999999418,
+      66.70000000001164,
+      66.69999999999709,
+      66.59999999999127,
+      83.30000000000291,
+      66.69999999999709,
+      66.70000000001164,
+      66.59999999999127,
+      66.69999999999709,
+      66.70000000001164,
+      83.29999999998836,
+      66.70000000001164,
+      66.59999999999127,
+      83.30000000000291,
+      66.69999999999709,
+      83.40000000000873,
+      83.29999999998836,
+      66.70000000001164,
+      83.19999999999709,
+      66.69999999999709,
+      83.30000000000291,
+      66.80000000000291,
+      66.5,
+      66.69999999999709,
+      66.69999999999709,
+      66.69999999999709,
+      66.60000000000582,
+      66.69999999999709,
+      66.69999999999709,
+      83.30000000000291,
+      66.60000000000582,
+      83.29999999998836,
+      66.70000000001164,
+      66.69999999999709,
+      66.69999999999709,
+      66.69999999999709,
+      66.60000000000582,
+      66.69999999999709,
+      66.69999999999709,
+      66.60000000000582,
+      83.30000000000291,
+      66.69999999999709,
+      66.69999999999709,
+      66.60000000000582,
+      83.39999999999418,
+      66.60000000000582,
+      66.59999999999127,
+      66.69999999999709,
+      66.70000000001164,
+      83.39999999999418,
+      66.60000000000582,
+      66.69999999999709,
+      83.30000000000291,
+      66.69999999999709,
+      83.30000000000291,
+      100,
+      83.29999999998836,
+      83.30000000000291,
+      83.40000000000873,
+      83.29999999998836,
+      100,
+      116.70000000001164,
+      83.29999999998836,
+      83.30000000000291,
+      83.40000000000873,
+      83.19999999999709,
+      83.39999999999418,
+      100,
+      83.40000000000873,
+      83.29999999998836,
+      100,
+      66.60000000000582,
+      83.39999999999418,
+      83.30000000000291,
+      83.30000000000291,
+      83.39999999999418,
+      83.30000000000291,
+      83.30000000000291,
+      83.30000000000291,
+      83.39999999999418,
+      83.30000000000291,
+      133.3000000000029,
+      83.39999999999418,
+      83.30000000000291,
+      83.30000000000291,
+      83.39999999999418,
+      83.19999999999709,
+      83.40000000000873,
+      83.30000000000291,
+      83.29999999998836,
+      83.40000000000873,
+      83.39999999999418,
+      83.19999999999709,
+      83.40000000000873,
+      83.30000000000291,
+      83.29999999998836,
+      83.40000000000873,
+      83.30000000000291,
+      83.29999999998836,
+      100,
+      83.30000000000291,
+      83.40000000000873,
+      83.29999999998836,
+      83.40000000000873,
+      99.89999999999418,
+      83.40000000000873,
+      83.29999999998836,
+      83.40000000000873,
+      83.30000000000291,
+      99.89999999999418,
+      66.69999999999709,
+      83.40000000000873,
+      83.29999999998836,
+      100,
+      83.30000000000291,
+      83.40000000000873,
+      83.29999999998836,
+      83.30000000000291,
+      100,
+      66.60000000000582,
+      83.39999999999418,
+      100,
+      83.30000000000291,
+      83.39999999999418,
+      99.90000000000873,
+      150,
+      100,
+      83.30000000000291,
+      83.39999999999418,
+      100,
+      116.69999999999709,
+      99.90000000000873,
+      83.39999999999418,
+      100,
+      83.30000000000291,
+      83.30000000000291,
+      83.39999999999418,
+      83.30000000000291,
+      83.39999999999418,
+      83.30000000000291,
+      83.30000000000291,
+      83.30000000000291,
+      83.39999999999418,
+      100,
+      83.30000000000291,
+      83.30000000000291,
+      83.29999999998836,
+      83.40000000000873,
+      83.30000000000291,
+      100,
+      83.29999999998836,
+      83.30000000000291,
+      83.40000000000873,
+      83.29999999998836,
+      83.30000000000291,
+      100,
+      83.30000000000291,
+      83.39999999999418,
+      83.30000000000291,
+      100,
+      100,
+      83.30000000000291,
+      83.39999999999418,
+      83.30000000000291,
+      83.30000000000291,
+      83.39999999999418,
+      83.30000000000291,
+      83.30000000000291,
+      83.30000000000291,
+      83.39999999999418,
+      83.30000000000291,
+      83.30000000000291,
+      100.09999999999127,
+      83.30000000000291,
+      100,
+      83.30000000000291,
+      100,
+      83.30000000000291,
+      83.30000000000291,
+      83.29999999998836,
+      100.10000000000582,
+      83.30000000000291,
+      83.30000000000291,
+      100,
+      83.29999999998836,
+      83.40000000000873,
+      83.30000000000291,
+      83.39999999999418,
+      66.60000000000582,
+      100,
+      83.29999999998836,
+      83.40000000000873,
+      100,
+      83.30000000000291,
+      66.69999999999709,
+      66.69999999999709,
+      66.60000000000582,
+      66.69999999999709,
+      66.69999999999709,
+      83.30000000000291,
+      66.59999999999127,
+      66.70000000001164,
+      66.59999999999127,
+      66.69999999999709,
+      50,
+      66.70000000001164,
+      66.59999999999127,
+      66.69999999999709,
+      66.70000000001164,
+      66.59999999999127,
+      66.69999999999709,
+      66.70000000001164,
+      49.89999999999418,
+      83.39999999999418,
+      49.90000000000873,
+      66.80000000000291,
+      66.59999999999127,
+      66.60000000000582,
+      66.69999999999709,
+      66.69999999999709,
+      66.60000000000582,
+      66.69999999999709,
+      66.69999999999709,
+      66.60000000000582,
+      50.09999999999127,
+      66.70000000001164,
+      66.59999999999127,
+      66.60000000000582,
+      66.69999999999709,
+      83.39999999999418,
+      66.60000000000582,
+      66.69999999999709,
+      66.60000000000582,
+      66.69999999999709,
+      66.60000000000582,
+      66.69999999999709,
+      66.69999999999709,
+      50,
+      66.69999999999709,
+      66.60000000000582,
+      66.69999999999709,
+      66.60000000000582,
+      66.69999999999709,
+      66.69999999999709,
+      66.69999999999709,
+      66.60000000000582,
+      66.59999999999127,
+      66.70000000001164,
+      83.29999999998836,
+      66.70000000001164,
+      100,
+      83.39999999999418,
+      83.30000000000291,
+      83.30000000000291,
+      83.39999999999418,
+      83.30000000000291,
+      83.30000000000291,
+      83.29999999998836,
+      66.70000000001164,
+      83.29999999998836,
+      100,
+      116.70000000001164,
+      100,
+      83.29999999998836,
+      66.70000000001164,
+      83.29999999998836,
+      66.60000000000582,
+      66.70000000001164,
+      66.69999999998254,
+      83.30000000001746,
+      66.69999999998254,
+      83.30000000001746,
+      50,
+      83.39999999999418,
+      66.60000000000582,
+      83.29999999998836,
+      83.39999999999418,
+      100,
+      83.30000000001746,
+      66.69999999998254,
+      50,
+      83.30000000001746,
+      116.59999999997672,
+      166.70000000001164,
+      100,
+      66.70000000001164,
+      66.59999999997672,
+      66.60000000000582,
+      66.80000000001746,
+      83.29999999998836,
+      66.70000000001164,
+      83.29999999998836,
+      50,
+      83.29999999998836,
+      66.60000000000582,
+      50.10000000000582,
+      66.70000000001164,
+      66.59999999997672,
+      50,
+      66.70000000001164,
+      49.89999999999418,
+      83.30000000001746,
+      83.5,
+      66.59999999997672,
+      66.60000000000582,
+      66.70000000001164,
+      66.60000000000582,
+      50,
+      66.69999999998254,
+      83.39999999999418,
+      66.70000000001164,
+      50,
+      66.5,
+      66.79999999998836,
+      66.60000000000582,
+      66.70000000001164,
+      83.29999999998836,
+      50,
+      66.70000000001164,
+      50,
+      66.69999999998254,
+      83.20000000001164,
+      50,
+      66.70000000001164,
+      66.69999999998254,
+      66.60000000000582,
+      50,
+      66.70000000001164,
+      83.29999999998836,
+      50.10000000000582,
+      66.60000000000582,
+      50,
+      83.29999999998836,
+      50,
+      50,
+      66.70000000001164,
+      83.29999999998836,
+      66.70000000001164,
+      66.69999999998254,
+      66.70000000001164,
+      66.60000000000582,
+      66.69999999998254,
+      66.60000000000582,
+      66.70000000001164,
+      83.29999999998836,
+      50,
+      66.70000000001164,
+      66.59999999997672,
+      66.70000000001164,
+      50,
+      66.70000000001164,
+      66.59999999997672,
+      66.70000000001164,
+      66.60000000000582,
+      66.69999999998254,
+      66.70000000001164,
+      66.60000000000582,
+      50,
+      50,
+      83.29999999998836,
+      50,
+      66.70000000001164,
+      66.69999999998254,
+      66.60000000000582,
+      66.70000000001164,
+      66.69999999998254,
+      50,
+      83.30000000001746,
+      50,
+      66.69999999998254,
+      66.70000000001164,
+      66.60000000000582,
+      66.60000000000582,
+      50.09999999997672,
+      66.60000000000582,
+      66.70000000001164,
+      50,
+      66.60000000000582,
+      66.69999999998254,
+      83.39999999999418,
+      49.90000000002328,
+      66.69999999998254,
+      50,
+      83.39999999999418,
+      66.60000000000582,
+      50,
+      66.70000000001164,
+      83.29999999998836,
+      66.70000000001164,
+      50
+    ],
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "before_metrics": [
+      {
+        "name": "Timestamp",
+        "value": 34791.783899
+      },
+      {
+        "name": "AudioHandlers",
+        "value": 0
+      },
+      {
+        "name": "AudioWorkletProcessors",
+        "value": 0
+      },
+      {
+        "name": "Documents",
+        "value": 3
+      },
+      {
+        "name": "Frames",
+        "value": 2
+      },
+      {
+        "name": "JSEventListeners",
+        "value": 36
+      },
+      {
+        "name": "LayoutObjects",
+        "value": 1146
+      },
+      {
+        "name": "MediaKeySessions",
+        "value": 0
+      },
+      {
+        "name": "MediaKeys",
+        "value": 0
+      },
+      {
+        "name": "Nodes",
+        "value": 1168
+      },
+      {
+        "name": "Resources",
+        "value": 8
+      },
+      {
+        "name": "ContextLifecycleStateObservers",
+        "value": 5
+      },
+      {
+        "name": "V8PerContextDatas",
+        "value": 1
+      },
+      {
+        "name": "WorkerGlobalScopes",
+        "value": 1
+      },
+      {
+        "name": "UACSSResources",
+        "value": 0
+      },
+      {
+        "name": "RTCPeerConnections",
+        "value": 0
+      },
+      {
+        "name": "ResourceFetchers",
+        "value": 4
+      },
+      {
+        "name": "AdSubframes",
+        "value": 0
+      },
+      {
+        "name": "DetachedScriptStates",
+        "value": 0
+      },
+      {
+        "name": "ArrayBufferContents",
+        "value": 1
+      },
+      {
+        "name": "LayoutCount",
+        "value": 1
+      },
+      {
+        "name": "RecalcStyleCount",
+        "value": 1
+      },
+      {
+        "name": "LayoutDuration",
+        "value": 0.00062
+      },
+      {
+        "name": "RecalcStyleDuration",
+        "value": 0.000261
+      },
+      {
+        "name": "DevToolsCommandDuration",
+        "value": 0.000081
+      },
+      {
+        "name": "ScriptDuration",
+        "value": 0.000097
+      },
+      {
+        "name": "V8CompileDuration",
+        "value": 0
+      },
+      {
+        "name": "TaskDuration",
+        "value": 0.001615
+      },
+      {
+        "name": "TaskOtherDuration",
+        "value": 0.000556
+      },
+      {
+        "name": "ThreadTime",
+        "value": 0.001718
+      },
+      {
+        "name": "ProcessTime",
+        "value": 0
+      },
+      {
+        "name": "JSHeapUsedSize",
+        "value": 3212424
+      },
+      {
+        "name": "JSHeapTotalSize",
+        "value": 3932160
+      },
+      {
+        "name": "FirstMeaningfulPaint",
+        "value": 0
+      },
+      {
+        "name": "DomContentLoaded",
+        "value": 34682.002042
+      },
+      {
+        "name": "NavigationStart",
+        "value": 34681.89501
+      }
+    ],
+    "after_metrics": [
+      {
+        "name": "Timestamp",
+        "value": 34821.958069
+      },
+      {
+        "name": "AudioHandlers",
+        "value": 0
+      },
+      {
+        "name": "AudioWorkletProcessors",
+        "value": 0
+      },
+      {
+        "name": "Documents",
+        "value": 3
+      },
+      {
+        "name": "Frames",
+        "value": 2
+      },
+      {
+        "name": "JSEventListeners",
+        "value": 18
+      },
+      {
+        "name": "LayoutObjects",
+        "value": 1726
+      },
+      {
+        "name": "MediaKeySessions",
+        "value": 0
+      },
+      {
+        "name": "MediaKeys",
+        "value": 0
+      },
+      {
+        "name": "Nodes",
+        "value": 1802
+      },
+      {
+        "name": "Resources",
+        "value": 26
+      },
+      {
+        "name": "ContextLifecycleStateObservers",
+        "value": 5
+      },
+      {
+        "name": "V8PerContextDatas",
+        "value": 1
+      },
+      {
+        "name": "WorkerGlobalScopes",
+        "value": 1
+      },
+      {
+        "name": "UACSSResources",
+        "value": 0
+      },
+      {
+        "name": "RTCPeerConnections",
+        "value": 0
+      },
+      {
+        "name": "ResourceFetchers",
+        "value": 4
+      },
+      {
+        "name": "AdSubframes",
+        "value": 0
+      },
+      {
+        "name": "DetachedScriptStates",
+        "value": 0
+      },
+      {
+        "name": "ArrayBufferContents",
+        "value": 0
+      },
+      {
+        "name": "LayoutCount",
+        "value": 46
+      },
+      {
+        "name": "RecalcStyleCount",
+        "value": 50
+      },
+      {
+        "name": "LayoutDuration",
+        "value": 0.029035
+      },
+      {
+        "name": "RecalcStyleDuration",
+        "value": 0.010427
+      },
+      {
+        "name": "DevToolsCommandDuration",
+        "value": 0.003311
+      },
+      {
+        "name": "ScriptDuration",
+        "value": 0.07665
+      },
+      {
+        "name": "V8CompileDuration",
+        "value": 0
+      },
+      {
+        "name": "TaskDuration",
+        "value": 30.13228
+      },
+      {
+        "name": "TaskOtherDuration",
+        "value": 30.012857
+      },
+      {
+        "name": "ThreadTime",
+        "value": 0.82689
+      },
+      {
+        "name": "ProcessTime",
+        "value": 0
+      },
+      {
+        "name": "JSHeapUsedSize",
+        "value": 7363560
+      },
+      {
+        "name": "JSHeapTotalSize",
+        "value": 10313728
+      },
+      {
+        "name": "FirstMeaningfulPaint",
+        "value": 0
+      },
+      {
+        "name": "DomContentLoaded",
+        "value": 34682.002042
+      },
+      {
+        "name": "NavigationStart",
+        "value": 34681.89501
+      }
+    ],
+    "caveat": "Headless graphics submissions and rAF timing; actual renderer is recorded. Not physical display FPS or full designated-machine acceptance.",
+    "after_navigation_metrics": [
+      {
+        "name": "Timestamp",
+        "value": 34824.968119
+      },
+      {
+        "name": "AudioHandlers",
+        "value": 0
+      },
+      {
+        "name": "AudioWorkletProcessors",
+        "value": 0
+      },
+      {
+        "name": "Documents",
+        "value": 3
+      },
+      {
+        "name": "Frames",
+        "value": 2
+      },
+      {
+        "name": "JSEventListeners",
+        "value": 18
+      },
+      {
+        "name": "LayoutObjects",
+        "value": 395
+      },
+      {
+        "name": "MediaKeySessions",
+        "value": 0
+      },
+      {
+        "name": "MediaKeys",
+        "value": 0
+      },
+      {
+        "name": "Nodes",
+        "value": 429
+      },
+      {
+        "name": "Resources",
+        "value": 8
+      },
+      {
+        "name": "ContextLifecycleStateObservers",
+        "value": 5
+      },
+      {
+        "name": "V8PerContextDatas",
+        "value": 1
+      },
+      {
+        "name": "WorkerGlobalScopes",
+        "value": 1
+      },
+      {
+        "name": "UACSSResources",
+        "value": 0
+      },
+      {
+        "name": "RTCPeerConnections",
+        "value": 0
+      },
+      {
+        "name": "ResourceFetchers",
+        "value": 4
+      },
+      {
+        "name": "AdSubframes",
+        "value": 0
+      },
+      {
+        "name": "DetachedScriptStates",
+        "value": 0
+      },
+      {
+        "name": "ArrayBufferContents",
+        "value": 0
+      },
+      {
+        "name": "LayoutCount",
+        "value": 77
+      },
+      {
+        "name": "RecalcStyleCount",
+        "value": 95
+      },
+      {
+        "name": "LayoutDuration",
+        "value": 0.049427
+      },
+      {
+        "name": "RecalcStyleDuration",
+        "value": 0.02618
+      },
+      {
+        "name": "DevToolsCommandDuration",
+        "value": 0.016453
+      },
+      {
+        "name": "ScriptDuration",
+        "value": 0.560701
+      },
+      {
+        "name": "V8CompileDuration",
+        "value": 0
+      },
+      {
+        "name": "TaskDuration",
+        "value": 32.695116
+      },
+      {
+        "name": "TaskOtherDuration",
+        "value": 32.042355
+      },
+      {
+        "name": "ThreadTime",
+        "value": 1.353022
+      },
+      {
+        "name": "ProcessTime",
+        "value": 0
+      },
+      {
+        "name": "JSHeapUsedSize",
+        "value": 2852040
+      },
+      {
+        "name": "JSHeapTotalSize",
+        "value": 3932160
+      },
+      {
+        "name": "FirstMeaningfulPaint",
+        "value": 0
+      },
+      {
+        "name": "DomContentLoaded",
+        "value": 34682.002042
+      },
+      {
+        "name": "NavigationStart",
+        "value": 34681.89501
+      }
+    ]
+  },
+  "reduced_motion_draws_in_700ms": 0,
+  "dom_update_observation_ms": [
+    166.55835499998648,
+    162.25688799997442,
+    162.69503200001782,
+    161.2731490000151,
+    166.47827300001518,
+    161.28806699998677,
+    161.05378200000268,
+    158.76625899999635
+  ],
+  "dom_update_observation_p95_ms": 166.55835499998648,
+  "finished_at": "2026-10-18T04:48:41.079Z"
+}

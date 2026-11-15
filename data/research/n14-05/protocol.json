@@ -1,0 +1,39 @@
+{
+  "baseline": "rich_lexical",
+  "claim_boundary": "Retrieval is not entailment;N14-02 remains unchanged;unverified paraphrases abstain;no clinical validation",
+  "clinical_validation": false,
+  "comparator": "lexical_weighted_rrf",
+  "evidence_manifest_id": "evidence-b1fc5c5e6d9bbf3cb4265fb37b38ffee3941a7c84946d631bef444e00e2269ab",
+  "execution_authorized": false,
+  "gates": {
+    "no_switching_primary_after_results": true,
+    "recall3_not_lower": true,
+    "recall5_not_lower": true,
+    "report_all_top3_losses": true,
+    "strict_recall3_gain_before_improvement_claim": true,
+    "zero_incorrect_claim_accepts_in_separate_bound_controls": true,
+    "zero_invalid_citations_roles": true,
+    "zero_per_question_expected_unit_loss_at5": true
+  },
+  "id": "protocol-2ad5d7c134092059eb9f038ca9909cba5cda13691abe77362fc2d6022d84f9e0",
+  "integrity": "Independent unexposed authors/reviewers;freeze question families,labels,code,cohort,protocol before execution;no retuning on exposed results",
+  "metrics": {
+    "ambiguous_and_unsupported": "separate,not positive recall denominators;report candidates and abstention expectations",
+    "k": [
+      3,
+      5
+    ],
+    "paired": "wins/losses/ties and exact lost/gained expected IDs",
+    "positive_recall": "macro exact expected-unit recall on supported cases;deduplicate unit IDs;no oracle alternatives"
+  },
+  "owner_cohort_approval_required": true,
+  "policy_manifest_id": "policies-d6009366d291c462b1060e5405c122c2c44f867ea09e5f89f49389afe447c393",
+  "primary_candidate": "append_only_semantic_rescue",
+  "proposed_cohort": {
+    "ambiguous": 8,
+    "supported": 24,
+    "unsupported": 8
+  },
+  "schema_version": "astra.n14.prospective-protocol.v1",
+  "version": "astra.n14.prospective.v1"
+}

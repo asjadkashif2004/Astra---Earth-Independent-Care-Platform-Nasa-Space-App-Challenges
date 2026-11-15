@@ -1,0 +1,14 @@
+.git
+.aws
+.agents
+.codex
+.env
+.env.*
+data/runtime
+node_modules
+artifacts
+research
+*.pdf
+deep-research-report.md
+coverage
+test-results

@@ -1,0 +1,22 @@
+{
+  "status": "PASS_PREIMPLEMENTATION",
+  "scope_review": "Consistent single designated synthetic archive; no operational source, writer, model or application authority",
+  "donor": "/var/tmp/astra-n16-04-gJ6VxS/originals/elevated/source.sqlite",
+  "bytes": 65536,
+  "sha256": "4b1a3d8d9bdb832ae54b35a43e4412f18914756984893f8cb181b37955caff73",
+  "SQLite_header": {
+    "page_size": 4096,
+    "write_version": 1,
+    "read_version": 1
+  },
+  "schema_binding": "Exact original file hash plus preserved N16-04 SQL/schema/manifest pins; metadata and row identities must also pass actual reader checks",
+  "source_directory_members": [
+    "source.sqlite"
+  ],
+  "source_edition": "astra.n16.scratch-sqlite.v1",
+  "protected_file_count": 310,
+  "SQL_executed": false,
+  "operational_database_access": false,
+  "network_requests": 0,
+  "active_exception_scope": "Pending recording of owner activation; implementation not begun"
+}

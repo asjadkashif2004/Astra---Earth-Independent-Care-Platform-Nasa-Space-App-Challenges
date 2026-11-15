@@ -1,0 +1,44 @@
+
+Elf file type is DYN (Shared object file)
+Entry point 0x0
+There are 11 program headers, starting at offset 64
+
+Program Headers:
+  Type           Offset             VirtAddr           PhysAddr
+                 FileSiz            MemSiz              Flags  Align
+  LOAD           0x0000000000000000 0x0000000000000000 0x0000000000000000
+                 0x00000000000042f8 0x00000000000042f8  R      0x1000
+  LOAD           0x0000000000005000 0x0000000000005000 0x0000000000005000
+                 0x000000000001a339 0x000000000001a339  R E    0x1000
+  LOAD           0x0000000000020000 0x0000000000020000 0x0000000000020000
+                 0x000000000000373c 0x000000000000373c  R      0x1000
+  LOAD           0x0000000000023bf8 0x0000000000024bf8 0x0000000000024bf8
+                 0x0000000000000868 0x0000000000000870  RW     0x1000
+  DYNAMIC        0x0000000000023d48 0x0000000000024d48 0x0000000000024d48
+                 0x0000000000000240 0x0000000000000240  RW     0x8
+  NOTE           0x00000000000002a8 0x00000000000002a8 0x00000000000002a8
+                 0x0000000000000020 0x0000000000000020  R      0x8
+  NOTE           0x00000000000002c8 0x00000000000002c8 0x00000000000002c8
+                 0x0000000000000024 0x0000000000000024  R      0x4
+  GNU_PROPERTY   0x00000000000002a8 0x00000000000002a8 0x00000000000002a8
+                 0x0000000000000020 0x0000000000000020  R      0x8
+  GNU_EH_FRAME   0x00000000000219a0 0x00000000000219a0 0x00000000000219a0
+                 0x000000000000029c 0x000000000000029c  R      0x4
+  GNU_STACK      0x0000000000000000 0x0000000000000000 0x0000000000000000
+                 0x0000000000000000 0x0000000000000000  RW     0x10
+  GNU_RELRO      0x0000000000023bf8 0x0000000000024bf8 0x0000000000024bf8
+                 0x0000000000000408 0x0000000000000408  R      0x1
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .note.gnu.property .note.gnu.build-id .gnu.hash .dynsym .dynstr .gnu.version .gnu.version_r .rela.dyn .rela.plt 
+   01     .init .plt .plt.got .plt.sec .text .fini 
+   02     .rodata .eh_frame_hdr .eh_frame .gcc_except_table 
+   03     .init_array .fini_array .data.rel.ro .dynamic .got .got.plt .data .bss 
+   04     .dynamic 
+   05     .note.gnu.property 
+   06     .note.gnu.build-id 
+   07     .note.gnu.property 
+   08     .eh_frame_hdr 
+   09     
+   10     .init_array .fini_array .data.rel.ro .dynamic .got 

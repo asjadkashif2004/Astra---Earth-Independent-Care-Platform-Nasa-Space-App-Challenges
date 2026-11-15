@@ -1,0 +1,61 @@
+START {
+  experiment: {
+    id: '9a322c99-fe36-4e6a-afc4-3d3787aeb4ff',
+    status: 'RUNNING',
+    crew_id: 'CREW-03'
+  },
+  idempotent: false
+}
+WAIT {
+  id: '9a322c99-fe36-4e6a-afc4-3d3787aeb4ff',
+  status: 'FAILED',
+  error: 'N11_WORKER_ERROR'
+}
+{
+  "status": "FAILED",
+  "error": "N11_WORKER_ERROR",
+  "events": [
+    {
+      "schema_version": "astra.n11.event.v1",
+      "job_id": "9a322c99-fe36-4e6a-afc4-3d3787aeb4ff",
+      "seq": 1,
+      "kind": "STARTED",
+      "known_at": "2026-11-14T11:00:00.000Z",
+      "host_at": "2026-10-31T06:22:51.123Z",
+      "payload": {
+        "config_hash": "6aff0ebae41c9c03b397956f65b70aa2b9f01d2a88be4706c38c95b7c9891516",
+        "policy_hash": "ceac615c1bddcc152dba12dd0756d8a0f47a6c3f748757822d7b1d85fcb2cf6b",
+        "parent_result_hash": null
+      },
+      "previous_hash": "GENESIS",
+      "hash": "2f688788bc31bad61f369ce192a86646b3834fa25bf94971c99ec2824acff70a"
+    },
+    {
+      "schema_version": "astra.n11.event.v1",
+      "job_id": "9a322c99-fe36-4e6a-afc4-3d3787aeb4ff",
+      "seq": 2,
+      "kind": "WORKER_ONLINE",
+      "known_at": "2026-11-14T11:00:00.000Z",
+      "host_at": "2026-10-31T06:22:51.153Z",
+      "payload": {
+        "thread_id": 1
+      },
+      "previous_hash": "2f688788bc31bad61f369ce192a86646b3834fa25bf94971c99ec2824acff70a",
+      "hash": "3b7baf23a57a9d5c23c59044a0860acff151ac354794d6129c7ca4a02f9b0a6a"
+    },
+    {
+      "schema_version": "astra.n11.event.v1",
+      "job_id": "9a322c99-fe36-4e6a-afc4-3d3787aeb4ff",
+      "seq": 3,
+      "kind": "FAILED",
+      "known_at": "2026-11-14T11:00:00.000Z",
+      "host_at": "2026-10-31T06:22:51.162Z",
+      "payload": {
+        "error": "N11_WORKER_ERROR",
+        "no_false_completion": true
+      },
+      "previous_hash": "3b7baf23a57a9d5c23c59044a0860acff151ac354794d6129c7ca4a02f9b0a6a",
+      "hash": "f29352684e6174982d3cdf131531113a109b26b384b41a7ac954586bac4d6a90"
+    }
+  ]
+}

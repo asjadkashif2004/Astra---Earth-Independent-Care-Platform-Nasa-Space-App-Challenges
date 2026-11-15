@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-18",
+  "status": "passed",
+  "markdown_files": 27,
+  "local_links": 176,
+  "broken_links": [],
+  "unbalanced_fences": [],
+  "requirement_groups": 68,
+  "acceptance_criteria": 25,
+  "roadmap_modules": 26,
+  "original_AC20_exact_wording_retained": true,
+  "N03_Partial_AC20_Open_N04_Partial_N05_unapproved_verified": true,
+  "source_evidence_files_rehashed": 231,
+  "shader_python_ast": "passed,no execution/FPS claim",
+  "mermaid": "Text/dependency wording checked;not a rendered Mermaid verification",
+  "initial_checker_attempt": "Literal N04 completion search failed;unchanged prerequisite says N04 complete. Matcher corrected;no roadmap gate changed.",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "420448e69f847928620457efe7d98a2464b2a5ea4089a98e2f516ed6e568a888"
+    },
+    {
+      "path": "README.md",
+      "sha256": "4a48f1bb5f4d899b8855c2ff5fcb4340b9dac5719155d4fe06051ad79b20f7a9"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "2591012518d9111d317c3ae2a2c3444eaeb74ee898eb383217674dc3535ad629"
+    },
+    {
+      "path": "docs/AUDIT_RUNBOOK.md",
+      "sha256": "77192491ee576dad9f1979e3e875b382a254453771b25abe823e35c3cadb7246"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "sha256": "ce8bf9c31fe9c96f61a316bdf7755ea87d9d983669cd596bafac5c9f3ae23a64"
+    },
+    {
+      "path": "docs/DEPLOYMENT.md",
+      "sha256": "a66ee3ff311463017e5eb984a1344f4c66882bdeca972354f4cfdcbd7e57b87b"
+    },
+    {
+      "path": "docs/DE_AC20_01.md",
+      "sha256": "d1e6c8c912ca500162b2aec01de2bfa2a45ef98b78591f7aaa9cce8bb3b950a7"
+    },
+    {
+      "path": "docs/ENVIRONMENT.md",
+      "sha256": "7fbc91b5ee98ce732262e24a285fed5104ede41a8600462379dfff2b43f73c0b"
+    },
+    {
+      "path": "docs/FEATURE_AUDIT.md",
+      "sha256": "f817ee16305b422b6300081411897c08f27458d892487828c483e27d824b1058"
+    },
+    {
+      "path": "docs/LIMITATIONS.md",
+      "sha256": "d643061cf343347dba67ca54be7379150c3ea1ae5b6094e2d49b19f2111b2738"
+    },
+    {
+      "path": "docs/MASTER_PLAN.md",
+      "sha256": "ae7731894c37bf73a888fad825cd3a9a790200f5363a775b549324dcb80194ab"
+    },
+    {
+      "path": "docs/MODULE_TRACKER.md",
+      "sha256": "bbd73f7f65fd173a37884989386bfb9b71c477783a41c9f643b58d52a7e1da11"
+    },
+    {
+      "path": "docs/N01_COMPLETION.md",
+      "sha256": "9be074f007ad667fde0c8fbe6f5d2663ec89a0b62ed28f5f4f72a7f8c01b9db5"
+    },
+    {
+      "path": "docs/N02_COMPLETION.md",
+      "sha256": "1dcc7191b2de7873e9ff1ccae8438513e663bf993b0aa7f4661e14e4674ba650"
+    },
+    {
+      "path": "docs/N02_CONTRACTS.md",
+      "sha256": "ba7d675a0605b1b1a82dcb2a4929c612689abdc94db31758085cdfbf32442e4e"
+    },
+    {
+      "path": "docs/N03_BROWSER_ACCEPTANCE.md",
+      "sha256": "fd512f9e84570ad4f86b14212096dd35c53691f3f9d6a6aed79e1932669d9049"
+    },
+    {
+      "path": "docs/N03_COMPLETION.md",
+      "sha256": "95de05cfd14370bc4f753e4b867d2c675f196ce7a33f338f412df81991c1c961"
+    },
+    {
+      "path": "docs/N03_FINAL_CLOSURE.md",
+      "sha256": "4ce467d23a17ed655575894ef1986d92c576e360588d421e9e6f55638ce1cbd9"
+    },
+    {
+      "path": "docs/N04_ACCEPTANCE.md",
+      "sha256": "1775fbbe9633f543f0db1d62500875746a0585d91b83699b12ba5644340b2026"
+    },
+    {
+      "path": "docs/N04_COMPLETION.md",
+      "sha256": "34fb2cbf04123aab0e740e31e89cccde8b7dfcaed2ec2c566c07d1eccfd58ae3"
+    },
+    {
+      "path": "docs/REQUIREMENTS.md",
+      "sha256": "885ab8bb408c985d9a754d78f8e5b8629a025ee13cd54df7e0ca033a09f92904"
+    },
+    {
+      "path": "docs/SESSION_HANDOFF.md",
+      "sha256": "761415e281cf8410833fcc03da02bdaa99f2eb91fdf079ce3fbad4e759830875"
+    },
+    {
+      "path": "docs/SETUP.md",
+      "sha256": "442b1c853d50ef89405bdcf0abdf7b3c5eb9cd28f18aeb21c65179e6d7e275b9"
+    },
+    {
+      "path": "docs/TESTING.md",
+      "sha256": "1ccc3a5800b6950260bb0c4da737001ac0f4938321b80ce7af524f0e8fa79b7f"
+    },
+    {
+      "path": "docs/VERIFICATION.md",
+      "sha256": "439a2f56bb52d660240be224998d3ff95dc5d697239797f4cab93d3b44d42153"
+    },
+    {
+      "path": "docs/VISUAL_DESIGN_SYSTEM.md",
+      "sha256": "230e9e26e4cb4abf505bb85844339c8cc3a5fe120cb1ff330f3e99f8a0067692"
+    },
+    {
+      "path": "docs/VISUAL_REDESIGN_PROPOSAL.md",
+      "sha256": "c5eee204cffdf2300e22aad95ff82649f45902be8e51b2dabf61f7a1e292e611"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "status": "PINNED_ASSETS_PRESENT",
+  "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+  "assets": [
+    {
+      "name": "README.md",
+      "bytes": 1767,
+      "sha256": "63ea99bf681a2e9eda4f6a537d5ed8fda95d1677111656da37e9cfd080c3af02"
+    },
+    {
+      "name": "config.json",
+      "bytes": 650,
+      "sha256": "7135149f7cffa1a573466c6e4d8423ed73b62fd2332c575bf738a0d033f70df7"
+    },
+    {
+      "name": "tokenizer.json",
+      "bytes": 711661,
+      "sha256": "da0e79933b9ed51798a3ae27893d3c5fa4a201126cef75586296df9b4d2c62a0"
+    },
+    {
+      "name": "tokenizer_config.json",
+      "bytes": 366,
+      "sha256": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3"
+    },
+    {
+      "name": "special_tokens_map.json",
+      "bytes": 125,
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+    },
+    {
+      "name": "vocab.txt",
+      "bytes": 231508,
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+    },
+    {
+      "name": "onnx/model_quantized.onnx",
+      "bytes": 22972370,
+      "sha256": "afdb6f1a0e45b715d0bb9b11772f032c399babd23bfc31fed1c170afc848bdb1"
+    }
+  ],
+  "graph": {
+    "inputs": [
+      {
+        "name": "input_ids",
+        "dtype": 7,
+        "shape": [
+          "batch_size",
+          "sequence_length"
+        ]
+      },
+      {
+        "name": "attention_mask",
+        "dtype": 7,
+        "shape": [
+          "batch_size",
+          "sequence_length"
+        ]
+      },
+      {
+        "name": "token_type_ids",
+        "dtype": 7,
+        "shape": [
+          "batch_size",
+          "sequence_length"
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "last_hidden_state",
+        "dtype": 1,
+        "shape": [
+          "batch_size",
+          "sequence_length",
+          384
+        ]
+      }
+    ]
+  },
+  "packages": [
+    {
+      "name": "onnxruntime-node",
+      "version": "1.21.0",
+      "package_json_sha256": "0956b483c9f285a2cbfff3cbb9b15540ed8e2b00523c2e39ed9d5aa0b10415ae"
+    },
+    {
+      "name": "onnxruntime-common",
+      "version": "1.21.0",
+      "package_json_sha256": "5b762baf33234e76ea922ee7a13e80780035f2799b7608c4f3a58b41dbd69d48"
+    },
+    {
+      "name": "@huggingface/tokenizers",
+      "version": "0.2.0",
+      "package_json_sha256": "f6b9849b58de625c4fd79583242dd4506914b92082f9af17719d39416658ef24"
+    }
+  ],
+  "native_imports": 0,
+  "inference": 0,
+  "installed_native_member_reverification": "NOT_EXECUTED; prerequisite to a newly approved native campaign",
+  "native_campaign": "AUTHORIZATION_BLOCKED: no renewed A/B storage-policy decision",
+  "numerical_parity": "UNVERIFIED; no independent same-graph reference",
+  "historical_native_evidence": "artifacts/n14-01-20261025/numerical-verification.json; not fresh execution"
+}

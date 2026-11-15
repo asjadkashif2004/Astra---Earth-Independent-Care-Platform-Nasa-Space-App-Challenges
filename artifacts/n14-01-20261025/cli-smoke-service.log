@@ -1,0 +1,6 @@
+Running as unit: astra-n14-01-oewmeal8-cli-smoke.service; invocation ID: f7c8cbaf37f745998c1f8ff612e91d72
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 1.177s
+             CPU time consumed: 938ms
+                   Memory peak: 143.3M (swap: 0B)

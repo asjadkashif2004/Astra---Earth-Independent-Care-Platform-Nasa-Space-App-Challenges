@@ -1,0 +1,9 @@
+{
+  "checks": 2,
+  "method": "node --check; parsed only",
+  "files": {
+    "scripts/n16-containment-only.mjs": "e1062bb3fb054f5bc22a67802e60ead738110885073db57531e5771df5244094",
+    "scripts/n16-containment-probe.mjs": "bafd9060a49fab11a60d85993884dcd9d138f1e626ccda33be370a0f7f0b1b7c"
+  },
+  "worker_executed": false
+}

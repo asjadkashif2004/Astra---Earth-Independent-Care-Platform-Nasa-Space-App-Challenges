@@ -1,0 +1,20 @@
+{
+  "distinct_current_tests": 68,
+  "existing_curation_compatibility_passes_reused": 46,
+  "final_new_tests": {
+    "command": "node --test --test-isolation=none tests/research-retrieval.test.mjs",
+    "fail": 0,
+    "pass": 22,
+    "skipped": 0,
+    "tests": 22
+  },
+  "full_application_or_browser_suites": "not run; application untouched",
+  "native_verification": "numerical-verification.json,rebuild-verification.json,cli-smoke.json,cli-final-supervisor.json",
+  "related_combined_run_before_final_watchdog_and_serialized_byte_check": {
+    "command": "node --test --test-isolation=none tests/research-retrieval.test.mjs tests/evidence-review.test.mjs tests/research-curation.test.mjs",
+    "duration_ms": 6541.840928,
+    "fail": 0,
+    "pass": 67,
+    "tests": 67
+  }
+}

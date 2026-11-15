@@ -1,0 +1,26 @@
+{
+  "edition": "n16-fixture-v1",
+  "fixtures": {
+    "elevated": {
+      "bytes": 27196,
+      "file": "elevated.json",
+      "sha256": "7ee532bcf759f051ad0cd0f4932493770802e19df1b4dc67c052433f85da3774"
+    },
+    "missing": {
+      "bytes": 26133,
+      "file": "missing.json",
+      "sha256": "0b1d2c9164723acbd66c5792c68e90bbf6a2ab479205e75953607dac246817da"
+    },
+    "nominal": {
+      "bytes": 27156,
+      "file": "nominal.json",
+      "sha256": "09bc2ba5167d6b9188f16d497d0139161472521abf266d7583dcb56e812961c4"
+    },
+    "stale": {
+      "bytes": 27078,
+      "file": "stale.json",
+      "sha256": "3eb3f8a88fa34b44080805dba2760587181fa10ddad9b31fb28d68480a0b379a"
+    }
+  },
+  "schema_version": "astra.n16.fixture-manifest.v1"
+}

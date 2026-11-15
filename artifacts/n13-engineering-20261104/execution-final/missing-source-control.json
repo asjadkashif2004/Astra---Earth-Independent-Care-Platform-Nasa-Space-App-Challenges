@@ -1,0 +1,5 @@
+{
+  "status": "REJECTED",
+  "code": "MISSING_REQUIRED_SOURCE",
+  "scope": "In-memory omitted original; actual two original files preserved and verified"
+}

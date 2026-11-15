@@ -1,0 +1,11 @@
+{
+  "args": [
+    "readelf",
+    "--dynamic",
+    "--wide",
+    "/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669/libllama-bench-impl.so"
+  ],
+  "exit_code": 0,
+  "stdout": "\nDynamic section at offset 0x65a48 contains 33 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libllama-common.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libllama.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libggml.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libggml-base.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000e (SONAME)             Library soname: [libllama-bench-impl.so]\n 0x000000000000001d (RUNPATH)            Library runpath: [$ORIGIN]\n 0x000000000000000c (INIT)               0x13000\n 0x000000000000000d (FINI)               0x58b2c\n 0x0000000000000019 (INIT_ARRAY)         0x66628\n 0x000000000000001b (INIT_ARRAYSZ)       16 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x66638\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x2f0\n 0x0000000000000005 (STRTAB)             0x4560\n 0x0000000000000006 (SYMTAB)             0xe10\n 0x000000000000000a (STRSZ)              40081 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x67000\n 0x0000000000000002 (PLTRELSZ)           8736 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x108d8\n 0x0000000000000007 (RELA)               0xe7f0\n 0x0000000000000008 (RELASZ)             8424 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0xe690\n 0x000000006fffffff (VERNEEDNUM)         4\n 0x000000006ffffff0 (VERSYM)             0xe1f2\n 0x000000006ffffff9 (RELACOUNT)          147\n 0x0000000000000000 (NULL)               0x0\n",
+  "stderr": ""
+}

@@ -1,0 +1,42 @@
+{
+  "adjudication": {
+    "adjudicator_id": null,
+    "citation_checked": false,
+    "decision": null,
+    "original_pages_checked": false,
+    "payload_sha256": null,
+    "qualifiers_checked": false,
+    "record_reference": null,
+    "record_sha256": null,
+    "resolution": null,
+    "role_checked": false,
+    "signed_at": null,
+    "status": "not_needed"
+  },
+  "author_id": null,
+  "authored_at": null,
+  "category": null,
+  "coverage_rationale": null,
+  "expected_evidence": [],
+  "family": null,
+  "id": null,
+  "question": null,
+  "response_expectation": null,
+  "reviews": [
+    {
+      "citation_checked": false,
+      "decision": "pending",
+      "original_pages_checked": false,
+      "payload_sha256": null,
+      "qualifiers_checked": false,
+      "rationale": null,
+      "record_reference": null,
+      "record_sha256": null,
+      "reviewer_id": null,
+      "role_checked": false,
+      "scientific_relevance_only": true,
+      "signed_at": null
+    }
+  ],
+  "scope_notes": null
+}

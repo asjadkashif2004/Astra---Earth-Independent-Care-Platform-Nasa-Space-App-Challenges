@@ -1,0 +1,26 @@
+import { readdirSync, readFileSync, statSync, existsSync } from 'node:fs';
+import { resolve, dirname } from 'node:path';
+import { spawnSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
+
+const root = fileURLToPath(new URL('../', import.meta.url));
+const files = [];
+function scan(path) { for (const name of readdirSync(path)) { if (name.startsWith('.') || ['node_modules', 'artifacts', 'runtime', '__pycache__'].includes(name)) continue; const p = resolve(path, name); if (statSync(p).isDirectory()) scan(p); else if (/\.(mjs|js)$/.test(name)) files.push(p); } }
+scan(root);
+let errors = 0;
+for (const file of files) {
+  const result = spawnSync(process.execPath, ['--check', file], { encoding: 'utf8' });
+  if (result.status) { errors++; process.stderr.write(result.stderr); }
+  for (const match of readFileSync(file, 'utf8').matchAll(/(?:from\s+|import\s*)['"](\.[^'"]+)['"]/g)) {
+    if (!existsSync(resolve(dirname(file), match[1]))) { errors++; console.error(`Missing import: ${file} -> ${match[1]}`); }
+  }
+  for (const match of readFileSync(file, 'utf8').matchAll(/from\s+['"]\/shared\/([^'"]+)['"]/g)) {
+    if (!existsSync(resolve(root, 'packages', match[1]))) { errors++; console.error(`Missing shared browser import: ${match[1]}`); }
+  }
+}
+for (const doc of ['AGENTS.md', 'docs/MASTER_PLAN.md', 'docs/ARCHITECTURE.md', 'docs/MODULE_TRACKER.md', 'docs/DECISIONS.md', 'docs/SETUP.md', 'docs/TESTING.md', 'docs/REQUIREMENTS.md']) {
+  if (!existsSync(resolve(root, doc))) { errors++; console.error(`Missing documentation: ${doc}`); }
+}
+if (Number(process.versions.node.split('.')[0]) !== 24) { errors++; console.error('Use Node 24.21+ for the verified runtime.'); }
+console.log(`${files.length} JavaScript files parsed and local imports checked; ${errors} errors. This is syntax/contract validation, not TypeScript compilation.`);
+process.exitCode = errors ? 1 : 0;

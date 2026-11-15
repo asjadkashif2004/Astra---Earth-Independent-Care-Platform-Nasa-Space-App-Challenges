@@ -1,0 +1,29 @@
+{
+  "controls": [
+    {
+      "case": "valid",
+      "PASS": true
+    },
+    {
+      "case": "bad_magic",
+      "PASS": true
+    },
+    {
+      "case": "truncated",
+      "PASS": true
+    },
+    {
+      "case": "unsupported_version",
+      "PASS": true
+    },
+    {
+      "case": "missing_tensor_data",
+      "PASS": true
+    },
+    {
+      "case": "oversized_count",
+      "PASS": true
+    }
+  ],
+  "count": 6
+}

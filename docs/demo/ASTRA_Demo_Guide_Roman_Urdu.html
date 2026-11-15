@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="ur-Latn">
+<head>
+<meta charset="utf-8">
+<title>ASTRA — Demo aur Istemal ki Guide (Roman Urdu)</title>
+<style>
+  @page { size: A4; margin: 15mm 14mm 16mm; }
+  @page :first { margin: 0; }
+  :root { --ink:#1c1b22; --muted:#5d5a66; --line:#e3e0e8; --amber:#c9781e; --violet:#6e4fc4; --teal:#1f8f7e; --red:#b8434f; --soft:#f6f4f9; }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin:0; font-family:"Segoe UI", Inter, Arial, sans-serif; color:var(--ink); font-size:10.6pt; line-height:1.55; background:#fff; }
+  h1,h2,h3 { line-height:1.2; margin:0; }
+  h2 { font-size:19pt; font-weight:600; margin:0 0 4mm; color:#15141a; }
+  h2 .num { color:var(--amber); font-weight:700; margin-right:3mm; }
+  h3 { font-size:12.5pt; font-weight:600; margin:5mm 0 2mm; color:#15141a; }
+  p { margin:0 0 2.6mm; }
+  ul, ol { margin:0 0 3mm; padding-left:6mm; }
+  li { margin:0 0 1.2mm; }
+  strong { font-weight:600; }
+  code, .mono { font-family:Consolas, "Courier New", monospace; font-size:9.6pt; }
+  .page { page-break-before: always; }
+  .avoid { break-inside: avoid; page-break-inside: avoid; }
+
+  /* Cover */
+  .cover { height:297mm; padding:22mm 20mm; color:#f0ece6; background:radial-gradient(circle at 75% 30%, #2a2340 0, #0b0b10 55%), #050508; display:flex; flex-direction:column; justify-content:space-between; }
+  .cover .brand { letter-spacing:6px; font-size:14pt; font-weight:600; }
+  .cover .brand small { display:block; letter-spacing:2px; font-size:8pt; color:#b2afb9; margin-top:1mm; font-weight:400; }
+  .cover h1 { font-size:34pt; font-weight:300; letter-spacing:-.5px; margin-top:10mm; }
+  .cover h1 span { color:#f3a64a; }
+  .cover .sub { font-size:13pt; color:#d8d3e6; margin-top:5mm; max-width:150mm; }
+  .cover img { width:100%; border-radius:4mm; border:1px solid #3c3b44; margin-top:8mm; }
+  .cover .meta { display:flex; justify-content:space-between; font-size:9pt; color:#b2afb9; border-top:1px solid #3c3b44; padding-top:4mm; }
+  .chip { display:inline-block; font-size:8pt; letter-spacing:1.2px; text-transform:uppercase; padding:1mm 3mm; border:1px solid #54c9b7; color:#54c9b7; border-radius:10mm; margin-right:2mm; }
+
+  /* Content blocks */
+  .lead { font-size:11.6pt; color:#2b2933; }
+  .eyebrow { font-size:8pt; letter-spacing:1.6px; text-transform:uppercase; color:var(--violet); font-weight:600; margin-bottom:1.5mm; }
+  .box { border:1px solid var(--line); border-radius:3mm; padding:4mm 5mm; margin:3mm 0 4mm; background:var(--soft); }
+  .box.warn { border-color:#f1d2ac; background:#fff7ed; }
+  .box.ok { border-color:#bfe5dd; background:#f1fbf8; }
+  .box.violet { border-color:#d9cff4; background:#f6f2ff; }
+  .box h3 { margin-top:0; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:4mm; }
+  figure { margin:3mm 0 5mm; break-inside:avoid; page-break-inside:avoid; }
+  figure img { width:auto; max-width:100%; max-height:98mm; border-radius:2.5mm; border:1px solid #2a2930; display:block; margin:0 auto; }
+  figure.tall img { max-height:118mm; }
+  figcaption { font-size:8.8pt; color:var(--muted); margin-top:1.6mm; }
+  figcaption b { color:var(--ink); }
+  table { width:100%; border-collapse:collapse; margin:2mm 0 4mm; font-size:9.6pt; }
+  th, td { text-align:left; vertical-align:top; padding:2mm 2.4mm; border-bottom:1px solid var(--line); }
+  th { font-size:8.4pt; letter-spacing:.6px; text-transform:uppercase; color:var(--muted); background:var(--soft); }
+  tr { break-inside:avoid; page-break-inside:avoid; }
+  .tag { display:inline-block; font-size:7.8pt; padding:.4mm 2mm; border-radius:8mm; font-weight:600; white-space:nowrap; }
+  .t-strong { background:#e2f5f1; color:#176f62; }
+  .t-mid { background:#fdeedd; color:#9a5a12; }
+  .t-weak { background:#fbe3e6; color:#9b3340; }
+  .steps { counter-reset:s; list-style:none; padding:0; }
+  .steps > li { counter-increment:s; position:relative; padding-left:10mm; margin-bottom:3mm; break-inside:avoid; }
+  .steps > li::before { content:counter(s); position:absolute; left:0; top:0; width:6.5mm; height:6.5mm; border-radius:50%; background:var(--amber); color:#fff; font-weight:700; font-size:9pt; display:flex; align-items:center; justify-content:center; }
+  pre { background:#111116; color:#f0ece6; border-radius:2.5mm; padding:3mm 4mm; margin:1.5mm 0 3mm; white-space:pre-wrap; font-family:Consolas, monospace; font-size:9.4pt; }
+  .module-head { display:flex; align-items:baseline; justify-content:space-between; gap:4mm; border-bottom:2px solid var(--ink); padding-bottom:2mm; margin-bottom:3mm; }
+  .module-head h2 { margin:0; }
+  .module-head .where { font-size:8.6pt; color:var(--muted); }
+  .three { display:grid; grid-template-columns:1fr 1fr 1fr; gap:3mm; margin:2mm 0 3mm; }
+  .three .box { margin:0; }
+  .three .box h3 { font-size:10.4pt; margin-bottom:1mm; }
+  .three .box p { font-size:9.4pt; margin:0; }
+  .small { font-size:9pt; color:var(--muted); }
+  .footer-note { font-size:8.4pt; color:var(--muted); border-top:1px solid var(--line); padding-top:2mm; margin-top:4mm; }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<section class="cover">
+  <div>
+    <div class="brand">ASTRA<small>EARTH-INDEPENDENT CREW HEALTH</small></div>
+    <h1>Astronauts ki sehat,<br><span>Earth se door bhi.</span></h1>
+    <p class="sub">Is project ko chalane, demo dene aur har module ka maqsad samajhne ki mukammal guide — Roman Urdu mein, presentation ke liye screenshots ke saath.</p>
+    <div style="margin-top:6mm"><span class="chip">NASA Space Apps 2026</span><span class="chip">Offline</span><span class="chip">Synthetic data</span></div>
+    <img src="guide-images/02-overview.jpg" alt="ASTRA Mission overview screen">
+  </div>
+  <div class="meta"><span>Challenge: “Create Health Monitoring Software for Astronauts on Space Missions”</span><span>Version: November 2026</span></div>
+</section>
+
+<!-- ============ 1. INTRO ============ -->
+<section class="page">
+  <div class="eyebrow">Hissa 1</div>
+  <h2><span class="num">1</span>ASTRA kya hai?</h2>
+  <p class="lead">ASTRA ek <strong>offline chalne wala health monitoring software</strong> hai jo lambe space missions (jaise Mars ka safar) par astronauts ki sehat par nazar rakhta hai, unhein batata hai ke kya badla hai, aur bataata hai ke ab kya karna chahiye.</p>
+  <p>Mars jaise mission par Earth se paighaam aane jaane mein kai minute lagte hain, aur kabhi signal bilkul band (“blackout”) ho jata hai. Is liye doctors foran madad nahi kar sakte. ASTRA spacecraft ke andar hi kaam karta hai: data jama karta hai, har astronaut ka apna “normal” seekhta hai, tabdeeli pakadta hai, aur jab rabta mumkin ho to report Earth bhejta hai.</p>
+
+  <div class="grid2">
+    <div class="box ok avoid"><h3>ASTRA kya karta hai</h3>
+      <ul>
+        <li>Chhe (6) farzi astronauts ke 10 health indicators dikhata hai (dil ki dhadkan, HRV, oxygen, saans, temperature, neend, thakan, reaction time, exercise, radiation).</li>
+        <li>Har shakhs ko <strong>uske apne normal</strong> se compare karta hai — kisi aam average se nahi.</li>
+        <li>Astronaut ko khud “<strong>Kya main theek hoon?</strong>” ka jawab deta hai, aur woh apni alamaat (symptoms) khud report kar sakta hai.</li>
+        <li>NASA ke 5 space hazards ka status dikhata hai.</li>
+        <li>Report Earth bhejne se pehle insaani manzoori (acknowledgement) zaroori hai.</li>
+      </ul>
+    </div>
+    <div class="box warn avoid"><h3>ASTRA kya NAHI hai</h3>
+      <ul>
+        <li>Yeh <strong>medical device nahi</strong> hai, aur NASA se certified bhi nahi.</li>
+        <li>Saara telemetry data <strong>synthetic (banaya hua)</strong> hai — koi asli NASA ya mareez ka data nahi.</li>
+        <li>Yeh bimari ki tashkhees (diagnosis) ya dawa ka mashwara nahi deta.</li>
+        <li>Missing ya kharab data ko kabhi “theek” nahi dikhata — usay <strong>gray / Unknown</strong> dikhata hai.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Teen bunyadi usool (judges ko zaroor batayein)</h3>
+  <table class="avoid">
+    <tr><th style="width:30%">Usool</th><th>Matlab</th></tr>
+    <tr><td><strong>Evidence pehle</strong></td><td>Alert sirf ek fixed, jaanchne ke qabil detector bana sakta hai — AI ya language model kabhi khud alert nahi banata, na telemetry badalta hai.</td></tr>
+    <tr><td><strong>Gray = maloom nahi</strong></td><td>Agar sensor ka data purana, ghaib ya ghalat ho to screen gray ho jati hai. “Data nahi hai” ka matlab kabhi “sab theek” nahi.</td></tr>
+    <tr><td><strong>Insaan faisla karta hai</strong></td><td>Report Earth bhejne se pehle insaan “Acknowledge” karta hai. Earth wala view sirf wohi dikhata hai jo waqai pohncha ho, waqt ke saath.</td></tr>
+  </table>
+</section>
+
+<!-- ============ 2. CHALLENGE RELEVANCE ============ -->
+<section class="page">
+  <div class="eyebrow">Hissa 2</div>
+  <h2><span class="num">2</span>NASA challenge se taaluq</h2>
+  <div class="box violet avoid">
+    <p style="margin:0"><strong>Challenge ka khulasa:</strong> Lambe missions par astronauts radiation, tanhai aur band jagah (isolation & confinement), badli hui gravity aur ek mushkil, band mahol ka saamna karte hain. Is se immune system, haddiyon, dil aur rawaiye (behaviour) ke masail ho sakte hain. Lambe missions par astronauts ko khud apne andar yeh tabdeeliyan pehchanni padti hain. <strong>Aisa software banayein jo health indicators jama kare aur astronauts ko apni sehat ka andaza lagane aur us par amal karne ke qabil banaye.</strong></p>
+  </div>
+
+  <h3>Challenge ki har zaroorat aur ASTRA ka jawab</h3>
+  <table>
+    <tr><th style="width:27%">Challenge ki zaroorat</th><th>ASTRA mein kahan hai</th><th style="width:13%">Mazbooti</th></tr>
+    <tr><td>Health indicators <strong>jama karna</strong></td><td>10 metrics ka live synthetic telemetry, signal archive (ECG jaisi waveforms), neend ka record, cognitive check-in, symptom self-report, cabin environment (CO₂, radiation).</td><td><span class="tag t-strong">Mazboot</span></td></tr>
+    <tr><td>Astronaut khud <strong>andaza lagaye</strong> (evaluate)</td><td><strong>My health</strong> screen: “Kya main theek hoon?” jawab, “Kya badla” (apne normal ke muqable mein), aur symptom self-report.</td><td><span class="tag t-strong">Mazboot</span></td></tr>
+    <tr><td>Astronaut <strong>amal kare</strong> (act)</td><td>“Ab kya karein” steps: evidence dekhein, crew medical officer ko batayein, report Earth bhejein, check-in karein, research library parhein.</td><td><span class="tag t-mid">Darmiyana</span></td></tr>
+    <tr><td>Astronaut ko <strong>khud zimmedari</strong> (Earth door hai)</td><td>Poora system offline chalta hai; detection aur research library spacecraft ke andar; delay aur blackout ka simulation.</td><td><span class="tag t-strong">Mazboot</span></td></tr>
+    <tr><td>Radiation, isolation, gravity, band mahol</td><td>Mission overview par <strong>NASA ke 5 hazards</strong> ka panel — har hazard ka status, kya track hota hai aur kya nahi.</td><td><span class="tag t-mid">Darmiyana</span></td></tr>
+    <tr><td>Immune, haddi, dil, behaviour ke masail</td><td>Dil: HR/HRV/SpO₂ detector. Immune, behaviour, muscle/back pain: symptom report ke zariye. Haddi ki density: <strong>abhi track nahi</strong> (sirf exercise ko proxy ke taur par).</td><td><span class="tag t-mid">Darmiyana</span></td></tr>
+  </table>
+
+  <h3>NASA ke resources jo is project mein istemal hue</h3>
+  <ul>
+    <li><strong>NASA HRP — 5 Hazards of Human Spaceflight</strong> (nasa.gov/hrp/hazards): Mission overview ka hazards panel isi framework par bana hai.</li>
+    <li><strong>NASA HRP — 17 Human Health Risks</strong> (nasa.gov/hrp/risks): symptom report ki har alamat ek NASA risk se judi hai (jaise SANS, sensorimotor, immune, teamwork).</li>
+    <li><strong>NASA HRP — Ongoing Research</strong>: ARCHeR (neend, activity), Standard Measures, Immune Biomarkers jaisi studies se aage ke features ka idea.</li>
+    <li><strong>CSA — Radiation monitoring (CANS)</strong> aur <strong>CSA — Why science in space</strong>: radiation tracking aur Earth par faide ke liye reference.</li>
+  </ul>
+</section>
+
+<!-- ============ 3. HAZARDS ============ -->
+<section class="page">
+  <div class="eyebrow">Hissa 3</div>
+  <h2><span class="num">3</span>NASA ke 5 space hazards aur ASTRA</h2>
+  <p>NASA ka Human Research Program space ke khatraat ko 5 hisson mein baant’ta hai. ASTRA ka hazards panel inhi 5 ko dikhata hai, aur imandari se batata hai ke kis cheez ka data <strong>nahi</strong> hai.</p>
+  <figure><img src="guide-images/04-hazards.jpg" alt="Hazards panel"><figcaption><b>Mission overview → “The 5 hazards of human spaceflight”.</b> Har card par status, live readings, “Not tracked” list aur coverage bar.</figcaption></figure>
+  <table>
+    <tr><th style="width:22%">Hazard</th><th>ASTRA kya track karta hai</th><th>Abhi track nahi (imandari se likha hai)</th></tr>
+    <tr><td><strong>Space radiation</strong></td><td>Cabin dose rate (mSv/h), illustrative review level</td><td>Poore mission ka total dose, neutron dose, personal dosimeter</td></tr>
+    <tr><td><strong>Isolation & confinement</strong></td><td>Neend, thakan, reaction time (har crew member ke apne normal se)</td><td>Mood/stress aur teamwork (sirf private self-report mein)</td></tr>
+    <tr><td><strong>Distance from Earth</strong></td><td>One-way delay, link available/blackout, Earth ke liye queue</td><td>Asli spacecraft ka faasla (yeh schematic hai), medical supplies</td></tr>
+    <tr><td><strong>Gravity fields</strong></td><td>Rozana exercise (minutes)</td><td>Haddi ki density, muscle strength, balance, aankhon ki tabdeeli (SANS)</td></tr>
+    <tr><td><strong>Hostile, closed environment</strong></td><td>CO₂, temperature, humidity</td><td>Shor (noise), roshni, microbes, immune markers</td></tr>
+  </table>
+  <div class="box avoid"><p style="margin:0"><strong>Rangon ka matlab:</strong> <span style="color:var(--teal);font-weight:600">teal/hara</span> = range mein · <span style="color:var(--amber);font-weight:600">amber</span> = review chahiye · <span style="color:var(--red);font-weight:600">laal</span> = priority review · <span style="color:#777;font-weight:600">gray</span> = maloom nahi / track nahi. Rang ke saath hamesha likha hua label bhi hota hai.</p></div>
+</section>
+
+<!-- ============ 4. HOW TO RUN ============ -->
+<section class="page">
+  <div class="eyebrow">Hissa 4</div>
+  <h2><span class="num">4</span>Project ko chalane ka tareeqa (Windows)</h2>
+  <p>ASTRA ko sirf <strong>Node.js 24.21 ya naya</strong> chahiye. Koi package install, internet ya API key zaroori nahi. Project ke andar ek portable Node pehle se maujood hai: <code>artifacts\n03-windows-tools\node.exe</code> — isi ko istemal karein.</p>
+
+  <h3>Command Prompt (cmd) mein — har line alag chalayein, ek hi window mein</h3>
+  <ol class="steps">
+    <li><strong>Project folder mein jayein</strong><pre>cd /d "C:\Side projects\NASA PROJECT\ASTRA-Space-Medical-AI"</pre></li>
+    <li><strong>Demo ke liye naya, aarzi database folder banayein</strong> (taake asli saved data kharab na ho)<pre>set "DEMO_DIR=%TEMP%\astra-demo-%RANDOM%"
+mkdir "%DEMO_DIR%"</pre></li>
+    <li><strong>Settings set karein</strong><pre>set "ASTRA_DB=%DEMO_DIR%\astra.sqlite"
+set HOST=127.0.0.1
+set PORT=3000
+set ASTRA_SPEED=1</pre></li>
+    <li><strong>Server start karein</strong><pre>artifacts\n03-windows-tools\node.exe services/api/server.mjs</pre></li>
+    <li><strong>Browser (Chrome) mein kholein:</strong> <code>http://127.0.0.1:3000</code> → role chunein → <strong>Enter simulation</strong>.</li>
+  </ol>
+
+  <div class="box avoid"><h3>Zaroori baatein</h3>
+    <ul>
+      <li><strong>Band karna:</strong> server wali window mein <code>Ctrl + C</code>. <strong>Usi data ke saath dobara:</strong> usi cmd window mein step 4 phir chalayein.</li>
+      <li><strong>Port 3000 busy ho:</strong> <code>set PORT=3001</code> aur browser mein <code>:3001</code>. <code>ASTRA_SPEED=1</code> = asli waqt; <code>30</code> = 30 guna tez.</li>
+      <li><code>npm test</code> na chalayein (us mein permission wale native tests shamil hain).</li>
+    </ul>
+  </div>
+</section>
+
+<section class="page">
+  <div class="module-head"><h2><span class="num">4.1</span>Login aur roles</h2><span class="where">http://127.0.0.1:3000</span></div>
+  <figure><img src="guide-images/01-login.jpg" alt="Login screen"><figcaption><b>Landing / Login.</b> “Demonstration role” se role chunein aur “Enter simulation” dabayein. Yeh asli login nahi, sirf local demo ki suhoolat hai.</figcaption></figure>
+  <table class="avoid">
+    <tr><th style="width:34%">Role</th><th>Kya kar sakta hai</th><th style="width:30%">Demo mein kab</th></tr>
+    <tr><td><strong>Demo administrator</strong></td><td>Sab screens, Scenario lab chalana, link/blackout control, acknowledgement</td><td>Demo shuru karne aur scenario lagane ke liye</td></tr>
+    <tr><td><strong>Astronaut</strong></td><td>Sirf apna record (CREW-03, Amara Okafor): My health, symptom report, check-in, acknowledgement</td><td>“Astronaut khud andaza lagata hai” dikhane ke liye</td></tr>
+    <tr><td><strong>Flight surgeon / Mission control</strong></td><td>Saare crew ka review, cases, acknowledgement, self-reports parhna</td><td>Medical review ka nazariya</td></tr>
+    <tr><td><strong>Viewer / Researcher</strong></td><td>Sirf dekhna; private check-ins aur self-reports nahi</td><td>Privacy dikhane ke liye</td></tr>
+    <tr><td><strong>System administrator</strong></td><td>Sirf audit records; medical screens nahi</td><td>Security sawal par</td></tr>
+  </table>
+  <div class="box avoid"><p style="margin:0"><strong>Role badalna:</strong> neeche left mein logout button dabayein, phir naya role chunein. Har role ki ijazat server par check hoti hai, browser par nahi.</p></div>
+</section>
+
+<!-- ============ 5. MODULES ============ -->
+<section class="page">
+  <div class="eyebrow">Hissa 5 · Modules</div>
+  <div class="module-head"><h2><span class="num">5.1</span>Mission overview</h2><span class="where">Sidebar → Mission overview</span></div>
+  <figure><img src="guide-images/02-overview.jpg" alt="Mission overview"><figcaption><b>Mission overview.</b> Earth aur spacecraft ka 3D view, monitoring picture, aur 6 crew cards.</figcaption></figure>
+  <div class="three">
+    <div class="box"><h3>Maqsad</h3><p>Poore mission ki ek nazar mein tasveer: kitne crew ka data reliable hai, kitne normal hain, kitne review events khule hain, aur Earth link ka haal.</p></div>
+    <div class="box"><h3>Kaise use karein</h3><p>Kisi crew card par click karein detail ke liye. Upar “Spacecraft / Earth received” se dekhein ke Earth ko kya pohncha hai.</p></div>
+    <div class="box"><h3>Hackathon se taaluq</h3><p>“Health indicators jama karna” + “Earth se door” — Earth view sirf delayed, pohnche hue packets dikhata hai.</p></div>
+  </div>
+  <figure><img src="guide-images/03-crew-grid.jpg" alt="Crew grid"><figcaption><b>Crew cards.</b> Har card par heart rate, SpO₂, neend, trend line, status aur data ka source/waqt.</figcaption></figure>
+</section>
+
+<section class="page">
+  <div class="module-head"><h2><span class="num">5.2</span>My health — “Kya main theek hoon?”</h2><span class="where">Sidebar → My health (naya)</span></div>
+  <p>Yeh screen <strong>khaas taur par astronaut ke liye</strong> hai — challenge ka sab se ahem hissa. Teen sawalon ka jawab deti hai: <em>Kya main theek hoon? Kya badla? Ab kya karun?</em></p>
+  <figure><img src="guide-images/05a-myhealth-normal.jpg" alt="My health normal"><figcaption><b>Normal haalat.</b> “Within your usual range” — saari readings reliable aur apne normal ke qareeb. Neeche likha hai: yeh medical clearance nahi.</figcaption></figure>
+  <table class="avoid">
+    <tr><th style="width:28%">Jawab</th><th>Kab aata hai</th></tr>
+    <tr><td><span style="color:var(--teal);font-weight:600">Within your usual range</span></td><td>Sab readings reliable hain aur detector ne koi review event nahi khola.</td></tr>
+    <tr><td><span style="color:var(--amber);font-weight:600">Needs a check</span></td><td>Detector ne aisi tabdeeli record ki jo kaafi der tak rahi aur insaani review chahiye. (Tashkhees nahi.)</td></tr>
+    <tr><td><span style="color:#777;font-weight:600">Can’t tell right now</span></td><td>Data ghaib, purana ya ghalat hai — is liye ASTRA andaza nahi lagata.</td></tr>
+    <tr><td><span style="color:var(--violet);font-weight:600">Readings look usual — but you reported symptoms</span></td><td>Sensors normal hain lekin astronaut ne khud alamaat report ki hain. Sensors sab kuch mehsoos nahi kar sakte.</td></tr>
+  </table>
+</section>
+
+<section class="page">
+  <figure><img src="guide-images/05b-myhealth-review.jpg" alt="My health needs a check"><figcaption><b>“Needs a check”.</b> Detector evidence (heart rate +2.7 SD, HRV −3.0 SD, fatigue +2.6 SD), “What changed” list aur “What you can do now” steps — jin mein <b>Acknowledge & queue report</b> button bhi hai.</figcaption></figure>
+  <div class="three">
+    <div class="box"><h3>What changed</h3><p>9 personal readings apne normal se compare: “About your usual”, “Higher than your usual”, “Much lower…”. Unknown ko Unknown hi likha jata hai.</p></div>
+    <div class="box"><h3>What you can do now</h3><p>Sirf aam, mehfooz qadam: evidence dekhein, crew medical officer ko batayein, report Earth bhejein, check-in, neend ka page, research library.</p></div>
+    <div class="box"><h3>Hackathon se taaluq</h3><p>Seedha “evaluate and act on the status of their health” — astronaut khud dekh kar faisla aur amal kar sakta hai.</p></div>
+  </div>
+  <div class="box warn avoid"><p style="margin:0"><strong>Hifazat:</strong> Yeh steps kabhi dawa ya ilaaj nahi batate. Har screen par likha hai: <em>“Feeling unwell? Tell your crew medical officer now — don’t wait for a reading.”</em></p></div>
+</section>
+
+<section class="page">
+  <div class="module-head"><h2><span class="num">5.3</span>Symptom self-report — “How do you feel?”</h2><span class="where">My health → neeche</span></div>
+  <p>Sensors sar dard, nazar ki tabdeeli ya udaasi mehsoos nahi kar sakte. Is liye astronaut <strong>13 alamaat</strong> mein se jo mehsoos ho chun kar uski shiddat (Mild / Moderate / Severe) bata sakta hai, aur ek chhota note likh sakta hai. Sab “None” rehne de to record hota hai ke woh theek mehsoos kar raha hai.</p>
+  <figure><img src="guide-images/06a-symptom-form.jpg" alt="Symptom form"><figcaption><b>Form bhara hua.</b> Headache = Moderate, Trouble sleeping = Mild, note ke saath. Button par likha aata hai “Save report · 2 symptoms”.</figcaption></figure>
+  <table class="avoid">
+    <tr><th>Groups</th><th>Alamaat</th><th>Juda hua NASA risk</th></tr>
+    <tr><td>Head & eyes</td><td>Headache, Vision changes, Stuffy head / puffy face</td><td>SANS, cabin CO₂, fluid shift</td></tr>
+    <tr><td>Balance & stomach</td><td>Nausea / motion sickness, Dizziness / balance</td><td>Sensorimotor & vestibular</td></tr>
+    <tr><td>Body</td><td>Back pain, Muscle/joint pain, Skin rash, Cold/flu</td><td>Musculoskeletal, immune, microbes</td></tr>
+    <tr><td>Mind & sleep</td><td>Trouble sleeping, Low mood/stress, Trouble concentrating, Tension with crewmates</td><td>Sleep, behavioural health, teamwork</td></tr>
+  </table>
+</section>
+
+<section class="page">
+  <figure><img src="guide-images/06b-symptom-saved.jpg" alt="Symptom saved"><figcaption><b>Save ke baad.</b> Form saaf ho jata hai aur “Your recent reports” mein entry aa jati hai.</figcaption></figure>
+  <figure><img src="guide-images/05c-myhealth-steps.jpg" alt="Verdict with report"><figcaption><b>Report verdict mein.</b> Detector evidence ke saath ab astronaut ki apni report bhi: “You reported headache (moderate), trouble sleeping (mild)”. Iske neeche steps mein “Tell your crew medical officer about your symptoms” aur har alamat ke mutabiq qadam aate hain; severe alamat par yeh step sab se upar “now” ke saath aata hai.</figcaption></figure>
+  <div class="box violet avoid"><p style="margin:0"><strong>Privacy:</strong> Report spacecraft par hi rehti hai, Earth ko khud nahi jati. Sirf astronaut khud aur authorized reviewers parh sakte hain; Viewer/Researcher nahi. Report kabhi alert, sensor data ya baseline nahi badalti. Audit log mein sirf event darj hota hai, alamaat ka mawaad nahi.</p></div>
+</section>
+
+<section class="page">
+  <div class="module-head"><h2><span class="num">5.4</span>Crew health — 3D anatomy aur trends</h2><span class="where">Sidebar → Crew health</span></div>
+  <figure><img src="guide-images/07-crew-health.jpg" alt="Crew health"><figcaption><b>Crew health.</b> Licensed 3D reference anatomy (BodyParts3D), body system chunne ke buttons, aur har system ke saath linked readings, source aur waqt.</figcaption></figure>
+  <div class="three">
+    <div class="box"><h3>Maqsad</h3><p>Ek crew member ki poori detail: personal trend charts, detector evidence, acknowledgement, aur dil/phephron ka data se juda 3D model.</p></div>
+    <div class="box"><h3>Kaise use karein</h3><p>Upar call-sign tabs se crew chunein; “Cardiovascular” jaisa system chunein; model ghumaein; trend chart mein metric badlein.</p></div>
+    <div class="box"><h3>Hackathon se taaluq</h3><p>Indicators ko jism ke hisson se jod kar samajhna aasan. Generic model hai — koi bimari jism par “dikhayi” nahi jati.</p></div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="module-head"><h2><span class="num">5.5</span>Scenario lab — demo ke liye kahaniyan</h2><span class="where">Sidebar → Scenario lab (sirf Demo admin)</span></div>
+  <figure><img src="guide-images/08-scenario-lab.jpg" alt="Scenario lab"><figcaption><b>Scenario lab.</b> Har crew ke liye scenario chunein (jaise “Multi-signal deviation”), seed aur duration set karein, aur “Start versioned mission” dabayein.</figcaption></figure>
+  <div class="three">
+    <div class="box"><h3>Maqsad</h3><p>Judges ke saamne control ke saath tabdeeli paida karna: dil ki dhadkan ka barhna, neend ki kami, radiation spike, sensor ka band hona, blackout.</p></div>
+    <div class="box"><h3>Kaise use karein</h3><p>CREW-03 par scenario lagayein → Start → “Advance clock” se waqt aage barhayein → My health / Crew health mein nateeja dekhein.</p></div>
+    <div class="box"><h3>Hackathon se taaluq</h3><p>Dikhata hai ke system asli tabdeeli par kaise react karta hai. Detector ko scenario ka naam nahi pata — woh sirf measurements dekhta hai.</p></div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="module-head"><h2><span class="num">5.6</span>Health agent — case report</h2><span class="where">Sidebar → Health agent</span></div>
+  <figure><img src="guide-images/09-health-agent.jpg" alt="Health agent"><figcaption><b>Health agent.</b> Detector event se bana case: evidence ka khulasa, research ke citations, aur “Acknowledge & queue” button.</figcaption></figure>
+  <div class="three">
+    <div class="box"><h3>Maqsad</h3><p>Har alert ko ek saaf, cited report mein badalna jise insaan review kare. Template report hai — language model nahi.</p></div>
+    <div class="box"><h3>Kaise use karein</h3><p>Case parhein, citations kholein, phir “Acknowledge & queue” dabayein — report Earth ki queue mein chali jati hai.</p></div>
+    <div class="box"><h3>Hackathon se taaluq</h3><p>“Act on health status”: evidence → insaani faisla → Earth ko delayed report. AI khud alert ya ilaaj nahi banata.</p></div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="module-head"><h2><span class="num">5.7</span>Communications — Earth ke saath rabta</h2><span class="where">Sidebar → Communications</span></div>
+  <figure><img src="guide-images/10-communications.jpg" alt="Communications"><figcaption><b>Communications.</b> 12 minute one-way delay, “Store & forward queue” mein acknowledged case report: observed, transmitted, earliest delivery aur Earth received ka waqt.</figcaption></figure>
+  <div class="three">
+    <div class="box"><h3>Maqsad</h3><p>Deep-space link ka simulation: delay, jitter, bandwidth, packet loss aur blackout. Reports priority ke saath queue hoti hain aur restart ke baad bhi mehfooz rehti hain.</p></div>
+    <div class="box"><h3>Kaise use karein</h3><p>Delay/loss badal kar “Apply” karein; “Simulate blackout” se link band karein aur dekhein ke report onboard intezar karti hai.</p></div>
+    <div class="box"><h3>Hackathon se taaluq</h3><p>NASA hazard “Distance from Earth” ka seedha jawab: Earth se madad der se aati hai, is liye care onboard jari rehti hai.</p></div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="module-head"><h2><span class="num">5.8</span>Research library — offline ilm</h2><span class="where">Sidebar → Research library</span></div>
+  <figure><img src="guide-images/11-research-library.jpg" alt="Research library"><figcaption><b>Research library.</b> Sawal poochein (jaise “What is SANS?”) — 29 curated sources (NASA ke 17 health risks, hazards aur ongoing research, CSA, NTRS, PhysioNet, NIST) se citation ke saath jawab, bina internet.</figcaption></figure>
+  <div class="three">
+    <div class="box"><h3>Maqsad</h3><p>Astronaut ko Earth se poochhe baghair bharosemand maloomat dena. Agar source mein jawab na ho to system jawab dene se inkaar (abstain) karta hai.</p></div>
+    <div class="box"><h3>Kaise use karein</h3><p>Aam alfaaz mein sawal likhein (jaise “Why do astronauts feel dizzy?”) ya tayyar sawalon par click karein; citation link par asal NASA page dekhein.</p></div>
+    <div class="box"><h3>Hackathon se taaluq</h3><p>Self-reliance: NASA ke research resources spacecraft ke andar hi maujood.</p></div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="module-head"><h2><span class="num">5.9</span>Sleep & resilience aur Signal archive</h2><span class="where">Sidebar → Sleep & resilience / Signal archive</span></div>
+  <figure><img src="guide-images/12-sleep.jpg" alt="Sleep and resilience"><figcaption><b>Sleep, cognition & countermeasures.</b> Din-ba-din neend ka hisaab (planned vs observed), sleep stages ki coverage, aur exercise/countermeasures. Jahan data na ho wahan saaf “UNKNOWN” likha hai — NASA risk “Inadequate sleep and irregular schedules”.</figcaption></figure>
+  <figure><img src="guide-images/13-signal-archive.jpg" alt="Signal archive"><figcaption><b>Signal archive.</b> “Generate & import synthetic fixture” se ek authored ECG jaisi recording import karein, phir Play / Pause / Seek se replay — source, channel, units aur jaan-boojh kar chhoda gaya gap dikhata hai.</figcaption></figure>
+</section>
+
+<section class="page">
+  <div class="module-head"><h2><span class="num">5.10</span>Cognitive check-in aur Evidence & provenance</h2><span class="where">Sidebar → Cognitive check-in / Evidence & provenance</span></div>
+  <figure><img src="guide-images/14-checkin.jpg" alt="Cognitive check-in"><figcaption><b>Cognitive check-in.</b> 5 reaction-time trials + thakan (0–10). Asli user measurement, synthetic data se alag mehfooz.</figcaption></figure>
+  <figure><img src="guide-images/15-evidence.jpg" alt="Evidence and provenance"><figcaption><b>Evidence & provenance.</b> Har source ka title, publisher, SHA-256 hash; dataset catalogue; model cards; aur audit timeline — “har data kahan se aaya”.</figcaption></figure>
+  <p class="small">Check-in thakan aur reaction time (isolation hazard) ko napta hai. Provenance page judges ko dikhata hai ke koi daawa bina source ke nahi kiya gaya.</p>
+</section>
+
+<!-- ============ 6. DEMO SCRIPT ============ -->
+<section class="page">
+  <div class="eyebrow">Hissa 6</div>
+  <h2><span class="num">6</span>5 minute ka demo script</h2>
+  <p>Naya aarzi database aur <code>ASTRA_SPEED=1</code> (ya tez demo ke liye 30) ke saath shuru karein.</p>
+  <table>
+    <tr><th style="width:13%">Waqt</th><th style="width:38%">Kya karein</th><th>Kya kahein</th></tr>
+    <tr><td>0:00–0:30</td><td>Demo administrator se login → Mission overview</td><td>“6 farzi astronauts, synthetic data, poora offline. Yeh research prototype hai, medical device nahi.”</td></tr>
+    <tr><td>0:30–1:00</td><td>Neeche <strong>5 hazards panel</strong> dikhayein</td><td>“NASA ke 5 hazards — kya track hota hai aur kya nahi, imandari se.”</td></tr>
+    <tr><td>1:00–1:40</td><td>Scenario lab → CREW-03 par <em>cardiorespiratory-drift</em>, seed 42017 → Start → Advance clock 300</td><td>“Asli detector measurement se tabdeeli pakadta hai; scenario ka naam usay nahi pata.”</td></tr>
+    <tr><td>1:40–2:30</td><td>Logout → <strong>Astronaut</strong> role → <strong>My health</strong></td><td>“Astronaut khud dekhta hai: Needs a check, kya badla, ab kya kare.”</td></tr>
+    <tr><td>2:30–3:15</td><td>“How do you feel?” mein Headache = Moderate → Save</td><td>“Sensors sar dard mehsoos nahi karte — astronaut ki apni awaaz bhi shamil hai, private aur onboard.”</td></tr>
+    <tr><td>3:15–3:50</td><td>“Acknowledge & queue report” dabayein → Communications</td><td>“Insaan ki manzoori ke baad report 12 minute delay ke saath Earth jati hai — foran nahi.”</td></tr>
+    <tr><td>3:50–4:30</td><td>Crew health → 3D anatomy → Cardiovascular</td><td>“Readings jism se judi, lekin generic model — koi bimari dikhai nahi jati.”</td></tr>
+    <tr><td>4:30–5:00</td><td>Research library mein ek sawal; phir page refresh</td><td>“Offline research; restart ke baad bhi data mehfooz. Hadood: synthetic data, scientific review baqi.”</td></tr>
+  </table>
+  <div class="box ok avoid"><p style="margin:0"><strong>Tip:</strong> Agar waqt kam ho to Scenario lab ki jagah pehle se chalaya hua scenario rakhein, aur seedha My health se shuru karein — challenge ka markazi jawab wahi hai.</p></div>
+</section>
+
+<!-- ============ 7. FAQ + LIMITS ============ -->
+<section class="page">
+  <div class="eyebrow">Hissa 7</div>
+  <h2><span class="num">7</span>Judges ke mumkina sawal</h2>
+  <table>
+    <tr><th style="width:32%">Sawal</th><th>Jawab</th></tr>
+    <tr><td>Kya yeh asli NASA data hai?</td><td>Nahi. Saara telemetry synthetic hai aur screen par saaf likha hai. Asli astronaut data public nahi hota.</td></tr>
+    <tr><td>AI kya karta hai?</td><td>Alerts ek fixed, quality-gated statistical detector banata hai (personal baseline, median/MAD, persistence). Language model alert, ilaaj ya telemetry nahi badal sakta.</td></tr>
+    <tr><td>Internet ke baghair chalta hai?</td><td>Haan. Detection, research library aur saara data local hai — Mars par bhi yahi zaroorat hai.</td></tr>
+    <tr><td>Agar sensor kharab ho jaye?</td><td>Screen gray / “Can’t tell right now” dikhati hai. Missing data ko kabhi healthy nahi mana jata.</td></tr>
+    <tr><td>Astronaut kaise amal karta hai?</td><td>My health ke steps, symptom report, check-in, crew medical officer ko batana, aur acknowledgement ke baad Earth ko report.</td></tr>
+    <tr><td>Privacy?</td><td>Roles server par check hote hain; astronaut sirf apna record dekhta hai; self-reports private hain; audit log hash-chained hai.</td></tr>
+  </table>
+
+  <h3>Hadood aur aage ka kaam</h3>
+  <ul>
+    <li>Data synthetic hai; asli wearable/sensor connection abhi nahi.</li>
+    <li>Review levels “illustrative” hain, NASA ki official limits nahi; scientific aur medical review baqi.</li>
+    <li>Abhi track nahi: total radiation dose, neutron dose (CSA ka CANS idea), haddi/muscle, balance, aankhon (SANS) ke tests, immune biomarkers, mood/teamwork ke regular surveys.</li>
+    <li>Login demo role selector hai — asli authentication aur deployment baqi.</li>
+    <li>Local language model (Qwen) project mein hai lekin is demo mein band hai.</li>
+  </ul>
+
+  <h3>Presentation ke liye images</h3>
+  <p class="small">Saari tasveerein <code>docs/demo/guide-images/</code> folder mein hain aur slides mein seedhi lag sakti hain: 01-login, 02-overview, 03-crew-grid, 04-hazards, 05a/05b/05c-myhealth, 06a/06b-symptom, 07-crew-health, 08-scenario-lab, 09-health-agent, 10-communications, 11-research-library, 12-sleep, 13-signal-archive, 14-checkin, 15-evidence.</p>
+  <p class="footer-note">Research aur simulation prototype. Medical device nahi; NASA-certified ya flight-qualified nahi. Synthetic telemetry aur farzi crew. NASA ke references kisi endorsement ko zahir nahi karte. Screenshots ek naye, aarzi demo database se liye gaye.</p>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+Checking: N08 actual application empty/UNKNOWN and synthetic confirmation
+Checking: N08 genuine binary generate/validate/store/load/plot with source provenance
+Checking: N08 channel switching and bounded ranges preserve actual units/quality
+Checking: N08 actual play/pause/resume/seek and native keyboard cursor
+Checking: N08 real file-picker CSV import, normalization, repeated import idempotency
+Checking: N08 malformed file fails visibly without partial import and valid input recovers
+Checking: N08 source corrections and historical knowledge replay before/after correction
+Checking: N08 actual API failure/empty recovery and invalid cutoff feedback
+Checking: N08 cold application restart recovers originals/chunks/revisions without importing again
+Checking: N08 four responsive viewports, accessible chart/labels and actual native Tab focus
+Checking: N08 crew switch, trusted astronaut scope and denied Viewer/Researcher
+Checking: N08 Earth exclusion, navigation cancellation and existing N10/Health Agent preserved
+{
+  "status": "passed",
+  "browser": "Chrome/156.0.8078.74",
+  "checks": 12,
+  "failed": [],
+  "screenshots": 7,
+  "report": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n08-engineering-20261030\\browser-02\\report.json"
+}

@@ -1,0 +1,356 @@
+{
+  "status": "passed",
+  "started_at": "2026-10-30T07:35:34.401Z",
+  "checks": [
+    {
+      "name": "N10 actual application navigation, denied consent, skip/cancel and approximate device notice",
+      "status": "passed"
+    },
+    {
+      "name": "N10 real consent, early click and out-of-range timing exclusion",
+      "status": "passed"
+    },
+    {
+      "name": "N10 four genuine five-trial browser sessions and same-device personal reference",
+      "status": "passed"
+    },
+    {
+      "name": "N10 stage/schedule editor, source-bound aggregation and delayed correction replay",
+      "status": "passed"
+    },
+    {
+      "name": "N10 exercise input, transparent adherence and explicit unknown movement",
+      "status": "passed"
+    },
+    {
+      "name": "N10 save failure retains inputs and never reports a committed result",
+      "status": "passed"
+    },
+    {
+      "name": "N10 responsive keyboard controls, crew switching and no cross-crew result reuse",
+      "status": "passed"
+    },
+    {
+      "name": "N10 consent withdrawal removes optional raw history, cancels task and blocks collection",
+      "status": "passed"
+    },
+    {
+      "name": "N10 real restart/recovery preserves committed ledger without replay or read-side writes",
+      "status": "passed"
+    },
+    {
+      "name": "N10 real unauthorised-role denial and astronaut self scope",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    "n10-consent-declined.png",
+    "n10-personal-reference.png",
+    "n10-sleep-replay.png",
+    "n10-countermeasures.png",
+    "n10-1920.png",
+    "n10-1366.png",
+    "n10-768.png",
+    "n10-390.png",
+    "n10-consent-withdrawn.png"
+  ],
+  "console_errors": [],
+  "http_errors": [
+    {
+      "url": "http://127.0.0.1:62662/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    },
+    {
+      "url": "http://127.0.0.1:62662/v1/n10/crew/CREW-03/records",
+      "status": 503,
+      "stage": "N10 save failure retains inputs and never reports a committed result"
+    },
+    {
+      "url": "http://127.0.0.1:62662/v1/n10/crew/CREW-03?day=2026-11-14&before=2026-11-14T11%3A00%3A05.000Z&days=7",
+      "status": 403,
+      "stage": "N10 real unauthorised-role denial and astronaut self scope"
+    },
+    {
+      "url": "http://127.0.0.1:62662/v1/n10/crew/CREW-03",
+      "status": 403,
+      "stage": "N10 real unauthorised-role denial and astronaut self scope"
+    },
+    {
+      "url": "http://127.0.0.1:62662/v1/n10/crew/CREW-01",
+      "status": 403,
+      "stage": "N10 real unauthorised-role denial and astronaut self scope"
+    }
+  ],
+  "viewports": [
+    {
+      "page": "N10",
+      "width": 1920,
+      "height": 1080,
+      "overflow": false,
+      "keyboard_focus": true
+    },
+    {
+      "page": "N10",
+      "width": 1366,
+      "height": 768,
+      "overflow": false,
+      "keyboard_focus": true
+    },
+    {
+      "page": "N10",
+      "width": 768,
+      "height": 1024,
+      "overflow": false,
+      "keyboard_focus": true
+    },
+    {
+      "page": "N10",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "keyboard_focus": true
+    }
+  ],
+  "caveats": [
+    "No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation.",
+    "Pointer/keyboard/rendered DOM checks and screenshots supplement human visual, text-contrast and assistive-technology review; they do not establish WCAG conformance."
+  ],
+  "N10_browser_start": {
+    "pid": 15588,
+    "source": "Existing installed Chrome, disposable profile",
+    "Node": "v24.21.0",
+    "Node_memory": {
+      "rss": 67174400,
+      "heapTotal": 19701760,
+      "heapUsed": 11726784,
+      "external": 4325031,
+      "arrayBuffers": 212131
+    },
+    "at": "2026-10-30T07:35:35.141Z"
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/156.0.8078.73",
+    "revision": "@2f9a11097447f226133bc1a31c787291a5eeab98",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "jsVersion": "15.6.75.25"
+  },
+  "N10_actual_browser_trials": [
+    {
+      "id": "task-3dbf4057-3a56-4f23-95ce-b7b04bc1e181",
+      "trials": [
+        208,
+        257,
+        279,
+        195,
+        208
+      ],
+      "hash": "882803b0aafeb0e30d2292815fe4e6c767c987e93da81acc96d583c1ce8f49f9",
+      "source_at": "2026-11-14T11:00:01.000Z",
+      "known_at": "2026-11-14T11:00:01.000Z"
+    },
+    {
+      "id": "task-fd9755b8-43fd-4836-b428-b7c333a39061",
+      "trials": [
+        222,
+        269,
+        288,
+        272,
+        247
+      ],
+      "hash": "ea16c47a2690b3e088cc74d91b196077c09750910c5ebb32b79574747f2c569f",
+      "source_at": "2026-11-14T11:00:02.000Z",
+      "known_at": "2026-11-14T11:00:02.000Z"
+    },
+    {
+      "id": "task-e846db3c-42b8-4b1a-aebc-601302c71c82",
+      "trials": [
+        197,
+        222,
+        191,
+        190,
+        224
+      ],
+      "hash": "71ff0f83d530a380d4275872693e6a9cb250f80d84bc307c728984f21fa5e5e3",
+      "source_at": "2026-11-14T11:00:03.000Z",
+      "known_at": "2026-11-14T11:00:03.000Z"
+    },
+    {
+      "id": "task-da8e0423-e051-4948-ada4-6739c4da1e0a",
+      "trials": [
+        255,
+        271,
+        285,
+        282,
+        229
+      ],
+      "hash": "a0faeba89588fe71acaddd031e934028da18633a873b0ea24fe4326488e28bfa",
+      "source_at": "2026-11-14T11:00:04.000Z",
+      "known_at": "2026-11-14T11:00:04.000Z"
+    }
+  ],
+  "N10_keyboard_transitions": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "shift": false,
+      "expected": "days",
+      "target": "days",
+      "element": "<input name=\"days\" type=\"number\" step=\"any\" value=\"7\" required=\"\">",
+      "visible": true,
+      "outline": "3px",
+      "page_focused": true
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "shift": false,
+      "expected": "n10-load",
+      "target": "n10-load",
+      "element": "<button class=\"button\" id=\"n10-load\">Apply replay cutoff</button>",
+      "visible": true,
+      "outline": "3px",
+      "page_focused": true
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "shift": true,
+      "expected": "days",
+      "target": "days",
+      "element": "<input name=\"days\" type=\"number\" step=\"any\" value=\"7\" required=\"\">",
+      "visible": true,
+      "outline": "3px",
+      "page_focused": true
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "shift": false,
+      "expected": "days",
+      "target": "days",
+      "element": "<input name=\"days\" type=\"number\" step=\"any\" value=\"7\" required=\"\">",
+      "visible": true,
+      "outline": "3px",
+      "page_focused": true
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "shift": false,
+      "expected": "n10-load",
+      "target": "n10-load",
+      "element": "<button class=\"button\" id=\"n10-load\">Apply replay cutoff</button>",
+      "visible": true,
+      "outline": "3px",
+      "page_focused": true
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "shift": true,
+      "expected": "days",
+      "target": "days",
+      "element": "<input name=\"days\" type=\"number\" step=\"any\" value=\"7\" required=\"\">",
+      "visible": true,
+      "outline": "3px",
+      "page_focused": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "shift": false,
+      "expected": "days",
+      "target": "days",
+      "element": "<input name=\"days\" type=\"number\" step=\"any\" value=\"7\" required=\"\">",
+      "visible": true,
+      "outline": "3px",
+      "page_focused": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "shift": false,
+      "expected": "n10-load",
+      "target": "n10-load",
+      "element": "<button class=\"button\" id=\"n10-load\">Apply replay cutoff</button>",
+      "visible": true,
+      "outline": "3px",
+      "page_focused": true
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "shift": true,
+      "expected": "days",
+      "target": "days",
+      "element": "<input name=\"days\" type=\"number\" step=\"any\" value=\"7\" required=\"\">",
+      "visible": true,
+      "outline": "3px",
+      "page_focused": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "shift": false,
+      "expected": "days",
+      "target": "days",
+      "element": "<input name=\"days\" type=\"number\" step=\"any\" value=\"7\" required=\"\">",
+      "visible": true,
+      "outline": "3px",
+      "page_focused": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "shift": false,
+      "expected": "n10-load",
+      "target": "n10-load",
+      "element": "<button class=\"button\" id=\"n10-load\">Apply replay cutoff</button>",
+      "visible": true,
+      "outline": "3px",
+      "page_focused": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "shift": true,
+      "expected": "days",
+      "target": "days",
+      "element": "<input name=\"days\" type=\"number\" step=\"any\" value=\"7\" required=\"\">",
+      "visible": true,
+      "outline": "3px",
+      "page_focused": true
+    }
+  ],
+  "N10_recovery": {
+    "records": 16,
+    "ledger_sha256": "1fc8001de27406d2ba943bf4c3d17a8157f5e675d808112b1f292fb5661d3024",
+    "replayed_writes": 0,
+    "source": "fresh disposable synthetic browser database"
+  },
+  "N10_correction_cutoffs": [
+    {
+      "id": "stage-ui-a",
+      "before": "2026-11-14T11:00:04.000Z",
+      "after": "2026-11-14T11:00:05.000Z"
+    }
+  ],
+  "N10_cleanup": {
+    "application_closed": true,
+    "browser_exited": true,
+    "profile_removed": true,
+    "database_directory_removed": true,
+    "Node_memory": {
+      "rss": 71933952,
+      "heapTotal": 22745088,
+      "heapUsed": 13132736,
+      "external": 4389977,
+      "arrayBuffers": 311053
+    },
+    "N16_designated_starts": 0,
+    "model_executions": 0
+  },
+  "finished_at": "2026-10-30T07:36:41.111Z"
+}

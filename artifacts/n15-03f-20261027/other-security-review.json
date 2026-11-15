@@ -1,0 +1,49 @@
+{
+  "scope": "Other known issues considered through authoritative packaged history and one bounded current source query; not comprehensive clearance.",
+  "known_history": [
+    {
+      "CVE": "CVE-2026-85091",
+      "assessment": "FIX_ATTESTED_FOR_EXACT_STAGED_PACKAGE",
+      "basis": "Authenticated fixed package and its exact-version changelog entry plus current official USN-8954-1. Not an exploit/source-build proof."
+    },
+    {
+      "CVE": "CVE-2026-27171",
+      "assessment": "PRIOR_PUBLISHER_SECURITY_FIX_RECORDED_IN_PACKAGE_HISTORY",
+      "basis": "Packaged ubuntu3.1 changelog records negative-length checks for crc32_combine64/crc32_combine_gen64. ubuntu3.2 package retains this prior history; independent executable regression not run."
+    },
+    {
+      "CVE": "CVE-2023-45853",
+      "assessment": "HISTORICAL_MINIZIP_COMPONENT_PATCH_RECORD",
+      "basis": "Package changelog records minizip backport in1:1.3.dfsg-2; no minizip library is in this11-member zlib1g payload. Not a blanket current-core-CVE determination."
+    },
+    {
+      "CVE": "CVE-2024-3094",
+      "assessment": "HISTORICAL_NO_CHANGE_REBUILD_CONTEXT",
+      "basis": "No-change-rebuild entry; not evidence that core libz had this vulnerability or that current security assessment is complete."
+    }
+  ],
+  "current_source_query": {
+    "url": "https://ubuntu.com/security/cves.json?package=zlib&version=resolute&limit=20",
+    "collector_status": "INCOMPLETE_SOURCE_DEADLINE",
+    "expected_bytes": 132831,
+    "received_bytes": 47070,
+    "rejected_prefix_sha256": "167b6f7b74bf594922aa93d64d4dcf6f418c17a709541315e36b3a08161bb00f",
+    "JSON_failure": "JSONDecodeError: Unterminated string starting at: line 1 column 47064 (char 47063)",
+    "elapsed_s": 25.069315419000077,
+    "per_request_deadline_s": 25,
+    "overall_network_limit_s": 900,
+    "overall_network_limit_exhausted": false,
+    "timing_note": "Request elapsed includes local resource checks/persistence as well as transfer. Source deadline is not proof of a publisher outage; root cause not profiled.",
+    "retries": 0,
+    "usable_as_complete_advisory_inventory": false
+  },
+  "current_complete_zlib_security": "UNKNOWN",
+  "remaining_inherited_gates": [
+    "Exact-source current gcc-16/glibc/OpenSSL/libzstd security status not newly closed",
+    "Applicable upstream NOTICE/optional-component/corresponding-source closure for the exact future subset remains",
+    "No private whitelist/network/loader/maps/CPU or native startup executed"
+  ],
+  "outcome": "PARTIAL",
+  "N15": "Not Started",
+  "N16": "Not Started"
+}

@@ -1,0 +1,13 @@
+{
+  "method": "Read-only /proc/cpuinfo, platform metadata, PATH lookup and file-existence checks; no native runtime, compilation or benchmark",
+  "cpu": "AMD Ryzen 5 7430U with Radeon Graphics",
+  "architecture": "x86_64",
+  "glibc": "2.43",
+  "features": {"sse4_2": true, "avx": true, "avx2": true, "fma": true, "f16c": true, "avx512f": false},
+  "build_tools_on_PATH": {"cmake": false, "ninja": false, "make": false, "gcc": false, "g++": false, "clang": false, "pkg-config": false, "git": true},
+  "inspection_tools_on_PATH": {"readelf": true, "objdump": true, "file": true, "tar": true, "timeout": true, "prlimit": true},
+  "common_usr_lib_x86_64_linux_gnu_paths_exist": {"libstdc++.so.6": true, "libgcc_s.so.1": true, "libgomp.so.1": false, "libssl.so.3": true, "libcrypto.so.3": true},
+  "openssl_development_header_at_usr_include_openssl_ssl_h": false,
+  "native_ABI_verified": false,
+  "performance_or_RSS_measured": false
+}

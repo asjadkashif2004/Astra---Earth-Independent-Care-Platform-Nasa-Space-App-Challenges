@@ -1,0 +1,11 @@
+--- services/agent/designated-source.mjs preserved
++++ services/agent/designated-source.mjs N16-06F
+@@ -16,7 +16,7 @@
+ export const EVIDENCE=join(PROJECT,'artifacts/n16-06-20261029');
+ // Additive execution overlay; historical manifest/CODE_PINS and frozen worker remain unchanged.
+ const DIAGNOSTIC_PINS={
+-  'services/agent/designated-worker.mjs':'2fac3411b862751097cfce20a06752426dd1548cc68a85a1738dc7c303c449ad',
++  'services/agent/designated-worker.mjs':'b41c4ecec39ac40039e32e698549c495cec2654c0fce8edde22ec32ecf07a21e',
+   'services/agent/containment-diagnostics.mjs':'58bfbb12dc5c1ee1be5057acc26b5d7ff2d04c640e63284ffbbeccb0ba00de7b'
+ };
+ const qualificationBatch=new QualificationBatch({persist:async record=>{

@@ -1,0 +1,7 @@
+
+> astra-command@0.1.0 check
+> node scripts/check.mjs
+
+195 JavaScript files parsed and local imports checked; 0 errors. This is syntax/contract validation, not TypeScript compilation.
+(node:20444) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)

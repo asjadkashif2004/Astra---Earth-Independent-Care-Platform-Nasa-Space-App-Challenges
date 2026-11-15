@@ -1,0 +1,100 @@
+{
+  "result": "PASS",
+  "timestamp": "2026-10-24T22:01:21.717363+00:00",
+  "runtime": {
+    "onnxruntime-node": "1.21.0",
+    "onnxruntime-common": "1.21.0",
+    "@huggingface/tokenizers": "0.2.0"
+  },
+  "environment": {
+    "CPU": "AMD Ryzen 5 7430U with Radeon Graphics",
+    "OS": "Linux x64 / WSL",
+    "node": "24.21.0",
+    "glibc": "2.43",
+    "native_NAPI": 10
+  },
+  "verified_unique_packages": 30,
+  "all_30_archive_SRIs_verified": true,
+  "all_lock_integrities_verified": true,
+  "native_artifact_paths_checked": 4,
+  "native_CPU_import": true,
+  "tokenizer_import": true,
+  "GPU_loaded": false,
+  "CPU_backend": [
+    {
+      "name": "cpu",
+      "bundled": true
+    },
+    {
+      "name": "cuda",
+      "bundled": false
+    },
+    {
+      "name": "tensorrt",
+      "bundled": false
+    }
+  ],
+  "audit": {},
+  "resources": {
+    "HTTP_response_body_bytes": 81045035,
+    "archive_bytes": 80961939,
+    "HTTP_response_header_bytes_estimate": 43535,
+    "observed_TLS_socket_read_counter": 81085957,
+    "socket_counter_is_not_a_physical_wire_capture": true,
+    "request_elapsed_ms_sum": 35791,
+    "conservative_network_phase_ms": 41042,
+    "service_seconds": 41.806,
+    "whole_probe_including_preservation_ms": 74789,
+    "npm_install_peak_rss_bytes": 226537472,
+    "imports_GNU_time_peak_rss_bytes": 68878336,
+    "imports_internal_report_peak_rss_bytes": 68616192,
+    "controller_peak_rss_bytes": 90193920,
+    "runner_peak_rss_bytes": 92086272,
+    "observer_OS_reported_peak_rss_bytes": 620953600,
+    "highest_sampled_worker_highwater_rss_bytes": 226537472,
+    "aggregate_cgroup_memory_peak_bytes": 687955968,
+    "aggregate_peak_is_not_per_process_RSS": true,
+    "cgroup_memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+    "storage_precautionary_watermark_bytes": 1350000000,
+    "monitored_storage_ceiling_bytes": 1500000000,
+    "storage_policy": "B; no hard filesystem quota; temporary overshoot risk explicitly accepted for this probe only",
+    "sampling_interval_target_ms": 500,
+    "resource_samples": 84,
+    "disk_after_report_generation": {
+      "apparent_bytes": 388343337,
+      "allocated_bytes": 393162752,
+      "files": 1769,
+      "measured_once_after_runtime_writers_stopped": true
+    }
+  },
+  "preservation": {
+    "paths_before": 7226,
+    "paths_after": 7226,
+    "content_hashes": 575,
+    "changed_content_hashes": [],
+    "changed_paths": [],
+    "changed_size_mtime_or_link": [],
+    "ctime_only_changes": [
+      "AGENTS.md",
+      "package-lock.json",
+      "package.json"
+    ],
+    "protected_subtrees": "not traversed",
+    "snapshot_sha256": {
+      "before": "13daa3883adaae04ff84e5d8afaf274688a962a1d3a02892b876622ced1128d7",
+      "after": "ea6399514d72b6249fc5dc17bdb9d5b81baeac4222b1d2d6a9a43ad5164dbada"
+    }
+  },
+  "no_model_or_inference": true,
+  "no_AST\u200bRA_writes_performed": true,
+  "N14_status": "Not Started",
+  "module_statuses_changed": false,
+  "future_readiness": "Direct runtime import/integrity prerequisites passed on this environment. Separately approved model/embedding engineering may be proposed; its storage policy must be explicitly approved because Choice B expires with this probe.",
+  "remaining_uncertainties": [
+    "Exact MiniLM graph operator/input/output compatibility and model RSS/latency untested.",
+    "BERT tokenization, 256-token windows, source offsets, pooling/L2 and numerical parity untested.",
+    "No semantic retrieval or clinical/scientific validation performed.",
+    "Full native redistribution notices/conditions must be preserved before redistribution.",
+    "Registry audit is a point-in-time lookup, not proof of absence of native vulnerabilities."
+  ]
+}

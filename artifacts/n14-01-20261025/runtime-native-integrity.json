@@ -1,0 +1,30 @@
+{
+  "PASS": true,
+  "files": [
+    {
+      "file": "bin/napi-v3/linux/x64/onnxruntime_binding.node",
+      "bytes": 347368,
+      "sha256": "02f47073236ef20db4c27e1923cd601d21d8ac730a80efb656a7241643ad1e07",
+      "matches_sri_verified_archive": true
+    },
+    {
+      "file": "bin/napi-v3/linux/x64/libonnxruntime.so.1.21.0",
+      "bytes": 21914784,
+      "sha256": "05bfddeefc536a44478c20226218dae8853995518bb2a994b4fa15a996f5f412",
+      "matches_sri_verified_archive": true
+    },
+    {
+      "file": "bin/napi-v3/linux/x64/libonnxruntime.so.1",
+      "bytes": 21914784,
+      "sha256": "05bfddeefc536a44478c20226218dae8853995518bb2a994b4fa15a996f5f412",
+      "matches_sri_verified_archive": true
+    },
+    {
+      "file": "bin/napi-v3/linux/x64/libonnxruntime_providers_shared.so",
+      "bytes": 14632,
+      "sha256": "950dbbe7c7a6f73b7f574c0e2308417e1e90e1f73b6472d799e25b47c6fdee82",
+      "matches_sri_verified_archive": true
+    }
+  ],
+  "cuda_or_tensorrt_provider_files": false
+}

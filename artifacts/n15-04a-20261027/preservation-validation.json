@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "scope": "Sanitized publisher metadata, diagnostic-only guard preservation, focused offline QA, links and old-file preservation; no acquisition/destination/native retry.",
+  "focused_tests": "18/18 PASS",
+  "source_syntax_checks": 4,
+  "guard_AST_and_model_URL_size_hash_constants": "UNCHANGED",
+  "actual_observed_hostname_still_blocked": true,
+  "actual_hostname": "us.aws.cdn.hf.co",
+  "metadata_requests": 2,
+  "metadata_elapsed_s": 0.709432774000561,
+  "destination_requests": 0,
+  "redirects_followed": 0,
+  "model_body_bytes": 0,
+  "queries_signature_credentials_retained": false,
+  "markdown_documents": 10,
+  "local_links_checked": 612,
+  "preservation": {
+    "source": {
+      "existing_files": 583,
+      "size_mtime_unchanged": true,
+      "hashes_recomputed": false
+    },
+    "history": {
+      "existing_files": 5827,
+      "size_mtime_unchanged": true,
+      "hashes_recomputed": false
+    }
+  },
+  "new_project_QA_files": [
+    "scripts/n15_redirect_diagnostics.py",
+    "tests/n15_redirect_diagnostics_test.py"
+  ],
+  "authorized_temporary_worker_reporting_change": "/tmp/astra-n15-04-download.py",
+  "review_governance_documents": [
+    "AGENTS.md",
+    "docs/N15_04A_REDIRECT_QUALIFICATION.md",
+    "docs/MODULE_TRACKER.md",
+    "docs/SESSION_HANDOFF.md",
+    "docs/DE_N14_N15_01.md",
+    "docs/N15_01_PLAN.md",
+    "docs/DECISIONS.md",
+    "docs/MASTER_PLAN.md",
+    "docs/FEATURE_AUDIT.md",
+    "docs/CORE_AI_PRIORITY.md"
+  ],
+  "module_ids_retained": [
+    "N01",
+    "N02",
+    "N03",
+    "N04",
+    "N05",
+    "N06",
+    "N07",
+    "N08",
+    "N09",
+    "N10",
+    "N11",
+    "N12",
+    "N13",
+    "N14",
+    "N15",
+    "N16",
+    "N17",
+    "N18",
+    "N19",
+    "N20",
+    "N21",
+    "N22",
+    "N23",
+    "N24",
+    "N25",
+    "N26"
+  ],
+  "storage_policy_renewed": false,
+  "N15": "Not Started",
+  "N16": "Not Started",
+  "all_other_module_statuses_changed": false
+}

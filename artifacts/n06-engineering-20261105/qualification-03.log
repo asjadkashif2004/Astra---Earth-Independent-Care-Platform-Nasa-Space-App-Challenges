@@ -1,0 +1,1 @@
+{"status":"PASS","output":"artifacts/n06-engineering-20261105/qualification-03.json","total_ms":7076.783517,"cold_ms":1181.3366029999997,"p95_ms":77.2815300000002,"read_mutations":0,"cleanup":true}

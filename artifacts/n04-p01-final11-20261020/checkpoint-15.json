@@ -1,0 +1,18 @@
+{
+  "recorded_at": "2026-10-19T21:59:51.929818+00:00",
+  "accepted_before": 13,
+  "newly_accepted": [
+    "30x-overview-standard-2",
+    "30x-overview-standard-3"
+  ],
+  "total_accepted": 15,
+  "remaining": 9,
+  "outcomes": [
+    "artifacts/n04-p01-final11-20261020/30x-overview-standard-2/outcome.json",
+    "artifacts/n04-p01-final11-20261020/30x-overview-standard-3/outcome.json"
+  ],
+  "status": "active;current trial fully verified before next launch",
+  "n03": "Partial",
+  "n04": "Partial",
+  "ac20": "Open / Unverified"
+}

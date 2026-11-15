@@ -1,0 +1,62 @@
+{
+  "schema_version": "astra.publication-sources.v1",
+  "approval": "User-approved N13-01 under DE-N07-N13-01, 2026-10-24; exactly two publications; no later-module approval",
+  "documents": [
+    {
+      "id": "nasa-hrp-sleep-2016",
+      "original_sha256": "252d4993a040ab8b989664b1da7a3143a5fd8169fac65b67f1f43231250ef1f5",
+      "file": "20160003864.pdf",
+      "url": "https://ntrs.nasa.gov/api/citations/20160003864/downloads/20160003864.pdf",
+      "canonical_url": "https://ntrs.nasa.gov/citations/20160003864",
+      "bytes": 967704,
+      "deadline_ms": 60000,
+      "title": "Risk of Performance Decrements and Adverse Health Outcomes Resulting from Sleep Loss, Circadian Desynchronization, and Work Overload",
+      "authors": ["Erin Flynn-Evans", "Kevin Gregory", "Lucia Arsintescu", "Alexandra Whitmire"],
+      "publisher": "NASA Human Research Program; Johnson Space Center / NTRS",
+      "version": "2016; NTRS 20160003864; JSC-CN-35774",
+      "published_on": "2016-01-01",
+      "publication_date_note": "NTRS catalogue date is January 1, 2016; do not treat this as independently verified day of authorship. Complete PDF identity and internal notices must be checked before corpus promotion.",
+      "authority": "NASA HRP evidence synthesis; background scientific evidence, not an individual treatment protocol",
+      "rights": {
+        "license_id": null,
+        "review_status": "reviewed_for_local_corpus",
+        "basis": "Exact NTRS record: PUBLIC distribution, PUBLIC_USE_PERMITTED, onlyAbstract false, containsThirdPartyMaterial false, export control NO. Preserve specific source notices; do not infer CC or universal public-domain status.",
+        "terms_url": "https://sti.nasa.gov/disclaimers/",
+        "attribution": "Flynn-Evans E, Gregory K, Arsintescu L, Whitmire A. NASA HRP sleep/circadian/work-overload evidence report, 2016. NTRS 20160003864 / JSC-CN-35774.",
+        "restrictions": "Local informational scientific corpus only. Preserve all notices. No NASA endorsement, clinical validation, model training or automatic advice. Third-party cited works are not acquired or relicensed. Stop on conflicting internal rights notices."
+      },
+      "review_evidence": [
+        {"file":"hrp-record.json","sha256":"b97981da6496a64215d135c312cbc64b9f5d1ea252105cc2366cbb90a4e3df86"},
+        {"file":"sti-use.html","sha256":"15c5732f49dd2eafe9c610ed61f7052b9565000e24be71ac55bc6b9a415e3b3b"}
+      ]
+    },
+    {
+      "id": "nasa-std-3001-v2-f",
+      "original_sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+      "file": "NASA-STD-3001 Vol 2 Rev F.pdf",
+      "url": "https://standards.nasa.gov/system/files/tmp/NASA-STD-3001%20Vol%202%20Rev%20F.pdf",
+      "canonical_url": "https://standards.nasa.gov/standard/NASA/NASA-STD-3001_VOL_2",
+      "bytes": 6753988,
+      "deadline_ms": 120000,
+      "title": "NASA Spaceflight Human-System Standard, Volume 2: Human Factors, Habitability, and Environmental Health",
+      "authors": ["NASA Office of the Chief Health and Medical Officer"],
+      "publisher": "NASA Technical Standards System",
+      "version": "F",
+      "published_on": "2026-07-14",
+      "publication_date_note": "Official active standards catalogue: Revision F, Document Date 07/14/2026; verified 2026-10-24. Earlier E/D files are not substituted.",
+      "authority": "NASA technical design and operations standard; requirements apply within its stated programme scope, not automatic ASTRA medical thresholds",
+      "rights": {
+        "license_id": null,
+        "review_status": "reviewed_for_local_corpus",
+        "basis": "NASA-authored technical standard; official catalogue authorizes Internet Public access. NASA STI policy permits use of US government works while reserving privately copyrighted material. Preserve original and review internal source-specific notices before corpus promotion; no inferred Creative Commons grant.",
+        "terms_url": "https://sti.nasa.gov/disclaimers/",
+        "attribution": "NASA Office of the Chief Health and Medical Officer. NASA-STD-3001 Volume 2 Revision F, approved 2026-07-14. NASA Technical Standards System.",
+        "restrictions": "Local informational corpus of NASA-authored material; retain source,revision and notices. Public access does not license third-party standards,figures or cited works. No endorsement or compliance certification. Stop on conflicting internal reproduction notices. Future AI-output attribution must be reviewed separately."
+      },
+      "review_evidence": [
+        {"file":"standards-catalogue.html","sha256":"3456bc34747c172c8852a907b9006a74805e68c0aed139e1bef8897e618d13fa"},
+        {"file":"sti-use.html","sha256":"15c5732f49dd2eafe9c610ed61f7052b9565000e24be71ac55bc6b9a415e3b3b"}
+      ]
+    }
+  ]
+}

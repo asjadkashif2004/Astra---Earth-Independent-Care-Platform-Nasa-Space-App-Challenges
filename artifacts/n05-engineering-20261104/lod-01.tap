@@ -1,0 +1,29 @@
+✔ N05 two tiers derive reproducibly from all five real meshes, preserving every original element (1661.025207ms)
+✔ N05 tiny coarse elements preserve original surface instead of disappearing (1.432785ms)
+✔ N05 clustering does not weld touching original elements (0.356718ms)
+✔ N05 malformed LOD rejects encoding (0.656869ms)
+✔ N05 malformed LOD rejects nonfinite (0.389771ms)
+✔ N05 malformed LOD rejects index (0.323285ms)
+✔ N05 malformed LOD rejects range (0.291043ms)
+✔ N05 malformed LOD rejects coverage (0.184672ms)
+✔ N05 malformed LOD rejects cell (0.362409ms)
+✔ N05 interrupted coarse generation rejects and never returns a partial geometry (0.90455ms)
+✔ N05 pre-parser rejects external before any loader request (0.73123ms)
+✔ N05 pre-parser rejects material before any loader request (0.366818ms)
+✔ N05 pre-parser rejects image before any loader request (0.405591ms)
+✔ N05 pre-parser rejects animation before any loader request (0.252521ms)
+✔ N05 pre-parser rejects decoder before any loader request (0.239285ms)
+✔ N05 pre-parser rejects bounds before any loader request (0.386886ms)
+✔ N05 pre-parser rejects accessor before any loader request (0.367499ms)
+✔ N05 pre-parser rejects primitive before any loader request (0.321883ms)
+✔ N05 invalid binary magic/version/truncation rejected (0.304819ms)
+✔ N05 both runtime tiers require no extra GLBs and keep the full critical payload under20,000,000 bytes (244.420695ms)
+✔ N05 actual application exposes LOD/reload/text and never enables N06 or changes monitoring (898.361729ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3987.097127

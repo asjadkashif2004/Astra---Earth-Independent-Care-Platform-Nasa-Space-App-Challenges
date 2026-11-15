@@ -1,0 +1,215 @@
+{
+  "name": "ASTRA Command",
+  "version": "0.1.0",
+  "runtime": "v24.21.0",
+  "created_at": "2026-10-18T07:19:17.348Z",
+  "signed": false,
+  "third_party_runtime_packages": [],
+  "files": [
+    {
+      "path": "package.json",
+      "bytes": 696,
+      "sha256": "b7fdd9add0d02fe29ec63618f6d7c3733ac99be4418c361218bcd17f371cbc1f"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 235,
+      "sha256": "bcebbd59c906ba97750a4d513b397c98efc302735cddd385687e7957f2f1420c"
+    },
+    {
+      "path": "packages/contracts.mjs",
+      "bytes": 10183,
+      "sha256": "679630c310f54f5d7af73509c6405448363ac7bf12959863269515944946ee6b"
+    },
+    {
+      "path": "packages/presentation.mjs",
+      "bytes": 6258,
+      "sha256": "af6ad146da7d7779b632fc503bef95ebcaaca4a84479f8530a9ae7717af7076c"
+    },
+    {
+      "path": "services/agent/agent.mjs",
+      "bytes": 2165,
+      "sha256": "1181ce2a46e68444e7ce3b66642d28975f48eee072c19cdfb0d0f150ec5dd3be"
+    },
+    {
+      "path": "services/agent/enrichment-worker.mjs",
+      "bytes": 383,
+      "sha256": "1d80462940cc93cbccae3087a820ad7ad3bf45eceaed3df46d55d84f9b313ca3"
+    },
+    {
+      "path": "services/anomaly/detector.mjs",
+      "bytes": 7666,
+      "sha256": "8f3eac13243860ce4df849b8a2b7c4a5cf20f2b2ea46143c7111513ce4200d89"
+    },
+    {
+      "path": "services/anomaly/environment.mjs",
+      "bytes": 794,
+      "sha256": "efe0e03d249aafecdb38f6cf48390aa240252d3b07930a0e8f9b13668144d773"
+    },
+    {
+      "path": "services/api/auth.mjs",
+      "bytes": 1507,
+      "sha256": "a2abaafdc92bcf722b8662fd56e313bd837c2d7897bac04010ac6d56c19f7693"
+    },
+    {
+      "path": "services/api/engine.mjs",
+      "bytes": 19550,
+      "sha256": "b53111392519ec0be568ab53e5ae8d0feaee0f4be2886e448ede299f2ffa6aa3"
+    },
+    {
+      "path": "services/api/enrichment.mjs",
+      "bytes": 1648,
+      "sha256": "f1f223ebcfbfc2552dab59b0b427faedaf71a2d44970895fbaefdcda4fdfcdc5"
+    },
+    {
+      "path": "services/api/monitoring.mjs",
+      "bytes": 1979,
+      "sha256": "eba1eaa9a956e300758667eaec0a49ba163fef531b2ba44280129126c5eca1c8"
+    },
+    {
+      "path": "services/api/server.mjs",
+      "bytes": 25142,
+      "sha256": "deb95dd4a9d7b4c3d8bbacc2cfa71b1e37eec52ea62e67a663f1307456fc2d98"
+    },
+    {
+      "path": "services/api/store.mjs",
+      "bytes": 9019,
+      "sha256": "6cfa9af1c1cbd6e9d6f4682795ce83a235d1bfcfb55a03108c5a6f12cc3ad1da"
+    },
+    {
+      "path": "services/api/telemetry.mjs",
+      "bytes": 2655,
+      "sha256": "414bc70bcaed985779aa7c01b1b5863d50f80ed76641f48ab55dad8dd13baa77"
+    },
+    {
+      "path": "services/comms/scheduler.mjs",
+      "bytes": 2934,
+      "sha256": "35a415f3835a699c013ad0cc748bea2a4b50dd89f9fec643728d51c01efb3402"
+    },
+    {
+      "path": "services/prediction/forecast.mjs",
+      "bytes": 2807,
+      "sha256": "40ef38b27899808ff98d6db6b6b204e6a1a4a218e5a756868e14846bf91ed361"
+    },
+    {
+      "path": "services/rag/retrieval.mjs",
+      "bytes": 3328,
+      "sha256": "cf6b47c1510c518dece068fd3402c0401e193ee938ad8cc86cbb66e1cec4c55b"
+    },
+    {
+      "path": "services/telemetry-simulator/simulator.mjs",
+      "bytes": 5138,
+      "sha256": "b903ceec75d3cfe420c4f816bb679f367d5a397c21bcacf9eaa26dce0ed2f42c"
+    },
+    {
+      "path": "apps/mission-control-web/app.mjs",
+      "bytes": 81677,
+      "sha256": "27e9841036eb12eec54b4bdda345d5172947d5446e7fd98b2e8b557d86139d89"
+    },
+    {
+      "path": "apps/mission-control-web/assets/earth/README.md",
+      "bytes": 1366,
+      "sha256": "1d4a3adda4c2b38946b3854ed4390e51cfe8d8ebcb0a3bd588de8657dc5f2ce3"
+    },
+    {
+      "path": "apps/mission-control-web/assets/earth/cloud-1024.jpg",
+      "bytes": 192776,
+      "sha256": "ab8db970a00c7fb7cec3c24d0d4a90fcdc2fd3a8d4c8b0e2eacede4221368bd4"
+    },
+    {
+      "path": "apps/mission-control-web/assets/earth/cloud-2048.jpg",
+      "bytes": 703225,
+      "sha256": "62a2ca3c3246c574407ea3e23d19b14642f382a10d82852b8975d84f77eb3d85"
+    },
+    {
+      "path": "apps/mission-control-web/assets/earth/day-1024.jpg",
+      "bytes": 70574,
+      "sha256": "1c40512db369e7778e1830c9d7cab11f724d556ee7049c8f5a3cad2eddb8180e"
+    },
+    {
+      "path": "apps/mission-control-web/assets/earth/day-2048.jpg",
+      "bytes": 236028,
+      "sha256": "097a4b671941e23e1188245b01045c43bd7ba26c0f77c6e4ae59face597b87bd"
+    },
+    {
+      "path": "apps/mission-control-web/assets/earth/manifest.json",
+      "bytes": 4124,
+      "sha256": "d33f6207264905268f08b10e679082c190af9af6dae6bd45c163153245f2d023"
+    },
+    {
+      "path": "apps/mission-control-web/earth.mjs",
+      "bytes": 3523,
+      "sha256": "001398ac656c0790b7b7bc610feb58b8bf19b981f097d3e5cceb8541c283d283"
+    },
+    {
+      "path": "apps/mission-control-web/icon.svg",
+      "bytes": 294,
+      "sha256": "dac3730fad3614e07b41e0de268a2c861f27f58c45db92910a5c5ab7bcc2be5f"
+    },
+    {
+      "path": "apps/mission-control-web/index.html",
+      "bytes": 1159,
+      "sha256": "a9382bc9ae4b4ea593f5effafe027fc61a310aa136495ede735d34a3fd470b11"
+    },
+    {
+      "path": "apps/mission-control-web/manifest.webmanifest",
+      "bytes": 275,
+      "sha256": "e64b3df200721da6a1c3264dfe1ba7006dc00ae089d5434fbc78f371ab5bc0cf"
+    },
+    {
+      "path": "apps/mission-control-web/mission.css",
+      "bytes": 25615,
+      "sha256": "865fe9efa3321721b620434e1722fe29907d08c80b2d045a239c62ae4960c098"
+    },
+    {
+      "path": "apps/mission-control-web/scenes.mjs",
+      "bytes": 18636,
+      "sha256": "b9ab899a261682928cc0f41c93f5a1d3b5e502a22d93ee4bfebdfa6489621cae"
+    },
+    {
+      "path": "apps/mission-control-web/styles.css",
+      "bytes": 39255,
+      "sha256": "53e18065f8ee0288b07eb9a42cae162b8a28ae20d66cf4f90915e6d224439982"
+    },
+    {
+      "path": "apps/mission-control-web/sw.js",
+      "bytes": 1161,
+      "sha256": "b771c936a04d32514665bcb894a06ff2b1a20653d274a22f9a347cc7e438bf02"
+    },
+    {
+      "path": "apps/mission-control-web/ui.mjs",
+      "bytes": 8065,
+      "sha256": "113be4436a845b04da6292254c03d04c6ecc783fa6e3f62a2e838a952eef39c1"
+    },
+    {
+      "path": "knowledge/sources.json",
+      "bytes": 8494,
+      "sha256": "a40c531e9ca13069cf5130098a56e9f7cc5860f12fb3b4c18764e1a1726bc0bd"
+    },
+    {
+      "path": "models/forecast-calibration.json",
+      "bytes": 854,
+      "sha256": "1c143331303fb92a9b03300ae3dcc84314f61213228e08e489f9b9138ceb6cbf"
+    },
+    {
+      "path": "models/model-cards/README.md",
+      "bytes": 5173,
+      "sha256": "0d2e0db0147f4da06183a4442da553b860dd51b476f3e9cdb9135fc0ff1b54a4"
+    },
+    {
+      "path": "data/public-metadata/catalogue.json",
+      "bytes": 2066,
+      "sha256": "ab882b27420e475fe43c2dbe454d09b2d437ecd34ebe7594a6b7aa2cfade85f9"
+    },
+    {
+      "path": "Dockerfile",
+      "bytes": 428,
+      "sha256": "299ec878a9f7d28a4c92e0f69c74cf5a54c0e5fdaf7cabaa73e13172d94db79e"
+    },
+    {
+      "path": "compose.yaml",
+      "bytes": 362,
+      "sha256": "cda127bf963bad17279d32bdf9e3a39928d596e569530803a0994e7e9ea6d7e2"
+    }
+  ]
+}

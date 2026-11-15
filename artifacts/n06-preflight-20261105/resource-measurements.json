@@ -1,0 +1,14 @@
+{
+  "scope": "N06 blocked preflight; no linked graphics or browser workload ran",
+  "compatibility_suite_observed_duration_ms": 102360.002428,
+  "inherited_source_hash_verification_observed_ms": 113080.168,
+  "N06_region_latency": "NOT MEASURED / AUTHORIZATION BLOCKED",
+  "N06_crew_switch_latency": "NOT MEASURED / AUTHORIZATION BLOCKED",
+  "browser_memory": "NOT MEASURED / no new browser",
+  "native_model_and_N16_worker_starts": 0,
+  "new_browser_launches": 0,
+  "new_GLB_texture_model_PDF_copies": 0,
+  "retained_SQLite_snapshots": 0,
+  "historical_cleanup": 0,
+  "hard_peak_or_presented_FPS_claim": false
+}

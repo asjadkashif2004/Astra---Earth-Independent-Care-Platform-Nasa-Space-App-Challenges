@@ -1,0 +1,107 @@
+{
+  "task": "N15-04B",
+  "phase": "acquisition",
+  "scratch": "/var/tmp/astra-n15-04b-0zd6xkaq",
+  "status": "ACQUIRED_STATIC_VERIFIED",
+  "started_utc": "2026-10-26T21:43:34.514522+00:00",
+  "native_commands": 0,
+  "runtime_acquisition_bytes": 0,
+  "limits": {
+    "model_support_acquisition": 550000000,
+    "network_s": 900,
+    "storage": 1500000000,
+    "storage_stop": 1350000000,
+    "process_RSS": 2000000000,
+    "native_wall_s": 120
+  },
+  "resource_authority": "N15-04B-only monitored Choice B; overshoot possible",
+  "N15": "Not Started",
+  "N16": "Not Started",
+  "stage": "complete-model-hash-and-static-GGUF",
+  "scratch_filesystem": "ext4 /dev/sdd",
+  "download_process_elapsed_s": 125.00101266499951,
+  "acquisition": {
+    "task": "N15-04B",
+    "canonical_url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/resolve/9217f5db79a29953eb74d5343926648285ec7e67/qwen2.5-0.5b-instruct-q4_k_m.gguf",
+    "revision": "9217f5db79a29953eb74d5343926648285ec7e67",
+    "artifact": "qwen2.5-0.5b-instruct-q4_k_m.gguf",
+    "expected_bytes": 491400032,
+    "expected_sha256": "74a4da8c9fdbcd15bd1f6d01d621410d31c6fc00986f5eb687824e7b93d7a9db",
+    "complete": true,
+    "attempts": 1,
+    "redirects": [
+      {
+        "http_status": 302,
+        "scheme": "https",
+        "hostname": "us.aws.cdn.hf.co",
+        "port": null,
+        "credentials_present": false,
+        "query_present": true,
+        "fragment_present": false,
+        "query_values_retained": false,
+        "well_formed": true,
+        "rejection_reason": null,
+        "path_prefix": "/xet-bridge-us/",
+        "expected_object_marker_matches": true
+      }
+    ],
+    "started_utc": "2026-10-26T21:44:12.090297+00:00",
+    "signed_query_values_retained": false,
+    "new_runtime_bytes": 0,
+    "publisher": {
+      "status": 302,
+      "TLS_certificate_hostname_verification": true,
+      "x_repo_commit": "9217f5db79a29953eb74d5343926648285ec7e67",
+      "x_linked_size": 491400032,
+      "x_linked_etag": "74a4da8c9fdbcd15bd1f6d01d621410d31c6fc00986f5eb687824e7b93d7a9db",
+      "x_xet_hash": "0663b826e09042345d6e2069d9655cd3ae84812d8f39a5894bed7b24fc0e86cc"
+    },
+    "delivery": {
+      "host": "us.aws.cdn.hf.co",
+      "HTTPS_port": 443,
+      "TLS_certificate_hostname_verification": true,
+      "status": 200,
+      "content_length": 491400032,
+      "content_type": "application/octet-stream"
+    },
+    "received_bytes": 491400032,
+    "sha256": "74a4da8c9fdbcd15bd1f6d01d621410d31c6fc00986f5eb687824e7b93d7a9db",
+    "elapsed_s": 124.0158717739996,
+    "support_redirect_body_bytes": 0,
+    "total_received_body_bytes": 491400032,
+    "CDN_permission_active": false,
+    "CDN_permission_revoked": "One-shot acquisition worker closed all connections and exits; no global network rule installed."
+  },
+  "model": {
+    "path": "/var/tmp/astra-n15-04b-0zd6xkaq/acquisition/qwen2.5-0.5b-instruct-q4_k_m.gguf",
+    "sha256": "74a4da8c9fdbcd15bd1f6d01d621410d31c6fc00986f5eb687824e7b93d7a9db",
+    "bytes": 491400032,
+    "GGUF_version": 3,
+    "architecture": "qwen2",
+    "quantization": "Q4_K_M",
+    "context_header": 32768,
+    "tensor_count": 291,
+    "metadata_count": 26,
+    "special_token_ids": {
+      "<|endoftext|>": 151643,
+      "<|im_start|>": 151644,
+      "<|im_end|>": 151645
+    }
+  },
+  "accounting_failures": [],
+  "resources": {
+    "elapsed_s": 164.73196152199853,
+    "observations": 331,
+    "final_apparent": 589619575,
+    "final_allocated": 591048704,
+    "max_sampled_allocated": 590995456,
+    "process_RSS_peaks": {
+      "5518": 32837632,
+      "5524": 25169920
+    },
+    "supervisor_kernel_lifetime_RSS_bytes": 663040000,
+    "max_reaped_child_kernel_RSS_bytes": 24928256,
+    "owned_processes_remaining": 0,
+    "observer_alive": false
+  }
+}

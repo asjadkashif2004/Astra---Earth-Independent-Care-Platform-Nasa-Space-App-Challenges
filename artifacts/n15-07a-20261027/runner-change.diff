@@ -1,0 +1,54 @@
+--- preserved N15-06 runner / N15-07 input
++++ N15-07A QA runner
+@@ -9,6 +9,7 @@
+ PROJECT=Path(__file__).resolve().parents[1]
+ sys.path.insert(0,str(PROJECT/'scripts'))
+ import n15_backend_config as backend_config
++from n15_observer_lifecycle import ProbeObserver
+ 
+ PINS={'common-source.txt':'1bdc6860357176b576fd49a2654c132fc878e3b3bd3aa2a760ef3434d0d66698',
+       'infer-source.txt':'f4484c16c016e14366cc285baba032cadacf21fcfb5957aa3e2cf7f50d3b3b37',
+@@ -93,10 +94,12 @@
+       'services/research-answer','services/research-retrieval']]
+     if task=='N15-06':c.count_roots += [PROJECT/'artifacts/n15-06-20261027',PROJECT/'artifacts/n15-05-20261027']
+     c.admitted_external=[Path(__file__),PROJECT/'scripts/n15-research-answer.mjs',
++      PROJECT/'scripts/n15_observer_lifecycle.py',
+       PROJECT/'scripts/n15_backend_config.py',PROJECT/'artifacts/n15-03f-20261027/static-dependency-closure.json',
+       PROJECT/'tests/research-answer.test.mjs']
++    c.observer_lifecycle=ProbeObserver(c)
+     c.samples.append(c.scan());c.atomic('resources-latest.json',c.samples[-1])
+-    c.observer=threading.Thread(target=c.observe,daemon=True);c.observer.start()
++    c.observer_lifecycle.start()
+ 
+ def main(args):
+     global c,manifest,notice_mounts,model_mount
+@@ -113,7 +116,6 @@
+     source=load_frozen('common-source.txt')
+     c=types.ModuleType('n15_research_supervision');c.__file__=str(PROJECT/'artifacts/n15-04c-20261027/common-source.txt')
+     exec(compile(source,c.__file__,'exec'),c.__dict__)
+-    setup(base,c,task)
+     def cancel(_sig,_frame):
+         c.accounting.fail_closed('Controller cancellation',failures=c.failures,stop_event=c.halt,
+           active=c.active,active_lock=c.active_lock,report_failure=lambda r:c.atomic('cancellation.json',r))
+@@ -121,6 +123,7 @@
+     signal.signal(signal.SIGTERM,cancel);signal.signal(signal.SIGINT,cancel)
+     manifest=[];notice_mounts=[]
+     try:
++        setup(base,c,task)
+         request_file=base/'execution-request.json'
+         if request_file.stat().st_size>12000:raise RuntimeError('Oversized internal request')
+         request=json.loads(request_file.read_text())
+@@ -192,10 +195,12 @@
+         c.state['generation']={'performance':perf,'selection_sha256':request['selection_sha256'],'raw_stdout':'generation/native.stdout'}
+         c.state['status']='PASS'
+     except BaseException as e:
++        if not hasattr(c,'state'):raise
+         c.state['status']='PARTIAL' if c.state['native_commands'] else 'BLOCKED'
+         c.state['failure']={'stage':c.state.get('stage'),'type':type(e).__name__,'reason':str(e)}
+         c.event('failure',**c.state['failure'])
+-    finally:c.finish()
++    finally:
++        if hasattr(c,'observer_lifecycle'):c.finish()
+     return 0 if c.state['status']=='PASS' else 1
+ 
+ if __name__=='__main__':

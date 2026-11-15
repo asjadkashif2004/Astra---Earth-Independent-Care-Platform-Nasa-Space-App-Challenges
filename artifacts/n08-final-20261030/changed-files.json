@@ -1,0 +1,53 @@
+{
+  "modified_existing_governance": [
+    {
+      "path": "docs/CORE_AI_PRIORITY.md",
+      "before_sha256": "a4da4aeecac5b2f1e31fa3091d44ab184e247f355d482cda9c9c8c32e70540a4",
+      "after_sha256": "53b126acdb464a42fe9ff80602050e01afa33db5a421800a7dae1e4fb55bcd9d"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "before_sha256": "94bd1f48a9b29cf51470d53386e47944e0143f19561b3c09a258c108926ffc7b",
+      "after_sha256": "aacad6b80c08e3a2a403f590b410c0865ba5738860b3325419af2a2f0fc4bcf2"
+    },
+    {
+      "path": "docs/FEATURE_AUDIT.md",
+      "before_sha256": "08699174e9dccd7cdd79344f86b70805cc53b5864c1d1d1f3dc70da15087081f",
+      "after_sha256": "b285ea265eefe62cba38e475376d628bb4e441dec48d345f484bc0ce58cbd3fe"
+    },
+    {
+      "path": "docs/MASTER_PLAN.md",
+      "before_sha256": "f75f4903f5fbc181a5cac52dd0a99c34db3dff060b76b1bafa27274947516a61",
+      "after_sha256": "d45fb06666da1a650c8365c39a23e2d69688dd6bc53e759a1c71ff0d123ae796"
+    },
+    {
+      "path": "docs/MODULE_TRACKER.md",
+      "before_sha256": "68aa190dcf8ccaaf2abde4e79d0d7541bb1810b1c03bdb4417d732911578862f",
+      "after_sha256": "61471690e03a66e221b0d6113a4887df29e8b27f3cb2ce6dd989f40f782bb3e5"
+    },
+    {
+      "path": "docs/SESSION_HANDOFF.md",
+      "before_sha256": "62b2126121a480eed0e8a3e85284e9ab7d240d84a2990c69effa239c19c58406",
+      "after_sha256": "e241f02a78e7be42de1e4775773c7382b1eee2142b0a9efd7585a5b4b4bd5db2"
+    },
+    {
+      "path": "AGENTS.md",
+      "before_sha256": "9a0315f47aaee4a5e62f52edb6b0c2f6ed4a0ec66fac82685fc026192961bf57",
+      "after_sha256": "9748f21c83466512e2ec4251728271c60885f72869c0ec0987f76c808b5c0ddd"
+    }
+  ],
+  "new_documents": [
+    {
+      "path": "docs/DE_N08_SYNTHETIC_01.md",
+      "sha256": "4255454d34192bd04398957884c57fe872fbb4c31f07ee0430445a9ac6a32ce1"
+    },
+    {
+      "path": "docs/N08_FINAL_ENGINEERING_COMPLETION.md",
+      "sha256": "17e67497a197b29e081800e240e5e87c25dfdbc71b49b87014ca07dac3600e1d"
+    }
+  ],
+  "existing_executable_changes": [],
+  "artifact_only_QA": "baseline-controls.test.mjs, qa.py, finalize.py and saved outputs; complete inventory in evidence-manifest.json",
+  "implementation": "NONE; N08 remains Not Started",
+  "diff": "documentation.diff.txt"
+}

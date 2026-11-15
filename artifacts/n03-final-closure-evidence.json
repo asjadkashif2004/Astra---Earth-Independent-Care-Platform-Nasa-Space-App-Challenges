@@ -1,0 +1,460 @@
+{
+  "recorded_at": "2026-10-18T01:58:15.438430+00:00",
+  "module": "N03",
+  "status": "Partial",
+  "reports": [
+    {
+      "path": "artifacts/n03-closure-200-resume/report.json",
+      "sha256": "a7360952fda4cd23c521cfb522eb3e8842a6d5bba58dbea07c33f2002feb11cc",
+      "status": "passed",
+      "started_at": "2026-10-18T01:57:22.913Z",
+      "finished_at": "2026-10-18T01:57:36.712Z",
+      "groups": 4,
+      "page_audits": 6,
+      "report_listed_pngs": 8,
+      "console_errors": 0,
+      "tab_transitions": 34,
+      "supplemental_contrast_bounds": 21
+    },
+    {
+      "path": "artifacts/n03-closure-100-audit/report.json",
+      "sha256": "0d2b1f14b1bd1f2b956d2af3a672a9d9259ec7faa679bdcbf5ec05003be59702",
+      "status": "passed",
+      "started_at": "2026-10-17T22:48:24.303Z",
+      "finished_at": "2026-10-17T22:48:45.278Z",
+      "groups": 4,
+      "page_audits": 10,
+      "report_listed_pngs": 12,
+      "console_errors": 0,
+      "tab_transitions": 167,
+      "supplemental_contrast_bounds": 169
+    },
+    {
+      "path": "artifacts/n03-closure-200-audit/report.json",
+      "sha256": "fc9e46bf8645bd259e8afa027ee25e916bf3cf7863a3f7f3ceed77c1c7269d54",
+      "status": "passed",
+      "started_at": "2026-10-17T22:43:51.589Z",
+      "finished_at": "2026-10-17T22:44:43.093Z",
+      "groups": 7,
+      "page_audits": 40,
+      "report_listed_pngs": 42,
+      "console_errors": 0,
+      "tab_transitions": 650,
+      "supplemental_contrast_bounds": 610
+    },
+    {
+      "path": "artifacts/n03-closure-100-performance/report.json",
+      "sha256": "9ec259122d6cf25dc1729b00904307468d345c883390b356883ef595aecfaea5",
+      "status": "passed",
+      "started_at": "2026-10-17T22:45:29.600Z",
+      "finished_at": "2026-10-17T22:47:40.048Z",
+      "groups": 7,
+      "page_audits": 0,
+      "report_listed_pngs": 5,
+      "console_errors": 0,
+      "tab_transitions": 0,
+      "supplemental_contrast_bounds": 0
+    },
+    {
+      "path": "artifacts/n03-windows-real-browser/report.json",
+      "sha256": "3b49dff8cb316a0b442e756c8e2d6b275560ff4a4ce18aa21cd5d32589b1adea",
+      "status": "passed",
+      "started_at": "2026-10-17T22:02:24.777Z",
+      "finished_at": "2026-10-17T22:04:30.754Z",
+      "groups": 23,
+      "page_audits": 0,
+      "report_listed_pngs": 61,
+      "console_errors": 0,
+      "tab_transitions": 0,
+      "supplemental_contrast_bounds": 0
+    },
+    {
+      "path": "artifacts/n03-real-browser/report.json",
+      "sha256": "9a43a9d4638b93d8629844d668cd40044775cef6dda6715ee99801bee93e56a1",
+      "status": "passed",
+      "started_at": "2026-10-17T21:59:22.121Z",
+      "finished_at": "2026-10-17T22:01:42.789Z",
+      "groups": 23,
+      "page_audits": 0,
+      "report_listed_pngs": 61,
+      "console_errors": 0,
+      "tab_transitions": 0,
+      "supplemental_contrast_bounds": 0
+    }
+  ],
+  "verified_pngs": [
+    {
+      "path": "artifacts/n03-closure-200-resume/native-zoom-landing.png",
+      "sha256": "0c3d1b8d76aeaa67cc32dbc71b739d2c9426c5ef68a67a313b0632f3cd4af755",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "path": "artifacts/n03-closure-200-resume/landing-1920x1080-zoom2.png",
+      "sha256": "fbd9f10817bb0036cb32472391146f550fcc465a95b51b6c1f65401343cf82e6",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "artifacts/n03-closure-200-resume/landing-1366x768-zoom2.png",
+      "sha256": "448e065640014d851c1e16cd1bfb093d2f2918dcd9b22b182d52d349fc22b7b1",
+      "width": 1366,
+      "height": 768
+    },
+    {
+      "path": "artifacts/n03-closure-200-resume/landing-768x1024-zoom2.png",
+      "sha256": "65439a1f6d8e4d57b0540817c44e07142a0fa5570b72cd219fe9710d22582631",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "path": "artifacts/n03-closure-200-resume/landing-390x844-zoom2.png",
+      "sha256": "e39fa50d4fdaca03c4e56f0f39228160923bf919cbe609aae788d47145955dde",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "path": "artifacts/n03-closure-200-resume/replay-390x844-zoom2.png",
+      "sha256": "6b4f4f603ac52d4c0ef027893810674e7b636f63e1b2e06d78638afd7f45678f",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "path": "artifacts/n03-closure-200-resume/cognitive-390x844-zoom2.png",
+      "sha256": "03ac6cefbe4977e98e3a2d59ff6312dc21daa65c84e74cd229e59cf188413c77",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "path": "artifacts/n03-closure-200-resume/critical-announcement.png",
+      "sha256": "560cfdbf2d0eafc19eab3dc4a55cc340adb8e4b401a8d9ce2eb3205cd98e4d48",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "path": "artifacts/n03-closure-100-audit/native-zoom-landing.png",
+      "sha256": "8d985e32df7abd4ceee84dd3695fc22ae3abe6aa9ab0305597d892037619cb20",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "path": "artifacts/n03-closure-100-audit/landing-1920x1080-zoom1.png",
+      "sha256": "271c2c79090de2646b1b3a92e3398c1e5e38b5664937113dfba021a2f372848a",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "artifacts/n03-closure-100-audit/overview-1920x1080-zoom1.png",
+      "sha256": "439e4360929615489470024e08d16e40e1b0a17b3091204fb9569128c29e1916",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "artifacts/n03-closure-100-audit/crew-1920x1080-zoom1.png",
+      "sha256": "2223f64186f072e05bc33c2b04f02709fb5a53c31cc792c75272e7845e6c1c57",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "artifacts/n03-closure-100-audit/agent-1920x1080-zoom1.png",
+      "sha256": "422952d1f65c24f9fcd58e237ecda3b5f8185f5576d1ec55a0fbe4a49da0eb9c",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "artifacts/n03-closure-100-audit/comms-1920x1080-zoom1.png",
+      "sha256": "e3c32ff5822c3591a861800e47f386578e6151145612b0e29a1daa1467e09b13",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "artifacts/n03-closure-100-audit/knowledge-1920x1080-zoom1.png",
+      "sha256": "bf989337d38e60cc4668dfa5633a02ef062ff8982d0b14ce6ac29f3822b27fa0",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "artifacts/n03-closure-100-audit/scenario-1920x1080-zoom1.png",
+      "sha256": "b1284cf8aec58e6a24a440dda352cb5ad5441e1782e487f15c152e4b0a39322d",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "artifacts/n03-closure-100-audit/sources-1920x1080-zoom1.png",
+      "sha256": "d09fa49e315c993b499fc611b7e3c770ffc016edcfa7818d4c083644d265abc8",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "artifacts/n03-closure-100-audit/replay-1920x1080-zoom1.png",
+      "sha256": "487209fcb4e719d8ad74dfeb9e4f08239d3378d3f058a641b5d69ad12a34866b",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "artifacts/n03-closure-100-audit/cognitive-1920x1080-zoom1.png",
+      "sha256": "579627e296d5d854967e06335f3fbe79c867517c031a88ad8ddf5a6e60a52fd0",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "artifacts/n03-closure-100-audit/critical-announcement.png",
+      "sha256": "1bb46dcdaef7590f5cb20ca8099ac0849774c5b9e5266a8f2896db7649c8afcb",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "artifacts/n03-closure-100-performance/native-zoom-landing.png",
+      "sha256": "b126eb2254f11fad09defb05b2af75775f91afdc9b1064ca0e4156fe73f6f123",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "path": "artifacts/n03-closure-100-performance/overview-standard-performance.png",
+      "sha256": "97d5e23555d0f1d90a36882a4ddd1763a1693f88f9bdcf0b2467e2ec6a04bf8a",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "artifacts/n03-closure-100-performance/overview-existing-performance-control-performance.png",
+      "sha256": "3371253a69d2eb85df2c0e2feb19aeb2a86f3243cc160690716face4b5116c77",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "artifacts/n03-closure-100-performance/crew-standard-performance.png",
+      "sha256": "2d8d4d69235983145938c9225a4983c808f05353be1137b57a79122fde1e1125",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "path": "artifacts/n03-closure-100-performance/crew-existing-performance-control-performance.png",
+      "sha256": "6c9ef6927f9a453e8efd3b7d4817b66bce2bc32b956435f1c15b0e1e7f6db790",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "source_comparison": [
+    {
+      "path": "package.json",
+      "before_sha256": "b7fdd9add0d02fe29ec63618f6d7c3733ac99be4418c361218bcd17f371cbc1f",
+      "current_sha256": "b7fdd9add0d02fe29ec63618f6d7c3733ac99be4418c361218bcd17f371cbc1f",
+      "unchanged": true
+    },
+    {
+      "path": "package-lock.json",
+      "before_sha256": "bcebbd59c906ba97750a4d513b397c98efc302735cddd385687e7957f2f1420c",
+      "current_sha256": "bcebbd59c906ba97750a4d513b397c98efc302735cddd385687e7957f2f1420c",
+      "unchanged": true
+    },
+    {
+      "path": "packages/contracts.mjs",
+      "before_sha256": "679630c310f54f5d7af73509c6405448363ac7bf12959863269515944946ee6b",
+      "current_sha256": "679630c310f54f5d7af73509c6405448363ac7bf12959863269515944946ee6b",
+      "unchanged": true
+    },
+    {
+      "path": "packages/presentation.mjs",
+      "before_sha256": "af6ad146da7d7779b632fc503bef95ebcaaca4a84479f8530a9ae7717af7076c",
+      "current_sha256": "af6ad146da7d7779b632fc503bef95ebcaaca4a84479f8530a9ae7717af7076c",
+      "unchanged": true
+    },
+    {
+      "path": "services/agent/agent.mjs",
+      "before_sha256": "1181ce2a46e68444e7ce3b66642d28975f48eee072c19cdfb0d0f150ec5dd3be",
+      "current_sha256": "1181ce2a46e68444e7ce3b66642d28975f48eee072c19cdfb0d0f150ec5dd3be",
+      "unchanged": true
+    },
+    {
+      "path": "services/agent/enrichment-worker.mjs",
+      "before_sha256": "1d80462940cc93cbccae3087a820ad7ad3bf45eceaed3df46d55d84f9b313ca3",
+      "current_sha256": "1d80462940cc93cbccae3087a820ad7ad3bf45eceaed3df46d55d84f9b313ca3",
+      "unchanged": true
+    },
+    {
+      "path": "services/anomaly/detector.mjs",
+      "before_sha256": "8f3eac13243860ce4df849b8a2b7c4a5cf20f2b2ea46143c7111513ce4200d89",
+      "current_sha256": "8f3eac13243860ce4df849b8a2b7c4a5cf20f2b2ea46143c7111513ce4200d89",
+      "unchanged": true
+    },
+    {
+      "path": "services/anomaly/environment.mjs",
+      "before_sha256": "efe0e03d249aafecdb38f6cf48390aa240252d3b07930a0e8f9b13668144d773",
+      "current_sha256": "efe0e03d249aafecdb38f6cf48390aa240252d3b07930a0e8f9b13668144d773",
+      "unchanged": true
+    },
+    {
+      "path": "services/api/auth.mjs",
+      "before_sha256": "a2abaafdc92bcf722b8662fd56e313bd837c2d7897bac04010ac6d56c19f7693",
+      "current_sha256": "a2abaafdc92bcf722b8662fd56e313bd837c2d7897bac04010ac6d56c19f7693",
+      "unchanged": true
+    },
+    {
+      "path": "services/api/engine.mjs",
+      "before_sha256": "b53111392519ec0be568ab53e5ae8d0feaee0f4be2886e448ede299f2ffa6aa3",
+      "current_sha256": "b53111392519ec0be568ab53e5ae8d0feaee0f4be2886e448ede299f2ffa6aa3",
+      "unchanged": true
+    },
+    {
+      "path": "services/api/enrichment.mjs",
+      "before_sha256": "f1f223ebcfbfc2552dab59b0b427faedaf71a2d44970895fbaefdcda4fdfcdc5",
+      "current_sha256": "f1f223ebcfbfc2552dab59b0b427faedaf71a2d44970895fbaefdcda4fdfcdc5",
+      "unchanged": true
+    },
+    {
+      "path": "services/api/monitoring.mjs",
+      "before_sha256": "eba1eaa9a956e300758667eaec0a49ba163fef531b2ba44280129126c5eca1c8",
+      "current_sha256": "eba1eaa9a956e300758667eaec0a49ba163fef531b2ba44280129126c5eca1c8",
+      "unchanged": true
+    },
+    {
+      "path": "services/api/server.mjs",
+      "before_sha256": "d74038f1dc853d1aa8451e7753a4d47f3887f53d13fa1fd7aae7ece5b40dc3cd",
+      "current_sha256": "d74038f1dc853d1aa8451e7753a4d47f3887f53d13fa1fd7aae7ece5b40dc3cd",
+      "unchanged": true
+    },
+    {
+      "path": "services/api/store.mjs",
+      "before_sha256": "6cfa9af1c1cbd6e9d6f4682795ce83a235d1bfcfb55a03108c5a6f12cc3ad1da",
+      "current_sha256": "6cfa9af1c1cbd6e9d6f4682795ce83a235d1bfcfb55a03108c5a6f12cc3ad1da",
+      "unchanged": true
+    },
+    {
+      "path": "services/api/telemetry.mjs",
+      "before_sha256": "414bc70bcaed985779aa7c01b1b5863d50f80ed76641f48ab55dad8dd13baa77",
+      "current_sha256": "414bc70bcaed985779aa7c01b1b5863d50f80ed76641f48ab55dad8dd13baa77",
+      "unchanged": true
+    },
+    {
+      "path": "services/comms/scheduler.mjs",
+      "before_sha256": "35a415f3835a699c013ad0cc748bea2a4b50dd89f9fec643728d51c01efb3402",
+      "current_sha256": "35a415f3835a699c013ad0cc748bea2a4b50dd89f9fec643728d51c01efb3402",
+      "unchanged": true
+    },
+    {
+      "path": "services/prediction/forecast.mjs",
+      "before_sha256": "40ef38b27899808ff98d6db6b6b204e6a1a4a218e5a756868e14846bf91ed361",
+      "current_sha256": "40ef38b27899808ff98d6db6b6b204e6a1a4a218e5a756868e14846bf91ed361",
+      "unchanged": true
+    },
+    {
+      "path": "services/rag/retrieval.mjs",
+      "before_sha256": "cf6b47c1510c518dece068fd3402c0401e193ee938ad8cc86cbb66e1cec4c55b",
+      "current_sha256": "cf6b47c1510c518dece068fd3402c0401e193ee938ad8cc86cbb66e1cec4c55b",
+      "unchanged": true
+    },
+    {
+      "path": "services/telemetry-simulator/simulator.mjs",
+      "before_sha256": "b903ceec75d3cfe420c4f816bb679f367d5a397c21bcacf9eaa26dce0ed2f42c",
+      "current_sha256": "b903ceec75d3cfe420c4f816bb679f367d5a397c21bcacf9eaa26dce0ed2f42c",
+      "unchanged": true
+    },
+    {
+      "path": "apps/mission-control-web/app.mjs",
+      "before_sha256": "2d45ccb6588544e7e29a1476db94044a3fcc4b0a490e0c4e65b10f0a1d2f7cec",
+      "current_sha256": "08cd6ba8cf4d3cfdb4ddc44dadf15c15909cded6a3e36b328396b561826f0c1c",
+      "unchanged": false
+    },
+    {
+      "path": "apps/mission-control-web/icon.svg",
+      "before_sha256": "dac3730fad3614e07b41e0de268a2c861f27f58c45db92910a5c5ab7bcc2be5f",
+      "current_sha256": "dac3730fad3614e07b41e0de268a2c861f27f58c45db92910a5c5ab7bcc2be5f",
+      "unchanged": true
+    },
+    {
+      "path": "apps/mission-control-web/index.html",
+      "before_sha256": "701a72f2ecb9beb684aaf693804b81598fce50c2620e063a239ce063296bad6f",
+      "current_sha256": "743638e614f064c2fb80975f1a5c9d02a68abd2871055eb3ee28ed645f228b36",
+      "unchanged": false
+    },
+    {
+      "path": "apps/mission-control-web/manifest.webmanifest",
+      "before_sha256": "e64b3df200721da6a1c3264dfe1ba7006dc00ae089d5434fbc78f371ab5bc0cf",
+      "current_sha256": "e64b3df200721da6a1c3264dfe1ba7006dc00ae089d5434fbc78f371ab5bc0cf",
+      "unchanged": true
+    },
+    {
+      "path": "apps/mission-control-web/scenes.mjs",
+      "before_sha256": "6109ba3529fc1bd3b6c54e508cb118093563d1586ae1d250d79c5a5d1ea9a3c5",
+      "current_sha256": "6109ba3529fc1bd3b6c54e508cb118093563d1586ae1d250d79c5a5d1ea9a3c5",
+      "unchanged": true
+    },
+    {
+      "path": "apps/mission-control-web/styles.css",
+      "before_sha256": "aaf90e7cb38d13c0cdb1fbec0b6376ad13812377e04c754ae35d8d861ea957c0",
+      "current_sha256": "dac8cdc6bc390a4928473afa35b886ae1d596b8533042e065d6a40b2a76e33d1",
+      "unchanged": false
+    },
+    {
+      "path": "apps/mission-control-web/sw.js",
+      "before_sha256": "0acdc168b5fb984da793560577065ca3371006bad8b324a414087aee911cd5d7",
+      "current_sha256": "0acdc168b5fb984da793560577065ca3371006bad8b324a414087aee911cd5d7",
+      "unchanged": true
+    },
+    {
+      "path": "apps/mission-control-web/ui.mjs",
+      "before_sha256": "f306ad3e2e3a58dfef695ab6e4f4547340939737e6f20ad000725be0c62fee3d",
+      "current_sha256": "f306ad3e2e3a58dfef695ab6e4f4547340939737e6f20ad000725be0c62fee3d",
+      "unchanged": true
+    },
+    {
+      "path": "knowledge/sources.json",
+      "before_sha256": "a40c531e9ca13069cf5130098a56e9f7cc5860f12fb3b4c18764e1a1726bc0bd",
+      "current_sha256": "a40c531e9ca13069cf5130098a56e9f7cc5860f12fb3b4c18764e1a1726bc0bd",
+      "unchanged": true
+    },
+    {
+      "path": "models/forecast-calibration.json",
+      "before_sha256": "1c143331303fb92a9b03300ae3dcc84314f61213228e08e489f9b9138ceb6cbf",
+      "current_sha256": "1c143331303fb92a9b03300ae3dcc84314f61213228e08e489f9b9138ceb6cbf",
+      "unchanged": true
+    },
+    {
+      "path": "models/model-cards/README.md",
+      "before_sha256": "0d2e0db0147f4da06183a4442da553b860dd51b476f3e9cdb9135fc0ff1b54a4",
+      "current_sha256": "0d2e0db0147f4da06183a4442da553b860dd51b476f3e9cdb9135fc0ff1b54a4",
+      "unchanged": true
+    },
+    {
+      "path": "data/public-metadata/catalogue.json",
+      "before_sha256": "ab882b27420e475fe43c2dbe454d09b2d437ecd34ebe7594a6b7aa2cfade85f9",
+      "current_sha256": "ab882b27420e475fe43c2dbe454d09b2d437ecd34ebe7594a6b7aa2cfade85f9",
+      "unchanged": true
+    },
+    {
+      "path": "Dockerfile",
+      "before_sha256": "299ec878a9f7d28a4c92e0f69c74cf5a54c0e5fdaf7cabaa73e13172d94db79e",
+      "current_sha256": "299ec878a9f7d28a4c92e0f69c74cf5a54c0e5fdaf7cabaa73e13172d94db79e",
+      "unchanged": true
+    },
+    {
+      "path": "compose.yaml",
+      "before_sha256": "cda127bf963bad17279d32bdf9e3a39928d596e569530803a0994e7e9ea6d7e2",
+      "current_sha256": "cda127bf963bad17279d32bdf9e3a39928d596e569530803a0994e7e9ea6d7e2",
+      "unchanged": true
+    }
+  ],
+  "software": {
+    "linux_tests": 106,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "duration_ms": 14312.443336,
+    "syntax_import_files": 42,
+    "syntax_import_errors": 0,
+    "windows_tests_reused_before_final_repairs": 105
+  },
+  "certification": {
+    "judge_profile": false,
+    "designated_minimum_machine": false,
+    "physical_presentation_fps": false,
+    "formal_wcag": false,
+    "spoken_screen_reader": false
+  },
+  "notes": [
+    "Earlier200% report numerical results are reused. Its sibling PNGs include later interrupted-run overwrites and are not included in this PNG integrity set.",
+    "Only Landing, mobile Replay/Check-in and200% announcement/recovery/Earth isolation were rerun on resume. Full functional/browser/performance/evaluation results are reused, not counted as fresh.",
+    "Saved performance samples predate the final Landing/toast repairs; they are bounded headless observations, not current physical-display/judge-profile certification.",
+    "No backend or renderer changes; no next module approved."
+  ]
+}

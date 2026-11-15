@@ -1,0 +1,112 @@
+{
+  "schema_version": "astra.n16-06.evidence-manifest.v1",
+  "status": "BLOCKED",
+  "hash_algorithm": "SHA-256",
+  "notice": "Pins code, source snapshots and blocked qualification evidence; not successful tool, containment, scientific or clinical validation. External source/trace locations and hashes are in qualification/outcome reports. Manifest excludes itself.",
+  "files": {
+    "AGENTS.md": {
+      "bytes": 90820,
+      "sha256": "ba2a2931a8fe8ccd55218379c0a4286a7bafdfb69212c8ad8afdfee3d1751fc4"
+    },
+    "artifacts/n16-06-20261029/exception-proposal-original.md.txt": {
+      "bytes": 6353,
+      "sha256": "f31878b7a6515cd019ccc0078c8131c8554d07e763b817a7c2bbf28d21cbc892"
+    },
+    "artifacts/n16-06-20261029/final-validation.json": {
+      "bytes": 1923,
+      "sha256": "07fb5a4a483907e030d590c294b0ba3bfd730629cd88f26ed2b35ec2f7f0e0cc"
+    },
+    "artifacts/n16-06-20261029/frozen-qa.json": {
+      "bytes": 665,
+      "sha256": "3d0f65c5de44a86c2189402a57dc96ef89aabff53c7831a2981f5ab9a5b7592e"
+    },
+    "artifacts/n16-06-20261029/outcome.json": {
+      "bytes": 8263,
+      "sha256": "ca24e8a2bf4a94fa8ac04450c7734fc9c484b73e94da09e4e019114ff04c6878"
+    },
+    "artifacts/n16-06-20261029/preflight.json": {
+      "bytes": 925,
+      "sha256": "068f2a90755828c6a14c8b81479e915a9e88946fc76e2b63ab66e355e8c84b48"
+    },
+    "artifacts/n16-06-20261029/preservation-before.json": {
+      "bytes": 1028305,
+      "sha256": "59367b473ac55950af1464e2ab7df538eb900e2f8afd5244c64d88e269ae67ce"
+    },
+    "artifacts/n16-06-20261029/qa-first.txt": {
+      "bytes": 17991,
+      "sha256": "678e487101240419350f227a228c425a5eb17ca3fbf0709d4c45c1943d4d528a"
+    },
+    "artifacts/n16-06-20261029/qualification.json": {
+      "bytes": 15798,
+      "sha256": "ea682cf80ef9c250c36b5a20097b86715ddc4df23efd8c45db73ef583c1a53f8"
+    },
+    "artifacts/n16-06-20261029/registration.json": {
+      "bytes": 215,
+      "sha256": "a78b23da3bbc12d2c28fd8e8242f635b7411cd805ebb95108f31aed531ae1eb3"
+    },
+    "artifacts/n16-06-20261029/source-snapshots/designated-contract.mjs.txt": {
+      "bytes": 5073,
+      "sha256": "6a8beeae2ce4687b216e15ced65adeef8faab3b308816b7c93f45aedbdecd9c5"
+    },
+    "artifacts/n16-06-20261029/source-snapshots/designated-source.mjs.txt": {
+      "bytes": 25845,
+      "sha256": "434a60110955e7a71d3593c926e2be61aac0e6d156e2b9bc0aa7a4981754b1ff"
+    },
+    "artifacts/n16-06-20261029/source-snapshots/n16-designated-demo.mjs.txt": {
+      "bytes": 1358,
+      "sha256": "702f65aa382b10c315bb6cc8dcc25e343d23956a617e03fa3005b96e1de2a923"
+    },
+    "artifacts/n16-06-20261029/source-snapshots/n16-designated.test.mjs.txt": {
+      "bytes": 13407,
+      "sha256": "fb2d50e58e26435735696e821eba2010e41ad21ab67bb7137da03d517e8e707b"
+    },
+    "docs/CORE_AI_PRIORITY.md": {
+      "bytes": 48712,
+      "sha256": "737076857347ef69c38ae64002e01c5d69c522cc4a94468d08b5e0afd1666af8"
+    },
+    "docs/DECISIONS.md": {
+      "bytes": 76621,
+      "sha256": "5f79fabcb4b09678c5a854e5702597b8bd081485cbdd7f622d6b45bb87ff4d47"
+    },
+    "docs/DE_N16_DESIGNATED_READ_01.md": {
+      "bytes": 8452,
+      "sha256": "c32e4208e06a9973c3494e81023a8cc7934bb479ca3ca80c1f723b0c66919eaa"
+    },
+    "docs/FEATURE_AUDIT.md": {
+      "bytes": 133485,
+      "sha256": "562dce9dd1189007bfec0bc1ac39cfd051334d21fc59d9218cd4fbc76d1c1035"
+    },
+    "docs/MASTER_PLAN.md": {
+      "bytes": 74912,
+      "sha256": "85b1276cea7746e0dd0fb672a41afc6a6d4d3454237ab9e884c33d4759a1a307"
+    },
+    "docs/MODULE_TRACKER.md": {
+      "bytes": 156289,
+      "sha256": "309155df566bd24925c67740b725e275659af954779a80d28dc48901596aa33c"
+    },
+    "docs/N16_06_COMPLETION.md": {
+      "bytes": 10510,
+      "sha256": "0edf331e7a8dd00ac7ba8d4f1df49c76e07a9d1ad87e540ed6b70141468fa1cd"
+    },
+    "docs/SESSION_HANDOFF.md": {
+      "bytes": 374764,
+      "sha256": "cb8c4eef242df30647004124840769be6852fc18b8fe954ca02a5b2997d1469f"
+    },
+    "scripts/n16-designated-demo.mjs": {
+      "bytes": 1358,
+      "sha256": "702f65aa382b10c315bb6cc8dcc25e343d23956a617e03fa3005b96e1de2a923"
+    },
+    "services/agent/designated-contract.mjs": {
+      "bytes": 5073,
+      "sha256": "6a8beeae2ce4687b216e15ced65adeef8faab3b308816b7c93f45aedbdecd9c5"
+    },
+    "services/agent/designated-source.mjs": {
+      "bytes": 25845,
+      "sha256": "434a60110955e7a71d3593c926e2be61aac0e6d156e2b9bc0aa7a4981754b1ff"
+    },
+    "tests/n16-designated.test.mjs": {
+      "bytes": 13407,
+      "sha256": "fb2d50e58e26435735696e821eba2010e41ad21ab67bb7137da03d517e8e707b"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "trial": "30x-overview-performance-2",
+  "pid": 10584,
+  "marker": "ASTRA QA 4ea270f1-9e41-41f5-a8f8-3dc3e9bc4e43",
+  "started_host_ms": 1792447378619,
+  "assistance_requested": true,
+  "status": "passed",
+  "stage": "complete",
+  "confirmation": {
+    "token": "4ea270f1-9e41-41f5-a8f8-3dc3e9bc4e43",
+    "marker": "ASTRA QA 4ea270f1-9e41-41f5-a8f8-3dc3e9bc4e43",
+    "type": "ready",
+    "trusted": true,
+    "source_at_ms": 1792447380240,
+    "visibility": "visible",
+    "focused": true,
+    "received_host_ms": 1792447380240,
+    "wait_started_host_ms": 1792447378624
+  },
+  "page_before": {
+    "ready_state": "complete",
+    "title": "ASTRA Command · Crew Health Intelligence — ASTRA QA 4ea270f1-9e41-41f5-a8f8-3dc3e9bc4e43",
+    "visibility": "visible",
+    "focused": true
+  },
+  "native_before": {
+    "selected_owner_pid": 10584,
+    "source_at_ms": 1792447380685,
+    "selected_visible": true,
+    "selected_title": "ASTRA Command � Crew Health Intelligence - ASTRA QA 4ea270f1-9e41-41f5-a8f8-3dc3e9bc4e43 - Google Chrome",
+    "selected_handle": "0x29070E",
+    "selected_minimized": false,
+    "foreground_pid": 10584,
+    "owned": true,
+    "foreground_handle": "0x29070E",
+    "title_matches": true,
+    "selected_class": "Chrome_WidgetWin_1",
+    "pid": 10584
+  },
+  "activation": {
+    "status": 0,
+    "stdout": "{\"restore_previous_visibility\":true,\"foreground_request_returned\":true,\"pid\":10584,\"foreground_is_test_window\":true,\"method\":\"Supported ShowWindow/SetForegroundWindow only;no foreground-lock override,topmost change or session unlock\"}\r\n",
+    "stderr": ""
+  },
+  "native_after": {
+    "selected_owner_pid": 10584,
+    "source_at_ms": 1792447382194,
+    "selected_visible": true,
+    "selected_title": "ASTRA Command � Crew Health Intelligence - ASTRA QA 4ea270f1-9e41-41f5-a8f8-3dc3e9bc4e43 - Google Chrome",
+    "selected_handle": "0x29070E",
+    "selected_minimized": false,
+    "foreground_pid": 10584,
+    "owned": true,
+    "foreground_handle": "0x29070E",
+    "title_matches": true,
+    "selected_class": "Chrome_WidgetWin_1",
+    "pid": 10584
+  },
+  "page_after": {
+    "ready_state": "complete",
+    "title": "ASTRA Command · Crew Health Intelligence — ASTRA QA 4ea270f1-9e41-41f5-a8f8-3dc3e9bc4e43",
+    "visibility": "visible",
+    "focused": true
+  },
+  "finished_host_ms": 1792447382248
+}

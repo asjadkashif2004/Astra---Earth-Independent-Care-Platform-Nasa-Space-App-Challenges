@@ -1,0 +1,95 @@
+00000000002a9ba0 T build_grammar[abi:cxx11](std::function<void (common_grammar_builder const&)> const&, common_grammar_options const&)
+00000000003211f0 T common_perf_print(llama_context const*, common_sampler const*)
+0000000000321690 T common_sampler_get(common_sampler const*)
+0000000000323ab0 T common_sampler_copy(common_sampler const*, common_sampler*)
+0000000000320ca0 T common_sampler_free(common_sampler*)
+0000000000324fd0 T common_sampler_init(llama_model const*, common_params_sampling&)
+00000000003218b0 T common_sampler_last(common_sampler const*)
+0000000000324d40 T common_sampler_clone(common_sampler*)
+00000000003218f0 T common_sampler_print[abi:cxx11](common_sampler const*)
+00000000003211b0 T common_sampler_reset(common_sampler*)
+0000000000320fb0 T common_sampler_accept(common_sampler*, int, bool)
+0000000000322160 T common_sampler_sample(common_sampler*, llama_context*, int, bool)
+00000000002ace70 T json_schema_to_grammar[abi:cxx11](common_json const&, bool)
+00000000002ac530 T json_schema_to_grammar[abi:cxx11](common_chat_schema_document const&)
+00000000002eac20 T llama_sampler_init_llg(llama_vocab const*, char const*, char const*)
+00000000003216b0 T common_sampler_get_seed(common_sampler const*)
+0000000000321bc0 T common_sampler_prev_str[abi:cxx11](common_sampler*, llama_context*, int)
+0000000000321da0 T common_sampler_type_to_chr(common_sampler_type)
+0000000000321dc0 T common_sampler_type_to_str[abi:cxx11](common_sampler_type)
+000000000031e800 T common_reasoning_budget_force(llama_sampler*)
+00000000003216e0 T common_sampler_get_candidates(common_sampler*, bool)
+0000000000328b20 T common_sampler_types_from_chars(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0000000000327b70 T common_sampler_types_from_names(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&)
+000000000031e7a0 T common_reasoning_budget_get_state(llama_sampler const*)
+00000000003231f0 T common_sampler_sample_and_accept_n(common_sampler*, llama_context*, std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, bool)
+0000000000323430 T common_sampler_sample_and_accept_n(common_sampler*, llama_context*, std::vector<int, std::allocator<int> > const&, bool)
+0000000000323640 T common_sampling_add_grammar_triggers(common_params_sampling&, llama_vocab const*, std::vector<common_grammar_trigger, std::allocator<common_grammar_trigger> >)
+000000000031e7c0 T common_reasoning_budget_get_end_match(llama_sampler const*)
+00000000003216c0 T common_sampler_reasoning_budget_force(common_sampler*)
+0000000000327f50 T common_sampler_sample_and_accept_n_rejection(common_sampler*, llama_context*, std::vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> > const&, std::vector<std::vector<llama_token_data, std::allocator<llama_token_data> >, std::allocator<std::vector<llama_token_data, std::allocator<llama_token_data> > > > const&, bool)
+000000000025d460 T common_init_result::reset_samplers()
+000000000025d420 T common_init_result::sampler(int)
+00000000003057f0 T common_peg_arena::build_grammar(common_grammar_builder const&, bool) const
+0000000000329ae0 W std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type>, true>*, unsigned long)
+00000000003299a0 W std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_rehash(unsigned long, unsigned long const&)
+0000000000329bd0 W std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type> const*>(std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type> const*, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type> const*, unsigned long, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type> > const&, std::integral_constant<bool, true>)
+0000000000329bd0 W std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Hashtable<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type> const*>(std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type> const*, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type> const*, unsigned long, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type> > const&, std::integral_constant<bool, true>)
+0000000000328fe0 W std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::~_Hashtable()
+0000000000328fe0 W std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::~_Hashtable()
+0000000000329fe0 W std::_Hashtable<char, std::pair<char const, common_sampler_type>, std::allocator<std::pair<char const, common_sampler_type> >, std::__detail::_Select1st, std::equal_to<char>, std::hash<char>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_M_rehash(unsigned long, unsigned long const&)
+000000000032a120 W std::_Hashtable<char, std::pair<char const, common_sampler_type>, std::allocator<std::pair<char const, common_sampler_type> >, std::__detail::_Select1st, std::equal_to<char>, std::hash<char>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_Hashtable<std::pair<char const, common_sampler_type> const*>(std::pair<char const, common_sampler_type> const*, std::pair<char const, common_sampler_type> const*, unsigned long, std::hash<char> const&, std::equal_to<char> const&, std::allocator<std::pair<char const, common_sampler_type> > const&, std::integral_constant<bool, true>)
+000000000032a120 W std::_Hashtable<char, std::pair<char const, common_sampler_type>, std::allocator<std::pair<char const, common_sampler_type> >, std::__detail::_Select1st, std::equal_to<char>, std::hash<char>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::_Hashtable<std::pair<char const, common_sampler_type> const*>(std::pair<char const, common_sampler_type> const*, std::pair<char const, common_sampler_type> const*, unsigned long, std::hash<char> const&, std::equal_to<char> const&, std::allocator<std::pair<char const, common_sampler_type> > const&, std::integral_constant<bool, true>)
+0000000000329170 W std::_Hashtable<char, std::pair<char const, common_sampler_type>, std::allocator<std::pair<char const, common_sampler_type> >, std::__detail::_Select1st, std::equal_to<char>, std::hash<char>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::~_Hashtable()
+0000000000329170 W std::_Hashtable<char, std::pair<char const, common_sampler_type>, std::allocator<std::pair<char const, common_sampler_type> >, std::__detail::_Select1st, std::equal_to<char>, std::hash<char>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true> >::~_Hashtable()
+0000000000132b50 W void std::_Destroy_aux<false>::__destroy<common_grammar_trigger*>(common_grammar_trigger*, common_grammar_trigger*)
+0000000000328e50 W std::unordered_map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, common_sampler_type, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type> > >::~unordered_map()
+0000000000328e50 W std::unordered_map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, common_sampler_type, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, common_sampler_type> > >::~unordered_map()
+000000000025aa30 W common_grammar_trigger* std::__uninitialized_copy<false>::__uninit_copy<__gnu_cxx::__normal_iterator<common_grammar_trigger const*, std::vector<common_grammar_trigger, std::allocator<common_grammar_trigger> > >, common_grammar_trigger*>(__gnu_cxx::__normal_iterator<common_grammar_trigger const*, std::vector<common_grammar_trigger, std::allocator<common_grammar_trigger> > >, __gnu_cxx::__normal_iterator<common_grammar_trigger const*, std::vector<common_grammar_trigger, std::allocator<common_grammar_trigger> > >, common_grammar_trigger*)
+000000000013cf50 W common_grammar_trigger* std::__uninitialized_copy<false>::__uninit_copy<common_grammar_trigger const*, common_grammar_trigger*>(common_grammar_trigger const*, common_grammar_trigger const*, common_grammar_trigger*)
+0000000000329440 W void std::vector<common_sampler_type, std::allocator<common_sampler_type> >::_M_realloc_insert<common_sampler_type const&>(__gnu_cxx::__normal_iterator<common_sampler_type*, std::vector<common_sampler_type, std::allocator<common_sampler_type> > >, common_sampler_type const&)
+0000000000329090 W std::vector<common_sampler_type, std::allocator<common_sampler_type> >::reserve(unsigned long)
+00000000001940e0 W void std::vector<common_grammar_trigger, std::allocator<common_grammar_trigger> >::_M_realloc_insert<common_grammar_trigger>(__gnu_cxx::__normal_iterator<common_grammar_trigger*, std::vector<common_grammar_trigger, std::allocator<common_grammar_trigger> > >, common_grammar_trigger&&)
+0000000000255060 W std::vector<common_grammar_trigger, std::allocator<common_grammar_trigger> >::~vector()
+0000000000255060 W std::vector<common_grammar_trigger, std::allocator<common_grammar_trigger> >::~vector()
+000000000026b940 W std::vector<llama_sampler_seq_config, std::allocator<llama_sampler_seq_config> >::_M_default_append(unsigned long)
+0000000000338d30 W std::vector<llama_sampler*, std::allocator<llama_sampler*> >::_M_fill_assign(unsigned long, llama_sampler* const&)
+00000000003296e0 W void std::vector<llama_sampler*, std::allocator<llama_sampler*> >::_M_realloc_insert<llama_sampler*>(__gnu_cxx::__normal_iterator<llama_sampler**, std::vector<llama_sampler*, std::allocator<llama_sampler*> > >, llama_sampler*&&)
+000000000026b7a0 W std::vector<std::unique_ptr<common_sampler, common_sampler_deleter>, std::allocator<std::unique_ptr<common_sampler, common_sampler_deleter> > >::_M_default_append(unsigned long)
+0000000000337b80 W std::vector<std::unique_ptr<common_sampler, common_sampler_deleter>, std::allocator<std::unique_ptr<common_sampler, common_sampler_deleter> > >::~vector()
+0000000000337b80 W std::vector<std::unique_ptr<common_sampler, common_sampler_deleter>, std::allocator<std::unique_ptr<common_sampler, common_sampler_deleter> > >::~vector()
+                 U llama_perf_sampler
+                 U llama_sampler_accept
+                 U llama_sampler_apply
+                 U llama_sampler_chain_add
+                 U llama_sampler_chain_default_params
+                 U llama_sampler_chain_get
+                 U llama_sampler_chain_init
+                 U llama_sampler_chain_n
+                 U llama_sampler_clone
+                 U llama_sampler_copy
+                 U llama_sampler_free
+                 U llama_sampler_get_seed
+                 U llama_sampler_init
+                 U llama_sampler_init_adaptive_p
+                 U llama_sampler_init_dist
+                 U llama_sampler_init_dry
+                 U llama_sampler_init_grammar
+                 U llama_sampler_init_grammar_lazy_patterns
+                 U llama_sampler_init_greedy
+                 U llama_sampler_init_infill
+                 U llama_sampler_init_logit_bias
+                 U llama_sampler_init_min_p
+                 U llama_sampler_init_mirostat
+                 U llama_sampler_init_mirostat_v2
+                 U llama_sampler_init_penalties
+                 U llama_sampler_init_temp
+                 U llama_sampler_init_temp_ext
+                 U llama_sampler_init_top_k
+                 U llama_sampler_init_top_n_sigma
+                 U llama_sampler_init_top_p
+                 U llama_sampler_init_typical
+                 U llama_sampler_init_xtc
+                 U llama_sampler_name
+                 U llama_sampler_reset
+                 U llama_set_sampler

@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "preexisting_files_accounted_for": 3091,
+  "preexisting_unchanged": 3073,
+  "expected_modified": [
+    "AGENTS.md",
+    "apps/mission-control-web/app.mjs",
+    "apps/mission-control-web/index.html",
+    "apps/mission-control-web/sw.js",
+    "docs/CORE_AI_PRIORITY.md",
+    "docs/DECISIONS.md",
+    "docs/DE_N11_SYNTHETIC_01.md",
+    "docs/FEATURE_AUDIT.md",
+    "docs/MASTER_PLAN.md",
+    "docs/MODULE_TRACKER.md",
+    "docs/N11_FINAL_ENGINEERING_COMPLETION.md",
+    "docs/SESSION_HANDOFF.md",
+    "scripts/browser-acceptance.mjs",
+    "scripts/frontend-smoke.mjs",
+    "services/api/server.mjs",
+    "services/api/store.mjs",
+    "tests/dom-harness.mjs",
+    "tests/sleep-lifecycle.test.mjs"
+  ],
+  "added_implementation_files": [
+    "services/n11/contracts.mjs",
+    "services/n11/algorithms.mjs",
+    "services/n11/experiment.mjs",
+    "services/n11/worker.mjs",
+    "services/n11/sources.mjs",
+    "services/n11/service.mjs",
+    "apps/mission-control-web/n11.mjs",
+    "apps/mission-control-web/n11.css",
+    "scripts/browser-n11.mjs",
+    "scripts/n11-acceptance.mjs",
+    "tests/n11.test.mjs",
+    "tests/n11-failures.test.mjs",
+    "docs/N11_SYNTHETIC_CONTRACT.md"
+  ],
+  "unexpected_changed": [],
+  "missing": [],
+  "all_original_copies_hash_verified": true,
+  "source_or_sealed_databases_opened_for_preservation": false,
+  "tables": [
+    {
+      "path": "docs/MASTER_PLAN.md",
+      "unchanged_rows": 27,
+      "removed_rows": [
+        "| N11 Explainable advanced anomaly evaluation \u2014 **Not Started; dependency/exception BLOCKED** | EWMA and multivariate Isolation Forest or measured equivalent, sensor quality/fusion, reproducible train/eval/registry; temporal model only if better than simpler baseline. R35/R37/R38/R59. | N02,N07\u2013N10 | Precision/recall/false alerts per crew-day/latency/scenario matrix, artifact recall/false failure, subject/time/scenario holdouts, interpretable contributors and CPU budget. Document rejected models. [Full audit](N11_FINAL_ENGINEERING_COMPLETION.md); DE-N11-SYNTHETIC-01 proposed/inactive, owner Phase3(4) requires review/activation before implementation. |"
+      ],
+      "added_rows": [
+        "| N11 Explainable advanced anomaly evaluation \u2014 **In Progress; synthetic engineering10/10 qualified; STOP** | Real EWMA/Isolation Forest, source-bound references/quality/contributors, frozen comparison, durable registry/API and actual application presentation. R35/R37/R38/R59. | N02,N07\u2013N10; exact task-only DE-N11-SYNTHETIC-01 accommodates delivered synthetic engineering, not formal dependency closure. | [Completion](N11_FINAL_ENGINEERING_COMPLETION.md): complete metrics/rejected forest,734distinct QA passes/1source skip,11Chrome groups and genuine cold recovery0. Authentic-source/independent-review/hardware/release/promotion gates OPEN. |"
+      ],
+      "only_N11_status_changed": true
+    },
+    {
+      "path": "docs/MODULE_TRACKER.md",
+      "unchanged_rows": 46,
+      "removed_rows": [
+        "| N11\u2013N12,N17\u2013N26 | **Awaiting separate approvals**,no implementation authorized | Existing dependency/verification table in MASTER_PLAN retained |"
+      ],
+      "added_rows": [
+        "| N11 Explainable advanced anomaly evaluation | **In Progress; synthetic engineering10/10 qualified; STOP** | [Completion](N11_FINAL_ENGINEERING_COMPLETION.md); full N02/N07\u2013N10/source/scientific/release gates retained; no promotion or downstream activation. |",
+        "| N12,N17\u2013N26 | **Awaiting separate approvals**,no implementation authorized | Existing dependency/verification table in MASTER_PLAN retained |"
+      ],
+      "only_N11_status_changed": true
+    },
+    {
+      "path": "docs/CORE_AI_PRIORITY.md",
+      "unchanged_rows": 33,
+      "removed_rows": [],
+      "added_rows": [],
+      "only_N11_status_changed": true
+    }
+  ],
+  "formal_N11": "In Progress",
+  "other_module_statuses_changed": false,
+  "N15_support_rule": "INACTIVE",
+  "historical_evidence": "UNCHANGED except exact current governance/report addenda",
+  "tests": {
+    "broad": {
+      "pass": 731,
+      "fail": 0,
+      "skip": 1
+    },
+    "final_N11": {
+      "pass": 72,
+      "fail": 0,
+      "skip": 0
+    },
+    "overlap": 69,
+    "distinct_pass": 734,
+    "distinct_fail": 0,
+    "distinct_skip": 1,
+    "browser_groups": 11,
+    "syntax_files": 237
+  },
+  "end_to_end": "c5ef787d2db4463306a7b6f01aaac5c7afb0f95cb3343225302fedc742aeed13",
+  "cold_recovery_replay": 0,
+  "source_schema_versions": "Additive synthetic schema7; original schemas retained",
+  "scientific_acceptance": "PENDING",
+  "N12_N16": "INACTIVE",
+  "review_approvals_fabricated": false,
+  "permission_boundary": "Task execution ends; no automatic continuation"
+}

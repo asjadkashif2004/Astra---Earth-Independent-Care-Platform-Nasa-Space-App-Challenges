@@ -1,0 +1,25 @@
+{
+  "computer": {
+    "Manufacturer": "LENOVO",
+    "Model": "82YY",
+    "TotalPhysicalMemory": 14861852672
+  },
+  "cpu": {
+    "Name": "AMD Ryzen 5 7430U with Radeon Graphics         ",
+    "NumberOfCores": 6,
+    "NumberOfLogicalProcessors": 12
+  },
+  "gpu": {
+    "Name": "AMD Radeon (TM) Graphics",
+    "DriverVersion": "31.0.21925.1001",
+    "AdapterRAM": 2147483648
+  },
+  "os": {
+    "Caption": "Microsoft Windows 11 Pro",
+    "Version": "10.0.26300",
+    "BuildNumber": "26300"
+  },
+  "source": "Read-only Windows CIM, this session; no serial/account identifiers collected",
+  "recorded_at": "2026-10-18",
+  "certification": "Measured laptop only; designated minimum pending user confirmation"
+}

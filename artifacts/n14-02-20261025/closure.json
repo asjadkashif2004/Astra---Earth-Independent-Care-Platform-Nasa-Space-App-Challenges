@@ -1,0 +1,22 @@
+{
+  "task": "N14-02",
+  "status": "DELIVERED_STOPPED",
+  "module_status": "N14 In Progress",
+  "contract": "astra.claim-assessment.v2",
+  "focused_tests": {"pass":55,"fail":0,"skipped":0},
+  "syntax": {"files":122,"errors":0},
+  "bound_controls": {"total":219,"accepted_literal_positives":34,"rejected":150,"abstained":35,"incorrectly_accepted_negatives":0},
+  "documentation": {"markdown_files":13,"local_links":427,"issues":[]},
+  "preservation": {"file_contents_and_group_membership":485,"ranking_prefix_identical":true,"N14_01_index_vectors_and_evaluation_unchanged":true},
+  "legacy_16_of_16_rejection": "NON_DIAGNOSTIC: old evaluator omitted required binding/role",
+  "unbound_provisional_claims": "NOT_ASSESSED; no inferred bindings or independent medical approval",
+  "model_inference": false,
+  "retrieval_holdout_rerun": false,
+  "dependencies_added": false,
+  "application_integration": false,
+  "lexical_baseline_retained": true,
+  "semantic_benefit_gate": "NOT_MET; unchanged",
+  "independent_numerical_parity": "UNVERIFIED; unchanged",
+  "N15_N16_authorized": false,
+  "next_task_requires_explicit_approval": true
+}

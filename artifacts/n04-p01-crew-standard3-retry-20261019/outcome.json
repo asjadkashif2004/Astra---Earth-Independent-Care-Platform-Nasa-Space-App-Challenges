@@ -1,0 +1,279 @@
+{
+  "at": "2026-10-19T17:22:30.344Z",
+  "outcome": "PASS;individual trial accepted",
+  "scope": "ONE approved headed1x Crew Health standard Trial3 retry;no additional trials",
+  "trial": "1x-crew-standard-3",
+  "browser": "Chrome/155.0.8059.80",
+  "hardware": {
+    "cpu": "AMD Ryzen 5 7430U with Radeon Graphics",
+    "logical_cpus": 12,
+    "ram_bytes": 14861852672,
+    "os": "10.0.26300",
+    "gpu": "AMD Radeon (TM) Graphics"
+  },
+  "started_at": "2026-10-19T17:18:08.673Z",
+  "finished_at": "2026-10-19T17:19:25.970Z",
+  "accepted_trials": [
+    "1x-overview-standard-1",
+    "1x-overview-standard-2",
+    "1x-overview-standard-3",
+    "1x-overview-performance-1",
+    "1x-overview-performance-2",
+    "1x-overview-performance-3",
+    "1x-crew-standard-1",
+    "1x-crew-standard-2",
+    "1x-crew-standard-3"
+  ],
+  "accepted_before": 8,
+  "accepted_after": 9,
+  "required_trials": 24,
+  "remaining": 15,
+  "guard": {
+    "started_host_ms": 1792430302885,
+    "ended_host_ms": 1792430363832,
+    "required_through_host_ms": 1792430363640,
+    "last_native": {
+      "source_at_ms": 1792430363830,
+      "host_at_ms": 1792430363831
+    },
+    "native_identity": {
+      "selected_owner_pid": 18220,
+      "source_at_ms": 1792430303343,
+      "foreground_handle": "0x707D6",
+      "type": "sample",
+      "selected_handle": "0x707D6",
+      "foreground_pid": 18220,
+      "owned": true,
+      "title_matches": true,
+      "selected_class": "Chrome_WidgetWin_1",
+      "pid": 18220,
+      "check_ms": 9.833
+    },
+    "native_samples": 233,
+    "page_samples": 243,
+    "page": {
+      "started_at_ms": 1792430303389,
+      "source_at_ms": 1792430363832,
+      "visibility": "visible",
+      "focused": true,
+      "failure": null,
+      "stats": {
+        "checks": 243,
+        "total_check_ms": 1.699999999254942,
+        "max_check_ms": 0.10000000149011612
+      }
+    },
+    "limits": {
+      "poll_ms": 250,
+      "stale_ms": 1000,
+      "startup_ms": 8000,
+      "max_active_ms": 75000
+    },
+    "native_check_ms": {
+      "total": 30.973600000000005,
+      "max": 9.833
+    },
+    "failure": null,
+    "limitation": "Event detection plus 250ms sampling;sub-poll native changes may escape. Observer overhead is included,not subtracted;not physical visibility or scanout proof."
+  },
+  "native_activation": {
+    "restore_previous_visibility": true,
+    "foreground_request_returned": true,
+    "pid": 18220,
+    "foreground_is_test_window": true,
+    "method": "Supported ShowWindow/SetForegroundWindow only;no foreground-lock override,topmost change or session unlock"
+  },
+  "measurements": {
+    "host_batches": 60,
+    "captures": 60,
+    "visible_numeric_samples": 360,
+    "metric_groups": 36,
+    "scalar_observations": 3600,
+    "dom_p95_ms": 78,
+    "capture_p95_ms": 298,
+    "worst_group_dom_p95_ms": 86,
+    "worst_group_capture_p95_ms": 311,
+    "tick_p95_ms": 42.02490000000398,
+    "host_deadline_lateness_max_ms": 84.94320000000153,
+    "queue_stress": {
+      "pending_packets": 881,
+      "pending_bytes": 58597033,
+      "required_at_1x": {
+        "packets": 825,
+        "bytes": 54000000,
+        "origin": "Unchanged-backend failing60-second baseline;not a clinical or general queue capacity limit"
+      }
+    },
+    "out_of_window": 0,
+    "trace_data_loss": false,
+    "viewport_css": [
+      1920,
+      1080
+    ],
+    "native_window": {
+      "windowId": 793668702,
+      "bounds": {
+        "left": 0,
+        "top": 0,
+        "width": 1536,
+        "height": 864,
+        "windowState": "fullscreen"
+      }
+    },
+    "graphics_mode": "WEBGL2",
+    "performance_mode": false,
+    "reduced_motion": false
+  },
+  "numeric": {
+    "direct_ocr": 356,
+    "reviewed_manual_anchors": 4,
+    "verified": 360,
+    "total": 360,
+    "unresolved": 0,
+    "recovery_values": [
+      {
+        "file": "1x-crew-standard-3-10.png",
+        "id": 60,
+        "crew_id": "CREW-02",
+        "metric": "heart_rate",
+        "reviewed_numeric": "68",
+        "screenshot_sha256": "adf0d70e73ac1b191b8b475a06ff5d0d6042f7e45f3768480af601e23611ed59",
+        "glyph_sha256": "bf1c5fbe89bd4aea3348e683df48e00633547bbec1d9c0b88def81f1f864d40f"
+      },
+      {
+        "file": "1x-crew-standard-3-20.png",
+        "id": 120,
+        "crew_id": "CREW-03",
+        "metric": "heart_rate",
+        "reviewed_numeric": "68",
+        "screenshot_sha256": "58669a52ec60542e9fc5980ac3bee40600dbf6f539d75032fec16f71e57350fe",
+        "glyph_sha256": "0f18105a767782f9caf61a3aad33851919c57a16f3a5f590d54ce7d2b2d7b111"
+      },
+      {
+        "file": "1x-crew-standard-3-30.png",
+        "id": 180,
+        "crew_id": "CREW-04",
+        "metric": "heart_rate",
+        "reviewed_numeric": "67",
+        "screenshot_sha256": "ad4148d4797fe44c2688456556868a3a7e0344a5304a0e60ff0e88f23b764f4e",
+        "glyph_sha256": "ea970209f655127521815fc4a04f088e731871aba2ffa75a90d809c85262c50d"
+      },
+      {
+        "file": "1x-crew-standard-3-40.png",
+        "id": 240,
+        "crew_id": "CREW-05",
+        "metric": "heart_rate",
+        "reviewed_numeric": "69",
+        "screenshot_sha256": "85959452e5217bde3e7328c4cd70e7700d073e15da38726ecf30993e338abc6e",
+        "glyph_sha256": "7ca82bb5aca9836cdf5a3e05e1d03e887dc86040d3e01327fa947fc583e3b9f6"
+      }
+    ]
+  },
+  "source_correlation_provenance": "Passed unchanged actual read-only fixture audit,including correct crew/metric/observation timestamp,ingestion clock,synthetic provenance/seed/scenario/generator,verified integrity,good quality,and60scalars per measured batch",
+  "console_errors": [],
+  "http_errors": [
+    {
+      "url": "http://127.0.0.1:55849/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    }
+  ],
+  "integrity": {
+    "source_files_checked": 81,
+    "source_changes": [],
+    "historical_files_checked": 581,
+    "historical_changes": [],
+    "original_fixture_unchanged": true,
+    "current_evidence_sha256": {
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-0.png": "721ce27e9452d9897e3173059c8ad0b82a98e3fdc4fb30a74c0d39493f43e9cb",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-1.png": "75e5b07a8adc4f8a3201f168c4317164c929e7186f79fb9fdc0ed33e2c2299c2",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-10.png": "adf0d70e73ac1b191b8b475a06ff5d0d6042f7e45f3768480af601e23611ed59",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-11.png": "b2771bf366e7e74281a3d6eeb90dfc39492dafdbbeb97f9afbdb336d74428be4",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-12.png": "cbf0e53b26f8b7bf6c1d4add0769b28b82ddb7e3fcbd60caeeb3634394e838f1",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-13.png": "b6ffeb5f806255930e591558dd5c755ad71dc275f7bdf408190719a5a521a9c3",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-14.png": "c7610f015a5e3b927a71f03bd76ee9f17aebfa7fa234d030179bc8d9a94380c2",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-15.png": "a266596d88a992f00b3c626c62e0e7805f4468af6c19589bf32d61fb39ffd766",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-16.png": "01cf65128179a781ce00f47aea05deae77205667026dfb089dce4899be1fb061",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-17.png": "8244494ef969dce4bd046f3b47b55e63a494abc005e5c86e543e9af24fb2de56",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-18.png": "6a7b9f4b013d04e37344b5b8c257784dfb453239646164e9a70971a0a4efb14d",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-19.png": "b7f8b935ccfffc23eb8295ca61f8d7d230fae7eae2420df3414cf410bc5a2b4d",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-2.png": "4265ac1bddc01b8bda20dc66dc427830290136d8e9be0fcbbfefd643add9d74a",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-20.png": "58669a52ec60542e9fc5980ac3bee40600dbf6f539d75032fec16f71e57350fe",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-21.png": "359ba54f24e8df44001804c8bbdb31e92a26d62d32330ddd6ff4adb52d0fd766",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-22.png": "5d518c2499ae11bd96ba21c850c09b2f451dcf59e77b08057782acfa198217b5",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-23.png": "bb6c110d9dacb5f04102e52885b55743f37b39756bc43166a37e7b08a1e46676",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-24.png": "ab118e759cca407bfc426dff2698639a6e45382e8606fc5f724e39d31ae4a760",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-25.png": "e47c83612700476d477f1c746feda8069beafeea490b98bf564fb98fdefb07fd",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-26.png": "9c607a37676cf6f9ae76316c0200dcf2456ac7162fa82aeac2bcff88811e814e",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-27.png": "7c65a50c19b0859a59928abedac7808f5d4fa373245ff4e19a0b10b1cb0886f9",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-28.png": "a0ec09083ef9045e5682ac242146e551ee90b438fb80b176ca1f6da2a4982e8a",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-29.png": "1628a6b9aeeedbe3d3716cf3c35184fa09ae7e9de5cd2516e2538a0c7997fcbe",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-3.png": "3dc34dbef1ffde2582eb8190c8c2ab2033415b70cae8ec7f481e30308f4c9d10",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-30.png": "ad4148d4797fe44c2688456556868a3a7e0344a5304a0e60ff0e88f23b764f4e",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-31.png": "3e2f6e007819e73ceb967b03b5718be9a4d8fd542e688c9148275dec468969ed",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-32.png": "017eefc64d92bec748290ea86034fb4de41c97dc408d195cf1fb04d591a9d376",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-33.png": "903eb86e0ffe092a0ca9c4775081909e64b47b9f8832ee0dc224b4ad40e7d711",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-34.png": "1d28f0f67aaca9a4587f1b751fb6b0bf3d7612f1a85d8b0b849791bfbe13f40f",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-35.png": "f0c9ccf0e0ce4d677b5a504d1c10261ee86a62b26c2f8063590c9712d8946137",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-36.png": "4bd9aa52857b8dc49d257ff0970fc0a7f5459b27b81e4c7a044aae2c5667b369",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-37.png": "a5b7758879a584278ccd39032e3227b054c083bf9ab8aa57a7e9980a976f0107",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-38.png": "1789356143d9426f26ce088173bf8d931caa190bc6a4fe38397400e14cbe3b69",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-39.png": "21779eaea59827bb5ec29ae02a68c38f4a9950a1ee371f7d0623885d5c2acabf",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-4.png": "f0d45ca5326c92e67d228fd41d61c200c379c29830082f27bc15a80bd17d64a5",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-40.png": "85959452e5217bde3e7328c4cd70e7700d073e15da38726ecf30993e338abc6e",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-41.png": "33b9da051b801c2c92ab55cf5c4fa8df59c2a4c9f98d66ee0ec0c956a7450a6f",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-42.png": "8f3bdd25316882f321d37510daf64c115383c8a77777db90abccc645626f8896",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-43.png": "732beb5009b1bb65a3eaf1a1c4feb8334a3ebee37394a3fb12db22869256998e",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-44.png": "1f2a7f6d118a4e8c7453a8c35db36e18c967855e3cbb777c571d28e86ed622ae",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-45.png": "e803443557398917b954d81507a12070119a09a94b71b9fa5bc6505343ab36f8",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-46.png": "a221a3b27ecaaa0f0695f15c9081db07c90ac5e496f799fcdba852ea706dc07f",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-47.png": "b329c34e6dc6323127d313b5f249f456717618db41b504996f8512c3a7b01569",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-48.png": "694d2f39ca5b67946290f3ae20bd02fa6bc2d75aab6f3c0b9e852b295bd8c50a",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-49.png": "78b2cac6899f8c99e90327f9a8ac1846b05751aa7c81d2f911418cd4c2d8705b",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-5.png": "09a447fe76f924a81955c914f703d20f0968c7e41a7b39245b08ec9bae41afab",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-50.png": "91b97ab11ec80316f1dc60194b319b7ba1a76051949c1b2d592843660369d083",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-51.png": "3e7ad1e4c35c10c4d56b058b57f0453bcf117a4de9c0fd156a132dd94231ecc5",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-52.png": "97f94c10539adfdbbbe4bfca8fe909d098ec718667cacd22f7794546ce487953",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-53.png": "d2a0e92903566e3f281fe419773ad4fbadf3022e68be1b96176637b9d54a0cc9",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-54.png": "c526a25f1627648b490bfeed05d3938f2fbfbfdc021a5bdcc2f03dbdae712094",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-55.png": "b1c359a09aba7c227c2f9d1f42bbda2d552deeee736d3e69b1b233615b649dce",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-56.png": "16978b3322cb33655caac0d97092fb38a370e244af3df406f134df79e3fbc6e6",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-57.png": "a397711825a0254fa1c9c8acc3bc27b176dd326e1c7313da7582e72546cde66f",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-58.png": "cbf6226f9844dcb72d759cf3159d1b88be9be0c7f20720794aad777b532ad4fe",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-59.png": "0061cb2863d5b9b826961a57814d8a997a9335eb3250a60da38fd004000e16a7",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-6.png": "1737251deb89dda90d063c07d4211f3ce89b846f59cc1a4dd3a9c785381ead20",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-7.png": "63cd406ffb27f839d8d48cb09c412329a129c559d341b35862d2d9505308d435",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-8.png": "69428e40fef217dfa5c58d2b9d16ea33a5ea5280534be7247f136df8426f07ab",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3-9.png": "3b08d3ceb326d214440ce2a389bdfebdcefefaedd565a50bb4e529c185f5c46c",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3.raw.json": "749060689500b9bd7e07d48fb5fd71ab6dac0105dc9c37d805422a30d12450e0",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3.raw.jsonl": "f10096463fec17c0072498c8ef881e49373ff510e59174bd7cd2535dab673f0b",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/1x-crew-standard-3.trace.json.gz": "2f75ca3597748ace9c5e492abc75790ada86a4dda5e5a7597f9469ecb2ac43cb",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/assessment-reviewed.json": "249ce70d1bb744d298aa98aa1e1ca0161912761244b95911b725e9a0f2954519",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/assessment.json": "89f3eb1efb3b859126c522187ff33aa55a3ebdeac433e7ab34ab736836464de4",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/fixture.sqlite": "6d314c2077d9b8bc8657865b84756b8de9f48c2283b826ffacf44ab8ee644c1f",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/fixture.sqlite-shm": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/fixture.sqlite-wal": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/ocr-manifest.json": "34a510de2330b785e21743c5a8acbb5fb5114b0e72f8aeed334153e72fec6787",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/ocr.json": "63bdfb1ab65e50d61dd7a50019cd36b7118f09ae55d02f64ee4090ec61474a6c",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/partial.json": "2798b881953735809764b21c2e882205536288fe3abe7b4b2949e59093322e7f",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/preflight.json": "e575cd5efd795ebdc6f7469a789f7cb4fb61fb7de64a303ca890c23c0b0252ff",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/report.json": "f3e2db97b949766c1618d3eb9bacb667bd6fa01549b73e79834e05e865dae62c",
+      "artifacts/n04-p01-crew-standard3-retry-20261019/reviews.json": "e79b7043cdd942d6d9f3968179502a8bf54816b00faaac06346744a35e91c9bd"
+    },
+    "passed": true
+  },
+  "full_matrix_accepted": false,
+  "limitations": [
+    "Capture completion is a rendered-capture bound,not physical scanout.",
+    "Native250ms sampling/lifecycle events cannot certify every unobserved instant.",
+    "Observer native API/page scalar-check costs exclude full IPC/serialization overhead;no causal performance comparison.",
+    "Reference laptop is not a designated-minimum AC-20 certification."
+  ],
+  "status": {
+    "N03": "Partial",
+    "N04": "Partial",
+    "AC20": "Open / Unverified",
+    "final_visual_approval": "Pending"
+  },
+  "next_action": "STOP;remaining15collections require separate explicit approval. Reuse all9accepted trials."
+}

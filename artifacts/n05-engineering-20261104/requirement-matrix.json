@@ -1,0 +1,195 @@
+{
+  "official_families": 4,
+  "engineering_portions_implemented": 4,
+  "engineering_portions_qualified": 4,
+  "audit_areas_qualified": 8,
+  "audit_areas_total": 8,
+  "audit_ID_note": "N05-E01..08 are engineering acceptance checks derived from official four-family scope, not new official specification IDs. R06 is reused crew persistence, not an invented anatomy feature.",
+  "requirements": [
+    {
+      "requirement_id": "R06",
+      "official_specification": [
+        "docs/MASTER_PLAN.md:N05",
+        "docs/REQUIREMENTS.md:R06",
+        "research/ASTRA_Deep_Research.md:Digital-Twin Renderer",
+        "docs/N05_01_COMPLETION.md",
+        "docs/DE_AC20_01.md"
+      ],
+      "purpose": "Mission/crew persistence reference reused from N01",
+      "existing_implementation": "Delivered N05-01 source/archive and static reference renderer; N01/N02/N04 foundations retained.",
+      "missing_engineering_completed": "Existing crew/session scope, no new DB schema or writes",
+      "required_3D_assets": "Three unchanged approved GLB2 files / five semantic meshes; BodyParts3D4.3 originals326",
+      "source_rights": "Existing CC-BY-SA-2.1-JP source/derivative attribution and share-alike; Three.js0.186.1 MIT, no new assets/downloads",
+      "frontend_integration": "Existing Crew Health, canonical crew identities, permitted role/session/N03 lifecycle; no new workspace or backend endpoint",
+      "rendering_behavior": "Static reference only; detail663277triangles/coarse253117; on-demand frame ownership; no organ physiology",
+      "interactive_controls": "Native pointer, one-finger rotation/two-finger pinch; keyboard/buttons, zoom bounds/reset, layers, quality, explicit reload. No N06 picking.",
+      "accessibility": "Fourviewports/native200%, AX/axe/contrast,120final Tab transitions, opaque status, text and existing schematic fallback",
+      "performance": "Six warmed60s reference active-camera/source trials and source-to-DOMp95; sampled heap and exact payload; physical acceptance remains separate",
+      "testing": [
+        "qa-summary.json",
+        "browser-06/report.json",
+        "browser-zoom-01/report.json",
+        "browser-02/report.json",
+        "source-audit-01.json",
+        "source-audit-cold-02.json"
+      ],
+      "governance": "Owner N05 mission/explicit bounded resumption; DE-AC20-01 retained, no new exception activation",
+      "engineering_status": "PASS",
+      "formal_status": "Qualified N05 engineering portion; broader clinical/N06 uses remain outside scope",
+      "limitations": "Crew identity comes from existing authorized snapshot/API. Generic geometry is shared, not an individual reconstruction.",
+      "formal_closure_condition": "Satisfy original full-N05 performance/review/release conditions without closing N03 AC20 or activating N06 by inference."
+    },
+    {
+      "requirement_id": "R30",
+      "official_specification": [
+        "docs/MASTER_PLAN.md:N05",
+        "docs/REQUIREMENTS.md:R30",
+        "research/ASTRA_Deep_Research.md:Digital-Twin Renderer",
+        "docs/N05_01_COMPLETION.md",
+        "docs/DE_AC20_01.md"
+      ],
+      "purpose": "Translucent360\u00b0 human/organ/skeleton renderer foundation",
+      "existing_implementation": "Delivered N05-01 source/archive and static reference renderer; N01/N02/N04 foundations retained.",
+      "missing_engineering_completed": "Five actual source meshes, 326 original elements, camera/layer controls",
+      "required_3D_assets": "Three unchanged approved GLB2 files / five semantic meshes; BodyParts3D4.3 originals326",
+      "source_rights": "Existing CC-BY-SA-2.1-JP source/derivative attribution and share-alike; Three.js0.186.1 MIT, no new assets/downloads",
+      "frontend_integration": "Existing Crew Health, canonical crew identities, permitted role/session/N03 lifecycle; no new workspace or backend endpoint",
+      "rendering_behavior": "Static reference only; detail663277triangles/coarse253117; on-demand frame ownership; no organ physiology",
+      "interactive_controls": "Native pointer, one-finger rotation/two-finger pinch; keyboard/buttons, zoom bounds/reset, layers, quality, explicit reload. No N06 picking.",
+      "accessibility": "Fourviewports/native200%, AX/axe/contrast,120final Tab transitions, opaque status, text and existing schematic fallback",
+      "performance": "Six warmed60s reference active-camera/source trials and source-to-DOMp95; sampled heap and exact payload; physical acceptance remains separate",
+      "testing": [
+        "qa-summary.json",
+        "browser-06/report.json",
+        "browser-zoom-01/report.json",
+        "browser-02/report.json",
+        "source-audit-01.json",
+        "source-audit-cold-02.json"
+      ],
+      "governance": "Owner N05 mission/explicit bounded resumption; DE-AC20-01 retained, no new exception activation",
+      "engineering_status": "PASS",
+      "formal_status": "Qualified N05 engineering portion; broader clinical/N06 uses remain outside scope",
+      "limitations": "Reference geometry only; heart pulse, region picking, medical highlight and data linkage belong to N06. Anatomical accuracy is unreviewed.",
+      "formal_closure_condition": "Satisfy original full-N05 performance/review/release conditions without closing N03 AC20 or activating N06 by inference."
+    },
+    {
+      "requirement_id": "R33",
+      "official_specification": [
+        "docs/MASTER_PLAN.md:N05",
+        "docs/REQUIREMENTS.md:R33",
+        "research/ASTRA_Deep_Research.md:Digital-Twin Renderer",
+        "docs/N05_01_COMPLETION.md",
+        "docs/DE_AC20_01.md"
+      ],
+      "purpose": "Progressive LOD and fallback",
+      "existing_implementation": "Delivered N05-01 source/archive and static reference renderer; N01/N02/N04 foundations retained.",
+      "missing_engineering_completed": "Two deterministic runtime tiers, progressive groups, cancellation, source validation, reload, context/offline fallbacks",
+      "required_3D_assets": "Three unchanged approved GLB2 files / five semantic meshes; BodyParts3D4.3 originals326",
+      "source_rights": "Existing CC-BY-SA-2.1-JP source/derivative attribution and share-alike; Three.js0.186.1 MIT, no new assets/downloads",
+      "frontend_integration": "Existing Crew Health, canonical crew identities, permitted role/session/N03 lifecycle; no new workspace or backend endpoint",
+      "rendering_behavior": "Static reference only; detail663277triangles/coarse253117; on-demand frame ownership; no organ physiology",
+      "interactive_controls": "Native pointer, one-finger rotation/two-finger pinch; keyboard/buttons, zoom bounds/reset, layers, quality, explicit reload. No N06 picking.",
+      "accessibility": "Fourviewports/native200%, AX/axe/contrast,120final Tab transitions, opaque status, text and existing schematic fallback",
+      "performance": "Six warmed60s reference active-camera/source trials and source-to-DOMp95; sampled heap and exact payload; physical acceptance remains separate",
+      "testing": [
+        "qa-summary.json",
+        "browser-06/report.json",
+        "browser-zoom-01/report.json",
+        "browser-02/report.json",
+        "source-audit-01.json",
+        "source-audit-cold-02.json"
+      ],
+      "governance": "Owner N05 mission/explicit bounded resumption; DE-AC20-01 retained, no new exception activation",
+      "engineering_status": "PASS",
+      "formal_status": "PARTIAL \u2014 physical/hardware acceptance unverified",
+      "limitations": "Reference six60s trials pass as engineering evidence. Physical DE/AC20, full system and peak GPU certification remain unverified.",
+      "formal_closure_condition": "Satisfy original full-N05 performance/review/release conditions without closing N03 AC20 or activating N06 by inference."
+    },
+    {
+      "requirement_id": "R67",
+      "official_specification": [
+        "docs/MASTER_PLAN.md:N05",
+        "docs/REQUIREMENTS.md:R67",
+        "research/ASTRA_Deep_Research.md:Digital-Twin Renderer",
+        "docs/N05_01_COMPLETION.md",
+        "docs/DE_AC20_01.md"
+      ],
+      "purpose": "Asset/runtime/version provenance",
+      "existing_implementation": "Delivered N05-01 source/archive and static reference renderer; N01/N02/N04 foundations retained.",
+      "missing_engineering_completed": "Immutable originals/GLBs, fixed local Three.js, hashes, source rights, reproducible cold audit",
+      "required_3D_assets": "Three unchanged approved GLB2 files / five semantic meshes; BodyParts3D4.3 originals326",
+      "source_rights": "Existing CC-BY-SA-2.1-JP source/derivative attribution and share-alike; Three.js0.186.1 MIT, no new assets/downloads",
+      "frontend_integration": "Existing Crew Health, canonical crew identities, permitted role/session/N03 lifecycle; no new workspace or backend endpoint",
+      "rendering_behavior": "Static reference only; detail663277triangles/coarse253117; on-demand frame ownership; no organ physiology",
+      "interactive_controls": "Native pointer, one-finger rotation/two-finger pinch; keyboard/buttons, zoom bounds/reset, layers, quality, explicit reload. No N06 picking.",
+      "accessibility": "Fourviewports/native200%, AX/axe/contrast,120final Tab transitions, opaque status, text and existing schematic fallback",
+      "performance": "Six warmed60s reference active-camera/source trials and source-to-DOMp95; sampled heap and exact payload; physical acceptance remains separate",
+      "testing": [
+        "qa-summary.json",
+        "browser-06/report.json",
+        "browser-zoom-01/report.json",
+        "browser-02/report.json",
+        "source-audit-01.json",
+        "source-audit-cold-02.json"
+      ],
+      "governance": "Owner N05 mission/explicit bounded resumption; DE-AC20-01 retained, no new exception activation",
+      "engineering_status": "PASS",
+      "formal_status": "Qualified N05 engineering portion; broader clinical/N06 uses remain outside scope",
+      "limitations": "CC-BY-SA2.1Japan terms and MIT runtime notices retained. No external acquisition or clinical source approval inferred.",
+      "formal_closure_condition": "Satisfy original full-N05 performance/review/release conditions without closing N03 AC20 or activating N06 by inference."
+    }
+  ],
+  "engineering_checks": [
+    {
+      "id": "N05-E01",
+      "purpose": "Source/rights",
+      "official_family": "R67",
+      "status": "PASS within authorized research/demo scope"
+    },
+    {
+      "id": "N05-E02",
+      "purpose": "Actual geometry/hierarchy",
+      "official_family": "R30",
+      "status": "PASS within authorized research/demo scope"
+    },
+    {
+      "id": "N05-E03",
+      "purpose": "Progressive two-tier LOD",
+      "official_family": "R33",
+      "status": "PASS within authorized research/demo scope"
+    },
+    {
+      "id": "N05-E04",
+      "purpose": "Connected camera/layer/quality controls",
+      "official_family": "R06/R30",
+      "status": "PASS within authorized research/demo scope"
+    },
+    {
+      "id": "N05-E05",
+      "purpose": "Bounded loading/integrity",
+      "official_family": "R33/R67",
+      "status": "PASS within authorized research/demo scope"
+    },
+    {
+      "id": "N05-E06",
+      "purpose": "Lifecycle/context/cold/offline recovery",
+      "official_family": "R33",
+      "status": "PASS within authorized research/demo scope"
+    },
+    {
+      "id": "N05-E07",
+      "purpose": "Responsive accessibility/fallback",
+      "official_family": "R30/R33",
+      "status": "PASS within authorized research/demo scope"
+    },
+    {
+      "id": "N05-E08",
+      "purpose": "Performance/resource evidence",
+      "official_family": "R33",
+      "status": "PASS within authorized research/demo scope"
+    }
+  ],
+  "formal_N05": "In Progress",
+  "AC20": "Open / Unverified",
+  "N06": "Not Started \u2014 Deferred / INACTIVE"
+}

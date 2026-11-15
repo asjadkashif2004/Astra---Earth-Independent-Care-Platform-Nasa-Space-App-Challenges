@@ -1,0 +1,11 @@
+{
+  "status": "insufficient_support",
+  "abstained": true,
+  "reason": "No complete literal span with matching source role. Paraphrase/partial/conflict entailment is unverified.",
+  "citations": [],
+  "network_attempts": [],
+  "elapsed_ms": 22.70232999999999,
+  "process_peak_rss_bytes": 102301696,
+  "research_only": true,
+  "model_revision": "751bff37182d3f1213fa05d7196b954e230abad9"
+}

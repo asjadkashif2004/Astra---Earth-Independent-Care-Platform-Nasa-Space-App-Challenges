@@ -1,0 +1,63 @@
+{
+  "task": "N15-06",
+  "frozen_utc": "2026-10-27T07:17:11.193670+00:00",
+  "before_native_generation": true,
+  "generation_limit": 1,
+  "question": "What environmental accommodations must a spacecraft system provide for crew sleep?",
+  "prompt_sha256": "6367343e8b00c0ae38c9868227eedb79db612178f5e5888a78512db190fb61c0",
+  "selection_snapshot_sha256": "6a1da1dcab29f39661ccf00ed4fec36c4b05288df9701c7e0c16bbf408b97d2d",
+  "grammar": {
+    "schema_version": "astra.n15-06.grammar.v1",
+    "allowed_ids": [
+      "window-ac8d6151e692badfd03a7755d10976b91434022f57fb270e7a0e92855eb7eb84"
+    ],
+    "text": "root ::= \"{\\\"decision\\\":\\\"SELECT\\\",\\\"evidence_ids\\\":[\\\"window-ac8d6151e692badfd03a7755d10976b91434022f57fb270e7a0e92855eb7eb84\\\"]}\" | \"{\\\"decision\\\":\\\"ABSTAIN\\\",\\\"evidence_ids\\\":[]}\"\n",
+    "sha256": "d6e32d1a74bf8526a6e48ad05e2025c9ef2c7a96425631e890db7bf7ee22f09e"
+  },
+  "cross_language_grammar_regeneration": "PASS",
+  "protected_hashes": {
+    "services/research-answer/selection.mjs": "acd4aba6f44ccd538032193de4056de8a1de33ec2bfda6da2308a1a50111879f",
+    "services/research-retrieval/retrieval.mjs": "9b3584dd9ec3fbb21602f5679cff6cebba9fae6cb2d4d68c758bfd9a10969d93",
+    "services/research-retrieval/contract.mjs": "a7786ebd82aaae3a71f81f5648d49bb855e04c347883d166ff4afd9f77e233b3",
+    "data/research/n14-01/index/index.json": "56f62593fa9a6a80d010be77bf0654c1225198d1d052704e9301a61f4f65d39c",
+    "data/research/n14-01/index/vectors.f32": "578e1b152cff43974293f7bd4369c72a747b60cff8e6dc81236f7676f521f665",
+    "data/research/n14-01/index/manifest.json": "0223121f1aa333a4bc902b2fa1e4ba8928ef89e498d4d98f07b092f18f00213f"
+  },
+  "files": [
+    {
+      "path": "services/research-answer/grammar.mjs",
+      "sha256": "571417918a816ca5c7b8cf1dda0a55b0e9bf7886dfc278524255687e2fa75c1d",
+      "bytes": 2285
+    },
+    {
+      "path": "scripts/n15-research-answer.mjs",
+      "sha256": "f1f3da645e53367b5be85dc4f787e3cb10de94c312e61e0b61cdcecfe6bf1194",
+      "bytes": 8556
+    },
+    {
+      "path": "scripts/n15_research_runtime.py",
+      "sha256": "99248f34a86e6b915286c51bc41e7a72463f8ea13f64ce2e32b66d8aee6e064a",
+      "bytes": 15377
+    },
+    {
+      "path": "tests/research-grammar.test.mjs",
+      "sha256": "bab56fc2bb1bcf0f83d479e867aded61f5d181a7a0915efdee19e7a42dfbc0c0",
+      "bytes": 6210
+    },
+    {
+      "path": "tests/n15_research_runtime_test.py",
+      "sha256": "2753099d1e200b7e996f826e1fe89e2ded00a218ca0e2ad7ea9fbe5a9926ff61",
+      "bytes": 4640
+    },
+    {
+      "path": "data/research/n15-06/demo-plan.json",
+      "sha256": "2c033f25ebdd516ebaadf475a1e1bd306496c9a1976e9dbb13e04db0a0eda253",
+      "bytes": 1304
+    },
+    {
+      "path": "docs/N15_06_PLAN.md",
+      "sha256": "6d87c7895a3db6fd14178df6e0372fa70ed2e78da4adb0ee4a48ea6e56f5a76f",
+      "bytes": 4080
+    }
+  ]
+}

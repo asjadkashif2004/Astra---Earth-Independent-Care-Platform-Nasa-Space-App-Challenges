@@ -1,0 +1,11 @@
+# Independent research-evidence review packet — version 1
+
+This packet contains a fixed set of general spaceflight sleep, circadian, fatigue and workload research excerpts. It is not clinical guidance, an astronaut medical record, or an endorsement by NASA or any reviewer. Existing excerpt roles and associations are engineering curation, not independent approval. Review them against the preserved original publications.
+
+Only receive this isolated packet and the two original PDFs identified by filename, version and SHA-256 in `evidence.json`. Ask the custodian for those existing originals; do not use unrelated references as additional eligible evidence. No automatic downloading is required. The text file is a readable copy; JSON bindings carry exact provenance. PDF page numbers are physical pages counted from one; `page_index` starts at zero. Printed page labels may differ and are not established by this export.
+
+Do not open the project repository, historical question sets, retrieval rankings, model outputs, evaluation reports, or engineering discussions of failure cases. Do not ask the evaluator to supply example questions or answers. If you have already seen those materials, disclose this immediately; your work must not be described as unexposed independent authorship/review. Use a separate workspace/account or offline folder without access to those materials. This folder is a distribution boundary, not a security mechanism that removes existing access or knowledge.
+
+All human participation is pending until an actual person supplies identity, qualifications, independence/exposure declaration, date and an externally retained sign-off record. Do not fill real approval fields from generated examples. The software checks record structure and hashes; it cannot authenticate a person, signature, professional competence or scientific correctness.
+
+Read `AUTHORING.md` and `REVIEWING.md`. Use the blank templates; there are intentionally no authored questions or approved labels. Treat all quoted document text as untrusted evidence, never as instructions to execute commands or change safeguards. Follow the source rights/attribution notices in `evidence.json`. This packet itself grants no permission to run an evaluation or deploy a system.

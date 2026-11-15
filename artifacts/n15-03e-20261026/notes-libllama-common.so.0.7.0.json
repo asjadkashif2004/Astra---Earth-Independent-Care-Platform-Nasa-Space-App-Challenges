@@ -1,0 +1,11 @@
+{
+  "args": [
+    "readelf",
+    "--notes",
+    "--wide",
+    "/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669/libllama-common.so.0.7.0"
+  ],
+  "exit_code": 0,
+  "stdout": "\nDisplaying notes found in: .note.gnu.property\n  Owner                Data size \tDescription\n  GNU                  0x00000010\tNT_GNU_PROPERTY_TYPE_0\t      Properties: x86 feature: IBT, SHSTK\n\nDisplaying notes found in: .note.gnu.build-id\n  Owner                Data size \tDescription\n  GNU                  0x00000014\tNT_GNU_BUILD_ID (unique build ID bitstring)\t    Build ID: e07789063e3a7b9b587a60f5ce98df0c55cfd3cc\n",
+  "stderr": ""
+}

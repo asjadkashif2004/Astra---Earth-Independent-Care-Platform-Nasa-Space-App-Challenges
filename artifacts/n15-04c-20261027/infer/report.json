@@ -1,0 +1,62 @@
+{
+  "task": "N15-04C",
+  "phase": "infer",
+  "scratch": "/var/tmp/astra-n15-04c-322rxgpf",
+  "status": "PASS",
+  "started_utc": "2026-10-27T06:23:43.006506+00:00",
+  "native_commands": 1,
+  "network_bytes": 0,
+  "network_requests": 0,
+  "runtime_acquisition_bytes": 0,
+  "model_acquisition_bytes": 0,
+  "limits": {
+    "storage": 1500000000,
+    "storage_stop": 1350000000,
+    "process_RSS": 2000000000,
+    "native_wall_s": 120
+  },
+  "resource_authority": "N15-04C-only monitored Choice B; overshoot possible",
+  "N15": "In Progress",
+  "N16": "Not Started",
+  "stage": "verify-actual-blocked-filesystem-and-network-view",
+  "case": "generation",
+  "generation": {
+    "status": "PASS",
+    "result": "generation/native-result.json",
+    "performance": {
+      "load_ms": [
+        694.83
+      ],
+      "prompt_eval": [
+        693.66,
+        40.0,
+        57.66
+      ],
+      "decode_eval": [
+        546.99,
+        13.0,
+        23.77
+      ]
+    },
+    "actual_response": "Sufficient sleep is crucial for maintaining cognitive functions and enhancing concentration. [end of text]\n\n\n",
+    "generated_by_llm": true,
+    "scientific_or_clinical_validation": false
+  },
+  "accounting_failures": [],
+  "resources": {
+    "elapsed_s": 125.86858461600002,
+    "observations": 24,
+    "final_apparent": 591095371,
+    "final_allocated": 592658432,
+    "max_sampled_allocated": 592658432,
+    "process_RSS_peaks": {
+      "1791": 33222656,
+      "1850": 2367488,
+      "1851": 601485312
+    },
+    "supervisor_kernel_lifetime_RSS_bytes": 622874624,
+    "max_reaped_child_kernel_RSS_bytes": 601485312,
+    "owned_processes_remaining": 0,
+    "observer_alive": false
+  }
+}

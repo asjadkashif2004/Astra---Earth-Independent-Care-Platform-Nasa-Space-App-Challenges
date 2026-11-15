@@ -1,0 +1,101 @@
+{
+  "schema_version": "astra.n13.input-register.v1",
+  "scope": "EXACT_RETAINED_LOCAL_SOURCES_ONLY",
+  "files": {
+    "sources": {
+      "path": "data/corpus/n13-01/sources.json",
+      "bytes": 4790,
+      "sha256": "21f7a9aa8c1feec74ee8cc43041bf0aac8c3a8ff2cab80a57407f0b380474a6e"
+    },
+    "internal_review": {
+      "path": "data/corpus/n13-01/internal-review.json",
+      "bytes": 2226,
+      "sha256": "431c5c1bb68fca8a04690da7c6b799bbaf5f0a39f892cc8be4200e9a86d642bd"
+    },
+    "corpus": {
+      "path": "data/corpus/n13-01/derived/corpus.json",
+      "bytes": 5270607,
+      "sha256": "9bb1fb5fc112716c16fdb8e3e6a3c5a968b01db5e11b2f5e694f54af5d16b6b7"
+    },
+    "curation": {
+      "path": "data/corpus/n13-02/derived/curation.json",
+      "bytes": 409408,
+      "sha256": "ed88677753bbef136ecdc35bb6b13d7bc9ce933727989f4c261f2200bf84ff9f"
+    },
+    "packet": {
+      "path": "data/corpus/n13-03/derived/packet.json",
+      "bytes": 216978,
+      "sha256": "aa93cf5062b03b87dbd57b96e756965fe90f9883854d456167462269c34ed6d4"
+    },
+    "section_plan": {
+      "path": "data/corpus/n13-02/sections.json",
+      "bytes": 8972,
+      "sha256": "1b35a33e783f470d3085ecbc0d3fa469279fe4a174f5a2e3b5a9609222b1bb64"
+    },
+    "unit_plan": {
+      "path": "data/corpus/n13-02/evidence-units.json",
+      "bytes": 13426,
+      "sha256": "f82448aee3f3ecc64f6781fbc427e8a001f0f7d93fe3326e9de38af295aa3d9e"
+    },
+    "expectation_plan": {
+      "path": "data/corpus/n13-02/expectations.json",
+      "bytes": 21749,
+      "sha256": "c135470d3cc88dc57a9c66d2c311412e6c8dee66b62d25119d8d587129e1414d"
+    },
+    "review_plan": {
+      "path": "data/corpus/n13-03/review-plan.json",
+      "bytes": 16227,
+      "sha256": "34f674fa80fb8b5073f2096635682cf3ae107c681bdcb0e5c39e7493860d4d78"
+    },
+    "page_proof": {
+      "path": "data/corpus/n13-02/derived/selected-pages.json",
+      "bytes": 5255,
+      "sha256": "ebb1ca5fa16806e54b9c59d6be73ea3357075edbc849088fe8e74decba8d3052"
+    },
+    "evaluation_plan": {
+      "path": "data/research/n14-01/evaluation-plan.json",
+      "bytes": 2309,
+      "sha256": "4bcd5d7c37ec4dc0a424f7efd130f10c55d338d54217e435a868d918c3c249ce"
+    },
+    "seen_policy": {
+      "path": "docs/N14_04_FRESH_EVALUATION.md",
+      "bytes": 4508,
+      "sha256": "f808c5f288c0fb56a04f4f9282b847d63e81db638e261f5779056a2517eb4f63"
+    },
+    "hrp_original": {
+      "path": "data/corpus/n13-01/originals/20160003864.pdf",
+      "bytes": 967704,
+      "sha256": "252d4993a040ab8b989664b1da7a3143a5fd8169fac65b67f1f43231250ef1f5"
+    },
+    "std_original": {
+      "path": "data/corpus/n13-01/originals/NASA-STD-3001 Vol 2 Rev F.pdf",
+      "bytes": 6753988,
+      "sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f"
+    },
+    "hrp_receipt": {
+      "path": "data/corpus/n13-01/originals/nasa-hrp-sleep-2016.receipt.json",
+      "bytes": 695,
+      "sha256": "d92a82c952986c0c78bb6176ca99b4e3fe7b0e9979a2807795bd16c9e97f19c6"
+    },
+    "std_receipt": {
+      "path": "data/corpus/n13-01/originals/nasa-std-3001-v2-f.receipt.json",
+      "bytes": 683,
+      "sha256": "8d32e97893666a6bc3a8229b341c6424c1f71aa100173a5c1cd5512cea9f4b19"
+    },
+    "hrp_record": {
+      "path": "artifacts/n13-01-20261024/source-review/hrp-record.json",
+      "bytes": 8961,
+      "sha256": "b97981da6496a64215d135c312cbc64b9f5d1ea252105cc2366cbb90a4e3df86"
+    },
+    "sti_use": {
+      "path": "artifacts/n13-01-20261024/source-review/sti-use.html",
+      "bytes": 26210,
+      "sha256": "15c5732f49dd2eafe9c610ed61f7052b9565000e24be71ac55bc6b9a415e3b3b"
+    },
+    "std_catalogue": {
+      "path": "artifacts/n13-01-20261024/source-review/standards-catalogue.html",
+      "bytes": 27894,
+      "sha256": "3456bc34747c172c8852a907b9006a74805e68c0aed139e1bef8897e618d13fa"
+    }
+  }
+}

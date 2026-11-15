@@ -1,0 +1,497 @@
+--- services/agent/designated-worker.mjs before
++++ services/agent/designated-worker.mjs N16-06F
+@@ -16,6 +16,10 @@
+ let db,diagnostic;
+ try{
+   const mode=process.argv[2],request=await next();
++  if(mode==='n16-06f-single-select-v1'){
++    const {runTaskSingleSelect}=await import('./single-select-runtime.mjs');
++    await runTaskSingleSelect(request,{DatabaseSync,constants,emit,next});
++  }else{
+   if(!['read','negative','timeout'].includes(mode)||request.profile!=='elevated'||request.generation!==0)fail('PROCESS_MODE_FORBIDDEN');
+   if(existsSync('/home')||existsSync('/mnt')||existsSync('/project'))fail('SANDBOX_PATH_LEAK');
+   if(readFileSync('/proc/net/route','utf8').trim().split('\n').length!==1)fail('NETWORK_NOT_ISOLATED');
+@@ -65,6 +69,7 @@
+       emit({event:'RESULT',result,receipt:{actual_sql_queries:query_ids.length,query_ids,selected_rows_sha256:sha(stable(selected)),
+         transaction_ms,readOnly:true,isolation,denied_operations:denied,before,after:files(),rss:process.memoryUsage().rss}});
+     }
++  }
+ }catch(e){if(db){try{db.close();}catch{}}
+   emit({event:'FAILED',code:e.errcode===5?'SQLITE_BUSY':e.errcode===6?'SQLITE_LOCKED':e.code?.startsWith('ERR_SQLITE')?'SQLITE_UNAVAILABLE':e.code??'SOURCE_UNAVAILABLE',
+     message:String(e.code??'guard_or_query_failure').slice(0,100),diagnostic_hash:diagnostic?.hash??null});process.exitCode=1;
+--- services/agent/designated-source.mjs before
++++ services/agent/designated-source.mjs N16-06F
+@@ -16,7 +16,7 @@
+ export const EVIDENCE=join(PROJECT,'artifacts/n16-06-20261029');
+ // Additive execution overlay; historical manifest/CODE_PINS and frozen worker remain unchanged.
+ const DIAGNOSTIC_PINS={
+-  'services/agent/designated-worker.mjs':'2fac3411b862751097cfce20a06752426dd1548cc68a85a1738dc7c303c449ad',
++  'services/agent/designated-worker.mjs':'b41c4ecec39ac40039e32e698549c495cec2654c0fce8edde22ec32ecf07a21e',
+   'services/agent/containment-diagnostics.mjs':'58bfbb12dc5c1ee1be5057acc26b5d7ff2d04c640e63284ffbbeccb0ba00de7b'
+ };
+ const qualificationBatch=new QualificationBatch({persist:async record=>{
+--- /dev/null
++++ services/agent/single-select-contract.mjs N16-06F
+@@ -0,0 +1,73 @@
++// N16-06F only. Pure policy and injected SQL boundary; no filesystem or SQLite import.
++import { requirePermission } from '../../packages/contracts.mjs';
++import { exact,validateCall,sha,stable,fail } from './read-contract.mjs';
++import { QUERIES,SCHEMA,projectRows } from './sqlite-fixture-contract.mjs';
++import { SOURCE_ID,SOURCE_SHA,SOURCE_BYTES,SPEC_SHA,AS_OF } from './designated-contract.mjs';
++import { validateContainmentRecord } from './containment-diagnostics.mjs';
++
++export const SINGLE_MODE='n16-06f-single-select-v1';
++export const singleCheck=(ok,code)=>{if(!ok)fail(code);};
++export function authorizeSingle(input,context){
++  const call=validateCall(input);
++  singleCheck(exact(context,['principal','crew_ids','read_as_of'])&&context.principal?.role==='astronaut'
++    &&Array.isArray(context.crew_ids)&&context.crew_ids.length===1&&context.crew_ids[0]===context.principal.crew_id
++    &&context.read_as_of===AS_OF,'SINGLE_SCOPE_INVALID');
++  requirePermission(context.principal,'read',call.args.crew_id);
++  singleCheck(call.tool==='get_current_vitals'&&call.args.metrics.length===1
++    &&context.crew_ids.includes(call.args.crew_id),'SINGLE_CALL_FORBIDDEN');
++  return call;
++}
++export function verifyBinding(b,instance){
++  singleCheck(exact(b,['source_id','source_sha256','source_bytes','spec_sha256','schema_sha256','source_identity','inventory','file_mode','directory_mode','journal_mode'])
++    &&b.source_id===SOURCE_ID&&b.source_sha256===SOURCE_SHA&&b.source_bytes===SOURCE_BYTES&&b.spec_sha256===SPEC_SHA
++    &&b.schema_sha256===sha(SCHEMA)&&stable(b.source_identity)===stable(instance)
++    &&stable(b.inventory)===stable(['source.sqlite'])&&b.file_mode==='0400'&&b.directory_mode==='0500'
++    &&b.journal_mode==='closed_rollback','SINGLE_SOURCE_UNVERIFIED');
++  singleCheck(exact(instance,['directory','file'])&&exact(instance.directory,['dev','ino'])
++    &&exact(instance.file,['dev','ino','birth_ns','change_ns'])
++    &&Object.values(instance.directory).every(v=>typeof v==='string'&&/^\d+$/.test(v))
++    &&Object.values(instance.file).every(v=>typeof v==='string'&&/^\d+$/.test(v)),'SINGLE_INSTANCE_INVALID');
++  return b;
++}
++export function verifySingleGuard(d){
++  validateContainmentRecord(d,{source_id:SOURCE_ID,sha256:SOURCE_SHA});
++  singleCheck(d.qualified&&d.namespace_stable&&d.probes.length===3
++    &&d.probes[0].code==='EROFS'&&d.probes[1].code==='EROFS'
++    &&['EROFS','EACCES'].includes(d.probes[2].code),'SINGLE_CONTAINMENT_REJECTED');
++  return d;
++}
++export async function executeSingle(request,io){
++  singleCheck(exact(request,['schema_version','call','trusted_caller','expected_instance'])
++    &&request.schema_version===SINGLE_MODE,'SINGLE_REQUEST_INVALID');
++  const call=authorizeSingle(request.call,request.trusted_caller);
++  const before=verifyBinding(io.inspect(),request.expected_instance),d=io.guard();
++  io.reportGuard(d,before);verifySingleGuard(d);
++  const ack=await io.acknowledge();
++  singleCheck(exact(ack,['command','hash','source_binding_sha256','call_sha256'])&&ack.command==='containment_verified'
++    &&ack.hash===d.hash&&ack.source_binding_sha256===sha(stable(before))&&ack.call_sha256===sha(stable(call)),'SINGLE_ACK_INVALID');
++  singleCheck(stable(verifyBinding(io.inspect(),request.expected_instance))===stable(before),'SINGLE_SOURCE_CHANGED');
++  io.confirmMount(d);
++  let db,selects=0;const actions=[];const started=performance.now();let selected;
++  try{
++    db=io.open({readOnly:true,allowExtension:false,defensive:true,timeout:0,enableForeignKeyConstraints:false,
++      limits:{length:1048576,sqlLength:4096,attach:0,column:32}});
++    db.setAuthorizer((action,table,column,database)=>{
++      actions.push({action,table:table??null,column:column??null,database:database??null});
++      if(actions.length>64)return io.constants.SQLITE_DENY;
++      if(action===io.constants.SQLITE_SELECT)return ++selects===1?io.constants.SQLITE_OK:io.constants.SQLITE_DENY;
++      if(action===io.constants.SQLITE_READ&&database==='main'&&table==='observations'
++        &&['crew_id','metric','json','sha256'].includes(column))return io.constants.SQLITE_OK;
++      return io.constants.SQLITE_DENY;
++    });
++    selected=db.prepare(QUERIES.observation).get(call.args.crew_id,call.args.metrics[0])??null;
++    singleCheck(selects===1,'SINGLE_SELECT_COUNT');
++  }finally{if(db)db.close();}
++  const elapsed=performance.now()-started;singleCheck(elapsed<=250,'SINGLE_READ_LIMIT');
++  const after=verifyBinding(io.inspect(),request.expected_instance);
++  singleCheck(stable(after)===stable(before),'SINGLE_SOURCE_CHANGED');io.confirmMount(d);
++  const result=projectRows('elevated',0,call,[selected]);
++  return {result,receipt:{mode:SINGLE_MODE,readOnly:true,explicit_statement_count:1,query_ids:['observation'],
++    query_sha256:sha(QUERIES.observation),parameters:[call.args.crew_id,call.args.metrics[0]],selected_rows_sha256:sha(stable([selected])),
++    source_before:before,source_after:after,containment_diagnostic_sha256:d.hash,mount_namespace:d.proof.namespace,
++    authorizer_selects:selects,authorizer_actions:actions,sql_elapsed_ms:elapsed}};
++}
+--- /dev/null
++++ services/agent/single-select-source.mjs N16-06F
+@@ -0,0 +1,35 @@
++// Fixed source paths only. Full-byte hashing, no SQLite parsing/connection or mutations.
++import { openSync,closeSync,readFileSync,fstatSync,lstatSync,readdirSync,constants as F } from 'node:fs';
++import { parseJSON,sha,stable,fail } from './read-contract.mjs';
++import { SCHEMA,QUERIES } from './sqlite-fixture-contract.mjs';
++import { SOURCE_ID,SOURCE_SHA,SOURCE_BYTES,SPEC_SHA } from './designated-contract.mjs';
++import { singleCheck,verifyBinding } from './single-select-contract.mjs';
++export const DESIGNATED_ROOT='/var/tmp/astra-n16-designated-2v0ytq';
++export function verifySchemaProvenance(bytes){
++  singleCheck(sha(bytes)===SPEC_SHA,'SINGLE_SCHEMA_PROVENANCE');const spec=parseJSON(bytes.toString(),65536);
++  singleCheck(spec.source_id===SOURCE_ID&&spec.schema_definition===SCHEMA&&spec.fixed_queries.observation===QUERIES.observation
++    &&spec.historical_donor.files['source.sqlite'].sha256===SOURCE_SHA&&spec.historical_donor.files['source.sqlite'].bytes===SOURCE_BYTES
++    &&spec.historical_donor.rows_sha256==='414e60b782176a34c297c1d55da519f1892332a9684e41a93be98fc6fd1d0e0e','SINGLE_SCHEMA_PROVENANCE');
++  return sha(SCHEMA);
++}
++export function inspectSealedSource(path,specBytes,expectedInstance){
++  singleCheck([DESIGNATED_ROOT+'/source','/fixture'].includes(path),'SINGLE_PATH_FORBIDDEN');
++  const schema=verifySchemaProvenance(specBytes);let directory,file;
++  try{
++    directory=openSync(path,F.O_RDONLY|F.O_DIRECTORY|F.O_NOFOLLOW);const ds=fstatSync(directory,{bigint:true});
++    singleCheck((ds.mode&0o777n)===0o500n,'SINGLE_SOURCE_MODE');
++    const anchor='/proc/self/fd/'+directory,inventory=readdirSync(anchor).sort();
++    singleCheck(stable(inventory)===stable(['source.sqlite']),'SINGLE_SIDECAR_OR_MEMBER');
++    const s=lstatSync(anchor+'/source.sqlite',{bigint:true});
++    singleCheck(s.isFile()&&!s.isSymbolicLink()&&s.nlink===1n&&s.size===BigInt(SOURCE_BYTES)&&(s.mode&0o777n)===0o400n,'SINGLE_SOURCE_MODE');
++    file=openSync(anchor+'/source.sqlite',F.O_RDONLY|F.O_NOFOLLOW|F.O_NONBLOCK);const a=fstatSync(file,{bigint:true});
++    singleCheck(a.dev===s.dev&&a.ino===s.ino,'SINGLE_SOURCE_REPLACED');const bytes=readFileSync(file),z=fstatSync(file,{bigint:true});
++    singleCheck(z.ctimeNs===a.ctimeNs&&z.mtimeNs===a.mtimeNs&&z.size===a.size&&bytes.length===SOURCE_BYTES
++      &&sha(bytes)===SOURCE_SHA,'SINGLE_CONTENT_HASH');
++    singleCheck(bytes.subarray(0,16).toString()==='SQLite format 3\0'&&bytes[18]===1&&bytes[19]===1,'SINGLE_HEADER_UNVERIFIED');
++    const binding={source_id:SOURCE_ID,source_sha256:sha(bytes),source_bytes:bytes.length,spec_sha256:sha(specBytes),schema_sha256:schema,
++      source_identity:{directory:{dev:String(ds.dev),ino:String(ds.ino)},file:{dev:String(a.dev),ino:String(a.ino),birth_ns:String(a.birthtimeNs),change_ns:String(a.ctimeNs)}},
++      inventory,file_mode:'0400',directory_mode:'0500',journal_mode:'closed_rollback'};
++    return verifyBinding(binding,expectedInstance);
++  }finally{if(file!==undefined)closeSync(file);if(directory!==undefined)closeSync(directory);}
++}
+--- /dev/null
++++ services/agent/single-select-runtime.mjs N16-06F
+@@ -0,0 +1,25 @@
++// Entered only by explicit N16-06F mode in the existing designated worker.
++import { readFileSync,writeFileSync,openSync,closeSync,readlinkSync,existsSync } from 'node:fs';
++import { executeSingle } from './single-select-contract.mjs';
++import { inspectSealedSource } from './single-select-source.mjs';
++import { probeContainment,mountProof } from './containment-diagnostics.mjs';
++import { SOURCE_ID,SOURCE_SHA } from './designated-contract.mjs';
++import { stable,fail } from './read-contract.mjs';
++export async function runTaskSingleSelect(request,{DatabaseSync,constants,emit,next}){
++  const blocked=Object.fromEntries(['/mnt','/home','/project','/data','/root/.aws','/var/tmp'].map(p=>[p,!existsSync(p)]));
++  if(!Object.values(blocked).every(Boolean)||readFileSync('/proc/net/route','utf8').trim().split('\n').length!==1)fail('SINGLE_ISOLATION_FAILED');
++  const spec=readFileSync('/code/docs/N16_05_SOURCE_SPEC.json');
++  const stats=()=>({rss:process.memoryUsage().rss,kernel_max_rss:process.resourceUsage().maxRSS*1024});
++  const value=await executeSingle(request,{
++    inspect:()=>inspectSealedSource('/fixture',spec,request.expected_instance),
++    guard:()=>probeContainment({readMountInfo:()=>readFileSync('/proc/self/mountinfo','utf8'),mountNamespace:()=>readlinkSync('/proc/self/ns/mnt'),
++      createRootFile:()=>writeFileSync('/must-not-write','x'),createSourceFile:()=>writeFileSync('/fixture/must-not-create','x'),
++      openSourceReadwrite:()=>{const f=openSync('/fixture/source.sqlite','r+');closeSync(f);}}, {source_id:SOURCE_ID,sha256:SOURCE_SHA}),
++    reportGuard:(diagnostic,binding)=>emit({event:'SINGLE_CONTAINMENT',diagnostic,binding,blocked_paths:blocked,
++      network_namespace:readlinkSync('/proc/self/ns/net'),...stats()}),
++    acknowledge:next,
++    confirmMount:d=>{if(stable(mountProof(readFileSync('/proc/self/mountinfo','utf8'),readlinkSync('/proc/self/ns/mnt')))!==stable(d.proof))fail('SINGLE_MOUNT_CHANGED');},
++    constants,open:options=>{emit({event:'SINGLE_SQL_ATTEMPT',...stats()});return new DatabaseSync('/fixture/source.sqlite',options);}
++  });
++  emit({event:'SINGLE_RESULT',...value,...stats()});
++}
+--- /dev/null
++++ scripts/n16-single-select-qualification.mjs N16-06F
+@@ -0,0 +1,152 @@
++// One owner-authorized N16-06F qualification. No caller-selected path, role or SQL.
++import { spawn } from 'node:child_process';
++import { open,mkdir,readFile,lstat,readdir,rename,unlink } from 'node:fs/promises';
++import { constants as F } from 'node:fs';
++import { join,dirname,basename,resolve } from 'node:path';
++import { fileURLToPath } from 'node:url';
++import { randomUUID } from 'node:crypto';
++import { safeDirectory,readAt } from '../services/agent/read-context.mjs';
++import { parseJSON,sha,stable } from '../services/agent/read-contract.mjs';
++import { ExecutionTrace,recoverTrace } from '../services/agent/execution-trace.mjs';
++import { QualificationBatch } from '../services/agent/qualification-batch.mjs';
++import { commitContainment } from '../services/agent/containment-diagnostics.mjs';
++import { CONTAINMENT_PIN_POLICY,verifyDependencyPins } from '../services/agent/dependency-pins.mjs';
++import { SINGLE_MODE,singleCheck as check,authorizeSingle,verifySingleGuard,verifyBinding } from '../services/agent/single-select-contract.mjs';
++import { DESIGNATED_ROOT,inspectSealedSource } from '../services/agent/single-select-source.mjs';
++import { SOURCE_ID,SOURCE_SHA,AS_OF,expectedRows,designatedProjection } from '../services/agent/designated-contract.mjs';
++import { QUERIES,projectRows } from '../services/agent/sqlite-fixture-contract.mjs';
++
++const PROJECT=fileURLToPath(new URL('../',import.meta.url)),OUT=join(PROJECT,'artifacts/n16-06f-20261029');
++const CAPS={rss:536870912,storage:67108864,wall:1000,output:65536,cleanup:250};
++const CALL={schema_version:'astra.n16.read-tools.v1',tool:'get_current_vitals',args:{crew_id:'CREW-03',metrics:['heart_rate']}};
++const CALLER={principal:{id:'n16-06f-owner-demo',role:'astronaut',crew_id:'CREW-03'},crew_ids:['CREW-03'],read_as_of:AS_OF};
++const STAGED=['services/agent/designated-worker.mjs','services/agent/single-select-runtime.mjs','services/agent/single-select-contract.mjs',
++  'services/agent/single-select-source.mjs','services/agent/designated-contract.mjs','services/agent/sqlite-fixture-contract.mjs',
++  'services/agent/read-contract.mjs','services/agent/containment-diagnostics.mjs','packages/contracts.mjs','docs/N16_05_SOURCE_SPEC.json'];
++async function metadata(path,max=2097152){const d=await safeDirectory(dirname(path));try{
++  const st=await lstat(d.at(basename(path)));check(st.isFile()&&!st.isSymbolicLink()&&st.nlink===1&&st.size<=max,'TASK_METADATA_UNSAFE');
++  return await readAt(d.fd,basename(path),max);
++}finally{await d.close();}}
++async function atomic(name,value){const d=await safeDirectory(OUT),temp=name+'.tmp-'+randomUUID();let f;try{
++  f=await open(d.at(temp),F.O_WRONLY|F.O_CREAT|F.O_EXCL|F.O_NOFOLLOW,0o600);await f.writeFile(stable(value)+'\n');await f.sync();await f.close();f=null;
++  await rename(d.at(temp),d.at(name));await d.handle.sync();
++}finally{if(f)await f.close();try{await unlink(d.at(temp));}catch(e){if(e.code!=='ENOENT')throw e;}await d.close();}}
++async function journal(value){const f=await open(join(OUT,'resources.jsonl'),'a',0o600);try{await f.writeFile(stable({at:new Date().toISOString(),...value})+'\n');await f.sync();}finally{await f.close();}}
++async function count(path){const s=await lstat(path);check(s.isDirectory()&&!s.isSymbolicLink(),'UNSAFE_ACCOUNTING_ROOT');let n=s.blocks*512;
++  for(const e of await readdir(path,{withFileTypes:true})){try{const p=join(path,e.name),z=await lstat(p);n+=z.isDirectory()&&!z.isSymbolicLink()?await count(p):Math.max(z.size,z.blocks*512);}catch(e){if(e.code!=='ENOENT')throw e;}}return n;}
++async function counted(){let n=0;for(const p of [DESIGNATED_ROOT,OUT,join(PROJECT,'artifacts/n16-06-20261029'),join(PROJECT,'artifacts/n16-06a-20261029')])n+=await count(p);
++  for(const p of STAGED){const s=await lstat(join(PROJECT,p));n+=Math.max(s.size,s.blocks*512);}return n;}
++async function tree(pid){const result=[];async function visit(id){try{const text=await readFile(`/proc/${id}/status`,'utf8'),stat=await readFile(`/proc/${id}/stat`,'utf8');
++  result.push({pid:id,birth:stat.slice(stat.lastIndexOf(')')+2).split(' ')[19],hwm:Number(/^VmHWM:\s+(\d+)/m.exec(text)?.[1]??0)*1024});
++  for(const child of (await readFile(`/proc/${id}/task/${id}/children`,'utf8')).trim().split(/\s+/).filter(Boolean))await visit(Number(child));
++}catch(e){if(!['ENOENT','ESRCH'].includes(e.code))throw e;}}await visit(pid);return result;}
++function sandbox(fd){const args=['--unshare-all','--die-with-parent','--new-session','--cap-drop','ALL','--clearenv','--setenv','PATH','/usr/bin',
++  '--setenv','PYTHONDONTWRITEBYTECODE','1','--ro-bind','/usr','/usr','--ro-bind','/lib','/lib','--ro-bind','/lib64','/lib64',
++  '--dir','/runtime','--ro-bind',process.execPath,'/runtime/node','--dir','/code','--ro-bind-fd',String(fd),'/fixture'];
++  for(const p of STAGED)args.push('--ro-bind',join(PROJECT,p),'/code/'+p);
++  args.push('--proc','/proc','--dev','/dev','--remount-ro','/','--chdir','/','/usr/bin/python3','-c',
++    'import os,resource; resource.setrlimit(resource.RLIMIT_CORE,(0,0)); resource.setrlimit(resource.RLIMIT_CPU,(1,1)); os.closerange(3,256); os.execv("/runtime/node",["/runtime/node","--jitless","--max-old-space-size=64","/code/services/agent/designated-worker.mjs","n16-06f-single-select-v1"])');return args;}
++
++export async function qualify(){
++  check(process.argv.length===2,'NO_CALLER_OPTIONS');await mkdir(OUT,{recursive:true});authorizeSingle(CALL,CALLER);
++  const invocation=await open(join(OUT,'invocation.json'),F.O_CREAT|F.O_EXCL|F.O_WRONLY|F.O_NOFOLLOW,0o600);
++  try{await invocation.writeFile(stable({task:'N16-06F',maximum_startups:1})+'\n');await invocation.sync();}finally{await invocation.close();}
++  let trace,directory,child,closed,timer,interval,escalation,reason=null,exit=null,actualStarts=0,sampleBusy=false,
++    sampler=Promise.resolve(),handling=Promise.resolve(),peak=0,maxDisk=0,samples=0,started=null,ended=null,stderr='',buffer='',diagnostic=null,
++    acked=false,sqlAttempts=0,eventResult=null,ownedRemaining=0,handlerError=null;
++  const seen=new Map(),events=[];
++  const batch=new QualificationBatch({persist:async record=>{await atomic('first-failure.json',record);return {durable:true,hash:record.hash};}});
++  const stop=code=>{if(reason)return;reason=code;batch.trip({code,stage:'single_select'});
++    if(child?.pid&&ended===null){try{process.kill(-child.pid,'SIGTERM');}catch(e){if(e.code!=='ESRCH')throw e;}
++      escalation=setTimeout(()=>{try{process.kill(-child.pid,'SIGKILL');}catch(e){if(e.code!=='ESRCH')throw e;}},CAPS.cleanup);}};
++  const sample=async()=>{const rows=child?await tree(child.pid):[];for(const p of rows)seen.set(p.pid,p.birth);
++    const self=(await tree(process.pid))[0];check(self?.hwm>0,'RSS_OBSERVER_FAILED');peak=Math.max(peak,self.hwm,...rows.map(p=>p.hwm),0);
++    const bytes=await counted();maxDisk=Math.max(maxDisk,bytes);samples++;await journal({phase:'resource',owned:rows,parent_hwm:self.hwm,counted_bytes:bytes});
++    check(peak<CAPS.rss,'RSS_LIMIT');check(bytes<CAPS.storage,'STORAGE_LIMIT');};
++  let binding,manifest,reg,spec;
++  try{
++    check(process.version==='v24.21.0'&&process.versions.sqlite==='3.53.4'&&process.arch==='x64'&&process.platform==='linux','RUNTIME_PIN');
++    await verifyDependencyPins(CONTAINMENT_PIN_POLICY,{readInventory:p=>metadata(join(PROJECT,p)),readDependency:p=>readFile(join(PROJECT,p))});
++    const plan=parseJSON((await metadata(join(OUT,'code-plan.json'))).toString(),2097152);
++    for(const [p,h] of Object.entries(plan.code_pins))check(sha(await readFile(join(PROJECT,p)))===h,'CODE_PLAN_CHANGED');
++    const qa=parseJSON((await metadata(join(OUT,'mandatory-qa.json'))).toString(),65536);check(qa.length===3&&qa.every(r=>r.verified===true&&r.exit_code===0),'MANDATORY_QA_FAILED');
++    reg=parseJSON((await metadata(join(PROJECT,'artifacts/n16-06-20261029/registration.json'))).toString(),4096);
++    check(reg.root===DESIGNATED_ROOT&&reg.manifest_sha256==='5dab2628827a80b3af1f0a5d37ef64763144aba1510e7b0c7ea653a3f5ac286c'
++      &&reg.owner_sha256==='e1597530fc3236c7930990cfef4792b49782a51d781243591c0d946b645ebac1','REGISTRATION_CHANGED');
++    const raw=await metadata(join(DESIGNATED_ROOT,'metadata/manifest.json'),65536);check(sha(raw)===reg.manifest_sha256,'SOURCE_MANIFEST_CHANGED');
++    manifest=parseJSON(raw.toString(),65536);check(sha(await metadata(join(DESIGNATED_ROOT,'owner.json'),4096))===reg.owner_sha256,'OWNER_CHANGED');
++    spec=await metadata(join(PROJECT,'docs/N16_05_SOURCE_SPEC.json'),65536);
++    directory=await safeDirectory(join(DESIGNATED_ROOT,'source'));
++    binding=inspectSealedSource(join(DESIGNATED_ROOT,'source'),spec,manifest.source_identity);
++    check(binding.source_id===manifest.source_id&&binding.source_sha256===manifest.source_sha256,'SOURCE_MANIFEST_BINDING');
++    await mkdir(join(OUT,'traces'),{recursive:true});trace=await ExecutionTrace.create({task:'N16-06F',trusted_scope:CALLER,source:binding,manifest_sha256:reg.manifest_sha256},{root:join(OUT,'traces')});
++    await trace.append('CALL_REQUESTED',{call_id:'call-01'});
++    await trace.append('CALL_VALIDATED',{call_id:'call-01',tool:CALL.tool,args:CALL.args,trusted_scope:CALLER});
++    await sample();check(maxDisk<CAPS.storage-1048576,'STORAGE_ADMISSION_FAILED');
++    await atomic('preflight.json',{status:'PASS',call:CALL,trusted_scope:CALLER,source:binding,code_pins:plan.code_pins,caps:CAPS,trace_id:trace.id,SQL_startups:0});
++    await trace.append('CALL_STARTED',{call_id:'call-01',tool:CALL.tool,args:CALL.args,SQL_status:'PENDING_GUARD_ACK'});
++    await batch.run('get_current_vitals',async permit=>{
++      const reservation=await open(join(OUT,'startup-reserved.json'),F.O_CREAT|F.O_EXCL|F.O_WRONLY|F.O_NOFOLLOW,0o600);
++      try{await reservation.writeFile(stable({maximum_startups:1,trace_id:trace.id})+'\n');await reservation.sync();}finally{await reservation.close();}
++      permit.markStarted();started=performance.now();child=spawn('/usr/bin/bwrap',sandbox(3),{detached:true,stdio:['pipe','pipe','pipe',directory.fd],env:{PATH:'/usr/bin'}});
++      let startupRecord=Promise.resolve();child.once('spawn',()=>{actualStarts=1;startupRecord=atomic('startup.json',{actual_startups:1,pid:child.pid,trace_id:trace.id}).catch(e=>{handlerError=e;stop('STARTUP_TRACE_FAILED');});});
++      permit.signal.addEventListener('abort',()=>stop('BATCH_BLOCKED'),{once:true});child.stdin.on('error',()=>{});
++      interval=setInterval(()=>{if(sampleBusy)return;sampleBusy=true;sampler=sample().catch(e=>stop(e.code??'ACCOUNTING_FAILED')).finally(()=>{sampleBusy=false;});},20);
++      timer=setTimeout(()=>stop('SINGLE_WORKER_TIMEOUT'),CAPS.wall);
++      child.stderr.on('data',b=>{stderr+=b;if(Buffer.byteLength(stderr)>8192)stop('STDERR_LIMIT');});
++      child.stdout.on('data',b=>{buffer+=b;if(Buffer.byteLength(buffer)>CAPS.output){stop('OUTPUT_LIMIT');return;}
++        while(buffer.includes('\n')){const at=buffer.indexOf('\n'),line=buffer.slice(0,at);buffer=buffer.slice(at+1);
++          handling=handling.then(async()=>{const e=parseJSON(line,CAPS.output);events.push(e);if(e.kernel_max_rss){peak=Math.max(peak,e.kernel_max_rss);check(peak<CAPS.rss,'RSS_LIMIT');}await journal({phase:'worker_event',event:e});
++            if(e.event==='SINGLE_CONTAINMENT'){
++              check(!diagnostic,'DUPLICATE_DIAGNOSTIC');diagnostic=e.diagnostic;verifySingleGuard(diagnostic);verifyBinding(e.binding,manifest.source_identity);
++              check(stable(e.binding)===stable(binding)&&Object.values(e.blocked_paths).every(Boolean),'WORKER_BINDING_OR_ISOLATION');
++              await startupRecord;await sample();
++              await commitContainment(diagnostic,{source_id:SOURCE_ID,sha256:SOURCE_SHA},{block:f=>batch.trip(f),persist:async d=>{
++                await atomic('diagnostic.json',{diagnostic:d,binding:e.binding,trace_id:trace.id});return {durable:true,hash:d.hash};},
++                acknowledge:ack=>new Promise((resolve,reject)=>{batch.assertOpen();check(!reason,'WORKER_STOPPED');
++                  child.stdin.write(stable({...ack,source_binding_sha256:sha(stable(binding)),call_sha256:sha(stable(CALL))})+'\n',err=>{if(err)reject(err);else{acked=true;resolve();}});})});
++            }else if(e.event==='SINGLE_SQL_ATTEMPT'){check(acked&&++sqlAttempts===1,'UNAUTHORIZED_SQL_ATTEMPT');}
++            else if(e.event==='SINGLE_RESULT'){check(acked&&sqlAttempts===1&&!eventResult,'INVALID_SQL_RESULT');eventResult=e;}
++            else if(e.event==='FAILED')throw Object.assign(Error(e.code),{code:e.code});
++            else check(false,'UNEXPECTED_WORKER_EVENT');
++          }).catch(e=>{handlerError??=e;stop(e.code??'WORKER_PROTOCOL_FAILED');});
++        }});
++      closed=new Promise(resolve=>{child.once('error',()=>stop('WORKER_START_FAILED'));child.once('close',(code,signal)=>{ended=performance.now();resolve({code,signal});});});
++      // Trace and resource persistence are established before giving the worker any request.
++      await startupRecord;await sample();batch.assertOpen();check(!reason,'RESOURCE_NOT_READY');
++      child.stdin.write(stable({schema_version:SINGLE_MODE,call:CALL,trusted_caller:CALLER,expected_instance:manifest.source_identity})+'\n');
++      exit=await closed;clearTimeout(timer);clearTimeout(escalation);clearInterval(interval);await sampler;await handling;await startupRecord;await sample();
++      for(const [pid,birth] of seen){const row=(await tree(pid))[0];if(row?.birth===birth)ownedRemaining++;}
++      check(ownedRemaining===0,'WORKER_CLEANUP_FAILED');check(!handlerError,handlerError?.code??'HANDLER_FAILED');check(!reason,reason??'WORKER_FAILED');
++      check(exit.code===0&&eventResult&&acked&&sqlAttempts===1,'INCOMPLETE_SQL_RESULT');
++    });
++    const r=eventResult.receipt,selected=expectedRows(CALL);
++    check(r.readOnly&&r.explicit_statement_count===1&&r.authorizer_selects===1&&stable(r.query_ids)===stable(['observation'])
++      &&r.query_sha256===sha(QUERIES.observation)&&stable(r.parameters)===stable(['CREW-03','heart_rate'])
++      &&r.selected_rows_sha256===sha(stable(selected))&&r.containment_diagnostic_sha256===diagnostic.hash
++      &&r.mount_namespace===diagnostic.proof.namespace,'SQL_RECEIPT_INVALID');
++    check(stable(eventResult.result)===stable(projectRows('elevated',0,CALL,selected)),'SQL_RESULT_CHANGED');
++    const after=inspectSealedSource(join(DESIGNATED_ROOT,'source'),spec,manifest.source_identity);check(stable(after)===stable(binding),'POST_READ_SOURCE_CHANGED');
++    const projected=designatedProjection(eventResult.result,CALL,CALLER,reg.manifest_sha256,sha(stable(manifest.source_identity)));
++    const result={run_id:trace.id,call_id:'call-01',execution_status:'COMPLETED',...projected,read_receipt:r};
++    const reference=await trace.result('call-01',result);await trace.append('CALL_COMPLETED',{call_id:'call-01',tool:CALL.tool,result:reference,execution_status:'COMPLETED',data_status:result.data_status});
++    await trace.append('RUN_ENDED',{status:'COMPLETED'});await trace.close();const id=trace.id;trace=null;
++    const recovery=await recoverTrace(id,{root:join(OUT,'traces')});check(recovery.status==='COMPLETE'&&recovery.executed_calls.length===1&&recovery.replayed_calls===0,'RECOVERY_FAILED');
++    const batchState=await batch.drain();await atomic('outcome.json',{task:'N16-06F',outcome:'PASS',actual_startups:actualStarts,sql_attempts:sqlAttempts,
++      exit,diagnostic,source_before:binding,source_after:after,result,recovery,batch:batchState,events,stderr,
++      native_wall_ms:ended-started,max_process_RSS:peak,max_counted_storage:maxDisk,resource_samples:samples,owned_remaining:ownedRemaining,observer_pending:sampleBusy?1:0,
++      network_requests:0,downloads:0,explicit_SQL_statements:1,trace_id:id});
++    return {outcome:'PASS',trace_id:id,actual_startups:actualStarts,data_status:result.data_status};
++  }catch(error){stop(error.code??'QUALIFICATION_FAILED');
++    if(child&&ended===null&&closed)await closed;
++    clearTimeout(timer);clearTimeout(escalation);clearInterval(interval);await sampler;await handling;
++    if(trace){try{await trace.append('CALL_FAILED',{call_id:'call-01',tool:CALL.tool,code:reason});await trace.append('RUN_ENDED',{status:'FAILED'});}catch{}await trace.close();}
++    let state;try{state=await batch.drain();}catch{state=batch.state();}
++    await atomic('outcome.json',{task:'N16-06F',outcome:'BLOCKED',reason,actual_startups:actualStarts,sql_attempts:sqlAttempts,exit,diagnostic,
++      events,stderr,batch:state,native_wall_ms:ended!==null?ended-started:null,max_process_RSS:peak,max_counted_storage:maxDisk,resource_samples:samples,
++      observer_pending:sampleBusy?1:0,committed_results:0});throw error;
++  }finally{clearTimeout(timer);clearTimeout(escalation);clearInterval(interval);if(directory)await directory.close();}
++}
++if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
++  try{process.stdout.write(JSON.stringify(await qualify())+'\n');}catch(e){process.stderr.write(JSON.stringify({outcome:'BLOCKED',code:e.code??'PREFLIGHT_FAILED'})+'\n');process.exitCode=1;}
++}
+--- /dev/null
++++ tests/n16-single-select.test.mjs N16-06F
+@@ -0,0 +1,165 @@
++// Non-native N16-06F controls. No worker, SQLite module, source DB or model loading.
++import test,{after} from 'node:test';
++import assert from 'node:assert/strict';
++import { readFile,writeFile,mkdir } from 'node:fs/promises';
++import { constants as OS } from 'node:os';
++import { SINGLE_MODE,authorizeSingle,verifyBinding,verifySingleGuard,executeSingle } from '../services/agent/single-select-contract.mjs';
++import { verifySchemaProvenance,inspectSealedSource } from '../services/agent/single-select-source.mjs';
++import { probeContainment } from '../services/agent/containment-diagnostics.mjs';
++import { QualificationBatch } from '../services/agent/qualification-batch.mjs';
++import { ExecutionTrace,recoverTrace } from '../services/agent/execution-trace.mjs';
++import { SCHEMA,QUERIES,rowsFor } from '../services/agent/sqlite-fixture-contract.mjs';
++import { SOURCE_ID,SOURCE_SHA,SOURCE_BYTES,SPEC_SHA,AS_OF } from '../services/agent/designated-contract.mjs';
++import { stable,sha } from '../services/agent/read-contract.mjs';
++
++const INSTANCE={directory:{dev:'1',ino:'2'},file:{dev:'1',ino:'3',birth_ns:'4',change_ns:'5'}};
++const BINDING={source_id:SOURCE_ID,source_sha256:SOURCE_SHA,source_bytes:SOURCE_BYTES,spec_sha256:SPEC_SHA,schema_sha256:sha(SCHEMA),
++  source_identity:INSTANCE,inventory:['source.sqlite'],file_mode:'0400',directory_mode:'0500',journal_mode:'closed_rollback'};
++const CALL={schema_version:'astra.n16.read-tools.v1',tool:'get_current_vitals',args:{crew_id:'CREW-03',metrics:['heart_rate']}};
++const CONTEXT={principal:{id:'mock-only',role:'astronaut',crew_id:'CREW-03'},crew_ids:['CREW-03'],read_as_of:AS_OF};
++const REQUEST={schema_version:SINGLE_MODE,call:CALL,trusted_caller:CONTEXT,expected_instance:INSTANCE};
++const C={SQLITE_OK:0,SQLITE_DENY:1,SQLITE_READ:20,SQLITE_SELECT:21,SQLITE_TRANSACTION:22,SQLITE_PRAGMA:19,SQLITE_FUNCTION:31};
++const RO='1 9 0:1 / / ro - tmpfs synthetic-root rw\n2 1 8:1 /sealed /fixture ro,nosuid,nodev - ext4 synthetic-device rw\n';
++const error=code=>Object.assign(Error(code),{code});
++function proof({fileCode='EACCES',mounts=RO}={}){
++  const deny=code=>()=>{throw Object.assign(error(code),{errno:-OS.errno[code],syscall:'open'});};
++  return probeContainment({readMountInfo:()=>mounts,mountNamespace:()=> 'mnt:[42]',createRootFile:deny('EROFS'),createSourceFile:deny('EROFS'),openSourceReadwrite:deny(fileCode)}, {source_id:SOURCE_ID,sha256:SOURCE_SHA});
++}
++const seal=value=>{const {hash,...body}=value;return {...body,hash:sha(stable(body))};};
++function fixture(){
++  const state={opens:0,prepares:0,gets:0,closes:0,reported:[],authorizer:null,options:null,committed:false};
++  const io={constants:C,inspect:()=>structuredClone(BINDING),guard:()=>proof(),reportGuard:d=>state.reported.push(d),
++    acknowledge:async()=>({command:'containment_verified',hash:state.reported.at(-1).hash,source_binding_sha256:sha(stable(BINDING)),call_sha256:sha(stable(CALL))}),
++    confirmMount:d=>assert.equal(stable(d.proof),stable(proof().proof)),
++    open:options=>{state.opens++;state.options=options;assert.equal(state.opens,1);return {
++      exec:()=>assert.fail('No setup or cleanup SQL permitted'),
++      setAuthorizer:fn=>{state.authorizer=fn;},
++      prepare:sql=>{state.prepares++;assert.equal(state.prepares,1);assert.equal(sql,QUERIES.observation);
++        assert.equal(state.authorizer(C.SQLITE_SELECT,null,null,null),C.SQLITE_OK);
++        for(const column of ['crew_id','metric','json','sha256'])assert.equal(state.authorizer(C.SQLITE_READ,'observations',column,'main'),C.SQLITE_OK);
++        return {get:(crew,metric)=>{state.gets++;assert.deepEqual([crew,metric],['CREW-03','heart_rate']);
++          return structuredClone(rowsFor('elevated',0).observations.find(r=>r.crew_id===crew&&r.metric===metric));}};},close:()=>state.closes++};}};
++  const run=async(request=structuredClone(REQUEST))=>{const result=await executeSingle(request,io);state.committed=true;return result;};
++  return {state,io,run};
++}
++const summary={scope:'MOCKED DATABASE/FILESYSTEM + TEXT/TRACES ONLY',actual_SQLite_connections:0,actual_SQL_statements:0,worker_startups:0,source_database_reads:0};
++after(()=>writeFile(new URL('../artifacts/n16-06f-20261029/mock-results.json',import.meta.url),JSON.stringify(summary,null,2)+'\n'));
++
++test('valid proof-bound positive performs exactly one mock parameterized SELECT and preserves canonical values',async()=>{
++  const f=fixture(),value=await f.run();assert.equal(value.result.data.items[0].value,103);assert.equal(value.result.data_status,'KNOWN');
++  assert.deepEqual([f.state.opens,f.state.prepares,f.state.gets,f.state.closes],[1,1,1,1]);assert.equal(f.state.options.readOnly,true);
++  assert.equal(f.state.options.allowExtension,false);assert.equal(f.state.options.defensive,true);assert.equal(value.receipt.explicit_statement_count,1);
++  assert.equal(value.result.data.items[0].provenance.observed_at,AS_OF);assert.equal(value.result.inference_performed,false);
++});
++for(const code of ['EACCES','EROFS'])test(code+' with valid independent source/root mounts can contribute',async()=>{
++  const f=fixture();f.io.guard=()=>proof({fileCode:code});await f.run();assert.equal(f.state.opens,1);
++});
++test('EACCES without read-only mount proof never opens a database',async()=>{
++  const f=fixture();f.io.guard=()=>proof({mounts:RO.replace('/fixture ro,','/fixture rw,')});await assert.rejects(f.run());assert.equal(f.state.opens,0);
++});
++test('EROFS without valid mount evidence also fails closed',async()=>{
++  const f=fixture();f.io.guard=()=>proof({fileCode:'EROFS',mounts:''});await assert.rejects(f.run());assert.equal(f.state.opens,0);
++});
++test('task-specific guard rejects EPERM even if generic proof policy would qualify it',async()=>{
++  const f=fixture();f.io.guard=()=>proof({fileCode:'EPERM'});assert.equal(f.io.guard().qualified,true);
++  await assert.rejects(f.run(),{code:'SINGLE_CONTAINMENT_REJECTED'});assert.equal(f.state.opens,0);
++});
++test('forged namespace/digest is rejected and a recomputed foreign namespace still fails actual-context check',async()=>{
++  for(const reseal of [false,true]){
++    const f=fixture();f.io.guard=()=>{const d=proof();d.proof.namespace='mnt:[999]';return reseal?seal(d):d;};
++    await assert.rejects(f.run());assert.equal(f.state.opens,0);
++  }
++});
++test('nested writable alias cannot supply an acceptable mount proof',async()=>{
++  const f=fixture();f.io.guard=()=>proof({mounts:RO+'3 2 8:1 /alias /fixture/source.sqlite rw - ext4 synthetic rw\n'});
++  await assert.rejects(f.run());assert.equal(f.state.opens,0);
++});
++for(const field of ['source_id','source_sha256','spec_sha256','schema_sha256'])test('wrong '+field+' rejects before SQL',async()=>{
++  const f=fixture();f.io.inspect=()=>({...structuredClone(BINDING),[field]:'wrong'});await assert.rejects(f.run());assert.equal(f.state.opens,0);
++});
++test('missing provenance fails closed and replacement instance cannot reuse the correct byte hash',async()=>{
++  for(const mutation of [b=>delete b.spec_sha256,b=>b.source_identity.file.ino='99',b=>b.source_identity.file.change_ns='99']){
++    const f=fixture();f.io.inspect=()=>{const b=structuredClone(BINDING);mutation(b);return b;};await assert.rejects(f.run());assert.equal(f.state.opens,0);
++  }
++});
++test('sidecar, writable source and wrong journal mode bindings fail',async()=>{
++  for(const [field,value] of [['inventory',['source.sqlite','source.sqlite-wal']],['file_mode','0600'],['directory_mode','0700'],['journal_mode','wal']]){
++    const f=fixture();f.io.inspect=()=>({...structuredClone(BINDING),[field]:value});await assert.rejects(f.run());assert.equal(f.state.opens,0);
++  }
++});
++test('source substitution during acknowledgement rejects before database open',async()=>{
++  const f=fixture();let reads=0;f.io.inspect=()=>{const b=structuredClone(BINDING);if(++reads>1)b.source_identity.file.ino='77';return b;};
++  await assert.rejects(f.run());assert.equal(f.state.opens,0);
++});
++for(const kind of ['missing','wrong_hash','wrong_binding','wrong_call','persistence_error'])test('ack '+kind+' prevents SQL',async()=>{
++  const f=fixture(),ack=f.io.acknowledge;f.io.acknowledge=async()=>{if(kind==='persistence_error')throw error('TRACE_PERSISTENCE_FAILED');if(kind==='missing')return null;
++    const a=await ack();a[kind==='wrong_hash'?'hash':kind==='wrong_binding'?'source_binding_sha256':'call_sha256']='0'.repeat(64);return a;};
++  await assert.rejects(f.run());assert.equal(f.state.opens,0);
++});
++test('wrong crew, role, unsupported tool, multiple metrics and injected SQL are rejected',async()=>{
++  const mutations=[r=>r.call.args.crew_id='CREW-04',r=>r.trusted_caller.principal.role='system_admin',r=>r.call.tool='get_data_quality',
++    r=>r.call.args.metrics.push('spo2'),r=>r.call.args.SQL='SELECT anything'];
++  for(const change of mutations){const f=fixture(),r=structuredClone(REQUEST);change(r);await assert.rejects(f.run(r));assert.equal(f.state.opens,0);}
++});
++test('authorizer excludes PRAGMA, transactions, functions, schema/other-table reads and second SELECT',async()=>{
++  const f=fixture();await f.run();for(const action of [C.SQLITE_PRAGMA,C.SQLITE_TRANSACTION,C.SQLITE_FUNCTION,18,23,24])assert.equal(f.state.authorizer(action,null,null,null),C.SQLITE_DENY);
++  assert.equal(f.state.authorizer(C.SQLITE_READ,'fixture_meta','json','main'),C.SQLITE_DENY);
++  assert.equal(f.state.authorizer(C.SQLITE_READ,'sqlite_schema','sql','main'),C.SQLITE_DENY);
++  assert.equal(f.state.authorizer(C.SQLITE_READ,'observations','json','other'),C.SQLITE_DENY);
++  assert.equal(f.state.authorizer(C.SQLITE_SELECT,null,null,null),C.SQLITE_DENY);
++});
++test('SQL error closes mock connection and cannot publish a completed result',async()=>{
++  const f=fixture(),open=f.io.open;f.io.open=o=>{const db=open(o);db.prepare=()=>{throw error('SQLITE_UNAVAILABLE');};return db;};
++  await assert.rejects(f.run(),{code:'SQLITE_UNAVAILABLE'});assert.equal(f.state.closes,1);assert.equal(f.state.committed,false);
++});
++test('missing/wrong row never turns into a fabricated healthy value',async()=>{
++  const f=fixture(),open=f.io.open;f.io.open=o=>{const db=open(o),prepare=db.prepare;db.prepare=s=>{const stmt=prepare(s);stmt.get=()=>null;return stmt;};return db;};
++  await assert.rejects(f.run());assert.equal(f.state.committed,false);assert.equal(f.state.closes,1);
++});
++test('source change after SQL rejects the result despite a successful SELECT',async()=>{
++  const f=fixture();let reads=0;f.io.inspect=()=>{const b=structuredClone(BINDING);if(++reads===3)b.source_identity.file.change_ns='99';return b;};
++  await assert.rejects(f.run());assert.equal(f.state.gets,1);assert.equal(f.state.committed,false);
++});
++test('first failure closes shared admission, including cleanup/late attempts',async()=>{
++  const batch=new QualificationBatch({persist:async r=>({durable:true,hash:r.hash})});let starts=0;
++  await assert.rejects(batch.run('first',async p=>{p.markStarted();starts++;throw error('SINGLE_CONTAINMENT_REJECTED');}));
++  await assert.rejects(batch.run('late',async p=>{p.markStarted();starts++;}));assert.equal(starts,1);assert.equal((await batch.drain()).blocked,true);
++});
++async function oracle(subject){const good=fixture();assert.equal((await subject(REQUEST,good.io)).result.data.items[0].value,103);
++  const bad=fixture();bad.io.guard=()=>proof({mounts:''});await assert.rejects(()=>subject(REQUEST,bad.io));}
++test('control oracle detects accept-all and reject-all substitutes',async()=>{
++  await oracle(executeSingle);await assert.rejects(()=>oracle(async()=>({result:{data:{items:[{value:103}]}}})));
++  await assert.rejects(()=>oracle(async()=>{throw error('REJECT_ALL');}));summary.accept_all_detected=true;summary.reject_all_detected=true;
++});
++test('pinned schema provenance validates without SQL; changed or absent provenance rejects',async()=>{
++  const bytes=await readFile(new URL('../docs/N16_05_SOURCE_SPEC.json',import.meta.url));assert.equal(verifySchemaProvenance(bytes),sha(SCHEMA));
++  assert.throws(()=>verifySchemaProvenance(Buffer.from('{}')));assert.throws(()=>verifySchemaProvenance(Buffer.concat([bytes,Buffer.from(' ')])));
++  for(const p of ['/tmp/arbitrary','/fixture/../other','/var/tmp/operational'])assert.throws(()=>inspectSealedSource(p,bytes,INSTANCE));
++});
++test('legacy worker workflow is byte-identical after removing the single explicitly selected mode branch',async()=>{
++  const before=await readFile(new URL('../artifacts/n16-06f-20261029/designated-worker.mjs.original.txt',import.meta.url),'utf8');
++  const now=await readFile(new URL('../services/agent/designated-worker.mjs',import.meta.url),'utf8');
++  const branch="  if(mode==='n16-06f-single-select-v1'){\n    const {runTaskSingleSelect}=await import('./single-select-runtime.mjs');\n    await runTaskSingleSelect(request,{DatabaseSync,constants,emit,next});\n  }else{\n";
++  assert.equal(now.replace(branch,'').replace('  }\n}catch(e){if(db)','}catch(e){if(db)'),before);
++  const p=await readFile(new URL('../services/agent/designated-source.mjs',import.meta.url),'utf8'),old=await readFile(new URL('../artifacts/n16-06f-20261029/designated-source.mjs.original.txt',import.meta.url),'utf8');
++  assert.equal(p.replace(sha(now),'2fac3411b862751097cfce20a06752426dd1548cc68a85a1738dc7c303c449ad'),old);
++});
++test('single execution function contains no setup/cleanup SQL or metadata query',async()=>{
++  const code=executeSingle.toString();assert.doesNotMatch(code,/\.exec\(|PRAGMA|ROLLBACK|BEGIN|QUERIES\.metadata/);
++  assert.equal((code.match(/db\.prepare\(/g)??[]).length,1);assert.match(code,/QUERIES\.observation\)\.get\(/);
++  const runner=await readFile(new URL('../scripts/n16-single-select-qualification.mjs',import.meta.url),'utf8');
++  assert.equal((runner.match(/child=spawn\(/g)??[]).length,1);assert.match(runner,/O_CREAT\|F\.O_EXCL/);assert.match(runner,/await commitContainment/);
++  assert.ok(runner.indexOf("await trace.append('CALL_STARTED'")<runner.indexOf('permit.markStarted()'));
++});
++test('real durable trace infrastructure distinguishes mocked failure and committed result without SQL replay',async()=>{
++  const root=new URL('../artifacts/n16-06f-20261029/qa-traces/',import.meta.url).pathname;await mkdir(root,{recursive:true});
++  for(const success of [true,false]){
++    const t=await ExecutionTrace.create({mock:true},{root});await t.append('CALL_REQUESTED',{call_id:'call-01'});
++    await t.append('CALL_VALIDATED',{call_id:'call-01',tool:CALL.tool});await t.append('CALL_STARTED',{call_id:'call-01',tool:CALL.tool});
++    if(success){const f=fixture(),value=await f.run(),reference=await t.result('call-01',{execution_status:'COMPLETED',...value.result});
++      await t.append('CALL_COMPLETED',{call_id:'call-01',tool:CALL.tool,result:reference});}
++    else await t.append('CALL_FAILED',{call_id:'call-01',tool:CALL.tool,code:'MOCK_SQL_FAILURE'});
++    await t.append('RUN_ENDED',{status:success?'COMPLETED':'FAILED'});await t.close();const r=await recoverTrace(t.id,{root});
++    assert.equal(r.status,'COMPLETE');assert.equal(r.executed_calls[0].status,success?'COMPLETED':'FAILED');assert.equal(r.replayed_calls,0);
++  }
++});

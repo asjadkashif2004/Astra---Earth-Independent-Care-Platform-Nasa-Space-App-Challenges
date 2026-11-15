@@ -1,0 +1,11 @@
+{
+  "args": [
+    "readelf",
+    "--dynamic",
+    "--wide",
+    "/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669/libllama-completion-impl.so"
+  ],
+  "exit_code": 0,
+  "stdout": "\nDynamic section at offset 0x1ad68 contains 31 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libllama-common.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libllama.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libggml-base.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000e (SONAME)             Library soname: [libllama-completion-impl.so]\n 0x000000000000001d (RUNPATH)            Library runpath: [$ORIGIN]\n 0x000000000000000c (INIT)               0x9000\n 0x000000000000000d (FINI)               0x179b4\n 0x0000000000000019 (INIT_ARRAY)         0x1bca8\n 0x000000000000001b (INIT_ARRAYSZ)       16 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x1bcb8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x2f0\n 0x0000000000000005 (STRTAB)             0x15c8\n 0x0000000000000006 (SYMTAB)             0x4b8\n 0x000000000000000a (STRSZ)              23562 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x1c000\n 0x0000000000000002 (PLTRELSZ)           3168 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x77d0\n 0x0000000000000007 (RELA)               0x7440\n 0x0000000000000008 (RELASZ)             912 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffe (VERNEED)            0x7340\n 0x000000006fffffff (VERNEEDNUM)         3\n 0x000000006ffffff0 (VERSYM)             0x71d2\n 0x000000006ffffff9 (RELACOUNT)          4\n 0x0000000000000000 (NULL)               0x0\n",
+  "stderr": ""
+}

@@ -1,0 +1,485 @@
+ELF Header:
+  Magic:   7f 45 4c 46 02 01 01 03 00 00 00 00 00 00 00 00 
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - GNU
+  ABI Version:                       0
+  Type:                              DYN (Shared object file)
+  Machine:                           Advanced Micro Devices X86-64
+  Version:                           0x1
+  Entry point address:               0x0
+  Start of program headers:          64 (bytes into file)
+  Start of section headers:          1196392 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               64 (bytes)
+  Size of program headers:           56 (bytes)
+  Number of program headers:         12
+  Size of section headers:           64 (bytes)
+  Number of section headers:         31
+  Section header string table index: 30
+
+Dynamic section at offset 0x123b98 contains 36 entries:
+  Tag        Type                         Name/Value
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+ 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]
+ 0x000000000000000e (SONAME)             Library soname: [libm.so.6]
+ 0x000000000000000c (INIT)               0x12000
+ 0x000000000000000d (FINI)               0xb1384
+ 0x0000000000000019 (INIT_ARRAY)         0x124b88
+ 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)
+ 0x000000000000001a (FINI_ARRAY)         0x124b90
+ 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)
+ 0x0000000000000004 (HASH)               0x308
+ 0x000000006ffffef5 (GNU_HASH)           0x28b8
+ 0x0000000000000005 (STRTAB)             0xd640
+ 0x0000000000000006 (SYMTAB)             0x5210
+ 0x000000000000000a (STRSZ)              11459 (bytes)
+ 0x000000000000000b (SYMENT)             24 (bytes)
+ 0x0000000070000000 (DT_X86_64_PLT)      0x12320
+ 0x0000000070000001 (DT_X86_64_PLTSZ)    0x2e0
+ 0x0000000070000003 (DT_X86_64_PLTENT)   0x10
+ 0x0000000000000003 (PLTGOT)             0x124e28
+ 0x0000000000000002 (PLTRELSZ)           1104 (bytes)
+ 0x0000000000000014 (PLTREL)             RELA
+ 0x0000000000000017 (JMPREL)             0x11260
+ 0x0000000000000007 (RELA)               0x11170
+ 0x0000000000000008 (RELASZ)             240 (bytes)
+ 0x0000000000000009 (RELAENT)            24 (bytes)
+ 0x000000006ffffffc (VERDEF)             0x10e08
+ 0x000000006ffffffd (VERDEFNUM)          21
+ 0x000000000000001e (FLAGS)              BIND_NOW STATIC_TLS
+ 0x000000006ffffffb (FLAGS_1)            Flags: NOW
+ 0x000000006ffffffe (VERNEED)            0x110f0
+ 0x000000006fffffff (VERNEEDNUM)         2
+ 0x000000006ffffff0 (VERSYM)             0x10304
+ 0x0000000000000024 (RELR)               0x116b0
+ 0x0000000000000023 (RELRSZ)             24 (bytes)
+ 0x0000000000000025 (RELRENT)            8 (bytes)
+ 0x0000000000000000 (NULL)               0x0
+
+Version symbols section '.gnu.version' contains 1410 entries:
+ Addr: 0x0000000000010304  Offset: 0x00010304  Link: 4 (.dynsym)
+  000:   0 (*local*)      16 (GLIBC_PRIVATE)   0 (*local*)      16 (GLIBC_PRIVATE)
+  004:  17 (GLIBC_2.2.5)  16 (GLIBC_PRIVATE)  18 (GLIBC_2.4)    16 (GLIBC_PRIVATE)
+  008:  17 (GLIBC_2.2.5)  17 (GLIBC_2.2.5)  17 (GLIBC_2.2.5)   0 (*local*)    
+  00c:  19 (GLIBC_PRIVATE)  16 (GLIBC_PRIVATE)  17 (GLIBC_2.2.5)   0 (*local*)    
+  010:  17 (GLIBC_2.2.5)  17 (GLIBC_2.2.5)   2h(GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  014:   9 (GLIBC_2.26)    4h(GLIBC_2.15)    a (GLIBC_2.27)   15 (GLIBC_2.43) 
+  018:   8h(GLIBC_2.25)    9 (GLIBC_2.26)    2h(GLIBC_2.2.5)  15 (GLIBC_2.43) 
+  01c:   2h(GLIBC_2.2.5)  15 (GLIBC_2.43)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  020:   d (GLIBC_2.31)    ah(GLIBC_2.27)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  024:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    2h(GLIBC_2.2.5)   c (GLIBC_2.29) 
+  028:   8h(GLIBC_2.25)   15 (GLIBC_2.43)    4h(GLIBC_2.15)    a (GLIBC_2.27) 
+  02c:   a (GLIBC_2.27)    a (GLIBC_2.27)    a (GLIBC_2.27)    8h(GLIBC_2.25) 
+  030:   a (GLIBC_2.27)   15 (GLIBC_2.43)   14 (GLIBC_2.42)   13 (GLIBC_2.41) 
+  034:   9 (GLIBC_2.26)    a (GLIBC_2.27)    a (GLIBC_2.27)    b (GLIBC_2.28) 
+  038:   f (GLIBC_2.35)    a (GLIBC_2.27)    a (GLIBC_2.27)    4h(GLIBC_2.15) 
+  03c:  15 (GLIBC_2.43)    9 (GLIBC_2.26)    8h(GLIBC_2.25)    7 (GLIBC_2.24) 
+  040:   a (GLIBC_2.27)    2h(GLIBC_2.2.5)  14 (GLIBC_2.42)    7 (GLIBC_2.24) 
+  044:  12 (GLIBC_2.40)    2h(GLIBC_2.2.5)  15 (GLIBC_2.43)    a (GLIBC_2.27) 
+  048:   a (GLIBC_2.27)    a (GLIBC_2.27)   12 (GLIBC_2.40)    a (GLIBC_2.27) 
+  04c:   f (GLIBC_2.35)    a (GLIBC_2.27)    9h(GLIBC_2.26)    a (GLIBC_2.27) 
+  050:   9 (GLIBC_2.26)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)   a (GLIBC_2.27) 
+  054:   9h(GLIBC_2.26)   15 (GLIBC_2.43)    ah(GLIBC_2.27)    4h(GLIBC_2.15) 
+  058:   9 (GLIBC_2.26)   13 (GLIBC_2.41)    a (GLIBC_2.27)    4h(GLIBC_2.15) 
+  05c:  12 (GLIBC_2.40)   14 (GLIBC_2.42)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  060:   a (GLIBC_2.27)    a (GLIBC_2.27)    f (GLIBC_2.35)    9h(GLIBC_2.26) 
+  064:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    9 (GLIBC_2.26)    a (GLIBC_2.27) 
+  068:   a (GLIBC_2.27)    4h(GLIBC_2.15)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  06c:   a (GLIBC_2.27)    4h(GLIBC_2.15)    a (GLIBC_2.27)    f (GLIBC_2.35) 
+  070:   2 (GLIBC_2.2.5)   ah(GLIBC_2.27)    d (GLIBC_2.31)    a (GLIBC_2.27) 
+  074:   a (GLIBC_2.27)    9 (GLIBC_2.26)    2 (GLIBC_2.2.5)   f (GLIBC_2.35) 
+  078:   4h(GLIBC_2.15)    9 (GLIBC_2.26)    a (GLIBC_2.27)    4h(GLIBC_2.15) 
+  07c:   2 (GLIBC_2.2.5)   9 (GLIBC_2.26)    b (GLIBC_2.28)    f (GLIBC_2.35) 
+  080:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)
+  084:  15 (GLIBC_2.43)    2h(GLIBC_2.2.5)  13 (GLIBC_2.41)    f (GLIBC_2.35) 
+  088:   8h(GLIBC_2.25)    d (GLIBC_2.31)    2 (GLIBC_2.2.5)   4h(GLIBC_2.15) 
+  08c:   b (GLIBC_2.28)    f (GLIBC_2.35)   12 (GLIBC_2.40)    2 (GLIBC_2.2.5)
+  090:   2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   f (GLIBC_2.35)    a (GLIBC_2.27) 
+  094:   a (GLIBC_2.27)   12 (GLIBC_2.40)    f (GLIBC_2.35)    b (GLIBC_2.28) 
+  098:   a (GLIBC_2.27)   14 (GLIBC_2.42)    9 (GLIBC_2.26)    9 (GLIBC_2.26) 
+  09c:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    4h(GLIBC_2.15)    a (GLIBC_2.27) 
+  0a0:   2 (GLIBC_2.2.5)  14 (GLIBC_2.42)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  0a4:  15 (GLIBC_2.43)    ah(GLIBC_2.27)    f (GLIBC_2.35)   14 (GLIBC_2.42) 
+  0a8:   a (GLIBC_2.27)    a (GLIBC_2.27)    5 (GLIBC_2.18)    a (GLIBC_2.27) 
+  0ac:   a (GLIBC_2.27)    a (GLIBC_2.27)    a (GLIBC_2.27)   14 (GLIBC_2.42) 
+  0b0:   a (GLIBC_2.27)   14 (GLIBC_2.42)    a (GLIBC_2.27)   15 (GLIBC_2.43) 
+  0b4:   2h(GLIBC_2.2.5)   b (GLIBC_2.28)    9 (GLIBC_2.26)    5 (GLIBC_2.18) 
+  0b8:   f (GLIBC_2.35)    2 (GLIBC_2.2.5)   4h(GLIBC_2.15)    a (GLIBC_2.27) 
+  0bc:   a (GLIBC_2.27)    a (GLIBC_2.27)   12 (GLIBC_2.40)    9 (GLIBC_2.26) 
+  0c0:   f (GLIBC_2.35)    9h(GLIBC_2.26)    a (GLIBC_2.27)   14 (GLIBC_2.42) 
+  0c4:   2 (GLIBC_2.2.5)   9 (GLIBC_2.26)    2 (GLIBC_2.2.5)   f (GLIBC_2.35) 
+  0c8:   f (GLIBC_2.35)    a (GLIBC_2.27)    a (GLIBC_2.27)   14 (GLIBC_2.42) 
+  0cc:   a (GLIBC_2.27)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)   a (GLIBC_2.27) 
+  0d0:   2h(GLIBC_2.2.5)   a (GLIBC_2.27)   15 (GLIBC_2.43)    a (GLIBC_2.27) 
+  0d4:   a (GLIBC_2.27)    a (GLIBC_2.27)    9 (GLIBC_2.26)    a (GLIBC_2.27) 
+  0d8:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    a (GLIBC_2.27)    9 (GLIBC_2.26) 
+  0dc:   2 (GLIBC_2.2.5)   4h(GLIBC_2.15)    9 (GLIBC_2.26)   13 (GLIBC_2.41) 
+  0e0:   b (GLIBC_2.28)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  0e4:   a (GLIBC_2.27)    2 (GLIBC_2.2.5)   a (GLIBC_2.27)    4h(GLIBC_2.15) 
+  0e8:   2 (GLIBC_2.2.5)   d (GLIBC_2.31)    ah(GLIBC_2.27)    b (GLIBC_2.28) 
+  0ec:   2 (GLIBC_2.2.5)  13 (GLIBC_2.41)    2 (GLIBC_2.2.5)   a (GLIBC_2.27) 
+  0f0:   a (GLIBC_2.27)    f (GLIBC_2.35)    2 (GLIBC_2.2.5)  14 (GLIBC_2.42) 
+  0f4:   a (GLIBC_2.27)    9 (GLIBC_2.26)   12 (GLIBC_2.40)    f (GLIBC_2.35) 
+  0f8:   f (GLIBC_2.35)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)   4h(GLIBC_2.15) 
+  0fc:   a (GLIBC_2.27)    a (GLIBC_2.27)    4h(GLIBC_2.15)    9 (GLIBC_2.26) 
+  100:   4h(GLIBC_2.15)    a (GLIBC_2.27)    ah(GLIBC_2.27)    9 (GLIBC_2.26) 
+  104:  15 (GLIBC_2.43)    2 (GLIBC_2.2.5)  12 (GLIBC_2.40)    a (GLIBC_2.27) 
+  108:   a (GLIBC_2.27)    2 (GLIBC_2.2.5)   4h(GLIBC_2.15)    a (GLIBC_2.27) 
+  10c:  13 (GLIBC_2.41)    b (GLIBC_2.28)    f (GLIBC_2.35)    9 (GLIBC_2.26) 
+  110:   4h(GLIBC_2.15)    f (GLIBC_2.35)    9h(GLIBC_2.26)    a (GLIBC_2.27) 
+  114:   a (GLIBC_2.27)    f (GLIBC_2.35)    2h(GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  118:  15 (GLIBC_2.43)    a (GLIBC_2.27)    9 (GLIBC_2.26)    a (GLIBC_2.27) 
+  11c:   f (GLIBC_2.35)    2 (GLIBC_2.2.5)   a (GLIBC_2.27)    f (GLIBC_2.35) 
+  120:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)   12 (GLIBC_2.40)    2 (GLIBC_2.2.5)
+  124:   a (GLIBC_2.27)    9h(GLIBC_2.26)    2 (GLIBC_2.2.5)  13 (GLIBC_2.41) 
+  128:   a (GLIBC_2.27)    a (GLIBC_2.27)    a (GLIBC_2.27)    9 (GLIBC_2.26) 
+  12c:   a (GLIBC_2.27)   15 (GLIBC_2.43)    2h(GLIBC_2.2.5)   a (GLIBC_2.27) 
+  130:   a (GLIBC_2.27)    b (GLIBC_2.28)    ah(GLIBC_2.27)    9 (GLIBC_2.26) 
+  134:  15 (GLIBC_2.43)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  138:   8 (GLIBC_2.25)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)  15 (GLIBC_2.43) 
+  13c:   6h(GLIBC_2.23)   13 (GLIBC_2.41)    2h(GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  140:   a (GLIBC_2.27)    9h(GLIBC_2.26)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  144:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  148:   a (GLIBC_2.27)    8 (GLIBC_2.25)    4h(GLIBC_2.15)    8 (GLIBC_2.25) 
+  14c:   2 (GLIBC_2.2.5)  14 (GLIBC_2.42)    6 (GLIBC_2.23)   13 (GLIBC_2.41) 
+  150:   2h(GLIBC_2.2.5)   4h(GLIBC_2.15)    b (GLIBC_2.28)    a (GLIBC_2.27) 
+  154:   a (GLIBC_2.27)    a (GLIBC_2.27)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)
+  158:  12 (GLIBC_2.40)   13 (GLIBC_2.41)    2 (GLIBC_2.2.5)   6 (GLIBC_2.23) 
+  15c:   9h(GLIBC_2.26)    2h(GLIBC_2.2.5)   9 (GLIBC_2.26)    a (GLIBC_2.27) 
+  160:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    8 (GLIBC_2.25)   14 (GLIBC_2.42) 
+  164:   a (GLIBC_2.27)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)   a (GLIBC_2.27) 
+  168:   8 (GLIBC_2.25)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  16c:  15 (GLIBC_2.43)    ah(GLIBC_2.27)    4h(GLIBC_2.15)   14 (GLIBC_2.42) 
+  170:   2 (GLIBC_2.2.5)   9 (GLIBC_2.26)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)
+  174:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    2 (GLIBC_2.2.5)   a (GLIBC_2.27) 
+  178:  14 (GLIBC_2.42)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   a (GLIBC_2.27) 
+  17c:   a (GLIBC_2.27)    9 (GLIBC_2.26)    9 (GLIBC_2.26)    2 (GLIBC_2.2.5)
+  180:   a (GLIBC_2.27)    9 (GLIBC_2.26)    2 (GLIBC_2.2.5)   a (GLIBC_2.27) 
+  184:   2 (GLIBC_2.2.5)   f (GLIBC_2.35)    a (GLIBC_2.27)    9 (GLIBC_2.26) 
+  188:   b (GLIBC_2.28)    2 (GLIBC_2.2.5)  13 (GLIBC_2.41)   14 (GLIBC_2.42) 
+  18c:   a (GLIBC_2.27)    2h(GLIBC_2.2.5)   a (GLIBC_2.27)    a (GLIBC_2.27) 
+  190:   a (GLIBC_2.27)   12 (GLIBC_2.40)    9 (GLIBC_2.26)    9 (GLIBC_2.26) 
+  194:  12 (GLIBC_2.40)    9 (GLIBC_2.26)    2 (GLIBC_2.2.5)   4h(GLIBC_2.15) 
+  198:   2h(GLIBC_2.2.5)   a (GLIBC_2.27)   15 (GLIBC_2.43)    8h(GLIBC_2.25) 
+  19c:   d (GLIBC_2.31)    a (GLIBC_2.27)    a (GLIBC_2.27)    f (GLIBC_2.35) 
+  1a0:  12 (GLIBC_2.40)    a (GLIBC_2.27)   15 (GLIBC_2.43)    9h(GLIBC_2.26) 
+  1a4:   9 (GLIBC_2.26)    2 (GLIBC_2.2.5)   8h(GLIBC_2.25)    d (GLIBC_2.31) 
+  1a8:   9 (GLIBC_2.26)   12 (GLIBC_2.40)    2 (GLIBC_2.2.5)   9 (GLIBC_2.26) 
+  1ac:   f (GLIBC_2.35)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)   b (GLIBC_2.28) 
+  1b0:   a (GLIBC_2.27)    f (GLIBC_2.35)   15 (GLIBC_2.43)    4h(GLIBC_2.15) 
+  1b4:   ah(GLIBC_2.27)    2 (GLIBC_2.2.5)   f (GLIBC_2.35)    a (GLIBC_2.27) 
+  1b8:   b (GLIBC_2.28)    2h(GLIBC_2.2.5)  15 (GLIBC_2.43)    a (GLIBC_2.27) 
+  1bc:   a (GLIBC_2.27)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  1c0:  13 (GLIBC_2.41)    4h(GLIBC_2.15)    a (GLIBC_2.27)    9h(GLIBC_2.26) 
+  1c4:   4h(GLIBC_2.15)    2 (GLIBC_2.2.5)   f (GLIBC_2.35)    2h(GLIBC_2.2.5)
+  1c8:  15 (GLIBC_2.43)    a (GLIBC_2.27)    9 (GLIBC_2.26)    2 (GLIBC_2.2.5)
+  1cc:   3 (GLIBC_2.4)    15 (GLIBC_2.43)    2 (GLIBC_2.2.5)   8h(GLIBC_2.25) 
+  1d0:   2 (GLIBC_2.2.5)   f (GLIBC_2.35)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  1d4:   b (GLIBC_2.28)   14 (GLIBC_2.42)    f (GLIBC_2.35)    2 (GLIBC_2.2.5)
+  1d8:   a (GLIBC_2.27)    a (GLIBC_2.27)    8h(GLIBC_2.25)    a (GLIBC_2.27) 
+  1dc:  15 (GLIBC_2.43)    2 (GLIBC_2.2.5)   f (GLIBC_2.35)    a (GLIBC_2.27) 
+  1e0:   a (GLIBC_2.27)    9 (GLIBC_2.26)    2 (GLIBC_2.2.5)  12 (GLIBC_2.40) 
+  1e4:  12 (GLIBC_2.40)    8 (GLIBC_2.25)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  1e8:   a (GLIBC_2.27)    9 (GLIBC_2.26)    9h(GLIBC_2.26)    a (GLIBC_2.27) 
+  1ec:   a (GLIBC_2.27)    f (GLIBC_2.35)    2 (GLIBC_2.2.5)   a (GLIBC_2.27) 
+  1f0:   a (GLIBC_2.27)    a (GLIBC_2.27)    4h(GLIBC_2.15)   13 (GLIBC_2.41) 
+  1f4:   2 (GLIBC_2.2.5)   4h(GLIBC_2.15)    2 (GLIBC_2.2.5)   a (GLIBC_2.27) 
+  1f8:   4h(GLIBC_2.15)    2 (GLIBC_2.2.5)   b (GLIBC_2.28)    9 (GLIBC_2.26) 
+  1fc:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    2 (GLIBC_2.2.5)   a (GLIBC_2.27) 
+  200:   9 (GLIBC_2.26)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  204:   f (GLIBC_2.35)    2 (GLIBC_2.2.5)   a (GLIBC_2.27)    2 (GLIBC_2.2.5)
+  208:   a (GLIBC_2.27)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   9h(GLIBC_2.26) 
+  20c:   a (GLIBC_2.27)    2h(GLIBC_2.2.5)   a (GLIBC_2.27)   15 (GLIBC_2.43) 
+  210:   a (GLIBC_2.27)    c (GLIBC_2.29)    2h(GLIBC_2.2.5)   f (GLIBC_2.35) 
+  214:  14 (GLIBC_2.42)    2 (GLIBC_2.2.5)   6 (GLIBC_2.23)    a (GLIBC_2.27) 
+  218:   a (GLIBC_2.27)    a (GLIBC_2.27)   13 (GLIBC_2.41)    9 (GLIBC_2.26) 
+  21c:   4h(GLIBC_2.15)    4h(GLIBC_2.15)    a (GLIBC_2.27)   15 (GLIBC_2.43) 
+  220:   2h(GLIBC_2.2.5)   9 (GLIBC_2.26)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  224:   2 (GLIBC_2.2.5)   b (GLIBC_2.28)    b (GLIBC_2.28)    2 (GLIBC_2.2.5)
+  228:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    a (GLIBC_2.27)   14 (GLIBC_2.42) 
+  22c:  12 (GLIBC_2.40)    f (GLIBC_2.35)    4h(GLIBC_2.15)    f (GLIBC_2.35) 
+  230:  12 (GLIBC_2.40)    a (GLIBC_2.27)    2h(GLIBC_2.2.5)   f (GLIBC_2.35) 
+  234:   f (GLIBC_2.35)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)   9 (GLIBC_2.26) 
+  238:   a (GLIBC_2.27)    4 (GLIBC_2.15)    2 (GLIBC_2.2.5)   b (GLIBC_2.28) 
+  23c:   a (GLIBC_2.27)    a (GLIBC_2.27)    b (GLIBC_2.28)   14 (GLIBC_2.42) 
+  240:   2 (GLIBC_2.2.5)   5 (GLIBC_2.18)    ah(GLIBC_2.27)   15 (GLIBC_2.43) 
+  244:   a (GLIBC_2.27)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)   9 (GLIBC_2.26) 
+  248:   2 (GLIBC_2.2.5)   b (GLIBC_2.28)    2 (GLIBC_2.2.5)   a (GLIBC_2.27) 
+  24c:   2 (GLIBC_2.2.5)  14 (GLIBC_2.42)    a (GLIBC_2.27)   13 (GLIBC_2.41) 
+  250:   a (GLIBC_2.27)    9 (GLIBC_2.26)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)
+  254:   2 (GLIBC_2.2.5)   b (GLIBC_2.28)    a (GLIBC_2.27)    b (GLIBC_2.28) 
+  258:   2 (GLIBC_2.2.5)   9 (GLIBC_2.26)    a (GLIBC_2.27)    ah(GLIBC_2.27) 
+  25c:   d (GLIBC_2.31)   13 (GLIBC_2.41)    a (GLIBC_2.27)   13 (GLIBC_2.41) 
+  260:   a (GLIBC_2.27)    8h(GLIBC_2.25)   15 (GLIBC_2.43)    a (GLIBC_2.27) 
+  264:   f (GLIBC_2.35)    9 (GLIBC_2.26)    f (GLIBC_2.35)    6 (GLIBC_2.23) 
+  268:   2h(GLIBC_2.2.5)   7 (GLIBC_2.24)    a (GLIBC_2.27)    e (GLIBC_2.32) 
+  26c:   8 (GLIBC_2.25)    9 (GLIBC_2.26)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  270:   b (GLIBC_2.28)    c (GLIBC_2.29)    2 (GLIBC_2.2.5)  15 (GLIBC_2.43) 
+  274:   ah(GLIBC_2.27)    a (GLIBC_2.27)    9h(GLIBC_2.26)   15 (GLIBC_2.43) 
+  278:   9h(GLIBC_2.26)    4h(GLIBC_2.15)    2 (GLIBC_2.2.5)   4h(GLIBC_2.15) 
+  27c:   b (GLIBC_2.28)    9 (GLIBC_2.26)    4h(GLIBC_2.15)    a (GLIBC_2.27) 
+  280:   a (GLIBC_2.27)    9 (GLIBC_2.26)    2 (GLIBC_2.2.5)   9 (GLIBC_2.26) 
+  284:   9 (GLIBC_2.26)    a (GLIBC_2.27)    a (GLIBC_2.27)    9 (GLIBC_2.26) 
+  288:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    4h(GLIBC_2.15)    2 (GLIBC_2.2.5)
+  28c:   a (GLIBC_2.27)    4h(GLIBC_2.15)   14 (GLIBC_2.42)    d (GLIBC_2.31) 
+  290:  13 (GLIBC_2.41)    2 (GLIBC_2.2.5)   a (GLIBC_2.27)    e (GLIBC_2.32) 
+  294:   9h(GLIBC_2.26)    a (GLIBC_2.27)    f (GLIBC_2.35)    f (GLIBC_2.35) 
+  298:   2 (GLIBC_2.2.5)  14 (GLIBC_2.42)    f (GLIBC_2.35)    9h(GLIBC_2.26) 
+  29c:  10 (GLIBC_2.38)   11 (GLIBC_2.39)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)
+  2a0:   a (GLIBC_2.27)    a (GLIBC_2.27)    4h(GLIBC_2.15)   14 (GLIBC_2.42) 
+  2a4:   2 (GLIBC_2.2.5)   2h(GLIBC_2.2.5)  15 (GLIBC_2.43)    2 (GLIBC_2.2.5)
+  2a8:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)
+  2ac:   8h(GLIBC_2.25)   15 (GLIBC_2.43)   13 (GLIBC_2.41)    2 (GLIBC_2.2.5)
+  2b0:   a (GLIBC_2.27)    a (GLIBC_2.27)   14 (GLIBC_2.42)    8h(GLIBC_2.25) 
+  2b4:  15 (GLIBC_2.43)    4h(GLIBC_2.15)    2 (GLIBC_2.2.5)   a (GLIBC_2.27) 
+  2b8:  14 (GLIBC_2.42)   12 (GLIBC_2.40)   13 (GLIBC_2.41)    4h(GLIBC_2.15) 
+  2bc:   a (GLIBC_2.27)    a (GLIBC_2.27)    f (GLIBC_2.35)   14 (GLIBC_2.42) 
+  2c0:   a (GLIBC_2.27)    2 (GLIBC_2.2.5)  15 (GLIBC_2.43)    a (GLIBC_2.27) 
+  2c4:   9 (GLIBC_2.26)    2h(GLIBC_2.2.5)  12 (GLIBC_2.40)   15 (GLIBC_2.43) 
+  2c8:   a (GLIBC_2.27)    2 (GLIBC_2.2.5)   9h(GLIBC_2.26)    2 (GLIBC_2.2.5)
+  2cc:   a (GLIBC_2.27)    a (GLIBC_2.27)    a (GLIBC_2.27)   14 (GLIBC_2.42) 
+  2d0:   2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    2 (GLIBC_2.2.5)
+  2d4:   2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   f (GLIBC_2.35) 
+  2d8:   2 (GLIBC_2.2.5)   8 (GLIBC_2.25)    4h(GLIBC_2.15)   13 (GLIBC_2.41) 
+  2dc:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  2e0:   a (GLIBC_2.27)    a (GLIBC_2.27)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)
+  2e4:   d (GLIBC_2.31)    ah(GLIBC_2.27)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  2e8:  13 (GLIBC_2.41)    b (GLIBC_2.28)    2h(GLIBC_2.2.5)  12 (GLIBC_2.40) 
+  2ec:  15 (GLIBC_2.43)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)   a (GLIBC_2.27) 
+  2f0:  13 (GLIBC_2.41)    2 (GLIBC_2.2.5)   a (GLIBC_2.27)    a (GLIBC_2.27) 
+  2f4:   a (GLIBC_2.27)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)   a (GLIBC_2.27) 
+  2f8:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    a (GLIBC_2.27)    9 (GLIBC_2.26) 
+  2fc:   a (GLIBC_2.27)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  300:   a (GLIBC_2.27)    9 (GLIBC_2.26)    9 (GLIBC_2.26)    b (GLIBC_2.28) 
+  304:  12 (GLIBC_2.40)   15 (GLIBC_2.43)    ah(GLIBC_2.27)    2 (GLIBC_2.2.5)
+  308:   8 (GLIBC_2.25)   12 (GLIBC_2.40)    a (GLIBC_2.27)    8 (GLIBC_2.25) 
+  30c:   a (GLIBC_2.27)    ah(GLIBC_2.27)    a (GLIBC_2.27)   15 (GLIBC_2.43) 
+  310:   9 (GLIBC_2.26)    a (GLIBC_2.27)    4h(GLIBC_2.15)    4h(GLIBC_2.15) 
+  314:   a (GLIBC_2.27)    a (GLIBC_2.27)    4h(GLIBC_2.15)    a (GLIBC_2.27) 
+  318:   9h(GLIBC_2.26)    f (GLIBC_2.35)   13 (GLIBC_2.41)    2 (GLIBC_2.2.5)
+  31c:   a (GLIBC_2.27)    4h(GLIBC_2.15)   15 (GLIBC_2.43)    2h(GLIBC_2.2.5)
+  320:   a (GLIBC_2.27)    f (GLIBC_2.35)    b (GLIBC_2.28)    a (GLIBC_2.27) 
+  324:   b (GLIBC_2.28)    9 (GLIBC_2.26)    2 (GLIBC_2.2.5)   4h(GLIBC_2.15) 
+  328:   9 (GLIBC_2.26)    a (GLIBC_2.27)    a (GLIBC_2.27)   14 (GLIBC_2.42) 
+  32c:   a (GLIBC_2.27)    a (GLIBC_2.27)    f (GLIBC_2.35)    9 (GLIBC_2.26) 
+  330:   a (GLIBC_2.27)   15 (GLIBC_2.43)    9h(GLIBC_2.26)    9 (GLIBC_2.26) 
+  334:   2h(GLIBC_2.2.5)  15 (GLIBC_2.43)    4h(GLIBC_2.15)    2h(GLIBC_2.2.5)
+  338:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    4h(GLIBC_2.15)   13 (GLIBC_2.41) 
+  33c:   2 (GLIBC_2.2.5)   9 (GLIBC_2.26)   12 (GLIBC_2.40)    7 (GLIBC_2.24) 
+  340:   b (GLIBC_2.28)    a (GLIBC_2.27)    f (GLIBC_2.35)    2 (GLIBC_2.2.5)
+  344:   a (GLIBC_2.27)    f (GLIBC_2.35)    4h(GLIBC_2.15)    8 (GLIBC_2.25) 
+  348:  13 (GLIBC_2.41)    2 (GLIBC_2.2.5)   7 (GLIBC_2.24)    a (GLIBC_2.27) 
+  34c:   9 (GLIBC_2.26)    2 (GLIBC_2.2.5)  13 (GLIBC_2.41)    f (GLIBC_2.35) 
+  350:   a (GLIBC_2.27)    4h(GLIBC_2.15)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  354:   9 (GLIBC_2.26)    b (GLIBC_2.28)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)
+  358:   4h(GLIBC_2.15)    b (GLIBC_2.28)    2 (GLIBC_2.2.5)   4h(GLIBC_2.15) 
+  35c:   a (GLIBC_2.27)    a (GLIBC_2.27)    a (GLIBC_2.27)    4h(GLIBC_2.15) 
+  360:   9 (GLIBC_2.26)    2 (GLIBC_2.2.5)   a (GLIBC_2.27)    f (GLIBC_2.35) 
+  364:   2 (GLIBC_2.2.5)   b (GLIBC_2.28)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)
+  368:   8 (GLIBC_2.25)    9 (GLIBC_2.26)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  36c:  12 (GLIBC_2.40)    f (GLIBC_2.35)    f (GLIBC_2.35)    4h(GLIBC_2.15) 
+  370:   2 (GLIBC_2.2.5)   8 (GLIBC_2.25)    9 (GLIBC_2.26)    a (GLIBC_2.27) 
+  374:   2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    4h(GLIBC_2.15) 
+  378:   a (GLIBC_2.27)    a (GLIBC_2.27)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  37c:   a (GLIBC_2.27)    2 (GLIBC_2.2.5)   a (GLIBC_2.27)   13 (GLIBC_2.41) 
+  380:   a (GLIBC_2.27)    2 (GLIBC_2.2.5)  15 (GLIBC_2.43)    2 (GLIBC_2.2.5)
+  384:   ah(GLIBC_2.27)   15 (GLIBC_2.43)    9h(GLIBC_2.26)    f (GLIBC_2.35) 
+  388:   2 (GLIBC_2.2.5)  13 (GLIBC_2.41)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  38c:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)   12 (GLIBC_2.40)    a (GLIBC_2.27) 
+  390:   a (GLIBC_2.27)    4h(GLIBC_2.15)    a (GLIBC_2.27)    8 (GLIBC_2.25) 
+  394:   a (GLIBC_2.27)    9 (GLIBC_2.26)    4h(GLIBC_2.15)    a (GLIBC_2.27) 
+  398:   a (GLIBC_2.27)    f (GLIBC_2.35)    2 (GLIBC_2.2.5)   9 (GLIBC_2.26) 
+  39c:   f (GLIBC_2.35)    a (GLIBC_2.27)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  3a0:   9 (GLIBC_2.26)   13 (GLIBC_2.41)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  3a4:  14 (GLIBC_2.42)    4h(GLIBC_2.15)   13 (GLIBC_2.41)    f (GLIBC_2.35) 
+  3a8:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  3ac:   a (GLIBC_2.27)    9h(GLIBC_2.26)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  3b0:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  3b4:   f (GLIBC_2.35)    2 (GLIBC_2.2.5)   a (GLIBC_2.27)    4h(GLIBC_2.15) 
+  3b8:   8 (GLIBC_2.25)    2 (GLIBC_2.2.5)   4h(GLIBC_2.15)    b (GLIBC_2.28) 
+  3bc:   4h(GLIBC_2.15)    a (GLIBC_2.27)    a (GLIBC_2.27)    f (GLIBC_2.35) 
+  3c0:   2 (GLIBC_2.2.5)   ah(GLIBC_2.27)    d (GLIBC_2.31)    8 (GLIBC_2.25) 
+  3c4:   2 (GLIBC_2.2.5)   b (GLIBC_2.28)    a (GLIBC_2.27)    9 (GLIBC_2.26) 
+  3c8:   a (GLIBC_2.27)    f (GLIBC_2.35)    2 (GLIBC_2.2.5)   f (GLIBC_2.35) 
+  3cc:   ah(GLIBC_2.27)    2 (GLIBC_2.2.5)  15 (GLIBC_2.43)    a (GLIBC_2.27) 
+  3d0:   a (GLIBC_2.27)   13 (GLIBC_2.41)    9 (GLIBC_2.26)    2 (GLIBC_2.2.5)
+  3d4:   2 (GLIBC_2.2.5)   8 (GLIBC_2.25)    f (GLIBC_2.35)    4h(GLIBC_2.15) 
+  3d8:   a (GLIBC_2.27)    2 (GLIBC_2.2.5)   a (GLIBC_2.27)    2 (GLIBC_2.2.5)
+  3dc:   f (GLIBC_2.35)    8 (GLIBC_2.25)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  3e0:   2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   b (GLIBC_2.28)    2 (GLIBC_2.2.5)
+  3e4:   a (GLIBC_2.27)    a (GLIBC_2.27)    c (GLIBC_2.29)    2h(GLIBC_2.2.5)
+  3e8:   2 (GLIBC_2.2.5)  14 (GLIBC_2.42)    2 (GLIBC_2.2.5)   a (GLIBC_2.27) 
+  3ec:   2 (GLIBC_2.2.5)   f (GLIBC_2.35)    9 (GLIBC_2.26)    a (GLIBC_2.27) 
+  3f0:   9 (GLIBC_2.26)   14 (GLIBC_2.42)    9h(GLIBC_2.26)    f (GLIBC_2.35) 
+  3f4:   4h(GLIBC_2.15)    9h(GLIBC_2.26)   12 (GLIBC_2.40)    2 (GLIBC_2.2.5)
+  3f8:   2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)  14 (GLIBC_2.42)    9 (GLIBC_2.26) 
+  3fc:  12 (GLIBC_2.40)    9 (GLIBC_2.26)    b (GLIBC_2.28)    a (GLIBC_2.27) 
+  400:   9 (GLIBC_2.26)    a (GLIBC_2.27)   13 (GLIBC_2.41)    ah(GLIBC_2.27) 
+  404:  15 (GLIBC_2.43)    a (GLIBC_2.27)    a (GLIBC_2.27)   12 (GLIBC_2.40) 
+  408:   a (GLIBC_2.27)    9h(GLIBC_2.26)   12 (GLIBC_2.40)    8 (GLIBC_2.25) 
+  40c:   a (GLIBC_2.27)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  410:   f (GLIBC_2.35)    f (GLIBC_2.35)    2 (GLIBC_2.2.5)   9 (GLIBC_2.26) 
+  414:   a (GLIBC_2.27)    a (GLIBC_2.27)    2h(GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  418:  15 (GLIBC_2.43)    2 (GLIBC_2.2.5)   9 (GLIBC_2.26)    f (GLIBC_2.35) 
+  41c:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    f (GLIBC_2.35)    2 (GLIBC_2.2.5)
+  420:   9 (GLIBC_2.26)    b (GLIBC_2.28)    9 (GLIBC_2.26)    2 (GLIBC_2.2.5)
+  424:   4h(GLIBC_2.15)    2 (GLIBC_2.2.5)   a (GLIBC_2.27)    2 (GLIBC_2.2.5)
+  428:   a (GLIBC_2.27)    a (GLIBC_2.27)    a (GLIBC_2.27)    8 (GLIBC_2.25) 
+  42c:   a (GLIBC_2.27)   14 (GLIBC_2.42)   12 (GLIBC_2.40)    b (GLIBC_2.28) 
+  430:   2h(GLIBC_2.2.5)   2h(GLIBC_2.2.5)   2 (GLIBC_2.2.5)  13 (GLIBC_2.41) 
+  434:   9 (GLIBC_2.26)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   b (GLIBC_2.28) 
+  438:   c (GLIBC_2.29)    2h(GLIBC_2.2.5)   a (GLIBC_2.27)    2 (GLIBC_2.2.5)
+  43c:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)   12 (GLIBC_2.40)    2 (GLIBC_2.2.5)
+  440:   f (GLIBC_2.35)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   4h(GLIBC_2.15) 
+  444:   b (GLIBC_2.28)   12 (GLIBC_2.40)    2 (GLIBC_2.2.5)   f (GLIBC_2.35) 
+  448:   2 (GLIBC_2.2.5)  14 (GLIBC_2.42)   12 (GLIBC_2.40)    a (GLIBC_2.27) 
+  44c:   f (GLIBC_2.35)    b (GLIBC_2.28)   12 (GLIBC_2.40)    2 (GLIBC_2.2.5)
+  450:   a (GLIBC_2.27)    9 (GLIBC_2.26)    9 (GLIBC_2.26)    ah(GLIBC_2.27) 
+  454:   d (GLIBC_2.31)   13 (GLIBC_2.41)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  458:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)
+  45c:   2 (GLIBC_2.2.5)   c (GLIBC_2.29)    2 (GLIBC_2.2.5)   2h(GLIBC_2.2.5)
+  460:   a (GLIBC_2.27)    7 (GLIBC_2.24)    2 (GLIBC_2.2.5)  14 (GLIBC_2.42) 
+  464:   a (GLIBC_2.27)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  468:   2 (GLIBC_2.2.5)  13 (GLIBC_2.41)    9 (GLIBC_2.26)    a (GLIBC_2.27) 
+  46c:   f (GLIBC_2.35)    a (GLIBC_2.27)    8 (GLIBC_2.25)    2 (GLIBC_2.2.5)
+  470:   b (GLIBC_2.28)    a (GLIBC_2.27)    f (GLIBC_2.35)    a (GLIBC_2.27) 
+  474:   7 (GLIBC_2.24)    f (GLIBC_2.35)    4h(GLIBC_2.15)    2 (GLIBC_2.2.5)
+  478:   a (GLIBC_2.27)    8 (GLIBC_2.25)    4h(GLIBC_2.15)    9 (GLIBC_2.26) 
+  47c:   9 (GLIBC_2.26)    9h(GLIBC_2.26)    d (GLIBC_2.31)   13 (GLIBC_2.41) 
+  480:   a (GLIBC_2.27)    a (GLIBC_2.27)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)
+  484:  14 (GLIBC_2.42)    9h(GLIBC_2.26)    2 (GLIBC_2.2.5)   a (GLIBC_2.27) 
+  488:   2 (GLIBC_2.2.5)   8 (GLIBC_2.25)    a (GLIBC_2.27)    f (GLIBC_2.35) 
+  48c:   a (GLIBC_2.27)    9 (GLIBC_2.26)    d (GLIBC_2.31)    8h(GLIBC_2.25) 
+  490:   2 (GLIBC_2.2.5)   8 (GLIBC_2.25)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)
+  494:   8h(GLIBC_2.25)   15 (GLIBC_2.43)    ah(GLIBC_2.27)    d (GLIBC_2.31) 
+  498:   4h(GLIBC_2.15)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   a (GLIBC_2.27) 
+  49c:   a (GLIBC_2.27)    b (GLIBC_2.28)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)
+  4a0:   a (GLIBC_2.27)    a (GLIBC_2.27)    a (GLIBC_2.27)    9h(GLIBC_2.26) 
+  4a4:   a (GLIBC_2.27)    4h(GLIBC_2.15)    2 (GLIBC_2.2.5)  13 (GLIBC_2.41) 
+  4a8:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    a (GLIBC_2.27)    2h(GLIBC_2.2.5)
+  4ac:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    8 (GLIBC_2.25)   13 (GLIBC_2.41) 
+  4b0:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  4b4:   8 (GLIBC_2.25)    f (GLIBC_2.35)    8 (GLIBC_2.25)    b (GLIBC_2.28) 
+  4b8:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    2 (GLIBC_2.2.5)   9 (GLIBC_2.26) 
+  4bc:   b (GLIBC_2.28)    a (GLIBC_2.27)   12 (GLIBC_2.40)    a (GLIBC_2.27) 
+  4c0:   2 (GLIBC_2.2.5)   a (GLIBC_2.27)    2 (GLIBC_2.2.5)   f (GLIBC_2.35) 
+  4c4:   2 (GLIBC_2.2.5)   9h(GLIBC_2.26)    a (GLIBC_2.27)    9h(GLIBC_2.26) 
+  4c8:   a (GLIBC_2.27)    9 (GLIBC_2.26)    b (GLIBC_2.28)    b (GLIBC_2.28) 
+  4cc:   f (GLIBC_2.35)    2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   f (GLIBC_2.35) 
+  4d0:   a (GLIBC_2.27)    2h(GLIBC_2.2.5)   a (GLIBC_2.27)   11 (GLIBC_2.39) 
+  4d4:   4h(GLIBC_2.15)    2 (GLIBC_2.2.5)   a (GLIBC_2.27)   14 (GLIBC_2.42) 
+  4d8:  13 (GLIBC_2.41)    4h(GLIBC_2.15)    9 (GLIBC_2.26)   14 (GLIBC_2.42) 
+  4dc:   9 (GLIBC_2.26)    a (GLIBC_2.27)    a (GLIBC_2.27)    f (GLIBC_2.35) 
+  4e0:  13 (GLIBC_2.41)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)   4h(GLIBC_2.15) 
+  4e4:   9 (GLIBC_2.26)    ah(GLIBC_2.27)    2 (GLIBC_2.2.5)  15 (GLIBC_2.43) 
+  4e8:  13 (GLIBC_2.41)    2 (GLIBC_2.2.5)   9h(GLIBC_2.26)    2 (GLIBC_2.2.5)
+  4ec:   ah(GLIBC_2.27)   15 (GLIBC_2.43)    9 (GLIBC_2.26)   13 (GLIBC_2.41) 
+  4f0:   a (GLIBC_2.27)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)   8 (GLIBC_2.25) 
+  4f4:  13 (GLIBC_2.41)    a (GLIBC_2.27)   13 (GLIBC_2.41)    d (GLIBC_2.31) 
+  4f8:  13 (GLIBC_2.41)    ah(GLIBC_2.27)    9 (GLIBC_2.26)    a (GLIBC_2.27) 
+  4fc:   a (GLIBC_2.27)    a (GLIBC_2.27)    9h(GLIBC_2.26)    2 (GLIBC_2.2.5)
+  500:   d (GLIBC_2.31)    4h(GLIBC_2.15)    a (GLIBC_2.27)   12 (GLIBC_2.40) 
+  504:   2h(GLIBC_2.2.5)   f (GLIBC_2.35)   13 (GLIBC_2.41)    f (GLIBC_2.35) 
+  508:  13 (GLIBC_2.41)    2h(GLIBC_2.2.5)   a (GLIBC_2.27)    a (GLIBC_2.27) 
+  50c:   f (GLIBC_2.35)    a (GLIBC_2.27)   10 (GLIBC_2.38)    2h(GLIBC_2.2.5)
+  510:  10 (GLIBC_2.38)    2h(GLIBC_2.2.5)  12 (GLIBC_2.40)    2 (GLIBC_2.2.5)
+  514:   2 (GLIBC_2.2.5)  13 (GLIBC_2.41)    2 (GLIBC_2.2.5)   a (GLIBC_2.27) 
+  518:  14 (GLIBC_2.42)    2 (GLIBC_2.2.5)   9 (GLIBC_2.26)    a (GLIBC_2.27) 
+  51c:   4h(GLIBC_2.15)   13 (GLIBC_2.41)    4h(GLIBC_2.15)    2 (GLIBC_2.2.5)
+  520:  14 (GLIBC_2.42)    2 (GLIBC_2.2.5)   a (GLIBC_2.27)    9 (GLIBC_2.26) 
+  524:  13 (GLIBC_2.41)    2 (GLIBC_2.2.5)   b (GLIBC_2.28)   12 (GLIBC_2.40) 
+  528:   2 (GLIBC_2.2.5)   9h(GLIBC_2.26)    2 (GLIBC_2.2.5)  13 (GLIBC_2.41) 
+  52c:   2 (GLIBC_2.2.5)   b (GLIBC_2.28)    d (GLIBC_2.31)    8h(GLIBC_2.25) 
+  530:   a (GLIBC_2.27)    4h(GLIBC_2.15)    2 (GLIBC_2.2.5)   a (GLIBC_2.27) 
+  534:   a (GLIBC_2.27)   13 (GLIBC_2.41)    9 (GLIBC_2.26)    2 (GLIBC_2.2.5)
+  538:  12 (GLIBC_2.40)    2 (GLIBC_2.2.5)   a (GLIBC_2.27)    2 (GLIBC_2.2.5)
+  53c:   a (GLIBC_2.27)    b (GLIBC_2.28)    2 (GLIBC_2.2.5)   f (GLIBC_2.35) 
+  540:   a (GLIBC_2.27)    9 (GLIBC_2.26)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)
+  544:   a (GLIBC_2.27)    9 (GLIBC_2.26)    a (GLIBC_2.27)    a (GLIBC_2.27) 
+  548:   a (GLIBC_2.27)   15 (GLIBC_2.43)    a (GLIBC_2.27)    8h(GLIBC_2.25) 
+  54c:   4h(GLIBC_2.15)    8 (GLIBC_2.25)    a (GLIBC_2.27)    2h(GLIBC_2.2.5)
+  550:   8 (GLIBC_2.25)    2 (GLIBC_2.2.5)   f (GLIBC_2.35)    a (GLIBC_2.27) 
+  554:   2 (GLIBC_2.2.5)   8 (GLIBC_2.25)    8 (GLIBC_2.25)    a (GLIBC_2.27) 
+  558:   f (GLIBC_2.35)    2 (GLIBC_2.2.5)   4h(GLIBC_2.15)    2 (GLIBC_2.2.5)
+  55c:   f (GLIBC_2.35)    f (GLIBC_2.35)    a (GLIBC_2.27)    2 (GLIBC_2.2.5)
+  560:   8 (GLIBC_2.25)    a (GLIBC_2.27)   12 (GLIBC_2.40)    b (GLIBC_2.28) 
+  564:   9 (GLIBC_2.26)    f (GLIBC_2.35)    b (GLIBC_2.28)    a (GLIBC_2.27) 
+  568:  13 (GLIBC_2.41)    2 (GLIBC_2.2.5)   a (GLIBC_2.27)    8h(GLIBC_2.25) 
+  56c:  15 (GLIBC_2.43)    2 (GLIBC_2.2.5)   a (GLIBC_2.27)    4h(GLIBC_2.15) 
+  570:   a (GLIBC_2.27)    a (GLIBC_2.27)   13 (GLIBC_2.41)    f (GLIBC_2.35) 
+  574:   2 (GLIBC_2.2.5)  15 (GLIBC_2.43)    8h(GLIBC_2.25)   13 (GLIBC_2.41) 
+  578:   2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)  13 (GLIBC_2.41)    4h(GLIBC_2.15) 
+  57c:   2h(GLIBC_2.2.5)   a (GLIBC_2.27)    9 (GLIBC_2.26)    4h(GLIBC_2.15) 
+  580:   b (GLIBC_2.28)    5 (GLIBC_2.18) 
+
+Version definition section '.gnu.version_d' contains 21 entries:
+ Addr: 0x0000000000010e08  Offset: 0x00010e08  Link: 5 (.dynstr)
+  000000: Rev: 1  Flags: BASE  Index: 1  Cnt: 1  Name: libm.so.6
+  0x001c: Rev: 1  Flags: none  Index: 2  Cnt: 1  Name: GLIBC_2.2.5
+  0x0038: Rev: 1  Flags: none  Index: 3  Cnt: 2  Name: GLIBC_2.4
+  0x0054: Parent 1: GLIBC_2.2.5
+  0x005c: Rev: 1  Flags: none  Index: 4  Cnt: 2  Name: GLIBC_2.15
+  0x0078: Parent 1: GLIBC_2.4
+  0x0080: Rev: 1  Flags: none  Index: 5  Cnt: 2  Name: GLIBC_2.18
+  0x009c: Parent 1: GLIBC_2.15
+  0x00a4: Rev: 1  Flags: none  Index: 6  Cnt: 2  Name: GLIBC_2.23
+  0x00c0: Parent 1: GLIBC_2.18
+  0x00c8: Rev: 1  Flags: none  Index: 7  Cnt: 2  Name: GLIBC_2.24
+  0x00e4: Parent 1: GLIBC_2.23
+  0x00ec: Rev: 1  Flags: none  Index: 8  Cnt: 2  Name: GLIBC_2.25
+  0x0108: Parent 1: GLIBC_2.24
+  0x0110: Rev: 1  Flags: none  Index: 9  Cnt: 2  Name: GLIBC_2.26
+  0x012c: Parent 1: GLIBC_2.25
+  0x0134: Rev: 1  Flags: none  Index: 10  Cnt: 2  Name: GLIBC_2.27
+  0x0150: Parent 1: GLIBC_2.26
+  0x0158: Rev: 1  Flags: none  Index: 11  Cnt: 2  Name: GLIBC_2.28
+  0x0174: Parent 1: GLIBC_2.27
+  0x017c: Rev: 1  Flags: none  Index: 12  Cnt: 2  Name: GLIBC_2.29
+  0x0198: Parent 1: GLIBC_2.28
+  0x01a0: Rev: 1  Flags: none  Index: 13  Cnt: 2  Name: GLIBC_2.31
+  0x01bc: Parent 1: GLIBC_2.29
+  0x01c4: Rev: 1  Flags: none  Index: 14  Cnt: 2  Name: GLIBC_2.32
+  0x01e0: Parent 1: GLIBC_2.31
+  0x01e8: Rev: 1  Flags: none  Index: 15  Cnt: 2  Name: GLIBC_2.35
+  0x0204: Parent 1: GLIBC_2.32
+  0x020c: Rev: 1  Flags: none  Index: 16  Cnt: 2  Name: GLIBC_2.38
+  0x0228: Parent 1: GLIBC_2.35
+  0x0230: Rev: 1  Flags: none  Index: 17  Cnt: 2  Name: GLIBC_2.39
+  0x024c: Parent 1: GLIBC_2.38
+  0x0254: Rev: 1  Flags: none  Index: 18  Cnt: 2  Name: GLIBC_2.40
+  0x0270: Parent 1: GLIBC_2.39
+  0x0278: Rev: 1  Flags: none  Index: 19  Cnt: 2  Name: GLIBC_2.41
+  0x0294: Parent 1: GLIBC_2.40
+  0x029c: Rev: 1  Flags: none  Index: 20  Cnt: 2  Name: GLIBC_2.42
+  0x02b8: Parent 1: GLIBC_2.41
+  0x02c0: Rev: 1  Flags: none  Index: 21  Cnt: 2  Name: GLIBC_2.43
+  0x02dc: Parent 1: GLIBC_2.42
+
+Version needs section '.gnu.version_r' contains 2 entries:
+ Addr: 0x00000000000110f0  Offset: 0x000110f0  Link: 5 (.dynstr)
+  000000: Version: 1  File: ld-linux-x86-64.so.2  Cnt: 1
+  0x0010:   Name: GLIBC_PRIVATE  Flags: none  Version: 25
+  0x0020: Version: 1  File: libc.so.6  Cnt: 5
+  0x0030:   Name: GLIBC_ABI_DT_X86_64_PLT  Flags: none  Version: 27
+  0x0040:   Name: GLIBC_ABI_DT_RELR  Flags: none  Version: 26
+  0x0050:   Name: GLIBC_2.4  Flags: none  Version: 24
+  0x0060:   Name: GLIBC_2.2.5  Flags: none  Version: 23
+  0x0070:   Name: GLIBC_PRIVATE  Flags: none  Version: 22
+
+Displaying notes found in: .note.gnu.build-id
+  Owner                Data size 	Description
+  GNU                  0x00000014	NT_GNU_BUILD_ID (unique build ID bitstring)
+    Build ID: 2000a7e6c07f2ef41f3d22f773393360523edc21
+
+Displaying notes found in: .note.gnu.property
+  Owner                Data size 	Description
+  GNU                  0x00000020	NT_GNU_PROPERTY_TYPE_0
+      Properties: x86 feature: IBT, SHSTK
+	x86 ISA needed: x86-64-baseline
+
+Displaying notes found in: .note.ABI-tag
+  Owner                Data size 	Description
+  GNU                  0x00000010	NT_GNU_ABI_TAG (ABI version tag)
+    OS: Linux, ABI: 3.2.0

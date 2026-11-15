@@ -1,0 +1,22 @@
+{
+  "files": [
+    "DE_AC20_01.md",
+    "DE_N07_N13_01.md",
+    "DE_N07_N13_01_N13_02.md",
+    "DE_N07_N13_01_N13_03.md",
+    "DE_N08_SYNTHETIC_01.md",
+    "DE_N09_DEMO_01.md",
+    "DE_N10_SYNTHETIC_01.md",
+    "DE_N13_N14_01.md",
+    "DE_N14_N15_01.md",
+    "DE_N16_DESIGNATED_READ_01.md",
+    "DE_N16_READONLY_01.md",
+    "DE_N16_SQLITE_FIXTURE_01.md"
+  ],
+  "preexisting_N08_specific_proposals": [],
+  "new_N08_proposal": "DE_N08_SYNTHETIC_01.md",
+  "status": "PROPOSED_INACTIVE",
+  "activation": false,
+  "owner_rule": "Current N08 mission Phase3 prohibits activation of an unreviewed newly invented exception",
+  "required_permission": "Explicit activation of reviewed DE-N08-SYNTHETIC-01 and consolidated synthetic N08 implementation approval"
+}

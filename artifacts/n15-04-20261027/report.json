@@ -1,0 +1,61 @@
+{
+  "task": "N15-04",
+  "phase": "acquisition",
+  "scratch": "/var/tmp/astra-n15-04-6bwyckdq",
+  "status": "BLOCKED",
+  "started_utc": "2026-10-26T20:50:37.666749+00:00",
+  "native_commands": 0,
+  "runtime_acquisition_bytes": 0,
+  "limits": {
+    "model_support_acquisition": 550000000,
+    "network_s": 900,
+    "storage": 1500000000,
+    "storage_stop": 1350000000,
+    "process_RSS": 2000000000,
+    "native_wall_s": 120
+  },
+  "resource_authority": "N15-04-only monitored Choice B; overshoot possible",
+  "N15": "Not Started",
+  "N16": "Not Started",
+  "stage": "single-approved-model-download",
+  "scratch_filesystem": "ext4 /dev/sdd",
+  "download_process_elapsed_s": 1.5756898549998368,
+  "acquisition": {
+    "canonical_url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/resolve/9217f5db79a29953eb74d5343926648285ec7e67/qwen2.5-0.5b-instruct-q4_k_m.gguf",
+    "started_utc": "2026-10-26T20:51:01.558446+00:00",
+    "expected_bytes": 491400032,
+    "expected_sha256": "74a4da8c9fdbcd15bd1f6d01d621410d31c6fc00986f5eb687824e7b93d7a9db",
+    "complete": false,
+    "attempts": 1,
+    "redirects": [],
+    "received_bytes": 0,
+    "elapsed_s": 0.5835122160005994,
+    "failure": {
+      "type": "RuntimeError",
+      "reason": "Redirect host outside strict publisher/CDN allowlist"
+    },
+    "support_redirect_body_bytes": 0,
+    "total_received_body_bytes": 0
+  },
+  "failure": {
+    "stage": "single-approved-model-download",
+    "type": "RuntimeError",
+    "reason": "Single model acquisition did not complete; no retry"
+  },
+  "accounting_failures": [],
+  "resources": {
+    "elapsed_s": 25.421759722999923,
+    "observations": 62,
+    "final_apparent": 83166019,
+    "final_allocated": 84537344,
+    "max_sampled_allocated": 84533248,
+    "process_RSS_peaks": {
+      "4343": 25042944,
+      "4356": 25493504
+    },
+    "supervisor_kernel_lifetime_RSS_bytes": 663040000,
+    "max_reaped_child_kernel_RSS_bytes": 25509888,
+    "owned_processes_remaining": 0,
+    "observer_alive": false
+  }
+}

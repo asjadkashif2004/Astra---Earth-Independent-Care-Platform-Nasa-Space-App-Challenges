@@ -1,0 +1,524 @@
+{
+  "result": "COMPLETE",
+  "mission": "Documentation only",
+  "inspection_date": "2026-11-11",
+  "documents": [
+    {
+      "path": "/mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/ASTRA - Complete User Guide.pdf",
+      "pages": 12,
+      "bytes": 1844101,
+      "sha256": "c07a98148e7eb375a4837f488cd90c4da8eacc484a2c3bcc995f4c3c409205c7",
+      "searchable": true,
+      "tagged": true,
+      "outline": true
+    },
+    {
+      "path": "/mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/ASTRA - Technical Architecture and Project Report.pdf",
+      "pages": 30,
+      "bytes": 729871,
+      "sha256": "406c784389cd3e52d936a51c1cd63ee94d42eeda936ad70f43ca8e8614c21d28",
+      "searchable": true,
+      "tagged": true,
+      "outline": true
+    }
+  ],
+  "visuals": {
+    "diagrams": 17,
+    "authentic_screenshots": 5,
+    "total": 22,
+    "sources": [
+      {
+        "source": "artifacts/presentation-readiness-20261109/browser-10/01-dashboard.png",
+        "sha256": "ffeee7f1d7bb000606293cc2f7b663eb102917cd2e06b3325509e944d3139e10",
+        "authentic_retained_capture": true
+      },
+      {
+        "source": "artifacts/presentation-readiness-20261109/browser-10/04-acknowledged.png",
+        "sha256": "6233a26a7a54ba5c5e883fc772ea996c81281df83c28024d531c8608ccaaf78a",
+        "authentic_retained_capture": true
+      },
+      {
+        "source": "artifacts/presentation-readiness-20261109/browser-10/03-scenario.png",
+        "sha256": "6fa1d1c97d7aa7924c6fb287f641f2241558ccf868337a3a40c27c856a237f13",
+        "authentic_retained_capture": true
+      },
+      {
+        "source": "artifacts/n06-engineering-20261105/browser-08/n06-linked-crew.png",
+        "sha256": "12bbc53a6d3d6219f9e03803615de85275a278df32adc5e3107aa88dd7bef82f",
+        "authentic_retained_capture": true
+      },
+      {
+        "source": "artifacts/presentation-readiness-20261109/browser-10/02-waveform.png",
+        "sha256": "3cd0d52508de04eccb99d4330cb24de392265be0ac1e764eceb9bab6dfef39c0",
+        "authentic_retained_capture": true
+      }
+    ],
+    "representative_pdf_pages_rendered": 16
+  },
+  "validation_checks": [
+    {
+      "check": "340 pre-existing source/config/asset/evidence pins unchanged",
+      "passed": true,
+      "detail": {
+        "count": 340,
+        "changed": []
+      }
+    },
+    {
+      "check": "npm start is the actual shared server",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Pinned technology versions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "33 corpus units / 34 source spans",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Original NASA bytes match authoritative manifest: nasa-hrp-sleep-2016",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Original NASA bytes match authoritative manifest: nasa-std-3001-v2-f",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Actual N12 registry counts and zero operational promotions",
+      "passed": true,
+      "detail": {
+        "counts": {
+          "ENGINEERING_BASELINE": 8,
+          "REJECTED_FOR_ADDITIONAL_USE": 12,
+          "ENGINEERING_QUALIFIED_SYNTHETIC_ONLY": 4
+        },
+        "qualified": [
+          "linear:hrv:5",
+          "robust:heart_rate:15",
+          "robust:heart_rate:5",
+          "robust:hrv:5"
+        ]
+      }
+    },
+    {
+      "check": "Retained QA statistics quoted correctly",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Pinned Qwen file currently exists with expected size; no native start",
+      "passed": true,
+      "detail": {
+        "exists": true,
+        "bytes": 491400032,
+        "method": "stat only; no weight read, hash, loading or execution",
+        "identity_source": "artifacts/n15-04c-20261027/infer/native-identity-manifest.json"
+      }
+    },
+    {
+      "check": "Three approved N07 originals exist at recorded sizes",
+      "passed": true,
+      "detail": [
+        {
+          "id": "nasa-ntrs-20205008796",
+          "exists": true,
+          "bytes": 6995,
+          "size_matches": true,
+          "method": "stat only; no patient numerics read"
+        },
+        {
+          "id": "nasa-osdr-osd-1",
+          "exists": true,
+          "bytes": 8054,
+          "size_matches": true,
+          "method": "stat only; no patient numerics read"
+        },
+        {
+          "id": "physionet-bidmc-01-numerics",
+          "exists": true,
+          "bytes": 7644,
+          "size_matches": true,
+          "method": "stat only; no patient numerics read"
+        }
+      ]
+    },
+    {
+      "check": "All cited repository files exist",
+      "passed": true,
+      "detail": {
+        "count": 76
+      }
+    },
+    {
+      "check": "user-guide: valid PDF page tree / required page count",
+      "passed": true,
+      "detail": 12
+    },
+    {
+      "check": "user-guide: all pages searchable with no broken glyph mappings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "user-guide: tagged text and document outline",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "user-guide: correct sequential printed page numbers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "user-guide: A4 page geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "user-guide: no credential/token patterns",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "user-guide: core operational/AI boundary vocabulary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "user-guide: no external API key is falsely mandatory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "technical-report: valid PDF page tree / required page count",
+      "passed": true,
+      "detail": 30
+    },
+    {
+      "check": "technical-report: all pages searchable with no broken glyph mappings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "technical-report: tagged text and document outline",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "technical-report: correct sequential printed page numbers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "technical-report: A4 page geometry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "technical-report: no credential/token patterns",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "technical-report: core operational/AI boundary vocabulary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "technical-report: no external API key is falsely mandatory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "technical term present: Persistence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "technical term present: Theil\u2013Sen",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "technical term present: SQLite",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "technical term present: GGUF",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "technical term present: MiniLM",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "technical term present: 384",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "technical term present: get_current_vitals",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "technical term present: get_data_quality",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "technical term present: get_personal_baseline",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "technical term present: get_open_risk_events",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "technical term present: BIDMC",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "technical term present: 20160003864",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "All 26 chapters navigable in source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Thirty judges questions and all answer boundaries",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "All 42 page layouts clear of detected clipping / footer overlap",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Representative actual PDF renders present",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "referenced_repository_files": [
+    "apps/mission-control-web/anatomy-phase.mjs",
+    "apps/mission-control-web/anatomy-runtime.mjs",
+    "apps/mission-control-web/anatomy.mjs",
+    "apps/mission-control-web/app.mjs",
+    "apps/mission-control-web/assets/anatomy/attribution.json",
+    "apps/mission-control-web/n09.mjs",
+    "apps/mission-control-web/n10.mjs",
+    "apps/mission-control-web/ui.mjs",
+    "apps/mission-control-web/waveforms.mjs",
+    "data/corpus/n13-01/derived/nasa-hrp-sleep-2016.pages.json",
+    "data/corpus/n13-01/sources.json",
+    "data/scientific/bidmc/BIDMC-01.dataset-card.json",
+    "data/scientific/n07-local-registry.json",
+    "data/scientific/sleep-edf/README.md",
+    "docs/ASTRA_FINAL_DEMO_READINESS.md",
+    "docs/CORE_AI_PRIORITY.md",
+    "docs/MASTER_PLAN.md",
+    "docs/MODULE_TRACKER.md",
+    "docs/N03_AC20_PHYSICAL_ACCEPTANCE.md",
+    "docs/N03_FINAL_ENGINEERING_COMPLETION.md",
+    "docs/N04_COMPLETION.md",
+    "docs/N05_FINAL_ENGINEERING_COMPLETION.md",
+    "docs/N06_FINAL_ENGINEERING_COMPLETION.md",
+    "docs/N10_CONTRACT.md",
+    "docs/N11_FINAL_ENGINEERING_COMPLETION.md",
+    "docs/N12_FINAL_ENGINEERING_COMPLETION.md",
+    "docs/N14_FINAL_ENGINEERING_COMPLETION.md",
+    "docs/N16_MASTER_COMPLETION_REPORT.md",
+    "docs/SESSION_HANDOFF.md",
+    "docs/demo/PRESENTATION_CHECKLIST.md",
+    "models/forecast-calibration.json",
+    "packages/anatomy-link.mjs",
+    "packages/contracts.mjs",
+    "packages/presentation.mjs",
+    "packages/waveforms.mjs",
+    "research/ASTRA_Deep_Research.md",
+    "scripts/browser-acceptance.mjs",
+    "scripts/n13-corpus.mjs",
+    "scripts/n14-offline.mjs",
+    "services/agent/agent.mjs",
+    "services/agent/fixed-select-authorizer.mjs",
+    "services/agent/master-contract.mjs",
+    "services/agent/master-coordinator.mjs",
+    "services/agent/master-worker.mjs",
+    "services/anomaly/detector.mjs",
+    "services/api/anatomy.mjs",
+    "services/api/auth.mjs",
+    "services/api/engine.mjs",
+    "services/api/server.mjs",
+    "services/api/store.mjs",
+    "services/comms/scheduler.mjs",
+    "services/corpus/catalog-bundle.mjs",
+    "services/corpus/catalog.mjs",
+    "services/corpus/sources.mjs",
+    "services/n10/contracts.mjs",
+    "services/n10/ledger.mjs",
+    "services/n10/projection.mjs",
+    "services/n11/algorithms.mjs",
+    "services/n11/experiment.mjs",
+    "services/n11/service.mjs",
+    "services/n12/experiment.mjs",
+    "services/n12/forecast.mjs",
+    "services/n12/service.mjs",
+    "services/prediction/forecast.mjs",
+    "services/research-answer/governed-service.mjs",
+    "services/research-answer/model-admission.mjs",
+    "services/research-answer/relevance.mjs",
+    "services/research-answer/selection.mjs",
+    "services/research-answer/support-lifecycle.mjs",
+    "services/research-retrieval/encoder.mjs",
+    "services/research-retrieval/research-service.mjs",
+    "services/research-retrieval/retrieval.mjs",
+    "services/telemetry-simulator/n09-engine.mjs",
+    "services/telemetry-simulator/n09-model.mjs",
+    "services/telemetry-simulator/simulator.mjs",
+    "services/waveforms/service.mjs"
+  ],
+  "preservation": {
+    "baseline_unchanged": 340,
+    "changed": [],
+    "NASA_originals": [
+      {
+        "id": "nasa-hrp-sleep-2016",
+        "bytes": 967704,
+        "sha256": "252d4993a040ab8b989664b1da7a3143a5fd8169fac65b67f1f43231250ef1f5",
+        "manifest_match": true
+      },
+      {
+        "id": "nasa-std-3001-v2-f",
+        "bytes": 6753988,
+        "sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+        "manifest_match": true
+      }
+    ],
+    "no_application_or_status_changes": true,
+    "no_database_opened_or_written": true,
+    "no_native_model_or_N16_workers_started": true,
+    "no_model_weight_modified": true,
+    "no_external_download": true
+  },
+  "limitations": [
+    "Retained Nov 9 application acceptance is not a fresh app run.",
+    "AC-20/anatomy/clinical/scientific/release gates remain open.",
+    "No new independent review, embedding parity or current native execution authority established.",
+    "Repository title and stale README/data statements are explained rather than rewritten."
+  ],
+  "pdf_visual_review": {
+    "method": "Actual final PDF page exports opened in installed Chrome PDF viewer; full-size spot checks and both contact sheets inspected by assistant",
+    "scope": "PDF layout and readability only; no independent scientific approval",
+    "representative_pages": {
+      "user_guide": [
+        1,
+        2,
+        4,
+        6,
+        7,
+        11,
+        12
+      ],
+      "technical_report": [
+        1,
+        3,
+        5,
+        10,
+        17,
+        21,
+        25,
+        27,
+        30
+      ]
+    },
+    "result": "PASS; no observed clipping, overlaps or missing glyphs"
+  },
+  "temporary_cleanup": {
+    "new_disposable_page_exports_removed": [
+      {
+        "file": "user-guide-validation-page-1.pdf",
+        "bytes": 1844084
+      },
+      {
+        "file": "user-guide-validation-page-2.pdf",
+        "bytes": 1844084
+      },
+      {
+        "file": "user-guide-validation-page-4.pdf",
+        "bytes": 1844085
+      },
+      {
+        "file": "user-guide-validation-page-6.pdf",
+        "bytes": 1844085
+      },
+      {
+        "file": "user-guide-validation-page-7.pdf",
+        "bytes": 1844085
+      },
+      {
+        "file": "user-guide-validation-page-11.pdf",
+        "bytes": 1844085
+      },
+      {
+        "file": "user-guide-validation-page-12.pdf",
+        "bytes": 1844085
+      },
+      {
+        "file": "technical-report-validation-page-1.pdf",
+        "bytes": 729838
+      },
+      {
+        "file": "technical-report-validation-page-3.pdf",
+        "bytes": 729839
+      },
+      {
+        "file": "technical-report-validation-page-5.pdf",
+        "bytes": 729839
+      },
+      {
+        "file": "technical-report-validation-page-10.pdf",
+        "bytes": 729838
+      },
+      {
+        "file": "technical-report-validation-page-17.pdf",
+        "bytes": 729838
+      },
+      {
+        "file": "technical-report-validation-page-21.pdf",
+        "bytes": 729838
+      },
+      {
+        "file": "technical-report-validation-page-25.pdf",
+        "bytes": 729838
+      },
+      {
+        "file": "technical-report-validation-page-27.pdf",
+        "bytes": 729838
+      },
+      {
+        "file": "technical-report-validation-page-30.pdf",
+        "bytes": 729838
+      }
+    ],
+    "bytes_removed": 19477137,
+    "historical_files_removed": 0
+  },
+  "new_storage_bytes_excluding_this_receipt": 8900744
+}

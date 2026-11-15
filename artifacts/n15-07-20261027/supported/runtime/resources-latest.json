@@ -1,0 +1,14 @@
+{
+  "elapsed_s": 246.73548025800028,
+  "apparent_bytes": 611278632,
+  "allocated_bytes": 613306368,
+  "RSS_bytes": {
+    "5070": 34660352
+  },
+  "per_process_peaks": {
+    "5070": 35110912,
+    "5147": 2363392,
+    "5148": 616153088
+  },
+  "MemAvailable_bytes": 6244675584
+}

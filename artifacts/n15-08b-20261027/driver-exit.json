@@ -1,0 +1,9 @@
+{
+  "task": "N15-08B",
+  "command": "node /var/tmp/astra-n15-06-n15-08b-control-91uxdosx/driver.mjs run",
+  "exit_code": 0,
+  "native_generation_attempts": 2,
+  "sequential": true,
+  "additional_generation_or_retry": false,
+  "source": "completed execution tool session 14515 and durable case reservations/results"
+}

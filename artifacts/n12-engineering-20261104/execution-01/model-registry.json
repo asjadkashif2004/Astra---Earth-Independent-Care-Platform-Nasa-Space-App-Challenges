@@ -1,0 +1,1085 @@
+{
+  "models": {
+    "persistence:heart_rate:5": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-persistence",
+      "version": "n12-synthetic-v1",
+      "method": "persistence",
+      "metric": "heart_rate",
+      "horizon_minutes": 5,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "last-observation",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "ENGINEERING_BASELINE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "Fixed comparison baseline; no medical approval",
+      "matched_cases": 14,
+      "hash": "039474c9a90636583ada3d497f55d771935512f0c387c72c2d1bb2c3ea109c29"
+    },
+    "persistence:heart_rate:15": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-persistence",
+      "version": "n12-synthetic-v1",
+      "method": "persistence",
+      "metric": "heart_rate",
+      "horizon_minutes": 15,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "last-observation",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "ENGINEERING_BASELINE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "Fixed comparison baseline; no medical approval",
+      "matched_cases": 14,
+      "hash": "2e3a2149c18cd347ac38ffc20193efae3c7832b8d18cd47904bc47d1387bd0be"
+    },
+    "persistence:heart_rate:30": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-persistence",
+      "version": "n12-synthetic-v1",
+      "method": "persistence",
+      "metric": "heart_rate",
+      "horizon_minutes": 30,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "last-observation",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "ENGINEERING_BASELINE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "Fixed comparison baseline; no medical approval",
+      "matched_cases": 14,
+      "hash": "191d414467349f1e465b022d73a721b1a7075742c604ffbe158a911ab76bb1ff"
+    },
+    "persistence:heart_rate:60": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-persistence",
+      "version": "n12-synthetic-v1",
+      "method": "persistence",
+      "metric": "heart_rate",
+      "horizon_minutes": 60,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "last-observation",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "ENGINEERING_BASELINE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "Fixed comparison baseline; no medical approval",
+      "matched_cases": 14,
+      "hash": "7b04a8ea71e91db2cff7a24a4286f2b84eeaadc4d3b86b85bc087d1b326bae6c"
+    },
+    "persistence:hrv:5": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-persistence",
+      "version": "n12-synthetic-v1",
+      "method": "persistence",
+      "metric": "hrv",
+      "horizon_minutes": 5,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "last-observation",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "ENGINEERING_BASELINE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "Fixed comparison baseline; no medical approval",
+      "matched_cases": 21,
+      "hash": "425b6aa568b88ed8a5218ea1aabf562bd7ae1bdb7682b50c0c6b6f4fbba92040"
+    },
+    "persistence:hrv:15": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-persistence",
+      "version": "n12-synthetic-v1",
+      "method": "persistence",
+      "metric": "hrv",
+      "horizon_minutes": 15,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "last-observation",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "ENGINEERING_BASELINE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "Fixed comparison baseline; no medical approval",
+      "matched_cases": 21,
+      "hash": "0027baf60fd9eaae64c110bf0b03554df5488682a6a8b4ffce4c79a0a89af7b5"
+    },
+    "persistence:hrv:30": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-persistence",
+      "version": "n12-synthetic-v1",
+      "method": "persistence",
+      "metric": "hrv",
+      "horizon_minutes": 30,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "last-observation",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "ENGINEERING_BASELINE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "Fixed comparison baseline; no medical approval",
+      "matched_cases": 21,
+      "hash": "78f9b0f9185c187c44494d4efcc041e78bfea7ea58111e2c3695e156f76c209a"
+    },
+    "persistence:hrv:60": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-persistence",
+      "version": "n12-synthetic-v1",
+      "method": "persistence",
+      "metric": "hrv",
+      "horizon_minutes": 60,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "last-observation",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "ENGINEERING_BASELINE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "Fixed comparison baseline; no medical approval",
+      "matched_cases": 21,
+      "hash": "12dae6e02b8ab5999a138e57245fbc5e3d8aa19ded3edaa372d538813d8a79e5"
+    },
+    "linear:heart_rate:5": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-linear",
+      "version": "n12-synthetic-v1",
+      "method": "linear",
+      "metric": "heart_rate",
+      "horizon_minutes": 5,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "transparent-trend",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "No strictly lower matched held-out MAE",
+      "matched_cases": 14,
+      "hash": "8dbbc32db5d03c35df989b0615afc860f7dd91d7e66eaceaf2773bf20515eb23"
+    },
+    "linear:heart_rate:15": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-linear",
+      "version": "n12-synthetic-v1",
+      "method": "linear",
+      "metric": "heart_rate",
+      "horizon_minutes": 15,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "transparent-trend",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "No strictly lower matched held-out MAE",
+      "matched_cases": 14,
+      "hash": "c3f19dc56b2485b66ec6642546c35db3b5a0a0b7b08fd766d321b4f2a11f2d85"
+    },
+    "linear:heart_rate:30": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-linear",
+      "version": "n12-synthetic-v1",
+      "method": "linear",
+      "metric": "heart_rate",
+      "horizon_minutes": 30,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "transparent-trend",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "No strictly lower matched held-out MAE",
+      "matched_cases": 14,
+      "hash": "728b71fd76a80199f832e7bbe98bad036e4cd963aa18a873ee0f00cd8415c7a5"
+    },
+    "linear:heart_rate:60": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-linear",
+      "version": "n12-synthetic-v1",
+      "method": "linear",
+      "metric": "heart_rate",
+      "horizon_minutes": 60,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "transparent-trend",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "No strictly lower matched held-out MAE",
+      "matched_cases": 14,
+      "hash": "9001432691a8d0ffcf4f9cedbd82dd2621d54a10175c7bd20d5f64a439293909"
+    },
+    "linear:hrv:5": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-linear",
+      "version": "n12-synthetic-v1",
+      "method": "linear",
+      "metric": "hrv",
+      "horizon_minutes": 5,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "transparent-trend",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "ENGINEERING_QUALIFIED_SYNTHETIC_ONLY",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "Lower matched held-out synthetic MAE; independent scientific validity unverified",
+      "matched_cases": 21,
+      "hash": "4f2d64297474b2a626d549275de8f1462cc4897d18c21968bfb90738937a632f"
+    },
+    "linear:hrv:15": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-linear",
+      "version": "n12-synthetic-v1",
+      "method": "linear",
+      "metric": "hrv",
+      "horizon_minutes": 15,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "transparent-trend",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "No strictly lower matched held-out MAE",
+      "matched_cases": 21,
+      "hash": "2f95c1f5d62f03976695265fac7c064d1dd05651d48b42503aec6c90ee1b96bb"
+    },
+    "linear:hrv:30": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-linear",
+      "version": "n12-synthetic-v1",
+      "method": "linear",
+      "metric": "hrv",
+      "horizon_minutes": 30,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "transparent-trend",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "No strictly lower matched held-out MAE",
+      "matched_cases": 21,
+      "hash": "468fd013cb5459a30da3e7f837ff791c0d678fae242e0a52889a9b308c3913e7"
+    },
+    "linear:hrv:60": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-linear",
+      "version": "n12-synthetic-v1",
+      "method": "linear",
+      "metric": "hrv",
+      "horizon_minutes": 60,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "transparent-trend",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "No strictly lower matched held-out MAE",
+      "matched_cases": 21,
+      "hash": "db1e3b3bff334f6281358ffbf9715b353c538aa75b38f0b137bb9ed9156fc5c1"
+    },
+    "robust:heart_rate:5": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-robust",
+      "version": "n12-synthetic-v1",
+      "method": "robust",
+      "metric": "heart_rate",
+      "horizon_minutes": 5,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "transparent-trend",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "ENGINEERING_QUALIFIED_SYNTHETIC_ONLY",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "Lower matched held-out synthetic MAE; independent scientific validity unverified",
+      "matched_cases": 14,
+      "hash": "5a401d1439b3248cd0e6728d0b5fed5fa0241a4182f6093347a0c68cade60f5a"
+    },
+    "robust:heart_rate:15": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-robust",
+      "version": "n12-synthetic-v1",
+      "method": "robust",
+      "metric": "heart_rate",
+      "horizon_minutes": 15,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "transparent-trend",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "ENGINEERING_QUALIFIED_SYNTHETIC_ONLY",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "Lower matched held-out synthetic MAE; independent scientific validity unverified",
+      "matched_cases": 14,
+      "hash": "dcdf35c4fb2d704e4f2e6a44a8e9b7c0b16c82afd7586ded03f84a6934633c85"
+    },
+    "robust:heart_rate:30": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-robust",
+      "version": "n12-synthetic-v1",
+      "method": "robust",
+      "metric": "heart_rate",
+      "horizon_minutes": 30,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "transparent-trend",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "No strictly lower matched held-out MAE",
+      "matched_cases": 14,
+      "hash": "790bbbd0379a54b6a21a4987cb31543ce06c058e334198518e7d4bb17760db04"
+    },
+    "robust:heart_rate:60": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-robust",
+      "version": "n12-synthetic-v1",
+      "method": "robust",
+      "metric": "heart_rate",
+      "horizon_minutes": 60,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "transparent-trend",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "No strictly lower matched held-out MAE",
+      "matched_cases": 14,
+      "hash": "b4b74765bcc93c118e9a1be65e523879d8403f84070ea2070419d901a265d4da"
+    },
+    "robust:hrv:5": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-robust",
+      "version": "n12-synthetic-v1",
+      "method": "robust",
+      "metric": "hrv",
+      "horizon_minutes": 5,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "transparent-trend",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "ENGINEERING_QUALIFIED_SYNTHETIC_ONLY",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "Lower matched held-out synthetic MAE; independent scientific validity unverified",
+      "matched_cases": 21,
+      "hash": "bfe8d488562d35e6a43ce29edeb6cc62a68163873558ea390d8ead54a4aae057"
+    },
+    "robust:hrv:15": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-robust",
+      "version": "n12-synthetic-v1",
+      "method": "robust",
+      "metric": "hrv",
+      "horizon_minutes": 15,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "transparent-trend",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "No strictly lower matched held-out MAE",
+      "matched_cases": 21,
+      "hash": "90d4d342083898439e65b4d902ba1050e261f292742945db5d106a08d3781db4"
+    },
+    "robust:hrv:30": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-robust",
+      "version": "n12-synthetic-v1",
+      "method": "robust",
+      "metric": "hrv",
+      "horizon_minutes": 30,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "transparent-trend",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "No strictly lower matched held-out MAE",
+      "matched_cases": 21,
+      "hash": "a7b1d4ee5744d92b72dc25d8c37a4f142f4c66dad945fccfce37d90a2a1fc6a9"
+    },
+    "robust:hrv:60": {
+      "schema_version": "astra.n12.model.v1",
+      "id": "n12-robust",
+      "version": "n12-synthetic-v1",
+      "method": "robust",
+      "metric": "hrv",
+      "horizon_minutes": 60,
+      "input_schema": "astra.n12.point.v1",
+      "features": [
+        "same_metric_prior_31_values"
+      ],
+      "family": "transparent-trend",
+      "seed": 42017,
+      "training_units": [
+        "train-CREW-01-nominal",
+        "train-CREW-01-post-exercise",
+        "train-CREW-02-nominal",
+        "train-CREW-02-post-exercise"
+      ],
+      "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+      "hyperparameters": {
+        "window_minutes": 30
+      },
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE",
+      "review": "PENDING",
+      "approved_for_specific_use": null,
+      "selection_available_at": "2026-11-11T14:00:00.000Z",
+      "selection_reason": "No strictly lower matched held-out MAE",
+      "matched_cases": 21,
+      "hash": "5372b545fa95d4949f7ee4380906f3178f32ed33ec2b132fcc51aef85abaaa10"
+    }
+  },
+  "calibrations": {
+    "persistence:heart_rate:5": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "heart_rate",
+      "horizon_minutes": 5,
+      "model_hash": "039474c9a90636583ada3d497f55d771935512f0c387c72c2d1bb2c3ea109c29",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 1.0699999999999932,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "63cd230d4b51bac6651084002c722f88858f2a178d921de08da86668f55ca61f"
+    },
+    "persistence:heart_rate:15": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "heart_rate",
+      "horizon_minutes": 15,
+      "model_hash": "2e3a2149c18cd347ac38ffc20193efae3c7832b8d18cd47904bc47d1387bd0be",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 0.7199999999999989,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "1fb4b0c6601e1e1e48f6467c877033fea619a26318300a94c219e4cfc88efaa6"
+    },
+    "persistence:heart_rate:30": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "heart_rate",
+      "horizon_minutes": 30,
+      "model_hash": "191d414467349f1e465b022d73a721b1a7075742c604ffbe158a911ab76bb1ff",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 0.9099999999999966,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "a9397b0168a397ec8e127bb303c3c43ed2b14cf9027c60d9bcc63922806fd4fc"
+    },
+    "persistence:heart_rate:60": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "heart_rate",
+      "horizon_minutes": 60,
+      "model_hash": "7b04a8ea71e91db2cff7a24a4286f2b84eeaadc4d3b86b85bc087d1b326bae6c",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 0.9900000000000091,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "56977031036854bcc2681c6f19d75584b5ac2504cf50d7903f44e800d72df8b8"
+    },
+    "persistence:hrv:5": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "hrv",
+      "horizon_minutes": 5,
+      "model_hash": "425b6aa568b88ed8a5218ea1aabf562bd7ae1bdb7682b50c0c6b6f4fbba92040",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 1.4199999999999946,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "45f533c4faad6fc4eb9ca483d94046c570ba9fbdd6b4f9e3730304c329a8bd97"
+    },
+    "persistence:hrv:15": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "hrv",
+      "horizon_minutes": 15,
+      "model_hash": "0027baf60fd9eaae64c110bf0b03554df5488682a6a8b4ffce4c79a0a89af7b5",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 1.4299999999999997,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "877d23decb95ce1ed631103334379f66d2111e8116672bb082b2442d8332a138"
+    },
+    "persistence:hrv:30": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "hrv",
+      "horizon_minutes": 30,
+      "model_hash": "78f9b0f9185c187c44494d4efcc041e78bfea7ea58111e2c3695e156f76c209a",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 1.019999999999996,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "87b05444aa110fed075201443fbcf6cbb388cc7496de97c11c2341f2d8d0bc53"
+    },
+    "persistence:hrv:60": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "hrv",
+      "horizon_minutes": 60,
+      "model_hash": "12dae6e02b8ab5999a138e57245fbc5e3d8aa19ded3edaa372d538813d8a79e5",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 1.019999999999996,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "8ccaf9f4cbf1b72531a0e9b7f5a402eb6e6e897fed222e208f93fcce6256c147"
+    },
+    "linear:heart_rate:5": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "heart_rate",
+      "horizon_minutes": 5,
+      "model_hash": "8dbbc32db5d03c35df989b0615afc860f7dd91d7e66eaceaf2773bf20515eb23",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 0.8226612903225856,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "c6352d3874615d14442effcd3a3dff97187371bd2568ea6ab5a5fede6113993e"
+    },
+    "linear:heart_rate:15": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "heart_rate",
+      "horizon_minutes": 15,
+      "model_hash": "c3f19dc56b2485b66ec6642546c35db3b5a0a0b7b08fd766d321b4f2a11f2d85",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 0.7039516129032393,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "80d4a2c94fd81b4765487e7507d6cb368102dc07908e9b67a6fe86a2e2679856"
+    },
+    "linear:heart_rate:30": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "heart_rate",
+      "horizon_minutes": 30,
+      "model_hash": "728b71fd76a80199f832e7bbe98bad036e4cd963aa18a873ee0f00cd8415c7a5",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 1.2330040322580942,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "969507a6e8bc879c29c708dfb1eac12a9279b7f1392e795beb6f13485c4944b4"
+    },
+    "linear:heart_rate:60": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "heart_rate",
+      "horizon_minutes": 60,
+      "model_hash": "9001432691a8d0ffcf4f9cedbd82dd2621d54a10175c7bd20d5f64a439293909",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 1.699737903225838,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "0de69920ba3a9a4c12ec6d6f8322d70d2b1d9d401aaeb60b324687b16af763c3"
+    },
+    "linear:hrv:5": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "hrv",
+      "horizon_minutes": 5,
+      "model_hash": "4f2d64297474b2a626d549275de8f1462cc4897d18c21968bfb90738937a632f",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 0.8133064516129025,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "b4079bfc42e2fa8aae34af6ee2ebc99afa76aea64ed3cd2ccad753b2224ee0e0"
+    },
+    "linear:hrv:15": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "hrv",
+      "horizon_minutes": 15,
+      "model_hash": "2f95c1f5d62f03976695265fac7c064d1dd05651d48b42503aec6c90ee1b96bb",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 1.2159677419354793,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "eef2a2bc2477d00036d2465455bbf43f01aa12b6b6078d9006c6c20064343080"
+    },
+    "linear:hrv:30": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "hrv",
+      "horizon_minutes": 30,
+      "model_hash": "468fd013cb5459a30da3e7f837ff791c0d678fae242e0a52889a9b308c3913e7",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 1.1251612903225734,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "ceab8129960f352fe09b16f7b298158414bc81699fd5ac3ec464f8ef721200e4"
+    },
+    "linear:hrv:60": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "hrv",
+      "horizon_minutes": 60,
+      "model_hash": "db1e3b3bff334f6281358ffbf9715b353c538aa75b38f0b137bb9ed9156fc5c1",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 1.3269153225806534,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "7ca01e232343dee65b94695fd4d0180035968e5fb7f876ebc69675bb76a241a7"
+    },
+    "robust:heart_rate:5": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "heart_rate",
+      "horizon_minutes": 5,
+      "model_hash": "5a401d1439b3248cd0e6728d0b5fed5fa0241a4182f6093347a0c68cade60f5a",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 0.7666666666666373,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "4b253d808414abbf5d1d695fbe42ba8f3135bbc94b28e172f264e213f23b0042"
+    },
+    "robust:heart_rate:15": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "heart_rate",
+      "horizon_minutes": 15,
+      "model_hash": "dcdf35c4fb2d704e4f2e6a44a8e9b7c0b16c82afd7586ded03f84a6934633c85",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 0.7575000000000216,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "a38acd86b57b001eee35f9321c08ab9d699aab854664836111cf66553114a892"
+    },
+    "robust:heart_rate:30": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "heart_rate",
+      "horizon_minutes": 30,
+      "model_hash": "790bbbd0379a54b6a21a4987cb31543ce06c058e334198518e7d4bb17760db04",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 1.373333333333278,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "801c849d44f4fdc0aeef78ca1045de2553b1ed21757979f1013c52de6ec7e780"
+    },
+    "robust:heart_rate:60": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "heart_rate",
+      "horizon_minutes": 60,
+      "model_hash": "b4b74765bcc93c118e9a1be65e523879d8403f84070ea2070419d901a265d4da",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 1.953333333333262,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "773e10a46e0fc5341fc1410f92c4741d3aa32fa875c1f8a1c077deffee81e315"
+    },
+    "robust:hrv:5": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "hrv",
+      "horizon_minutes": 5,
+      "model_hash": "bfe8d488562d35e6a43ce29edeb6cc62a68163873558ea390d8ead54a4aae057",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 0.9619999999999962,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "fdf492d701984254a8ea421a506989d2ca8c8ce649c7078885e7e8f8d0bb57aa"
+    },
+    "robust:hrv:15": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "hrv",
+      "horizon_minutes": 15,
+      "model_hash": "90d4d342083898439e65b4d902ba1050e261f292742945db5d106a08d3781db4",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 1.3549999999999898,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "e5101877d2ae44232164ea27829a8c89eec3b01d0ae3c87dbadf1cad227ff713"
+    },
+    "robust:hrv:30": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "hrv",
+      "horizon_minutes": 30,
+      "model_hash": "a7b1d4ee5744d92b72dc25d8c37a4f142f4c66dad945fccfce37d90a2a1fc6a9",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 1.7739999999999938,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "c28d093502b6c3a50edf1314a36d65b10fc83e7853e70fc76fdae46c1bdd291f"
+    },
+    "robust:hrv:60": {
+      "schema_version": "astra.n12.calibration.v1",
+      "metric": "hrv",
+      "horizon_minutes": 60,
+      "model_hash": "5372b545fa95d4949f7ee4380906f3178f32ed33ec2b132fcc51aef85abaaa10",
+      "available_at": "2026-11-10T14:00:00.000Z",
+      "radius": 1.7947826086956624,
+      "n": 12,
+      "rank": 12,
+      "target": 0.9,
+      "hash": "9710012a4de9fbfb084e2555bf5c1129c70ea5fd658a728c3e9796d9f96943c0"
+    }
+  },
+  "review": "PENDING",
+  "promoted": 0,
+  "rejected_N11": {
+    "source_sha256": "49473da025efd1af0f28cbf2b4e802e6b3eedcd081810e757a9152607e20a1a7",
+    "schema_version": "astra.n11.engineering-disposition.v1",
+    "result_hash": "56464a2cffa9cddfd6700f9f1713c78993a0b66f1dfdac2edf9cba72cb7ee097",
+    "policy_hash": "ceac615c1bddcc152dba12dd0756d8a0f47a6c3f748757822d7b1d85fcb2cf6b",
+    "thresholds_retuned": false,
+    "isolation_forest": {
+      "status": "REJECTED_FOR_PROMOTION",
+      "reason": "No demonstrated benefit on inspected synthetic cases: test0TP/4FN;44false alert episodes on separately reported seen nominal days",
+      "model_hash": "d9ce01bcdf5625314df59f77ca99af0d826981292f117e11f86ff28e1015477b"
+    },
+    "ewma": {
+      "status": "RESEARCH_COMPARISON_ONLY_NOT_PROMOTED",
+      "reason": "4/4authored positive events, no proven benefit over existing TierA; no clinical validation"
+    },
+    "temporal_extension": "NOT_JUSTIFIED",
+    "human_scientific_review": "PENDING",
+    "operational_promotion_authorized": false,
+    "isolation_forest_inference": "DISABLED"
+  },
+  "source_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c"
+}

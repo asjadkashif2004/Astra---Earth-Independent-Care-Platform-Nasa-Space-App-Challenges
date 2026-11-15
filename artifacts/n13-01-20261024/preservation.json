@@ -1,0 +1,169 @@
+{
+  "baseline_files": 526,
+  "changed_baseline_files": [],
+  "documentation_files_checked": 14,
+  "local_links_checked": 315,
+  "missing_links": [],
+  "unbalanced_fences": [],
+  "module_ids_retained": 26,
+  "new_source_data_tool_evidence_files": 39,
+  "inventory": {
+    "artifacts/n13-01-20261024/focused-tests.txt": {
+      "bytes": 11278,
+      "sha256": "a83cafe756dc30ee0d3c99826cec19cab43a6a7d2c9acdf6e509ada07fcb7511"
+    },
+    "artifacts/n13-01-20261024/hrp-extraction.json": {
+      "bytes": 252000,
+      "sha256": "9c2531e3d64e3807b78cb5889678825bb6c0ddb65d564f98b7665cff4b2ce481"
+    },
+    "artifacts/n13-01-20261024/incremental-deadline-check.json": {
+      "bytes": 450,
+      "sha256": "feced0d58e2fe144ad5cd493e3e60dfacc0a85efc0b8d7124b12cfe304a99327"
+    },
+    "artifacts/n13-01-20261024/offline-verification.json": {
+      "bytes": 362,
+      "sha256": "5b258537800a68eb72b3fe452c294fb2797ccdb8331f2f5114f3076ed43d9098"
+    },
+    "artifacts/n13-01-20261024/source-review/hrp-record.json": {
+      "bytes": 8961,
+      "sha256": "b97981da6496a64215d135c312cbc64b9f5d1ea252105cc2366cbb90a4e3df86"
+    },
+    "artifacts/n13-01-20261024/source-review/hrp-record.json.receipt.json": {
+      "bytes": 284,
+      "sha256": "3f1ae9e9d66dd8bf10211b3267f9f807f00cfda5eb35e6cbaf4f30e3c9b90cf1"
+    },
+    "artifacts/n13-01-20261024/source-review/pypdf-release.json": {
+      "bytes": 9370,
+      "sha256": "451120efbbfe4d789e0a41441a767ae87a3203c3871185fec82442948118ff3c"
+    },
+    "artifacts/n13-01-20261024/source-review/pypdf-release.json.receipt.json": {
+      "bytes": 261,
+      "sha256": "3f615a1264d1d34c149d77490f43cfe3dff901b203c4071b470d0f8438203f68"
+    },
+    "artifacts/n13-01-20261024/source-review/standards-catalogue.html": {
+      "bytes": 27894,
+      "sha256": "3456bc34747c172c8852a907b9006a74805e68c0aed139e1bef8897e618d13fa"
+    },
+    "artifacts/n13-01-20261024/source-review/standards-catalogue.html.receipt.json": {
+      "bytes": 291,
+      "sha256": "b636e7ae745f3980e5045e510daffea7c0dac3f54f0467f460cfb2eddfbaf825"
+    },
+    "artifacts/n13-01-20261024/source-review/sti-use.html": {
+      "bytes": 26210,
+      "sha256": "15c5732f49dd2eafe9c610ed61f7052b9565000e24be71ac55bc6b9a415e3b3b"
+    },
+    "artifacts/n13-01-20261024/source-review/sti-use.html.receipt.json": {
+      "bytes": 249,
+      "sha256": "31594c1b554f9d350b4abb34adf6c7250a0b867fb07e26b6e78568535c73de8e"
+    },
+    "artifacts/n13-01-20261024/standard-extraction.json": {
+      "bytes": 1005499,
+      "sha256": "62d8cb6e61266c72c8f1215322eb0d31a8d82f4929fe070b491bb93534667a1f"
+    },
+    "artifacts/n13-01-20261024/syntax-check.txt": {
+      "bytes": 184,
+      "sha256": "106b57ac9bbeabe747555b43dba3f9d3c37c07ed4c8e16b025961824df1e3dca"
+    },
+    "data/corpus/n13-01/README.md": {
+      "bytes": 2058,
+      "sha256": "032b5a9445bbd173108dcd7b1a9b8c98c821379db446296ec66bae7a5abd93a8"
+    },
+    "data/corpus/n13-01/derived/corpus.json": {
+      "bytes": 5270607,
+      "sha256": "9bb1fb5fc112716c16fdb8e3e6a3c5a968b01db5e11b2f5e694f54af5d16b6b7"
+    },
+    "data/corpus/n13-01/derived/inventory.json": {
+      "bytes": 642,
+      "sha256": "8cb85c9a28abc0cdceae80fd9169671d1ed7e8eaf030390ab5b6113f5a6ad9a3"
+    },
+    "data/corpus/n13-01/derived/nasa-hrp-sleep-2016.pages.json": {
+      "bytes": 251436,
+      "sha256": "12a91f0dfaeb78d6badb498ec61bcb69703a223df875a780c5b918a7ef831748"
+    },
+    "data/corpus/n13-01/derived/nasa-std-3001-v2-f.pages.json": {
+      "bytes": 997374,
+      "sha256": "84c08ea5578f67adb795c452b89b43c0fa6c5d4e7f7686a39b67db41ec1e7c68"
+    },
+    "data/corpus/n13-01/internal-review.json": {
+      "bytes": 2226,
+      "sha256": "431c5c1bb68fca8a04690da7c6b799bbaf5f0a39f892cc8be4200e9a86d642bd"
+    },
+    "data/corpus/n13-01/originals/20160003864.pdf": {
+      "bytes": 967704,
+      "sha256": "252d4993a040ab8b989664b1da7a3143a5fd8169fac65b67f1f43231250ef1f5"
+    },
+    "data/corpus/n13-01/originals/NASA-STD-3001 Vol 2 Rev F.pdf": {
+      "bytes": 6753988,
+      "sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f"
+    },
+    "data/corpus/n13-01/originals/nasa-hrp-sleep-2016.attempt.json": {
+      "bytes": 164,
+      "sha256": "58da8efb07b1495f52682fa0a69c11dd4cdd40c6d1833d1e4e311c152bbb778c"
+    },
+    "data/corpus/n13-01/originals/nasa-hrp-sleep-2016.receipt.json": {
+      "bytes": 695,
+      "sha256": "d92a82c952986c0c78bb6176ca99b4e3fe7b0e9979a2807795bd16c9e97f19c6"
+    },
+    "data/corpus/n13-01/originals/nasa-std-3001-v2-f.attempt.json": {
+      "bytes": 171,
+      "sha256": "d1114481a0053626c14abde15cbd5d58a69b456d0b9ff0b2a046ce2adc34f845"
+    },
+    "data/corpus/n13-01/originals/nasa-std-3001-v2-f.receipt.json": {
+      "bytes": 683,
+      "sha256": "8d32e97893666a6bc3a8229b341c6424c1f71aa100173a5c1cd5512cea9f4b19"
+    },
+    "data/corpus/n13-01/review.json": {
+      "bytes": 13461,
+      "sha256": "0761e4f252fd81e655523f0befcff27a7c8ba2a258a503a8cfb669166bb2bb50"
+    },
+    "data/corpus/n13-01/sources.json": {
+      "bytes": 4790,
+      "sha256": "21f7a9aa8c1feec74ee8cc43041bf0aac8c3a8ff2cab80a57407f0b380474a6e"
+    },
+    "packages/corpus-tools/PYPDF_LICENSE.txt": {
+      "bytes": 1605,
+      "sha256": "a97ac230e5f33ef10a5367a850eb01f91f1a0b064e34742c7794d2294557f524"
+    },
+    "packages/corpus-tools/README.md": {
+      "bytes": 917,
+      "sha256": "87099e96b66b65c6027a81dd838159c8dfe8a40e8fc7beded9528ff949eec9e0"
+    },
+    "packages/corpus-tools/pypdf-6.21.2-py3-none-any.whl": {
+      "bytes": 407766,
+      "sha256": "1d44d1a3a200f25062adff0085b02040e4646431ac2ccac22e42679e91466084"
+    },
+    "scripts/extract-publication.py": {
+      "bytes": 3302,
+      "sha256": "87f26112752c935519afe062dbeedb5e863adaf17f450a9e71ef5ba939375fe5"
+    },
+    "scripts/n13-review-pack.mjs": {
+      "bytes": 5348,
+      "sha256": "c8581cc10e789e9e5acf920a2537135f0a3aa627a53cfbf638b53b1264fccb32"
+    },
+    "scripts/research-corpus.mjs": {
+      "bytes": 2872,
+      "sha256": "6b9266aa387eb93efbb4f85392e28fd4c57d0fcbad7bce6f318687dd7e6cee53"
+    },
+    "services/corpus/acquire.mjs": {
+      "bytes": 5323,
+      "sha256": "8129a87b86d1f1035489a05dc3ba59bbcee8558aad1c25eb5901260317e4a19c"
+    },
+    "services/corpus/corpus.mjs": {
+      "bytes": 9049,
+      "sha256": "6b6daa5b98321740281b7720c3ea08d8156921d459c203b80424bb6a4441daa8"
+    },
+    "services/corpus/offline.mjs": {
+      "bytes": 4156,
+      "sha256": "4b459d63c6e385424554f11815a40c51d36b130816a759f9e5944c5d89c9f9f1"
+    },
+    "services/corpus/sources.mjs": {
+      "bytes": 3879,
+      "sha256": "7072c4fb8b970f0141edede7bd70781d7551e37201d954f2c982c31624332463"
+    },
+    "tests/research-corpus.test.mjs": {
+      "bytes": 12980,
+      "sha256": "70fceb228bbbbe044959d342a62944000fbfd06c66864d3390956c27b672b0b5"
+    }
+  },
+  "note": "Read-only documentation/preservation audit after N13-01. The 526 pre-existing inventoried source/data/evidence/reference files are unchanged. This inventory excludes itself. No browser/medical/semantic acceptance is implied."
+}

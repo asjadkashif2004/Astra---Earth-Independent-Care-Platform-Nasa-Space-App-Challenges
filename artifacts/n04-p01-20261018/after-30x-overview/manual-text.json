@@ -1,0 +1,14 @@
+[
+  {
+    "file": "30x-overview-performance-3-25.png",
+    "id": 550,
+    "expected": "64",
+    "screenshot_sha256": "a140d5441586edde3ad9560c54be965d8202ff58b3339e692ae787b2cbfc9bef",
+    "crew_id": "CREW-01",
+    "metric": "heart_rate",
+    "reviewer": "Codex visual inspection,2026-10-19",
+    "sheet": "text-review/sheet-1.png",
+    "sheet_index": 1,
+    "finding": "Numeric glyph visibly reads 64 in an unchanged original-browser-PNG crop;nearest-neighbor enlargement only,no expected value printed. Not user approval,physical scanout,formal contrast or clinical evidence."
+  }
+]

@@ -1,0 +1,99 @@
+# DE-N16-DESIGNATED-READ-01 — activated synthetic-source qualification exception
+
+## Final engineering campaign delivered —2026-10-30; authorized scope COMPLETE / STOP
+
+[Comprehensive report](N16_MASTER_COMPLETION_REPORT.md): owner-approved narrow correction qualifies4/4tools with one fixed prepare/step each; risk's bounded second compiler authorization is recorded with exact main.risks columns/null source context.4fresh native starts,18-event successful coordinator, full source integrity, reconciled resource journals, cold recovery0 and583focused passes. Recorded standalone demo only; no operational/UI/LLM/clinical scope expansion or full module closure. Original prerequisites/statuses/reviews and previous closed latch/G INCONCLUSIVE remain unchanged. Current6-start task ends:4used,2unused and resource/source permission expire; no automatic further execution.
+
+## Historical final engineering campaign authority —2026-10-30
+
+Owner explicitly approves one narrow authorizer correction and fresh maximum6-start qualification/coordinator/demo/QA campaign. [Contract](N16_FINAL_ENGINEERING_CONTRACT.md) distinguishes one fixed statement from bounded compiler callbacks while retaining deny-by-default object/action/source checks. Previous campaign latch/evidence remain closed and unchanged. Same sealed source only,512MiB/64MiB/zero network/no writes, stronger old deadlines preserved. No operational UI/database/LLM authority or prerequisite/review waiver. Genuine unsafe/unresolved failure stops native admission; permission expires at delivery.
+
+## Consolidated N16 mission delivered —2026-10-29; PARTIAL / campaign halted / STOP
+
+[Master report](N16_MASTER_COMPLETION_REPORT.md):5native starts,3qualified tools with reconciled resource evidence,2failed risk attempts. The second captures SQLite23 at a repeated SELECT compiler authorization callback during step. Strict guard remains; durable campaign halted:UNAUTHORIZED_SQL, no later startup or permission carryover. Coordinator/recovery/demo evidence is honest about3completed/1failed;519final focused tests pass. No Health Agent integration/operational/model/source-write scope was added, no original prerequisites/reviews/statuses closed, G remains INCONCLUSIVE. Owner must separately decide the callback/statement compatibility contract and fresh consolidated qualification. Unused7startups and resource permission expire here.
+
+## Historical consolidated N16 engineering authorization —2026-10-29
+
+Owner explicitly approves one finite four-tool qualification/coordinator/QA effort within this existing source boundary, with fresh maximum12designated worker startups, no more than4admissions for a repeated failing stage,512MiB process/64MiB counted storage, no network or source writes. [Mission contract](N16_MASTER_CONTRACT.md) retains stronger existing deadlines/containment and requires fresh journal reconciliation. No exception scope expansion: Health Agent UI integration, operational access, additional tools, LLM and prerequisite/review closure remain prohibited. An isolated demo artifact may present verified records. Safety/integrity/authorization/resource failure stops affected native admission; ordinary coding defects may be repaired within budget only. All permission expires at mission end; no historical task is retroactively passed.
+
+## N16-06H QA-only accounting correction completed / STOP — 2026-10-29
+
+Owner authorized only resource-journal diagnostics, minimal parent correction and mock/disposable-JSONL QA. [Completion](N16_06H_COMPLETION.md):37tests/three syntax checks pass, no source-byte/native/SQLite/SQL/mount/network/model work. No scope or execution/resource permission renewed. G remains INCONCLUSIVE and its originals unchanged; current stage counters/serialized writes/final reconciliation address confirmed code gaps without claiming the historical cause. Existing source/worker/query/auth/containment and all prerequisite/review gates stay unchanged. Sole next proposal requires separate fresh one-read quality authorization, new output/pins/resources; no automatic replay or remaining tools. STOP.
+
+## N16-06G completed; audited INCONCLUSIVE / STOP — 2026-10-29
+
+Fresh G permission admitted one quality worker/readonly connection/fixed SELECT/exit0, retaining F safeguards and512MiB/64MiB/zero-network limits. [Completion](N16_06G_COMPLETION.md):140mock controls/full preflight, unchanged source hash/inventory and committed quality trace/recovery0. Overall audit remains INCONCLUSIVE:7reported samples but5persisted resource rows; original controller PASS retained, exact cause unknown/no breach established. No after-run repair/retry/remaining tool. One-start/source/resource authority is exhausted. Next only separately approved QA-only journal/count repair, no automatic native/SQL/source replay or renewal. Existing exception scope and original module/review gates stay unchanged; conditional entry below is historical. STOP.
+
+## N16-06G fresh one-quality-read authorization — 2026-10-29; conditional task
+
+Owner explicitly approved only one get_data_quality SQL qualification on the unchanged sealed synthetic designated source, with fresh512MiB process memory/64MiB monitored storage/zero network and at most one startup. [G contract](N16_06G_CONTRACT.md) reuses F source/mount/ACK/trace architecture and exact observation SELECT, preserves F defaults and legacy workflow, and adds only fixed quality authorization/conservative UNKNOWN handling.140mock controls/seven syntax checks pass; native startup count0 at this checkpoint. All full/scientific prerequisites/statuses remain unchanged. No other tool, operational database, integration, model or resource expansion is granted. Stop on any failure and after G; permission then expires.
+
+## N16-06F explicit single-SELECT scope completed — 2026-10-29; PASS / STOP
+
+Owner's fresh F authority permitted an additive single-SELECT mode in the existing worker, including scoped omission of setup/metadata/transaction SQL with [equivalent safeguards](N16_06F_CONTRACT.md) for this exact sealed source only. [Completion](N16_06F_COMPLETION.md):108mock controls/full preflight, one real readonly connection/SELECT/exit0, canonical archived result, source full hash/inventory preserved and committed trace/recovery0. Old workflow/frozen block unchanged, parent hash pin updated,475old hashes retained. No operational/other-tool/Health Agent/LLM authority or prerequisite/scientific closure. F's one-start/source/resource permission is now exhausted; no second read or replay. One next proposal only separate get_data_quality mode and single-read qualification with fresh explicit limits; no automatic extension. Earlier conditional activation is a historical checkpoint; original scope/reviews/statuses remain unchanged. STOP.
+
+## N16-06F explicit single-SELECT authorization — 2026-10-29; conditional task
+
+Owner explicitly approved one task-specific single-SELECT mode in the existing designated worker, preserving its original workflow. [Contract](N16_06F_CONTRACT.md) records exact-source/schema/content binding outside SQL, equivalent scoped safeguards without setup/metadata/transaction statements, stricter errno policy, same-context mount proof/durable ACK, one fixed crew/metric read and external traces.108mock controls/seven syntax checks pass; no native SQL startup yet. Fresh512MiB process memory/64MiB monitored storage/zero network, at most one startup, no retry. This overrides frozen execution scope only for this mode/task, not historical records, operational sources, other tools, integration, prerequisites or scientific reviews. Stop on any failure and after N16-06F; permission then expires.
+
+## N16-06E single-read approval stopped at SQL-contract preflight — 2026-10-29
+
+Owner explicitly approved one single-tool SQL qualification with minimal guard correction, fresh512MiB/64MiB limits and no SQL beyond the fixed observation SELECT. The designated synthetic-source/tool boundary fits this exception, but [completion](N16_06E_COMPLETION.md) finds the pinned frozen worker always issues setup PRAGMAs, metadata SELECT and transaction control. Guard-only correction cannot make that path compliant, and the owner required stopping rather than silently changing frozen code. No source access, worker/SQLite/SQL, QA, code/permission/mount change or result commit occurred. Authority now exhausted/unused startup expires; original scope and safeguards remain unchanged. One next proposal requires explicit task-specific single-SELECT/setup-contract specialization and equivalent-safety qualification with fresh SQL/resource approval. No operational access, automatic four-tool replay or integration. STOP.
+
+## N16-06D fresh containment-only authorization completed — 2026-10-29; PASS / STOP
+
+Owner explicitly approved one fresh N16-06D containment startup on the exact registered synthetic source, with512MiB process memory and64MiB monitored storage, zero network/acquisition and no database bytes/SQLite/SQL. This renewed only a metadata/guard subset for this task, not N16-06 four-tool execution or any operational scope. [Completion](N16_06D_COMPLETION.md): required77mock controls/full preflight pass; exactly one startup/exit0, stable independent ro mount proof, actual root/directory EROFS and file EACCES, durable diagnostic ACK and cleanup. Source metadata/sealing and444old hashes unchanged. No source-byte rehash/SQL/integration or prerequisite/review closure. Fresh authorization is now exhausted; no retry or automatic tool qualification. Exactly one next proposal requires separate explicit single-tool SQL/resource approval on the same sealed synthetic source. All original restrictions/gates below retained; earlier stops are historical.
+
+## N16-06B preflight BLOCKED; zero startups; STOP — 2026-10-29
+
+[Completion](N16_06B_COMPLETION.md): source registration/metadata and45mock controls validate, but the new runner uses a changed-files-only manifest to look up an unchanged dependency. Missing index entry caused QUALIFIED_HELPER_CHANGED before reservation, resource/persistence readiness or probe launch. Actual dependencies match retained pins; no runtime cause inferred. No correction/retry/probe followed. Current task and one-time resource/source-access authority expire; unused startup is not continuation approval. No SQL/native qualification authority is renewed. Exactly one next proposal only separate QA-only pin-resolver correction/tests, no probe or source data. Earlier authorization below is historical and all original gates remain.
+
+## N16-06B fresh single-probe authorization — 2026-10-29
+
+Owner explicitly approved exactly one containment-only startup on the existing designated sealed source, under this same narrow exception. Metadata/registration validation only; no SQLite bytes, connection, SQL, fixture copy/write, permission relaxation, operational access or model/application action. Fresh targets are512MiB observed/monitored process memory and64MiB monitored counted storage, zero network/acquisition and fail-closed enforcement. Revalidate45mock controls, persistence, supervision and one-start admission before launch. This is a task-only subset renewal, not N16-06 SQL replay or a broader/new sequencing exception. It expires after N16-06B or first failure. [Metadata preflight](../artifacts/n16-06b-20261029/preflight-metadata.json) records no database-byte read. Earlier execution-stop entries remain historical and continue to prohibit SQL qualification until separately authorized.
+
+## N16-06 blocked; execution authority exhausted — 2026-10-29; STOP
+
+[Completion](N16_06_COMPLETION.md): activation was valid and the sole sealed copy/hash was prepared, but native source-write containment guard failed before SQLite. Focused suite16/32 passed;14 startup attempts all exit1/SOURCE_NOT_READONLY,0SQL or successful tool results. The harness improperly continued the same batch after the first blocking guard result; this defect is explicit, not retroactively authorized. No correction/retry/native work after the returned batch; source/donor/prior evidence preserved and all workers closed. First blocking safety failure exhausted current implementation/execution authority. The sequencing decision remains recorded but grants no further source access, SQL, test retry or integration. Exactly one next proposal is separate QA-only containment diagnostics/mount attestation and batch fail-fast repair with deterministic tests, not runtime replay. Historical activation/proposal below retained; full prerequisites/statuses unchanged.
+
+## Explicit activation for N16-06 — 2026-10-29
+
+The owner explicitly activated this exception and approved one bounded N16-06 qualification under the exact N16-05 source/pins and resource limits below. Scope review found no contradictory or broader authority. [Preflight](../artifacts/n16-06-20261029/preflight.json) reverified the sole 65,536-byte synthetic donor/hash, no sidecars and saved schema provenance before implementation; no SQL was executed by that check. Permit one sealed copy, four read-only tools, trusted scope, separate traces and finite negative byte-copy/denied-operation QA only. No operational source, SQL writer, model, application integration or prerequisite closure. The original proposal is preserved [byte-for-byte](../artifacts/n16-06-20261029/exception-proposal-original.md.txt). Earlier inactive language below records the historical proposal and is superseded only for this activation. Task authority expires after N16-06 or its blocking safety failure; no automatic continuation.
+
+## Historical proposal retained
+
+2026-10-29. **PROPOSED / INACTIVE.** Authority now granted: the owner's N16-05 documentation-only instruction. It permits preparation of this proposal, not its activation, source preparation, SQL execution or access to any operational database. No runtime/resource authority is active under this document.
+
+## Rationale and exact proposed grant
+
+[N16-03](N16_03_OPERATIONAL_READINESS.md) found write-capable application construction paths. [N16-04](N16_04_COMPLETION.md) qualified isolated scratch readers and a separately authorized synthetic writer, not operational access. Those bounded authorities are exhausted; neither [DE-N16-READONLY-01](DE_N16_READONLY_01.md) nor [DE-N16-SQLITE-FIXTURE-01](DE_N16_SQLITE_FIXTURE_01.md) is extended or reactivated by this proposal.
+
+If the owner separately activates this exception **and approves one implementation task**, permit one non-generative qualification against only `astra.n16.designated-synthetic.elevated.v1`, defined in [source designation](N16_05_SOURCE_DESIGNATION.md) and [versioned source metadata](N16_05_SOURCE_SPEC.json). This is a sealed archive of independently authored synthetic data, not the active ASTRA database, a live export or a live operational-read exception. Exactly four tools: `get_current_vitals`, `get_data_quality`, `get_personal_baseline`, `get_open_risk_events`.
+
+The only prospective preparation writes are one verified byte-for-byte copy of the pinned closed N16-04 elevated donor into a fresh disposable disk-backed source root, owner-controlled registration metadata, external durable traces and finite disposable negative-test byte copies. No database construction through SQL, synthetic writer, WAL/checkpoint experiment, application session or service is authorized. Do not modify or rehash-migrate the donor into a new edition. If absent or mismatched, stop and seek a new owner decision.
+
+Read workers receive only the sealed read-only source and approved code/runtime paths in the qualified isolated environment. All role/crew/source authority is issued by the trusted parent, not client arguments. Parameterized SQL, verified source/row identity, mission-time/freshness, archive labeling, UNKNOWN, trace durability and fail-closed cleanup requirements are binding. The source and its parent directory must remain unwritable to readers; no sidecars are permitted.
+
+## Limits, ownership and gates retained
+
+Future task scope/resource approval must explicitly include zero network/downloads/installations/models, CPU-only, one reader, at most four calls in a nominal workflow, 1 MiB main DB/zero sidecars, 64 MiB monitored counted storage, 512 MiB process RSS, 1-second read/10-second workflow, 250-ms transaction target/termination escalation, timeout0 BUSY handling and 64 KiB bounded result. Focused deterministic negative/failure QA is finite and specified in the source plan; it does not grant a general data exploration interface. No N15 or N16-04 resource permission transfers. Monitored storage/RSS limits and OS termination limitations must be disclosed and reverified during the future task.
+
+| Original gate | Treatment by this proposed exception |
+|---|---|
+| N02 Complete | Preserve sole monitoring/alert authority, human acknowledgement and delayed Earth workflow; no detector or alert action. |
+| N10 ← N01/N03/N07/N09 | Remains incomplete; narrowly sequence a raw archive-read qualification only. No cognition, sleep assessment, check-in or countermeasure output. |
+| N12 ← N09/N11 | Remains incomplete; no forecast, prediction, diagnosis or inferred risk. |
+| N14 ← N13 ← N07 | Remain In Progress with independent research/parity/evaluation/full prerequisites open; no retrieval/claim-contract changes or research answer. |
+| N15 ← N14, if an LLM is used | In Progress; no LLM in the proposed task, conditional gate still required for any future use. Unreviewed factual rule inactive, experimental prompt unpromoted. |
+| Transitive N03/N07/N08/N09/N11, twin-specific N06 | N03 Partial, N07/N09 In Progress, N08/N11 unstarted; full chains retained. N05/N06 Deferred, AC-20 Open / Unverified. No closure/waiver. |
+| Full N16 / scientific / clinical / security / release | N16 In Progress; broader workflow/integration, review, safety, identity and acceptance remain unsatisfied. No endorsement or certification. |
+
+N16's original N02/N10/N12/N14 and conditional N15 dependencies remain unchanged. The proposal permits qualifying one isolated source before full prerequisites close; it cannot count missing prerequisite outputs as delivered. No operational table, user record, credential, private check-in, real/imported telemetry, active API or other database is eligible. No SQL/shell/path supplied by a caller, source fallback, Health Agent/UI/Scenario Lab/monitoring integration, autonomous write, treatment, N17/N18 or model work is granted.
+
+## Activation and exit conditions
+
+Activation **pending**; implementation approval **pending**; source materialization/qualification **not performed**; independent scientific/medical approvals **not granted**. The owner retains sequencing authority. The future approval must name this exception, the single source/pins and bounded task/resource/QA scope. Documentation hashes identify proposed content, not a human signature or review decision.
+
+Before any future SQL, verify donor bytes, prepared copy, schema, identity/scope, read-only filesystem/network containment, trace durability and resource checks. Refuse access on any failed gate. Successful exit requires actual authorized four-tool SQL results/UNKNOWN controls, unchanged source/donor hashes, rejected unauthorized reads/writes, external traces and zero-replay recovery, measured cancellation/cleanup and an honest qualification report. Tests must fail if the reader returns constants, never executes SQL or denies everything.
+
+If activated, authority expires at delivery, owner stop or the first blocking safety/integrity/resource failure of that one qualification. No automatic retry, source substitution, operational access, integration or follow-on task. Failed qualification does not permit a broader source. Existing exceptions and all module statuses remain unchanged. **STOP after N16-05; do not activate this proposal automatically.**

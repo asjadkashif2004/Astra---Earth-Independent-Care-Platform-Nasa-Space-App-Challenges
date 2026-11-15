@@ -1,0 +1,108 @@
+{
+  "schema_version": "astra.n07.local-registry.v1",
+  "sources": [
+    {
+      "id": "nasa-ntrs-20205008796",
+      "files": {
+        "approval": {
+          "path": "data/scientific/approved-sources.json",
+          "sha256": "dd8734c19ad3f6e3a0446f5915b13dfa813bc3407a93794c05fdbfcb27eec2ad",
+          "bytes": 3111
+        },
+        "original": {
+          "path": "data/scientific/cache/nasa-ntrs-20205008796-3429154f91f4bc5476fc7adb7ee18f5a811b8bed2de7acad0f5c94e530ebb4f0/original.json",
+          "sha256": "3429154f91f4bc5476fc7adb7ee18f5a811b8bed2de7acad0f5c94e530ebb4f0",
+          "bytes": 6995
+        },
+        "manifest": {
+          "path": "data/scientific/cache/nasa-ntrs-20205008796-3429154f91f4bc5476fc7adb7ee18f5a811b8bed2de7acad0f5c94e530ebb4f0/manifest.json",
+          "sha256": "27e4aa9a91a026ce493e321e518a47d82320bdb135316982b3926ffcb8ad8013",
+          "bytes": 3427
+        },
+        "progress": {
+          "path": "data/scientific/cache/nasa-ntrs-20205008796-3429154f91f4bc5476fc7adb7ee18f5a811b8bed2de7acad0f5c94e530ebb4f0/progress.json",
+          "sha256": "3043b644c68db84adac2d3333432049a65f57020592ea9a463cd5a7dd396ef36",
+          "bytes": 445
+        }
+      },
+      "status": "ACTIVE_LOCAL_ONLY"
+    },
+    {
+      "id": "nasa-osdr-osd-1",
+      "files": {
+        "approval": {
+          "path": "data/scientific/osdr-osd-1.approval.json",
+          "sha256": "d4677ec2af1ad518fa17ab55657a3f7dd91f78ec82bedb0d20dee835971ca658",
+          "bytes": 4408
+        },
+        "original": {
+          "path": "data/scientific/cache/nasa-osdr-osd-1-cfe7d81c59efc3b01b4407db0854b4224b51bfcb9d8b4f590fc8467ededa6d64/original.json",
+          "sha256": "cfe7d81c59efc3b01b4407db0854b4224b51bfcb9d8b4f590fc8467ededa6d64",
+          "bytes": 8054
+        },
+        "manifest": {
+          "path": "data/scientific/cache/nasa-osdr-osd-1-cfe7d81c59efc3b01b4407db0854b4224b51bfcb9d8b4f590fc8467ededa6d64/manifest.json",
+          "sha256": "f0ce524b9a49f30f2bd41022c9e54c7a56a3a1a07128f97147065a45fcc035c8",
+          "bytes": 4796
+        },
+        "progress": {
+          "path": "data/scientific/cache/nasa-osdr-osd-1-cfe7d81c59efc3b01b4407db0854b4224b51bfcb9d8b4f590fc8467ededa6d64/progress.json",
+          "sha256": "0238b5f12075f787312b8084bd80b920af984cf783d7481447bf59811989caed",
+          "bytes": 439
+        },
+        "card": {
+          "path": "data/scientific/osdr/OSD-1.dataset-card.json",
+          "sha256": "0a7d5ed46ae94597432adaba2fc47d8d880db814e3818c919e8d50077c55448f",
+          "bytes": 7056
+        },
+        "split": {
+          "path": "data/scientific/osdr/OSD-1.split-policy.json",
+          "sha256": "05bce1ba45623fe8feae63ded297a24373ac99f0dc5f4783ee9cca8e28ff3b33",
+          "bytes": 2406
+        }
+      },
+      "status": "ACTIVE_LOCAL_ONLY"
+    },
+    {
+      "id": "physionet-bidmc-01-numerics",
+      "files": {
+        "approval": {
+          "path": "data/scientific/bidmc-01-numerics.approval.json",
+          "sha256": "6e41b2db99209bcd648cf0d463b27f785c9e8077812acc268cf228a1845f14fb",
+          "bytes": 3742
+        },
+        "original": {
+          "path": "data/scientific/cache/physionet-bidmc-01-numerics-27d43794cf2e7150db10e8bfe61d2bfdb26873a8f1629ffc5fbee5c9a4eb6ef5/original.csv",
+          "sha256": "27d43794cf2e7150db10e8bfe61d2bfdb26873a8f1629ffc5fbee5c9a4eb6ef5",
+          "bytes": 7644
+        },
+        "manifest": {
+          "path": "data/scientific/cache/physionet-bidmc-01-numerics-27d43794cf2e7150db10e8bfe61d2bfdb26873a8f1629ffc5fbee5c9a4eb6ef5/manifest.json",
+          "sha256": "cbd8d45b6c23c6d6af6dc1c2fed4bc92bb5c9b16ea2aeab68e056ca57f1f52b3",
+          "bytes": 4079
+        },
+        "progress": {
+          "path": "data/scientific/cache/physionet-bidmc-01-numerics-27d43794cf2e7150db10e8bfe61d2bfdb26873a8f1629ffc5fbee5c9a4eb6ef5/progress.json",
+          "sha256": "43860d1b11dbf41e4555543f5c1882a383c983e441aa488891a481eab48460e3",
+          "bytes": 466
+        },
+        "card": {
+          "path": "data/scientific/bidmc/BIDMC-01.dataset-card.json",
+          "sha256": "ff80f8359c460b4963f4e12916e81b729ef7255a529417e3decee51dc3b52079",
+          "bytes": 5964
+        },
+        "split": {
+          "path": "data/scientific/bidmc/BIDMC-01.split-policy.json",
+          "sha256": "65a2d71559a7913def182ddeae31404629b3306f7e0bef7c8f6b85960a3f6861",
+          "bytes": 2610
+        },
+        "notice": {
+          "path": "data/scientific/bidmc/source-notices/LICENSE",
+          "sha256": "76576a17b505dce71773415a18e965982bc8c0c9a60da71f1adb9df7644332a0",
+          "bytes": 939
+        }
+      },
+      "status": "ACTIVE_LOCAL_ONLY"
+    }
+  ]
+}

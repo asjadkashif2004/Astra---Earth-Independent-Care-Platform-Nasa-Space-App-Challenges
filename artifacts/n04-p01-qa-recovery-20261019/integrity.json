@@ -1,0 +1,48 @@
+{
+  "checked_at": "2026-10-19T07:17:02.406544+00:00",
+  "original_source_files_checked": 78,
+  "changed_existing_source": [
+    "scripts/browser-n04-p01.mjs",
+    "scripts/n04-p01-assess.mjs",
+    "scripts/n04-p01-probe.mjs"
+  ],
+  "expected_existing_qa_changes": [
+    "scripts/browser-n04-p01.mjs",
+    "scripts/n04-p01-probe.mjs",
+    "scripts/n04-p01-assess.mjs"
+  ],
+  "new_qa_files": [
+    "scripts/n04-p01-correlation.mjs",
+    "tests/n04-p01-qa.test.mjs"
+  ],
+  "production_and_other_prior_source_unchanged": true,
+  "original_headed_artifacts_checked": 506,
+  "original_headed_changed_or_missing": [],
+  "original_headed_added_files": [],
+  "qa_tested_hash_mismatches": [],
+  "documents": [
+    "docs/N04_P01.md",
+    "docs/N04_ACCEPTANCE.md",
+    "docs/MODULE_TRACKER.md",
+    "docs/SESSION_HANDOFF.md"
+  ],
+  "local_links_checked": 55,
+  "broken_links": [],
+  "manual_anchors": 7,
+  "previous_uncertainties": 140,
+  "resolved_uncertainties": 140,
+  "remaining_uncertainties": 0,
+  "verified_numeric_locations": 8280,
+  "total_numeric_locations": 8280,
+  "saved_trials_passing": 7,
+  "full_matrix_acceptance": false,
+  "remaining_headed_collections": 17,
+  "new_browser_trials": 0,
+  "readiness": "Focused Linux/Windows unit/VM checks pass;live repaired-harness operation and journal overhead unverified until separately approved continuation",
+  "status": {
+    "N04": "Partial",
+    "N03": "Partial",
+    "AC-20": "Open / Unverified"
+  },
+  "preservation_and_document_checks_passed": true
+}

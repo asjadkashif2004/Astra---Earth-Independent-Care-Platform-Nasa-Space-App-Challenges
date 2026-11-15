@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "automated": {
+    "cases": 663,
+    "passed": 662,
+    "failed": 0,
+    "skipped": 1,
+    "cancelled": 0,
+    "duration_ms": 73720.167968,
+    "skip_reason": "Existing complete real Sleep-EDF pair unavailable",
+    "log": "qa-final-release.txt"
+  },
+  "new_N09_cases": 69,
+  "syntax": {
+    "files": 226,
+    "errors": 0,
+    "log": "syntax-final-release.txt"
+  },
+  "real_browser": {
+    "product": "Chrome/156.0.8078.74",
+    "groups_passed": 12,
+    "failed": 0,
+    "viewports": 4,
+    "native_Tab_checks": 12,
+    "launches": 5,
+    "final_report": "browser-05/report.json",
+    "all_cleanup_verified": true
+  },
+  "file_integrity": {
+    "checks": 17,
+    "status": "PASS",
+    "not_additional_distinct_automated_tests": true
+  },
+  "formal_N09": "In Progress",
+  "mission_outcome": "ENGINEERING COMPLETE WITH EXTERNAL GATES",
+  "historical_failures_preserved": true,
+  "N16_native_starts": 0,
+  "model_executions": 0,
+  "external_acquisition": 0
+}

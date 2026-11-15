@@ -1,0 +1,668 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [USN-7700-1] GCC vulnerability
+   </TITLE>
+   <LINK REL="Index" HREF="index.html" >
+   <LINK REL="made" HREF="mailto:ubuntu-security-announce%40lists.ubuntu.com?Subject=Re%3A%20%5BUSN-7700-1%5D%20GCC%20vulnerability&In-Reply-To=%3Cmailman.128.1755701991.26096.ubuntu-security-announce%40lists.ubuntu.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <LINK REL="Previous"  HREF="009680.html">
+   <LINK REL="Next"  HREF="009682.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[USN-7700-1] GCC vulnerability</H1>
+    <B>noreply+usn-bot at canonical.com</B> 
+    <A HREF="mailto:ubuntu-security-announce%40lists.ubuntu.com?Subject=Re%3A%20%5BUSN-7700-1%5D%20GCC%20vulnerability&In-Reply-To=%3Cmailman.128.1755701991.26096.ubuntu-security-announce%40lists.ubuntu.com%3E"
+       TITLE="[USN-7700-1] GCC vulnerability">noreply+usn-bot at canonical.com
+       </A><BR>
+    <I>Wed Aug 20 14:53:04 UTC 2025</I>
+    <P><UL>
+        <LI>Previous message (by thread): <A HREF="009680.html">[USN-7639-2] Apache HTTP Server vulnerabilities
+</A></li>
+        <LI>Next message (by thread): <A HREF="009682.html">[USN-7699-2] Linux kernel (HWE) vulnerabilities
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#9681">[ date ]</a>
+              <a href="thread.html#9681">[ thread ]</a>
+              <a href="subject.html#9681">[ subject ]</a>
+              <a href="author.html#9681">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>==========================================================================
+Ubuntu Security Notice USN-7700-1
+August 19, 2025
+
+gcc-10, gcc-11, gcc-12 vulnerability
+==========================================================================
+
+A security issue affects these releases of Ubuntu and its derivatives:
+
+- Ubuntu 22.04 LTS
+- Ubuntu 20.04 LTS
+
+Summary:
+
+GNU Compiler Collection's (GCC) could be made to ignore security checks.
+
+Software Description:
+- gcc-10: GCC 10
+- gcc-11: GCC 11
+- gcc-12: GCC 12
+
+Details:
+
+It was discovered that the -fstack-protector hardening feature in GCC for
+AArch64 did not properly protect dynamically-sized local variables
+such as those created using C99 variable length arrays or alloca. As a
+result, an attacker who was able to trigger a buffer overflow in such cases
+could bypass the intended stack protection checks. (CVE-2023-4039)
+
+Update instructions:
+
+The problem can be corrected by updating your system to the following
+package versions:
+
+Ubuntu 22.04 LTS
+  cpp-10                          10.5.0-1ubuntu1~22.04.2
+  cpp-10-doc                      10.5.0-1ubuntu1~22.04.2
+  cpp-11                          11.4.0-1ubuntu1~22.04.2
+  cpp-11-doc                      11.4.0-1ubuntu1~22.04.2
+  cpp-12                          12.3.0-1ubuntu1~22.04.2
+  cpp-12-doc                      12.3.0-1ubuntu1~22.04.2
+  g++-10                          10.5.0-1ubuntu1~22.04.2
+  g++-10-multilib                 10.5.0-1ubuntu1~22.04.2
+  g++-11                          11.4.0-1ubuntu1~22.04.2
+  g++-11-multilib                 11.4.0-1ubuntu1~22.04.2
+  g++-12                          12.3.0-1ubuntu1~22.04.2
+  g++-12-multilib                 12.3.0-1ubuntu1~22.04.2
+  gcc-10                          10.5.0-1ubuntu1~22.04.2
+  gcc-10-base                     10.5.0-1ubuntu1~22.04.2
+  gcc-10-doc                      10.5.0-1ubuntu1~22.04.2
+  gcc-10-hppa64-linux-gnu         10.5.0-1ubuntu1~22.04.2
+  gcc-10-locales                  10.5.0-1ubuntu1~22.04.2
+  gcc-10-multilib                 10.5.0-1ubuntu1~22.04.2
+  gcc-10-offload-nvptx            10.5.0-1ubuntu1~22.04.2
+  gcc-10-plugin-dev               10.5.0-1ubuntu1~22.04.2
+  gcc-10-source                   10.5.0-1ubuntu1~22.04.2
+  gcc-10-test-results             10.5.0-1ubuntu1~22.04.2
+  gcc-11                          11.4.0-1ubuntu1~22.04.2
+  gcc-11-base                     11.4.0-1ubuntu1~22.04.2
+  gcc-11-doc                      11.4.0-1ubuntu1~22.04.2
+  gcc-11-hppa64-linux-gnu         11.4.0-1ubuntu1~22.04.2
+  gcc-11-locales                  11.4.0-1ubuntu1~22.04.2
+  gcc-11-multilib                 11.4.0-1ubuntu1~22.04.2
+  gcc-11-offload-amdgcn           11.4.0-1ubuntu1~22.04.2
+  gcc-11-offload-nvptx            11.4.0-1ubuntu1~22.04.2
+  gcc-11-plugin-dev               11.4.0-1ubuntu1~22.04.2
+  gcc-11-source                   11.4.0-1ubuntu1~22.04.2
+  gcc-11-test-results             11.4.0-1ubuntu1~22.04.2
+  gcc-12                          12.3.0-1ubuntu1~22.04.2
+  gcc-12-base                     12.3.0-1ubuntu1~22.04.2
+  gcc-12-doc                      12.3.0-1ubuntu1~22.04.2
+  gcc-12-hppa64-linux-gnu         12.3.0-1ubuntu1~22.04.2
+  gcc-12-locales                  12.3.0-1ubuntu1~22.04.2
+  gcc-12-multilib                 12.3.0-1ubuntu1~22.04.2
+  gcc-12-offload-amdgcn           12.3.0-1ubuntu1~22.04.2
+  gcc-12-offload-nvptx            12.3.0-1ubuntu1~22.04.2
+  gcc-12-plugin-dev               12.3.0-1ubuntu1~22.04.2
+  gcc-12-source                   12.3.0-1ubuntu1~22.04.2
+  gcc-12-test-results             12.3.0-1ubuntu1~22.04.2
+  gccbrig-10                      10.5.0-1ubuntu1~22.04.2
+  gccbrig-11                      11.4.0-1ubuntu1~22.04.2
+  gccgo-10                        10.5.0-1ubuntu1~22.04.2
+  gccgo-10-doc                    10.5.0-1ubuntu1~22.04.2
+  gccgo-10-multilib               10.5.0-1ubuntu1~22.04.2
+  gccgo-11                        11.4.0-1ubuntu1~22.04.2
+  gccgo-11-doc                    11.4.0-1ubuntu1~22.04.2
+  gccgo-11-multilib               11.4.0-1ubuntu1~22.04.2
+  gccgo-12                        12.3.0-1ubuntu1~22.04.2
+  gccgo-12-doc                    12.3.0-1ubuntu1~22.04.2
+  gccgo-12-multilib               12.3.0-1ubuntu1~22.04.2
+  gdc-10                          10.5.0-1ubuntu1~22.04.2
+  gdc-10-multilib                 10.5.0-1ubuntu1~22.04.2
+  gdc-11                          11.4.0-1ubuntu1~22.04.2
+  gdc-11-multilib                 11.4.0-1ubuntu1~22.04.2
+  gdc-12                          12.3.0-1ubuntu1~22.04.2
+  gdc-12-multilib                 12.3.0-1ubuntu1~22.04.2
+  gfortran-10                     10.5.0-1ubuntu1~22.04.2
+  gfortran-10-doc                 10.5.0-1ubuntu1~22.04.2
+  gfortran-10-multilib            10.5.0-1ubuntu1~22.04.2
+  gfortran-11                     11.4.0-1ubuntu1~22.04.2
+  gfortran-11-doc                 11.4.0-1ubuntu1~22.04.2
+  gfortran-11-multilib            11.4.0-1ubuntu1~22.04.2
+  gfortran-12                     12.3.0-1ubuntu1~22.04.2
+  gfortran-12-doc                 12.3.0-1ubuntu1~22.04.2
+  gfortran-12-multilib            12.3.0-1ubuntu1~22.04.2
+  gm2-10                          10.5.0-1ubuntu1~22.04.2
+  gm2-11                          11.4.0-1ubuntu1~22.04.2
+  gm2-12                          12.3.0-1ubuntu1~22.04.2
+  gm2-12-doc                      12.3.0-1ubuntu1~22.04.2
+  gnat-10                         10.5.0-1ubuntu1~22.04.2
+  gnat-10-doc                     10.5.0-1ubuntu1~22.04.2
+  gnat-11                         11.4.0-1ubuntu1~22.04.2
+  gnat-11-doc                     11.4.0-1ubuntu1~22.04.2
+  gnat-12                         12.3.0-1ubuntu1~22.04.2
+  gnat-12-doc                     12.3.0-1ubuntu1~22.04.2
+  gobjc++-10                      10.5.0-1ubuntu1~22.04.2
+  gobjc++-10-multilib             10.5.0-1ubuntu1~22.04.2
+  gobjc++-11                      11.4.0-1ubuntu1~22.04.2
+  gobjc++-11-multilib             11.4.0-1ubuntu1~22.04.2
+  gobjc++-12                      12.3.0-1ubuntu1~22.04.2
+  gobjc++-12-multilib             12.3.0-1ubuntu1~22.04.2
+  gobjc-10                        10.5.0-1ubuntu1~22.04.2
+  gobjc-10-multilib               10.5.0-1ubuntu1~22.04.2
+  gobjc-11                        11.4.0-1ubuntu1~22.04.2
+  gobjc-11-multilib               11.4.0-1ubuntu1~22.04.2
+  gobjc-12                        12.3.0-1ubuntu1~22.04.2
+  gobjc-12-multilib               12.3.0-1ubuntu1~22.04.2
+  lib32asan6                      11.4.0-1ubuntu1~22.04.2
+  lib32asan8                      12.3.0-1ubuntu1~22.04.2
+  lib32atomic1                    12.3.0-1ubuntu1~22.04.2
+  lib32gcc-10-dev                 10.5.0-1ubuntu1~22.04.2
+  lib32gcc-11-dev                 11.4.0-1ubuntu1~22.04.2
+  lib32gcc-12-dev                 12.3.0-1ubuntu1~22.04.2
+  lib32gcc-s1                     12.3.0-1ubuntu1~22.04.2
+  lib32gfortran-10-dev            10.5.0-1ubuntu1~22.04.2
+  lib32gfortran-11-dev            11.4.0-1ubuntu1~22.04.2
+  lib32gfortran-12-dev            12.3.0-1ubuntu1~22.04.2
+  lib32gfortran5                  12.3.0-1ubuntu1~22.04.2
+  lib32go-10-dev                  10.5.0-1ubuntu1~22.04.2
+  lib32go-11-dev                  11.4.0-1ubuntu1~22.04.2
+  lib32go-12-dev                  12.3.0-1ubuntu1~22.04.2
+  lib32go16                       10.5.0-1ubuntu1~22.04.2
+  lib32go19                       11.4.0-1ubuntu1~22.04.2
+  lib32go21                       12.3.0-1ubuntu1~22.04.2
+  lib32gomp1                      12.3.0-1ubuntu1~22.04.2
+  lib32gphobos-10-dev             10.5.0-1ubuntu1~22.04.2
+  lib32gphobos-11-dev             11.4.0-1ubuntu1~22.04.2
+  lib32gphobos-12-dev             12.3.0-1ubuntu1~22.04.2
+  lib32gphobos1                   10.5.0-1ubuntu1~22.04.2
+  lib32gphobos2                   11.4.0-1ubuntu1~22.04.2
+  lib32gphobos3                   12.3.0-1ubuntu1~22.04.2
+  lib32itm1                       12.3.0-1ubuntu1~22.04.2
+  lib32lsan0                      12.3.0-1ubuntu1~22.04.2
+  lib32objc-10-dev                10.5.0-1ubuntu1~22.04.2
+  lib32objc-11-dev                11.4.0-1ubuntu1~22.04.2
+  lib32objc-12-dev                12.3.0-1ubuntu1~22.04.2
+  lib32objc4                      12.3.0-1ubuntu1~22.04.2
+  lib32quadmath0                  12.3.0-1ubuntu1~22.04.2
+  lib32stdc++-10-dev              10.5.0-1ubuntu1~22.04.2
+  lib32stdc++-11-dev              11.4.0-1ubuntu1~22.04.2
+  lib32stdc++-12-dev              12.3.0-1ubuntu1~22.04.2
+  lib32stdc++6                    12.3.0-1ubuntu1~22.04.2
+  lib32ubsan1                     12.3.0-1ubuntu1~22.04.2
+  lib64asan6                      11.4.0-1ubuntu1~22.04.2
+  lib64asan8                      12.3.0-1ubuntu1~22.04.2
+  lib64atomic1                    12.3.0-1ubuntu1~22.04.2
+  lib64gcc-10-dev                 10.5.0-1ubuntu1~22.04.2
+  lib64gcc-11-dev                 11.4.0-1ubuntu1~22.04.2
+  lib64gcc-12-dev                 12.3.0-1ubuntu1~22.04.2
+  lib64gcc-s1                     12.3.0-1ubuntu1~22.04.2
+  lib64gfortran-10-dev            10.5.0-1ubuntu1~22.04.2
+  lib64gfortran-11-dev            11.4.0-1ubuntu1~22.04.2
+  lib64gfortran-12-dev            12.3.0-1ubuntu1~22.04.2
+  lib64gfortran5                  12.3.0-1ubuntu1~22.04.2
+  lib64go-10-dev                  10.5.0-1ubuntu1~22.04.2
+  lib64go-11-dev                  11.4.0-1ubuntu1~22.04.2
+  lib64go-12-dev                  12.3.0-1ubuntu1~22.04.2
+  lib64go16                       10.5.0-1ubuntu1~22.04.2
+  lib64go19                       11.4.0-1ubuntu1~22.04.2
+  lib64go21                       12.3.0-1ubuntu1~22.04.2
+  lib64gomp1                      12.3.0-1ubuntu1~22.04.2
+  lib64gphobos-10-dev             10.5.0-1ubuntu1~22.04.2
+  lib64gphobos-11-dev             11.4.0-1ubuntu1~22.04.2
+  lib64gphobos-12-dev             12.3.0-1ubuntu1~22.04.2
+  lib64gphobos1                   10.5.0-1ubuntu1~22.04.2
+  lib64gphobos2                   11.4.0-1ubuntu1~22.04.2
+  lib64gphobos3                   12.3.0-1ubuntu1~22.04.2
+  lib64itm1                       12.3.0-1ubuntu1~22.04.2
+  lib64objc-10-dev                10.5.0-1ubuntu1~22.04.2
+  lib64objc-11-dev                11.4.0-1ubuntu1~22.04.2
+  lib64objc-12-dev                12.3.0-1ubuntu1~22.04.2
+  lib64objc4                      12.3.0-1ubuntu1~22.04.2
+  lib64quadmath0                  12.3.0-1ubuntu1~22.04.2
+  lib64stdc++-10-dev              10.5.0-1ubuntu1~22.04.2
+  lib64stdc++-11-dev              11.4.0-1ubuntu1~22.04.2
+  lib64stdc++-12-dev              12.3.0-1ubuntu1~22.04.2
+  lib64stdc++6                    12.3.0-1ubuntu1~22.04.2
+  lib64ubsan1                     12.3.0-1ubuntu1~22.04.2
+  libasan6                        11.4.0-1ubuntu1~22.04.2
+  libasan8                        12.3.0-1ubuntu1~22.04.2
+  libatomic1                      12.3.0-1ubuntu1~22.04.2
+  libcc1-0                        12.3.0-1ubuntu1~22.04.2
+  libgcc-10-dev                   10.5.0-1ubuntu1~22.04.2
+  libgcc-11-dev                   11.4.0-1ubuntu1~22.04.2
+  libgcc-12-dev                   12.3.0-1ubuntu1~22.04.2
+  libgcc-s1                       12.3.0-1ubuntu1~22.04.2
+  libgccjit-10-dev                10.5.0-1ubuntu1~22.04.2
+  libgccjit-10-doc                10.5.0-1ubuntu1~22.04.2
+  libgccjit-11-dev                11.4.0-1ubuntu1~22.04.2
+  libgccjit-11-doc                11.4.0-1ubuntu1~22.04.2
+  libgccjit-12-dev                12.3.0-1ubuntu1~22.04.2
+  libgccjit-12-doc                12.3.0-1ubuntu1~22.04.2
+  libgccjit0                      12.3.0-1ubuntu1~22.04.2
+  libgfortran-10-dev              10.5.0-1ubuntu1~22.04.2
+  libgfortran-11-dev              11.4.0-1ubuntu1~22.04.2
+  libgfortran-12-dev              12.3.0-1ubuntu1~22.04.2
+  libgfortran5                    12.3.0-1ubuntu1~22.04.2
+  libgm2-10-dev                   10.5.0-1ubuntu1~22.04.2
+  libgm2-11-dev                   11.4.0-1ubuntu1~22.04.2
+  libgm2-12-dev                   12.3.0-1ubuntu1~22.04.2
+  libgm2-15                       10.5.0-1ubuntu1~22.04.2
+  libgm2-17                       12.3.0-1ubuntu1~22.04.2
+  libgnat-10                      10.5.0-1ubuntu1~22.04.2
+  libgnat-11                      11.4.0-1ubuntu1~22.04.2
+  libgnat-12                      12.3.0-1ubuntu1~22.04.2
+  libgnat-util10                  10.5.0-1ubuntu1~22.04.2
+  libgnat-util10-dev              10.5.0-1ubuntu1~22.04.2
+  libgo-10-dev                    10.5.0-1ubuntu1~22.04.2
+  libgo-11-dev                    11.4.0-1ubuntu1~22.04.2
+  libgo-12-dev                    12.3.0-1ubuntu1~22.04.2
+  libgo16                         10.5.0-1ubuntu1~22.04.2
+  libgo19                         11.4.0-1ubuntu1~22.04.2
+  libgo21                         12.3.0-1ubuntu1~22.04.2
+  libgomp-plugin-amdgcn1          12.3.0-1ubuntu1~22.04.2
+  libgomp-plugin-hsa1             10.5.0-1ubuntu1~22.04.2
+  libgomp-plugin-nvptx1           12.3.0-1ubuntu1~22.04.2
+  libgomp1                        12.3.0-1ubuntu1~22.04.2
+  libgphobos-10-dev               10.5.0-1ubuntu1~22.04.2
+  libgphobos-11-dev               11.4.0-1ubuntu1~22.04.2
+  libgphobos-12-dev               12.3.0-1ubuntu1~22.04.2
+  libgphobos1                     10.5.0-1ubuntu1~22.04.2
+  libgphobos2                     11.4.0-1ubuntu1~22.04.2
+  libgphobos3                     12.3.0-1ubuntu1~22.04.2
+  libhsail-rt-10-dev              10.5.0-1ubuntu1~22.04.2
+  libhsail-rt-11-dev              11.4.0-1ubuntu1~22.04.2
+  libhsail-rt0                    11.4.0-1ubuntu1~22.04.2
+  libhwasan0                      12.3.0-1ubuntu1~22.04.2
+  libitm1                         12.3.0-1ubuntu1~22.04.2
+  liblsan0                        12.3.0-1ubuntu1~22.04.2
+  libobjc-10-dev                  10.5.0-1ubuntu1~22.04.2
+  libobjc-11-dev                  11.4.0-1ubuntu1~22.04.2
+  libobjc-12-dev                  12.3.0-1ubuntu1~22.04.2
+  libobjc4                        12.3.0-1ubuntu1~22.04.2
+  libquadmath0                    12.3.0-1ubuntu1~22.04.2
+  libstdc++-10-dev                10.5.0-1ubuntu1~22.04.2
+  libstdc++-10-doc                10.5.0-1ubuntu1~22.04.2
+  libstdc++-10-pic                10.5.0-1ubuntu1~22.04.2
+  libstdc++-11-dev                11.4.0-1ubuntu1~22.04.2
+  libstdc++-11-doc                11.4.0-1ubuntu1~22.04.2
+  libstdc++-11-pic                11.4.0-1ubuntu1~22.04.2
+  libstdc++-12-dev                12.3.0-1ubuntu1~22.04.2
+  libstdc++-12-doc                12.3.0-1ubuntu1~22.04.2
+  libstdc++-12-pic                12.3.0-1ubuntu1~22.04.2
+  libstdc++6                      12.3.0-1ubuntu1~22.04.2
+  libtsan0                        11.4.0-1ubuntu1~22.04.2
+  libtsan2                        12.3.0-1ubuntu1~22.04.2
+  libubsan1                       12.3.0-1ubuntu1~22.04.2
+  libx32asan6                     11.4.0-1ubuntu1~22.04.2
+  libx32asan8                     12.3.0-1ubuntu1~22.04.2
+  libx32atomic1                   12.3.0-1ubuntu1~22.04.2
+  libx32gcc-10-dev                10.5.0-1ubuntu1~22.04.2
+  libx32gcc-11-dev                11.4.0-1ubuntu1~22.04.2
+  libx32gcc-12-dev                12.3.0-1ubuntu1~22.04.2
+  libx32gcc-s1                    12.3.0-1ubuntu1~22.04.2
+  libx32gfortran-10-dev           10.5.0-1ubuntu1~22.04.2
+  libx32gfortran-11-dev           11.4.0-1ubuntu1~22.04.2
+  libx32gfortran-12-dev           12.3.0-1ubuntu1~22.04.2
+  libx32gfortran5                 12.3.0-1ubuntu1~22.04.2
+  libx32go-10-dev                 10.5.0-1ubuntu1~22.04.2
+  libx32go-11-dev                 11.4.0-1ubuntu1~22.04.2
+  libx32go-12-dev                 12.3.0-1ubuntu1~22.04.2
+  libx32go16                      10.5.0-1ubuntu1~22.04.2
+  libx32go19                      11.4.0-1ubuntu1~22.04.2
+  libx32go21                      12.3.0-1ubuntu1~22.04.2
+  libx32gomp1                     12.3.0-1ubuntu1~22.04.2
+  libx32gphobos-10-dev            10.5.0-1ubuntu1~22.04.2
+  libx32gphobos-11-dev            11.4.0-1ubuntu1~22.04.2
+  libx32gphobos-12-dev            12.3.0-1ubuntu1~22.04.2
+  libx32gphobos1                  10.5.0-1ubuntu1~22.04.2
+  libx32gphobos2                  11.4.0-1ubuntu1~22.04.2
+  libx32gphobos3                  12.3.0-1ubuntu1~22.04.2
+  libx32itm1                      12.3.0-1ubuntu1~22.04.2
+  libx32lsan0                     12.3.0-1ubuntu1~22.04.2
+  libx32objc-10-dev               10.5.0-1ubuntu1~22.04.2
+  libx32objc-11-dev               11.4.0-1ubuntu1~22.04.2
+  libx32objc-12-dev               12.3.0-1ubuntu1~22.04.2
+  libx32objc4                     12.3.0-1ubuntu1~22.04.2
+  libx32quadmath0                 12.3.0-1ubuntu1~22.04.2
+  libx32stdc++-10-dev             10.5.0-1ubuntu1~22.04.2
+  libx32stdc++-11-dev             11.4.0-1ubuntu1~22.04.2
+  libx32stdc++-12-dev             12.3.0-1ubuntu1~22.04.2
+  libx32stdc++6                   12.3.0-1ubuntu1~22.04.2
+  libx32ubsan1                    12.3.0-1ubuntu1~22.04.2
+
+Ubuntu 20.04 LTS
+  cpp-10                          10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  cpp-10-doc                      10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  g++-10                          10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  g++-10-multilib                 10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gcc-10                          10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gcc-10-base                     10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gcc-10-doc                      10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gcc-10-hppa64-linux-gnu         10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gcc-10-locales                  10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gcc-10-multilib                 10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gcc-10-offload-amdgcn           10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gcc-10-offload-nvptx            10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gcc-10-plugin-dev               10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gcc-10-source                   10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gcc-10-test-results             10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gccbrig-10                      10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gccgo-10                        10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gccgo-10-doc                    10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gccgo-10-multilib               10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gdc-10                          10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gdc-10-multilib                 10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gfortran-10                     10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gfortran-10-doc                 10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gfortran-10-multilib            10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gm2-10                          10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gnat-10                         10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gnat-10-doc                     10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gobjc++-10                      10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gobjc++-10-multilib             10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gobjc-10                        10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  gobjc-10-multilib               10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib32asan6                      10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib32atomic1                    10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib32gcc-10-dev                 10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib32gcc-s1                     10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib32gcc1                       1:10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib32gfortran-10-dev            10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib32gfortran5                  10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib32go-10-dev                  10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib32go16                       10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib32gomp1                      10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib32gphobos-10-dev             10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib32gphobos1                   10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib32itm1                       10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib32lsan0                      10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib32objc-10-dev                10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib32objc4                      10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib32quadmath0                  10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib32stdc++-10-dev              10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib32stdc++6                    10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib32ubsan1                     10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib64asan6                      10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib64atomic1                    10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib64gcc-10-dev                 10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib64gcc-s1                     10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib64gcc1                       1:10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib64gfortran-10-dev            10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib64gfortran5                  10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib64go-10-dev                  10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib64go16                       10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib64gomp1                      10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib64gphobos-10-dev             10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib64gphobos1                   10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib64itm1                       10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib64objc-10-dev                10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib64objc4                      10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib64quadmath0                  10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib64stdc++-10-dev              10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib64stdc++6                    10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  lib64ubsan1                     10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libasan6                        10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libatomic1                      10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libcc1-0                        10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgcc-10-dev                   10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgcc-s1                       10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgcc1                         1:10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgccjit-10-dev                10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgccjit-10-doc                10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgccjit0                      10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgfortran-10-dev              10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgfortran5                    10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgm2-10-dev                   10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgm2-15                       10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgnat-10                      10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgnat-util10                  10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgnat-util10-dev              10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgo-10-dev                    10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgo16                         10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgomp-plugin-amdgcn1          10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgomp-plugin-hsa1             10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgomp-plugin-nvptx1           10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgomp1                        10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgphobos-10-dev               10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libgphobos1                     10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libhsail-rt-10-dev              10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libhsail-rt0                    10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libitm1                         10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  liblsan0                        10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libobjc-10-dev                  10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libobjc4                        10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libquadmath0                    10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libsfasan6                      10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libsfatomic1                    10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libsfgcc-10-dev                 10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libsfgcc-s1                     10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libsfgcc1                       1:10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libsfgfortran-10-dev            10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libsfgfortran5                  10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libsfgomp1                      10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libsfgphobos-10-dev             10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libsfgphobos1                   10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libsfobjc-10-dev                10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libsfobjc4                      10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libsfstdc++-10-dev              10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libsfstdc++6                    10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libsfubsan1                     10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libstdc++-10-dev                10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libstdc++-10-doc                10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libstdc++-10-pic                10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libstdc++6                      10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libtsan0                        10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libubsan1                       10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libx32asan6                     10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libx32atomic1                   10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libx32gcc-10-dev                10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libx32gcc-s1                    10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libx32gcc1                      1:10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libx32gfortran-10-dev           10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libx32gfortran5                 10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libx32go-10-dev                 10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libx32go16                      10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libx32gomp1                     10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libx32gphobos-10-dev            10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libx32gphobos1                  10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libx32itm1                      10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libx32lsan0                     10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libx32objc-10-dev               10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libx32objc4                     10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libx32quadmath0                 10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libx32stdc++-10-dev             10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libx32stdc++6                   10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+  libx32ubsan1                    10.5.0-1ubuntu1~20.04.1+esm1
+                                  Available with Ubuntu Pro
+
+In general, a standard system update will make all the necessary changes.
+
+References:
+  <A HREF="https://ubuntu.com/security/notices/USN-7700-1">https://ubuntu.com/security/notices/USN-7700-1</A>
+  CVE-2023-4039
+
+Package Information:
+  <A HREF="https://launchpad.net/ubuntu/+source/gcc-10/10.5.0-1ubuntu1~22.04.2">https://launchpad.net/ubuntu/+source/gcc-10/10.5.0-1ubuntu1~22.04.2</A>
+  <A HREF="https://launchpad.net/ubuntu/+source/gcc-11/11.4.0-1ubuntu1~22.04.2">https://launchpad.net/ubuntu/+source/gcc-11/11.4.0-1ubuntu1~22.04.2</A>
+  <A HREF="https://launchpad.net/ubuntu/+source/gcc-12/12.3.0-1ubuntu1~22.04.2">https://launchpad.net/ubuntu/+source/gcc-12/12.3.0-1ubuntu1~22.04.2</A>
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 833 bytes
+Desc: OpenPGP digital signature
+URL: &lt;<A HREF="https://lists.ubuntu.com/archives/ubuntu-security-announce/attachments/20250820/ae157d94/attachment.sig">https://lists.ubuntu.com/archives/ubuntu-security-announce/attachments/20250820/ae157d94/attachment.sig</A>&gt;
+</PRE>
+
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message (by thread): <A HREF="009680.html">[USN-7639-2] Apache HTTP Server vulnerabilities
+</A></li>
+	<LI>Next message (by thread): <A HREF="009682.html">[USN-7699-2] Linux kernel (HWE) vulnerabilities
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#9681">[ date ]</a>
+              <a href="thread.html#9681">[ thread ]</a>
+              <a href="subject.html#9681">[ subject ]</a>
+              <a href="author.html#9681">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.ubuntu.com/mailman/listinfo/ubuntu-security-announce">More information about the ubuntu-security-announce
+mailing list</a><br>
+</body></html>

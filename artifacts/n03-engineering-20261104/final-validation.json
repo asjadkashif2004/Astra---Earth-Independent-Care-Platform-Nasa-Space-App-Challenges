@@ -1,0 +1,151 @@
+{
+  "schema_version": "astra.n03.final-validation.v1",
+  "result": "ENGINEERING COMPLETE WITH EXTERNAL GATES",
+  "status": "PASS",
+  "formal_N03": "Partial",
+  "AC20": "Open / Unverified",
+  "official_families_implemented": 11,
+  "authorized_engineering_branches_qualified": 11,
+  "full_original_families_qualified": 10,
+  "full_original_family_total": 11,
+  "original_partial": [
+    "R60"
+  ],
+  "automated_QA": {
+    "distinct_passed": 440,
+    "failed": 0,
+    "skipped": 0,
+    "regression_passes": 434,
+    "final_affected_passes": 90,
+    "overlap_removed": 84
+  },
+  "static_validation": {
+    "JavaScript_files": 280,
+    "errors": 0,
+    "final_driver_syntax": "PASS"
+  },
+  "fresh_browser": {
+    "full_groups": 27,
+    "native_200_percent_groups": 12,
+    "supplement_groups": 3,
+    "group_executions": 42,
+    "distinct_group_names": 30,
+    "audits": 96,
+    "native_Tab_checks": 66,
+    "contrast_bounds": 6305,
+    "captured_JavaScript_errors": 0,
+    "launches": 9,
+    "initial_failed_campaigns_preserved": 6,
+    "all_owned_cleanup_passed": true,
+    "reports": [
+      {
+        "path": "artifacts/n03-engineering-20261104/browser-01/report.json",
+        "status": "failed",
+        "groups": 7,
+        "cleanup": true
+      },
+      {
+        "path": "artifacts/n03-engineering-20261104/browser-02/report.json",
+        "status": "failed",
+        "groups": 17,
+        "cleanup": true
+      },
+      {
+        "path": "artifacts/n03-engineering-20261104/browser-03/report.json",
+        "status": "failed",
+        "groups": 11,
+        "cleanup": true
+      },
+      {
+        "path": "artifacts/n03-engineering-20261104/browser-04/report.json",
+        "status": "failed",
+        "groups": 4,
+        "cleanup": true
+      },
+      {
+        "path": "artifacts/n03-engineering-20261104/browser-05/report.json",
+        "status": "failed",
+        "groups": 26,
+        "cleanup": true
+      },
+      {
+        "path": "artifacts/n03-engineering-20261104/browser-06/report.json",
+        "status": "failed",
+        "groups": 22,
+        "cleanup": true
+      },
+      {
+        "path": "artifacts/n03-engineering-20261104/browser-07/report.json",
+        "status": "passed",
+        "groups": 27,
+        "cleanup": true
+      },
+      {
+        "path": "artifacts/n03-engineering-20261104/browser-data-01/report.json",
+        "status": "passed",
+        "groups": 3,
+        "cleanup": true
+      },
+      {
+        "path": "artifacts/n03-engineering-20261104/browser-zoom-01/report.json",
+        "status": "passed",
+        "groups": 12,
+        "cleanup": true
+      }
+    ]
+  },
+  "preservation": {
+    "fresh_unchanged_files": 8791,
+    "large_or_database_metadata_unchanged": 37,
+    "extra_original_PDF_hashes_verified": 1,
+    "mismatches": 0,
+    "before_capture_mismatches": 0,
+    "unrelated_status_rows_unchanged": true,
+    "prior_governance_bodies_preserved": true,
+    "sealed_database_byte_access": 0,
+    "method": "Small files freshly hashed. Large/model/database historical hashes retained with unchanged metadata; original PDF additionally verified. No blanket fresh byte-hash claim for databases or models."
+  },
+  "source_pins": {
+    "AGENTS.md": "cc65c45661789aebe19b6a225e28f7d58731154e7768c9d5dd2bd6718bd38966",
+    "apps/mission-control-web/app.mjs": "b513ab998db9944d31b12788a47d4a7c2c6ac57e3b4b98971e13bb8abb7def55",
+    "apps/mission-control-web/sw.js": "86dc5bcf5a4b553c787c645f542bf8f71b8e14370577ee1fe6f572d51b5b1f49",
+    "docs/CORE_AI_PRIORITY.md": "6e27b330feb21b37c591176ab010a509a16715332e56bc6ecbb4bf1693c66a8a",
+    "docs/DECISIONS.md": "fb0207f370c0eb944ebc6d8afc06917424ac443b28d79cd29f77eb4974f75e61",
+    "docs/FEATURE_AUDIT.md": "d03e9fcf31877f5fdfa997b9fdc3dbba395466d607fef4f251b4039a4e3f1f7d",
+    "docs/MASTER_PLAN.md": "d23e49bbaaaa84c6670fe03ae096ffffc5844c46c9161cc958811bd8d4790174",
+    "docs/MODULE_TRACKER.md": "af18535ea8838880c830c953e331c48c5db67e679a75c97efc50f5732a9cfca2",
+    "docs/SESSION_HANDOFF.md": "86d869767d2fdfcb0db21ebfa87883380fec595ce1b2d57a4e552dfb9c548184",
+    "scripts/browser-acceptance.mjs": "a7db5f47a4c3cff6244db584544b5d9347b3fea11dff17c6b6c4560d047c02a8",
+    "scripts/browser-closure.mjs": "588d71c9e9b90f739d1602547de75a90f94fdcaa052816c336b250c1ded79296",
+    "packages/ac20-evidence.mjs": "9f4bd31c191d728c8d5c8f56480624071df8783860592ead3bc4d47d89591a5f",
+    "scripts/validate-ac20.mjs": "db308d61d2d1f789b0f580c0e408128684aa97f09ebae161b3d7bb189789a167",
+    "scripts/browser-n03-full.mjs": "f1a2e21173f3d257e54232f0727d8b5cf3e08e27c00f5a62284538140c0775a5",
+    "tests/n03-lifecycle.test.mjs": "88e7a84c9504990904efd58f2cbc76907b977d0087b5ed5fb77e748a427353e1",
+    "tests/n03-ac20.test.mjs": "714a8257facdfd1ca8242410ba52e96f8c8fb4880579b2f81fd22fc1652ad6eb",
+    "docs/N03_ENGINEERING_CONTRACT.md": "97217dc0950c654870233c7849b23ef81d64acb6d16004cc3b082140a1b0c6e1",
+    "docs/N03_AC20_PHYSICAL_ACCEPTANCE.md": "0723485d3fc2564e4a0e7314461a8f8a8e84a8ff6fa70e1954f19bf6209615df",
+    "docs/N03_FINAL_ENGINEERING_COMPLETION.md": "10d87e9f09eabe4c8b58ac19e38083f7fe880433a3772cfd88831d44d3e67943"
+  },
+  "new_local_document_links_checked": 40,
+  "resources": {
+    "sampled_harness_RSS_bytes": 209772544,
+    "temporary_SQLite_post_checkpoint_bytes": 24903680,
+    "temporary_SQLite_removed": true,
+    "database_snapshots_retained": 0,
+    "model_PDF_copies": 0,
+    "Qwen_executions": 0,
+    "N16_designated_worker_starts": 0,
+    "new_N11_N12_jobs": 0,
+    "physical_hardware_certification": false
+  },
+  "artifact_storage_growth_bytes": 26842649,
+  "storage_scope": "New N03 artifact directory only, including retained initial failures/manifests/screenshots; no historical artifact cleanup or database snapshots. Does not claim a temporary browser-profile peak or total workspace net delta.",
+  "changed_files": "changed-files.json",
+  "remaining_external_gates": [
+    "Owner-designated minimum physical machine and authentic presented-frame evidence/acceptance for AC20",
+    "N17 physical offline/PWA acceptance remains separate",
+    "N06 integrated scenes and N26 final-system revalidation remain separately gated",
+    "All scientific/source/model/review/application/agent restrictions of other modules remain unchanged"
+  ],
+  "created_at": 1793818327.6576095
+}

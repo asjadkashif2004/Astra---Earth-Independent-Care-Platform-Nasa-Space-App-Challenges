@@ -1,0 +1,19 @@
+node:fs:1794
+  const stats = binding.stat(
+                        ^
+
+Error: ENOENT: no such file or directory, stat '/mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/artifacts/n09-engineering-20261031/final-validation.json'
+    at statSync (node:fs:1794:25)
+    at file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/artifacts/n09-engineering-20261031/verify-final.mjs:46:264
+    at check (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/artifacts/n09-engineering-20261031/verify-final.mjs:9:25)
+    at file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/artifacts/n09-engineering-20261031/verify-final.mjs:45:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'stat',
+  path: '/mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/artifacts/n09-engineering-20261031/final-validation.json'
+}
+
+Node.js v24.21.0

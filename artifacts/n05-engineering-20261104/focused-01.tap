@@ -1,0 +1,25 @@
+✔ N05-01: manifest identities, original source hashes, authors, version, units and lawful derivation are traceable (2942.254268ms)
+✔ N05-01: combined critical graphics stay below the literal 20,000,000 byte cap; local Three.js is exactly pinned (307.302243ms)
+✔ N05-01: actual local GLBs parse through pinned GLTFLoader, with five independent semantic meshes and no remote/decoder/animation requirements (60.565409ms)
+✔ N05-01: duplicate/unknown IDs, external filenames and oversized manifests reject rather than silently substitute anatomy (6.49972ms)
+✔ N05-01: one demand frame, progressive layers, camera, quality and telemetry isolation; complete idempotent disposal (75.919185ms)
+✔ N05-01: navigation cancellation aborts load and never attaches stale geometry (6.465785ms)
+✔ N05-01: late GLTF parsing after navigation releases detached geometry exactly once (15.448576ms)
+✔ N05-01: failed/integrity-invalid loading and unsupported graphics preserve meaningful text and monitoring DOM (35.685999ms)
+✔ N05-01: lost context/render failure cancels frames, releases GPU owner and preserves schematic option (102.906874ms)
+✔ N05-01: hidden/offscreen scenes suspend drawing and keyboard controls remain deliberate in reduced motion (48.939101ms)
+✔ N05-01: static GLB MIME support retains CSP and existing authorization/privacy contracts (347.210016ms)
+✔ N05-01: Crew Health offers reference and retained data-linked schematic without changing selected metrics or labels (1039.081397ms)
+✔ N03 degraded-service notice remains a named landmark on non-overview pages (523.867701ms)
+✔ N03 session end aborts global health reads and ignores a transport which delivers after abort (439.186235ms)
+✔ N03 suspended page cancels requests and stops polling; resume refreshes actual state (648.171257ms)
+✔ N03 cached landing resumes its disposed scene without starting authenticated requests (431.844306ms)
+✔ N03 request timeout rejects late projections instead of applying their optimistic payload (814.173902ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9313.060088

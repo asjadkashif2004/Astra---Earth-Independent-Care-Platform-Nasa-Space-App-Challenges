@@ -1,0 +1,28 @@
+# Dependencies, local tools and secrets
+node_modules/
+.env
+.env.*
+!.env.example
+.aws/
+.agents/
+.codex/
+
+# Private runtime database (ASTRA recreates it on first start)
+data/runtime/
+
+# Large local QA evidence kept off GitHub: databases, screenshots, archives,
+# the portable Node binary and the multi-megabyte N04 performance captures.
+# Text summaries, matrices and reports under artifacts/ stay in the repo.
+artifacts/**/*.sqlite
+artifacts/**/*.sqlite-wal
+artifacts/**/*.sqlite-shm
+artifacts/**/*.png
+artifacts/**/*.gz
+artifacts/**/*.tgz
+artifacts/**/*.webm
+artifacts/**/*.exe
+artifacts/n03-windows-tools/
+artifacts/n04-p01-*/**/ocr.json
+artifacts/n04-p01-*/**/partial.json
+artifacts/n04-p01-*/**/report.json
+artifacts/n04-p01-*/**/*.raw.json

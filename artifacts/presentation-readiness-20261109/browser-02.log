@@ -1,0 +1,17 @@
+Checking: Presentation: authenticated dashboard and six real synthetic crew
+Checking: Presentation: all six crew bind actual backend heart-rate observations
+{
+  "status": "failed",
+  "browser": "Chrome/156.0.8078.80",
+  "checks": 2,
+  "failed": [
+    {
+      "name": "Presentation: all six crew bind actual backend heart-rate observations",
+      "status": "failed",
+      "reason": "DOM condition timed out: JSON.parse(document.querySelector(\"#twin-scene\")?.dataset.referenceMetrics??\"null\")?.meshes===5"
+    }
+  ],
+  "screenshots": 2,
+  "reason": "DOM condition timed out: JSON.parse(document.querySelector(\"#twin-scene\")?.dataset.referenceMetrics??\"null\")?.meshes===5",
+  "report": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\presentation-readiness-20261109\\browser-02\\report.json"
+}

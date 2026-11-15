@@ -1,0 +1,109 @@
+{
+  "schema_version": "astra.dataset-card.v1",
+  "dataset_id": "BIDMC-1.0.0",
+  "review_status": "reviewable_public_numerics_only;not_clinically_validated",
+  "source": {
+    "source_id": "physionet-bidmc-01-numerics",
+    "original_name": "bidmc_01_Numerics.csv",
+    "original_bytes": 7644,
+    "original_sha256": "27d43794cf2e7150db10e8bfe61d2bfdb26873a8f1629ffc5fbee5c9a4eb6ef5",
+    "approval_sha256": "5344111b804432ac1c8836bae3c82db60d8ccce7e72a0938fd779586d78bbfde",
+    "url": "https://physionet.org/files/bidmc/1.0.0/bidmc_csv/bidmc_01_Numerics.csv",
+    "canonical_url": "https://physionet.org/content/bidmc/1.0.0/",
+    "retrieval_started_at": "2026-10-23T15:32:16.439Z",
+    "retrieved_at": "2026-10-23T15:32:23.482Z",
+    "publisher_checksum_verified": false
+  },
+  "population": {
+    "source_description": "Historical critically ill hospital patients at Beth Israel Deaconess Medical Centre,Boston;derived from MIMIC-II matched waveforms.",
+    "selected_recordings": 1,
+    "global_patient_identity_verified": false,
+    "selected_age": null,
+    "selected_sex": null
+  },
+  "record": {
+    "record_id": "bidmc_01",
+    "source_subject_number": "01",
+    "source_session_id": null,
+    "original_mimic_patient_id": null,
+    "original_mimic_recording_id": null,
+    "time": {
+      "kind": "relative_recording_seconds",
+      "start_seconds": 0,
+      "end_seconds": 480,
+      "span_seconds": 480,
+      "cadence_seconds": 1,
+      "absolute_start_at": null,
+      "absolute_end_at": null
+    },
+    "channels": [
+      {
+        "column": "HR",
+        "meaning": "Monitor ECG-derived heart rate",
+        "unit": "beats/min"
+      },
+      {
+        "column": "PULSE",
+        "meaning": "Monitor PPG-derived pulse rate",
+        "unit": "beats/min"
+      },
+      {
+        "column": "RESP",
+        "meaning": "Monitor impedance-derived respiratory rate",
+        "unit": "breaths/min"
+      },
+      {
+        "column": "SpO2",
+        "meaning": "Monitor peripheral oxygen saturation",
+        "unit": "%"
+      }
+    ],
+    "missing_counts": {
+      "HR": 0,
+      "PULSE": 13,
+      "RESP": 0,
+      "SpO2": 13
+    },
+    "clinical_quality": "not_independently_validated",
+    "row_count": 481
+  },
+  "download_inventory": {
+    "numerics_csv": true,
+    "waveforms": false,
+    "breath_annotations": false,
+    "fixed_demographics": false,
+    "other_recordings": false,
+    "raw_identifiers": false
+  },
+  "permissions": {
+    "statement": "Open Data Commons Attribution License v1.0 (ODC-By-1.0); preserve the accompanying legacy PhysioNet modified-data notice and attribution. Verbatim original only.",
+    "license_id": "ODC-By-1.0",
+    "terms_url": "https://physionet.org/content/bidmc/view-license/1.0.0/",
+    "harvesting_url": "https://archive.physionet.org/copying.shtml#data",
+    "record_url": "https://physionet.org/content/bidmc/1.0.0/",
+    "reviewed_on": "2026-10-23",
+    "attribution": "Contains information from the BIDMC PPG and Respiration Dataset v1.0.0,Marco Pimentel,Alistair Johnson,Peter Charlton and David Clifton,PhysioNet,DOI:10.13026/C2208R,made available under the ODC Attribution License v1.0.Cite Pimentel et al.,Towards a Robust Estimation of Respiratory Rate from Pulse Oximeters,DOI:10.1109/TBME.2016.2613124,and the PhysioNet resource citation listed in the source README.",
+    "restrictions": [
+      "Retain the ODC-By license URI,attribution and all accompanying source notices with redistributed bytes/documentation;no sublicense or additional restriction on granted database rights.",
+      "Original CSV is unmodified and retained verbatim.The source's existing MIMIC-II extraction/Matlab/CSV modification notice is retained separately,unchanged.",
+      "Future modified data must be distinctly named and identified with source/changes under the legacy policy;this task produces no modified signal dataset.",
+      "Database licensing does not waive privacy,personality,trademark or other content rights.No re-identification,patient linkage or implied clinical/PhysioNet endorsement."
+    ],
+    "legacy_notice_url": "https://physionet.org/files/bidmc/1.0.0/LICENSE",
+    "legacy_notice_sha256": "76576a17b505dce71773415a18e965982bc8c0c9a60da71f1adb9df7644332a0"
+  },
+  "source_category": "real_public_historical_research;not_synthetic;not_live_mission_data",
+  "suitability": "Bounded scalar schema,ordering,missingness and future replay-pipeline tests only;not astronaut baselines,clinical thresholds,diagnosis or model validation.",
+  "transformations": "Original bytes unmodified.Offline validation reads CSV and represents literal NaN as null in derived summaries;no imputation,resampling or rewritten signal file.",
+  "scientific_limitations": [
+    "Public historical ICU-derived numerics,not private/live patient data or astronaut measurements.No direct identifying fields appear in this selected CSV;independent anonymization certification is not claimed.",
+    "Only one complete 1Hz numerics file;no ECG/PPG/respiration waveform,breath annotation,demographics or second recording acquired.",
+    "Hospital selection bias,treatment/sensor effects and terrestrial-to-spaceflight domain shift prohibit astronaut threshold calibration or disease inference.",
+    "NaN stays missing;no interpolation,imputation or independent clinical-quality score is generated.",
+    "Publisher SHA256SUMS review exceeded the15s deadline;not retried.Hash is computed from complete official HTTPS review bytes,not independently matched to publisher checksum.",
+    "Monitor numerics are not independently adjudicated ground truth.Heart and pulse rates are distinct channels.",
+    "No absolute acquisition date is available in this CSV;repository retrieval time is not observation time.",
+    "One eight-minute record provides neither subject-independent holdouts nor broad hospital/spaceflight generalization."
+  ],
+  "split_readiness": "blocked_single_record_and_unverified_cross_archive_identity"
+}

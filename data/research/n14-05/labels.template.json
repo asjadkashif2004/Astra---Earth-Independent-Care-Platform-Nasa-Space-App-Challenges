@@ -1,0 +1,21 @@
+{
+  "cases": [],
+  "clinical_validation": false,
+  "evaluation_id": "astra.n14.prospective.v1",
+  "evidence_manifest_id": "evidence-b1fc5c5e6d9bbf3cb4265fb37b38ffee3941a7c84946d631bef444e00e2269ab",
+  "oversight": {
+    "blinding_attested": false,
+    "bundle_manifest_id": null,
+    "custodian_id": null,
+    "finalized_at": null,
+    "leakage_checked": false,
+    "record_reference": null,
+    "record_sha256": null
+  },
+  "participants": [],
+  "policy_manifest_id": "policies-d6009366d291c462b1060e5405c122c2c44f867ea09e5f89f49389afe447c393",
+  "protocol_id": "protocol-2ad5d7c134092059eb9f038ca9909cba5cda13691abe77362fc2d6022d84f9e0",
+  "revision": 1,
+  "schema_version": "astra.n14.review-labels.v1",
+  "status": "draft"
+}

@@ -1,0 +1,39 @@
+✔ valid unchanged dependency resolves only from its designated preservation inventory (2.449869ms)
+✔ valid changed-file record verifies both digest and byte length (0.476424ms)
+✔ missing dependency pin fails before any code bytes are requested (0.984499ms)
+✔ unavailable dependency is explicit failure, never success or fallback (0.475813ms)
+✔ changed current bytes fail full SHA-256 verification (0.530647ms)
+✔ stale authoritative file pin rejects current code even with authenticated manifest (0.38446ms)
+✔ stale inventory revision fails against frozen inventory digest (0.256807ms)
+✔ conflicting pins across inventories reject without preferring a matching hash (0.343802ms)
+✔ duplicate equal records across inventories remain ambiguous (0.36335ms)
+✔ duplicate literal JSON keys cannot be collapsed by parsing (0.402574ms)
+✔ duplicate escaped JSON keys cannot be collapsed by parsing (0.304177ms)
+✔ duplicate inventory declarations reject, including identical declarations (0.16847ms)
+✔ duplicate dependency assignments reject before any read (0.138874ms)
+✔ tampered manifest bytes reject even when JSON remains valid (0.141198ms)
+✔ missing manifest never falls back to the other inventory (0.250225ms)
+✔ right hash in wrong inventory is rejected rather than silently substituted (0.33734ms)
+✔ changed dependency cannot be resolved from preserved records despite correct hash (0.381023ms)
+✔ wrong declared source-to-manifest assignment rejects correct available bytes (0.271034ms)
+✔ changed record size mismatch fails separately from matching SHA (0.238603ms)
+✔ invalid preserved pin null rejects (0.209899ms)
+✔ invalid preserved pin {} rejects (0.149133ms)
+✔ invalid preserved pin "bad" rejects (0.243943ms)
+✔ invalid preserved pin "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" rejects (0.288227ms)
+✔ invalid changed-record shape rejects rather than guessing preserved format (0.213365ms)
+✔ wrong manifest schema version rejects even with its digest pinned in fixture policy (0.179461ms)
+✔ malformed or oversized manifests cannot reach dependency reads (1.867825ms)
+✔ no arbitrary manifest or dependency paths admitted by policy validation (0.626048ms)
+✔ dependency readers must provide actual bytes, never a claimed digest (0.394539ms)
+✔ positive/negative oracle passes real resolver and fails both accept-all and reject-all mutants (1.113623ms)
+✔ authentic preserved and changed inventories verify all four real dependencies (47.068743ms)
+✔ runner delegates the exact pin block without executing preflight, probe or source reads (4.499834ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 110.018016

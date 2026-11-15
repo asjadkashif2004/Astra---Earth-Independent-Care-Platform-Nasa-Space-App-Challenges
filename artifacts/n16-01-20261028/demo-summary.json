@@ -1,0 +1,38 @@
+{
+  "exit_code": 0,
+  "run_id": "9392250d-93a4-45d4-a871-0dd590190774",
+  "status": "COMPLETED",
+  "tools": [
+    {
+      "tool": "get_current_vitals",
+      "execution_status": "COMPLETED",
+      "data_status": "KNOWN",
+      "actual_file_reads": 1,
+      "duration_ms": 231.478205
+    },
+    {
+      "tool": "get_data_quality",
+      "execution_status": "COMPLETED",
+      "data_status": "KNOWN",
+      "actual_file_reads": 1,
+      "duration_ms": 188.2612610000001
+    },
+    {
+      "tool": "get_personal_baseline",
+      "execution_status": "COMPLETED",
+      "data_status": "KNOWN",
+      "actual_file_reads": 1,
+      "duration_ms": 173.63127099999986
+    },
+    {
+      "tool": "get_open_risk_events",
+      "execution_status": "COMPLETED",
+      "data_status": "UNKNOWN",
+      "actual_file_reads": 1,
+      "duration_ms": 181.2080759999999
+    }
+  ],
+  "heart_rate": 103,
+  "cold_recovery": "COMPLETE",
+  "replayed_calls": 0
+}

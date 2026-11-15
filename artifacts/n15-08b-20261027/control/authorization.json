@@ -1,0 +1,13 @@
+{
+  "task": "N15-08B",
+  "storage": 1500000000,
+  "stop_watermark": 1350000000,
+  "process_RSS": 2000000000,
+  "native_s_per_request": 120,
+  "requests": 2,
+  "CPU_only": true,
+  "network": 0,
+  "downloads": 0,
+  "scope": "Explicit safe VM dependency bindings and QA, conditional exact frozen N15-08 two-case diagnostic",
+  "protocol": "N15-06 execution mode/scratch retained; actual authority/resources are N15-08B only"
+}

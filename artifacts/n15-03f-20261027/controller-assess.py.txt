@@ -1,0 +1,59 @@
+"""Offline static interpretation only, after the single acquisition run stops."""
+from pathlib import Path
+import hashlib,json,re,subprocess
+ROOT=Path('/var/tmp/astra-n15-03f-bat9chx9')
+OUT=Path('/tmp/astra-n15-03f-assessment');OUT.mkdir(exist_ok=False)
+r=json.loads((ROOT/'report.json').read_text())
+assert r['status'] in ['PARTIAL','BLOCKED'] and r['native_commands']==0
+def save(n,x):(OUT/n).write_text(x if isinstance(x,str) else json.dumps(x,indent=2)+'\n')
+def symbols(p):
+ result=[]
+ for line in p.read_text().splitlines():
+  f=line.split()
+  if len(f)>=8 and f[0].endswith(':') and f[0][:-1].isdigit() and f[6]!='UND':result.append(f[7])
+ return result
+def match(required,definitions):
+ if '@' in required:return required.replace('@@','@') in {x.replace('@@','@') for x in definitions}
+ return required in definitions or any(x.startswith(required+'@@') for x in definitions)
+controls=[
+ ('foo',['foo'],True),
+ ('foo',['foo@@ZLIB_1.2.0'],True),
+ ('foo',['foo@ZLIB_1.2.0'],False),
+ ('foo@ZLIB_1.2.0',['foo@@ZLIB_1.2.0'],True),
+ ('foo@ZLIB_1.2.0',['foo@ZLIB_1.2.0'],True),
+ ('foo@ZLIB_1.2.0',['foo@@ZLIB_1.2.1'],False),
+ ('bar',['foo@@ZLIB_1.2.0'],False),
+ ('foo@ZLIB_1.2.0',['foo'],False)]
+assert all(match(a,b)==c for a,b,c in controls)
+result={'status':r['status'],'native_execution':False,'symbol_parser_controls':{'total':len(controls),'pass':len(controls)},'package':r.get('publisher'),'package_integrity':r.get('package_integrity'),'CVE_fix':r.get('approved_CVE_fix'),'ABI':r.get('ABI'),'isolated_use':r.get('isolated_fixed_library_use'),'remaining_runtime_gates':['Actual strict file-whitelist/private-network/CPU isolation not executed','Actual fixed-provider loader/maps evidence and native startup not executed','Other inherited exact-source security/NOTICE/optional-vendor gates remain open','No model/GGUF/inference qualification or approval']}
+if (ROOT/'static-dependency-closure.json').exists():
+ closure=json.loads((ROOT/'static-dependency-closure.json').read_text())
+ definitions=symbols(ROOT/'symbols-libz.so.1.stdout')
+ bindings=closure['zlib_bindings']
+ assert bindings and all(match(x['symbol'],definitions) for x in bindings)
+ result['strict_actual_zlib_binding_checks']={'total':len(bindings),'passed':len(bindings),'rules':'Unversioned requests require plain/default export; explicit versions require exact matching pair. No library loaded.'}
+ result['ABI']['fixed_provider_needed']=closure['records']['libz.so.1']['needed']
+ result['ABI']['fixed_provider_versions']=closure['records']['libz.so.1']['defined_versions']
+ save('strict-zlib-bindings.json',{'controls':controls,'bindings':bindings,'all_exact_or_default_matches':True})
+receipt=ROOT/'ubuntu-zlib-resolute-cves.json.receipt.json'
+result['other_security_receipt']=json.loads(receipt.read_text()) if receipt.exists() else None
+data=ROOT/'ubuntu-zlib-resolute-cves.json'
+if data.exists():
+ payload=json.loads(data.read_text());save('current-security-schema.json',{'top_keys':list(payload),'total_results':payload.get('total_results'),'first_case':payload.get('cves',[None])[0] if payload.get('cves') else None})
+ result['other_current_zlib_security']='Raw response preserved; manual applicability review required; no absence-based clearance.'
+else:result['other_current_zlib_security']=r.get('other_security',{'status':'UNVERIFIED'})
+samples=[json.loads(x) for x in (ROOT/'resources.jsonl').read_text().splitlines()]
+result['resources']=r['resources']|{'durable_periodic_rows':len(samples),'max_observed_gap_ms':max((b['elapsed_s']-a['elapsed_s'] for a,b in zip(samples,samples[1:])),default=0)*1000,'scope':'All fresh scratch, whole reused runtime and libgomp trees, whole reused N15-03E metadata tree, explicit control/helper/baseline files; symlink/root metadata included. Report delivery/this offline interpretation separate from measured supervisor interval.'}
+fmt='\t'.join(chr(36)+'{'+n+'}' for n in ['binary:Package','Version','source:Package','source:Version'])+'\n'
+host=subprocess.run(['dpkg-query','-W','-f='+fmt,'zlib1g','libc6','libssl3t64','libgcc-s1','libstdc++6','gcc-16-base','libzstd1'],text=True,capture_output=True,check=True).stdout
+assert host==Path('/tmp/astra-n15-03f-host-before.txt').read_text()
+save('host-packages-unchanged.txt',host)
+result['host_packages_unchanged']=True
+if 'staged_library' in r:
+ p=Path(r['staged_library']['real_path'])
+ assert hashlib.sha256(p.read_bytes()).hexdigest()==r['staged_library']['sha256']
+ result['staged_library']=r['staged_library']
+result['network']={'package_bytes':r['package_acquisition_bytes'],'response_body_bytes':r['network_body_bytes'],'request_elapsed_s':r['network_seconds'],'TLS_HTTP_overhead':'not measured','supervisor_elapsed_s':r['elapsed_s']}
+result['N15']=result['N16']='Not Started';result['runtime_or_model_execution_authorized']=False
+save('assessment.json',result)
+print(json.dumps({'status':result['status'],'ABI':result.get('ABI'),'strict_bindings':result.get('strict_actual_zlib_binding_checks'),'other_security':result['other_current_zlib_security'],'elapsed':r['elapsed_s'],'output':str(OUT)}))

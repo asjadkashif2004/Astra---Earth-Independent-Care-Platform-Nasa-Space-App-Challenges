@@ -1,0 +1,321 @@
+ELF Header:
+  Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF64
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              DYN (Shared object file)
+  Machine:                           Advanced Micro Devices X86-64
+  Version:                           0x1
+  Entry point address:               0x0
+  Start of program headers:          64 (bytes into file)
+  Start of section headers:          383160 (bytes into file)
+  Flags:                             0x0
+  Size of this header:               64 (bytes)
+  Size of program headers:           56 (bytes)
+  Number of program headers:         13
+  Size of section headers:           64 (bytes)
+  Number of section headers:         32
+  Section header string table index: 31
+
+Dynamic section at offset 0x5cd78 contains 28 entries:
+  Tag        Type                         Name/Value
+ 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]
+ 0x000000000000000e (SONAME)             Library soname: [libgomp.so.1]
+ 0x000000000000000c (INIT)               0xb000
+ 0x000000000000000d (FINI)               0x4c634
+ 0x0000000000000019 (INIT_ARRAY)         0x5d920
+ 0x000000000000001b (INIT_ARRAYSZ)       24 (bytes)
+ 0x000000000000001a (FINI_ARRAY)         0x5d938
+ 0x000000000000001c (FINI_ARRAYSZ)       32 (bytes)
+ 0x000000006ffffef5 (GNU_HASH)           0x340
+ 0x0000000000000005 (STRTAB)             0x5970
+ 0x0000000000000006 (SYMTAB)             0x1de8
+ 0x000000000000000a (STRSZ)              12508 (bytes)
+ 0x000000000000000b (SYMENT)             24 (bytes)
+ 0x0000000000000003 (PLTGOT)             0x5dfe8
+ 0x0000000000000002 (PLTRELSZ)           2880 (bytes)
+ 0x0000000000000014 (PLTREL)             RELA
+ 0x0000000000000017 (JMPREL)             0xa118
+ 0x0000000000000007 (RELA)               0x9590
+ 0x0000000000000008 (RELASZ)             2952 (bytes)
+ 0x0000000000000009 (RELAENT)            24 (bytes)
+ 0x000000006ffffffc (VERDEF)             0x8f48
+ 0x000000006ffffffd (VERDEFNUM)          41
+ 0x000000000000001e (FLAGS)              STATIC_TLS
+ 0x000000006ffffffe (VERNEED)            0x94e0
+ 0x000000006fffffff (VERNEEDNUM)         1
+ 0x000000006ffffff0 (VERSYM)             0x8a4c
+ 0x000000006ffffff9 (RELACOUNT)          110
+ 0x0000000000000000 (NULL)               0x0
+
+Version symbols section '.gnu.version' contains 635 entries:
+ Addr: 0x0000000000008a4c  Offset: 0x00008a4c  Link: 3 (.dynsym)
+  000:   0 (*local*)      2a (GLIBC_2.2.5)  2b (GLIBC_2.38)   2c (GLIBC_2.3.4)
+  004:  2d (GLIBC_2.34)   2a (GLIBC_2.2.5)  2a (GLIBC_2.2.5)  2c (GLIBC_2.3.4)
+  008:  2e (GLIBC_2.32)   2a (GLIBC_2.2.5)  2a (GLIBC_2.2.5)  2a (GLIBC_2.2.5)
+  00c:  2a (GLIBC_2.2.5)   0 (*local*)      2b (GLIBC_2.38)   2f (GLIBC_2.17) 
+  010:  2d (GLIBC_2.34)   2f (GLIBC_2.17)   2a (GLIBC_2.2.5)  2a (GLIBC_2.2.5)
+  014:  30 (GLIBC_2.6)    2a (GLIBC_2.2.5)  2a (GLIBC_2.2.5)  2a (GLIBC_2.2.5)
+  018:  31 (GLIBC_2.4)    2a (GLIBC_2.2.5)  2a (GLIBC_2.2.5)  2a (GLIBC_2.2.5)
+  01c:  2a (GLIBC_2.2.5)  2d (GLIBC_2.34)   2a (GLIBC_2.2.5)  2a (GLIBC_2.2.5)
+  020:  2d (GLIBC_2.34)   2a (GLIBC_2.2.5)  2a (GLIBC_2.2.5)  2a (GLIBC_2.2.5)
+  024:  2a (GLIBC_2.2.5)  2a (GLIBC_2.2.5)  2d (GLIBC_2.34)   2c (GLIBC_2.3.4)
+  028:  2a (GLIBC_2.2.5)   0 (*local*)      2a (GLIBC_2.2.5)  32 (GLIBC_2.14) 
+  02c:  2b (GLIBC_2.38)   2a (GLIBC_2.2.5)  2a (GLIBC_2.2.5)  2a (GLIBC_2.2.5)
+  030:  2a (GLIBC_2.2.5)  2d (GLIBC_2.34)   2f (GLIBC_2.17)   2a (GLIBC_2.2.5)
+  034:  2a (GLIBC_2.2.5)  2d (GLIBC_2.34)   2a (GLIBC_2.2.5)  2a (GLIBC_2.2.5)
+  038:  2a (GLIBC_2.2.5)  2a (GLIBC_2.2.5)  2d (GLIBC_2.34)   2a (GLIBC_2.2.5)
+  03c:  2a (GLIBC_2.2.5)  2a (GLIBC_2.2.5)  2c (GLIBC_2.3.4)  2a (GLIBC_2.2.5)
+  040:  2a (GLIBC_2.2.5)  2a (GLIBC_2.2.5)  2c (GLIBC_2.3.4)   0 (*local*)    
+  044:  2e (GLIBC_2.32)   2d (GLIBC_2.34)   2a (GLIBC_2.2.5)  2a (GLIBC_2.2.5)
+  048:  2d (GLIBC_2.34)   2d (GLIBC_2.34)   2a (GLIBC_2.2.5)  2d (GLIBC_2.34) 
+  04c:  2d (GLIBC_2.34)   33 (GLIBC_2.3)    33 (GLIBC_2.3)    2a (GLIBC_2.2.5)
+  050:  2c (GLIBC_2.3.4)  2d (GLIBC_2.34)    2 (OMP_1.0)      1d (OACC_2.0.1) 
+  054:   e (GOMP_1.0)      4 (OMP_3.0)      19 (GOMP_5.1.3)   1f (OACC_2.5.1) 
+  058:   e (GOMP_1.0)      e (GOMP_1.0)     13 (GOMP_4.5)      2 (OMP_1.0)    
+  05c:   7 (OMP_4.5)       9 (OMP_5.0.1)    13 (GOMP_4.5)      7 (OMP_4.5)    
+  060:  14 (GOMP_5.0)      7 (OMP_4.5)      22 (GOACC_2.0)     7 (OMP_4.5)    
+  064:  22 (GOACC_2.0)     6 (OMP_4.0)       c (OMP_5.1.1)    1c (OACC_2.0)   
+  068:   e (GOMP_1.0)     1e (OACC_2.5)     1c (OACC_2.0)      e (GOMP_1.0)   
+  06c:   9 (OMP_5.0.1)    13 (GOMP_4.5)      e (GOMP_1.0)     1c (OACC_2.0)   
+  070:  13 (GOMP_4.5)     1c (OACC_2.0)     1c (OACC_2.0)     1a (GOMP_6.0)   
+  074:  19 (GOMP_5.1.3)   1c (OACC_2.0)      e (GOMP_1.0)      2 (OMP_1.0)    
+  078:   4 (OMP_3.0)       2h(OMP_1.0)       7 (OMP_4.5)      21 (OACC_2.6.1) 
+  07c:  1c (OACC_2.0)      2 (OMP_1.0)       4 (OMP_3.0)       2h(OMP_1.0)    
+  080:   e (GOMP_1.0)      2 (OMP_1.0)      14 (GOMP_5.0)      4 (OMP_3.0)    
+  084:  11 (GOMP_4.0)     1c (OACC_2.0)      e (GOMP_1.0)      a (OMP_5.0.2)  
+  088:   4 (OMP_3.0)       7 (OMP_4.5)      1b (GOMP_6.0.1)   1c (OACC_2.0)   
+  08c:  1c (OACC_2.0)     28 (GOMP_PLUGIN_1.3)     7 (OMP_4.5)       9 (OMP_5.0.1)  
+  090:   2 (OMP_1.0)       7 (OMP_4.5)      1c (OACC_2.0)      f (GOMP_2.0)   
+  094:   9 (OMP_5.0.1)     e (GOMP_1.0)      b (OMP_5.1)       6 (OMP_4.0)    
+  098:  20 (OACC_2.6)     21 (OACC_2.6.1)   1e (OACC_2.5)      4 (OMP_3.0)    
+  09c:  1c (OACC_2.0)      2h(OMP_1.0)       9 (OMP_5.0.1)    13 (GOMP_4.5)   
+  0a0:   e (GOMP_1.0)      6 (OMP_4.0)       4 (OMP_3.0)       2h(OMP_1.0)    
+  0a4:  14 (GOMP_5.0)      9 (OMP_5.0.1)     8 (OMP_5.0)       2 (OMP_1.0)    
+  0a8:  20 (OACC_2.6)     12 (GOMP_4.0.1)   13 (GOMP_4.5)     16 (GOMP_5.1)   
+  0ac:   8 (OMP_5.0)       7 (OMP_4.5)      14 (GOMP_5.0)      e (GOMP_1.0)   
+  0b0:  25 (GOMP_PLUGIN_1.0)    1e (OACC_2.5)     14 (GOMP_5.0)     1c (OACC_2.0)   
+  0b4:   4 (OMP_3.0)      14 (GOMP_5.0)     1e (OACC_2.5)     1e (OACC_2.5)   
+  0b8:   b (OMP_5.1)      1c (OACC_2.0)      4 (OMP_3.0)      10 (GOMP_3.0)   
+  0bc:  1c (OACC_2.0)      7 (OMP_4.5)       5 (OMP_3.1)      21 (OACC_2.6.1) 
+  0c0:   4 (OMP_3.0)      1e (OACC_2.5)      8 (OMP_5.0)       b (OMP_5.1)    
+  0c4:   6 (OMP_4.0)       a (OMP_5.0.2)    28 (GOMP_PLUGIN_1.3)    1c (OACC_2.0)   
+  0c8:  21 (OACC_2.6.1)    f (GOMP_2.0)      8 (OMP_5.0)      1e (OACC_2.5)   
+  0cc:  11 (GOMP_4.0)     20 (OACC_2.6)     15 (GOMP_5.0.1)   1c (OACC_2.0)   
+  0d0:  14 (GOMP_5.0)      9 (OMP_5.0.1)    19 (GOMP_5.1.3)   14 (GOMP_5.0)   
+  0d4:   6 (OMP_4.0)       6 (OMP_4.0)       2 (OMP_1.0)       4 (OMP_3.0)    
+  0d8:  20 (OACC_2.6)     13 (GOMP_4.5)     1c (OACC_2.0)     18 (GOMP_5.1.2) 
+  0dc:   2 (OMP_1.0)       2 (OMP_1.0)      1e (OACC_2.5)     1c (OACC_2.0)   
+  0e0:  1c (OACC_2.0)     13 (GOMP_4.5)     1e (OACC_2.5)     13 (GOMP_4.5)   
+  0e4:  14 (GOMP_5.0)     11 (GOMP_4.0)      4 (OMP_3.0)       2h(OMP_1.0)    
+  0e8:  13 (GOMP_4.5)     1e (OACC_2.5)      e (GOMP_1.0)      e (GOMP_1.0)   
+  0ec:   4 (OMP_3.0)      19 (GOMP_5.1.3)   14 (GOMP_5.0)      4 (OMP_3.0)    
+  0f0:  1c (OACC_2.0)      4 (OMP_3.0)       2 (OMP_1.0)       a (OMP_5.0.2)  
+  0f4:  1e (OACC_2.5)      e (GOMP_1.0)     13 (GOMP_4.5)      7 (OMP_4.5)    
+  0f8:   f (GOMP_2.0)     1c (OACC_2.0)     1f (OACC_2.5.1)    8 (OMP_5.0)    
+  0fc:  1c (OACC_2.0)      6 (OMP_4.0)       2 (OMP_1.0)      1c (OACC_2.0)   
+  100:  24 (GOACC_2.0.2)  14 (GOMP_5.0)     16 (GOMP_5.1)      3 (OMP_2.0)    
+  104:  11 (GOMP_4.0)      f (GOMP_2.0)     1f (OACC_2.5.1)   13 (GOMP_4.5)   
+  108:  13 (GOMP_4.5)      4 (OMP_3.0)       e (GOMP_1.0)      2h(OMP_1.0)    
+  10c:  1e (OACC_2.5)     1c (OACC_2.0)      e (GOMP_1.0)     11 (GOMP_4.0)   
+  110:  1c (OACC_2.0)     1c (OACC_2.0)      4 (OMP_3.0)       2h(OMP_1.0)    
+  114:  1c (OACC_2.0)      2h(OMP_1.0)       4 (OMP_3.0)       9 (OMP_5.0.1)  
+  118:  11 (GOMP_4.0)     1c (OACC_2.0)      2 (OMP_1.0)       4 (OMP_3.0)    
+  11c:   e (GOMP_1.0)      f (GOMP_2.0)     1e (OACC_2.5)      b (OMP_5.1)    
+  120:  1f (OACC_2.5.1)   1c (OACC_2.0)      2h(OMP_1.0)       4 (OMP_3.0)    
+  124:  20 (OACC_2.6)     1c (OACC_2.0)      8 (OMP_5.0)       7 (OMP_4.5)    
+  128:  19 (GOMP_5.1.3)   29 (GOMP_PLUGIN_1.4)    14 (GOMP_5.0)     1c (OACC_2.0)   
+  12c:  1e (OACC_2.5)      3 (OMP_2.0)      1e (OACC_2.5)     1a (GOMP_6.0)   
+  130:  21 (OACC_2.6.1)    f (GOMP_2.0)     1e (OACC_2.5)     1c (OACC_2.0)   
+  134:   4 (OMP_3.0)      12 (GOMP_4.0.1)   1c (OACC_2.0)     1c (OACC_2.0)   
+  138:  14 (GOMP_5.0)      f (GOMP_2.0)     11 (GOMP_4.0)      3 (OMP_2.0)    
+  13c:  1c (OACC_2.0)      5 (OMP_3.1)      26 (GOMP_PLUGIN_1.1)    1c (OACC_2.0)   
+  140:  15 (GOMP_5.0.1)   11 (GOMP_4.0)      e (GOMP_1.0)      2 (OMP_1.0)    
+  144:   e (GOMP_1.0)     15 (GOMP_5.0.1)   14 (GOMP_5.0)     13 (GOMP_4.5)   
+  148:   4 (OMP_3.0)       5 (OMP_3.1)       4 (OMP_3.0)       2h(OMP_1.0)    
+  14c:  13 (GOMP_4.5)      9 (OMP_5.0.1)     7 (OMP_4.5)       e (GOMP_1.0)   
+  150:   e (GOMP_1.0)     25 (GOMP_PLUGIN_1.0)     8 (OMP_5.0)       2 (OMP_1.0)    
+  154:  16 (GOMP_5.1)     19 (GOMP_5.1.3)   13 (GOMP_4.5)     19 (GOMP_5.1.3) 
+  158:  1e (OACC_2.5)      9 (OMP_5.0.1)    1c (OACC_2.0)     25 (GOMP_PLUGIN_1.0)  
+  15c:   7 (OMP_4.5)      23 (GOACC_2.0.1)  24 (GOACC_2.0.2)   9 (OMP_5.0.1)  
+  160:   e (GOMP_1.0)     22 (GOACC_2.0)    25 (GOMP_PLUGIN_1.0)    26 (GOMP_PLUGIN_1.1)  
+  164:  27 (GOMP_PLUGIN_1.2)    28 (GOMP_PLUGIN_1.3)    29 (GOMP_PLUGIN_1.4)     e (GOMP_1.0)   
+  168:   4 (OMP_3.0)       2h(OMP_1.0)       a (OMP_5.0.2)    1c (OACC_2.0)   
+  16c:   6 (OMP_4.0)      22 (GOACC_2.0)    17 (GOMP_5.1.1)   17 (GOMP_5.1.1) 
+  170:  18 (GOMP_5.1.2)   19 (GOMP_5.1.3)    d (OMP_5.2)       4 (OMP_3.0)    
+  174:   4 (OMP_3.0)      20 (OACC_2.6)     1a (GOMP_6.0)      6 (OMP_4.0)    
+  178:   e (GOMP_1.0)      4 (OMP_3.0)      1c (OACC_2.0)      6 (OMP_4.0)    
+  17c:   f (GOMP_2.0)      9 (OMP_5.0.1)     7 (OMP_4.5)       2h(OMP_1.0)    
+  180:   4 (OMP_3.0)      22 (GOACC_2.0)    1c (OACC_2.0)     11 (GOMP_4.0)   
+  184:  14 (GOMP_5.0)      4 (OMP_3.0)       2h(OMP_1.0)       4 (OMP_3.0)    
+  188:   8 (OMP_5.0)      1c (OACC_2.0)     1e (OACC_2.5)      c (OMP_5.1.1)  
+  18c:  1e (OACC_2.5)     1c (OACC_2.0)     1c (OACC_2.0)      e (GOMP_1.0)   
+  190:   4 (OMP_3.0)       f (GOMP_2.0)     1e (OACC_2.5)      6 (OMP_4.0)    
+  194:   8 (OMP_5.0)      1c (OACC_2.0)     20 (OACC_2.6)     1e (OACC_2.5)   
+  198:   e (GOMP_1.0)      4 (OMP_3.0)       8 (OMP_5.0)      1e (OACC_2.5)   
+  19c:   b (OMP_5.1)       d (OMP_5.2)       f (GOMP_2.0)      6 (OMP_4.0)    
+  1a0:  14 (GOMP_5.0)      e (GOMP_1.0)      2 (OMP_1.0)       f (GOMP_2.0)   
+  1a4:   7 (OMP_4.5)      1a (GOMP_6.0)     1e (OACC_2.5)     19 (GOMP_5.1.3) 
+  1a8:  13 (GOMP_4.5)     21 (OACC_2.6.1)   1c (OACC_2.0)     16 (GOMP_5.1)   
+  1ac:  11 (GOMP_4.0)      6 (OMP_4.0)      13 (GOMP_4.5)     21 (OACC_2.6.1) 
+  1b0:  13 (GOMP_4.5)      7 (OMP_4.5)      1e (OACC_2.5)     1c (OACC_2.0)   
+  1b4:   4 (OMP_3.0)      1c (OACC_2.0)     14 (GOMP_5.0)     1d (OACC_2.0.1) 
+  1b8:   f (GOMP_2.0)     23 (GOACC_2.0.1)  1e (OACC_2.5)     1c (OACC_2.0)   
+  1bc:   4 (OMP_3.0)       2h(OMP_1.0)      1a (GOMP_6.0)     25 (GOMP_PLUGIN_1.0)  
+  1c0:  14 (GOMP_5.0)      7 (OMP_4.5)      14 (GOMP_5.0)      d (OMP_5.2)    
+  1c4:   2 (OMP_1.0)       4 (OMP_3.0)      1c (OACC_2.0)     21 (OACC_2.6.1) 
+  1c8:  1c (OACC_2.0)     1c (OACC_2.0)     13 (GOMP_4.5)      8 (OMP_5.0)    
+  1cc:  1c (OACC_2.0)      4 (OMP_3.0)       2h(OMP_1.0)       4 (OMP_3.0)    
+  1d0:   2h(OMP_1.0)       7 (OMP_4.5)      18 (GOMP_5.1.2)   1c (OACC_2.0)   
+  1d4:  22 (GOACC_2.0)     6 (OMP_4.0)       b (OMP_5.1)      19 (GOMP_5.1.3) 
+  1d8:  1c (OACC_2.0)      e (GOMP_1.0)      2 (OMP_1.0)       f (GOMP_2.0)   
+  1dc:   b (OMP_5.1)      20 (OACC_2.6)      f (GOMP_2.0)     11 (GOMP_4.0)   
+  1e0:   7 (OMP_4.5)       e (GOMP_1.0)      7 (OMP_4.5)      1c (OACC_2.0)   
+  1e4:  14 (GOMP_5.0)     1e (OACC_2.5)     1c (OACC_2.0)     13 (GOMP_4.5)   
+  1e8:  1e (OACC_2.5)      2h(OMP_1.0)       4 (OMP_3.0)      1e (OACC_2.5)   
+  1ec:  23 (GOACC_2.0.1)  1e (OACC_2.5)     11 (GOMP_4.0)     1a (GOMP_6.0)   
+  1f0:   b (OMP_5.1)      1e (OACC_2.5)     1d (OACC_2.0.1)   13 (GOMP_4.5)   
+  1f4:  1c (OACC_2.0)      e (GOMP_1.0)      3 (OMP_2.0)       9 (OMP_5.0.1)  
+  1f8:  11 (GOMP_4.0)      b (OMP_5.1)       8 (OMP_5.0)       2 (OMP_1.0)    
+  1fc:  1c (OACC_2.0)     20 (OACC_2.6)     14 (GOMP_5.0)     22 (GOACC_2.0)  
+  200:  18 (GOMP_5.1.2)   1c (OACC_2.0)     13 (GOMP_4.5)      2 (OMP_1.0)    
+  204:   f (GOMP_2.0)     1c (OACC_2.0)      8 (OMP_5.0)      1c (OACC_2.0)   
+  208:  1c (OACC_2.0)     12 (GOMP_4.0.1)   20 (OACC_2.6)     1c (OACC_2.0)   
+  20c:   f (GOMP_2.0)     19 (GOMP_5.1.3)   1c (OACC_2.0)     1c (OACC_2.0)   
+  210:  13 (GOMP_4.5)     1c (OACC_2.0)     11 (GOMP_4.0)      e (GOMP_1.0)   
+  214:   6 (OMP_4.0)      1f (OACC_2.5.1)    6 (OMP_4.0)      1b (GOMP_6.0.1) 
+  218:   e (GOMP_1.0)     1c (OACC_2.0)      4 (OMP_3.0)       b (OMP_5.1)    
+  21c:  14 (GOMP_5.0)     21 (OACC_2.6.1)    b (OMP_5.1)       7 (OMP_4.5)    
+  220:  1d (OACC_2.0.1)   13 (GOMP_4.5)     1c (OACC_2.0)     27 (GOMP_PLUGIN_1.2)  
+  224:   f (GOMP_2.0)      2h(OMP_1.0)       4 (OMP_3.0)       e (GOMP_1.0)   
+  228:  11 (GOMP_4.0)      2 (OMP_1.0)      13 (GOMP_4.5)      2 (OMP_1.0)    
+  22c:  24 (GOACC_2.0.2)  1e (OACC_2.5)     1b (GOMP_6.0.1)   10 (GOMP_3.0)   
+  230:  1c (OACC_2.0)      c (OMP_5.1.1)     6 (OMP_4.0)       e (GOMP_1.0)   
+  234:  22 (GOACC_2.0)     b (OMP_5.1)       3 (OMP_2.0)      11 (GOMP_4.0)   
+  238:   e (GOMP_1.0)      b (OMP_5.1)      1c (OACC_2.0)      9 (OMP_5.0.1)  
+  23c:  25 (GOMP_PLUGIN_1.0)    13 (GOMP_4.5)     25 (GOMP_PLUGIN_1.0)    14 (GOMP_5.0)   
+  240:  14 (GOMP_5.0)     25 (GOMP_PLUGIN_1.0)    13 (GOMP_4.5)     19 (GOMP_5.1.3) 
+  244:   7 (OMP_4.5)       f (GOMP_2.0)     20 (OACC_2.6)      7 (OMP_4.5)    
+  248:  25 (GOMP_PLUGIN_1.0)    13 (GOMP_4.5)      9 (OMP_5.0.1)     a (OMP_5.0.2)  
+  24c:  1e (OACC_2.5)     1e (OACC_2.5)      e (GOMP_1.0)      7 (OMP_4.5)    
+  250:   e (GOMP_1.0)     13 (GOMP_4.5)      2 (OMP_1.0)       7 (OMP_4.5)    
+  254:   f (GOMP_2.0)     1c (OACC_2.0)      a (OMP_5.0.2)    1c (OACC_2.0)   
+  258:   4 (OMP_3.0)       2h(OMP_1.0)      1c (OACC_2.0)      9 (OMP_5.0.1)  
+  25c:  14 (GOMP_5.0)      e (GOMP_1.0)     22 (GOACC_2.0)     2h(OMP_1.0)    
+  260:  11 (GOMP_4.0)     19 (GOMP_5.1.3)    4 (OMP_3.0)      11 (GOMP_4.0)   
+  264:  13 (GOMP_4.5)     16 (GOMP_5.1)      7 (OMP_4.5)       4 (OMP_3.0)    
+  268:  1e (OACC_2.5)      2 (OMP_1.0)      11 (GOMP_4.0)     1d (OACC_2.0.1) 
+  26c:  1e (OACC_2.5)      4 (OMP_3.0)       e (GOMP_1.0)     1c (OACC_2.0)   
+  270:   6 (OMP_4.0)      1e (OACC_2.5)     1c (OACC_2.0)     1e (OACC_2.5)   
+  274:   c (OMP_5.1.1)     e (GOMP_1.0)      a (OMP_5.0.2)     e (GOMP_1.0)   
+  278:  1c (OACC_2.0)      c (OMP_5.1.1)     b (OMP_5.1)    
+
+Version definition section '.gnu.version_d' contains 41 entries:
+ Addr: 0x0000000000008f48  Offset: 0x00008f48  Link: 4 (.dynstr)
+  000000: Rev: 1  Flags: BASE  Index: 1  Cnt: 1  Name: libgomp.so.1
+  0x001c: Rev: 1  Flags: none  Index: 2  Cnt: 1  Name: OMP_1.0
+  0x0038: Rev: 1  Flags: none  Index: 3  Cnt: 2  Name: OMP_2.0
+  0x0054: Parent 1: OMP_1.0
+  0x005c: Rev: 1  Flags: none  Index: 4  Cnt: 2  Name: OMP_3.0
+  0x0078: Parent 1: OMP_2.0
+  0x0080: Rev: 1  Flags: none  Index: 5  Cnt: 2  Name: OMP_3.1
+  0x009c: Parent 1: OMP_3.0
+  0x00a4: Rev: 1  Flags: none  Index: 6  Cnt: 2  Name: OMP_4.0
+  0x00c0: Parent 1: OMP_3.1
+  0x00c8: Rev: 1  Flags: none  Index: 7  Cnt: 2  Name: OMP_4.5
+  0x00e4: Parent 1: OMP_4.0
+  0x00ec: Rev: 1  Flags: none  Index: 8  Cnt: 2  Name: OMP_5.0
+  0x0108: Parent 1: OMP_4.5
+  0x0110: Rev: 1  Flags: none  Index: 9  Cnt: 2  Name: OMP_5.0.1
+  0x012c: Parent 1: OMP_5.0
+  0x0134: Rev: 1  Flags: none  Index: 10  Cnt: 2  Name: OMP_5.0.2
+  0x0150: Parent 1: OMP_5.0.1
+  0x0158: Rev: 1  Flags: none  Index: 11  Cnt: 2  Name: OMP_5.1
+  0x0174: Parent 1: OMP_5.0.2
+  0x017c: Rev: 1  Flags: none  Index: 12  Cnt: 2  Name: OMP_5.1.1
+  0x0198: Parent 1: OMP_5.1
+  0x01a0: Rev: 1  Flags: none  Index: 13  Cnt: 2  Name: OMP_5.2
+  0x01bc: Parent 1: OMP_5.1.1
+  0x01c4: Rev: 1  Flags: none  Index: 14  Cnt: 1  Name: GOMP_1.0
+  0x01e0: Rev: 1  Flags: none  Index: 15  Cnt: 2  Name: GOMP_2.0
+  0x01fc: Parent 1: GOMP_1.0
+  0x0204: Rev: 1  Flags: none  Index: 16  Cnt: 2  Name: GOMP_3.0
+  0x0220: Parent 1: GOMP_2.0
+  0x0228: Rev: 1  Flags: none  Index: 17  Cnt: 2  Name: GOMP_4.0
+  0x0244: Parent 1: GOMP_3.0
+  0x024c: Rev: 1  Flags: none  Index: 18  Cnt: 2  Name: GOMP_4.0.1
+  0x0268: Parent 1: GOMP_4.0
+  0x0270: Rev: 1  Flags: none  Index: 19  Cnt: 2  Name: GOMP_4.5
+  0x028c: Parent 1: GOMP_4.0.1
+  0x0294: Rev: 1  Flags: none  Index: 20  Cnt: 2  Name: GOMP_5.0
+  0x02b0: Parent 1: GOMP_4.5
+  0x02b8: Rev: 1  Flags: none  Index: 21  Cnt: 2  Name: GOMP_5.0.1
+  0x02d4: Parent 1: GOMP_5.0
+  0x02dc: Rev: 1  Flags: none  Index: 22  Cnt: 2  Name: GOMP_5.1
+  0x02f8: Parent 1: GOMP_5.0.1
+  0x0300: Rev: 1  Flags: none  Index: 23  Cnt: 2  Name: GOMP_5.1.1
+  0x031c: Parent 1: GOMP_5.1
+  0x0324: Rev: 1  Flags: none  Index: 24  Cnt: 2  Name: GOMP_5.1.2
+  0x0340: Parent 1: GOMP_5.1.1
+  0x0348: Rev: 1  Flags: none  Index: 25  Cnt: 2  Name: GOMP_5.1.3
+  0x0364: Parent 1: GOMP_5.1.2
+  0x036c: Rev: 1  Flags: none  Index: 26  Cnt: 2  Name: GOMP_6.0
+  0x0388: Parent 1: GOMP_5.1.3
+  0x0390: Rev: 1  Flags: none  Index: 27  Cnt: 2  Name: GOMP_6.0.1
+  0x03ac: Parent 1: GOMP_6.0
+  0x03b4: Rev: 1  Flags: none  Index: 28  Cnt: 1  Name: OACC_2.0
+  0x03d0: Rev: 1  Flags: none  Index: 29  Cnt: 2  Name: OACC_2.0.1
+  0x03ec: Parent 1: OACC_2.0
+  0x03f4: Rev: 1  Flags: none  Index: 30  Cnt: 2  Name: OACC_2.5
+  0x0410: Parent 1: OACC_2.0.1
+  0x0418: Rev: 1  Flags: none  Index: 31  Cnt: 2  Name: OACC_2.5.1
+  0x0434: Parent 1: OACC_2.5
+  0x043c: Rev: 1  Flags: none  Index: 32  Cnt: 2  Name: OACC_2.6
+  0x0458: Parent 1: OACC_2.5.1
+  0x0460: Rev: 1  Flags: none  Index: 33  Cnt: 2  Name: OACC_2.6.1
+  0x047c: Parent 1: OACC_2.6
+  0x0484: Rev: 1  Flags: none  Index: 34  Cnt: 1  Name: GOACC_2.0
+  0x04a0: Rev: 1  Flags: none  Index: 35  Cnt: 2  Name: GOACC_2.0.1
+  0x04bc: Parent 1: GOACC_2.0
+  0x04c4: Rev: 1  Flags: none  Index: 36  Cnt: 2  Name: GOACC_2.0.2
+  0x04e0: Parent 1: GOACC_2.0.1
+  0x04e8: Rev: 1  Flags: none  Index: 37  Cnt: 1  Name: GOMP_PLUGIN_1.0
+  0x0504: Rev: 1  Flags: none  Index: 38  Cnt: 2  Name: GOMP_PLUGIN_1.1
+  0x0520: Parent 1: GOMP_PLUGIN_1.0
+  0x0528: Rev: 1  Flags: none  Index: 39  Cnt: 2  Name: GOMP_PLUGIN_1.2
+  0x0544: Parent 1: GOMP_PLUGIN_1.1
+  0x054c: Rev: 1  Flags: none  Index: 40  Cnt: 2  Name: GOMP_PLUGIN_1.3
+  0x0568: Parent 1: GOMP_PLUGIN_1.2
+  0x0570: Rev: 1  Flags: none  Index: 41  Cnt: 2  Name: GOMP_PLUGIN_1.4
+  0x058c: Parent 1: GOMP_PLUGIN_1.3
+
+Version needs section '.gnu.version_r' contains 1 entry:
+ Addr: 0x00000000000094e0  Offset: 0x000094e0  Link: 4 (.dynstr)
+  000000: Version: 1  File: libc.so.6  Cnt: 10
+  0x0010:   Name: GLIBC_2.3  Flags: none  Version: 51
+  0x0020:   Name: GLIBC_2.14  Flags: none  Version: 50
+  0x0030:   Name: GLIBC_2.4  Flags: none  Version: 49
+  0x0040:   Name: GLIBC_2.6  Flags: none  Version: 48
+  0x0050:   Name: GLIBC_2.17  Flags: none  Version: 47
+  0x0060:   Name: GLIBC_2.32  Flags: none  Version: 46
+  0x0070:   Name: GLIBC_2.34  Flags: none  Version: 45
+  0x0080:   Name: GLIBC_2.3.4  Flags: none  Version: 44
+  0x0090:   Name: GLIBC_2.38  Flags: none  Version: 43
+  0x00a0:   Name: GLIBC_2.2.5  Flags: none  Version: 42
+
+Displaying notes found in: .note.gnu.build-id
+  Owner                Data size 	Description
+  GNU                  0x00000014	NT_GNU_BUILD_ID (unique build ID bitstring)
+    Build ID: 2cc7443742f4addce7754a3559f228a07b467315
+
+Displaying notes found in: .note.gnu.property
+  Owner                Data size 	Description
+  GNU                  0x00000010	NT_GNU_PROPERTY_TYPE_0
+      Properties: x86 feature: IBT, SHSTK
+
+Displaying notes found in: .note.package
+  Owner                Data size 	Description
+  FDO                  0x00000068	FDO_PACKAGING_METADATA
+    Packaging Metadata: {"type":"deb","os":"ubuntu","name":"gcc-16","version":"16-20260322-1ubuntu1","architecture":"amd64"}

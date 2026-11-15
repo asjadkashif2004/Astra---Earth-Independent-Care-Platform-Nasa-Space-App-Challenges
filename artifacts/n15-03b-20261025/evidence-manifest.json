@@ -1,0 +1,90 @@
+{
+  "archive-reverification.json": {
+    "bytes": 7900,
+    "sha256": "436aac658cdd418396f379177ba8a95d4035f0e090e1d4e3db9f7627971f9cc9"
+  },
+  "dependency-results.json": {
+    "bytes": 2132,
+    "sha256": "68cce9583c4e36d3b5c45bddd8faa556622fcbbec344e6825a63ab8ba3cd1f1c"
+  },
+  "elf-libggml-base.so.0.stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "elf-libggml-base.so.0.stdout": {
+    "bytes": 23572,
+    "sha256": "e061b40d43d6bbb799e0111c0fd20864a57fc893c7e83354f1bba77f305764b5"
+  },
+  "elf-libllama-completion-impl.so.stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "elf-libllama-completion-impl.so.stdout": {
+    "bytes": 10277,
+    "sha256": "54f95c5fd242b9beecd5b9056d721680ad3ce8a35c4adc901a0d5aa88188d79a"
+  },
+  "elf-llama-completion.stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "elf-llama-completion.stdout": {
+    "bytes": 6403,
+    "sha256": "4d2a9c9104ae6ba64ef206384fea83aee6dac011aba16dbe8b9cc0bd6a262cf7"
+  },
+  "events.jsonl": {
+    "bytes": 2797,
+    "sha256": "cb255e707191d0a12379e60c2d5b96eb81871868d0da7e267ee6e1dc88ff0c81"
+  },
+  "focused-tests.txt": {
+    "bytes": 4952,
+    "sha256": "95ac5ccd28c63cffe34e0c92a5898b2c89bb033b6f933985f8bbbab407c1d06b"
+  },
+  "host-library-cache.stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "host-library-cache.stdout": {
+    "bytes": 22480,
+    "sha256": "c6405de29aa9a5cb69ea911fc0abd1db084ecf7aa5d4ceadf6e831652cd29d57"
+  },
+  "isolation-preflight.stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "isolation-preflight.stdout": {
+    "bytes": 165,
+    "sha256": "22b08aa9e3d3ddcb2fa6f9f28cb28e1def1e34a5c44bc70eb8ddeaa4d7202b6a"
+  },
+  "offline-supervisor-source.txt": {
+    "bytes": 12848,
+    "sha256": "bff837999655194307d75496445338b52632cb396d30eb2cdf1aa5e817f2e0d3"
+  },
+  "private-canary": {
+    "bytes": 23,
+    "sha256": "e404a5463836fe7b125c22760ed7144b8cbf3e4528dc5f91854135b0321c1ec0"
+  },
+  "report.json": {
+    "bytes": 4226,
+    "sha256": "98ef6ea72f1d774707e467e6be6b9f836e33fa33a96f0f5afef521895b72d369"
+  },
+  "resource-summary.json": {
+    "bytes": 279,
+    "sha256": "ff2426ff896229c4f8a893a94dcf2a459782f7505d14debb35efee5079958500"
+  },
+  "resources-latest.json": {
+    "bytes": 231,
+    "sha256": "497912fa7dd9f9179714d2e4d2ea4f0df16c47cb556d3550f51b1c989b5f89ca"
+  },
+  "resources.jsonl": {
+    "bytes": 1408,
+    "sha256": "ba6310c31c6492535e27141be4946aa3e2980553b987b657456bba53f1865c16"
+  },
+  "scratch-mount.stderr": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "scratch-mount.stdout": {
+    "bytes": 65,
+    "sha256": "5d5520225967e061b0acdc8e7d36363a3582cd3d22a20b738a6f4707269a2e05"
+  }
+}

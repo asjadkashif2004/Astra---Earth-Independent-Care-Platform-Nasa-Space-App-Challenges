@@ -1,0 +1,669 @@
+{
+  "status": "failed",
+  "started_at": "2026-11-04T17:46:29.384Z",
+  "checks": [
+    {
+      "name": "N03 landing native zoom, responsive entry and accessible identity controls",
+      "status": "passed"
+    },
+    {
+      "name": "N03 six canonical profiles, real measurements, source history and invalid crew isolation",
+      "status": "passed"
+    },
+    {
+      "name": "research citations, abstention, pending response and unavailable recovery",
+      "status": "passed"
+    },
+    {
+      "name": "scenario controls propagate exercise, missing and suspect quality without false Green",
+      "status": "passed"
+    },
+    {
+      "name": "actual replay slider follows stored observation times and independent evidence panels fail honestly",
+      "status": "passed"
+    },
+    {
+      "name": "N03 monitoring unavailable, offline transport and recovery preserve UNKNOWN",
+      "status": "passed"
+    },
+    {
+      "name": "N03 connected domain views preserve research and inactive integration boundaries",
+      "status": "failed",
+      "reason": "no such table: n11_experiments"
+    }
+  ],
+  "screenshots": [
+    "research-unavailable.png",
+    "sensor-dropout.png",
+    "contradictory-sensors.png",
+    "independent-provenance-failures.png",
+    "failure-7.png"
+  ],
+  "console_errors": [],
+  "http_errors": [
+    {
+      "url": "http://127.0.0.1:49220/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    },
+    {
+      "url": "http://127.0.0.1:49220/v1/crew/CREW-99/telemetry",
+      "status": 404,
+      "stage": "N03 six canonical profiles, real measurements, source history and invalid crew isolation"
+    },
+    {
+      "url": "http://127.0.0.1:49220/v1/rag/query",
+      "status": 503,
+      "stage": "research citations, abstention, pending response and unavailable recovery"
+    },
+    {
+      "url": "http://127.0.0.1:49220/v1/models",
+      "status": 503,
+      "stage": "actual replay slider follows stored observation times and independent evidence panels fail honestly"
+    },
+    {
+      "url": "http://127.0.0.1:49220/v1/audit",
+      "status": 403,
+      "stage": "actual replay slider follows stored observation times and independent evidence panels fail honestly"
+    },
+    {
+      "url": "http://127.0.0.1:49220/v1/health",
+      "status": 503,
+      "stage": "N03 monitoring unavailable, offline transport and recovery preserve UNKNOWN"
+    }
+  ],
+  "viewports": [],
+  "caveats": [
+    "No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation.",
+    "Pointer/keyboard/rendered DOM checks and screenshots supplement human visual, text-contrast and assistive-technology review; they do not establish WCAG conformance."
+  ],
+  "native_zoom_preferences": {
+    "factor": 1,
+    "partition_key": "x",
+    "level": 0,
+    "disposable_profile": true
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/156.0.8078.80",
+    "revision": "@fb096c0011f9d50f0a264a9376420cdea9c421e3",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "jsVersion": "15.6.75.27"
+  },
+  "scope": "N03 fresh connected frontend qualification; local fictional database, no N11/N12 model starts, no N14/N15 application activation, no sealed source",
+  "N03_audits": [
+    {
+      "page": "landing",
+      "physical_width": 1920,
+      "physical_height": 1080,
+      "native_zoom": 1,
+      "layout": {
+        "width": 1920,
+        "height": 1080,
+        "dpr": 1,
+        "visual_scale": 1,
+        "css_zoom": "1",
+        "document_width": 1920,
+        "overflow": false,
+        "positive_tabindex": 0
+      },
+      "axe": {
+        "version": "4.11.1",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": [
+              {
+                "target": [
+                  ".brand-name"
+                ]
+              },
+              {
+                "target": [
+                  ".brand-sub"
+                ]
+              },
+              {
+                "target": [
+                  ".eyebrow"
+                ]
+              },
+              {
+                "target": [
+                  "h1"
+                ]
+              },
+              {
+                "target": [
+                  "h1 > span"
+                ]
+              },
+              {
+                "target": [
+                  ".login-story > p"
+                ]
+              },
+              {
+                "target": [
+                  ".landing-coordinate > p"
+                ]
+              },
+              {
+                "target": [
+                  "p > small"
+                ]
+              },
+              {
+                "target": [
+                  "summary"
+                ]
+              },
+              {
+                "target": [
+                  ".entry-index > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  ".entry-index > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "h2"
+                ]
+              },
+              {
+                "target": [
+                  "p:nth-child(4)"
+                ]
+              },
+              {
+                "target": [
+                  ".entry-capabilities > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "span:nth-child(1) > small"
+                ]
+              },
+              {
+                "target": [
+                  ".entry-capabilities > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "span:nth-child(2) > small"
+                ]
+              },
+              {
+                "target": [
+                  "label"
+                ]
+              },
+              {
+                "target": [
+                  ".login-note:nth-child(8)"
+                ]
+              }
+            ]
+          }
+        ],
+        "passes": 41
+      },
+      "unnamed": []
+    },
+    {
+      "page": "landing",
+      "physical_width": 1366,
+      "physical_height": 768,
+      "native_zoom": 1,
+      "layout": {
+        "width": 1366,
+        "height": 768,
+        "dpr": 1,
+        "visual_scale": 1,
+        "css_zoom": "1",
+        "document_width": 1351,
+        "overflow": false,
+        "positive_tabindex": 0
+      },
+      "axe": {
+        "version": "4.11.1",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": [
+              {
+                "target": [
+                  ".brand-name"
+                ]
+              },
+              {
+                "target": [
+                  ".brand-sub"
+                ]
+              },
+              {
+                "target": [
+                  ".eyebrow"
+                ]
+              },
+              {
+                "target": [
+                  "h1"
+                ]
+              },
+              {
+                "target": [
+                  "h1 > span"
+                ]
+              },
+              {
+                "target": [
+                  ".login-story > p"
+                ]
+              },
+              {
+                "target": [
+                  ".landing-coordinate > p"
+                ]
+              },
+              {
+                "target": [
+                  "p > small"
+                ]
+              },
+              {
+                "target": [
+                  "summary"
+                ]
+              },
+              {
+                "target": [
+                  ".entry-index > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  ".entry-index > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "h2"
+                ]
+              },
+              {
+                "target": [
+                  "p:nth-child(4)"
+                ]
+              },
+              {
+                "target": [
+                  ".entry-capabilities > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "span:nth-child(1) > small"
+                ]
+              },
+              {
+                "target": [
+                  ".entry-capabilities > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "span:nth-child(2) > small"
+                ]
+              },
+              {
+                "target": [
+                  "label"
+                ]
+              },
+              {
+                "target": [
+                  ".login-note:nth-child(8)"
+                ]
+              }
+            ]
+          }
+        ],
+        "passes": 41
+      },
+      "unnamed": []
+    },
+    {
+      "page": "landing",
+      "physical_width": 768,
+      "physical_height": 1024,
+      "native_zoom": 1,
+      "layout": {
+        "width": 768,
+        "height": 1024,
+        "dpr": 1,
+        "visual_scale": 1,
+        "css_zoom": "1",
+        "document_width": 768,
+        "overflow": false,
+        "positive_tabindex": 0
+      },
+      "axe": {
+        "version": "4.11.1",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": [
+              {
+                "target": [
+                  ".eyebrow"
+                ]
+              },
+              {
+                "target": [
+                  "h1"
+                ]
+              },
+              {
+                "target": [
+                  "h1 > span"
+                ]
+              },
+              {
+                "target": [
+                  ".login-story > p"
+                ]
+              },
+              {
+                "target": [
+                  ".landing-coordinate > p"
+                ]
+              },
+              {
+                "target": [
+                  "p > small"
+                ]
+              },
+              {
+                "target": [
+                  "summary"
+                ]
+              },
+              {
+                "target": [
+                  ".entry-index > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  ".entry-index > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "h2"
+                ]
+              },
+              {
+                "target": [
+                  "p:nth-child(4)"
+                ]
+              },
+              {
+                "target": [
+                  ".entry-capabilities > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "span:nth-child(1) > small"
+                ]
+              },
+              {
+                "target": [
+                  ".entry-capabilities > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "span:nth-child(2) > small"
+                ]
+              },
+              {
+                "target": [
+                  "label"
+                ]
+              },
+              {
+                "target": [
+                  ".login-note:nth-child(8)"
+                ]
+              }
+            ]
+          }
+        ],
+        "passes": 41
+      },
+      "unnamed": []
+    },
+    {
+      "page": "landing",
+      "physical_width": 390,
+      "physical_height": 844,
+      "native_zoom": 1,
+      "layout": {
+        "width": 390,
+        "height": 844,
+        "dpr": 1,
+        "visual_scale": 1,
+        "css_zoom": "1",
+        "document_width": 375,
+        "overflow": false,
+        "positive_tabindex": 0
+      },
+      "axe": {
+        "version": "4.11.1",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": [
+              {
+                "target": [
+                  ".brand-name"
+                ]
+              },
+              {
+                "target": [
+                  ".brand-sub"
+                ]
+              },
+              {
+                "target": [
+                  ".eyebrow"
+                ]
+              },
+              {
+                "target": [
+                  "h1"
+                ]
+              },
+              {
+                "target": [
+                  "h1 > span"
+                ]
+              },
+              {
+                "target": [
+                  ".login-story > p"
+                ]
+              },
+              {
+                "target": [
+                  ".landing-coordinate > p"
+                ]
+              },
+              {
+                "target": [
+                  "p > small"
+                ]
+              },
+              {
+                "target": [
+                  "summary"
+                ]
+              },
+              {
+                "target": [
+                  ".entry-index > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  ".entry-index > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "h2"
+                ]
+              },
+              {
+                "target": [
+                  "p:nth-child(4)"
+                ]
+              },
+              {
+                "target": [
+                  ".entry-capabilities > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "span:nth-child(1) > small"
+                ]
+              },
+              {
+                "target": [
+                  ".entry-capabilities > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "span:nth-child(2) > small"
+                ]
+              },
+              {
+                "target": [
+                  "label"
+                ]
+              },
+              {
+                "target": [
+                  ".login-note:nth-child(8)"
+                ]
+              }
+            ]
+          }
+        ],
+        "passes": 41
+      },
+      "unnamed": []
+    }
+  ],
+  "N03_profiles": [
+    {
+      "crew": "CREW-01",
+      "heart_rate": 65.26,
+      "source": {
+        "kind": "simulator",
+        "device_id": "SIM-CREW-01",
+        "sampling_hz": 0.03333333333333333,
+        "runtime_hz": 1,
+        "clock": "mission_simulation"
+      }
+    },
+    {
+      "crew": "CREW-02",
+      "heart_rate": 68.5,
+      "source": {
+        "kind": "simulator",
+        "device_id": "SIM-CREW-02",
+        "sampling_hz": 0.03333333333333333,
+        "runtime_hz": 1,
+        "clock": "mission_simulation"
+      }
+    },
+    {
+      "crew": "CREW-03",
+      "heart_rate": 67.6,
+      "source": {
+        "kind": "simulator",
+        "device_id": "SIM-CREW-03",
+        "sampling_hz": 0.03333333333333333,
+        "runtime_hz": 1,
+        "clock": "mission_simulation"
+      }
+    },
+    {
+      "crew": "CREW-04",
+      "heart_rate": 69.39,
+      "source": {
+        "kind": "simulator",
+        "device_id": "SIM-CREW-04",
+        "sampling_hz": 0.03333333333333333,
+        "runtime_hz": 1,
+        "clock": "mission_simulation"
+      }
+    },
+    {
+      "crew": "CREW-05",
+      "heart_rate": 67.65,
+      "source": {
+        "kind": "simulator",
+        "device_id": "SIM-CREW-05",
+        "sampling_hz": 0.03333333333333333,
+        "runtime_hz": 1,
+        "clock": "mission_simulation"
+      }
+    },
+    {
+      "crew": "CREW-06",
+      "heart_rate": 68.24,
+      "source": {
+        "kind": "simulator",
+        "device_id": "SIM-CREW-06",
+        "sampling_hz": 0.03333333333333333,
+        "runtime_hz": 1,
+        "clock": "mission_simulation"
+      }
+    }
+  ],
+  "reason": "no such table: n11_experiments",
+  "N03_temporary_storage_bytes": 8417280,
+  "N03_cleanup": {
+    "browser_exited": true,
+    "profile_removed": true,
+    "database_directory_removed": true,
+    "Node_memory": {
+      "rss": 76365824,
+      "heapTotal": 20910080,
+      "heapUsed": 12657480,
+      "external": 4653092,
+      "arrayBuffers": 574208
+    },
+    "N16_designated_starts": 0,
+    "Qwen_executions": 0,
+    "model_training": 0,
+    "database_snapshots": 0
+  },
+  "finished_at": "2026-11-04T17:46:58.120Z"
+}

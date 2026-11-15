@@ -1,0 +1,26 @@
+Checking: N03 landing native zoom, responsive entry and accessible identity controls
+Checking: N03 six canonical profiles, real measurements, source history and invalid crew isolation
+Checking: research citations, abstention, pending response and unavailable recovery
+Checking: scenario controls propagate exercise, missing and suspect quality without false Green
+Checking: actual replay slider follows stored observation times and independent evidence panels fail honestly
+Checking: N03 monitoring unavailable, offline transport and recovery preserve UNKNOWN
+Checking: N03 connected domain views preserve research and inactive integration boundaries
+Checking: N03 overview reflow, accessible names and axe audit at four viewports
+Checking: N03 crew reflow, accessible names and axe audit at four viewports
+Checking: N03 n10 reflow, accessible names and axe audit at four viewports
+Checking: N03 waveforms reflow, accessible names and axe audit at four viewports
+{
+  "status": "failed",
+  "browser": "Chrome/156.0.8078.80",
+  "checks": 11,
+  "failed": [
+    {
+      "name": "N03 waveforms reflow, accessible names and axe audit at four viewports",
+      "status": "failed",
+      "reason": "waveforms accessibility violations\n+ actual - expected\n\n+ [\n+   {\n+     id: 'region',\n+     impact: 'moderate',\n+     nodes: [\n+       {\n+         failureSummary: 'Fix any of the following:\\n' +\n+           '  Some page content is not contained by landmarks',\n+         html: '<div id=\"service-notice\" class=\"service-notice\">',\n+         target: [\n+           '#service-notice'\n+         ]\n+       }\n+     ]\n+   }\n+ ]\n- []\n"
+    }
+  ],
+  "screenshots": 7,
+  "reason": "waveforms accessibility violations\n+ actual - expected\n\n+ [\n+   {\n+     id: 'region',\n+     impact: 'moderate',\n+     nodes: [\n+       {\n+         failureSummary: 'Fix any of the following:\\n' +\n+           '  Some page content is not contained by landmarks',\n+         html: '<div id=\"service-notice\" class=\"service-notice\">',\n+         target: [\n+           '#service-notice'\n+         ]\n+       }\n+     ]\n+   }\n+ ]\n- []\n",
+  "report": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n03-engineering-20261104\\browser-03\\report.json"
+}

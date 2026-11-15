@@ -1,0 +1,1 @@
+{"attempts":1,"first_failure":{"attempts":1,"code":"ERR_SQLITE_ERROR","stage":"master_call"},"hash":"1afde0c6f385882bcae4ba07cf954c20cbd88a56356b6b604a8469da6c40e177","schema_version":"astra.n16.batch-failure.v1"}

@@ -1,0 +1,45 @@
+{
+  "scope": "QA-only failure diagnostics;Linux non-browser validation",
+  "checks": [
+    {
+      "name": "guard syntax",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "harness syntax final",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "test syntax final",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "name": "focused guard diagnostics final",
+      "exit_code": 0,
+      "output": "✔ Startup asserts native returned ownership boolean, PID, request result and helper exit (2.73723ms)\n✔ Healthy guard covers 60 virtual seconds through a fresh final native sample and cleans up (31.794721ms)\n✔ Transient page blur fails immediately and cannot be erased by focus recovery (3.68963ms)\n✔ Periodic page check catches focus loss even without a blur event (1.08423ms)\n✔ Visibility lifecycle guard retains a hidden transition after visibility returns (0.996443ms)\n✔ Mid-trial native ownership loss fails without refocusing or retrying (12.099366ms)\n✔ Native helper process errors abort the guard (0.990862ms)\n✔ Unexpected native helper exit aborts the guard (0.89474ms)\n✔ Native helper pipe failures abort instead of becoming uncaught stream errors (0.966817ms)\n✔ Malformed native output fails closed (1.340787ms)\n✔ Initial native window PID mismatch rejects setup and disposes observers (0.947099ms)\n✔ Missing native heartbeat fails while page samples continue (1.076194ms)\n✔ Missing page heartbeat fails while native samples continue (1.21632ms)\n✔ Native startup has a bounded timeout and no retry (1.972137ms)\n✔ Checkpoint detects a monitoring gap before work even when host timers were blocked (0.938814ms)\n✔ Unwritable failure journal still aborts without uncaught event-handler errors (1.396503ms)\n✔ Failure interrupts an in-flight checkpoint before subsequent workload code runs (0.988688ms)\n✔ Page navigation or lifecycle end rejects the active guard (5.164812ms)\n✔ A missing final native sample cannot produce a successful coverage summary (1.052449ms)\n✔ Observer lifetime stays bounded even when both heartbeat streams stay healthy (30.417123ms)\n✔ Blocked-host failure persists heartbeat age and existing prune timings before cleanup (2.083498ms)\n✔ Failure diagnostics distinguish observed helper exit from missing termination evidence (1.174722ms)\n✔ Observed helper process error does not imply a confirmed exit (1.01564ms)\n✔ Unavailable startup heartbeats and phase context remain explicit null observations (1.845527ms)\n✔ Failure-context errors preserve the original rejection and helper cleanup (1.007945ms)\n✔ Failure context copies existing phase records and excludes warm-up measurements (0.148362ms)\n✔ Diagnostic context is lazy, first-failure-only, and does not change healthy monitoring (3.511731ms)\nℹ tests 27\nℹ suites 0\nℹ pass 27\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 150.252178\n"
+    }
+  ],
+  "focused_tests": 27,
+  "passed": 27,
+  "failed": 0,
+  "skipped": 0,
+  "cancelled": 0,
+  "new_tests": 7,
+  "full_suite_run": false,
+  "browser_run": false,
+  "native_helper_run": false,
+  "telemetry_workload_run": false,
+  "sqlite_access": false,
+  "acceptance": {
+    "accepted": 9,
+    "out_of": 24,
+    "remaining": 15,
+    "n04": "Partial",
+    "n03": "Partial",
+    "ac20": "Open / Unverified"
+  },
+  "limitation": "Virtual time,fake observer/page events and synthetic phase records;not live-browser or pruning-cause evidence"
+}

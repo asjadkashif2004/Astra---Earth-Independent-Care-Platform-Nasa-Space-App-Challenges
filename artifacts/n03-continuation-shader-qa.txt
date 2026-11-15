@@ -1,0 +1,4 @@
+Shader QA renderer: ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver-5.0.0)
+earth: GLSL compiled, linked and rendered to /mnt/c/Users/basim/OneDrive/Desktop/ASTRA-Space-Medical-AI/artifacts/shader-qa/earth.png
+twin: GLSL compiled, linked and rendered to /mnt/c/Users/basim/OneDrive/Desktop/ASTRA-Space-Medical-AI/artifacts/shader-qa/twin.png
+twin: HR pulse, RR motion and evidence-warning frames differ as expected.

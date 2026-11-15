@@ -1,0 +1,165 @@
+{
+  "verified_at": "2026-11-04T12:11:34.589Z",
+  "verification": "Fresh original hash/size + pinned source/rights/receipt + current two-PDF rebuild recorded separately",
+  "sources": [
+    {
+      "acquisition_method": "Original completed official HTTPS GET; current verification offline, no refresh",
+      "authority": "NASA HRP evidence synthesis; background scientific evidence, not an individual treatment protocol",
+      "authors": [
+        "Erin Flynn-Evans",
+        "Kevin Gregory",
+        "Lucia Arsintescu",
+        "Alexandra Whitmire"
+      ],
+      "bytes": 967704,
+      "canonical_url": "https://ntrs.nasa.gov/citations/20160003864",
+      "deadline_ms": 60000,
+      "extractor": {
+        "chunker": "astra.page-section-chunks.v1",
+        "parser": {
+          "bytes": 407766,
+          "file": "pypdf-6.21.2-py3-none-any.whl",
+          "license": "BSD-3-Clause",
+          "sha256": "1d44d1a3a200f25062adff0085b02040e4646431ac2ccac22e42679e91466084",
+          "version": "6.21.2"
+        },
+        "version": "astra.pdf-text.v1"
+      },
+      "file": "20160003864.pdf",
+      "id": "nasa-hrp-sleep-2016",
+      "limitations": [
+        "No OCR, image/figure interpretation, table reconstruction or mathematical semantic validation.",
+        "PDF page labels may differ from printed page numbers; physical page_index is authoritative.",
+        "PDF actions, scripts, attachments and external links are not executed or fetched."
+      ],
+      "local_path": "data/corpus/n13-01/originals/20160003864.pdf",
+      "original_sha256": "252d4993a040ab8b989664b1da7a3143a5fd8169fac65b67f1f43231250ef1f5",
+      "publication_date_note": "NTRS catalogue date is January 1, 2016; do not treat this as independently verified day of authorship. Complete PDF identity and internal notices must be checked before corpus promotion.",
+      "published_on": "2016-01-01",
+      "publisher": "NASA Human Research Program; Johnson Space Center / NTRS",
+      "publisher_checksum_supplied": false,
+      "receipt": {
+        "bytes": 967704,
+        "checksum_note": "SHA-256 computed from complete local original; no independent publisher checksum supplied.",
+        "completed_at": "2026-10-24T08:09:58.439Z",
+        "etag": "\"e2782f25dce41e7df26f21e7035e3068\"",
+        "filename": "20160003864.pdf",
+        "http_status": 200,
+        "id": "nasa-hrp-sleep-2016",
+        "network_ms": 3306,
+        "publisher_checksum": null,
+        "redirects": 0,
+        "requests": 1,
+        "response_complete": true,
+        "schema_version": "astra.publication-receipt.v1",
+        "sha256": "252d4993a040ab8b989664b1da7a3143a5fd8169fac65b67f1f43231250ef1f5",
+        "started_at": "2026-10-24T08:09:55.133Z",
+        "url": "https://ntrs.nasa.gov/api/citations/20160003864/downloads/20160003864.pdf"
+      },
+      "review": "PENDING_INDEPENDENT_SCIENTIFIC_REVIEW",
+      "review_evidence": [
+        {
+          "file": "hrp-record.json",
+          "sha256": "b97981da6496a64215d135c312cbc64b9f5d1ea252105cc2366cbb90a4e3df86"
+        },
+        {
+          "file": "sti-use.html",
+          "sha256": "15c5732f49dd2eafe9c610ed61f7052b9565000e24be71ac55bc6b9a415e3b3b"
+        }
+      ],
+      "rights": {
+        "attribution": "Flynn-Evans E, Gregory K, Arsintescu L, Whitmire A. NASA HRP sleep/circadian/work-overload evidence report, 2016. NTRS 20160003864 / JSC-CN-35774.",
+        "basis": "Exact NTRS record: PUBLIC distribution, PUBLIC_USE_PERMITTED, onlyAbstract false, containsThirdPartyMaterial false, export control NO. Preserve specific source notices; do not infer CC or universal public-domain status.",
+        "license_id": null,
+        "restrictions": "Local informational scientific corpus only. Preserve all notices. No NASA endorsement, clinical validation, model training or automatic advice. Third-party cited works are not acquired or relicensed. Stop on conflicting internal rights notices.",
+        "review_status": "reviewed_for_local_corpus",
+        "terms_url": "https://sti.nasa.gov/disclaimers/"
+      },
+      "title": "Risk of Performance Decrements and Adverse Health Outcomes Resulting from Sleep Loss, Circadian Desynchronization, and Work Overload",
+      "url": "https://ntrs.nasa.gov/api/citations/20160003864/downloads/20160003864.pdf",
+      "verification": "ORIGINAL_HASH_AND_SAVED_EXTRACTION_BINDING",
+      "version": "2016; NTRS 20160003864; JSC-CN-35774",
+      "document_format": "application/pdf"
+    },
+    {
+      "acquisition_method": "Original completed official HTTPS GET; current verification offline, no refresh",
+      "authority": "NASA technical design and operations standard; requirements apply within its stated programme scope, not automatic ASTRA medical thresholds",
+      "authors": [
+        "NASA Office of the Chief Health and Medical Officer"
+      ],
+      "bytes": 6753988,
+      "canonical_url": "https://standards.nasa.gov/standard/NASA/NASA-STD-3001_VOL_2",
+      "deadline_ms": 120000,
+      "extractor": {
+        "chunker": "astra.page-section-chunks.v1",
+        "parser": {
+          "bytes": 407766,
+          "file": "pypdf-6.21.2-py3-none-any.whl",
+          "license": "BSD-3-Clause",
+          "sha256": "1d44d1a3a200f25062adff0085b02040e4646431ac2ccac22e42679e91466084",
+          "version": "6.21.2"
+        },
+        "version": "astra.pdf-text.v1"
+      },
+      "file": "NASA-STD-3001 Vol 2 Rev F.pdf",
+      "id": "nasa-std-3001-v2-f",
+      "limitations": [
+        "No OCR, image/figure interpretation, table reconstruction or mathematical semantic validation.",
+        "PDF page labels may differ from printed page numbers; physical page_index is authoritative.",
+        "PDF actions, scripts, attachments and external links are not executed or fetched."
+      ],
+      "local_path": "data/corpus/n13-01/originals/NASA-STD-3001 Vol 2 Rev F.pdf",
+      "original_sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+      "publication_date_note": "Official active standards catalogue: Revision F, Document Date 07/14/2026; verified 2026-10-24. Earlier E/D files are not substituted.",
+      "published_on": "2026-07-14",
+      "publisher": "NASA Technical Standards System",
+      "publisher_checksum_supplied": false,
+      "receipt": {
+        "bytes": 6753988,
+        "checksum_note": "SHA-256 computed from complete local original; no independent publisher checksum supplied.",
+        "completed_at": "2026-10-24T08:11:23.153Z",
+        "etag": null,
+        "filename": "NASA-STD-3001 Vol 2 Rev F.pdf",
+        "http_status": 200,
+        "id": "nasa-std-3001-v2-f",
+        "network_ms": 2963,
+        "publisher_checksum": null,
+        "redirects": 0,
+        "requests": 1,
+        "response_complete": true,
+        "schema_version": "astra.publication-receipt.v1",
+        "sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+        "started_at": "2026-10-24T08:11:20.189Z",
+        "url": "https://standards.nasa.gov/system/files/tmp/NASA-STD-3001%20Vol%202%20Rev%20F.pdf"
+      },
+      "review": "PENDING_INDEPENDENT_SCIENTIFIC_REVIEW",
+      "review_evidence": [
+        {
+          "file": "standards-catalogue.html",
+          "sha256": "3456bc34747c172c8852a907b9006a74805e68c0aed139e1bef8897e618d13fa"
+        },
+        {
+          "file": "sti-use.html",
+          "sha256": "15c5732f49dd2eafe9c610ed61f7052b9565000e24be71ac55bc6b9a415e3b3b"
+        }
+      ],
+      "rights": {
+        "attribution": "NASA Office of the Chief Health and Medical Officer. NASA-STD-3001 Volume 2 Revision F, approved 2026-07-14. NASA Technical Standards System.",
+        "basis": "NASA-authored technical standard; official catalogue authorizes Internet Public access. NASA STI policy permits use of US government works while reserving privately copyrighted material. Preserve original and review internal source-specific notices before corpus promotion; no inferred Creative Commons grant.",
+        "license_id": null,
+        "restrictions": "Local informational corpus of NASA-authored material; retain source,revision and notices. Public access does not license third-party standards,figures or cited works. No endorsement or compliance certification. Stop on conflicting internal reproduction notices. Future AI-output attribution must be reviewed separately.",
+        "review_status": "reviewed_for_local_corpus",
+        "terms_url": "https://sti.nasa.gov/disclaimers/"
+      },
+      "title": "NASA Spaceflight Human-System Standard, Volume 2: Human Factors, Habitability, and Environmental Health",
+      "url": "https://standards.nasa.gov/system/files/tmp/NASA-STD-3001%20Vol%202%20Rev%20F.pdf",
+      "verification": "ORIGINAL_HASH_AND_SAVED_EXTRACTION_BINDING",
+      "version": "F",
+      "document_format": "application/pdf"
+    }
+  ],
+  "authentic_originals": 2,
+  "curated_derivatives": 33,
+  "synthetic_publications": 0,
+  "independent_scientific_approvals": 0
+}

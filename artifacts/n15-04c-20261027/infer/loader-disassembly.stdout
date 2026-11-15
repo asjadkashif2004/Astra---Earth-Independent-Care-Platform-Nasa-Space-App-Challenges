@@ -1,0 +1,75 @@
+
+/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669/libggml.so.0.27.0:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+Disassembly of section .plt:
+
+Disassembly of section .plt.got:
+
+Disassembly of section .plt.sec:
+
+Disassembly of section .text:
+
+00000000000066c0 <ggml_backend_load_all_from_path>:
+    66c0:	f3 0f 1e fa          	endbr64
+    66c4:	55                   	push   %rbp
+    66c5:	48 89 fe             	mov    %rdi,%rsi
+    66c8:	48 89 fd             	mov    %rdi,%rbp
+    66cb:	48 8d 3d 31 1b 00 00 	lea    0x1b31(%rip),%rdi        # 8203 <_fini+0x7cb>
+    66d2:	e8 f9 d8 ff ff       	call   3fd0 <ggml_backend_load_best(char const*, bool, char const*) [clone .constprop.0] [clone .isra.0]>
+    66d7:	48 89 ee             	mov    %rbp,%rsi
+    66da:	48 8d 3d 27 1b 00 00 	lea    0x1b27(%rip),%rdi        # 8208 <_fini+0x7d0>
+    66e1:	e8 ea d8 ff ff       	call   3fd0 <ggml_backend_load_best(char const*, bool, char const*) [clone .constprop.0] [clone .isra.0]>
+    66e6:	48 89 ee             	mov    %rbp,%rsi
+    66e9:	48 8d 3d 1f 1b 00 00 	lea    0x1b1f(%rip),%rdi        # 820f <_fini+0x7d7>
+    66f0:	e8 db d8 ff ff       	call   3fd0 <ggml_backend_load_best(char const*, bool, char const*) [clone .constprop.0] [clone .isra.0]>
+    66f5:	48 89 ee             	mov    %rbp,%rsi
+    66f8:	48 8d 3d 15 1b 00 00 	lea    0x1b15(%rip),%rdi        # 8214 <_fini+0x7dc>
+    66ff:	e8 cc d8 ff ff       	call   3fd0 <ggml_backend_load_best(char const*, bool, char const*) [clone .constprop.0] [clone .isra.0]>
+    6704:	48 89 ee             	mov    %rbp,%rsi
+    6707:	48 8d 3d 0b 1b 00 00 	lea    0x1b0b(%rip),%rdi        # 8219 <_fini+0x7e1>
+    670e:	e8 bd d8 ff ff       	call   3fd0 <ggml_backend_load_best(char const*, bool, char const*) [clone .constprop.0] [clone .isra.0]>
+    6713:	48 89 ee             	mov    %rbp,%rsi
+    6716:	48 8d 3d 00 1b 00 00 	lea    0x1b00(%rip),%rdi        # 821d <_fini+0x7e5>
+    671d:	e8 ae d8 ff ff       	call   3fd0 <ggml_backend_load_best(char const*, bool, char const*) [clone .constprop.0] [clone .isra.0]>
+    6722:	48 89 ee             	mov    %rbp,%rsi
+    6725:	48 8d 3d f7 1a 00 00 	lea    0x1af7(%rip),%rdi        # 8223 <_fini+0x7eb>
+    672c:	e8 9f d8 ff ff       	call   3fd0 <ggml_backend_load_best(char const*, bool, char const*) [clone .constprop.0] [clone .isra.0]>
+    6731:	48 89 ee             	mov    %rbp,%rsi
+    6734:	48 8d 3d ec 1a 00 00 	lea    0x1aec(%rip),%rdi        # 8227 <_fini+0x7ef>
+    673b:	e8 90 d8 ff ff       	call   3fd0 <ggml_backend_load_best(char const*, bool, char const*) [clone .constprop.0] [clone .isra.0]>
+    6740:	48 89 ee             	mov    %rbp,%rsi
+    6743:	48 8d 3d e2 1a 00 00 	lea    0x1ae2(%rip),%rdi        # 822c <_fini+0x7f4>
+    674a:	e8 81 d8 ff ff       	call   3fd0 <ggml_backend_load_best(char const*, bool, char const*) [clone .constprop.0] [clone .isra.0]>
+    674f:	48 89 ee             	mov    %rbp,%rsi
+    6752:	48 8d 3d da 1a 00 00 	lea    0x1ada(%rip),%rdi        # 8233 <_fini+0x7fb>
+    6759:	e8 72 d8 ff ff       	call   3fd0 <ggml_backend_load_best(char const*, bool, char const*) [clone .constprop.0] [clone .isra.0]>
+    675e:	48 89 ee             	mov    %rbp,%rsi
+    6761:	48 8d 3d d3 1a 00 00 	lea    0x1ad3(%rip),%rdi        # 823b <_fini+0x803>
+    6768:	e8 63 d8 ff ff       	call   3fd0 <ggml_backend_load_best(char const*, bool, char const*) [clone .constprop.0] [clone .isra.0]>
+    676d:	48 89 ee             	mov    %rbp,%rsi
+    6770:	48 8d 3d cb 1a 00 00 	lea    0x1acb(%rip),%rdi        # 8242 <_fini+0x80a>
+    6777:	e8 54 d8 ff ff       	call   3fd0 <ggml_backend_load_best(char const*, bool, char const*) [clone .constprop.0] [clone .isra.0]>
+    677c:	48 89 ee             	mov    %rbp,%rsi
+    677f:	48 8d 3d c4 1a 00 00 	lea    0x1ac4(%rip),%rdi        # 824a <_fini+0x812>
+    6786:	e8 45 d8 ff ff       	call   3fd0 <ggml_backend_load_best(char const*, bool, char const*) [clone .constprop.0] [clone .isra.0]>
+    678b:	48 89 ee             	mov    %rbp,%rsi
+    678e:	48 8d 3d ba 1a 00 00 	lea    0x1aba(%rip),%rdi        # 824f <_fini+0x817>
+    6795:	e8 36 d8 ff ff       	call   3fd0 <ggml_backend_load_best(char const*, bool, char const*) [clone .constprop.0] [clone .isra.0]>
+    679a:	48 8d 3d b7 1a 00 00 	lea    0x1ab7(%rip),%rdi        # 8258 <_fini+0x820>
+    67a1:	48 89 ee             	mov    %rbp,%rsi
+    67a4:	e8 27 d8 ff ff       	call   3fd0 <ggml_backend_load_best(char const*, bool, char const*) [clone .constprop.0] [clone .isra.0]>
+    67a9:	48 8d 3d ac 1a 00 00 	lea    0x1aac(%rip),%rdi        # 825c <_fini+0x824>
+    67b0:	e8 db be ff ff       	call   2690 <getenv@plt>
+    67b5:	48 85 c0             	test   %rax,%rax
+    67b8:	74 0e                	je     67c8 <ggml_backend_load_all_from_path+0x108>
+    67ba:	48 89 c7             	mov    %rax,%rdi
+    67bd:	5d                   	pop    %rbp
+    67be:	e9 4d c0 ff ff       	jmp    2810 <ggml_backend_load@plt>
+    67c3:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+    67c8:	5d                   	pop    %rbp
+    67c9:	c3                   	ret
+
+Disassembly of section .fini:

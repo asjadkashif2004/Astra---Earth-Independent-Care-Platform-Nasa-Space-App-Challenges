@@ -1,0 +1,12 @@
+{
+  "schema_version": "astra.acquisition-progress.v1",
+  "source_id": "physionet-bidmc-01-numerics",
+  "approval_sha256": "5344111b804432ac1c8836bae3c82db60d8ccce7e72a0938fd779586d78bbfde",
+  "bytes": 7644,
+  "prefix_sha256": "27d43794cf2e7150db10e8bfe61d2bfdb26873a8f1629ffc5fbee5c9a4eb6ef5",
+  "etag": "\"5b2a8bbd-1ddc\"",
+  "started_at": "2026-10-23T15:32:16.439Z",
+  "last_received_at": "2026-10-23T15:32:23.482Z",
+  "requests": 1,
+  "response_complete": true
+}

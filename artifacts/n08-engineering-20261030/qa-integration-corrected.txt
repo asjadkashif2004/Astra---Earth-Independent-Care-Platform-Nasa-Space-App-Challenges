@@ -1,0 +1,35 @@
+✔ complete Mission Day: drift → evidence → case → human ack → blackout → restart → Earth (759.970811ms)
+✔ seven-role permission matrix does not grant viewer writes or system admin medical access (0.690532ms)
+✔ an interrupted tick rolls back observations, queue and simulation clock together (116.415139ms)
+✔ escalation produces a fresh case and cannot reuse an earlier human acknowledgement (436.755985ms)
+✖ HTTP API enforces sessions, role scope, service-token ingest and same-origin writes (288.441122ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 4
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1837.687188
+
+✖ failing tests:
+
+test at tests/integration.test.mjs:76:1
+✖ HTTP API enforces sessions, role scope, service-token ingest and same-origin writes (288.441122ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'UNKNOWN'
+  
+      at TestContext.<anonymous> (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/integration.test.mjs:115:47)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'UNKNOWN',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

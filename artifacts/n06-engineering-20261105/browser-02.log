@@ -1,0 +1,17 @@
+Checking: N06 actual verified geometry and authorized source-to-panel positive control
+Checking: N06 real mesh ray picking and camera orbit/zoom/layers/LOD preservation
+{
+  "status": "failed",
+  "browser": "Chrome/156.0.8078.80",
+  "checks": 2,
+  "failed": [
+    {
+      "name": "N06 real mesh ray picking and camera orbit/zoom/layers/LOD preservation",
+      "status": "failed",
+      "reason": "Expected \"actual\" not to be strictly deep-equal to:\n\n[\n  0.12,\n  0.9400000000000002,\n  3.1\n]\n"
+    }
+  ],
+  "screenshots": 2,
+  "reason": "Expected \"actual\" not to be strictly deep-equal to:\n\n[\n  0.12,\n  0.9400000000000002,\n  3.1\n]\n",
+  "report": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n06-engineering-20261105\\browser-02\\report.json"
+}

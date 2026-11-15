@@ -1,0 +1,28 @@
+{
+  "schema_version": "astra.n15.rule-adjudication-template.v1",
+  "record_state": "BLANK_TEMPLATE_NOT_ADJUDICATION",
+  "decision_choices": ["APPROVE", "REJECT", "REQUEST CHANGES"],
+  "adjudicator_fields": {
+    "full_name": "",
+    "affiliation": "",
+    "relevant_competence": "",
+    "independence_from_authors_and_reviewers": "",
+    "conflicts_or_prior_involvement": "",
+    "date_utc": "",
+    "rule_id_and_revision": "",
+    "rule_sha256": "",
+    "packet_sha256": "",
+    "source_version_and_publication_sha256": "",
+    "original_reviewer_records_and_sha256_values": "",
+    "disputed_issues": "",
+    "original_page_and_context_checked": "",
+    "resolution_for_each_issue": "",
+    "remaining_objections": "",
+    "decision": "",
+    "rationale": "",
+    "new_revision_or_renewed_review_required": "",
+    "signed_or_authenticated_record_reference": "",
+    "signed_or_authenticated_record_sha256": "",
+    "authentication_method_and_identity_evidence": ""
+  }
+}

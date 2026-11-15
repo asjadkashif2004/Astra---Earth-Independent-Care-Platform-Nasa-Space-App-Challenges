@@ -1,0 +1,504 @@
+{
+  "schema_version": "astra.n13.engineering-acceptance.v1",
+  "official_module": "Research corpus ingestion",
+  "official_requirement_families": [
+    "R10",
+    "R21",
+    "R42",
+    "R51",
+    "R54"
+  ],
+  "grouping_note": "Twelve audit clauses drawn from existing N13plans/closure requirements; not12new official requirement IDs. Local engineering is distinct from full scientific/source/closure acceptance.",
+  "engineering_implemented": 12,
+  "engineering_qualified": 12,
+  "formal_status": "In Progress",
+  "clauses": [
+    {
+      "audit_clause": 1,
+      "requirement": "Source registration and lawful identity",
+      "official_ids": [
+        "R10",
+        "R42",
+        "R51",
+        "R54"
+      ],
+      "authoritative_source": "docs/N13_01_PLAN.md:deliverables1–2",
+      "existing_and_missing_work_closed": "sources.json/receipts/internal review existed; new fixed19-file register + safe catalog admission",
+      "implementation": "services/corpus/catalog.mjs",
+      "original_scientific_evidence": [
+        {
+          "id": "nasa-hrp-sleep-2016",
+          "sha256": "252d4993a040ab8b989664b1da7a3143a5fd8169fac65b67f1f43231250ef1f5",
+          "version": "2016; NTRS 20160003864; JSC-CN-35774"
+        },
+        {
+          "id": "nasa-std-3001-v2-f",
+          "sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+          "version": "F"
+        }
+      ],
+      "provenance": "Pinned originals/receipts/rights/base corpus/curation/review/case hashes",
+      "source_rights": "Existing source-specific local permissions retained; no new acquisition or blanket license",
+      "annotation": "Existing33units/34spans/roles/limits unchanged; numeric tokens unapproved",
+      "question_validation": "40unchanged seen/provisional cases; original split history only",
+      "review_requirement": "Independent reviewer/owner decisions PENDING,0approvals; structural checks do not authenticate review",
+      "downstream_integration": "N14exact source/window compatibility only; N15factual gate remains ABSTAIN; N16inactive",
+      "QA": "Hash/rights/metadata/version/path/source-substitution controls",
+      "evidence": [
+        "qa-final.tap",
+        "resource-qualified.tap",
+        "regression-final.tap",
+        "acceptance-final/end-to-end.json",
+        "cold-verification-final.json"
+      ],
+      "engineering_status": "PASS",
+      "formal_closure_gate": "Full N07prerequisite, owner corpus coverage/exclusions, actual30–50evidence approvals and release decisions remain open"
+    },
+    {
+      "audit_clause": 2,
+      "requirement": "Original-to-derived reproducibility",
+      "official_ids": [
+        "R10",
+        "R21",
+        "R42"
+      ],
+      "authoritative_source": "docs/N13_01_PLAN.md:deliverables3–5",
+      "existing_and_missing_work_closed": "Existing pinned extractor/frozen corpus reused; one fresh full471page rebuild",
+      "implementation": "services/corpus/catalog.mjs",
+      "original_scientific_evidence": [
+        {
+          "id": "nasa-hrp-sleep-2016",
+          "sha256": "252d4993a040ab8b989664b1da7a3143a5fd8169fac65b67f1f43231250ef1f5",
+          "version": "2016; NTRS 20160003864; JSC-CN-35774"
+        },
+        {
+          "id": "nasa-std-3001-v2-f",
+          "sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+          "version": "F"
+        }
+      ],
+      "provenance": "Pinned originals/receipts/rights/base corpus/curation/review/case hashes",
+      "source_rights": "Existing source-specific local permissions retained; no new acquisition or blanket license",
+      "annotation": "Existing33units/34spans/roles/limits unchanged; numeric tokens unapproved",
+      "question_validation": "40unchanged seen/provisional cases; original split history only",
+      "review_requirement": "Independent reviewer/owner decisions PENDING,0approvals; structural checks do not authenticate review",
+      "downstream_integration": "N14exact source/window compatibility only; N15factual gate remains ABSTAIN; N16inactive",
+      "QA": "original-rebuild.json, frozen corpus/curation/packet reconstruction",
+      "evidence": [
+        "qa-final.tap",
+        "resource-qualified.tap",
+        "regression-final.tap",
+        "acceptance-final/end-to-end.json",
+        "cold-verification-final.json"
+      ],
+      "engineering_status": "PASS",
+      "formal_closure_gate": "Full N07prerequisite, owner corpus coverage/exclusions, actual30–50evidence approvals and release decisions remain open"
+    },
+    {
+      "audit_clause": 3,
+      "requirement": "Excerpt and source-role lineage",
+      "official_ids": [
+        "R42",
+        "R54"
+      ],
+      "authoritative_source": "docs/N13_02_COMPLETION.md:33units/19sections;N13_03_COMPLETION.md:34spans",
+      "existing_and_missing_work_closed": "Existing exact curated spans/roles/limits unchanged; additive catalog/hash/token inventory",
+      "implementation": "services/corpus/catalog.mjs",
+      "original_scientific_evidence": [
+        {
+          "id": "nasa-hrp-sleep-2016",
+          "sha256": "252d4993a040ab8b989664b1da7a3143a5fd8169fac65b67f1f43231250ef1f5",
+          "version": "2016; NTRS 20160003864; JSC-CN-35774"
+        },
+        {
+          "id": "nasa-std-3001-v2-f",
+          "sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+          "version": "F"
+        }
+      ],
+      "provenance": "Pinned originals/receipts/rights/base corpus/curation/review/case hashes",
+      "source_rights": "Existing source-specific local permissions retained; no new acquisition or blanket license",
+      "annotation": "Existing33units/34spans/roles/limits unchanged; numeric tokens unapproved",
+      "question_validation": "40unchanged seen/provisional cases; original split history only",
+      "review_requirement": "Independent reviewer/owner decisions PENDING,0approvals; structural checks do not authenticate review",
+      "downstream_integration": "N14exact source/window compatibility only; N15factual gate remains ABSTAIN; N16inactive",
+      "QA": "Exact text/page/section/original/citation, numeric tokens not facts",
+      "evidence": [
+        "qa-final.tap",
+        "resource-qualified.tap",
+        "regression-final.tap",
+        "acceptance-final/end-to-end.json",
+        "cold-verification-final.json"
+      ],
+      "engineering_status": "PASS",
+      "formal_closure_gate": "Full N07prerequisite, owner corpus coverage/exclusions, actual30–50evidence approvals and release decisions remain open"
+    },
+    {
+      "audit_clause": 4,
+      "requirement": "Attribution versus relevance/support",
+      "official_ids": [
+        "R21",
+        "R42"
+      ],
+      "authoritative_source": "docs/N14_02_CONTRACT.md;original R42",
+      "existing_and_missing_work_closed": "Unchanged N14v2/N15gate reused; explicit source/citation library+CLI",
+      "implementation": "services/corpus/catalog.mjs",
+      "original_scientific_evidence": [
+        {
+          "id": "nasa-hrp-sleep-2016",
+          "sha256": "252d4993a040ab8b989664b1da7a3143a5fd8169fac65b67f1f43231250ef1f5",
+          "version": "2016; NTRS 20160003864; JSC-CN-35774"
+        },
+        {
+          "id": "nasa-std-3001-v2-f",
+          "sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+          "version": "F"
+        }
+      ],
+      "provenance": "Pinned originals/receipts/rights/base corpus/curation/review/case hashes",
+      "source_rights": "Existing source-specific local permissions retained; no new acquisition or blanket license",
+      "annotation": "Existing33units/34spans/roles/limits unchanged; numeric tokens unapproved",
+      "question_validation": "40unchanged seen/provisional cases; original split history only",
+      "review_requirement": "Independent reviewer/owner decisions PENDING,0approvals; structural checks do not authenticate review",
+      "downstream_integration": "N14exact source/window compatibility only; N15factual gate remains ABSTAIN; N16inactive",
+      "QA": "Positive literal attribution; altered/wrong source/location/scope/numerical negatives",
+      "evidence": [
+        "qa-final.tap",
+        "resource-qualified.tap",
+        "regression-final.tap",
+        "acceptance-final/end-to-end.json",
+        "cold-verification-final.json"
+      ],
+      "engineering_status": "PASS",
+      "formal_closure_gate": "Full N07prerequisite, owner corpus coverage/exclusions, actual30–50evidence approvals and release decisions remain open"
+    },
+    {
+      "audit_clause": 5,
+      "requirement": "Existing question inventory",
+      "official_ids": [
+        "R21",
+        "R42"
+      ],
+      "authoritative_source": "docs/N13_02_COMPLETION.md:40reviewable expectations",
+      "existing_and_missing_work_closed": "40old labels/case hashes preserved; version/provenance/author uncertainty view",
+      "implementation": "services/corpus/catalog.mjs",
+      "original_scientific_evidence": [
+        {
+          "id": "nasa-hrp-sleep-2016",
+          "sha256": "252d4993a040ab8b989664b1da7a3143a5fd8169fac65b67f1f43231250ef1f5",
+          "version": "2016; NTRS 20160003864; JSC-CN-35774"
+        },
+        {
+          "id": "nasa-std-3001-v2-f",
+          "sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+          "version": "F"
+        }
+      ],
+      "provenance": "Pinned originals/receipts/rights/base corpus/curation/review/case hashes",
+      "source_rights": "Existing source-specific local permissions retained; no new acquisition or blanket license",
+      "annotation": "Existing33units/34spans/roles/limits unchanged; numeric tokens unapproved",
+      "question_validation": "40unchanged seen/provisional cases; original split history only",
+      "review_requirement": "Independent reviewer/owner decisions PENDING,0approvals; structural checks do not authenticate review",
+      "downstream_integration": "N14exact source/window compatibility only; N15factual gate remains ABSTAIN; N16inactive",
+      "QA": "24supported/8partial/8unsupported remain provisional;0independent approvals",
+      "evidence": [
+        "qa-final.tap",
+        "resource-qualified.tap",
+        "regression-final.tap",
+        "acceptance-final/end-to-end.json",
+        "cold-verification-final.json"
+      ],
+      "engineering_status": "PASS",
+      "formal_closure_gate": "Full N07prerequisite, owner corpus coverage/exclusions, actual30–50evidence approvals and release decisions remain open"
+    },
+    {
+      "audit_clause": 6,
+      "requirement": "Seen status and split contamination",
+      "official_ids": [
+        "R21",
+        "R42"
+      ],
+      "authoritative_source": "docs/N14_04_FRESH_EVALUATION.md;N14original frozen plan",
+      "existing_and_missing_work_closed": "Original24/16membership retained as history; all40explicitly seen; new diagnostics",
+      "implementation": "services/corpus/catalog.mjs",
+      "original_scientific_evidence": [
+        {
+          "id": "nasa-hrp-sleep-2016",
+          "sha256": "252d4993a040ab8b989664b1da7a3143a5fd8169fac65b67f1f43231250ef1f5",
+          "version": "2016; NTRS 20160003864; JSC-CN-35774"
+        },
+        {
+          "id": "nasa-std-3001-v2-f",
+          "sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+          "version": "F"
+        }
+      ],
+      "provenance": "Pinned originals/receipts/rights/base corpus/curation/review/case hashes",
+      "source_rights": "Existing source-specific local permissions retained; no new acquisition or blanket license",
+      "annotation": "Existing33units/34spans/roles/limits unchanged; numeric tokens unapproved",
+      "question_validation": "40unchanged seen/provisional cases; original split history only",
+      "review_requirement": "Independent reviewer/owner decisions PENDING,0approvals; structural checks do not authenticate review",
+      "downstream_integration": "N14exact source/window compatibility only; N15factual gate remains ABSTAIN; N16inactive",
+      "QA": "Duplicates/near-duplicates/shared-positive leakage/invalid split controls",
+      "evidence": [
+        "qa-final.tap",
+        "resource-qualified.tap",
+        "regression-final.tap",
+        "acceptance-final/end-to-end.json",
+        "cold-verification-final.json"
+      ],
+      "engineering_status": "PASS",
+      "formal_closure_gate": "Full N07prerequisite, owner corpus coverage/exclusions, actual30–50evidence approvals and release decisions remain open"
+    },
+    {
+      "audit_clause": 7,
+      "requirement": "Reviewer-ready blank packet",
+      "official_ids": [
+        "R42"
+      ],
+      "authoritative_source": "docs/N13_03_COMPLETION.md:independent review and closure gates",
+      "existing_and_missing_work_closed": "Original detailed packet/qualifications/source refs retained; new blank machine form",
+      "implementation": "services/corpus/catalog.mjs",
+      "original_scientific_evidence": [
+        {
+          "id": "nasa-hrp-sleep-2016",
+          "sha256": "252d4993a040ab8b989664b1da7a3143a5fd8169fac65b67f1f43231250ef1f5",
+          "version": "2016; NTRS 20160003864; JSC-CN-35774"
+        },
+        {
+          "id": "nasa-std-3001-v2-f",
+          "sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+          "version": "F"
+        }
+      ],
+      "provenance": "Pinned originals/receipts/rights/base corpus/curation/review/case hashes",
+      "source_rights": "Existing source-specific local permissions retained; no new acquisition or blanket license",
+      "annotation": "Existing33units/34spans/roles/limits unchanged; numeric tokens unapproved",
+      "question_validation": "40unchanged seen/provisional cases; original split history only",
+      "review_requirement": "Independent reviewer/owner decisions PENDING,0approvals; structural checks do not authenticate review",
+      "downstream_integration": "N14exact source/window compatibility only; N15factual gate remains ABSTAIN; N16inactive",
+      "QA": "Null identities/decisions, source/case hashes, explicit axes/reasons",
+      "evidence": [
+        "qa-final.tap",
+        "resource-qualified.tap",
+        "regression-final.tap",
+        "acceptance-final/end-to-end.json",
+        "cold-verification-final.json"
+      ],
+      "engineering_status": "PASS",
+      "formal_closure_gate": "Full N07prerequisite, owner corpus coverage/exclusions, actual30–50evidence approvals and release decisions remain open"
+    },
+    {
+      "audit_clause": 8,
+      "requirement": "Review structure and disagreement",
+      "official_ids": [
+        "R42"
+      ],
+      "authoritative_source": "docs/N13_03_COMPLETION.md:review evidence/owner acceptance",
+      "existing_and_missing_work_closed": "New strict structural intake and conflict reconciliation; no authentication/admission",
+      "implementation": "services/corpus/reviewer-records.mjs",
+      "original_scientific_evidence": [
+        {
+          "id": "nasa-hrp-sleep-2016",
+          "sha256": "252d4993a040ab8b989664b1da7a3143a5fd8169fac65b67f1f43231250ef1f5",
+          "version": "2016; NTRS 20160003864; JSC-CN-35774"
+        },
+        {
+          "id": "nasa-std-3001-v2-f",
+          "sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+          "version": "F"
+        }
+      ],
+      "provenance": "Pinned originals/receipts/rights/base corpus/curation/review/case hashes",
+      "source_rights": "Existing source-specific local permissions retained; no new acquisition or blanket license",
+      "annotation": "Existing33units/34spans/roles/limits unchanged; numeric tokens unapproved",
+      "question_validation": "40unchanged seen/provisional cases; original split history only",
+      "review_requirement": "Independent reviewer/owner decisions PENDING,0approvals; structural checks do not authenticate review",
+      "downstream_integration": "N14exact source/window compatibility only; N15factual gate remains ABSTAIN; N16inactive",
+      "QA": "Wrong source/time/identity, contradictions, abstention boundary, dupes/disputes/owner absence",
+      "evidence": [
+        "qa-final.tap",
+        "resource-qualified.tap",
+        "regression-final.tap",
+        "acceptance-final/end-to-end.json",
+        "cold-verification-final.json"
+      ],
+      "engineering_status": "PASS",
+      "formal_closure_gate": "Full N07prerequisite, owner corpus coverage/exclusions, actual30–50evidence approvals and release decisions remain open"
+    },
+    {
+      "audit_clause": 9,
+      "requirement": "Immutable publication and recovery",
+      "official_ids": [
+        "R10",
+        "R42"
+      ],
+      "authoritative_source": "docs/N13_01_PLAN.md:reproducible corpus;original persistence/integrity",
+      "existing_and_missing_work_closed": "Existing exclusive-file foundation; new atomic committed content-addressed catalog",
+      "implementation": "services/corpus/catalog-bundle.mjs",
+      "original_scientific_evidence": [
+        {
+          "id": "nasa-hrp-sleep-2016",
+          "sha256": "252d4993a040ab8b989664b1da7a3143a5fd8169fac65b67f1f43231250ef1f5",
+          "version": "2016; NTRS 20160003864; JSC-CN-35774"
+        },
+        {
+          "id": "nasa-std-3001-v2-f",
+          "sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+          "version": "F"
+        }
+      ],
+      "provenance": "Pinned originals/receipts/rights/base corpus/curation/review/case hashes",
+      "source_rights": "Existing source-specific local permissions retained; no new acquisition or blanket license",
+      "annotation": "Existing33units/34spans/roles/limits unchanged; numeric tokens unapproved",
+      "question_validation": "40unchanged seen/provisional cases; original split history only",
+      "review_requirement": "Independent reviewer/owner decisions PENDING,0approvals; structural checks do not authenticate review",
+      "downstream_integration": "N14exact source/window compatibility only; N15factual gate remains ABSTAIN; N16inactive",
+      "QA": "Write/sync/readback/cancel/termination/corruption/parent/cold verification",
+      "evidence": [
+        "qa-final.tap",
+        "resource-qualified.tap",
+        "regression-final.tap",
+        "acceptance-final/end-to-end.json",
+        "cold-verification-final.json"
+      ],
+      "engineering_status": "PASS",
+      "formal_closure_gate": "Full N07prerequisite, owner corpus coverage/exclusions, actual30–50evidence approvals and release decisions remain open"
+    },
+    {
+      "audit_clause": 10,
+      "requirement": "Bounded offline lookup/security",
+      "official_ids": [
+        "R10",
+        "R42"
+      ],
+      "authoritative_source": "docs/N13_01_PLAN.md:offline verification/citations;shared N01trust boundary",
+      "existing_and_missing_work_closed": "New actual source/evidence/question/claim CLI and process-local capability separation",
+      "implementation": "scripts/n13-corpus.mjs",
+      "original_scientific_evidence": [
+        {
+          "id": "nasa-hrp-sleep-2016",
+          "sha256": "252d4993a040ab8b989664b1da7a3143a5fd8169fac65b67f1f43231250ef1f5",
+          "version": "2016; NTRS 20160003864; JSC-CN-35774"
+        },
+        {
+          "id": "nasa-std-3001-v2-f",
+          "sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+          "version": "F"
+        }
+      ],
+      "provenance": "Pinned originals/receipts/rights/base corpus/curation/review/case hashes",
+      "source_rights": "Existing source-specific local permissions retained; no new acquisition or blanket license",
+      "annotation": "Existing33units/34spans/roles/limits unchanged; numeric tokens unapproved",
+      "question_validation": "40unchanged seen/provisional cases; original split history only",
+      "review_requirement": "Independent reviewer/owner decisions PENDING,0approvals; structural checks do not authenticate review",
+      "downstream_integration": "N14exact source/window compatibility only; N15factual gate remains ABSTAIN; N16inactive",
+      "QA": "Wrong role/capability, reviewer-export restriction, path/alias/size/capacity controls",
+      "evidence": [
+        "qa-final.tap",
+        "resource-qualified.tap",
+        "regression-final.tap",
+        "acceptance-final/end-to-end.json",
+        "cold-verification-final.json"
+      ],
+      "engineering_status": "PASS",
+      "formal_closure_gate": "Full N07prerequisite, owner corpus coverage/exclusions, actual30–50evidence approvals and release decisions remain open"
+    },
+    {
+      "audit_clause": 11,
+      "requirement": "N14/N15consumer compatibility",
+      "official_ids": [
+        "R21",
+        "R42"
+      ],
+      "authoritative_source": "docs/N14_02_CONTRACT.md;N15unchanged relevance contract",
+      "existing_and_missing_work_closed": "New label-free consumer payload; existing34windows/lexical policy and no-rule gate unchanged",
+      "implementation": "services/corpus/catalog.mjs",
+      "original_scientific_evidence": [
+        {
+          "id": "nasa-hrp-sleep-2016",
+          "sha256": "252d4993a040ab8b989664b1da7a3143a5fd8169fac65b67f1f43231250ef1f5",
+          "version": "2016; NTRS 20160003864; JSC-CN-35774"
+        },
+        {
+          "id": "nasa-std-3001-v2-f",
+          "sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+          "version": "F"
+        }
+      ],
+      "provenance": "Pinned originals/receipts/rights/base corpus/curation/review/case hashes",
+      "source_rights": "Existing source-specific local permissions retained; no new acquisition or blanket license",
+      "annotation": "Existing33units/34spans/roles/limits unchanged; numeric tokens unapproved",
+      "question_validation": "40unchanged seen/provisional cases; original split history only",
+      "review_requirement": "Independent reviewer/owner decisions PENDING,0approvals; structural checks do not authenticate review",
+      "downstream_integration": "N14exact source/window compatibility only; N15factual gate remains ABSTAIN; N16inactive",
+      "QA": "acceptance-final/n14-compatibility.json; actual saved index IDs/bytes match",
+      "evidence": [
+        "qa-final.tap",
+        "resource-qualified.tap",
+        "regression-final.tap",
+        "acceptance-final/end-to-end.json",
+        "cold-verification-final.json"
+      ],
+      "engineering_status": "PASS",
+      "formal_closure_gate": "Full N07prerequisite, owner corpus coverage/exclusions, actual30–50evidence approvals and release decisions remain open"
+    },
+    {
+      "audit_clause": 12,
+      "requirement": "Executed qualification/resources/preservation",
+      "official_ids": [
+        "R10",
+        "R42"
+      ],
+      "authoritative_source": "docs/N13_01_PLAN.md:deliverables5–7;N13_03formal closure matrix",
+      "existing_and_missing_work_closed": "New genuine source-to-catalog/cold pipeline, focused regressions and measurements",
+      "implementation": "scripts/n13-acceptance.mjs",
+      "original_scientific_evidence": [
+        {
+          "id": "nasa-hrp-sleep-2016",
+          "sha256": "252d4993a040ab8b989664b1da7a3143a5fd8169fac65b67f1f43231250ef1f5",
+          "version": "2016; NTRS 20160003864; JSC-CN-35774"
+        },
+        {
+          "id": "nasa-std-3001-v2-f",
+          "sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+          "version": "F"
+        }
+      ],
+      "provenance": "Pinned originals/receipts/rights/base corpus/curation/review/case hashes",
+      "source_rights": "Existing source-specific local permissions retained; no new acquisition or blanket license",
+      "annotation": "Existing33units/34spans/roles/limits unchanged; numeric tokens unapproved",
+      "question_validation": "40unchanged seen/provisional cases; original split history only",
+      "review_requirement": "Independent reviewer/owner decisions PENDING,0approvals; structural checks do not authenticate review",
+      "downstream_integration": "N14exact source/window compatibility only; N15factual gate remains ABSTAIN; N16inactive",
+      "QA": "356distinct passes, original rebuild/lookup/wrong-source/numeric/missing-source/cold and protected hashes",
+      "evidence": [
+        "qa-final.tap",
+        "resource-qualified.tap",
+        "regression-final.tap",
+        "acceptance-final/end-to-end.json",
+        "cold-verification-final.json"
+      ],
+      "engineering_status": "PASS",
+      "formal_closure_gate": "Full N07prerequisite, owner corpus coverage/exclusions, actual30–50evidence approvals and release decisions remain open"
+    }
+  ],
+  "external_gates": [
+    {
+      "id": "N07full prerequisite",
+      "status": "OPEN_DEPENDENCY",
+      "decision": "Complete original N07or obtain a legitimate closure-level dependency decision; current task continuation is not that decision"
+    },
+    {
+      "id": "Evidence approval",
+      "status": "INDEPENDENT_REVIEW_PENDING",
+      "cases": 40,
+      "approved": 0
+    },
+    {
+      "id": "Coverage/source/scope and release",
+      "status": "PENDING_OWNER_AND_REVIEW",
+      "decision": "Accept bounded coverage/exclusions and legitimate scientific/release evidence; authorize any required extra sources separately"
+    }
+  ]
+}

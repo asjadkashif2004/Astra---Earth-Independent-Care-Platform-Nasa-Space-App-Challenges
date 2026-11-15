@@ -1,0 +1,11 @@
+{
+  "args": [
+    "readelf",
+    "--dynamic",
+    "--wide",
+    "/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669/llama-gguf-split"
+  ],
+  "exit_code": 0,
+  "stdout": "\nDynamic section at offset 0x8ac0 contains 33 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libllama-common.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libllama.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libggml-base.so.0]\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000001d (RUNPATH)            Library runpath: [$ORIGIN]\n 0x000000000000000c (INIT)               0x3000\n 0x000000000000000d (FINI)               0x6c68\n 0x0000000000000019 (INIT_ARRAY)         0x9890\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x9898\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x3b0\n 0x0000000000000005 (STRTAB)             0xe20\n 0x0000000000000006 (SYMTAB)             0x418\n 0x000000000000000a (STRSZ)              3304 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000015 (DEBUG)              0x0\n 0x0000000000000003 (PLTGOT)             0x9d10\n 0x0000000000000002 (PLTRELSZ)           2040 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0x1ed0\n 0x0000000000000007 (RELA)               0x1cc0\n 0x0000000000000008 (RELASZ)             528 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000000000001e (FLAGS)              BIND_NOW\n 0x000000006ffffffb (FLAGS_1)            Flags: NOW PIE\n 0x000000006ffffffe (VERNEED)            0x1be0\n 0x000000006fffffff (VERNEEDNUM)         3\n 0x000000006ffffff0 (VERSYM)             0x1b08\n 0x000000006ffffff9 (RELACOUNT)          3\n 0x0000000000000000 (NULL)               0x0\n",
+  "stderr": ""
+}

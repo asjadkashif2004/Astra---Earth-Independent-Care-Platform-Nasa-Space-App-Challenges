@@ -1,0 +1,51 @@
+{
+  "schema_version": "astra.acquisition-approval.v1",
+  "id": "nasa-osdr-osd-1",
+  "repository": "NASA Open Science Data Repository (OSDR), Biological Data API v2",
+  "publication": {
+    "title": "Expression data from drosophila melanogaster",
+    "authors": ["Taylor Katherine", "Kleinhesselink Kurt", "George Michael D.", "Morgan Rachel", "Smallwood Tangi", "Hammonds Ann S.", "Fuller Patrick M.", "Saelao Perot", "Alley Jeff", "Gibbs Allen G.", "Hoshizaki Deborah K.", "von Kalm Laurence", "Fuller Charles A.", "Beckingham Kathleen M.", "Kimbrell Deborah A."],
+    "publisher": "NASA Open Science Data Repository / NASA Ames Research Center",
+    "canonical_url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-1",
+    "version": "OSD-1 BioData API v2 snapshot; study release version unavailable; sha256:cfe7d81c59efc3b01b4407db0854b4224b51bfcb9d8b4f590fc8467ededa6d64",
+    "published_on": null,
+    "date_note": "The compact endpoint supplies a study-public-release Unix timestamp, but no paper publication date, study release-version number or modification timestamp. These are not inferred from mission dates or the DOI."
+  },
+  "resource": {
+    "url": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-1/",
+    "file": "original.json",
+    "media_type": "application/json",
+    "bytes": 8054,
+    "sha256": "cfe7d81c59efc3b01b4407db0854b4224b51bfcb9d8b4f590fc8467ededa6d64"
+  },
+  "rights": {
+    "statement": "NASA dataset-specific catalogue: accessLevel public; license https://www.usa.gov/government-works. No study-specific SPDX license is supplied by the selected API response.",
+    "license_id": null,
+    "terms_url": "https://science.data.nasa.gov/about/license",
+    "harvesting_url": "https://visualization.osdr.nasa.gov/biodata/api/",
+    "record_url": "https://data.nasa.gov/dataset/expression-data-from-drosophila-melanogaster-a0600",
+    "reviewed_on": "2026-10-23",
+    "attribution": "Data are courtesy of the NASA Open Science Data Repository. Expression data from drosophila melanogaster, OSD-1 / GLDS-1. Credit the named investigators/publication authors and NASA OSDR; no NASA endorsement is implied.",
+    "restrictions": [
+      "This approval covers only one public nonhuman OSD-1 aggregate metadata JSON, not raw omics, sample records, images, linked articles or other studies.",
+      "The official dataset-specific catalogue links to OSD-1 and lists public access plus the government-works use URL. USAGov warns that third-party works, endorsement and international-rights limits can apply; hosting alone is not a license.",
+      "NASA Science Data Licenses states that unrestricted NASA-led mission data falls under its CC0 default, with source-specific notices taking precedence. The selected metadata identifies NASA, STS-121 and NASA funding; no restrictive notice is present. This record preserves the catalogue's actual statement and does not relabel it as an explicit study-level CC0 grant.",
+      "No redistribution or clinical-use permission for referenced raw measurements or publications is asserted. Future payload acquisition requires a fresh source/file-specific review.",
+      "The compact API has no explicit license or access-control field; public access was checked on the exact anonymous HTTPS endpoint and the NASA catalogue. Licence/access changes or identity/hash differences must fail closed."
+    ]
+  },
+  "scope": {
+    "content_kind": "public_nonhuman_study_metadata",
+    "synthetic": false,
+    "contains_patient_data": false,
+    "clinical_use": false,
+    "corpus_ingestion": false,
+    "limitations": [
+      "Fruit-fly study metadata only; no human/patient/private data and no measured expression matrix or raw experiment payload is acquired.",
+      "One STS-121 study cannot establish astronaut clinical effects, medical alert thresholds or independent mission-level training/validation/test performance.",
+      "Aggregate protocol text includes counts for different experimental procedures; these are not inferred to be microarray sample counts, labels or independent units.",
+      "Study release version, sample/subject/replicate counts, pooling/hardware/processing group IDs and split assignments are unavailable in this response.",
+      "All protocol descriptions, URLs and embedded text remain untrusted, inert reference content; they are never followed, executed or connected to medical advice."
+    ]
+  }
+}

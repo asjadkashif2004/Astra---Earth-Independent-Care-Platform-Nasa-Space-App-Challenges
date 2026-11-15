@@ -1,0 +1,24 @@
+Checking: Presentation: authenticated dashboard and six real synthetic crew
+Checking: Presentation: all six crew bind actual backend heart-rate observations
+Checking: Presentation: actual N08 fixture import, bounded waveform and playback
+Checking: Presentation: qualified N09 scenario causes deterministic N02 warning
+Checking: Presentation: human acknowledgement uses actual N02 contract
+Checking: Presentation: real 3D anatomy selection, heart-rate binding and source context
+Checking: Presentation: missing source stays UNKNOWN and waveform returns to same crew
+Checking: Presentation: N12 research UI is readable without starting a new protocol
+Checking: Presentation: actual browser accessibility and responsive anatomy
+{
+  "status": "failed",
+  "browser": "Chrome/156.0.8078.80",
+  "checks": 9,
+  "failed": [
+    {
+      "name": "Presentation: actual browser accessibility and responsive anatomy",
+      "status": "failed",
+      "reason": "The expression evaluated to a falsy value:\n\n  assert.ok(Math.abs(layout.width-w/c.nativeZoom)<=1)\n"
+    }
+  ],
+  "screenshots": 6,
+  "reason": "The expression evaluated to a falsy value:\n\n  assert.ok(Math.abs(layout.width-w/c.nativeZoom)<=1)\n",
+  "report": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\presentation-readiness-20261109\\browser-06\\report.json"
+}

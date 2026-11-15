@@ -1,0 +1,12 @@
+{
+  "elapsed_s": 22.328443929000002,
+  "apparent_bytes": 66747105,
+  "allocated_bytes": 67354624,
+  "RSS_bytes": {
+    "1469": 38912000
+  },
+  "peak_observed_RSS": {
+    "1469": 50569216
+  },
+  "network_body_bytes": 162278
+}

@@ -1,0 +1,195 @@
+{
+  "scope": "One bounded N07 BIDMC-01 physiological numerics sample",
+  "status": {
+    "n01": "Complete",
+    "n02": "Complete",
+    "n03": "Partial",
+    "n04": "Complete",
+    "n05": "In Progress — Deferred",
+    "n06": "Not Started — Deferred",
+    "n07": "In Progress",
+    "radlab": "Blocked; no request in this task",
+    "ac20": "Open / Unverified",
+    "n13": "Not Started; full-N07 and separate approval gate unmet"
+  },
+  "source": {
+    "id": "physionet-bidmc-01-numerics",
+    "url": "https://physionet.org/files/bidmc/1.0.0/bidmc_csv/bidmc_01_Numerics.csv",
+    "original_bytes": 7644,
+    "sha256": "27d43794cf2e7150db10e8bfe61d2bfdb26873a8f1629ffc5fbee5c9a4eb6ef5",
+    "mime": "text/plain; charset=utf-8",
+    "workflow_requests": 1,
+    "review_requests": 1,
+    "publisher_checksum_verified": false,
+    "publisher_checksum_review": "15-second read deadline;no partial saved or retry",
+    "supporting_legacy_notice": {
+      "bytes": 939,
+      "sha256": "76576a17b505dce71773415a18e965982bc8c0c9a60da71f1adb9df7644332a0"
+    },
+    "review_evidence": "source-review.json",
+    "receipt": {
+      "started_at": "2026-10-23T15:32:16.439Z",
+      "completed_at": "2026-10-23T15:32:23.482Z",
+      "etag": "\"5b2a8bbd-1ddc\"",
+      "requests": 1,
+      "method": "HTTPS GET",
+      "redirects": 0
+    }
+  },
+  "scientific_facts": {
+    "record_id": "bidmc_01",
+    "source_subject_number": "01",
+    "rows": 481,
+    "elapsed_seconds": [
+      0,
+      480
+    ],
+    "cadence_seconds": 1,
+    "missing": {
+      "HR": 0,
+      "PULSE": 13,
+      "RESP": 0,
+      "SpO2": 13
+    },
+    "absolute_start_at": null,
+    "patient_stay_global_identity": null,
+    "clinical_quality": "not independently validated",
+    "waveforms_downloaded": false
+  },
+  "split": {
+    "status": "blocked_single_record_and_unverified_cross_archive_identity",
+    "executed": false,
+    "assignments": 0,
+    "independently_validated": false
+  },
+  "tests": {
+    "total": 53,
+    "pass": 53,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "prior_compatibility": 39,
+    "new_bidmc": 14,
+    "duration_ms": 1000.762794,
+    "log": "focused.log",
+    "sha256": "372df7ae170c386d5811aeae916227f3561fb7ac21f66a25061ce05710c3ca65"
+  },
+  "syntax": {
+    "files": 89,
+    "errors": 0,
+    "npm_command": "npm run check",
+    "evidence_note": "Observed tool output recorded;not a rerun.",
+    "observed_tool_output": "89 JavaScript files parsed and local imports checked; 0 errors. This is syntax/contract validation, not TypeScript compilation."
+  },
+  "direct_offline_verification": {
+    "bidmc_original": "PASS",
+    "bidmc_card_split_notice": "PASS",
+    "osdr_original": "PASS",
+    "ntrs_original": "PASS"
+  },
+  "full_suite_browser_model_radlab_sqlite_runs": 0,
+  "dependencies_added": 0,
+  "preservation": {
+    "status": "PASS",
+    "baseline_files": 493,
+    "unchanged_files": 488,
+    "changed_files": [
+      {
+        "path": "data/public-metadata/catalogue.json",
+        "before_sha256": "ab882b27420e475fe43c2dbe454d09b2d437ecd34ebe7594a6b7aa2cfade85f9",
+        "after_sha256": "cd354130cfaac8ece73ef5884dad0556463e8bf79b6539fadc97d6705e00fbc9"
+      },
+      {
+        "path": "data/scientific/README.md",
+        "before_sha256": "0a648bddfe729dfc679208f4470e4a57b00fe7bb7e557ca9fec17782401dd1fa",
+        "after_sha256": "06795e0c49684ce5edba77544f05854bf68b1255bed3c5fb53843df5ad9159ca"
+      },
+      {
+        "path": "scripts/scientific-acquire.mjs",
+        "before_sha256": "7e434d3bb01a6ba39c6f00b8c1d6b04e71866b598bd14d38e06a387780f5488f",
+        "after_sha256": "c313e66c57cc5a97c1e6c9f92276809c7749feac09eb32a1e41a8697c50f0ac1"
+      },
+      {
+        "path": "services/acquisition/cache.mjs",
+        "before_sha256": "6df440895d66443375e4391967fcf87d2ad67d5bddfcd333db25b55c5f28dec5",
+        "after_sha256": "84db032bfb8b8421a617a98a8021afe9034ad55288c70dce79c9bdca7c5f1c76"
+      },
+      {
+        "path": "services/acquisition/source.mjs",
+        "before_sha256": "d192c4e49f5ef5ae59256378663836844f7bee0dcceef7db4db15d031b319113",
+        "after_sha256": "6f323f89c8055af7dcc3619286e25e90e4f6c076cd68d9ece090035b4f5f1abe"
+      }
+    ],
+    "added_files": [
+      {
+        "path": "data/scientific/bidmc/BIDMC-01.dataset-card.json",
+        "sha256": "ff80f8359c460b4963f4e12916e81b729ef7255a529417e3decee51dc3b52079"
+      },
+      {
+        "path": "data/scientific/bidmc/BIDMC-01.split-policy.json",
+        "sha256": "65a2d71559a7913def182ddeae31404629b3306f7e0bef7c8f6b85960a3f6861"
+      },
+      {
+        "path": "data/scientific/bidmc/README.md",
+        "sha256": "db8a86d9acef0e13dfb47c51b7526631e7183c08d38f1a1a654380b865468d12"
+      },
+      {
+        "path": "data/scientific/bidmc/source-notices/LICENSE",
+        "sha256": "76576a17b505dce71773415a18e965982bc8c0c9a60da71f1adb9df7644332a0"
+      },
+      {
+        "path": "data/scientific/bidmc-01-numerics.approval.json",
+        "sha256": "6e41b2db99209bcd648cf0d463b27f785c9e8077812acc268cf228a1845f14fb"
+      },
+      {
+        "path": "data/scientific/cache/physionet-bidmc-01-numerics-27d43794cf2e7150db10e8bfe61d2bfdb26873a8f1629ffc5fbee5c9a4eb6ef5/manifest.json",
+        "sha256": "cbd8d45b6c23c6d6af6dc1c2fed4bc92bb5c9b16ea2aeab68e056ca57f1f52b3"
+      },
+      {
+        "path": "data/scientific/cache/physionet-bidmc-01-numerics-27d43794cf2e7150db10e8bfe61d2bfdb26873a8f1629ffc5fbee5c9a4eb6ef5/original.csv",
+        "sha256": "27d43794cf2e7150db10e8bfe61d2bfdb26873a8f1629ffc5fbee5c9a4eb6ef5"
+      },
+      {
+        "path": "data/scientific/cache/physionet-bidmc-01-numerics-27d43794cf2e7150db10e8bfe61d2bfdb26873a8f1629ffc5fbee5c9a4eb6ef5/progress.json",
+        "sha256": "43860d1b11dbf41e4555543f5c1882a383c983e441aa488891a481eab48460e3"
+      },
+      {
+        "path": "scripts/bidmc-sample.mjs",
+        "sha256": "658a10d70a78b34ef2abf22a60b889fea4689dac50e8c033dc71a3da6454a14a"
+      },
+      {
+        "path": "services/acquisition/bidmc.mjs",
+        "sha256": "33194509f363c93b2d9f6d2c233298ad1791c0b3d4e74d8c687d73c13cc7eb41"
+      },
+      {
+        "path": "tests/bidmc-acquisition.test.mjs",
+        "sha256": "f25f0aafce29b0b74d991212d1774993aa4ac5db989ba23e090579a5cf87abce"
+      }
+    ],
+    "unexpected_changes": []
+  },
+  "documentation": {
+    "status": "PASS",
+    "files": 13,
+    "relative_links_checked": 258,
+    "missing_links": [],
+    "unbalanced_fences": [],
+    "retained_module_ids": 26
+  },
+  "environment": {
+    "node": "v24.21.0",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43"
+  },
+  "artifact_files": [
+    {
+      "file": "artifacts/n07-bidmc-01-20261023/focused.log",
+      "bytes": 6833,
+      "sha256": "372df7ae170c386d5811aeae916227f3561fb7ac21f66a25061ce05710c3ca65"
+    },
+    {
+      "file": "artifacts/n07-bidmc-01-20261023/source-review.json",
+      "bytes": 1451,
+      "sha256": "deea09b86b839ea7741e79f0ba85eeb7c115a99858bc82a96f0304232626f88b"
+    }
+  ]
+}

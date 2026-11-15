@@ -1,0 +1,30 @@
+{
+  "command": [
+    "node",
+    "--experimental-vm-modules",
+    "--test",
+    "--test-isolation=none",
+    "artifacts/n11-preflight-20261031/preflight.test.mjs",
+    "tests/foundation.test.mjs",
+    "tests/monitoring-integrity.test.mjs",
+    "tests/telemetry-integrity.test.mjs",
+    "tests/n09-evaluation.test.mjs",
+    "tests/n07-local.test.mjs",
+    "tests/n10.test.mjs"
+  ],
+  "exit_code": 0,
+  "duration_ms": 37455.72792299981,
+  "samples": 149,
+  "max_sampled_tree_RSS_bytes": 265248768,
+  "child_kernel_max_RSS_KiB": 233404,
+  "max_sampled_scratch_logical_bytes": 82828929,
+  "scratch_bytes_before_cleanup": 0,
+  "scratch_removed": true,
+  "timed_out": false,
+  "N11_training_or_candidate_execution": 0,
+  "N16_native_starts": 0,
+  "Qwen_inference": 0,
+  "external_requests": 0,
+  "scope": "Existing baseline tests and four artifact-only boundary checks; not N11 qualification",
+  "limitations": "250ms samples can miss peaks; kernel child high-water is not simultaneous whole-tree usage; no hard RSS/disk or hardware performance claim"
+}

@@ -1,0 +1,71 @@
+"""Final metadata/preservation/accounting only; never starts an inference."""
+from pathlib import Path
+import hashlib,importlib.util,json,re,sys,urllib.parse
+sys.dont_write_bytecode=True
+p=Path('/mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai');out=p/'artifacts/n15-07-20261027'
+before=json.loads((out/'control/preservation-before.json').read_text());preservation={}
+for group in ['source','history']:
+    changed=[]
+    for name,wanted in before[group].items():
+        f=p/name
+        try:s=f.stat()
+        except FileNotFoundError:changed.append(name);continue
+        if [s.st_size,s.st_mtime_ns]!=wanted:changed.append(name)
+    if changed:raise RuntimeError('Frozen/source preservation mismatch '+repr(changed[:10]))
+    preservation[group]={'files':len(before[group]),'size_mtime_unchanged':True,'whole_tree_hashes_recomputed':False}
+for name,digest in before['frozen_hashes'].items():
+    if hashlib.sha256((p/name).read_bytes()).hexdigest()!=digest:raise RuntimeError('Frozen source changed '+name)
+control=Path('/var/tmp/astra-n15-06-n15-07-control-nhcueabt');live=Path('/var/tmp/astra-n15-06-oIb3a9')
+plan=json.loads((control/'frozen-plan.json').read_text());digest=json.loads((control/'frozen-plan-sha.json').read_text())['sha256']
+assert hashlib.sha256((control/'frozen-plan.json').read_bytes()).hexdigest()==digest
+assert hashlib.sha256((control/'diagnostic.mjs').read_bytes()).hexdigest()==plan['driver_sha256']
+assert not (control/'unsupported-reservation.json').exists()
+a=json.loads((out/'assessment.json').read_text());r=json.loads((live/'runtime/report.json').read_text())
+assert a['native_generations']==1 and a['unsupported']['status']=='NOT_RUN' and a['supported']['observed_outcome']=='conservative_miss'
+assert r['status']=='PARTIAL' and r['resources']['observer_alive'] and not r['accounting_failures']
+assert r['resources']['owned_processes_remaining']==0
+docs=['AGENTS.md','docs/N15_07_COMPLETION.md','docs/N15_07_PLAN.md','docs/SESSION_HANDOFF.md','docs/MODULE_TRACKER.md',
+ 'docs/MASTER_PLAN.md','docs/FEATURE_AUDIT.md','docs/DECISIONS.md','docs/DE_N14_N15_01.md','docs/N15_01_PLAN.md','docs/CORE_AI_PRIORITY.md']
+links=0
+for name in docs:
+    f=p/name
+    for target in re.findall(r'\]\(([^)\s]+)\)',f.read_text()):
+        if target.startswith(('https:','http:','mailto:','#')):continue
+        if not (f.parent/urllib.parse.unquote(target.split('#')[0])).exists():raise RuntimeError('Broken local link '+name+' '+target)
+        links+=1
+assert all(f'N{i:02}' in (p/'docs/MASTER_PLAN.md').read_text() for i in range(1,27))
+result={'preservation_validation':'PASS','task_outcome':'INCOMPLETE_STOPPED','runtime_qualification':'PARTIAL',
+ 'observed_supported_behavior':'conservative_miss','unsupported':'NOT_RUN','live_requests':1,'maximum_approved':2,
+ 'graceful_observer_completion':'NOT_VERIFIED','diagnostic_driver_error':'command.argv.index is not a function',
+ 'QA':'11 pre-generation scoring/binding controls PASS; integration/observer coverage gaps recorded',
+ 'preservation':preservation,'nine_frozen_core_hashes':'unchanged','frozen_cases_driver_prompts_grammar':'unchanged',
+ 'source_or_QA_file_changes':0,'downloads':0,'network_requests':0,'docs_checked':len(docs),'local_links_checked':links,
+ 'module_ids_retained':26,'N15':'In Progress','N16':'Not Started','other_module_statuses_or_reviews_changed':False,
+ 'resource_authority_expires_at_delivery':True,'unused_request_is_not_automatic_continuation':True}
+(out/'preservation-validation.json').write_text(json.dumps(result,indent=2)+'\n')
+for f in [Path('/tmp/astra-n15-07-close.py'),Path(__file__)]:
+    (out/(f.stem+'-source.txt')).write_bytes(f.read_bytes())
+spec=importlib.util.spec_from_file_location('accounting',p/'scripts/n15_probe_accounting.py');h=importlib.util.module_from_spec(spec);spec.loader.exec_module(h)
+roots=[control,live]+[Path(x) for x in ['/var/tmp/astra-n15-06-yDFTlW','/var/tmp/astra-n15-05-KPLzpp','/var/tmp/astra-n15-05-9NHfiv',
+ '/var/tmp/astra-n15-04b-0zd6xkaq','/var/tmp/astra-n15-03-swuxjpfe','/var/tmp/astra-n15-03d-4s2m9qlg',
+ '/var/tmp/astra-n15-03f-bat9chx9','/var/tmp/astra-n15-03h-0oauyxf2']]
+roots += [p/x for x in ['artifacts/n15-metadata-20261025','artifacts/n15-03e-20261026','artifacts/n15-03g-20261027',
+ 'artifacts/n15-03h-20261027','artifacts/n15-04b-20261027','artifacts/n15-04c-20261027','artifacts/n15-05-20261027','artifacts/n15-06-20261027','artifacts/n15-07-20261027',
+ 'data/corpus','data/research/n14-01/index','data/research/n15-05','data/research/n15-06','services/research-answer','services/research-retrieval']]
+files=[p/x for x in docs+['scripts/n15-research-answer.mjs','scripts/n15_research_runtime.py','scripts/n15_backend_config.py','scripts/n15_probe_accounting.py',
+ 'tests/research-answer.test.mjs','tests/research-grammar.test.mjs','tests/n15_research_runtime_test.py','artifacts/n15-03f-20261027/static-dependency-closure.json']]
+files+=list(Path('/tmp').glob('astra-n15-07-*'))
+n=json.loads((live/'runtime/native-identity-manifest.json').read_text())
+files+=[Path(x['source']) for x in n['native_files']+n['notices'] if not any(Path(x['source']).is_relative_to(root) for root in roots)]
+apparent=allocated=0
+for root in roots:
+    x,y=h.disk_usage(root);s=root.stat();apparent+=x+s.st_size;allocated+=y+s.st_blocks*512
+for f in files:s=f.stat();apparent+=s.st_size;allocated+=s.st_blocks*512
+if max(apparent,allocated)>=1350000000:raise RuntimeError('Delivery storage watermark reached')
+disk={'apparent_bytes':apparent,'allocated_bytes':allocated,'watermark':1350000000,'ceiling':1500000000,
+ 'policy':'Monitored, not hard quota. Includes retained control/live roots, all reused cache/model/corpus/index/outputs, offline verification/new docs; conservative duplicate counting.'}
+(out/'delivery-accounting.json').write_text(json.dumps(disk,indent=2)+'\n')
+records=[{'path':str(f.relative_to(out)),'bytes':f.stat().st_size,'sha256':hashlib.sha256(f.read_bytes()).hexdigest()}
+ for f in sorted(out.rglob('*')) if f.is_file() and f.name!='evidence-manifest.json']
+(out/'evidence-manifest.json').write_text(json.dumps({'task':'N15-07','files':records},indent=2)+'\n')
+print(json.dumps({**result,'delivery_accounting':disk,'evidence_files_hashed':len(records)},indent=2))

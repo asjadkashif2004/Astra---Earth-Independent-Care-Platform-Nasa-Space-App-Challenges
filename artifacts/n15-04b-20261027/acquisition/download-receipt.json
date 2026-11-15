@@ -1,0 +1,52 @@
+{
+  "task": "N15-04B",
+  "canonical_url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/resolve/9217f5db79a29953eb74d5343926648285ec7e67/qwen2.5-0.5b-instruct-q4_k_m.gguf",
+  "revision": "9217f5db79a29953eb74d5343926648285ec7e67",
+  "artifact": "qwen2.5-0.5b-instruct-q4_k_m.gguf",
+  "expected_bytes": 491400032,
+  "expected_sha256": "74a4da8c9fdbcd15bd1f6d01d621410d31c6fc00986f5eb687824e7b93d7a9db",
+  "complete": true,
+  "attempts": 1,
+  "redirects": [
+    {
+      "http_status": 302,
+      "scheme": "https",
+      "hostname": "us.aws.cdn.hf.co",
+      "port": null,
+      "credentials_present": false,
+      "query_present": true,
+      "fragment_present": false,
+      "query_values_retained": false,
+      "well_formed": true,
+      "rejection_reason": null,
+      "path_prefix": "/xet-bridge-us/",
+      "expected_object_marker_matches": true
+    }
+  ],
+  "started_utc": "2026-10-26T21:44:12.090297+00:00",
+  "signed_query_values_retained": false,
+  "new_runtime_bytes": 0,
+  "publisher": {
+    "status": 302,
+    "TLS_certificate_hostname_verification": true,
+    "x_repo_commit": "9217f5db79a29953eb74d5343926648285ec7e67",
+    "x_linked_size": 491400032,
+    "x_linked_etag": "74a4da8c9fdbcd15bd1f6d01d621410d31c6fc00986f5eb687824e7b93d7a9db",
+    "x_xet_hash": "0663b826e09042345d6e2069d9655cd3ae84812d8f39a5894bed7b24fc0e86cc"
+  },
+  "delivery": {
+    "host": "us.aws.cdn.hf.co",
+    "HTTPS_port": 443,
+    "TLS_certificate_hostname_verification": true,
+    "status": 200,
+    "content_length": 491400032,
+    "content_type": "application/octet-stream"
+  },
+  "received_bytes": 491400032,
+  "sha256": "74a4da8c9fdbcd15bd1f6d01d621410d31c6fc00986f5eb687824e7b93d7a9db",
+  "elapsed_s": 124.0158717739996,
+  "support_redirect_body_bytes": 0,
+  "total_received_body_bytes": 491400032,
+  "CDN_permission_active": false,
+  "CDN_permission_revoked": "One-shot acquisition worker closed all connections and exits; no global network rule installed."
+}

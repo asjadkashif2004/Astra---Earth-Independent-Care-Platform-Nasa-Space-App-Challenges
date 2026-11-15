@@ -1,0 +1,6 @@
+
+> astra-command@0.1.0 check
+> node scripts/check.mjs
+
+Missing import: /mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/n16-designated.test.mjs -> ./services/agent/designated-source.mjs
+189 JavaScript files parsed and local imports checked; 1 errors. This is syntax/contract validation, not TypeScript compilation.

@@ -1,0 +1,161 @@
+zlib (1:1.3.dfsg+really1.3.1-1ubuntu3.2) resolute-security; urgency=medium
+
+  * SECURITY UPDATE: heap buffer overflow in gz_vacate() during non-blocking
+    gzwrite() operations
+    - debian/patches/CVE-2026-85091.patch: reset stale input buffer pointer
+      on gz_comp() error in gz_write() in gzwrite.c
+    - CVE-2026-85091
+
+ -- Shafayat Hossain Majumder <shafayat.majumder@canonical.com>  Wed, 21 Oct 2026 16:56:20 -0400
+
+zlib (1:1.3.dfsg+really1.3.1-1ubuntu3.1) resolute-security; urgency=medium
+
+  * SECURITY UPDATE: resource consumption via infinite loop
+    - debian/patches/CVE-2026-27171.patch: add negative length checks to
+      crc32_combine64 and crc32_combine_gen64 functions in crc32.c
+    - CVE-2026-27171
+  * Thanks to Mark Adler for the upstream fix.
+
+ -- Chrisa Oikonomou <chrisa.oikonomou@canonical.com>  Tue, 25 Aug 2026 13:41:32 +0300
+
+zlib (1:1.3.dfsg+really1.3.1-1ubuntu3) resolute; urgency=medium
+
+  * No-change rebuild to drop sframe v2 section.
+
+ -- Matthias Klose <doko@ubuntu.com>  Fri, 23 Jan 2026 12:24:48 +0100
+
+zlib (1:1.3.dfsg+really1.3.1-1ubuntu2) questing; urgency=medium
+
+  * Rebuild to include updated RISC-V base ISA RVA23
+
+ -- Heinrich Schuchardt <heinrich.schuchardt@canonical.com>  Sat, 06 Sep 2025 15:41:13 +0000
+
+zlib (1:1.3.dfsg+really1.3.1-1ubuntu1) oracular; urgency=medium
+
+  * Merge with Debian unstable (LP: #2073992). Remaining changes:
+    - d/rules: Compile with DFLTCC enabled on s390x and
+      hardware compression at level 6
+    - d/zlib-core.symbols: Drop dfsg suffix from version
+    - d/p/power/*: Add optimized crc32 for POWER8+
+    - d/p/s390x/*: Add optimized crc32 and hardware deflate
+    - Add watch file, with GPG tarball checking, and version mangling
+    - Build x32 packages
+    - Stop building 32bit lib on s390x (LP: #2075313)
+    - Fix build for package metadata
+
+  * d/p/{power,s390x}/*: refreshed (dropped README.contrib, fixed minor
+    conflicts)
+
+ -- Simon Chopin <schopin@ubuntu.com>  Tue, 13 Aug 2024 13:20:36 +0200
+
+zlib (1:1.3.dfsg+really1.3.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Mark Brown <broonie@debian.org>  Fri, 10 May 2024 10:32:36 +0100
+
+zlib (1:1.3.dfsg-3.1ubuntu4) oracular; urgency=medium
+
+  * Stop building 32bit lib on s390x.
+  * Fix build for package metadata.
+
+ -- Matthias Klose <doko@ubuntu.com>  Fri, 02 Aug 2024 05:53:41 +0200
+
+zlib (1:1.3.dfsg-3.1ubuntu2) noble; urgency=medium
+
+  * No-change rebuild for CVE-2024-3094
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Sun, 31 Mar 2024 08:35:49 +0000
+
+zlib (1:1.3.dfsg-3.1ubuntu1) noble; urgency=medium
+
+  * Merge with Debian; remaining changes:
+    - Build x32 packages
+    - Add watch file, with GPG tarball checking, and version mangling
+    - d/rules: Compile with DFLTCC enabled on s390x and hardware
+      compression at level 6
+    - d/zlib-core.symbols: Drop dfsg suffix from version
+    - d/p/power/*: Add optimized crc32 for POWER8+
+    - d/p/s390x/*: Add optimized crc32 and hardware deflate
+
+ -- Matthias Klose <doko@ubuntu.com>  Sat, 02 Mar 2024 11:36:00 +0100
+
+zlib (1:1.3.dfsg-3.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Rename libraries for 64-bit time_t transition.  Closes: #1063242
+
+ -- Benjamin Drung <bdrung@debian.org>  Fri, 01 Mar 2024 12:59:44 +0000
+
+zlib (1:1.3.dfsg-3ubuntu1) noble; urgency=medium
+
+  * Merge with Debian unstable. Remaining changes:
+    - Build x32 packages
+    - Add watch file, with GPG tarball checking, and version mangling
+    - d/rules: Compile with DFLTCC enabled on s390x and hardware
+      compression at level 6
+    - d/zlib-core.symbols: Drop dfsg suffix from version
+  * New patches rebased from iii-i/zlib/dfltcc on GitHub:
+    - d/p/power/*: Add optimized crc32 for POWER8+
+    - d/p/s390x/*: Add optimized crc32 and hardware deflate
+  * Patches superseded by the above:
+    - d/p/410.patch: Add support for IBM Z hardware-accelerated deflate
+    - d/p/478.patch: Add optimized crc32 for Power 8+ processors
+    - d/p/s390x-vectorize-crc32.patch: Add s390x vectorized crc32 support
+    - d/p/1390.patch: Don't update strm.adler for raw streams on s390x
+      (DFLTCC), otherwise libxml2 gets broken on s390x. LP #2002511
+    - d/p/lp-2018293-fix-crash-in-deflateBound-if-called-before-deflateInt
+      .patch: Avoid potential deflateBound() function crash on s390x
+
+ -- Mate Kukri <mate.kukri@canonical.com>  Fri, 24 Nov 2023 08:22:52 +0000
+
+zlib (1:1.3.dfsg-3) unstable; urgency=low
+
+  * Update the version of texlive-binaries we break since they still had
+    broken version checks (closes: #1056312).
+
+ -- Mark Brown <broonie@debian.org>  Thu, 23 Nov 2023 13:02:20 +0000
+
+zlib (1:1.3.dfsg-2) unstable; urgency=low
+
+  * Install library into /usr (closes: #1055938).
+  * Backport patch for minizip CVE-2023-45853 (closes: #1054290).
+
+ -- Mark Brown <broonie@debian.org>  Fri, 17 Nov 2023 22:10:10 +0000
+
+zlib (1:1.3.dfsg-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Mark Brown <broonie@debian.org>  Mon, 06 Nov 2023 16:28:55 +0000
+
+zlib (1:1.2.13.dfsg-3) unstable; urgency=low
+
+  * Further fixes to the minizip integration, don't install the minizip
+    headers in both -dev packages (closes: #1049384).
+
+ -- Mark Brown <broonie@debian.org>  Tue, 15 Aug 2023 14:35:28 +0100
+
+zlib (1:1.2.13.dfsg-2) unstable; urgency=low
+
+  * Build minizip packages since for some reason the minizip upstream
+    appears to have decided to release via zlib's contrib directiory
+    and do nothing separate, patch from Michael Gilbert adapted to fix
+    build issues (closes: #956181).
+
+ -- Mark Brown <broonie@debian.org>  Tue, 15 Aug 2023 00:28:42 +0100
+
+zlib (1:1.2.13.dfsg-1ubuntu5) mantic; urgency=medium
+
+  * Add
+    d/p/lp-2018293-fix-crash-in-deflateBound-if-called-before-deflateInt.patch
+    to avoid potential deflateBound() function crash on s390x.
+  * Clean-up and remove
+    d/p/lp1932010-ibm-z-add-vectorized-crc32-implementation.patch since it was
+    replaced by d/p/s390x-vectorize-crc32.patch with 1.2.13.dfsg-1ubuntu3
+    but was still in d/p/ (but not in d/p/series). 
+
+ -- Frank Heimes <frank.heimes@canonical.com>  Wed, 02 Aug 2023 13:22:26 +0200
+
+# Older entries have been removed from this changelog.
+# To read the complete changelog use `apt changelog zlib1g`.

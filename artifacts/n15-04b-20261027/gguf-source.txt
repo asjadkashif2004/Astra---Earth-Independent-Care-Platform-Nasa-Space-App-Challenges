@@ -1,0 +1,81 @@
+"""Bounded GGUF metadata/tensor inspection only. Never loads native code."""
+import collections,io,math,struct
+
+def inspect_gguf(stream,size):
+    strings=0
+    def take(n):
+        if n<0 or stream.tell()+n>min(size,67108864):raise ValueError('Truncated/oversized GGUF header')
+        data=stream.read(n)
+        if len(data)!=n:raise ValueError('Truncated GGUF header')
+        return data
+    def number(fmt):return struct.unpack('<'+fmt,take(struct.calcsize('<'+fmt)))[0]
+    def string():
+        nonlocal strings
+        n=number('Q')
+        if n>1048576:raise ValueError('Oversized metadata string')
+        strings+=n
+        if strings>33554432:raise ValueError('Metadata string budget')
+        return take(n).decode('utf-8',errors='strict')
+    scalar={0:'B',1:'b',2:'H',3:'h',4:'I',5:'i',6:'f',7:'?',10:'Q',11:'q',12:'d'}
+    special={}
+    def value(kind,key,depth=0):
+        if kind in scalar:return number(scalar[kind])
+        if kind==8:return string()
+        if kind!=9 or depth:raise ValueError('Unsupported/nested metadata type')
+        element=number('I');count=number('Q')
+        if count>2000000:raise ValueError('Metadata array count')
+        if element in scalar:
+            n=struct.calcsize('<'+scalar[element])*count
+            if stream.tell()+n>min(size,67108864):raise ValueError('Truncated scalar array')
+            stream.seek(n,1)
+        elif element==8:
+            for i in range(count):
+                text=string()
+                if key=='tokenizer.ggml.tokens' and text in ['<|im_start|>','<|im_end|>','<|endoftext|>']:special[text]=i
+        else:raise ValueError('Unsupported metadata array element')
+        return {'element_type':element,'count':count}
+    if take(4)!=b'GGUF':raise ValueError('Not GGUF')
+    version=number('I');nt=number('Q');nm=number('Q')
+    if version not in [2,3] or not 0<nt<=4096 or not 0<nm<=1024:raise ValueError('Unsupported GGUF version/counts')
+    meta={}
+    for _ in range(nm):
+        key=string()
+        if key in meta or not key or len(key)>512:raise ValueError('Duplicate/invalid metadata key')
+        meta[key]=value(number('I'),key)
+    # ggml block sizes/type sizes. No tensor data is interpreted or executed.
+    types={0:(1,4),1:(1,2),2:(32,18),3:(32,20),6:(32,22),7:(32,24),8:(32,34),9:(32,40),10:(256,84),11:(256,110),12:(256,144),13:(256,176),14:(256,210),15:(256,292)}
+    tensors=[];seen=set()
+    for _ in range(nt):
+        name=string();nd=number('I')
+        if name in seen or not name or not 1<=nd<=4:raise ValueError('Invalid tensor identity/rank')
+        seen.add(name);shape=[number('Q') for _ in range(nd)]
+        if any(n==0 or n>2000000 for n in shape) or math.prod(shape)>2000000000:raise ValueError('Invalid tensor dimensions')
+        kind=number('I');offset=number('Q')
+        if kind not in types:raise ValueError('Unsupported tensor quantization')
+        block,nbytes=types[kind]
+        if shape[0]%block or math.prod(shape)%block:raise ValueError('Invalid quantization block shape')
+        tensors.append({'name':name,'shape':shape,'type':kind,'offset':offset,'bytes':math.prod(shape)//block*nbytes})
+    alignment=meta.get('general.alignment',32)
+    if not isinstance(alignment,int) or alignment<1 or alignment>4096 or alignment&(alignment-1):raise ValueError('Invalid GGUF alignment')
+    start=(stream.tell()+alignment-1)//alignment*alignment
+    last=0
+    for t in sorted(tensors,key=lambda t:t['offset']):
+        if t['offset']%alignment or t['offset']<last or start+t['offset']+t['bytes']>size:raise ValueError('Overlapping/out-of-bounds tensor payload')
+        last=t['offset']+t['bytes']
+    return {'version':version,'tensor_count':nt,'metadata_count':nm,'header_data_offset':start,'file_bytes':size,'tensor_types':dict(collections.Counter(t['type'] for t in tensors)),'metadata':meta,'special_token_ids':special,'tensors':tensors,'safety':'Metadata only; tensor offsets/sizes verified, not native semantic or malicious-model certification.'}
+
+def controls():
+    def text(s):
+        b=s.encode();return struct.pack('<Q',len(b))+b
+    metadata=text('general.architecture')+struct.pack('<I',8)+text('qwen2')
+    tensor=text('fixture.weight')+struct.pack('<I',1)+struct.pack('<QIQ',1,0,0)
+    data=b'GGUF'+struct.pack('<IQQ',3,1,1)+metadata+tensor
+    valid=data+b'\0'*((-len(data))%32)+struct.pack('<f',1.)
+    cases=[('valid',valid,len(valid),True),('bad_magic',b'NOPE'+valid[4:],len(valid),False),('truncated',valid[:15],15,False),('unsupported_version',valid[:4]+struct.pack('<I',99)+valid[8:],len(valid),False),('missing_tensor_data',valid[:-4],len(valid)-4,False),('oversized_count',valid[:8]+struct.pack('<Q',999999)+valid[16:],len(valid),False)]
+    result=[]
+    for name,payload,size,accepted in cases:
+        try:inspect_gguf(io.BytesIO(payload),size);actual=True
+        except (ValueError,UnicodeError,struct.error):actual=False
+        if actual!=accepted:raise AssertionError(name)
+        result.append({'case':name,'PASS':True})
+    return result

@@ -1,0 +1,16 @@
+✔ N04-P01: communication states,priority,bandwidth,jitter,loss,retry,blackout and reopened cursor match360 pre-repair golden steps (57.430526ms)
+✔ N04-P01: packets that cannot transmit or arrive perform no full-payload reads or packet writes (1.180223ms)
+✔ N04-P01: exact due-time delivery retains original observation/transmission/reception and occurs only once (1.173591ms)
+✔ N04-P01: an actual due packet write failure rolls back telemetry,history,queue,state and transmission cursor together (77.521614ms)
+✔ N04-P01: browser probe parses and discarded/warm-up observations cannot become trial samples (0.539867ms)
+✔ N04-P01: captured glyph verification rejects blank/outside images,unsupported PNGs,wrong values and unreviewed text (2.03544ms)
+✔ N04-P01: global fast latency cannot conceal one failed metric,and source/text/clock gaps never count as acceptance (97.307904ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 424.136735
+

@@ -1,0 +1,28 @@
+✔ Sleep-EDF: exact two-file/checksum allowlist rejects all other datasets,subjects,queries and URL variants (1.399745ms)
+✔ Sleep-EDF: source-specific exception cannot change old caps or authorize other files,hashes,rights or budgets (9.120415ms)
+✔ Sleep-EDF: publisher metadata corruption or unsupported receipt cannot establish file integrity (0.328433ms)
+✔ Sleep-EDF: actual complete publisher metadata establishes exact pins;missing/false/unbounded receipts reject (11.024202ms)
+✔ Sleep-EDF: bundle first-file failure stops annotation request,preserves partials and releases owned lock;no automatic resume (21.70967ms)
+✔ Sleep-EDF: partials or persisted/forged JSON summaries cannot produce a verified dataset card or split (0.640956ms)
+✔ Sleep-EDF: bounded EDF header parsing verifies complete record lengths,calibration,montage and local clock without inventing timezone (1.293043ms)
+✔ Sleep-EDF: malformed/truncated headers,unbounded signals,record lengths and invalid calendars fail closed (1.09122ms)
+✔ Sleep-EDF: EDF+ annotation parser preserves source stages,including unscored labels,without creating medical conclusions (0.777465ms)
+✔ Sleep-EDF: pair validation rejects different clocks,missing PSG signals,overlap and annotations beyond source duration (0.704676ms)
+✔ Sleep-EDF: zero-duration annotation records are structurally allowed,but discontinuous or signal-zero-duration files are unsupported (0.786202ms)
+✔ Sleep-EDF: streaming keeps original bytes,incremental hash and one-request receipt with bounded progress (4.373112ms)
+✔ Sleep-EDF: truncation and late transport failure retain partial bytes,prefix evidence and closed handles without success (4.627111ms)
+✔ Sleep-EDF: incorrect status,compressed/HTML content,length,oversize and changed bytes cannot be accepted (8.33079ms)
+✔ Sleep-EDF: aggregate byte/time limits and per-file deadline apply before network;stalled transfer aborts with cleanup (28.469988ms)
+✔ Sleep-EDF: cancellation,no-follow file protection and immutable existing files prevent unintended writes (2.357746ms)
+✔ Sleep-EDF: offline streamed hash and bounded header reads detect changed size or bytes (3.652893ms)
+✔ Sleep-EDF: invalid approvals and publisher evidence reject before starting a bundle or creating accepted files (1.169072ms)
+✔ Sleep-EDF: CLI accepts only explicit acquire-with-reviewed-metadata and offline modes (0.37402ms)
+﹣ Sleep-EDF: completed real originals,publisher checksums,manifest,card and subject-group policy verify offline (0.04732ms) # SKIP
+ℹ tests 20
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 225.353066

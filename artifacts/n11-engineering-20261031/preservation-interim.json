@@ -1,0 +1,17 @@
+{
+  "old_files": 3091,
+  "changed": [
+    "apps/mission-control-web/app.mjs",
+    "apps/mission-control-web/index.html",
+    "apps/mission-control-web/sw.js",
+    "docs/MODULE_TRACKER.md",
+    "scripts/browser-acceptance.mjs",
+    "scripts/frontend-smoke.mjs",
+    "services/api/server.mjs",
+    "services/api/store.mjs",
+    "tests/dom-harness.mjs",
+    "tests/sleep-lifecycle.test.mjs",
+    "docs/DE_N11_SYNTHETIC_01.md"
+  ],
+  "missing": []
+}

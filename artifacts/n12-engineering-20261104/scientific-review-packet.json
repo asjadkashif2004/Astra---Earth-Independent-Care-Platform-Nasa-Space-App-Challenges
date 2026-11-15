@@ -1,0 +1,205 @@
+{
+  "schema_version": "astra.n12.review-packet.v1",
+  "status": "PENDING_INDEPENDENT_HUMAN_REVIEW",
+  "reviewer": null,
+  "review_date": null,
+  "decision": null,
+  "owner_sequencing_approval": "DE-N12-SYNTHETIC-01 activation only",
+  "dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+  "source_origin": "Unchanged N09 generator + separately labeled arithmetic controls",
+  "model_versions": [
+    {
+      "id": "n12-persistence",
+      "metric": "heart_rate",
+      "horizon": 5,
+      "hash": "039474c9a90636583ada3d497f55d771935512f0c387c72c2d1bb2c3ea109c29",
+      "selection": "ENGINEERING_BASELINE"
+    },
+    {
+      "id": "n12-persistence",
+      "metric": "heart_rate",
+      "horizon": 15,
+      "hash": "2e3a2149c18cd347ac38ffc20193efae3c7832b8d18cd47904bc47d1387bd0be",
+      "selection": "ENGINEERING_BASELINE"
+    },
+    {
+      "id": "n12-persistence",
+      "metric": "heart_rate",
+      "horizon": 30,
+      "hash": "191d414467349f1e465b022d73a721b1a7075742c604ffbe158a911ab76bb1ff",
+      "selection": "ENGINEERING_BASELINE"
+    },
+    {
+      "id": "n12-persistence",
+      "metric": "heart_rate",
+      "horizon": 60,
+      "hash": "7b04a8ea71e91db2cff7a24a4286f2b84eeaadc4d3b86b85bc087d1b326bae6c",
+      "selection": "ENGINEERING_BASELINE"
+    },
+    {
+      "id": "n12-persistence",
+      "metric": "hrv",
+      "horizon": 5,
+      "hash": "425b6aa568b88ed8a5218ea1aabf562bd7ae1bdb7682b50c0c6b6f4fbba92040",
+      "selection": "ENGINEERING_BASELINE"
+    },
+    {
+      "id": "n12-persistence",
+      "metric": "hrv",
+      "horizon": 15,
+      "hash": "0027baf60fd9eaae64c110bf0b03554df5488682a6a8b4ffce4c79a0a89af7b5",
+      "selection": "ENGINEERING_BASELINE"
+    },
+    {
+      "id": "n12-persistence",
+      "metric": "hrv",
+      "horizon": 30,
+      "hash": "78f9b0f9185c187c44494d4efcc041e78bfea7ea58111e2c3695e156f76c209a",
+      "selection": "ENGINEERING_BASELINE"
+    },
+    {
+      "id": "n12-persistence",
+      "metric": "hrv",
+      "horizon": 60,
+      "hash": "12dae6e02b8ab5999a138e57245fbc5e3d8aa19ded3edaa372d538813d8a79e5",
+      "selection": "ENGINEERING_BASELINE"
+    },
+    {
+      "id": "n12-linear",
+      "metric": "heart_rate",
+      "horizon": 5,
+      "hash": "8dbbc32db5d03c35df989b0615afc860f7dd91d7e66eaceaf2773bf20515eb23",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE"
+    },
+    {
+      "id": "n12-linear",
+      "metric": "heart_rate",
+      "horizon": 15,
+      "hash": "c3f19dc56b2485b66ec6642546c35db3b5a0a0b7b08fd766d321b4f2a11f2d85",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE"
+    },
+    {
+      "id": "n12-linear",
+      "metric": "heart_rate",
+      "horizon": 30,
+      "hash": "728b71fd76a80199f832e7bbe98bad036e4cd963aa18a873ee0f00cd8415c7a5",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE"
+    },
+    {
+      "id": "n12-linear",
+      "metric": "heart_rate",
+      "horizon": 60,
+      "hash": "9001432691a8d0ffcf4f9cedbd82dd2621d54a10175c7bd20d5f64a439293909",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE"
+    },
+    {
+      "id": "n12-linear",
+      "metric": "hrv",
+      "horizon": 5,
+      "hash": "4f2d64297474b2a626d549275de8f1462cc4897d18c21968bfb90738937a632f",
+      "selection": "ENGINEERING_QUALIFIED_SYNTHETIC_ONLY"
+    },
+    {
+      "id": "n12-linear",
+      "metric": "hrv",
+      "horizon": 15,
+      "hash": "2f95c1f5d62f03976695265fac7c064d1dd05651d48b42503aec6c90ee1b96bb",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE"
+    },
+    {
+      "id": "n12-linear",
+      "metric": "hrv",
+      "horizon": 30,
+      "hash": "468fd013cb5459a30da3e7f837ff791c0d678fae242e0a52889a9b308c3913e7",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE"
+    },
+    {
+      "id": "n12-linear",
+      "metric": "hrv",
+      "horizon": 60,
+      "hash": "db1e3b3bff334f6281358ffbf9715b353c538aa75b38f0b137bb9ed9156fc5c1",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE"
+    },
+    {
+      "id": "n12-robust",
+      "metric": "heart_rate",
+      "horizon": 5,
+      "hash": "5a401d1439b3248cd0e6728d0b5fed5fa0241a4182f6093347a0c68cade60f5a",
+      "selection": "ENGINEERING_QUALIFIED_SYNTHETIC_ONLY"
+    },
+    {
+      "id": "n12-robust",
+      "metric": "heart_rate",
+      "horizon": 15,
+      "hash": "dcdf35c4fb2d704e4f2e6a44a8e9b7c0b16c82afd7586ded03f84a6934633c85",
+      "selection": "ENGINEERING_QUALIFIED_SYNTHETIC_ONLY"
+    },
+    {
+      "id": "n12-robust",
+      "metric": "heart_rate",
+      "horizon": 30,
+      "hash": "790bbbd0379a54b6a21a4987cb31543ce06c058e334198518e7d4bb17760db04",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE"
+    },
+    {
+      "id": "n12-robust",
+      "metric": "heart_rate",
+      "horizon": 60,
+      "hash": "b4b74765bcc93c118e9a1be65e523879d8403f84070ea2070419d901a265d4da",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE"
+    },
+    {
+      "id": "n12-robust",
+      "metric": "hrv",
+      "horizon": 5,
+      "hash": "bfe8d488562d35e6a43ce29edeb6cc62a68163873558ea390d8ead54a4aae057",
+      "selection": "ENGINEERING_QUALIFIED_SYNTHETIC_ONLY"
+    },
+    {
+      "id": "n12-robust",
+      "metric": "hrv",
+      "horizon": 15,
+      "hash": "90d4d342083898439e65b4d902ba1050e261f292742945db5d106a08d3781db4",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE"
+    },
+    {
+      "id": "n12-robust",
+      "metric": "hrv",
+      "horizon": 30,
+      "hash": "a7b1d4ee5744d92b72dc25d8c37a4f142f4c66dad945fccfce37d90a2a1fc6a9",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE"
+    },
+    {
+      "id": "n12-robust",
+      "metric": "hrv",
+      "horizon": 60,
+      "hash": "5372b545fa95d4949f7ee4380906f3178f32ed33ec2b132fcc51aef85abaaa10",
+      "selection": "REJECTED_FOR_ADDITIONAL_USE"
+    }
+  ],
+  "source_eligibility": "AUTHORED_SYNTHETIC_ONLY",
+  "main_partitions": {
+    "train": 4,
+    "calibration": 4,
+    "test": 10
+  },
+  "separate_partitions": {
+    "seen_robustness": 6,
+    "analytical_controls": 6
+  },
+  "numerical_evidence": "execution-01/evaluation.json",
+  "limitations": [
+    "No independent authentic biomedical test data",
+    "No scientific group/split approval",
+    "Empirical interval coverage is not uniformly0.9",
+    "No operational model promoted",
+    "N11 Isolation Forest remains rejected",
+    "N03/AC20 and release gates remain open"
+  ],
+  "required_external_decisions": [
+    "N07 source/rights/independent scientific validation",
+    "Full N09/N11 and transitive prerequisite acceptance",
+    "Independent method/calibration/generalization review against eligible real data",
+    "Hardware and release approval; separate N16 operational integration authority"
+  ]
+}

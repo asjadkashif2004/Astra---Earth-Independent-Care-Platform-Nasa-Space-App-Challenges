@@ -1,0 +1,84 @@
+from pathlib import Path
+import subprocess, json, hashlib, re, tempfile, datetime, os, shutil
+
+OUT=Path('/tmp/astra-n15-03c-static')
+OUT.mkdir(exist_ok=False)
+ROOT=Path('/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669')
+LISTS=Path('/var/lib/apt/lists')
+def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def save(name,text):
+ (OUT/name).write_text(text if isinstance(text,str) else json.dumps(text,indent=2)+'\n')
+def command(name,args):
+ r=subprocess.run(args,text=True,capture_output=True,timeout=15)
+ save(name+'.json',{'args':args,'returncode':r.returncode,'stdout':r.stdout,'stderr':r.stderr})
+ if r.returncode: raise RuntimeError(name+' failed: '+r.stderr[:500])
+ return r.stdout
+save('host.json',{'at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'os_release':Path('/etc/os-release').read_text(),'kernel':Path('/proc/version').read_text(),'machine':os.uname().machine,'libc':os.confstr('CS_GNU_LIBC_VERSION'),'cpu_flags':next(s.split(':',1)[1].strip().split() for s in Path('/proc/cpuinfo').read_text().splitlines() if s.startswith('flags')),'expected_libgomp_paths':{p:str(Path(p).exists()) for p in ['/usr/lib/x86_64-linux-gnu/libgomp.so.1','/lib/x86_64-linux-gnu/libgomp.so.1','/usr/lib64/libgomp.so.1','/lib64/libgomp.so.1']}})
+command('apt-policy',['apt-cache','policy','libgomp1'])
+stanza=command('apt-show',['apt-cache','show','libgomp1'])
+command('installed-packages',['dpkg-query','-W','-f=${binary:Package}\t${Version}\t${Architecture}\n','gcc-16-base','libc6','libgcc-s1','libstdc++6','ubuntu-keyring','libssl3t64'])
+command('apt-sources',['cat','/etc/apt/sources.list.d/ubuntu.sources'])
+key='/usr/share/keyrings/ubuntu-archive-keyring.gpg'
+save('keyring.json',{'path':key,'sha256':sha(key)})
+repo=[]
+with tempfile.TemporaryDirectory(prefix='astra-n15-03c-gpg-') as h:
+ for stem in ['archive.ubuntu.com_ubuntu_dists_resolute','archive.ubuntu.com_ubuntu_dists_resolute-updates','security.ubuntu.com_ubuntu_dists_resolute-security']:
+  release=LISTS/(stem+'_InRelease')
+  text=release.read_text()
+  command(stem+'-gpgv',['gpgv','--homedir',h,'--keyring',key,'--status-fd','1',str(release)])
+  shutil.copyfile(release,OUT/(stem+'_InRelease'))
+  fields={k:re.search('^'+k+': (.*)$',text,re.M).group(1) for k in ['Origin','Suite','Codename','Date']}
+  fields['Valid-Until']=re.search('^Valid-Until: (.*)$',text,re.M).group(1) if re.search('^Valid-Until: (.*)$',text,re.M) else None
+  section=text.split('SHA256:\n',1)[1].split('SHA512:',1)[0]
+  match=re.search(r'^ ([a-f0-9]{64})\s+(\d+) main/binary-amd64/Packages$',section,re.M)
+  if not match: raise ValueError('missing Packages SHA256')
+  idx=LISTS/(stem+'_main_binary-amd64_Packages')
+  actual=sha(idx); size=idx.stat().st_size
+  if actual!=match.group(1) or size!=int(match.group(2)): raise ValueError('Packages signature-chain mismatch')
+  rows=[s for s in idx.read_text().split('\n\n') if s.startswith('Package: libgomp1\n')]
+  for i,s in enumerate(rows): save(stem+'-libgomp1-'+str(i)+'.txt',s+'\n')
+  repo.append({'stem':stem,'release':fields,'signature_verified':True,'index_path':str(idx),'index_size':size,'index_sha256':actual,'signed_hash_match':True,'libgomp1_stanzas':rows})
+save('repository-chain.json',repo)
+
+cache=command('loader-cache',['ldconfig','-p'])
+allowed={}
+for s in cache.splitlines():
+ m=re.match(r'\s*(\S+) \(libc6,x86-64[^)]*\) => (\S+)',s)
+ if m and m.group(2).startswith(('/usr/lib/x86_64-linux-gnu/','/lib/x86_64-linux-gnu/')): allowed[m.group(1)]=Path(m.group(2))
+allowed['ld-linux-x86-64.so.2']=Path('/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2')
+queue=['llama-completion','libggml-cpu-haswell.so']
+done={}; missing=[]
+while queue:
+ n=queue.pop(0)
+ if n in done or n in missing: continue
+ p=ROOT/n if (ROOT/n).is_file() else allowed.get(n)
+ if p is None or not p.is_file(): missing.append(n); continue
+ p=p.resolve()
+ d=command('elf-'+n+'-dynamic',['readelf','--dynamic','--wide',str(p)])
+ v=command('elf-'+n+'-versions',['readelf','--version-info','--wide',str(p)])
+ sym=subprocess.run(['readelf','--dyn-syms','--wide',str(p)],text=True,capture_output=True,timeout=15,check=True).stdout
+ needed=re.findall(r'Shared library: \[(.*?)\]',d)
+ req={}; current=None
+ needpart=v.split('Version needs section',1)[1] if 'Version needs section' in v else ''
+ for s in needpart.splitlines():
+  f=re.search(r'File: (\S+)',s)
+  if f: current=f.group(1); req[current]=[]
+  ver=re.search(r'Name: (\S+)',s)
+  if ver and current: req[current].append(ver.group(1))
+ exports=sorted(set(re.findall(r'Name: (\S+)',v.split('Version needs section',1)[0].split('Version definition section',1)[1]))) if 'Version definition section' in v else []
+ gomp=[s.strip() for s in sym.splitlines() if ' UND ' in s and re.search(r'(GOMP|OMP)_|omp_',s)]
+ done[n]={'path':str(p),'sha256':sha(p),'needed':needed,'required_versions':req,'defined_versions':exports,'gomp_omp_undefined_symbols':gomp}
+ queue+=needed
+checks=[]
+for n,r in done.items():
+ for dep,vers in r['required_versions'].items():
+  checks.append({'consumer':n,'provider':dep,'required':vers,'status':'UNRESOLVED_PROVIDER' if dep not in done else ('PASS' if set(vers)<=set(done[dep]['defined_versions']) else 'MISSING_VERSION'),'missing_versions':None if dep not in done else sorted(set(vers)-set(done[dep]['defined_versions']))})
+save('elf-dependency-closure.json',{'mode':'static readelf only; no ldd/native loader/runtime execution','roots':['llama-completion','libggml-cpu-haswell.so'],'files':done,'unresolved':missing,'version_node_checks':checks,'limitation':'Version-node existence is not per-symbol binding, native execution, CPU backend auto-selection or full dependency security clearance.'})
+for source,target in [('/usr/share/doc/gcc-16-base/copyright','gcc16-copyright-local.txt'),('/usr/share/common-licenses/GPL-3','GPL-3.txt')]: shutil.copyfile(source,OUT/target)
+remote=Path('/tmp/astra-n15-03c-metadata/ubuntu-gcc16-copyright.original')
+save('copyright-comparison.json',{'local_sha256':sha(OUT/'gcc16-copyright-local.txt'),'remote_sha256':sha(remote) if remote.exists() else None,'exact_match':remote.exists() and sha(remote)==sha(OUT/'gcc16-copyright-local.txt'),'package_license_pending':'Recheck acquired libgomp1 copyright/symlink, applicable source offer and notices before redistribution; no .deb acquired.'})
+archive=Path('/var/tmp/astra-n15-03-swuxjpfe/llama-b11669-bin-ubuntu-x64.tar.gz')
+digest=sha(archive)
+if digest!='cf07c1c112d709bd67e522017471de57ed0ec8bea031d732c5422351c07f65ac': raise ValueError('Preserved archive hash mismatch')
+save('archive-preservation.json',{'path':str(archive),'bytes':archive.stat().st_size,'sha256':digest,'unchanged':True,'new_runtime_downloads':0,'package_downloads':0,'native_commands':0})
+print(json.dumps({'signature_chains':len(repo),'elf_files':len(done),'unresolved':missing,'version_checks':len(checks),'version_node_failures':[x for x in checks if x['status']=='MISSING_VERSION'],'archive_preserved':True,'output':str(OUT)}))

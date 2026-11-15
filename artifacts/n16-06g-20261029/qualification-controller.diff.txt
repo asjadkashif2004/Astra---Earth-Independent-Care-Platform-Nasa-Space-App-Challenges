@@ -1,0 +1,93 @@
+--- scripts/n16-single-select-qualification.mjs
++++ scripts/n16-quality-qualification.mjs
+@@ -1,4 +1,4 @@
+-// One owner-authorized N16-06F qualification. No caller-selected path, role or SQL.
++// One owner-authorized N16-06G qualification. No caller-selected path, role or SQL.
+ import { spawn } from 'node:child_process';
+ import { open,mkdir,readFile,lstat,readdir,rename,unlink } from 'node:fs/promises';
+ import { constants as F } from 'node:fs';
+@@ -11,17 +11,18 @@
+ import { QualificationBatch } from '../services/agent/qualification-batch.mjs';
+ import { commitContainment } from '../services/agent/containment-diagnostics.mjs';
+ import { CONTAINMENT_PIN_POLICY,verifyDependencyPins } from '../services/agent/dependency-pins.mjs';
+-import { SINGLE_MODE,singleCheck as check,authorizeSingle,verifySingleGuard,verifyBinding } from '../services/agent/single-select-contract.mjs';
++import { singleCheck as check,verifySingleGuard,verifyBinding } from '../services/agent/single-select-contract.mjs';
++import { QUALITY_MODE as SINGLE_MODE,authorizeQuality as authorizeSingle,assessQuality } from '../services/agent/single-quality-contract.mjs';
+ import { DESIGNATED_ROOT,inspectSealedSource } from '../services/agent/single-select-source.mjs';
+ import { SOURCE_ID,SOURCE_SHA,AS_OF,expectedRows,designatedProjection } from '../services/agent/designated-contract.mjs';
+ import { QUERIES,projectRows } from '../services/agent/sqlite-fixture-contract.mjs';
+ 
+-const PROJECT=fileURLToPath(new URL('../',import.meta.url)),OUT=join(PROJECT,'artifacts/n16-06f-20261029');
++const PROJECT=fileURLToPath(new URL('../',import.meta.url)),OUT=join(PROJECT,'artifacts/n16-06g-20261029');
+ const CAPS={rss:536870912,storage:67108864,wall:1000,output:65536,cleanup:250};
+-const CALL={schema_version:'astra.n16.read-tools.v1',tool:'get_current_vitals',args:{crew_id:'CREW-03',metrics:['heart_rate']}};
+-const CALLER={principal:{id:'n16-06f-owner-demo',role:'astronaut',crew_id:'CREW-03'},crew_ids:['CREW-03'],read_as_of:AS_OF};
++const CALL={schema_version:'astra.n16.read-tools.v1',tool:'get_data_quality',args:{crew_id:'CREW-03',metrics:['heart_rate']}};
++const CALLER={principal:{id:'n16-06g-owner-demo',role:'astronaut',crew_id:'CREW-03'},crew_ids:['CREW-03'],read_as_of:AS_OF};
+ const STAGED=['services/agent/designated-worker.mjs','services/agent/single-select-runtime.mjs','services/agent/single-select-contract.mjs',
+-  'services/agent/single-select-source.mjs','services/agent/designated-contract.mjs','services/agent/sqlite-fixture-contract.mjs',
++  'services/agent/single-select-source.mjs','services/agent/single-quality-contract.mjs','services/agent/designated-contract.mjs','services/agent/sqlite-fixture-contract.mjs',
+   'services/agent/read-contract.mjs','services/agent/containment-diagnostics.mjs','packages/contracts.mjs','docs/N16_05_SOURCE_SPEC.json'];
+ async function metadata(path,max=2097152){const d=await safeDirectory(dirname(path));try{
+   const st=await lstat(d.at(basename(path)));check(st.isFile()&&!st.isSymbolicLink()&&st.nlink===1&&st.size<=max,'TASK_METADATA_UNSAFE');
+@@ -50,7 +51,7 @@
+ export async function qualify(){
+   check(process.argv.length===2,'NO_CALLER_OPTIONS');await mkdir(OUT,{recursive:true});authorizeSingle(CALL,CALLER);
+   const invocation=await open(join(OUT,'invocation.json'),F.O_CREAT|F.O_EXCL|F.O_WRONLY|F.O_NOFOLLOW,0o600);
+-  try{await invocation.writeFile(stable({task:'N16-06F',maximum_startups:1})+'\n');await invocation.sync();}finally{await invocation.close();}
++  try{await invocation.writeFile(stable({task:'N16-06G',maximum_startups:1})+'\n');await invocation.sync();}finally{await invocation.close();}
+   let trace,directory,child,closed,timer,interval,escalation,reason=null,exit=null,actualStarts=0,sampleBusy=false,
+     sampler=Promise.resolve(),handling=Promise.resolve(),peak=0,maxDisk=0,samples=0,started=null,ended=null,stderr='',buffer='',diagnostic=null,
+     acked=false,sqlAttempts=0,eventResult=null,ownedRemaining=0,handlerError=null;
+@@ -69,7 +70,7 @@
+     await verifyDependencyPins(CONTAINMENT_PIN_POLICY,{readInventory:p=>metadata(join(PROJECT,p)),readDependency:p=>readFile(join(PROJECT,p))});
+     const plan=parseJSON((await metadata(join(OUT,'code-plan.json'))).toString(),2097152);
+     for(const [p,h] of Object.entries(plan.code_pins))check(sha(await readFile(join(PROJECT,p)))===h,'CODE_PLAN_CHANGED');
+-    const qa=parseJSON((await metadata(join(OUT,'mandatory-qa.json'))).toString(),65536);check(qa.length===3&&qa.every(r=>r.verified===true&&r.exit_code===0),'MANDATORY_QA_FAILED');
++    const qa=parseJSON((await metadata(join(OUT,'mandatory-qa.json'))).toString(),65536);check(qa.length===4&&qa.every(r=>r.verified===true&&r.exit_code===0),'MANDATORY_QA_FAILED');
+     reg=parseJSON((await metadata(join(PROJECT,'artifacts/n16-06-20261029/registration.json'))).toString(),4096);
+     check(reg.root===DESIGNATED_ROOT&&reg.manifest_sha256==='5dab2628827a80b3af1f0a5d37ef64763144aba1510e7b0c7ea653a3f5ac286c'
+       &&reg.owner_sha256==='e1597530fc3236c7930990cfef4792b49782a51d781243591c0d946b645ebac1','REGISTRATION_CHANGED');
+@@ -79,13 +80,13 @@
+     directory=await safeDirectory(join(DESIGNATED_ROOT,'source'));
+     binding=inspectSealedSource(join(DESIGNATED_ROOT,'source'),spec,manifest.source_identity);
+     check(binding.source_id===manifest.source_id&&binding.source_sha256===manifest.source_sha256,'SOURCE_MANIFEST_BINDING');
+-    await mkdir(join(OUT,'traces'),{recursive:true});trace=await ExecutionTrace.create({task:'N16-06F',trusted_scope:CALLER,source:binding,manifest_sha256:reg.manifest_sha256},{root:join(OUT,'traces')});
++    await mkdir(join(OUT,'traces'),{recursive:true});trace=await ExecutionTrace.create({task:'N16-06G',trusted_scope:CALLER,source:binding,manifest_sha256:reg.manifest_sha256},{root:join(OUT,'traces')});
+     await trace.append('CALL_REQUESTED',{call_id:'call-01'});
+     await trace.append('CALL_VALIDATED',{call_id:'call-01',tool:CALL.tool,args:CALL.args,trusted_scope:CALLER});
+     await sample();check(maxDisk<CAPS.storage-1048576,'STORAGE_ADMISSION_FAILED');
+     await atomic('preflight.json',{status:'PASS',call:CALL,trusted_scope:CALLER,source:binding,code_pins:plan.code_pins,caps:CAPS,trace_id:trace.id,SQL_startups:0});
+     await trace.append('CALL_STARTED',{call_id:'call-01',tool:CALL.tool,args:CALL.args,SQL_status:'PENDING_GUARD_ACK'});
+-    await batch.run('get_current_vitals',async permit=>{
++    await batch.run('get_data_quality',async permit=>{
+       const reservation=await open(join(OUT,'startup-reserved.json'),F.O_CREAT|F.O_EXCL|F.O_WRONLY|F.O_NOFOLLOW,0o600);
+       try{await reservation.writeFile(stable({maximum_startups:1,trace_id:trace.id})+'\n');await reservation.sync();}finally{await reservation.close();}
+       permit.markStarted();started=performance.now();child=spawn('/usr/bin/bwrap',sandbox(3),{detached:true,stdio:['pipe','pipe','pipe',directory.fd],env:{PATH:'/usr/bin'}});
+@@ -125,14 +126,15 @@
+       &&r.query_sha256===sha(QUERIES.observation)&&stable(r.parameters)===stable(['CREW-03','heart_rate'])
+       &&r.selected_rows_sha256===sha(stable(selected))&&r.containment_diagnostic_sha256===diagnostic.hash
+       &&r.mount_namespace===diagnostic.proof.namespace,'SQL_RECEIPT_INVALID');
+-    check(stable(eventResult.result)===stable(projectRows('elevated',0,CALL,selected)),'SQL_RESULT_CHANGED');
++    check(stable(eventResult.receipt.quality_audit?.canonical_projection)===stable(projectRows('elevated',0,CALL,selected)),'QUALITY_AUDIT_CHANGED');
++    check(stable(eventResult.result)===stable(assessQuality(projectRows('elevated',0,CALL,selected))),'SQL_RESULT_CHANGED');
+     const after=inspectSealedSource(join(DESIGNATED_ROOT,'source'),spec,manifest.source_identity);check(stable(after)===stable(binding),'POST_READ_SOURCE_CHANGED');
+     const projected=designatedProjection(eventResult.result,CALL,CALLER,reg.manifest_sha256,sha(stable(manifest.source_identity)));
+     const result={run_id:trace.id,call_id:'call-01',execution_status:'COMPLETED',...projected,read_receipt:r};
+     const reference=await trace.result('call-01',result);await trace.append('CALL_COMPLETED',{call_id:'call-01',tool:CALL.tool,result:reference,execution_status:'COMPLETED',data_status:result.data_status});
+     await trace.append('RUN_ENDED',{status:'COMPLETED'});await trace.close();const id=trace.id;trace=null;
+     const recovery=await recoverTrace(id,{root:join(OUT,'traces')});check(recovery.status==='COMPLETE'&&recovery.executed_calls.length===1&&recovery.replayed_calls===0,'RECOVERY_FAILED');
+-    const batchState=await batch.drain();await atomic('outcome.json',{task:'N16-06F',outcome:'PASS',actual_startups:actualStarts,sql_attempts:sqlAttempts,
++    const batchState=await batch.drain();await atomic('outcome.json',{task:'N16-06G',outcome:'PASS',actual_startups:actualStarts,sql_attempts:sqlAttempts,
+       exit,diagnostic,source_before:binding,source_after:after,result,recovery,batch:batchState,events,stderr,
+       native_wall_ms:ended-started,max_process_RSS:peak,max_counted_storage:maxDisk,resource_samples:samples,owned_remaining:ownedRemaining,observer_pending:sampleBusy?1:0,
+       network_requests:0,downloads:0,explicit_SQL_statements:1,trace_id:id});
+@@ -142,7 +144,7 @@
+     clearTimeout(timer);clearTimeout(escalation);clearInterval(interval);await sampler;await handling;
+     if(trace){try{await trace.append('CALL_FAILED',{call_id:'call-01',tool:CALL.tool,code:reason});await trace.append('RUN_ENDED',{status:'FAILED'});}catch{}await trace.close();}
+     let state;try{state=await batch.drain();}catch{state=batch.state();}
+-    await atomic('outcome.json',{task:'N16-06F',outcome:'BLOCKED',reason,actual_startups:actualStarts,sql_attempts:sqlAttempts,exit,diagnostic,
++    await atomic('outcome.json',{task:'N16-06G',outcome:'BLOCKED',reason,execution_status:'FAILED',data_status:'UNKNOWN',actual_startups:actualStarts,sql_attempts:sqlAttempts,exit,diagnostic,
+       events,stderr,batch:state,native_wall_ms:ended!==null?ended-started:null,max_process_RSS:peak,max_counted_storage:maxDisk,resource_samples:samples,
+       observer_pending:sampleBusy?1:0,committed_results:0});throw error;
+   }finally{clearTimeout(timer);clearTimeout(escalation);clearInterval(interval);if(directory)await directory.close();}

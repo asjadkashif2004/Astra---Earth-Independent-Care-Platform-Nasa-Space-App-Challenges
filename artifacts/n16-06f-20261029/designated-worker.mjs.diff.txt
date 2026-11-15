@@ -1,0 +1,21 @@
+--- services/agent/designated-worker.mjs preserved
++++ services/agent/designated-worker.mjs N16-06F
+@@ -16,6 +16,10 @@
+ let db,diagnostic;
+ try{
+   const mode=process.argv[2],request=await next();
++  if(mode==='n16-06f-single-select-v1'){
++    const {runTaskSingleSelect}=await import('./single-select-runtime.mjs');
++    await runTaskSingleSelect(request,{DatabaseSync,constants,emit,next});
++  }else{
+   if(!['read','negative','timeout'].includes(mode)||request.profile!=='elevated'||request.generation!==0)fail('PROCESS_MODE_FORBIDDEN');
+   if(existsSync('/home')||existsSync('/mnt')||existsSync('/project'))fail('SANDBOX_PATH_LEAK');
+   if(readFileSync('/proc/net/route','utf8').trim().split('\n').length!==1)fail('NETWORK_NOT_ISOLATED');
+@@ -65,6 +69,7 @@
+       emit({event:'RESULT',result,receipt:{actual_sql_queries:query_ids.length,query_ids,selected_rows_sha256:sha(stable(selected)),
+         transaction_ms,readOnly:true,isolation,denied_operations:denied,before,after:files(),rss:process.memoryUsage().rss}});
+     }
++  }
+ }catch(e){if(db){try{db.close();}catch{}}
+   emit({event:'FAILED',code:e.errcode===5?'SQLITE_BUSY':e.errcode===6?'SQLITE_LOCKED':e.code?.startsWith('ERR_SQLITE')?'SQLITE_UNAVAILABLE':e.code??'SOURCE_UNAVAILABLE',
+     message:String(e.code??'guard_or_query_failure').slice(0,100),diagnostic_hash:diagnostic?.hash??null});process.exitCode=1;

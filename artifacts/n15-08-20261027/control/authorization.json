@@ -1,0 +1,13 @@
+{
+  "task": "N15-08",
+  "storage": 1500000000,
+  "stop_watermark": 1350000000,
+  "process_RSS": 2000000000,
+  "native_s_per_request": 120,
+  "requests": 2,
+  "CPU_only": true,
+  "network": 0,
+  "downloads": 0,
+  "scope": "Exactly one new frozen prompt policy, same supported/unsupported cases; no retries or tuning after outputs",
+  "protocol": "N15-06 mode/scratch labels retained for unchanged executeLocal/runner; actual authority is N15-08 only"
+}

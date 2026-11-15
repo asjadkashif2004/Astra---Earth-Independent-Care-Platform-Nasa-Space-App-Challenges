@@ -1,0 +1,8 @@
+{
+  "observer_alive": false,
+  "started": true,
+  "completed": true,
+  "activity": "stopped",
+  "join_seconds": 5,
+  "interrupted_scan_discarded": true
+}

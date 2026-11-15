@@ -1,0 +1,26 @@
+{
+  "outcome": "BLOCKED",
+  "reason": "PSG 300-second deadline;incomplete original;no retry",
+  "failure": {
+    "code": "ACQUISITION_ABORTED",
+    "message": "Acquisition cancelled or its total deadline expired.",
+    "at": "2026-10-24T06:46:29.671Z"
+  },
+  "expected_psg_bytes": 48338048,
+  "received_psg_bytes": 1146508,
+  "partial_prefix_sha256": "2f55853bf13fb5fdf322fc6099bedfca3dff14a93b3eb1e5cf9cd276cae10fc9",
+  "full_psg_sha256": null,
+  "annotation_attempted": false,
+  "complete_originals": 0,
+  "budget": {
+    "payload_bytes": 1186307,
+    "network_ms": 313594
+  },
+  "publisher_metadata_bytes": 39799,
+  "psg_phase_including_abort_cleanup_ms": 300018,
+  "configured_psg_deadline_ms": 300000,
+  "partial_path": "data/scientific/cache/.physionet-sleep-edfx-sc4001-1bc88e19e2e921f7851d7cf61e31ceb8f6d670211ca546a323e9db5a77525edf.partial",
+  "entry_promoted": false,
+  "owned_lock_present": false,
+  "publisher_original_sha256": "1bc88e19e2e921f7851d7cf61e31ceb8f6d670211ca546a323e9db5a77525edf"
+}

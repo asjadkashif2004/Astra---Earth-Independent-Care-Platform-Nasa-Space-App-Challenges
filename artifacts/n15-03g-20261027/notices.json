@@ -1,0 +1,94 @@
+{
+  "intended_use": "Private, unmodified, isolated research execution of one fixed --version command; no distribution, public demo packaging, service or transfer to a third party.",
+  "status": "PRIVATE_USE_TERMS_SUPPORTED_PRESERVE_NOTICE_PACKET",
+  "license_groups": [
+    {
+      "component": "llama.cpp / ggml / completion",
+      "license": "MIT",
+      "evidence": [
+        "artifacts/n15-03e-20261026/license-llama.cpp-MIT.txt"
+      ],
+      "private_execution": "Retain full copyright/permission/disclaimer with private copies; no conveyed source offer.",
+      "future_redistribution": "Include copyright/permission with all copies and review any added vendors; root MIT is not a blanket third-party license."
+    },
+    {
+      "component": "cpp-httplib 0.61.0",
+      "license": "MIT",
+      "evidence": [
+        "artifacts/n15-03e-20261026/vendor-cpp-httplib-LICENSE.original",
+        "artifacts/n15-03e-20261026/vendor-cpp-httplib-header.original"
+      ],
+      "private_execution": "Retain full MIT text and both preserved publisher-license and pinned-header copyright notices; do not process HTTP requests.",
+      "future_redistribution": "Same notices on conveyed copies; qualify any additional networking components."
+    },
+    {
+      "component": "nlohmann JSON 3.12.0",
+      "license": "MIT/SPDX, with local vendored patch",
+      "evidence": [
+        "artifacts/n15-03e-20261026/notice-nlohmann-MIT-derived.txt"
+      ],
+      "private_execution": "Retain labeled derived full MIT permission/copyright/disclaimer and pinned header attribution; no claim this is a fetched publisher license original.",
+      "future_redistribution": "Resolve precise upstream/vendored provenance and modification notices before distributing; preserve MIT terms."
+    },
+    {
+      "component": "sheredom/subprocess.h",
+      "license": "Unlicense/public-domain dedication",
+      "evidence": [
+        "artifacts/n15-03e-20261026/notice-sheredom-Unlicense-derived.txt"
+      ],
+      "private_execution": "Preserve verbatim dedication/disclaimer as provenance; no independent version invented; do not allow arbitrary child commands.",
+      "future_redistribution": "Retain dedication/disclaimer and exact header identity; review any modification/added components."
+    },
+    {
+      "component": "libgomp / libstdc++ / libgcc",
+      "license": "GPL-3.0-or-later WITH GCC Runtime Library Exception 3.1",
+      "evidence": [
+        "artifacts/n15-03e-20261026/copyright-gcc-16-base.txt",
+        "artifacts/n15-03e-20261026/license-GPL-3.txt"
+      ],
+      "private_execution": "GPLv3 section 2 permits running/propagating without conveying; retain full GPL/exception/package notices. No private-run corresponding-source offer is triggered.",
+      "future_redistribution": "Assess GPL conveying/corresponding-source obligations or precisely satisfied exception conditions. Do not assume eligible compilation or blanket proprietary-distribution permission."
+    },
+    {
+      "component": "glibc libc / libm / loader",
+      "license": "LGPL-2.1-or-later and file-specific terms",
+      "evidence": [
+        "artifacts/n15-03e-20261026/copyright-libc6.txt",
+        "artifacts/n15-03e-20261026/license-LGPL-2.1.txt"
+      ],
+      "private_execution": "LGPL section 0 does not restrict running a program using the library; retain full library/file-specific notices. No private-run external source/relinking offer.",
+      "future_redistribution": "Meet applicable LGPL source, license, modifications and relinking/replacement requirements, plus all file-specific notices."
+    },
+    {
+      "component": "OpenSSL libssl / libcrypto",
+      "license": "Apache-2.0",
+      "evidence": [
+        "artifacts/n15-03e-20261026/copyright-libssl3t64.txt",
+        "artifacts/n15-03e-20261026/license-Apache-2.0.txt"
+      ],
+      "private_execution": "Section 2 license permits use/copy; retain existing notices. Apache section 4 recipient/NOTICE redistribution conditions are not newly triggered by private execution. Upstream NOTICE completeness remains unknown.",
+      "future_redistribution": "Supply license, modification/attribution and any upstream NOTICE contents required by section 4; qualify upstream NOTICE completeness before conveying."
+    },
+    {
+      "component": "fixed zlib",
+      "license": "Zlib",
+      "evidence": [
+        "artifacts/n15-03e-20261026/../n15-03f-20261027/notice-zlib-copyright.txt"
+      ],
+      "private_execution": "Permission permits use; preserve full notice and unaltered source attribution; keep package and library identities.",
+      "future_redistribution": "Preserve required source notices and mark altered sources; do not misrepresent authorship."
+    },
+    {
+      "component": "libzstd",
+      "license": "BSD-3-Clause OR GPL-2 with file-specific Expat/Zlib",
+      "evidence": [
+        "artifacts/n15-03e-20261026/copyright-libzstd1.txt"
+      ],
+      "private_execution": "Retain complete package/file-specific notices; documented permissive option supports private use. Do not collapse mixed-file notices to root license.",
+      "future_redistribution": "Document selected license path, retain binary/source copyright/conditions/disclaimers and non-endorsement; meet file-specific or GPL obligations if that branch is chosen."
+    }
+  ],
+  "must_accompany_private_copies": "Full relevant existing notices; especially MIT copyright/permission on all copies. Derived evidence remains explicitly labeled derived.",
+  "not_a_distribution_clearance": true,
+  "optional_components": "Server/RPC/multimodal utilities, other CPU plugins and additional vendors are outside exact 17-file subset; if admitted, stop and reassess."
+}

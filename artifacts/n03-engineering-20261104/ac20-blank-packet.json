@@ -1,0 +1,46 @@
+{
+  "schema_version": "astra.ac20.physical.v1",
+  "device": {
+    "id": "",
+    "cpu": "",
+    "gpu": "",
+    "gpu_driver": "",
+    "ram_bytes": null,
+    "os": "",
+    "browser": "",
+    "power_mode": "",
+    "thermal_conditions": "",
+    "host_placement": ""
+  },
+  "minimum_machine_designation": {
+    "device_id": "",
+    "decision": "PENDING",
+    "owner": "",
+    "at": null,
+    "record_reference": ""
+  },
+  "visible_browser": null,
+  "headless": null,
+  "measurement": "",
+  "viewport": {
+    "width": 1920,
+    "height": 1080,
+    "dpr": null,
+    "zoom": null
+  },
+  "profile": "judge-performance",
+  "continuous_animation": null,
+  "reduced_motion": null,
+  "workload": {
+    "crew": 6,
+    "scalar_events_per_second": null,
+    "no_source_suppression": null
+  },
+  "required_active_scenes": [],
+  "trials": [],
+  "review": {
+    "owner": "",
+    "decision": "PENDING",
+    "at": null
+  }
+}

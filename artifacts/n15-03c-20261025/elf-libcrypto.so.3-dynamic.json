@@ -1,0 +1,11 @@
+{
+  "args": [
+    "readelf",
+    "--dynamic",
+    "--wide",
+    "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+  ],
+  "returncode": 0,
+  "stdout": "\nDynamic section at offset 0x613700 contains 31 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000001 (NEEDED)             Shared library: [libz.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libzstd.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000e (SONAME)             Library soname: [libcrypto.so.3]\n 0x000000000000000c (INIT)               0xe4000\n 0x000000000000000d (FINI)               0x477f04\n 0x0000000000000019 (INIT_ARRAY)         0x5977b0\n 0x000000000000001b (INIT_ARRAYSZ)       8 (bytes)\n 0x000000000000001a (FINI_ARRAY)         0x5977b8\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x308\n 0x0000000000000005 (STRTAB)             0x2e6b0\n 0x0000000000000006 (SYMTAB)             0xaed8\n 0x000000000000000a (STRSZ)              125994 (bytes)\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000003 (PLTGOT)             0x613930\n 0x0000000000000002 (PLTRELSZ)           4320 (bytes)\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000017 (JMPREL)             0xe2920\n 0x0000000000000007 (RELA)               0x50478\n 0x0000000000000008 (RELASZ)             599208 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffffc (VERDEF)             0x50230\n 0x000000006ffffffd (VERDEFNUM)          10\n 0x000000000000001e (FLAGS)              BIND_NOW\n 0x000000006ffffffb (FLAGS_1)            Flags: NOW NODELETE\n 0x000000006ffffffe (VERNEED)            0x50388\n 0x000000006fffffff (VERNEEDNUM)         1\n 0x000000006ffffff0 (VERSYM)             0x4d2da\n 0x000000006ffffff9 (RELACOUNT)          24959\n 0x0000000000000000 (NULL)               0x0\n",
+  "stderr": ""
+}

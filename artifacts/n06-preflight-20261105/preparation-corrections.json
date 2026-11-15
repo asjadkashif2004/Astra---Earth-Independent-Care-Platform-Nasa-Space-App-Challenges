@@ -1,0 +1,7 @@
+{
+  "first_documentation_attempt": "Python source parse failed before any writes: bytes literal contained Unicode em dash.",
+  "correction": "Encode the Unicode title explicitly before byte concatenation.",
+  "verification": "Corrected run verifies all seven pre-change hashes and reconstructs every historical document body exactly.",
+  "production_changes": 0,
+  "new_QA_tests_claimed": 0
+}

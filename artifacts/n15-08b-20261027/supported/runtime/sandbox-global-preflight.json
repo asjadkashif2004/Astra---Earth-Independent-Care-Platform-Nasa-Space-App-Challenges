@@ -1,0 +1,31 @@
+{
+  "required_globals": [
+    "FileNotFoundError",
+    "Path",
+    "RuntimeError",
+    "any",
+    "backend_config",
+    "bool",
+    "c",
+    "datetime",
+    "int",
+    "json",
+    "len",
+    "manifest",
+    "max",
+    "model_mount",
+    "next",
+    "notice_mounts",
+    "os",
+    "re",
+    "repr",
+    "resource",
+    "sorted",
+    "str",
+    "struct",
+    "subprocess",
+    "threading",
+    "time"
+  ],
+  "status": "PASS"
+}

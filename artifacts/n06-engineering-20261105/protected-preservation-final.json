@@ -1,0 +1,105 @@
+{
+  "schema_version": "astra.n06.final-preservation.v1",
+  "fresh_unchanged_files": 8968,
+  "intentional_existing_changes": [
+    {
+      "path": "AGENTS.md",
+      "before_sha256": "5bc0790945cb2edd84dde37f0a33267cf0ad2a56afe1286cd11b99b6db9d41ab",
+      "after_sha256": "1d230b883c4272011c0ddcc757b0664f0bd4bd3d5bbecfbd339972745d1f982e"
+    },
+    {
+      "path": "apps/mission-control-web/anatomy-runtime.mjs",
+      "before_sha256": "0c24d32e7a9e20517f12b99e0df42aa64e3e6d9c5b0c3c678a02e3fc17d94690",
+      "after_sha256": "b0fa237f20372f549ac9e49b34d120b06364923985f1e77408e7719479ffdcef"
+    },
+    {
+      "path": "apps/mission-control-web/anatomy.css",
+      "before_sha256": "6969d47af250d7eccdef1403502dbc84d6db21d3636fea3f6a9087b7ffb76c0d",
+      "after_sha256": "6f3328c87abff42f68ee0652194a7c1de596258c36352b69e166a57a5ddedd4c"
+    },
+    {
+      "path": "apps/mission-control-web/anatomy.mjs",
+      "before_sha256": "1411451acaf6867bc419e42a87178ce5e8ae4ce99e71d449e3baca4393c37029",
+      "after_sha256": "5266465fbfffcc7dd1df3a0911fe07c3f13ac7978865d3c256342ce5db90a38b"
+    },
+    {
+      "path": "apps/mission-control-web/app.mjs",
+      "before_sha256": "eef14ff3ecccbb38a6956f62035b9a63f30af57c840921d3597d01901b59aecc",
+      "after_sha256": "b0f58ec7aa1817f0699ae37d09e4871e9d250594bbf31bb6fbfc4d24712f5fcc"
+    },
+    {
+      "path": "apps/mission-control-web/sw.js",
+      "before_sha256": "af89ed2c69bcc735fd4d2f6a4867bf00bf9dfb326d7dcaa9b8418c687da9fd1b",
+      "after_sha256": "57f81049ff9e0009dead6870fb1a5505584f50f2bca53914b64ee77b6ea24adb"
+    },
+    {
+      "path": "docs/CORE_AI_PRIORITY.md",
+      "before_sha256": "cfec23817ac0fd6246e79c18a697a3ea7d7441f102eb31206fb9e0497afb5b3d",
+      "after_sha256": "5b22504e8a55559646f36f26d9ebd473026a295dc881f9c68c7202057f7ed583"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "before_sha256": "f211447af5024f60d927e1de51d0139aaaabfbc2197337a2f43b7a68de6f2780",
+      "after_sha256": "ba001bc7831fcf0b6487e0583f5f9c35f528d5f980d3b86f7bcb4ba1d5f26436"
+    },
+    {
+      "path": "docs/FEATURE_AUDIT.md",
+      "before_sha256": "ebd5cf5a8c87eadefd775b24525338b151ac0e2416000270e6b2fdf2d5182ec5",
+      "after_sha256": "5a693de954442ed9bf9967c80fbfe9922e7bb1202a3e396081218f8968f94e73"
+    },
+    {
+      "path": "docs/MASTER_PLAN.md",
+      "before_sha256": "54fd5ac65c00345292aa499990b3b15e13c4784e41dbb4da117ad3d3b3119b1e",
+      "after_sha256": "b58e9a32e2f89498fd0ee61a80ceece9817f6f60b6473cec18bea42de3301f14"
+    },
+    {
+      "path": "docs/MODULE_TRACKER.md",
+      "before_sha256": "856e67c6e67cccec7251f7513537ffd582ba7289e854c1c1627cb4521fdf81ca",
+      "after_sha256": "50aea9fc2daa50df804022f3a72b3fea11bc923411e33862bb8b50262168b18d"
+    },
+    {
+      "path": "docs/SESSION_HANDOFF.md",
+      "before_sha256": "de6f7fed9d1f17688993ae76f9924e828099955c88aa8649ad84ac74739e01b8",
+      "after_sha256": "ea8f8d4c76fc6094d327aeeab6ba6659546b2525f69da3cb8070a5dbfc97fa49"
+    },
+    {
+      "path": "scripts/browser-acceptance.mjs",
+      "before_sha256": "157a295ed2bfd3ffb04c35da03dd911d555296283faf2413fb716bc6e2610c85",
+      "after_sha256": "57f97bdb5a82f12c31125240402f3aff6e01a5ad2032e129e195797cc9e54840"
+    },
+    {
+      "path": "services/api/server.mjs",
+      "before_sha256": "4697062bb8fd693c92cf4cb4e6f4a541f47db3b6e7f5cb2cbac43d61f6668e00",
+      "after_sha256": "26ecc0449ad5f2c3563df1042ed2a2c75c21db0fcce78e7d080d1fe7febd20fc"
+    },
+    {
+      "path": "tests/dom-harness.mjs",
+      "before_sha256": "3f95d0876c17d8c840fe34511677672a2ce4704dcb080ffacb551397bebbbd57",
+      "after_sha256": "ba9e78c9652d2b307ad5772821523bde3ca6afe1fc276ef153752b50e1d4c60b"
+    },
+    {
+      "path": "scripts/browser-n05-full.mjs",
+      "before_sha256": "9c8de6c504ae76b793b0f71377d1f2527c909741d48d3c2cf5dc2ef845dbe6bd",
+      "after_sha256": "0297b0a17316ed10ad2703951d74cc5492c7f6b97de55611934641152aa113ec"
+    },
+    {
+      "path": "tests/n05-renderer.test.mjs",
+      "before_sha256": "952ff3b0c8323987a0db056e35c7d864bda5a9cd7a46c0bf55219e6219dbbf80",
+      "after_sha256": "025f9ce4b957affc1c8ad9351e698c8b01d08ad30c89ca85cc4d0e754aa480ea"
+    },
+    {
+      "path": "docs/DE_N06_SYNTHETIC_01.md",
+      "before_sha256": "91dbf80d67a363509229193ad4aa207f39645220e370d3dc0afed9fa84e48ee8",
+      "after_sha256": "0bcf01c9e38cb9f03960ef21948d76cbfc13be7e6a030e8b1e3ef67479d54f35"
+    },
+    {
+      "path": "docs/N06_FINAL_ENGINEERING_COMPLETION.md",
+      "before_sha256": "252a8d10dc0376db06fd00d61f72a5189d20826d9d2cb0f8d3228c8388709a7f",
+      "after_sha256": "b1797edf09a70181a2331fb10df290b0c63ecde1dc6aab1d32a3b899f5c56ac9"
+    }
+  ],
+  "unexpected_or_missing": [],
+  "retained_large_model_database_metadata_without_byte_reverification": 37,
+  "duration_ms": 179328.539,
+  "excluded_scope": "No operational/sealed DB or model weights rehashed. Includes all inherited eligible historical source/evidence pins; report storage total will be filled as an explicit final documentation change."
+}

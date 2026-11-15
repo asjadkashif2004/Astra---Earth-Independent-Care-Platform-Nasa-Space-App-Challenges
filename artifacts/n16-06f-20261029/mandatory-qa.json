@@ -1,0 +1,20 @@
+[
+  {
+    "test": "tests/n16-single-select.test.mjs",
+    "exit_code": 0,
+    "pass": 31,
+    "verified": true
+  },
+  {
+    "test": "tests/n16-containment-qa.test.mjs",
+    "exit_code": 0,
+    "pass": 45,
+    "verified": true
+  },
+  {
+    "test": "tests/n16-dependency-pins.test.mjs",
+    "exit_code": 0,
+    "pass": 32,
+    "verified": true
+  }
+]

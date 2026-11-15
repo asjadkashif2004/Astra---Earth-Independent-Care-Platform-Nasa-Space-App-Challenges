@@ -1,0 +1,6 @@
+Running as unit: astra-n14-01-oewmeal8-preflight-remaining.service; invocation ID: 4c92098b48794f2190590bafd325fd82
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 2.924s
+             CPU time consumed: 146ms
+                   Memory peak: 17.4M (swap: 0B)

@@ -1,0 +1,26 @@
+{
+  "fresh_Node": {
+    "tests": 113,
+    "pass": 113,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "fresh_Python_static_mock": {
+    "tests": 90,
+    "passed": 90,
+    "failed": 0,
+    "skipped": 0
+  },
+  "fresh_passed": 203,
+  "failed": 0,
+  "skipped": 0,
+  "cancelled": 0,
+  "syntax_files": 275,
+  "retained_previous_full_tests": 625,
+  "fresh_cases_overlap_previous": true,
+  "do_not_sum_as_828": true,
+  "previous_422_Node_regressions": "RETAINED_SOURCE_VERIFIED_NOT_RERUN",
+  "native_inferences": 0,
+  "browser": "NOT_RUN_AUTHORIZATION_BLOCKED"
+}

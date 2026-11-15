@@ -1,0 +1,23 @@
+{
+  "schema_version": "astra.publication-internal-review.v1",
+  "reviewed_on": "2026-10-24",
+  "reviewer": "ASTRA engineering source review; not legal counsel or medical expert certification",
+  "documents": [
+    {
+      "id": "nasa-hrp-sleep-2016",
+      "original_sha256": "252d4993a040ab8b989664b1da7a3143a5fd8169fac65b67f1f43231250ef1f5",
+      "identity_verified": true,
+      "conflicting_notice_found": false,
+      "decision": "permitted_local_informational_corpus",
+      "notes": "Complete 82-page evidence report; cover title and current contributing authors on physical pages 1-2 match NTRS20160003864. Cover release date is the literal placeholder Month DD, YYYY, not an established date. NTRS explicitly records PUBLIC_USE_PERMITTED, no third-party material and no export control. Extracted text reviewed for copyright/permission/reproduction/license notices: page19 credits a figure reproduced from Stuster2010,without a conflicting restriction. Figures are not extracted or separately licensed. Cited third-party publications are not downloaded or relicensed. No claim that all material is CC or public domain worldwide. Review is text-based; no rendered-page inspection or full legal opinion."
+    },
+    {
+      "id": "nasa-std-3001-v2-f",
+      "original_sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+      "identity_verified": true,
+      "conflicting_notice_found": false,
+      "decision": "permitted_local_informational_corpus",
+      "notes": "Complete389-page NASA-authored standard; physical page1 confirms Revision F,Approved2026-07-14,supersedesE; official active catalogue and complete HEAD length match. Extracted-text notice scan found no copyright,Accuris/IHS reproduction restriction or conflicting license grant in this specific original. Use NASA-authored text under NASA government-work policy with attribution,no endorsement and all source notices preserved;Internet Public alone is not the rights basis. References to external standards and third-party figures are not acquired or separately relicensed. No CC assignment,clinical or compliance certification. Text-only review; PDF images have not received independent rights or visual review."
+    }
+  ]
+}

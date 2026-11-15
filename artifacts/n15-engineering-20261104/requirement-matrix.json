@@ -1,0 +1,296 @@
+{
+  "official_module": "Offline language-model assistance / Local Generative AI Research Answering",
+  "official_families": [
+    "R41",
+    "R43",
+    "R57"
+  ],
+  "related_source_QA_families": [
+    "R42",
+    "R59"
+  ],
+  "R57_scope": "Only extra local-model branch; voice/omics/wearable/graphics not included",
+  "grouping": "12audit subdivisions, not invented official IDs or scientific approvals",
+  "authorized_non_native_implemented": 12,
+  "authorized_non_native_qualified": 12,
+  "formal_N15": "In Progress",
+  "clauses": [
+    {
+      "audit_clause": 1,
+      "requirement": "Model identity and execution admission",
+      "official_ids": [
+        "R43",
+        "R57"
+      ],
+      "authoritative_specification": "N15_01_PLAN.md; N15_04C_FIRST_INFERENCE.md",
+      "existing_and_missing_engineering": "Existing Qwen/native manifests preserved; new streaming read-only identity/admission gate",
+      "necessary_input": "Pinned491400032-byte model/17nativefiles/14notices",
+      "output_contract": "Verified asset metadata; MODEL_NOT_AUTHORIZED for current execution",
+      "test_numerical_acceptance": "Model metadata positive/corrupt/missing/hash/version controls; actual asset SHA/header",
+      "tests": "tests/n15-governed.test.mjs",
+      "independent_external_gate": "Current exact native startup/resource/isolation grant; fresh native qualification",
+      "authority": "Current explicit owner non-native research continuation under DE-N14-N15-01; no startup/resources/rule/app activation",
+      "backend_frontend": "Connected offline library/CLI; application/API/UI/browser excluded by current exception",
+      "scientific_support": "Source attribution separate from relevance/entailment; actual independent reviews0; factual positive rule inactive",
+      "engineering_status": "PASS_AUTHORIZED_NON_NATIVE_SCOPE",
+      "formal_closure": "Original prerequisite/scientific/native/application/hardware/security/release gates remain",
+      "evidence": "artifacts/n15-engineering-20261104/execution-01/ + final QA logs"
+    },
+    {
+      "audit_clause": 2,
+      "requirement": "Verified corpus/retrieval",
+      "official_ids": [
+        "R43",
+        "R42"
+      ],
+      "authoritative_specification": "N15_05_PLAN.md; N14_OFFLINE_ENGINEERING_CONTRACT.md",
+      "existing_and_missing_engineering": "Existing source/index reused; new scoped consumer",
+      "necessary_input": "Two original NASA sources/33units/34windows; no labels/private crew",
+      "output_contract": "Canonical explicit lookup or real lexical candidate",
+      "test_numerical_acceptance": "N13/N14version/hash/window/scope compatibility, missing/tampered controls",
+      "tests": "tests/n15-governed.test.mjs",
+      "independent_external_gate": "Full N13/N14/N07/source/scientific prerequisite closure",
+      "authority": "Current explicit owner non-native research continuation under DE-N14-N15-01; no startup/resources/rule/app activation",
+      "backend_frontend": "Connected offline library/CLI; application/API/UI/browser excluded by current exception",
+      "scientific_support": "Source attribution separate from relevance/entailment; actual independent reviews0; factual positive rule inactive",
+      "engineering_status": "PASS_AUTHORIZED_NON_NATIVE_SCOPE",
+      "formal_closure": "Original prerequisite/scientific/native/application/hardware/security/release gates remain",
+      "evidence": "artifacts/n15-engineering-20261104/execution-01/ + final QA logs"
+    },
+    {
+      "audit_clause": 3,
+      "requirement": "Prompt construction/security",
+      "official_ids": [
+        "R41",
+        "R43"
+      ],
+      "authoritative_specification": "N15_01_PLAN.md; N15_06_PLAN.md",
+      "existing_and_missing_engineering": "Existing policy/grammar retained; new reproduction prompt QA only",
+      "necessary_input": "Validated finite question and complete eligible source",
+      "output_contract": "Bounded tool-free ChatML/data/1536bytes/finitegrammar",
+      "test_numerical_acceptance": "Prompt/data guards, unsafe input/source, whole span/size/no hidden omissions",
+      "tests": "tests/n15-governed.test.mjs",
+      "independent_external_gate": "New prompt native execution/quality not qualified or promoted",
+      "authority": "Current explicit owner non-native research continuation under DE-N14-N15-01; no startup/resources/rule/app activation",
+      "backend_frontend": "Connected offline library/CLI; application/API/UI/browser excluded by current exception",
+      "scientific_support": "Source attribution separate from relevance/entailment; actual independent reviews0; factual positive rule inactive",
+      "engineering_status": "PASS_AUTHORIZED_NON_NATIVE_SCOPE",
+      "formal_closure": "Original prerequisite/scientific/native/application/hardware/security/release gates remain",
+      "evidence": "artifacts/n15-engineering-20261104/execution-01/ + final QA logs"
+    },
+    {
+      "audit_clause": 4,
+      "requirement": "Independent factual-support gate",
+      "official_ids": [
+        "R41",
+        "R42"
+      ],
+      "authoritative_specification": "N15_10_CONTRACT.md; N15_11_COMPLETION.md",
+      "existing_and_missing_engineering": "Existing N15-10 unchanged; new orchestration applies it mandatorily",
+      "necessary_input": "Canonical source/role/scope plus explicit request",
+      "output_contract": "Source reproduction attribution only; all factual questions ABSTAIN",
+      "test_numerical_acceptance": "Numeric/unknown/mixed/clinical/unapproved positive controls",
+      "tests": "tests/n15-governed.test.mjs + tests/research-relevance.test.mjs",
+      "independent_external_gate": "Authentic scientific review/owner acceptance/separate positive matcher authority",
+      "authority": "Current explicit owner non-native research continuation under DE-N14-N15-01; no startup/resources/rule/app activation",
+      "backend_frontend": "Connected offline library/CLI; application/API/UI/browser excluded by current exception",
+      "scientific_support": "Source attribution separate from relevance/entailment; actual independent reviews0; factual positive rule inactive",
+      "engineering_status": "PASS_AUTHORIZED_NON_NATIVE_SCOPE",
+      "formal_closure": "Original prerequisite/scientific/native/application/hardware/security/release gates remain",
+      "evidence": "artifacts/n15-engineering-20261104/execution-01/ + final QA logs"
+    },
+    {
+      "audit_clause": 5,
+      "requirement": "Post-generation output verification",
+      "official_ids": [
+        "R41",
+        "R43"
+      ],
+      "authoritative_specification": "N15_05_PLAN.md; N15_06_PLAN.md; N15_10_CONTRACT.md",
+      "existing_and_missing_engineering": "Existing strict grammar/parser/source resolver reused",
+      "necessary_input": "Explicit QA provider output in tests only",
+      "output_contract": "Complete canonical quotation or ABSTAIN; no generated citations/prose",
+      "test_numerical_acceptance": "Positive QA selection, wrong ID/prose/duplicate keys/citations/timeouts",
+      "tests": "tests/n15-governed.test.mjs",
+      "independent_external_gate": "Fresh native combined-discrimination/safety qualification NOT RUN",
+      "authority": "Current explicit owner non-native research continuation under DE-N14-N15-01; no startup/resources/rule/app activation",
+      "backend_frontend": "Connected offline library/CLI; application/API/UI/browser excluded by current exception",
+      "scientific_support": "Source attribution separate from relevance/entailment; actual independent reviews0; factual positive rule inactive",
+      "engineering_status": "PASS_AUTHORIZED_NON_NATIVE_SCOPE",
+      "formal_closure": "Original prerequisite/scientific/native/application/hardware/security/release gates remain",
+      "evidence": "artifacts/n15-engineering-20261104/execution-01/ + final QA logs"
+    },
+    {
+      "audit_clause": 6,
+      "requirement": "Structured outcomes/stages",
+      "official_ids": [
+        "R43"
+      ],
+      "authoritative_specification": "N15_GOVERNED_ANSWER_CONTRACT.md + owner response requirements",
+      "existing_and_missing_engineering": "New versioned result/stage-chain/status separation",
+      "necessary_input": "Validated request/source/support/admission/execution states",
+      "output_contract": "Explicit status/reason/model/prompt/provenance/UNKNOWN/NOT RUN stages",
+      "test_numerical_acceptance": "No fake native success; stage ordering/count/hash; generated_by_llm false",
+      "tests": "tests/n15-governed.test.mjs + tests/n15-audit.test.mjs",
+      "independent_external_gate": "No positive factual VALIDATED_ANSWER without review; native acceptance separate",
+      "authority": "Current explicit owner non-native research continuation under DE-N14-N15-01; no startup/resources/rule/app activation",
+      "backend_frontend": "Connected offline library/CLI; application/API/UI/browser excluded by current exception",
+      "scientific_support": "Source attribution separate from relevance/entailment; actual independent reviews0; factual positive rule inactive",
+      "engineering_status": "PASS_AUTHORIZED_NON_NATIVE_SCOPE",
+      "formal_closure": "Original prerequisite/scientific/native/application/hardware/security/release gates remain",
+      "evidence": "artifacts/n15-engineering-20261104/execution-01/ + final QA logs"
+    },
+    {
+      "audit_clause": 7,
+      "requirement": "Support-rule lifecycle metadata",
+      "official_ids": [
+        "R57",
+        "R42"
+      ],
+      "authoritative_specification": "N15_11_COMPLETION.md; owner Phase8",
+      "existing_and_missing_engineering": "New structural lifecycle/intake; existing real proposal/forms immutable",
+      "necessary_input": "Pinned rule/packet/source and externally declared records",
+      "output_contract": "Declared state with effective_active:false/authentication UNVERIFIED",
+      "test_numerical_acceptance": "Sequence/head/version/time/role/signoff/dispute/rejection/revocation controls",
+      "tests": "tests/n15-lifecycle.test.mjs",
+      "independent_external_gate": "Actual reviewer/owner authentication and separate matcher implementation; no actual approvals",
+      "authority": "Current explicit owner non-native research continuation under DE-N14-N15-01; no startup/resources/rule/app activation",
+      "backend_frontend": "Connected offline library/CLI; application/API/UI/browser excluded by current exception",
+      "scientific_support": "Source attribution separate from relevance/entailment; actual independent reviews0; factual positive rule inactive",
+      "engineering_status": "PASS_AUTHORIZED_NON_NATIVE_SCOPE",
+      "formal_closure": "Original prerequisite/scientific/native/application/hardware/security/release gates remain",
+      "evidence": "artifacts/n15-engineering-20261104/execution-01/ + final QA logs"
+    },
+    {
+      "audit_clause": 8,
+      "requirement": "Authorized offline service",
+      "official_ids": [
+        "R41",
+        "R43"
+      ],
+      "authoritative_specification": "DE_N14_N15_01.md; N15_01_PLAN.md",
+      "existing_and_missing_engineering": "New trusted local caller/owned contexts/library/CLI",
+      "necessary_input": "Public research only; no arbitrary paths/SQL/models/crew/tools",
+      "output_contract": "Actual connected offline service and safe validation/error/denial",
+      "test_numerical_acceptance": "Forged/wrong role/borrowed context/path/unsafe injection controls",
+      "tests": "tests/n15-governed.test.mjs",
+      "independent_external_gate": "Application/API/UI integration and browser authorization absent",
+      "authority": "Current explicit owner non-native research continuation under DE-N14-N15-01; no startup/resources/rule/app activation",
+      "backend_frontend": "Connected offline library/CLI; application/API/UI/browser excluded by current exception",
+      "scientific_support": "Source attribution separate from relevance/entailment; actual independent reviews0; factual positive rule inactive",
+      "engineering_status": "PASS_AUTHORIZED_NON_NATIVE_SCOPE",
+      "formal_closure": "Original prerequisite/scientific/native/application/hardware/security/release gates remain",
+      "evidence": "artifacts/n15-engineering-20261104/execution-01/ + final QA logs"
+    },
+    {
+      "audit_clause": 9,
+      "requirement": "Durable audits and recovery",
+      "official_ids": [
+        "R43",
+        "R59"
+      ],
+      "authoritative_specification": "N15original recovery/safety requirements; owner Phase9/13",
+      "existing_and_missing_engineering": "New atomic normalized-id/stage-chain audits; failed-ACK fix",
+      "necessary_input": "Actual reproduction/abstention/native-denial result plus hashes",
+      "output_contract": "Four compact ACK-bound commits/cold re-verification,0generation replay",
+      "test_numerical_acceptance": "Delayed write/ACK, cancellation, markers, crash, corruption, fake execution",
+      "tests": "tests/n15-audit.test.mjs",
+      "independent_external_gate": "OS ACK not universal power-loss proof; actual generative recovery unqualified",
+      "authority": "Current explicit owner non-native research continuation under DE-N14-N15-01; no startup/resources/rule/app activation",
+      "backend_frontend": "Connected offline library/CLI; application/API/UI/browser excluded by current exception",
+      "scientific_support": "Source attribution separate from relevance/entailment; actual independent reviews0; factual positive rule inactive",
+      "engineering_status": "PASS_AUTHORIZED_NON_NATIVE_SCOPE",
+      "formal_closure": "Original prerequisite/scientific/native/application/hardware/security/release gates remain",
+      "evidence": "artifacts/n15-engineering-20261104/execution-01/ + final QA logs"
+    },
+    {
+      "audit_clause": 10,
+      "requirement": "N13/N14 preservation/compatibility",
+      "official_ids": [
+        "R43",
+        "R42"
+      ],
+      "authoritative_specification": "N13_FINAL_ENGINEERING_COMPLETION.md; N14_FINAL_ENGINEERING_COMPLETION.md",
+      "existing_and_missing_engineering": "New consumer; no producer/policy changes",
+      "necessary_input": "Canonical windows and rich lexical baseline",
+      "output_contract": "Source identity/scope preserved; experimental and seen flags unchanged",
+      "test_numerical_acceptance": "Actual fixed context; N14corpus/claim/retrieval/readiness regressions",
+      "tests": "regression-final.tap",
+      "independent_external_gate": "Full source/science/parity/prospective/hardware/release gates remain",
+      "authority": "Current explicit owner non-native research continuation under DE-N14-N15-01; no startup/resources/rule/app activation",
+      "backend_frontend": "Connected offline library/CLI; application/API/UI/browser excluded by current exception",
+      "scientific_support": "Source attribution separate from relevance/entailment; actual independent reviews0; factual positive rule inactive",
+      "engineering_status": "PASS_AUTHORIZED_NON_NATIVE_SCOPE",
+      "formal_closure": "Original prerequisite/scientific/native/application/hardware/security/release gates remain",
+      "evidence": "artifacts/n15-engineering-20261104/execution-01/ + final QA logs"
+    },
+    {
+      "audit_clause": 11,
+      "requirement": "Inactive N16 and N02 safety",
+      "official_ids": [
+        "R41"
+      ],
+      "authoritative_specification": "N16_FINAL_ENGINEERING_CONTRACT.md; DE_N14_N15_01.md",
+      "existing_and_missing_engineering": "New inactive answer adapter only; operational components untouched",
+      "necessary_input": "Verified evidence/research-only result, no crew clinical data",
+      "output_contract": "No tool dispatch/N16 runtime/alerts/ack/Earth side effects",
+      "test_numerical_acceptance": "Inactive adapter, existing N02/ack/Earth/fixture-viewer regressions",
+      "tests": "tests/n15-governed.test.mjs + regression-final.tap",
+      "independent_external_gate": "Separate N16/operational integration and original full prerequisites",
+      "authority": "Current explicit owner non-native research continuation under DE-N14-N15-01; no startup/resources/rule/app activation",
+      "backend_frontend": "Connected offline library/CLI; application/API/UI/browser excluded by current exception",
+      "scientific_support": "Source attribution separate from relevance/entailment; actual independent reviews0; factual positive rule inactive",
+      "engineering_status": "PASS_AUTHORIZED_NON_NATIVE_SCOPE",
+      "formal_closure": "Original prerequisite/scientific/native/application/hardware/security/release gates remain",
+      "evidence": "artifacts/n15-engineering-20261104/execution-01/ + final QA logs"
+    },
+    {
+      "audit_clause": 12,
+      "requirement": "Actual E2E/QA/resources",
+      "official_ids": [
+        "R57",
+        "R59"
+      ],
+      "authoritative_specification": "N15_01_PLAN.md; owner Phases14–17",
+      "existing_and_missing_engineering": "Actual non-native pipeline and bounded asset audit; focused regression",
+      "necessary_input": "Authorized local inputs, disposable fixtures, zero native requests",
+      "output_contract": "Inspectable E2E/cold/625QA/275syntax/resources/preservation",
+      "test_numerical_acceptance": "Positive/negative controls, actual commitment/cold, source/model inspection",
+      "tests": "execution-01/end-to-end.json + qa-summary.json",
+      "independent_external_gate": "Native E2E/browser/independent science/security/release qualification remain external",
+      "authority": "Current explicit owner non-native research continuation under DE-N14-N15-01; no startup/resources/rule/app activation",
+      "backend_frontend": "Connected offline library/CLI; application/API/UI/browser excluded by current exception",
+      "scientific_support": "Source attribution separate from relevance/entailment; actual independent reviews0; factual positive rule inactive",
+      "engineering_status": "PASS_AUTHORIZED_NON_NATIVE_SCOPE",
+      "formal_closure": "Original prerequisite/scientific/native/application/hardware/security/release gates remain",
+      "evidence": "artifacts/n15-engineering-20261104/execution-01/ + final QA logs"
+    }
+  ],
+  "external_gates": [
+    {
+      "id": "native",
+      "status": "AUTHORIZATION_BLOCKED",
+      "required": "Current exact model/runtime and bounded starts/disk/RAM/CPU/time/sandbox/observer approval plus actual preflight/native qualification"
+    },
+    {
+      "id": "factual_rule",
+      "status": "REVIEW_AUTHORIZATION_BLOCKED",
+      "required": "Authentic independent scientific review, objections resolved, owner authentication/acceptance, separate matcher implementation/activation"
+    },
+    {
+      "id": "application_browser",
+      "status": "AUTHORIZATION_BLOCKED_NOT_RUN",
+      "required": "Separate app/API/UI/agent integration authority and real-browser acceptance; no N14bypass"
+    },
+    {
+      "id": "upstream_science",
+      "status": "OPEN",
+      "required": "Full N14/N13/N07/source/prospective/numerical/independent review and release/hardware gates"
+    },
+    {
+      "id": "security_release",
+      "status": "UNVERIFIED",
+      "required": "Remaining native security/advisory/binary/redistribution/release qualification"
+    }
+  ]
+}

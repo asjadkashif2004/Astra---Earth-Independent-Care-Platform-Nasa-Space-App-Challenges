@@ -1,0 +1,3 @@
+execArgv [ '--input-type=module' ]
+{"code":"ERR_INPUT_TYPE_NOT_ALLOWED","message":"--input-type can only be used with string input via --eval, --print, or STDIN"}
+exit 1

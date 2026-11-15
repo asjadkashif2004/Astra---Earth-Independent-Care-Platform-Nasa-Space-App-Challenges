@@ -1,0 +1,44 @@
+{
+  "mission_result": "BLOCKED",
+  "module": "N11 Explainable advanced anomaly evaluation",
+  "implementation_admitted": false,
+  "requirements_implemented": 0,
+  "requirements_qualified": 0,
+  "audit_groups": 10,
+  "official_requirement_families": [
+    "R35",
+    "R37",
+    "R38",
+    "R59"
+  ],
+  "baseline_QA": {
+    "tests": 238,
+    "existing_cases": 234,
+    "artifact_boundary_cases": 4,
+    "pass": 238,
+    "fail": 0,
+    "skip": 0,
+    "cancelled": 0,
+    "not_N11_qualification": true
+  },
+  "syntax": {
+    "files": 226,
+    "errors": 0
+  },
+  "file_integrity": {
+    "checks": 9,
+    "pass": 9,
+    "fail": 0,
+    "separate_from_baseline_test_total": true
+  },
+  "N11_end_to_end": "NOT RUN \u2014 sequencing blocked",
+  "N11_browser": "NOT RUN \u2014 sequencing blocked",
+  "N11_candidate_training_or_inference": 0,
+  "N16_native_startups": 0,
+  "Qwen": 0,
+  "operational_or_sealed_database_access": 0,
+  "formal_status": "Not Started \u2014 dependency/exception blocked",
+  "proposal_status": "PROPOSED / INACTIVE",
+  "proposal_sha256": "11e6f0652c5c7d236d09a3146811427d9b7452ee6cccf24bdea0b439987863bf",
+  "exact_missing_decision": "Independent governance review and explicit owner activation of DE-N11-SYNTHETIC-01; current Phase3(4) prohibits self-activation."
+}

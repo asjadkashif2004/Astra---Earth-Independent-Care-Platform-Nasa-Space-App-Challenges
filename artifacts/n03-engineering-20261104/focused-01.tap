@@ -1,0 +1,88 @@
+✔ N04: performance quality never silently enables reduced motion, and both preferences survive navigation (989.552142ms)
+✔ N03 closure: icon-only controls stay named and both performance toggles expose their real selected state (492.180919ms)
+✔ N03 closure: persistent announcements reflect monitoring failure/recovery, avoid tick chatter and clear on logout (778.822294ms)
+✔ N03 closure/N01/N02: recorded-risk announcements survive unavailable monitoring, deduplicate and never leak into Earth before receipt (974.258776ms)
+✔ N03 closure F08: transient onboard review toast cannot survive Earth selection or session clearing (1818.059217ms)
+✔ N03 F08: Earth projection never substitutes onboard readings, alerts or cases before receipt (438.415508ms)
+✔ N03: quality/freshness/readiness gates override optimistic status without changing canonical provenance (257.683624ms)
+✔ N03: snapshots reject malformed identity/reception data; charts discard stale and held measurements (205.838972ms)
+✔ N03: all six actual profiles navigate to their own values; every existing workspace has real template targets (1496.682974ms)
+✔ N03 F08: actual Earth view toggle updates the badge immediately and hides onboard agent cases (810.957677ms)
+✔ N03/N01: received history remains independent when new onboard evidence has not reached Earth (875.682203ms)
+✔ N03/N01: Astronaut sees one profile, correct counts and no other private crew history requests (428.185262ms)
+✔ N03/N01: actual Viewer/Researcher templates never request raw private check-in history (858.113324ms)
+✔ N03/N02: 202 pending and failed enrichment remain visible; recovery requires one actual human acknowledgement (806.493729ms)
+✔ N03/N02: acknowledgement 409 never claims success or queues a report (740.322493ms)
+✔ N03 F13: health503, lost API and recovery update actual UI instead of asserting availability (836.607668ms)
+✔ N03: late forecast/history responses cannot populate another crew selection (553.071421ms)
+✔ N03: streaming updates preserve focused controls and an unsaved link form (555.462829ms)
+✔ N03: stale session responses and cached protected cases cannot survive session expiry (713.595183ms)
+✔ N03: stopping only the active known scenario preserves imported ownership and existing records (247.627458ms)
+✔ N03: existing scenario start/stop controls submit the actual active ID and recover their enabled state (694.177438ms)
+✔ N03: failed research and history requests render unavailable states without reusing an earlier answer (527.611207ms)
+✔ N03 browser continuation: pending research removes prior citations and exposes loading without losing input (451.299707ms)
+✔ N03 browser continuation: twin layers expose the selected state to assistive technology (618.139671ms)
+✔ N03 acceptance: replay and check-in breadcrumbs identify the actual workspace (487.178906ms)
+✔ N03 acceptance: private check-in requests show persistent loading and403 failure without old records (438.518132ms)
+✔ N03 acceptance: empty and failed replay keep the slider disabled and state the actual availability (497.036636ms)
+✔ N03 acceptance: model503 and audit403 do not relabel valid provenance as unavailable (437.518536ms)
+✔ N03 acceptance:400 and403 writes retain entered link settings and never report success (987.429979ms)
+✔ N03 session end aborts global health reads and ignores a transport which delivers after abort (423.71102ms)
+✖ N03 suspended page cancels requests and stops polling; resume refreshes actual state (420.430036ms)
+✖ N03 cached landing resumes its disposed scene without starting authenticated requests (424.031595ms)
+✖ N03 request timeout rejects late projections instead of applying their optimistic payload (597.89282ms)
+✔ N03: unsupported WebGL keeps an interactive 2D scene and releases observers/listeners/frames (6.352033ms)
+✔ N03: absent canvas rendering uses a truthful text fallback without stopping document controls (5.257372ms)
+✔ N03: shader initialization failure safely falls back and releases partial GPU resources (4.761214ms)
+✔ N03 F13: context loss switches the existing scene to 2D; essential monitoring DOM remains mounted (5.002883ms)
+✔ N03: draw failure cannot escape into monitoring; reduced motion renders only on requested updates (6.466522ms)
+✔ N03: 2D rendering failure stops safely in text mode instead of repeatedly throwing (4.609531ms)
+✔ N04: quality-reduced Earth retains one continuous loop while reduced motion is independently event-driven (4.627429ms)
+✔ N04: local texture completion, failed imagery and late callbacks cannot escape scene ownership (4.661439ms)
+✔ N04: Earth camera has bounded zoom/reset and no animation loop is created by repeated control requests (4.324203ms)
+✔ N04: offscreen scenes do no drawing but resume current state without creating duplicate loops (5.76095ms)
+✔ N04: Earth zoom remains functional in the actual Canvas2D fallback path (5.491653ms)
+ℹ tests 44
+ℹ suites 0
+ℹ pass 41
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 24028.059464
+
+✖ failing tests:
+
+test at tests/n03-lifecycle.test.mjs:22:1
+✖ N03 suspended page cancels requests and stops polling; resume refreshes actual state (420.430036ms)
+  TypeError: window.emit is not a function
+      at file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/n03-lifecycle.test.mjs:25:70
+      at async session (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/n03-lifecycle.test.mjs:8:39)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/n03-lifecycle.test.mjs:34:1
+✖ N03 cached landing resumes its disposed scene without starting authenticated requests (424.031595ms)
+  TypeError: window.emit is not a function
+      at file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/n03-lifecycle.test.mjs:36:16
+      at async session (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/n03-lifecycle.test.mjs:8:39)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/n03-lifecycle.test.mjs:42:1
+✖ N03 request timeout rejects late projections instead of applying their optimistic payload (597.89282ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/n03-lifecycle.test.mjs:45:89
+      at async session (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/n03-lifecycle.test.mjs:8:39)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

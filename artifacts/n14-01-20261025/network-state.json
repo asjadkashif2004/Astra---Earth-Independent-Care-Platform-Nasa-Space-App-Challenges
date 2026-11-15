@@ -1,0 +1,211 @@
+{
+  "bytes": 24264001,
+  "runtime_bytes": 328546,
+  "model_bytes": 23935455,
+  "network_ms": 14216,
+  "requests": [
+    {
+      "name": "publisher-model.json",
+      "source": "https://huggingface.co/api/models/Xenova/all-MiniLM-L6-v2/revision/751bff37182d3f1213fa05d7196b954e230abad9?blobs=true",
+      "started_at": 1792879635.4042218,
+      "status": "BLOCKED",
+      "bytes": 5650,
+      "redirects": [],
+      "error": "'NoneType' object has no attribute 'raw'",
+      "elapsed_ms": 571
+    },
+    {
+      "name": "notices/onnxruntime-LICENSE",
+      "source": "https://raw.githubusercontent.com/microsoft/onnxruntime/v1.21.0/LICENSE",
+      "started_at": 1792879690.2514555,
+      "status": "verified_complete",
+      "bytes": 1073,
+      "redirects": [],
+      "declared_content_length": 1073,
+      "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+      "content_type": "text/plain; charset=utf-8",
+      "elapsed_ms": 585
+    },
+    {
+      "name": "notices/onnxruntime-ThirdPartyNotices.txt",
+      "source": "https://raw.githubusercontent.com/microsoft/onnxruntime/v1.21.0/ThirdPartyNotices.txt",
+      "started_at": 1792879690.838814,
+      "status": "verified_complete",
+      "bytes": 316114,
+      "redirects": [],
+      "declared_content_length": 316114,
+      "sha256": "8c06e8cff286a4a117b3b246a4c7da68428a144af757823db50e3d6520941ec6",
+      "content_type": "text/plain; charset=utf-8",
+      "elapsed_ms": 880
+    },
+    {
+      "name": "notices/tokenizers-LICENSE",
+      "source": "https://raw.githubusercontent.com/huggingface/tokenizers.js/v0.2.0/LICENSE",
+      "started_at": 1792879691.7208138,
+      "status": "verified_complete",
+      "bytes": 11357,
+      "redirects": [],
+      "declared_content_length": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "content_type": "text/plain; charset=utf-8",
+      "elapsed_ms": 527
+    },
+    {
+      "name": "notices/model-Apache-2.0.txt",
+      "source": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "started_at": 1792879692.2501328,
+      "status": "verified_complete",
+      "bytes": 11358,
+      "redirects": [],
+      "declared_content_length": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "content_type": "text/plain",
+      "elapsed_ms": 391
+    },
+    {
+      "name": "runtime-audit.json",
+      "source": "https://registry.npmjs.org/-/npm/v1/security/advisories/bulk",
+      "started_at": 1792879692.643866,
+      "status": "verified_complete",
+      "bytes": 2,
+      "redirects": [],
+      "declared_content_length": null,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "content_type": null,
+      "elapsed_ms": 392
+    },
+    {
+      "name": "model/README.md",
+      "source": "https://huggingface.co/Xenova/all-MiniLM-L6-v2/resolve/751bff37182d3f1213fa05d7196b954e230abad9/README.md",
+      "started_at": 1792879761.312296,
+      "status": "verified_complete",
+      "bytes": 1767,
+      "redirects": [
+        {
+          "host": "huggingface.co",
+          "path": "/api/resolve-cache/models/Xenova/all-MiniLM-L6-v2/751bff37182d3f1213fa05d7196b954e230abad9/README.md",
+          "linked_etag": "\"980ba38150c4c24f9858f3b585a1113ab01f47a2\"",
+          "linked_size": null
+        }
+      ],
+      "declared_content_length": 1767,
+      "sha256": "63ea99bf681a2e9eda4f6a537d5ed8fda95d1677111656da37e9cfd080c3af02",
+      "content_type": "text/plain; charset=utf-8",
+      "elapsed_ms": 652
+    },
+    {
+      "name": "model/config.json",
+      "source": "https://huggingface.co/Xenova/all-MiniLM-L6-v2/resolve/751bff37182d3f1213fa05d7196b954e230abad9/config.json",
+      "started_at": 1792879761.9668996,
+      "status": "verified_complete",
+      "bytes": 650,
+      "redirects": [
+        {
+          "host": "huggingface.co",
+          "path": "/api/resolve-cache/models/Xenova/all-MiniLM-L6-v2/751bff37182d3f1213fa05d7196b954e230abad9/config.json",
+          "linked_etag": "\"72147e4ff4426ebedbfa2146c4a0999def51a313\"",
+          "linked_size": null
+        }
+      ],
+      "declared_content_length": 650,
+      "sha256": "7135149f7cffa1a573466c6e4d8423ed73b62fd2332c575bf738a0d033f70df7",
+      "content_type": "text/plain; charset=utf-8",
+      "elapsed_ms": 740
+    },
+    {
+      "name": "model/tokenizer.json",
+      "source": "https://huggingface.co/Xenova/all-MiniLM-L6-v2/resolve/751bff37182d3f1213fa05d7196b954e230abad9/tokenizer.json",
+      "started_at": 1792879762.7086637,
+      "status": "verified_complete",
+      "bytes": 711661,
+      "redirects": [
+        {
+          "host": "huggingface.co",
+          "path": "/api/resolve-cache/models/Xenova/all-MiniLM-L6-v2/751bff37182d3f1213fa05d7196b954e230abad9/tokenizer.json",
+          "linked_etag": "\"c17ed520ed8438736732a54957a69306b8822215\"",
+          "linked_size": null
+        }
+      ],
+      "declared_content_length": 711661,
+      "sha256": "da0e79933b9ed51798a3ae27893d3c5fa4a201126cef75586296df9b4d2c62a0",
+      "content_type": "text/plain; charset=utf-8",
+      "elapsed_ms": 701
+    },
+    {
+      "name": "model/tokenizer_config.json",
+      "source": "https://huggingface.co/Xenova/all-MiniLM-L6-v2/resolve/751bff37182d3f1213fa05d7196b954e230abad9/tokenizer_config.json",
+      "started_at": 1792879763.4109883,
+      "status": "verified_complete",
+      "bytes": 366,
+      "redirects": [
+        {
+          "host": "huggingface.co",
+          "path": "/api/resolve-cache/models/Xenova/all-MiniLM-L6-v2/751bff37182d3f1213fa05d7196b954e230abad9/tokenizer_config.json",
+          "linked_etag": "\"37fca74771bc76a8e01178ce3a6055a0995f8093\"",
+          "linked_size": null
+        }
+      ],
+      "declared_content_length": 366,
+      "sha256": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3",
+      "content_type": "text/plain; charset=utf-8",
+      "elapsed_ms": 451
+    },
+    {
+      "name": "model/special_tokens_map.json",
+      "source": "https://huggingface.co/Xenova/all-MiniLM-L6-v2/resolve/751bff37182d3f1213fa05d7196b954e230abad9/special_tokens_map.json",
+      "started_at": 1792879763.8643622,
+      "status": "verified_complete",
+      "bytes": 125,
+      "redirects": [
+        {
+          "host": "huggingface.co",
+          "path": "/api/resolve-cache/models/Xenova/all-MiniLM-L6-v2/751bff37182d3f1213fa05d7196b954e230abad9/special_tokens_map.json",
+          "linked_etag": "\"a8b3208c2884c4efb86e49300fdd3dc877220cdf\"",
+          "linked_size": null
+        }
+      ],
+      "declared_content_length": 125,
+      "sha256": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+      "content_type": "text/plain; charset=utf-8",
+      "elapsed_ms": 438
+    },
+    {
+      "name": "model/vocab.txt",
+      "source": "https://huggingface.co/Xenova/all-MiniLM-L6-v2/resolve/751bff37182d3f1213fa05d7196b954e230abad9/vocab.txt",
+      "started_at": 1792879764.3046577,
+      "status": "verified_complete",
+      "bytes": 231508,
+      "redirects": [
+        {
+          "host": "huggingface.co",
+          "path": "/api/resolve-cache/models/Xenova/all-MiniLM-L6-v2/751bff37182d3f1213fa05d7196b954e230abad9/vocab.txt",
+          "linked_etag": "\"fb140275c155a9c7c5a3b3e0e77a9e839594a938\"",
+          "linked_size": null
+        }
+      ],
+      "declared_content_length": 231508,
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3",
+      "content_type": "text/plain; charset=utf-8",
+      "elapsed_ms": 559
+    },
+    {
+      "name": "model/onnx/model_quantized.onnx",
+      "source": "https://huggingface.co/Xenova/all-MiniLM-L6-v2/resolve/751bff37182d3f1213fa05d7196b954e230abad9/onnx/model_quantized.onnx",
+      "started_at": 1792879764.8651218,
+      "status": "verified_complete",
+      "bytes": 22972370,
+      "redirects": [
+        {
+          "host": "us.aws.cdn.hf.co",
+          "path": "/xet-bridge-us/645192b75fb40b9f50b71914/c96f5f1e2aee643bd8191bb520a3e175db7b05821579a02a70acdf31e655d194",
+          "linked_etag": "\"afdb6f1a0e45b715d0bb9b11772f032c399babd23bfc31fed1c170afc848bdb1\"",
+          "linked_size": "22972370"
+        }
+      ],
+      "declared_content_length": 22972370,
+      "sha256": "afdb6f1a0e45b715d0bb9b11772f032c399babd23bfc31fed1c170afc848bdb1",
+      "content_type": "application/octet-stream",
+      "elapsed_ms": 7329
+    }
+  ]
+}

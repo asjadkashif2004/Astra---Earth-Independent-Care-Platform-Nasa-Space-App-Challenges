@@ -1,0 +1,53 @@
+from pathlib import Path
+from urllib.request import Request, build_opener, HTTPRedirectHandler
+from urllib.parse import urlsplit
+import hashlib, json, time, datetime, socket
+
+OUT=Path('/tmp/astra-n15-03c-metadata')
+OUT.mkdir(exist_ok=False)
+START=time.monotonic()
+SOURCES={
+ 'ubuntu-gcc16-cves':'https://ubuntu.com/security/cves.json?package=gcc-16&limit=100',
+ 'ubuntu-gcc16-notices':'https://ubuntu.com/security/notices.json?package=gcc-16&limit=100',
+ 'ubuntu-gcc16-copyright':'https://changelogs.ubuntu.com/changelogs/pool/main/g/gcc-16/gcc-16_16-20260322-1ubuntu1/copyright',
+}
+class Redirect(HTTPRedirectHandler):
+ def redirect_request(self, req, fp, code, msg, headers, newurl):
+  raise RuntimeError('Redirect refused: '+newurl)
+opener=build_opener(Redirect())
+records=[]
+for name,url in SOURCES.items():
+ rec={'id':name,'url':url,'retrieved_at':datetime.datetime.now(datetime.timezone.utc).isoformat()}
+ try:
+  remaining=45-(time.monotonic()-START)
+  if remaining<=0: raise TimeoutError('45-second metadata budget exhausted')
+  deadline=time.monotonic()+min(15,remaining)
+  req=Request(url,headers={'User-Agent':'ASTRA-N15-03C-metadata-only/1.0','Accept-Encoding':'identity','Accept':'application/json' if 'json?' in url else 'text/plain'})
+  with opener.open(req,timeout=min(15,remaining)) as resp:
+   rec.update(status=resp.status,headers=dict(resp.headers))
+   length=resp.headers.get('Content-Length')
+   if length is not None and int(length)>262144: raise ValueError('Metadata exceeds 262144-byte cap')
+   data=bytearray()
+   while True:
+    remaining=deadline-time.monotonic()
+    if remaining<=0: raise TimeoutError('Metadata request deadline')
+    fp=getattr(resp,'fp',None)
+    raw=getattr(fp,'raw',None)
+    sock=getattr(raw,'_sock',None)
+    if sock is not None: sock.settimeout(remaining)
+    block=resp.read1(min(8192,262145-len(data)))
+    if not block: break
+    data.extend(block)
+    if len(data)>262144: raise ValueError('Metadata exceeds 262144-byte cap')
+   if length is not None and len(data)!=int(length): raise ValueError('Incomplete metadata response')
+   rec.update(bytes=len(data),sha256=hashlib.sha256(data).hexdigest())
+   (OUT/(name+'.original')).write_bytes(data)
+   rec['complete']=True
+   if 'json?' in url:
+    parsed=json.loads(data)
+    rec['json_structure']={k:(len(v) if isinstance(v,(list,dict)) else v) for k,v in parsed.items()} if isinstance(parsed,dict) else {'type':type(parsed).__name__}
+ except Exception as exc:
+  rec.update(complete=False,error=type(exc).__name__+': '+str(exc))
+ records.append(rec)
+ (OUT/'receipts.json').write_text(json.dumps({'no_package_download':True,'records':records,'elapsed_s':time.monotonic()-START},indent=2)+'\n')
+ print(json.dumps({k:v for k,v in rec.items() if k!='headers'}),flush=True)

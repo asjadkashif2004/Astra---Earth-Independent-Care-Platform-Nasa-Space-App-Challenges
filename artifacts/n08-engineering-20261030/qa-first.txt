@@ -1,0 +1,144 @@
+✔ W1/W3 authentic authored fixture regression has explicit synthetic identity and both codecs preserve frames (21.404319ms)
+✔ W1/W9 metadata rejects unrecognized schema (0.695341ms)
+✔ W1/W9 metadata rejects path recording ID (0.348102ms)
+✔ W1/W9 metadata rejects absolute source path (0.363771ms)
+✔ W1/W9 metadata rejects unverified real source (0.413505ms)
+✔ W1/W9 metadata rejects missing synthetic attestation (0.554002ms)
+✔ W1/W9 metadata rejects bad crew (0.399549ms)
+✔ W1/W9 metadata rejects wrong revision (0.311531ms)
+✔ W1/W9 metadata rejects missing predecessor (0.486404ms)
+✔ W1/W9 metadata rejects bad unit (0.433243ms)
+✔ W1/W9 metadata rejects wrong channel (0.313045ms)
+✔ W1/W9 metadata rejects duplicate channel (0.307153ms)
+✔ W1/W9 metadata rejects excess channels (0.330047ms)
+✔ W1/W9 metadata rejects zero rate (0.241228ms)
+✔ W1/W9 metadata rejects unsupported rate (0.339795ms)
+✔ W1/W9 metadata rejects oversized count (0.34773ms)
+✔ W1/W9 metadata rejects fractional duration (0.219858ms)
+✔ W1/W9 metadata rejects invalid calendar (0.203146ms)
+✔ W1/W9 metadata rejects timezone ambiguity (0.236399ms)
+✔ W1/W9 metadata rejects inferred quality (0.203006ms)
+✔ W1/W9 metadata rejects unknown field (0.241679ms)
+✔ W1 binary rejects magic (1.012433ms)
+✔ W1 binary rejects version (0.882377ms)
+✔ W1 binary rejects endianness (1.701679ms)
+✔ W1 binary rejects encoding (0.348031ms)
+✔ W1 binary rejects truncated header (0.27943ms)
+✔ W1 binary rejects metadata length overflow (0.443846ms)
+✔ W1 binary rejects truncated samples (0.428624ms)
+✔ W1 binary rejects extra sample bytes (3.113314ms)
+✔ W1 binary rejects infinity (0.624917ms)
+✔ W1 binary rejects noncanonical NaN (0.779872ms)
+✔ W1 binary rejects corrupt UTF8 (0.307083ms)
+✔ W1 binary rejects oversize (0.492987ms)
+✔ W3 CSV rejects BOM (5.487994ms)
+✔ W3 CSV rejects CRLF (4.143591ms)
+✔ W3 CSV rejects wrong magic (5.194577ms)
+✔ W3 CSV rejects missing column (4.211369ms)
+✔ W3 CSV rejects wrong units (4.682164ms)
+✔ W3 CSV rejects extra columns (3.665393ms)
+✔ W3 CSV rejects quoted cells (4.29023ms)
+✔ W3 CSV rejects formula (3.76924ms)
+✔ W3 CSV rejects numeric NaN text (4.030025ms)
+✔ W3 CSV rejects bad number (3.525778ms)
+✔ W3 CSV rejects duplicate row (3.741958ms)
+✔ W3 CSV rejects reordered row (4.408755ms)
+✔ W3 CSV rejects truncated row (3.489648ms)
+✔ W3 CSV rejects extra row (4.071424ms)
+✔ W3 CSV rejects absent terminal LF (3.346536ms)
+✔ W1 exact 50 Hz timebase and 1-second chunk tail (2.812853ms)
+✔ W1 exact 100 Hz timebase and 1-second chunk tail (2.166456ms)
+✔ W1 exact 125 Hz timebase and 1-second chunk tail (1.814937ms)
+✔ W1 exact 250 Hz timebase and 1-second chunk tail (2.196482ms)
+✔ W1 exact 500 Hz timebase and 1-second chunk tail (2.02697ms)
+✔ W1 ingest binds immutable original/normalized hashes and twelve actual binary chunks (3.969851ms)
+✔ W1 exact import idempotency preserves audit and source count; conflicting/replaced/foreign source rejects (5.431307ms)
+✔ W1/R1 correction preserves old bytes; dual source/knowledge cutoff hides future corrections (9.156423ms)
+✔ W1 revisions reject changed source/time/channel identity and bad predecessor (4.992774ms)
+✔ W2/W9 denies raw data to viewer (0.104759ms)
+✔ W2/W9 denies raw data to researcher (0.05259ms)
+✔ W2/W9 denies raw data to system_admin (0.045636ms)
+✔ W2/W9 denies raw data to unknown (0.044695ms)
+✔ W2 crew self scope, read-only roles and absent caller fail closed (0.136931ms)
+✔ W1/W9 hash, future source and unknown format reject without partial storage (1.749493ms)
+✔ W4/W5/W6 bounded deterministic prefixes retain extrema, gaps, units and no future samples (7.098454ms)
+✔ W4 invalid range/channel/cutoff {"from_ms":-1} (2.381544ms)
+✔ W4 invalid range/channel/cutoff {"until_ms":20001} (2.388617ms)
+✔ W4 invalid range/channel/cutoff {"from_ms":2.5} (2.065633ms)
+✔ W4 invalid range/channel/cutoff {"until_ms":null} (1.977005ms)
+✔ W4 invalid range/channel/cutoff {"points":1} (2.219596ms)
+✔ W4 invalid range/channel/cutoff {"points":1001} (2.030397ms)
+✔ W4 invalid range/channel/cutoff {"channel":"BP"} (2.203255ms)
+✔ W4 invalid range/channel/cutoff {"before":"2027-01-01T00:00:00.000Z"} (1.659011ms)
+✔ W7/W8 experimental known peaks give exactly 60/min only for complete good source and bind real chunk positions (2.901481ms)
+✔ W6/W7 poor declared quality suspect withholds derived rate despite valid numbers (5.145584ms)
+✔ W6/W7 poor declared quality missing withholds derived rate despite valid numbers (3.317812ms)
+✔ W6 all missing is UNKNOWN; PPG does not invent ECG peaks or BP (4.584128ms)
+✔ W1/W10 source/audit/chunks transaction rolls back on mid-ingest persistence failure (1.714056ms)
+✔ W9 tampered original/chunk/missing evidence fails closed, never repairs (8.041215ms)
+✔ W10 bounded retention rejects revision 65 without pruning originals or history (54.609402ms)
+✔ W10 bounded bytes reject before 8MiB and retain last committed source (161.143413ms)
+✔ W9 reads are deterministic and never change database, audit, scalar, alert, baseline or communication state (108.946214ms)
+✖ W10 cold process verifies saved binary+CSV; interrupted transaction leaves no incomplete import (203.870243ms)
+✔ W1/W3 parser acceptance controls reject both accept-all and reject-all substitutes (0.513595ms)
+✔ W2 actual binary+CSV HTTP intake, list/window/rawchunk and idempotent response (156.22365ms)
+✖ W2 HTTP rejects unauthenticated/forged roles, cross-crew and unauthorized writes (93.806631ms)
+✔ W2 HTTP malformed query, unsupported operation/media, missing hash and oversized input reject (95.672449ms)
+✔ W2 rejection audit records bounded hash/reason without raw file or private paths (89.91671ms)
+✖ W10 measured bounded binary/CSV/ingest/decimate and no read-side file writes (13.331163ms)
+ℹ tests 88
+ℹ suites 0
+ℹ pass 85
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1429.131507
+
+✖ failing tests:
+
+test at tests/n08.test.mjs:100:1
+✖ W10 cold process verifies saved binary+CSV; interrupted transaction leaves no incomplete import (203.870243ms)
+  TypeError: s.auditValid is not a function
+      at TestContext.<anonymous> (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/n08.test.mjs:105:177)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tests/n08.test.mjs:127:1
+✖ W2 HTTP rejects unauthenticated/forged roles, cross-crew and unauthorized writes (93.806631ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  200 !== 403
+  
+      at TestContext.<anonymous> (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/n08.test.mjs:130:62)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 200,
+    expected: 403,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/n08.test.mjs:147:1
+✖ W10 measured bounded binary/CSV/ingest/decimate and no read-side file writes (13.331163ms)
+  AppError: Waveform rejected: WAVEFORM_SIZE
+      at check (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/packages/waveforms.mjs:5:75)
+      at inputBytes (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/packages/waveforms.mjs:24:28)
+      at encodeCSV (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/packages/waveforms.mjs:51:10)
+      at TestContext.<anonymous> (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/n08.test.mjs:149:217)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+    status: 413,
+    code: 'WAVEFORM_SIZE'
+  }

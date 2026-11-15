@@ -1,0 +1,25 @@
+{
+  "schema_version": "astra.sleep-edf-approval.v1",
+  "id": "physionet-sleep-edfx-sc4001",
+  "repository": "PhysioNet Sleep-EDF Database Expanded",
+  "canonical_url": "https://physionet.org/content/sleep-edfx/1.0.0/",
+  "doi": "10.13026/C2X676",
+  "version": "1.0.0",
+  "rights": {
+    "license_id": "ODC-By-1.0",
+    "license_url": "https://physionet.org/content/sleep-edfx/view-license/1.0.0/",
+    "reviewed_on": "2026-10-24",
+    "attribution": "Contains information from Sleep-EDF Database Expanded,Bob Kemp,PhysioNet,DOI:10.13026/C2X676,made available under the Open Data Commons Attribution License v1.0.Cite Kemp et al.,Analysis of a sleep-dependent neuronal feedback loop:the slow-wave microcontinuity of the EEG,IEEE-BME47(9):1185-1194(2000),and the PhysioNet resource citation listed in the source README.",
+    "restrictions": [
+      "Retain license URI,source/contributor attribution and applicable notices with redistribution;ODC-By database rights do not waive privacy,personality or other independent content rights.",
+      "Keep original EDF/EDF+ and publisher metadata bytes unchanged;derived documentation is separately labeled.No re-identification,patient linkage or implied PhysioNet/clinical endorsement.",
+      "Historical terrestrial sleep-research records,not astronaut clinical norms or live mission data.No model training,clinical diagnosis,monitoring integration or independent generalization claim."
+    ]
+  },
+  "files": [
+    { "name": "SC4001E0-PSG.edf", "url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4001E0-PSG.edf", "bytes": 48338048, "sha256": "2b40a18adf76af69a42d6db1f30f31d26b369f6d27ca0050ef30147ef892b131", "deadline_ms": 300000 },
+    { "name": "SC4001EC-Hypnogram.edf", "url": "https://physionet.org/files/sleep-edfx/1.0.0/sleep-cassette/SC4001EC-Hypnogram.edf", "bytes": 4620, "sha256": "a4cf67694ade1b52a0ddd06d5817fd45d2d3e8bac5302f640f3e9cfbbf12a996", "deadline_ms": 15000 }
+  ],
+  "limits": { "total_payload_bytes": 50000000, "overall_network_ms": 360000, "small_resource_bytes": 65536, "small_resource_ms": 15000, "automatic_retries": 0 },
+  "publisher": { "url": "https://physionet.org/files/sleep-edfx/1.0.0/SHA256SUMS.txt", "bytes": 39799, "sha256": "1bc88e19e2e921f7851d7cf61e31ceb8f6d670211ca546a323e9db5a77525edf" }
+}

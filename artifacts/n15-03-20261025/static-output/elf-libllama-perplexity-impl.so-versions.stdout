@@ -1,0 +1,71 @@
+
+Version symbols section '.gnu.version' contains 173 entries:
+ Addr: 0x0000000000002e90  Offset: 0x00002e90  Link: 4 (.dynsym)
+  000:   0 (*local*)       1 (*global*)      2 (GLIBC_2.2.5)   3 (GLIBCXX_3.4.19) 
+  004:   4 (GLIBCXX_3.4.22)    5 (GLIBCXX_3.4)   5 (GLIBCXX_3.4)   5 (GLIBCXX_3.4)
+  008:   5 (GLIBCXX_3.4)   5 (GLIBCXX_3.4)   5 (GLIBCXX_3.4)   6 (GLIBCXX_3.4.21) 
+  00c:   6 (GLIBCXX_3.4.21)    6 (GLIBCXX_3.4.21)    1 (*global*)      5 (GLIBCXX_3.4)
+  010:   5 (GLIBCXX_3.4)   1 (*global*)      1 (*global*)      7 (CXXABI_1.3) 
+  014:   2 (GLIBC_2.2.5)   2 (GLIBC_2.2.5)   4 (GLIBCXX_3.4.22)    6 (GLIBCXX_3.4.21) 
+  018:   1 (*global*)      5 (GLIBCXX_3.4)   6 (GLIBCXX_3.4.21)    2 (GLIBC_2.2.5)
+  01c:   1 (*global*)      5 (GLIBCXX_3.4)   5 (GLIBCXX_3.4)   5 (GLIBCXX_3.4)
+  020:   8 (GLIBCXX_3.4.11)    1 (*global*)      5 (GLIBCXX_3.4)   1 (*global*)   
+  024:   5 (GLIBCXX_3.4)   2 (GLIBC_2.2.5)   9 (GLIBCXX_3.4.29)    1 (*global*)   
+  028:   a (GLIBC_2.2.5)   b (GLIBC_2.29)    c (GLIBC_2.14)    1 (*global*)   
+  02c:   1 (*global*)      1 (*global*)      1 (*global*)      1 (*global*)   
+  030:   1 (*global*)      2 (GLIBC_2.2.5)   5 (GLIBCXX_3.4)   4 (GLIBCXX_3.4.22) 
+  034:   6 (GLIBCXX_3.4.21)    1 (*global*)      1 (*global*)      5 (GLIBCXX_3.4)
+  038:   1 (*global*)      5 (GLIBCXX_3.4)   1 (*global*)      d (CXXABI_1.3.9)
+  03c:   5 (GLIBCXX_3.4)   1 (*global*)      1 (*global*)      e (GLIBC_2.4)  
+  040:   8 (GLIBCXX_3.4.11)    1 (*global*)      1 (*global*)      1 (*global*)   
+  044:   5 (GLIBCXX_3.4)   5 (GLIBCXX_3.4)   7 (CXXABI_1.3)    6 (GLIBCXX_3.4.21) 
+  048:   5 (GLIBCXX_3.4)   5 (GLIBCXX_3.4)   5 (GLIBCXX_3.4)   f (GLIBCXX_3.4.17) 
+  04c:   1 (*global*)      2 (GLIBC_2.2.5)   5 (GLIBCXX_3.4)   5 (GLIBCXX_3.4)
+  050:   1 (*global*)      7 (CXXABI_1.3)    2 (GLIBC_2.2.5)   5 (GLIBCXX_3.4)
+  054:   1 (*global*)      1 (*global*)     10 (GLIBCXX_3.4.20)    1 (*global*)   
+  058:   5 (GLIBCXX_3.4)   5 (GLIBCXX_3.4)   5 (GLIBCXX_3.4)   1 (*global*)   
+  05c:   1 (*global*)      2 (GLIBC_2.2.5)   7 (CXXABI_1.3)    7 (CXXABI_1.3) 
+  060:  11 (GLIBC_2.27)    1 (*global*)      5 (GLIBCXX_3.4)   8 (GLIBCXX_3.4.11) 
+  064:   1 (*global*)      1 (*global*)      1 (*global*)     12 (GCC_3.0)    
+  068:   1 (*global*)      b (GLIBC_2.29)    6 (GLIBCXX_3.4.21)    a (GLIBC_2.2.5)
+  06c:   6 (GLIBCXX_3.4.21)    5 (GLIBCXX_3.4)  11 (GLIBC_2.27)    1 (*global*)   
+  070:   1 (*global*)      1 (*global*)      1 (*global*)      1 (*global*)   
+  074:   1 (*global*)      5 (GLIBCXX_3.4)   1 (*global*)      6 (GLIBCXX_3.4.21) 
+  078:   1 (*global*)      5 (GLIBCXX_3.4)   1 (*global*)      1 (*global*)   
+  07c:   1 (*global*)      1 (*global*)      1 (*global*)      1 (*global*)   
+  080:   1 (*global*)      1 (*global*)      1 (*global*)      1 (*global*)   
+  084:   1 (*global*)      1 (*global*)      1 (*global*)      1 (*global*)   
+  088:   1 (*global*)      1 (*global*)      1 (*global*)      1 (*global*)   
+  08c:   1 (*global*)      1 (*global*)      1 (*global*)      1 (*global*)   
+  090:   1 (*global*)      1 (*global*)      1 (*global*)      1 (*global*)   
+  094:   1 (*global*)      1 (*global*)      1 (*global*)      1 (*global*)   
+  098:   1 (*global*)      1 (*global*)      1 (*global*)      1 (*global*)   
+  09c:   1 (*global*)      1 (*global*)      1 (*global*)      1 (*global*)   
+  0a0:   1 (*global*)      1 (*global*)      1 (*global*)      1 (*global*)   
+  0a4:   1 (*global*)      1 (*global*)      1 (*global*)      1 (*global*)   
+  0a8:   1 (*global*)      1 (*global*)      1 (*global*)      1 (*global*)   
+  0ac:   1 (*global*)   
+
+Version needs section '.gnu.version_r' contains 4 entries:
+ Addr: 0x0000000000002ff0  Offset: 0x00002ff0  Link: 5 (.dynstr)
+  000000: Version: 1  File: libgcc_s.so.1  Cnt: 1
+  0x0010:   Name: GCC_3.0  Flags: none  Version: 18
+  0x0020: Version: 1  File: libm.so.6  Cnt: 3
+  0x0030:   Name: GLIBC_2.27  Flags: none  Version: 17
+  0x0040:   Name: GLIBC_2.29  Flags: none  Version: 11
+  0x0050:   Name: GLIBC_2.2.5  Flags: none  Version: 10
+  0x0060: Version: 1  File: libstdc++.so.6  Cnt: 10
+  0x0070:   Name: GLIBCXX_3.4.20  Flags: none  Version: 16
+  0x0080:   Name: GLIBCXX_3.4.17  Flags: none  Version: 15
+  0x0090:   Name: CXXABI_1.3.9  Flags: none  Version: 13
+  0x00a0:   Name: GLIBCXX_3.4.29  Flags: none  Version: 9
+  0x00b0:   Name: GLIBCXX_3.4.11  Flags: none  Version: 8
+  0x00c0:   Name: CXXABI_1.3  Flags: none  Version: 7
+  0x00d0:   Name: GLIBCXX_3.4.21  Flags: none  Version: 6
+  0x00e0:   Name: GLIBCXX_3.4  Flags: none  Version: 5
+  0x00f0:   Name: GLIBCXX_3.4.22  Flags: none  Version: 4
+  0x0100:   Name: GLIBCXX_3.4.19  Flags: none  Version: 3
+  0x0110: Version: 1  File: libc.so.6  Cnt: 3
+  0x0120:   Name: GLIBC_2.4  Flags: none  Version: 14
+  0x0130:   Name: GLIBC_2.14  Flags: none  Version: 12
+  0x0140:   Name: GLIBC_2.2.5  Flags: none  Version: 2

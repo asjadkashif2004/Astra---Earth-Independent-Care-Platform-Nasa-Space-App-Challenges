@@ -1,0 +1,153 @@
+{
+  "status": "PASS",
+  "baseline_paths": 554,
+  "unchanged_baseline_paths": 547,
+  "approved_existing_source_changes": [
+    "apps/mission-control-web/app.mjs",
+    "apps/mission-control-web/styles.css",
+    "packages/contracts.mjs",
+    "scripts/browser-acceptance.mjs",
+    "services/api/engine.mjs",
+    "services/api/server.mjs",
+    "services/telemetry-simulator/simulator.mjs"
+  ],
+  "unexpected_changes": [],
+  "missing": [],
+  "markdown_documents": 13,
+  "local_links": 409,
+  "broken_links": [],
+  "unbalanced_fences": [],
+  "all_26_module_ids_retained": true,
+  "full_N09_gate_retained": true,
+  "code_files": [
+    {
+      "path": "packages/contracts.mjs",
+      "bytes": 12178,
+      "sha256": "d5f3809213fc95bd77a7831006a557b2220af249a5ff3be36df6d9ebf57eef18"
+    },
+    {
+      "path": "services/telemetry-simulator/simulator.mjs",
+      "bytes": 6012,
+      "sha256": "d1013b633f14f7af197c7cf5b274b32d2d033062e87d6fffc46902c7440660ff"
+    },
+    {
+      "path": "services/api/engine.mjs",
+      "bytes": 29592,
+      "sha256": "ab830fdb40f307366270d6f14cfde000289cf2c33c3f28b8e51e50dc3fca04a2"
+    },
+    {
+      "path": "services/api/server.mjs",
+      "bytes": 26373,
+      "sha256": "0ed07b23253eaa292a6e56293838d612257ef7e64605534219c8a070d5b66090"
+    },
+    {
+      "path": "apps/mission-control-web/app.mjs",
+      "bytes": 91218,
+      "sha256": "61c8a84b04e85c298563865f12ce25221a026154331fc0422208c7c08c8f4662"
+    },
+    {
+      "path": "apps/mission-control-web/styles.css",
+      "bytes": 39851,
+      "sha256": "7ae13c1d51732ec0fa042e4b9e7f98bfc79ec79589042598a5bef422bb169f75"
+    },
+    {
+      "path": "scripts/browser-acceptance.mjs",
+      "bytes": 26905,
+      "sha256": "0106f65ca02a05ccdd9a82f1cc01f76235ddab892677e19767894599ab0b6a1e"
+    },
+    {
+      "path": "services/telemetry-simulator/demo-profile.mjs",
+      "bytes": 1671,
+      "sha256": "e8261ed92c0b3d2c3465fa51edb1cd885718ed984b7aca3bd4f1a0d121a19275"
+    },
+    {
+      "path": "tests/scenario-demo.test.mjs",
+      "bytes": 21613,
+      "sha256": "7682b4ca4f7906ea310e7c92adf3cbbdb929d2bf26d67237e71bba41c30c66a8"
+    },
+    {
+      "path": "scripts/browser-n09-d01.mjs",
+      "bytes": 6608,
+      "sha256": "2e4b50c3f2a47e063ce3e9e137f2097b392f714ee04a17479fe3dded1c580dc6"
+    }
+  ],
+  "new_evidence": [
+    {
+      "path": "artifacts/n09-d01-20261024/browser/case-human-acknowledged.png",
+      "bytes": 290071,
+      "sha256": "4109620b1a7d495e5e4a2e17e4e8df68370a5696735e9c69618e644b771752db"
+    },
+    {
+      "path": "artifacts/n09-d01-20261024/browser/delayed-earth-queue.png",
+      "bytes": 273969,
+      "sha256": "720fc130fb822d5532ee4622e72454536988afeec20a7af51dffe148783569ed"
+    },
+    {
+      "path": "artifacts/n09-d01-20261024/browser/report.json",
+      "bytes": 7006,
+      "sha256": "c5d0b8f3bc418ff5a748cca3bc49518c6c9610c0397c005a0ededff416abb556"
+    },
+    {
+      "path": "artifacts/n09-d01-20261024/browser/scenario-1920x1080.png",
+      "bytes": 434807,
+      "sha256": "497a8bbae06fd75d10f57883b0ee3c044c8d9d3feb698f251625a5758c2a13e8"
+    },
+    {
+      "path": "artifacts/n09-d01-20261024/browser/scenario-390x844.png",
+      "bytes": 106011,
+      "sha256": "2b90a0a9d877148168de0fbb66898d502fa25b83788cbb9c7ca556544d7a9be3"
+    },
+    {
+      "path": "artifacts/n09-d01-20261024/browser/scenario-detected.png",
+      "bytes": 298540,
+      "sha256": "02b1a3fdd808b5e6816ab6c6a58bef25789eb81a85fa4c51630888bc4b31db20"
+    },
+    {
+      "path": "artifacts/n09-d01-20261024/browser/scenario-pending.png",
+      "bytes": 292215,
+      "sha256": "b7c96061b9d8b693e7c4051a7a9031ebb985b0e13fd263cd14daf74ff0d1bbf1"
+    },
+    {
+      "path": "artifacts/n09-d01-20261024/browser-layout-final/report.json",
+      "bytes": 1452,
+      "sha256": "25da912a9b7bf8da4ec152d6a5600778e8b31a939ef63fd7b8742bff46554b37"
+    },
+    {
+      "path": "artifacts/n09-d01-20261024/browser-layout-final/scenario-1920x1080.png",
+      "bytes": 435324,
+      "sha256": "1450201049c2af889963871bff8f4b54a6d5bd435d2aaa7d35ae303d53144050"
+    },
+    {
+      "path": "artifacts/n09-d01-20261024/browser-layout-final/scenario-390x844.png",
+      "bytes": 101845,
+      "sha256": "ed3bb8723d26e4347187a1b2a6e7ac2edc92adb1bf5302abb0a76b2278a24d7c"
+    },
+    {
+      "path": "artifacts/n09-d01-20261024/browser-layout-final/scenario-controls-mobile.png",
+      "bytes": 110387,
+      "sha256": "4dfb472c14ef37094501bfac07fd6365888b8445b44b3de363a7dec7e1be7fb8"
+    },
+    {
+      "path": "artifacts/n09-d01-20261024/focused-final.txt",
+      "bytes": 6824,
+      "sha256": "a7f454fe400ff48f30b95e8047bd9e5c59abe7a5810b89473c58d8579cb825ba"
+    },
+    {
+      "path": "artifacts/n09-d01-20261024/regression.txt",
+      "bytes": 42524,
+      "sha256": "97c7eebc76d941b2d2cd42542fdac7c8d66bce66cfd887758d6754aa7513ed40"
+    },
+    {
+      "path": "artifacts/n09-d01-20261024/syntax-check.txt",
+      "bytes": 184,
+      "sha256": "c937ef5b9929507e7e2559f055768e8e1e5fd1d5d1ccb98894e04d400f8afb61"
+    },
+    {
+      "path": "artifacts/n09-d01-20261024/verification.json",
+      "bytes": 3048,
+      "sha256": "f213f936bfdccc7c1f429636f5e1dbc813b351003ac153be50dd2419137bd448"
+    }
+  ],
+  "historical_evidence": "No historical artifact writes; new output exclusively under artifacts/n09-d01-20261024. Source/corpus/data/protected dependency decisions outside listed changes match baseline.",
+  "scope": "Preservation/document consistency, not new medical/AC-20 acceptance"
+}

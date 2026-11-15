@@ -1,0 +1,5 @@
+[
+  {"file":"1x-overview-standard-2-59.png","id":1306,"expected":"7.9","screenshot_sha256":"0b2a7732c0b6c0ebbd42087e03793bfcde77d926da2c46589c12385138b7b468","reviewer":"Codex actual rendered PNG inspection,2026-10-19","location":"CREW-03,top-right Last sleep numeric text","finding":"7.9 is visibly readable;unit h is separate. Not user approval or physical scanout evidence."},
+  {"file":"1x-overview-standard-2-21.png","id":467,"expected":"7.4","screenshot_sha256":"b9028826055659b13242ed33c8818d270d0f4a59c1b91b6e86f3580907f3693b","reviewer":"Codex actual rendered PNG inspection,2026-10-19","location":"CREW-02,top-middle Last sleep numeric text","finding":"7.4 is visibly readable. Not user approval or physical scanout evidence."},
+  {"file":"1x-overview-standard-2-48.png","id":1056,"expected":"64","screenshot_sha256":"49e86e976b35e8851d6e608eda609f2c811661c14df7db767fcb0481d1266acf","reviewer":"Codex actual rendered PNG inspection,2026-10-19","location":"CREW-01,top-left Heart rate numeric text","finding":"64 is visibly readable. Not user approval or physical scanout evidence."}
+]

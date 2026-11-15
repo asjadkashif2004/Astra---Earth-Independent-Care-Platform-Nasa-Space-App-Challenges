@@ -1,0 +1,6965 @@
+{
+  "status": "passed",
+  "started_at": "2026-11-08T22:13:18.772Z",
+  "checks": [
+    {
+      "name": "Presentation: authenticated dashboard and six real synthetic crew",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: all six crew bind actual backend heart-rate observations",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: actual N08 fixture import, bounded waveform and playback",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: qualified N09 scenario causes deterministic N02 warning",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: human acknowledgement uses actual N02 contract",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: real 3D anatomy selection, heart-rate binding and source context",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: missing source stays UNKNOWN and waveform returns to same crew",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: N12 research UI is readable without starting a new protocol",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: actual browser accessibility and responsive anatomy",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: network failure, honest unavailable state and retry recovery",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: reload and cold service restart preserve committed sources and acknowledgement",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: role denial and expired session clear crew details",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: final authorized overview and graphics cleanup",
+      "status": "passed"
+    },
+    {
+      "name": "Presentation: offline research and recorded agent backups open without execution",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    "01-dashboard.png",
+    "02-waveform.png",
+    "03-scenario.png",
+    "04-acknowledged.png",
+    "05-anatomy-linked.png",
+    "06-recovered-dashboard.png",
+    "07-offline-research.png",
+    "08-recorded-agent.png"
+  ],
+  "console_errors": [],
+  "http_errors": [
+    {
+      "url": "http://127.0.0.1:64552/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    },
+    {
+      "url": "http://127.0.0.1:64552/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    },
+    {
+      "url": "http://127.0.0.1:64552/v1/crew/CREW-03/anatomy?region=cardiovascular&before=2026-11-14T11%3A06%3A31.000Z",
+      "status": 503,
+      "stage": "Presentation: network failure, honest unavailable state and retry recovery"
+    },
+    {
+      "url": "http://127.0.0.1:64552/v1/alerts/RISK-f1792429/ack",
+      "status": 403,
+      "stage": "Presentation: role denial and expired session clear crew details"
+    },
+    {
+      "url": "http://127.0.0.1:64552/v1/crew/CREW-03/anatomy?region=cardiovascular&before=2026-11-14T11%3A06%3A50.000Z",
+      "status": 401,
+      "stage": "Presentation: role denial and expired session clear crew details"
+    }
+  ],
+  "viewports": [],
+  "caveats": [
+    "No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation.",
+    "Pointer/keyboard/rendered DOM checks and screenshots supplement human visual, text-contrast and assistive-technology review; they do not establish WCAG conformance."
+  ],
+  "native_zoom_preferences": {
+    "factor": 1,
+    "partition_key": "x",
+    "level": 0,
+    "disposable_profile": true
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/156.0.8078.80",
+    "revision": "@fb096c0011f9d50f0a264a9376420cdea9c421e3",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "jsVersion": "15.6.75.27"
+  },
+  "N05_audits": [
+    {
+      "physical_width": 1920,
+      "physical_height": 1080,
+      "zoom": 1,
+      "layout": {
+        "width": 1920,
+        "dpr": 1,
+        "visual_scale": 1,
+        "css_zoom": "1",
+        "overflow": false
+      },
+      "axe": {
+        "version": "4.11.1",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": [
+              {
+                "target": [
+                  "#n06-heading"
+                ]
+              },
+              {
+                "target": [
+                  "section[aria-labelledby=\"n06-heading\"] > p:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"respiratory-left\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"respiratory-right\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"body\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"skeleton\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"head\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"thorax\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-clear=\"\"]"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-status"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"heart_rate\"] > dt"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"heart_rate\"] > dd"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"hrv\"] > dt"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"hrv\"] > dd"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > h3"
+                ]
+              },
+              {
+                "target": [
+                  "p:nth-child(5)"
+                ]
+              },
+              {
+                "target": [
+                  "p[data-n06-alert=\"RISK-f1792429\"]"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(7)"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > small"
+                ]
+              },
+              {
+                "target": [
+                  "details:nth-child(6) > summary"
+                ]
+              },
+              {
+                "target": [
+                  "details:nth-child(7) > summary"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-refresh"
+                ]
+              },
+              {
+                "target": [
+                  "section:nth-child(3) > .panel-heading > h2"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-key > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-key > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(3)"
+                ]
+              },
+              {
+                "target": [
+                  "section:nth-child(4) > .panel-heading > h2"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-status > .amber.status"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-status > .amber.status > span"
+                ]
+              },
+              {
+                "target": [
+                  ".evidence-header > h3"
+                ]
+              },
+              {
+                "target": [
+                  ".evidence-header > small"
+                ]
+              },
+              {
+                "target": [
+                  "th:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "th:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "th:nth-child(3)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(1) > td:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(1) > td:nth-child(1) > small"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(1) > .mono:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(1) > .mono:nth-child(3)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(2) > td:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(2) > td:nth-child(1) > small"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(2) > .mono:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(2) > .mono:nth-child(3)"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-evidence > details > summary"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-evidence > .evidence-foot"
+                ]
+              },
+              {
+                "target": [
+                  ".ghost.button[data-page=\"agent\"]"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "contrast": [
+        {
+          "target": [
+            "#n06-heading"
+          ],
+          "text": "Anatomy & health linkage",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section[aria-labelledby=\"n06-heading\"] > p:nth-child(2)"
+          ],
+          "text": "SYNTHETIC / RESEARCH DEMONSTRATION · no organ diagnosis",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"respiratory-left\"]"
+          ],
+          "text": "Respiratory · left lung",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"respiratory-right\"]"
+          ],
+          "text": "Respiratory · right lung",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"body\"]"
+          ],
+          "text": "Body envelope",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"skeleton\"]"
+          ],
+          "text": "Skeleton · no bone measurement",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"head\"]"
+          ],
+          "text": "Head context · geometry unavailable",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"thorax\"]"
+          ],
+          "text": "Thorax context · conceptual",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-clear=\"\"]"
+          ],
+          "text": "Clear selection",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-status"
+          ],
+          "text": "CREW-03 · Cardiovascular · heart surfaces · CURRENT SYNTHETIC · AVAILABLE · 2026-11-14T11:06:29.000Z",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(1)"
+          ],
+          "text": "Three reference chamber-wall surfaces, not a complete heart. HR/HRV do not establish heart disease.",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(2)"
+          ],
+          "text": "Illustrative phase uses mission/source time; current interpolation 1× host speed, bounded by observa",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"heart_rate\"] > dt"
+          ],
+          "text": "heart_rate [/min]",
+          "resolved": true,
+          "minimum_ratio": 12.269944009338495,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            221,
+            213,
+            245
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"heart_rate\"] > dd"
+          ],
+          "text": "93.02 · goodSource 2026-11-14T11:06:06.000Z · known 2026-11-14T11:06:06.000Zsimulator · SIM-CREW-03 ",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"hrv\"] > dt"
+          ],
+          "text": "hrv [ms]",
+          "resolved": true,
+          "minimum_ratio": 12.269944009338495,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            221,
+            213,
+            245
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"hrv\"] > dd"
+          ],
+          "text": "55.1 · goodSource 2026-11-14T11:06:06.000Z · known 2026-11-14T11:06:06.000Zsimulator · SIM-CREW-03 ·",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > h3"
+          ],
+          "text": "N02 monitoring · read only",
+          "resolved": true,
+          "minimum_ratio": 13.410802472956737,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            230,
+            224,
+            241
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "p:nth-child(5)"
+          ],
+          "text": "amber · no diagnosis or new alert",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "p[data-n06-alert=\"RISK-f1792429\"]"
+          ],
+          "text": "RISK-f1792429 · acknowledged · 2026-11-14T11:04:06.000Z · acknowledgement 2026-11-14T11:06:16.000Zhe",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(7)"
+          ],
+          "text": "N09: AVAILABLE · f7ae7bea-05c5-47d7-9898-64581e187525 · source 2026-11-14T11:06:06.000Z · elapsed 30",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > small"
+          ],
+          "text": "Mapping astra.n06.link.v1 · astra.telemetry.v1 / N02 read only. Source and knowledge cutoff 2026-11-",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "details:nth-child(6) > summary"
+          ],
+          "text": "Region history and source-time replay",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "details:nth-child(7) > summary"
+          ],
+          "text": "Authorized synthetic waveform archive",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-refresh"
+          ],
+          "text": "Refresh authorized reads",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section:nth-child(3) > .panel-heading > h2"
+          ],
+          "text": "Personal trend",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-key > span:nth-child(1)"
+          ],
+          "text": "Observed · synthetic",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-key > span:nth-child(2)"
+          ],
+          "text": "Personal baseline ±2 SD",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(1)"
+          ],
+          "text": "10:18:00 UTC",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(2)"
+          ],
+          "text": "11:00:18",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(3)"
+          ],
+          "text": "11:06:06",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section:nth-child(4) > .panel-heading > h2"
+          ],
+          "text": "Evidence & review",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-status > .amber.status"
+          ],
+          "text": "▲Review required",
+          "resolved": true,
+          "minimum_ratio": 8.528770481063637,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            243,
+            166,
+            74
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-status > .amber.status > span"
+          ],
+          "text": "▲",
+          "resolved": true,
+          "minimum_ratio": 8.528770481063637,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            243,
+            166,
+            74
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".evidence-header > h3"
+          ],
+          "text": "Persistent multi-signal deviation — human review required",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".evidence-header > small"
+          ],
+          "text": "11:04:06 UTC · Current detector evidence",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "th:nth-child(1)"
+          ],
+          "text": "Signal / source",
+          "resolved": true,
+          "minimum_ratio": 4.978007628916551,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            121,
+            139,
+            165
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "th:nth-child(2)"
+          ],
+          "text": "Deviation",
+          "resolved": true,
+          "minimum_ratio": 4.978007628916551,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            121,
+            139,
+            165
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "th:nth-child(3)"
+          ],
+          "text": "Persistence / rate",
+          "resolved": true,
+          "minimum_ratio": 4.978007628916551,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            121,
+            139,
+            165
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(1) > td:nth-child(1)"
+          ],
+          "text": "Heart ratesimulator · 11:04:06 UTC · good",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(1) > td:nth-child(1) > small"
+          ],
+          "text": "simulator · 11:04:06 UTC · good",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(1) > .mono:nth-child(2)"
+          ],
+          "text": "+5.5 SD",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(1) > .mono:nth-child(3)"
+          ],
+          "text": "90s",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(2) > td:nth-child(1)"
+          ],
+          "text": "Respiratory ratesimulator · 11:04:06 UTC · good",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(2) > td:nth-child(1) > small"
+          ],
+          "text": "simulator · 11:04:06 UTC · good",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(2) > .mono:nth-child(2)"
+          ],
+          "text": "+5.1 SD",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(2) > .mono:nth-child(3)"
+          ],
+          "text": "90s",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-evidence > details > summary"
+          ],
+          "text": "Observation provenance and rule evidence",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-evidence > .evidence-foot"
+          ],
+          "text": "robust-personal-v2 · Recorded quality good · Evidence strength 0.74 (heuristic, uncalibrated). No cl",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".ghost.button[data-page=\"agent\"]"
+          ],
+          "text": "Review agent case",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        }
+      ],
+      "keyboard": [
+        {
+          "name": "Data-linked schematic",
+          "focus": true,
+          "outline": 2,
+          "left": 413.71875,
+          "right": 551.078125,
+          "top": 379.21875,
+          "bottom": 415.21875
+        },
+        {
+          "name": "Generic adult male reference anatomy. Reference body, skeleton, heart surfaces and lungs. Drag to orbit; arrow keys rotate; plus and minus zoom; Home resets. Not individual astronaut anatomy.",
+          "focus": true,
+          "outline": 2,
+          "left": 263,
+          "right": 897.390625,
+          "top": 396.21875,
+          "bottom": 916.21875
+        },
+        {
+          "name": "Body envelope",
+          "focus": true,
+          "outline": 2,
+          "left": 283,
+          "right": 381.4375,
+          "top": 871.71875,
+          "bottom": 915.71875
+        },
+        {
+          "name": "Skeleton",
+          "focus": true,
+          "outline": 2,
+          "left": 389.4375,
+          "right": 455.125,
+          "top": 871.71875,
+          "bottom": 915.71875
+        },
+        {
+          "name": "Heart surfaces & lungs",
+          "focus": true,
+          "outline": 2,
+          "left": 463.125,
+          "right": 603.203125,
+          "top": 871.71875,
+          "bottom": 915.71875
+        },
+        {
+          "name": "Orbit left",
+          "focus": true,
+          "outline": 2,
+          "left": 283,
+          "right": 350.546875,
+          "top": 871.71875,
+          "bottom": 915.71875
+        },
+        {
+          "name": "Orbit right",
+          "focus": true,
+          "outline": 2,
+          "left": 358.546875,
+          "right": 434.09375,
+          "top": 871.71875,
+          "bottom": 915.71875
+        },
+        {
+          "name": "Tilt up",
+          "focus": true,
+          "outline": 2,
+          "left": 442.09375,
+          "right": 495.40625,
+          "top": 871.71875,
+          "bottom": 915.71875
+        },
+        {
+          "name": "Tilt down",
+          "focus": true,
+          "outline": 2,
+          "left": 503.40625,
+          "right": 572.421875,
+          "top": 871.71875,
+          "bottom": 915.71875
+        },
+        {
+          "name": "Zoom in",
+          "focus": true,
+          "outline": 2,
+          "left": 580.421875,
+          "right": 644.65625,
+          "top": 871.71875,
+          "bottom": 915.71875
+        },
+        {
+          "name": "Zoom out",
+          "focus": true,
+          "outline": 2,
+          "left": 652.65625,
+          "right": 725.078125,
+          "top": 871.71875,
+          "bottom": 915.71875
+        },
+        {
+          "name": "Reset camera",
+          "focus": true,
+          "outline": 2,
+          "left": 733.078125,
+          "right": 823.4375,
+          "top": 871.71875,
+          "bottom": 915.71875
+        },
+        {
+          "name": "Reference source, license & limitations",
+          "focus": true,
+          "outline": 2,
+          "left": 283,
+          "right": 877.390625,
+          "top": 879.5,
+          "bottom": 915.890625
+        },
+        {
+          "name": "Automatic · viewport / performanceOriginal derived detailCoarse reference approximation",
+          "focus": true,
+          "outline": 2,
+          "left": 283,
+          "right": 541,
+          "top": 871.890625,
+          "bottom": 915.890625
+        },
+        {
+          "name": "Reload reference model",
+          "focus": true,
+          "outline": 2,
+          "left": 553,
+          "right": 708.9375,
+          "top": 871.890625,
+          "bottom": 915.890625
+        }
+      ]
+    },
+    {
+      "physical_width": 1366,
+      "physical_height": 768,
+      "zoom": 1,
+      "layout": {
+        "width": 1366,
+        "dpr": 1,
+        "visual_scale": 1,
+        "css_zoom": "1",
+        "overflow": false
+      },
+      "axe": {
+        "version": "4.11.1",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": [
+              {
+                "target": [
+                  "#n06-heading"
+                ]
+              },
+              {
+                "target": [
+                  "section[aria-labelledby=\"n06-heading\"] > p:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"respiratory-left\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"respiratory-right\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"body\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"skeleton\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"head\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"thorax\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-clear=\"\"]"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-status"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"heart_rate\"] > dt"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"heart_rate\"] > dd"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"hrv\"] > dt"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"hrv\"] > dd"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > h3"
+                ]
+              },
+              {
+                "target": [
+                  "p:nth-child(5)"
+                ]
+              },
+              {
+                "target": [
+                  "p[data-n06-alert=\"RISK-f1792429\"]"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(7)"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > small"
+                ]
+              },
+              {
+                "target": [
+                  "details:nth-child(6) > summary"
+                ]
+              },
+              {
+                "target": [
+                  "details:nth-child(7) > summary"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-refresh"
+                ]
+              },
+              {
+                "target": [
+                  "section:nth-child(3) > .panel-heading > h2"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-key > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-key > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(3)"
+                ]
+              },
+              {
+                "target": [
+                  "section:nth-child(4) > .panel-heading > h2"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-status > .amber.status"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-status > .amber.status > span"
+                ]
+              },
+              {
+                "target": [
+                  ".evidence-header > h3"
+                ]
+              },
+              {
+                "target": [
+                  ".evidence-header > small"
+                ]
+              },
+              {
+                "target": [
+                  "th:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "th:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "th:nth-child(3)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(1) > td:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(1) > td:nth-child(1) > small"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(1) > .mono:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(1) > .mono:nth-child(3)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(2) > td:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(2) > td:nth-child(1) > small"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(2) > .mono:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(2) > .mono:nth-child(3)"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-evidence > details > summary"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-evidence > .evidence-foot"
+                ]
+              },
+              {
+                "target": [
+                  ".ghost.button[data-page=\"agent\"]"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "contrast": [
+        {
+          "target": [
+            "#n06-heading"
+          ],
+          "text": "Anatomy & health linkage",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section[aria-labelledby=\"n06-heading\"] > p:nth-child(2)"
+          ],
+          "text": "SYNTHETIC / RESEARCH DEMONSTRATION · no organ diagnosis",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"respiratory-left\"]"
+          ],
+          "text": "Respiratory · left lung",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"respiratory-right\"]"
+          ],
+          "text": "Respiratory · right lung",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"body\"]"
+          ],
+          "text": "Body envelope",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"skeleton\"]"
+          ],
+          "text": "Skeleton · no bone measurement",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"head\"]"
+          ],
+          "text": "Head context · geometry unavailable",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"thorax\"]"
+          ],
+          "text": "Thorax context · conceptual",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-clear=\"\"]"
+          ],
+          "text": "Clear selection",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-status"
+          ],
+          "text": "CREW-03 · Cardiovascular · heart surfaces · CURRENT SYNTHETIC · AVAILABLE · 2026-11-14T11:06:29.000Z",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(1)"
+          ],
+          "text": "Three reference chamber-wall surfaces, not a complete heart. HR/HRV do not establish heart disease.",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(2)"
+          ],
+          "text": "Illustrative phase uses mission/source time; current interpolation 1× host speed, bounded by observa",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"heart_rate\"] > dt"
+          ],
+          "text": "heart_rate [/min]",
+          "resolved": true,
+          "minimum_ratio": 12.269944009338495,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            221,
+            213,
+            245
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"heart_rate\"] > dd"
+          ],
+          "text": "93.02 · goodSource 2026-11-14T11:06:06.000Z · known 2026-11-14T11:06:06.000Zsimulator · SIM-CREW-03 ",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"hrv\"] > dt"
+          ],
+          "text": "hrv [ms]",
+          "resolved": true,
+          "minimum_ratio": 12.269944009338495,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            221,
+            213,
+            245
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"hrv\"] > dd"
+          ],
+          "text": "55.1 · goodSource 2026-11-14T11:06:06.000Z · known 2026-11-14T11:06:06.000Zsimulator · SIM-CREW-03 ·",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > h3"
+          ],
+          "text": "N02 monitoring · read only",
+          "resolved": true,
+          "minimum_ratio": 13.410802472956737,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            230,
+            224,
+            241
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "p:nth-child(5)"
+          ],
+          "text": "amber · no diagnosis or new alert",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "p[data-n06-alert=\"RISK-f1792429\"]"
+          ],
+          "text": "RISK-f1792429 · acknowledged · 2026-11-14T11:04:06.000Z · acknowledgement 2026-11-14T11:06:16.000Zhe",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(7)"
+          ],
+          "text": "N09: AVAILABLE · f7ae7bea-05c5-47d7-9898-64581e187525 · source 2026-11-14T11:06:06.000Z · elapsed 30",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > small"
+          ],
+          "text": "Mapping astra.n06.link.v1 · astra.telemetry.v1 / N02 read only. Source and knowledge cutoff 2026-11-",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "details:nth-child(6) > summary"
+          ],
+          "text": "Region history and source-time replay",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "details:nth-child(7) > summary"
+          ],
+          "text": "Authorized synthetic waveform archive",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-refresh"
+          ],
+          "text": "Refresh authorized reads",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section:nth-child(3) > .panel-heading > h2"
+          ],
+          "text": "Personal trend",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-key > span:nth-child(1)"
+          ],
+          "text": "Observed · synthetic",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-key > span:nth-child(2)"
+          ],
+          "text": "Personal baseline ±2 SD",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(1)"
+          ],
+          "text": "10:18:00 UTC",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(2)"
+          ],
+          "text": "11:00:18",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(3)"
+          ],
+          "text": "11:06:06",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section:nth-child(4) > .panel-heading > h2"
+          ],
+          "text": "Evidence & review",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-status > .amber.status"
+          ],
+          "text": "▲Review required",
+          "resolved": true,
+          "minimum_ratio": 8.528770481063637,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            243,
+            166,
+            74
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-status > .amber.status > span"
+          ],
+          "text": "▲",
+          "resolved": true,
+          "minimum_ratio": 8.528770481063637,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            243,
+            166,
+            74
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".evidence-header > h3"
+          ],
+          "text": "Persistent multi-signal deviation — human review required",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".evidence-header > small"
+          ],
+          "text": "11:04:06 UTC · Current detector evidence",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "th:nth-child(1)"
+          ],
+          "text": "Signal / source",
+          "resolved": true,
+          "minimum_ratio": 4.978007628916551,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            121,
+            139,
+            165
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "th:nth-child(2)"
+          ],
+          "text": "Deviation",
+          "resolved": true,
+          "minimum_ratio": 4.978007628916551,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            121,
+            139,
+            165
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "th:nth-child(3)"
+          ],
+          "text": "Persistence / rate",
+          "resolved": true,
+          "minimum_ratio": 4.978007628916551,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            121,
+            139,
+            165
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(1) > td:nth-child(1)"
+          ],
+          "text": "Heart ratesimulator · 11:04:06 UTC · good",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(1) > td:nth-child(1) > small"
+          ],
+          "text": "simulator · 11:04:06 UTC · good",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(1) > .mono:nth-child(2)"
+          ],
+          "text": "+5.5 SD",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(1) > .mono:nth-child(3)"
+          ],
+          "text": "90s",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(2) > td:nth-child(1)"
+          ],
+          "text": "Respiratory ratesimulator · 11:04:06 UTC · good",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(2) > td:nth-child(1) > small"
+          ],
+          "text": "simulator · 11:04:06 UTC · good",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(2) > .mono:nth-child(2)"
+          ],
+          "text": "+5.1 SD",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(2) > .mono:nth-child(3)"
+          ],
+          "text": "90s",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-evidence > details > summary"
+          ],
+          "text": "Observation provenance and rule evidence",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-evidence > .evidence-foot"
+          ],
+          "text": "robust-personal-v2 · Recorded quality good · Evidence strength 0.74 (heuristic, uncalibrated). No cl",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".ghost.button[data-page=\"agent\"]"
+          ],
+          "text": "Review agent case",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        }
+      ],
+      "keyboard": [
+        {
+          "name": "Data-linked schematic",
+          "focus": true,
+          "outline": 2,
+          "left": 413.71875,
+          "right": 551.078125,
+          "top": 43.25,
+          "bottom": 79.25
+        },
+        {
+          "name": "Generic adult male reference anatomy. Reference body, skeleton, heart surfaces and lungs. Drag to orbit; arrow keys rotate; plus and minus zoom; Home resets. Not individual astronaut anatomy.",
+          "focus": true,
+          "outline": 2,
+          "left": 263,
+          "right": 675.796875,
+          "top": 84.25,
+          "bottom": 604.25
+        },
+        {
+          "name": "Body envelope",
+          "focus": true,
+          "outline": 2,
+          "left": 283,
+          "right": 381.4375,
+          "top": 559.75,
+          "bottom": 603.75
+        },
+        {
+          "name": "Skeleton",
+          "focus": true,
+          "outline": 2,
+          "left": 389.4375,
+          "right": 455.125,
+          "top": 559.75,
+          "bottom": 603.75
+        },
+        {
+          "name": "Heart surfaces & lungs",
+          "focus": true,
+          "outline": 2,
+          "left": 463.125,
+          "right": 603.203125,
+          "top": 559.75,
+          "bottom": 603.75
+        },
+        {
+          "name": "Orbit left",
+          "focus": true,
+          "outline": 2,
+          "left": 283,
+          "right": 350.546875,
+          "top": 559.75,
+          "bottom": 603.75
+        },
+        {
+          "name": "Orbit right",
+          "focus": true,
+          "outline": 2,
+          "left": 358.546875,
+          "right": 434.09375,
+          "top": 559.75,
+          "bottom": 603.75
+        },
+        {
+          "name": "Tilt up",
+          "focus": true,
+          "outline": 2,
+          "left": 442.09375,
+          "right": 495.40625,
+          "top": 559.75,
+          "bottom": 603.75
+        },
+        {
+          "name": "Tilt down",
+          "focus": true,
+          "outline": 2,
+          "left": 503.40625,
+          "right": 572.421875,
+          "top": 559.75,
+          "bottom": 603.75
+        },
+        {
+          "name": "Zoom in",
+          "focus": true,
+          "outline": 2,
+          "left": 580.421875,
+          "right": 644.65625,
+          "top": 559.75,
+          "bottom": 603.75
+        },
+        {
+          "name": "Zoom out",
+          "focus": true,
+          "outline": 2,
+          "left": 283,
+          "right": 355.421875,
+          "top": 559.75,
+          "bottom": 603.75
+        },
+        {
+          "name": "Reset camera",
+          "focus": true,
+          "outline": 2,
+          "left": 363.421875,
+          "right": 453.78125,
+          "top": 559.75,
+          "bottom": 603.75
+        },
+        {
+          "name": "Reference source, license & limitations",
+          "focus": true,
+          "outline": 2,
+          "left": 283,
+          "right": 655.796875,
+          "top": 291.3125,
+          "bottom": 327.703125
+        },
+        {
+          "name": "Automatic · viewport / performanceOriginal derived detailCoarse reference approximation",
+          "focus": true,
+          "outline": 2,
+          "left": 283,
+          "right": 541,
+          "top": 365.703125,
+          "bottom": 409.703125
+        },
+        {
+          "name": "Reload reference model",
+          "focus": true,
+          "outline": 2,
+          "left": 283,
+          "right": 438.9375,
+          "top": 421.703125,
+          "bottom": 465.703125
+        }
+      ]
+    },
+    {
+      "physical_width": 768,
+      "physical_height": 1024,
+      "zoom": 1,
+      "layout": {
+        "width": 768,
+        "dpr": 1,
+        "visual_scale": 1,
+        "css_zoom": "1",
+        "overflow": false
+      },
+      "axe": {
+        "version": "4.11.1",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": [
+              {
+                "target": [
+                  "#n06-heading"
+                ]
+              },
+              {
+                "target": [
+                  "section[aria-labelledby=\"n06-heading\"] > p:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"respiratory-left\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"respiratory-right\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"body\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"skeleton\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"head\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"thorax\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-clear=\"\"]"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-status"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"heart_rate\"] > dt"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"heart_rate\"] > dd"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"hrv\"] > dt"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"hrv\"] > dd"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > h3"
+                ]
+              },
+              {
+                "target": [
+                  "p:nth-child(5)"
+                ]
+              },
+              {
+                "target": [
+                  "p[data-n06-alert=\"RISK-f1792429\"]"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(7)"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > small"
+                ]
+              },
+              {
+                "target": [
+                  "details:nth-child(6) > summary"
+                ]
+              },
+              {
+                "target": [
+                  "details:nth-child(7) > summary"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-refresh"
+                ]
+              },
+              {
+                "target": [
+                  "section:nth-child(3) > .panel-heading > h2"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-key > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-key > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(3)"
+                ]
+              },
+              {
+                "target": [
+                  "section:nth-child(4) > .panel-heading > h2"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-status > .amber.status"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-status > .amber.status > span"
+                ]
+              },
+              {
+                "target": [
+                  ".evidence-header > h3"
+                ]
+              },
+              {
+                "target": [
+                  ".evidence-header > small"
+                ]
+              },
+              {
+                "target": [
+                  "th:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "th:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "th:nth-child(3)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(1) > td:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(1) > td:nth-child(1) > small"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(1) > .mono:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(1) > .mono:nth-child(3)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(2) > td:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(2) > td:nth-child(1) > small"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(2) > .mono:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(2) > .mono:nth-child(3)"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-evidence > details > summary"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-evidence > .evidence-foot"
+                ]
+              },
+              {
+                "target": [
+                  ".ghost.button[data-page=\"agent\"]"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "contrast": [
+        {
+          "target": [
+            "#n06-heading"
+          ],
+          "text": "Anatomy & health linkage",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section[aria-labelledby=\"n06-heading\"] > p:nth-child(2)"
+          ],
+          "text": "SYNTHETIC / RESEARCH DEMONSTRATION · no organ diagnosis",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"respiratory-left\"]"
+          ],
+          "text": "Respiratory · left lung",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"respiratory-right\"]"
+          ],
+          "text": "Respiratory · right lung",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"body\"]"
+          ],
+          "text": "Body envelope",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"skeleton\"]"
+          ],
+          "text": "Skeleton · no bone measurement",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"head\"]"
+          ],
+          "text": "Head context · geometry unavailable",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"thorax\"]"
+          ],
+          "text": "Thorax context · conceptual",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-clear=\"\"]"
+          ],
+          "text": "Clear selection",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-status"
+          ],
+          "text": "CREW-03 · Cardiovascular · heart surfaces · CURRENT SYNTHETIC · AVAILABLE · 2026-11-14T11:06:30.000Z",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(1)"
+          ],
+          "text": "Three reference chamber-wall surfaces, not a complete heart. HR/HRV do not establish heart disease.",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(2)"
+          ],
+          "text": "Illustrative phase uses mission/source time; current interpolation 1× host speed, bounded by observa",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"heart_rate\"] > dt"
+          ],
+          "text": "heart_rate [/min]",
+          "resolved": true,
+          "minimum_ratio": 12.269944009338495,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            221,
+            213,
+            245
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"heart_rate\"] > dd"
+          ],
+          "text": "93.02 · goodSource 2026-11-14T11:06:06.000Z · known 2026-11-14T11:06:06.000Zsimulator · SIM-CREW-03 ",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"hrv\"] > dt"
+          ],
+          "text": "hrv [ms]",
+          "resolved": true,
+          "minimum_ratio": 12.269944009338495,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            221,
+            213,
+            245
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"hrv\"] > dd"
+          ],
+          "text": "55.1 · goodSource 2026-11-14T11:06:06.000Z · known 2026-11-14T11:06:06.000Zsimulator · SIM-CREW-03 ·",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > h3"
+          ],
+          "text": "N02 monitoring · read only",
+          "resolved": true,
+          "minimum_ratio": 13.410802472956737,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            230,
+            224,
+            241
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "p:nth-child(5)"
+          ],
+          "text": "amber · no diagnosis or new alert",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "p[data-n06-alert=\"RISK-f1792429\"]"
+          ],
+          "text": "RISK-f1792429 · acknowledged · 2026-11-14T11:04:06.000Z · acknowledgement 2026-11-14T11:06:16.000Zhe",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(7)"
+          ],
+          "text": "N09: AVAILABLE · f7ae7bea-05c5-47d7-9898-64581e187525 · source 2026-11-14T11:06:06.000Z · elapsed 30",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > small"
+          ],
+          "text": "Mapping astra.n06.link.v1 · astra.telemetry.v1 / N02 read only. Source and knowledge cutoff 2026-11-",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "details:nth-child(6) > summary"
+          ],
+          "text": "Region history and source-time replay",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "details:nth-child(7) > summary"
+          ],
+          "text": "Authorized synthetic waveform archive",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-refresh"
+          ],
+          "text": "Refresh authorized reads",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section:nth-child(3) > .panel-heading > h2"
+          ],
+          "text": "Personal trend",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-key > span:nth-child(1)"
+          ],
+          "text": "Observed · synthetic",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-key > span:nth-child(2)"
+          ],
+          "text": "Personal baseline ±2 SD",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(1)"
+          ],
+          "text": "10:18:00 UTC",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(2)"
+          ],
+          "text": "11:00:18",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(3)"
+          ],
+          "text": "11:06:06",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section:nth-child(4) > .panel-heading > h2"
+          ],
+          "text": "Evidence & review",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-status > .amber.status"
+          ],
+          "text": "▲Review required",
+          "resolved": true,
+          "minimum_ratio": 8.528770481063637,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            243,
+            166,
+            74
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-status > .amber.status > span"
+          ],
+          "text": "▲",
+          "resolved": true,
+          "minimum_ratio": 8.528770481063637,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            243,
+            166,
+            74
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".evidence-header > h3"
+          ],
+          "text": "Persistent multi-signal deviation — human review required",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".evidence-header > small"
+          ],
+          "text": "11:04:06 UTC · Current detector evidence",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "th:nth-child(1)"
+          ],
+          "text": "Signal / source",
+          "resolved": true,
+          "minimum_ratio": 4.978007628916551,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            121,
+            139,
+            165
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "th:nth-child(2)"
+          ],
+          "text": "Deviation",
+          "resolved": true,
+          "minimum_ratio": 4.978007628916551,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            121,
+            139,
+            165
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "th:nth-child(3)"
+          ],
+          "text": "Persistence / rate",
+          "resolved": true,
+          "minimum_ratio": 4.978007628916551,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            121,
+            139,
+            165
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(1) > td:nth-child(1)"
+          ],
+          "text": "Heart ratesimulator · 11:04:06 UTC · good",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(1) > td:nth-child(1) > small"
+          ],
+          "text": "simulator · 11:04:06 UTC · good",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(1) > .mono:nth-child(2)"
+          ],
+          "text": "+5.5 SD",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(1) > .mono:nth-child(3)"
+          ],
+          "text": "90s",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(2) > td:nth-child(1)"
+          ],
+          "text": "Respiratory ratesimulator · 11:04:06 UTC · good",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(2) > td:nth-child(1) > small"
+          ],
+          "text": "simulator · 11:04:06 UTC · good",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(2) > .mono:nth-child(2)"
+          ],
+          "text": "+5.1 SD",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(2) > .mono:nth-child(3)"
+          ],
+          "text": "90s",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-evidence > details > summary"
+          ],
+          "text": "Observation provenance and rule evidence",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-evidence > .evidence-foot"
+          ],
+          "text": "robust-personal-v2 · Recorded quality good · Evidence strength 0.74 (heuristic, uncalibrated). No cl",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".ghost.button[data-page=\"agent\"]"
+          ],
+          "text": "Review agent case",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        }
+      ],
+      "keyboard": [
+        {
+          "name": "Data-linked schematic",
+          "focus": true,
+          "outline": 2,
+          "left": 236,
+          "right": 373.359375,
+          "top": 456.640625,
+          "bottom": 492.640625
+        },
+        {
+          "name": "Generic adult male reference anatomy. Reference body, skeleton, heart surfaces and lungs. Drag to orbit; arrow keys rotate; plus and minus zoom; Home resets. Not individual astronaut anatomy.",
+          "focus": true,
+          "outline": 2,
+          "left": 215,
+          "right": 473,
+          "top": 324.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Body envelope",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 333.4375,
+          "top": 800.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Skeleton",
+          "focus": true,
+          "outline": 2,
+          "left": 341.4375,
+          "right": 407.125,
+          "top": 800.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Heart surfaces & lungs",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 375.078125,
+          "top": 800.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Orbit left",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 302.546875,
+          "top": 800.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Orbit right",
+          "focus": true,
+          "outline": 2,
+          "left": 310.546875,
+          "right": 386.09375,
+          "top": 800.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Tilt up",
+          "focus": true,
+          "outline": 2,
+          "left": 394.09375,
+          "right": 447.40625,
+          "top": 800.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Tilt down",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 304.015625,
+          "top": 800.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Zoom in",
+          "focus": true,
+          "outline": 2,
+          "left": 312.015625,
+          "right": 376.25,
+          "top": 800.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Zoom out",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 307.421875,
+          "top": 800.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Reset camera",
+          "focus": true,
+          "outline": 2,
+          "left": 315.421875,
+          "right": 405.78125,
+          "top": 800.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Reference source, license & limitations",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 453,
+          "top": 411.984375,
+          "bottom": 448.375
+        },
+        {
+          "name": "Automatic · viewport / performanceOriginal derived detailCoarse reference approximation",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 453,
+          "top": 486.375,
+          "bottom": 530.375
+        },
+        {
+          "name": "Reload reference model",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 390.9375,
+          "top": 542.375,
+          "bottom": 586.375
+        }
+      ]
+    },
+    {
+      "physical_width": 390,
+      "physical_height": 844,
+      "zoom": 1,
+      "layout": {
+        "width": 390,
+        "dpr": 1,
+        "visual_scale": 1,
+        "css_zoom": "1",
+        "overflow": false
+      },
+      "axe": {
+        "version": "4.11.1",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": [
+              {
+                "target": [
+                  "#n06-heading"
+                ]
+              },
+              {
+                "target": [
+                  "section[aria-labelledby=\"n06-heading\"] > p:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"respiratory-left\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"respiratory-right\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"body\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"skeleton\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"head\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"thorax\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-clear=\"\"]"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-status"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"heart_rate\"] > dt"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"heart_rate\"] > dd"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"hrv\"] > dt"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"hrv\"] > dd"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > h3"
+                ]
+              },
+              {
+                "target": [
+                  "p:nth-child(5)"
+                ]
+              },
+              {
+                "target": [
+                  "p[data-n06-alert=\"RISK-f1792429\"]"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(7)"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > small"
+                ]
+              },
+              {
+                "target": [
+                  "details:nth-child(6) > summary"
+                ]
+              },
+              {
+                "target": [
+                  "details:nth-child(7) > summary"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-refresh"
+                ]
+              },
+              {
+                "target": [
+                  "section:nth-child(3) > .panel-heading > h2"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-key > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-key > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(3)"
+                ]
+              },
+              {
+                "target": [
+                  "section:nth-child(4) > .panel-heading > h2"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-status > .amber.status"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-status > .amber.status > span"
+                ]
+              },
+              {
+                "target": [
+                  ".evidence-header > h3"
+                ]
+              },
+              {
+                "target": [
+                  ".evidence-header > small"
+                ]
+              },
+              {
+                "target": [
+                  "th:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "th:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "th:nth-child(3)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(1) > td:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(1) > td:nth-child(1) > small"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(1) > .mono:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(1) > .mono:nth-child(3)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(2) > td:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(2) > td:nth-child(1) > small"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(2) > .mono:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "tr:nth-child(2) > .mono:nth-child(3)"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-evidence > details > summary"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-evidence > .evidence-foot"
+                ]
+              },
+              {
+                "target": [
+                  ".ghost.button[data-page=\"agent\"]"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "contrast": [
+        {
+          "target": [
+            "#n06-heading"
+          ],
+          "text": "Anatomy & health linkage",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section[aria-labelledby=\"n06-heading\"] > p:nth-child(2)"
+          ],
+          "text": "SYNTHETIC / RESEARCH DEMONSTRATION · no organ diagnosis",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"respiratory-left\"]"
+          ],
+          "text": "Respiratory · left lung",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"respiratory-right\"]"
+          ],
+          "text": "Respiratory · right lung",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"body\"]"
+          ],
+          "text": "Body envelope",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"skeleton\"]"
+          ],
+          "text": "Skeleton · no bone measurement",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"head\"]"
+          ],
+          "text": "Head context · geometry unavailable",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"thorax\"]"
+          ],
+          "text": "Thorax context · conceptual",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-clear=\"\"]"
+          ],
+          "text": "Clear selection",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-status"
+          ],
+          "text": "CREW-03 · Cardiovascular · heart surfaces · CURRENT SYNTHETIC · AVAILABLE · 2026-11-14T11:06:30.000Z",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(1)"
+          ],
+          "text": "Three reference chamber-wall surfaces, not a complete heart. HR/HRV do not establish heart disease.",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(2)"
+          ],
+          "text": "Illustrative phase uses mission/source time; current interpolation 1× host speed, bounded by observa",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"heart_rate\"] > dt"
+          ],
+          "text": "heart_rate [/min]",
+          "resolved": true,
+          "minimum_ratio": 12.269944009338495,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            221,
+            213,
+            245
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"heart_rate\"] > dd"
+          ],
+          "text": "93.02 · goodSource 2026-11-14T11:06:06.000Z · known 2026-11-14T11:06:06.000Zsimulator · SIM-CREW-03 ",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"hrv\"] > dt"
+          ],
+          "text": "hrv [ms]",
+          "resolved": true,
+          "minimum_ratio": 12.269944009338495,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            221,
+            213,
+            245
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"hrv\"] > dd"
+          ],
+          "text": "55.1 · goodSource 2026-11-14T11:06:06.000Z · known 2026-11-14T11:06:06.000Zsimulator · SIM-CREW-03 ·",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > h3"
+          ],
+          "text": "N02 monitoring · read only",
+          "resolved": true,
+          "minimum_ratio": 13.410802472956737,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            230,
+            224,
+            241
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "p:nth-child(5)"
+          ],
+          "text": "amber · no diagnosis or new alert",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "p[data-n06-alert=\"RISK-f1792429\"]"
+          ],
+          "text": "RISK-f1792429 · acknowledged · 2026-11-14T11:04:06.000Z · acknowledgement 2026-11-14T11:06:16.000Zhe",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(7)"
+          ],
+          "text": "N09: AVAILABLE · f7ae7bea-05c5-47d7-9898-64581e187525 · source 2026-11-14T11:06:06.000Z · elapsed 30",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > small"
+          ],
+          "text": "Mapping astra.n06.link.v1 · astra.telemetry.v1 / N02 read only. Source and knowledge cutoff 2026-11-",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "details:nth-child(6) > summary"
+          ],
+          "text": "Region history and source-time replay",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "details:nth-child(7) > summary"
+          ],
+          "text": "Authorized synthetic waveform archive",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-refresh"
+          ],
+          "text": "Refresh authorized reads",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section:nth-child(3) > .panel-heading > h2"
+          ],
+          "text": "Personal trend",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-key > span:nth-child(1)"
+          ],
+          "text": "Observed · synthetic",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-key > span:nth-child(2)"
+          ],
+          "text": "Personal baseline ±2 SD",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(1)"
+          ],
+          "text": "10:18:00 UTC",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(2)"
+          ],
+          "text": "11:00:18",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(3)"
+          ],
+          "text": "11:06:06",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section:nth-child(4) > .panel-heading > h2"
+          ],
+          "text": "Evidence & review",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-status > .amber.status"
+          ],
+          "text": "▲Review required",
+          "resolved": true,
+          "minimum_ratio": 8.528770481063637,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            243,
+            166,
+            74
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-status > .amber.status > span"
+          ],
+          "text": "▲",
+          "resolved": true,
+          "minimum_ratio": 8.528770481063637,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            243,
+            166,
+            74
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".evidence-header > h3"
+          ],
+          "text": "Persistent multi-signal deviation — human review required",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".evidence-header > small"
+          ],
+          "text": "11:04:06 UTC · Current detector evidence",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "th:nth-child(1)"
+          ],
+          "text": "Signal / source",
+          "resolved": true,
+          "minimum_ratio": 4.978007628916551,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            121,
+            139,
+            165
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "th:nth-child(2)"
+          ],
+          "text": "Deviation",
+          "resolved": true,
+          "minimum_ratio": 4.978007628916551,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            121,
+            139,
+            165
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "th:nth-child(3)"
+          ],
+          "text": "Persistence / rate",
+          "resolved": true,
+          "minimum_ratio": 4.978007628916551,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            121,
+            139,
+            165
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(1) > td:nth-child(1)"
+          ],
+          "text": "Heart ratesimulator · 11:04:06 UTC · good",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(1) > td:nth-child(1) > small"
+          ],
+          "text": "simulator · 11:04:06 UTC · good",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(1) > .mono:nth-child(2)"
+          ],
+          "text": "+5.5 SD",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(1) > .mono:nth-child(3)"
+          ],
+          "text": "90s",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(2) > td:nth-child(1)"
+          ],
+          "text": "Respiratory ratesimulator · 11:04:06 UTC · good",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(2) > td:nth-child(1) > small"
+          ],
+          "text": "simulator · 11:04:06 UTC · good",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(2) > .mono:nth-child(2)"
+          ],
+          "text": "+5.1 SD",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "tr:nth-child(2) > .mono:nth-child(3)"
+          ],
+          "text": "90s",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-evidence > details > summary"
+          ],
+          "text": "Observation provenance and rule evidence",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-evidence > .evidence-foot"
+          ],
+          "text": "robust-personal-v2 · Recorded quality good · Evidence strength 0.74 (heuristic, uncalibrated). No cl",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".ghost.button[data-page=\"agent\"]"
+          ],
+          "text": "Review agent case",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        }
+      ],
+      "keyboard": [
+        {
+          "name": "Data-linked schematic",
+          "focus": true,
+          "outline": 2,
+          "left": 167.71875,
+          "right": 305.078125,
+          "top": 329.75,
+          "bottom": 365.75
+        },
+        {
+          "name": "Generic adult male reference anatomy. Reference body, skeleton, heart surfaces and lungs. Drag to orbit; arrow keys rotate; plus and minus zoom; Home resets. Not individual astronaut anatomy.",
+          "focus": true,
+          "outline": 2,
+          "left": 17,
+          "right": 358,
+          "top": 159.75,
+          "bottom": 679.75
+        },
+        {
+          "name": "Body envelope",
+          "focus": true,
+          "outline": 2,
+          "left": 37,
+          "right": 135.4375,
+          "top": 636.25,
+          "bottom": 680.25
+        },
+        {
+          "name": "Skeleton",
+          "focus": true,
+          "outline": 2,
+          "left": 143.4375,
+          "right": 209.125,
+          "top": 636.25,
+          "bottom": 680.25
+        },
+        {
+          "name": "Heart surfaces & lungs",
+          "focus": true,
+          "outline": 2,
+          "left": 37,
+          "right": 177.078125,
+          "top": 636.25,
+          "bottom": 680.25
+        },
+        {
+          "name": "Orbit left",
+          "focus": true,
+          "outline": 2,
+          "left": 37,
+          "right": 104.546875,
+          "top": 636.25,
+          "bottom": 680.25
+        },
+        {
+          "name": "Orbit right",
+          "focus": true,
+          "outline": 2,
+          "left": 112.546875,
+          "right": 188.09375,
+          "top": 636.25,
+          "bottom": 680.25
+        },
+        {
+          "name": "Tilt up",
+          "focus": true,
+          "outline": 2,
+          "left": 196.09375,
+          "right": 249.40625,
+          "top": 636.25,
+          "bottom": 680.25
+        },
+        {
+          "name": "Tilt down",
+          "focus": true,
+          "outline": 2,
+          "left": 257.40625,
+          "right": 326.421875,
+          "top": 636.25,
+          "bottom": 680.25
+        },
+        {
+          "name": "Zoom in",
+          "focus": true,
+          "outline": 2,
+          "left": 37,
+          "right": 101.234375,
+          "top": 636.25,
+          "bottom": 680.25
+        },
+        {
+          "name": "Zoom out",
+          "focus": true,
+          "outline": 2,
+          "left": 109.234375,
+          "right": 181.65625,
+          "top": 636.25,
+          "bottom": 680.25
+        },
+        {
+          "name": "Reset camera",
+          "focus": true,
+          "outline": 2,
+          "left": 189.65625,
+          "right": 280.015625,
+          "top": 636.25,
+          "bottom": 680.25
+        },
+        {
+          "name": "Reference source, license & limitations",
+          "focus": true,
+          "outline": 2,
+          "left": 37,
+          "right": 338,
+          "top": 329.8125,
+          "bottom": 366.203125
+        },
+        {
+          "name": "Automatic · viewport / performanceOriginal derived detailCoarse reference approximation",
+          "focus": true,
+          "outline": 2,
+          "left": 37,
+          "right": 295,
+          "top": 404.203125,
+          "bottom": 448.203125
+        },
+        {
+          "name": "Reload reference model",
+          "focus": true,
+          "outline": 2,
+          "left": 37,
+          "right": 192.9375,
+          "top": 460.203125,
+          "bottom": 504.203125
+        }
+      ]
+    }
+  ],
+  "presentation": {
+    "scope": "Existing synthetic application; no new N12 protocol, Qwen, native embeddings or N16 workers",
+    "timings": {
+      "crew_switch_ms": [
+        8435.272,
+        8800.234400000001,
+        8356.706300000002,
+        8701.930800000002,
+        8880.571000000004,
+        8215.718399999998
+      ],
+      "region_ms": [
+        386.29069999999956,
+        390.07810000000245,
+        385.33940000000075,
+        382.0590000000011,
+        381.4829000000027,
+        391.0891000000047,
+        431.5456000000122,
+        427.39370000000054,
+        715.546399999992
+      ],
+      "waveform_import_ms": 388.59189999999944,
+      "waveform_playback_observed_ms": 901.0854999999938,
+      "scenario_start_and_300s_step_ms": 1420.0503999999928,
+      "cold_restart_and_recovered_panel_ms": 8370.909599999999,
+      "health_API_ms": [
+        14.732300000003306,
+        2.389000000010128,
+        1.6644000000087544,
+        1.2488999999914085,
+        0.8616999999940163,
+        0.8931000000011409,
+        0.8396999999968102,
+        0.9456999999965774
+      ]
+    },
+    "fresh_N12_compute": "NOT RUN: calibration/evaluation campaign outside this mission",
+    "AC20": "UNVERIFIED",
+    "risk": {
+      "id": "RISK-f1792429",
+      "crew_id": "CREW-03",
+      "run_id": "f7ae7bea-05c5-47d7-9898-64581e187525",
+      "source": "N02 deterministic detector"
+    },
+    "acknowledged_at": "2026-11-14T11:06:16.000Z",
+    "forecast_display": "Archived verified result in research-backup.html; fresh computation deliberately inactive",
+    "cold_recovery": {
+      "before": {
+        "risk_events": 1,
+        "waveform_sources": 1,
+        "n09_events": 26,
+        "n12_jobs": 0
+      },
+      "after": {
+        "risk_events": 1,
+        "waveform_sources": 1,
+        "n09_events": 26,
+        "n12_jobs": 0
+      },
+      "new_N12_jobs": 0
+    },
+    "graphics_cleanup": {
+      "draws": 2842,
+      "buffers": 0,
+      "programs": 0,
+      "textures": 0,
+      "live_contexts": 0,
+      "context_losses": 7,
+      "invalidated": {
+        "buffers": 0,
+        "programs": 0,
+        "textures": 10
+      },
+      "RAF_pending": 0
+    },
+    "browser_heap": {
+      "used": 38050591,
+      "total": 95457355,
+      "limit": 4395630592
+    }
+  },
+  "recording": {
+    "status": "SAVED",
+    "file": "presentation.webm",
+    "frames": 220,
+    "capped_at_five_minutes": false,
+    "bytes": 822987,
+    "fps": 2,
+    "silent": true,
+    "source": "Actual application browser screenshots encoded by installed Chrome MediaRecorder",
+    "errors": [
+      "Browser command timeout: Page.captureScreenshot"
+    ],
+    "physical_FPS_evidence": false,
+    "playback": {
+      "current_time": 0.2962,
+      "width": 1280,
+      "height": 720,
+      "decoded_frames": 4,
+      "error": null
+    }
+  },
+  "presentation_temporary_SQLite_bytes": 25296896,
+  "presentation_cleanup": {
+    "browser_exited": true,
+    "profile_removed": true,
+    "database_directory_removed": true,
+    "Node_memory": {
+      "rss": 241356800,
+      "heapTotal": 176054272,
+      "heapUsed": 52291928,
+      "external": 6515249,
+      "arrayBuffers": 2311062
+    },
+    "N16_designated_starts": 0,
+    "Qwen_executions": 0,
+    "model_training": 0,
+    "database_snapshots": 0
+  },
+  "finished_at": "2026-11-08T22:15:24.976Z"
+}

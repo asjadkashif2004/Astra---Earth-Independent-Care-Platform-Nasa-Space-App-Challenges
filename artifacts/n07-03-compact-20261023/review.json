@@ -1,0 +1,68 @@
+{
+  "schema_version": "astra.source-review-outcome.v1",
+  "review_date": "2026-10-23",
+  "task": "N07-03 compact official metadata resolution",
+  "outcome": "blocked_before_import_http_500",
+  "resource": {
+    "url": "https://visualization.osdr.nasa.gov/radlab/gui/knowledgebase/BPD",
+    "repository": "NASA RadLab",
+    "instrument_id": "BPD",
+    "spacecraft": "BioSentinel",
+    "intended_format": "text/html",
+    "verified_success_content_type": null,
+    "license_id": null,
+    "complete_original_notices_reviewed": false,
+    "terms_url": "https://science.nasa.gov/reference/osdr-help-terms-and-conditions/",
+    "attribution_url": "https://science.nasa.gov/reference/osdr-faq/"
+  },
+  "attempt": {
+    "requests": 1,
+    "automatic_retries": 0,
+    "redirects_followed": 0,
+    "deadline_limit_ms": 15000,
+    "maximum_sample_bytes": 65536,
+    "http_status": 500,
+    "body_read": false,
+    "body_saved": false,
+    "exit_code": 1,
+    "error": "urllib.error.HTTPError: HTTP Error 500: Internal Server Error",
+    "failure_stage": "urllib open, before response body read and verification",
+    "complete_original_size": null,
+    "sha256": null,
+    "successful_retrieval_receipt": null,
+    "source_or_proxy_root_cause": "unknown",
+    "earlier_oversized_api_response_total_size": null
+  },
+  "implementation": {
+    "code_changed": false,
+    "adapter_created": false,
+    "allowlist_changed": false,
+    "cache_entries_created": 0,
+    "dependencies_added": 0,
+    "focused_tests_run": 0,
+    "syntax_checks_run": 0,
+    "historical_results_not_rerun": "N07-02 39 focused passes and 86-file syntax/import check"
+  },
+  "status": {
+    "n07": "In Progress; RadLab blocked; STOP",
+    "n04": "Complete",
+    "n05": "In Progress — Deferred",
+    "n06": "Not Started — Deferred",
+    "n03": "Partial",
+    "ac20": "Open / Unverified",
+    "n13_eligible": false
+  },
+  "report": "docs/N07_03_COMPACT_REVIEW.md",
+  "validation": {
+    "documentation": "PASS",
+    "markdown_files_checked": 5,
+    "relative_links_checked": 153,
+    "missing_links": 0,
+    "unbalanced_fences": 0,
+    "retained_module_ids": 26,
+    "preservation_files_checked": 35,
+    "preservation_changes": [],
+    "preservation_scope": "Existing acquisition modules/scripts/tests, scientific policies/cards/cache originals/receipts, all N07-01/02/initial03 evidence, their reports, research Markdown/PDF, package.json and DE_AC20_01.md",
+    "new_functional_or_browser_testing": false
+  }
+}

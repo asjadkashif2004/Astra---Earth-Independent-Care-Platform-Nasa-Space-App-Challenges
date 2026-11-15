@@ -1,0 +1,106 @@
+✖ N10 delayed save cannot reuse an earlier Saved indication or commit twice (725.879891ms)
+✔ N10 stale replay response cannot replace the newest cutoff projection (504.598804ms)
+✔ N10 navigation cancels the actual pending task timer before it can report a ready target (547.921921ms)
+✔ N10 exact stage input accepts an authentic source fixture (1.582454ms)
+✔ N10 exact schedule input accepts an authentic source fixture (0.430106ms)
+✔ N10 exact consent input accepts an authentic source fixture (0.316791ms)
+✔ N10 exact checkin input accepts an authentic source fixture (0.431729ms)
+✔ N10 exact exercise_plan input accepts an authentic source fixture (0.50033ms)
+✔ N10 exact exercise input accepts an authentic source fixture (0.499267ms)
+✔ N10 exact movement input accepts an authentic source fixture (0.592244ms)
+✔ S1 preserves exact supplied annotation Sleep stage W (0.389339ms)
+✔ S1 preserves exact supplied annotation Sleep stage 1 (0.231469ms)
+✔ S1 preserves exact supplied annotation Sleep stage 2 (0.18464ms)
+✔ S1 preserves exact supplied annotation Sleep stage 3 (0.182496ms)
+✔ S1 preserves exact supplied annotation Sleep stage 4 (0.192205ms)
+✔ S1 preserves exact supplied annotation Sleep stage R (0.352529ms)
+✔ S1 preserves exact supplied annotation Sleep stage ? (0.265144ms)
+✔ S1 preserves exact supplied annotation Movement time (0.248061ms)
+✔ S1 preserves exact supplied annotation Sleep stage M (0.262138ms)
+✔ A1 invalid boundary rejects unknown key (0.638081ms)
+✔ A1 invalid boundary rejects bad schema (0.204508ms)
+✔ A1 invalid boundary rejects invalid id (0.233633ms)
+✔ A1 invalid boundary rejects wrong time (0.210059ms)
+✔ A1 invalid boundary rejects future source (0.208025ms)
+✔ A1 invalid boundary rejects negative revision (0.204488ms)
+✔ A1 invalid boundary rejects untrusted source (0.213745ms)
+✔ A1 invalid boundary rejects extra source identity (0.212623ms)
+✔ A1 invalid boundary rejects unsupported stage (0.341268ms)
+✔ A1 invalid boundary rejects backwards interval (0.330257ms)
+✔ A1 invalid boundary rejects future observation (0.370633ms)
+✔ A1 invalid boundary rejects unbounded record (0.236259ms)
+✔ A1 invalid boundary rejects metadata number (0.24791ms)
+✔ A1 denied N10 role viewer (0.680452ms)
+✔ A1 denied N10 role researcher (0.23152ms)
+✔ A1 denied N10 role system_admin (0.153912ms)
+✔ A1 denied N10 role invented (0.244043ms)
+✔ A1 self-scoped trusted role accepts self and rejects cross-crew/missing identity (0.564571ms)
+✔ S1 actual ledger reads clip UTC day, retain stage labels/quality and expose gaps/unknown (186.823875ms)
+✔ S1 overlap invalidates totals and cancelling an interval restores valid aggregation (215.679085ms)
+✔ S1 duplicate request is idempotent; correction replay uses source AND knowledge time (198.988398ms)
+✔ S2/S3 canonical actual and dated plan produce transparent accounting; missing days remain UNKNOWN (173.031365ms)
+✔ S2 conflicting dated schedules and bad reference values fail closed; cancellation removes conflict (167.991331ms)
+✔ C1 consent is explicit; declines/skips/cancel contain no optional responses (184.883227ms)
+✔ C1 per-field consent and trusted actor identity cannot be escalated (180.177546ms)
+✔ C1 reviewer sees private records only after explicit share, no generic telemetry authorization (187.704744ms)
+✔ C2 reference uses three PRIOR same-person/device/protocol sessions, with deterministic version and exclusions (254.318589ms)
+✔ C2 correction/exclusion changes the reference and never incorporates a future task (239.987359ms)
+✔ E1/E2 actual plan/session binding, workload and adherence; missing is not nonadherence (182.078569ms)
+✔ E2 partial/missed/plan correction/cancellation rules preserve uncertainty (179.853696ms)
+✔ A1 append-only persistence, rollback and restart recover committed rows without mutations from reads (261.471928ms)
+✔ A1 source/history corruption fails closed rather than becoming a completed healthy response (216.641979ms)
+✔ A1 API positive and negative authorization controls, identity/schema injection and legacy consent boundary (227.579112ms)
+✔ A1 N10 writes never create or modify N02 alert/telemetry/baseline/comms state (217.847205ms)
+✔ R1/V1 projection performance evidence and reject-all/accept-all controls remain discriminative (192.900891ms)
+✔ A1 validated schedule boundary d=>d.effective_from='2026-02-30' (0.37403ms)
+✔ A1 validated schedule boundary d=>d.reference_hours=0 (0.240467ms)
+✔ A1 validated schedule boundary d=>d.effective_to='2026-11-13' (0.208856ms)
+✔ A1 validated consent boundary d=>d.task='yes' (0.212142ms)
+✔ A1 validated consent boundary d=>{d.state='withdrawn';d.mood=true;} (0.219567ms)
+✔ A1 validated checkin boundary d=>d.trials=[99,210,220] (0.221881ms)
+✔ A1 validated checkin boundary d=>d.trials=[200,210,3001] (0.229215ms)
+✔ A1 validated checkin boundary d=>d.trials=[200,210] (0.315659ms)
+✔ A1 validated checkin boundary d=>d.mood=0 (0.304928ms)
+✔ A1 validated checkin boundary d=>d.fatigue=11 (0.196343ms)
+✔ A1 validated checkin boundary d=>d.device='../device' (0.288778ms)
+✔ A1 validated exercise_plan boundary d=>d.target_minutes=-1 (0.248602ms)
+✔ A1 validated exercise boundary d=>d.workload_unit='clinical-risk' (0.256176ms)
+✔ A1 validated exercise boundary d=>d.coverage='healthy' (0.22665ms)
+✔ A1 validated movement boundary d=>d.steps=-1 (0.273028ms)
+✔ A1 validated movement boundary d=>d.steps=1.5 (0.212363ms)
+✔ A1 validated movement boundary d=>d.coverage='live' (0.280964ms)
+✔ A1 all six fictional crew stay separated, including missing data and malformed query cutoffs (199.36373ms)
+✔ C2 new consent epoch, incomplete task and poor-quality task cannot fabricate a reference (250.917069ms)
+✔ S2/S3 corrections and cancelled schedules obey historical replay and canonical UNKNOWN quality (189.493018ms)
+✔ E2 explicit missed source resolves a plan; partial/missing movement does not imply healthy movement (168.414434ms)
+✔ A1 real cold-process recovery has no replay and unchanged N10 record hashes (385.309232ms)
+✔ A1 failed serialization, forged SQL-column identity and cancelled source leave no false accepted result (198.951372ms)
+✔ S2 explicit partial/missed declarations require source binding and are never inferred from absence (153.544375ms)
+✔ C2 source-kind separation excludes authored task fixtures from actual browser-task references (178.000655ms)
+ℹ tests 79
+ℹ suites 0
+ℹ pass 78
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7804.316283
+
+✖ failing tests:
+
+test at tests/n10-frontend.test.mjs:9:1
+✖ N10 delayed save cannot reuse an earlier Saved indication or commit twice (725.879891ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/n10-frontend.test.mjs:24:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

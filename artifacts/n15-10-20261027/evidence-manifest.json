@@ -1,0 +1,80 @@
+{
+  "task": "N15-10",
+  "files": [
+    {
+      "path": "explicit-quotation-request.json",
+      "bytes": 621,
+      "sha256": "ba2fe55b35b1df210ca7caeb7e6f47c3fa98ce96a7bea7a8213445ac3c64d8f4"
+    },
+    {
+      "path": "explicit-quotation-stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "explicit-quotation-stdout.json",
+      "bytes": 10688,
+      "sha256": "93551181ecf78cc0c2bc769806e5aee58bc7cd8b5474ff5f4ae78ebf3f07f0b8"
+    },
+    {
+      "path": "initial-link-validation.json",
+      "bytes": 530,
+      "sha256": "ebcab3e8da0cd73090c3684553cefce0fb2aea8e1790ed6606b3eece87fe2ecb"
+    },
+    {
+      "path": "preservation-before.json",
+      "bytes": 1042816,
+      "sha256": "d8ab7bf915c9fefa0f9aea1b382b06fe1ea9a6a0fdda5b477097a43daadd9563"
+    },
+    {
+      "path": "preservation.json",
+      "bytes": 659,
+      "sha256": "0781d3e416ecc9761d073519bfe0d2d13ff037c8b30dac943e8565cacac0f0d1"
+    },
+    {
+      "path": "qa-stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "qa-stdout.txt",
+      "bytes": 7131,
+      "sha256": "fe349b9d1ce843a63c5737c393f95269f361a0f6363373d8e63f9a96ab1c4f53"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 525,
+      "sha256": "06b713b75b946bc1f63cd15e17aee032b2bf43d2badf432efd627786d9f979bb"
+    },
+    {
+      "path": "supported-factual-request.json",
+      "bytes": 477,
+      "sha256": "a97e0d3d0b265a9a8e1a49145700301c2bb9dbd4f6ce1380d4c1cdad2ae2e624"
+    },
+    {
+      "path": "supported-factual-stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "supported-factual-stdout.json",
+      "bytes": 7694,
+      "sha256": "226333745f286f0d8ec6d331cd136bd62832596f432d73ff794b92e332f63e5b"
+    },
+    {
+      "path": "unsupported-hz-request.json",
+      "bytes": 472,
+      "sha256": "37a6ce963235f45fa639aace8c9c71fd02d33d03a89cbe260ba862fbdc789b00"
+    },
+    {
+      "path": "unsupported-hz-stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "unsupported-hz-stdout.json",
+      "bytes": 7730,
+      "sha256": "31c99e6a9a36e0403611f5619394254e04957be7f1b34dab730538cac18bc2ae"
+    }
+  ]
+}

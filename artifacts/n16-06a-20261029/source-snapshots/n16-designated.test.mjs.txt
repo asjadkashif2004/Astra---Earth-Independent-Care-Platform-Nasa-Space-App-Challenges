@@ -1,0 +1,135 @@
+import nodeTest,{before,after} from 'node:test';
+import assert from 'node:assert/strict';
+import { readFile,writeFile,chmod,mkdir } from 'node:fs/promises';
+import { randomUUID } from 'node:crypto';
+import { join } from 'node:path';
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
+import { openDesignation,designationInfo,issueCaller,qualificationControl,negativeCopy,readDesignatedTool,runFourDesignated,verifyDesignatedTrace,closeDesignation,EVIDENCE,qualificationBatchState,drainQualificationBatch } from '../services/agent/designated-source.mjs';
+import { runQualificationTest } from '../services/agent/qualification-batch.mjs';
+import { archiveEligibility,CAPS,SOURCE_ID,SOURCE_SHA,SOURCE_BYTES,ROWS_SHA,AS_OF } from '../services/agent/designated-contract.mjs';
+import { rowsFor } from '../services/agent/sqlite-fixture-contract.mjs';
+import { VERSION,TOOLS,stable,sha } from '../services/agent/read-contract.mjs';
+import { recoverTrace,ExecutionTrace } from '../services/agent/execution-trace.mjs';
+import { runDemo,parseArgs } from '../scripts/n16-designated-demo.mjs';
+
+const exec=promisify(execFile),principal={id:'n16-owner-qa',role:'demo_admin',crew_id:null,demo:true};
+const call=(tool='get_current_vitals',crew='CREW-03',metrics=['heart_rate'])=>({schema_version:VERSION,tool,args:tool==='get_open_risk_events'?{crew_id:crew,limit:20}:{crew_id:crew,metrics}});
+let issuer,initial;const evidence={task:'N16-06',synthetic:true,cases:[],not_run_tests:[],SQL_writes:0,operational_access:0,model_calls:0};
+const QA_OUTPUT=join(EVIDENCE,'qa-attempt-'+randomUUID());
+function test(name,fn){return nodeTest(name,t=>{if(qualificationBatchState().blocked)evidence.not_run_tests.push({name,status:'NOT_RUN'});
+  return runQualificationTest({state:qualificationBatchState},t,()=>fn(t));});}
+const context=options=>issueCaller(issuer,principal,options),count=()=>designationInfo(issuer).measurements.length;
+const record=(name,data)=>evidence.cases.push({name,...data});
+before(async()=>{
+  issuer=await openDesignation();initial=designationInfo(issuer);
+  await mkdir(QA_OUTPUT,{mode:0o700});
+  await writeFile(join(QA_OUTPUT,'frozen-qa.json'),JSON.stringify({tests_sha256:sha(await readFile(new URL('./n16-designated.test.mjs',import.meta.url))),
+    source:SOURCE_ID,source_sha256:SOURCE_SHA,caps:CAPS,tools:TOOLS,source_manifest_sha256:initial.manifest_sha256},null,2)+'\n');
+});
+after(async()=>{if(issuer){let cleanupFailure;try{await drainQualificationBatch();}catch(error){cleanupFailure=error;}
+  const info=await closeDesignation(issuer);await writeFile(join(QA_OUTPUT,'qualification.json'),JSON.stringify({...evidence,...info,qualification_batch:qualificationBatchState()},null,2)+'\n');if(cleanupFailure)throw cleanupFailure;}});
+
+test('sealed designation matches exact frozen bytes, rows and runtime manifest',async()=>{
+  assert.equal(initial.manifest.source_id,SOURCE_ID);assert.equal(initial.manifest.source_bytes,SOURCE_BYTES);assert.equal(initial.manifest.source_sha256,SOURCE_SHA);
+  assert.equal(sha(stable(rowsFor('elevated',0))),ROWS_SHA);assert.deepEqual(initial.manifest.sidecars,[]);
+  assert.equal(sha(await readFile(join(initial.source_path,'source.sqlite'))),SOURCE_SHA);
+  record('designation',{manifest:initial.manifest,manifest_sha256:initial.manifest_sha256});
+});
+for(const crew of ['CREW-01','CREW-02','CREW-03','CREW-04','CREW-05','CREW-06'])test('actual fixed SQL read: '+crew,async()=>{
+  const value=await readDesignatedTool(context(),call('get_current_vitals',crew)),v=value.results[0];
+  assert.equal(v.execution_status,'COMPLETED');assert.equal(v.data_status,'KNOWN');assert.equal(v.data.items[0].value,crew==='CREW-03'?103:68+Number(crew.slice(-1))-1);
+  assert.equal(v.provenance.source_id,SOURCE_ID);assert.equal(v.provenance.host_currency,'NOT_LIVE_ARCHIVE');assert.equal(v.provenance.monitoring_health,'UNKNOWN');
+  assert.equal(v.receipt.readOnly,true);assert.equal(v.receipt.actual_sql_queries,2);assert.deepEqual(v.receipt.before,v.receipt.after);
+  assert.equal(v.receipt.isolation.routes,0);assert.equal(v.receipt.isolation.database_write_denied,true);assert.equal('audit' in v,false);
+  assert.equal((await verifyDesignatedTrace(issuer,value.run_id)).status,'COMPLETE');record('crew-'+crew,{result:v,run_id:value.run_id});
+});
+test('actual four-tool CLI flow gives18 durable events and canonically attributed archived data',async()=>{
+  const v=await runDemo(issuer,['--crew=CREW-03']);assert.equal(v.results.length,4);assert.ok(v.results.every(r=>r.execution_status==='COMPLETED'));
+  assert.equal(v.results[0].data.items[0].value,103);assert.equal(v.results[1].data.items[0].quality.status,'good');
+  assert.equal(v.results[2].data.items[0].value.center,68);assert.equal(v.results[2].data.items[0].value.window_days,null);
+  assert.equal(v.results[3].data.actual_N02_event,false);assert.equal(v.results[3].data.records[0].actual_N02_event,false);assert.equal(v.results[3].data.N02_provenance,'UNKNOWN');
+  assert.equal(v.recovery.committed_events,18);assert.equal(v.recovery.replayed_calls,0);assert.equal(v.recovery.status,'COMPLETE');
+  await writeFile(join(QA_OUTPUT,'demo.json'),JSON.stringify(v,null,2)+'\n');record('four-tool-demo',v);
+});
+test('cold-process recovery validates committed source/role/result bindings without another SQL worker',async()=>{
+  const id=evidence.cases.find(c=>c.name==='four-tool-demo').run_id;
+  const code='import {openDesignation,verifyDesignatedTrace,designationInfo,closeDesignation} from "./services/agent/designated-source.mjs"; const i=await openDesignation();const v=await verifyDesignatedTrace(i,process.argv[1]);console.log(JSON.stringify({status:v.status,replayed:v.replayed_calls,events:v.committed_events,SQL_workers:designationInfo(i).measurements.length}));await closeDesignation(i);';
+  const r=await exec(process.execPath,['--input-type=module','-e',code,id],{timeout:CAPS.runMs,maxBuffer:65536});const v=JSON.parse(r.stdout);
+  assert.deepEqual(v,{status:'COMPLETE',replayed:0,events:18,SQL_workers:0});record('cold-recovery',v);
+});
+test('empty risk source remains UNKNOWN with no all-clear or N02 event',async()=>{
+  const v=(await readDesignatedTool(context(),call('get_open_risk_events','CREW-01'))).results[0];
+  assert.equal(v.data_status,'UNKNOWN');assert.deepEqual(v.data.records,[]);assert.equal(v.data.actual_N02_event,false);assert.equal(v.inference_performed,false);record('unknown-risk',{result:v});
+});
+test('trusted replay clock makes stale observations UNKNOWN and preserves original observation time',async()=>{
+  const v=(await readDesignatedTool(context({replay_offset_ms:20000}),call())).results[0];
+  assert.equal(v.data_status,'UNKNOWN');assert.equal(v.data.items[0].value,null);assert.equal(v.data.items[0].reason,'stale_observation');
+  assert.equal(v.data.items[0].provenance.observed_at,AS_OF);assert.equal(v.provenance.source_as_of,AS_OF);assert.equal(v.data.items[0].provenance.age_ms,20000);record('stale',{result:v});
+});
+test('missing, malformed, future and bad-quality projection controls are UNKNOWN; positive is KNOWN',()=>{
+  const e=JSON.parse(rowsFor('elevated',0).observations[0].json);assert.equal(archiveEligibility(e,AS_OF).status,'KNOWN');
+  assert.equal(archiveEligibility(null,AS_OF).reason,'missing_observation');
+  assert.equal(archiveEligibility({...e,metric:{...e.metric,value:'invalid'}},AS_OF).status,'UNKNOWN');
+  assert.equal(archiveEligibility({...e,quality:{...e.quality,artifact:true}},AS_OF).status,'UNKNOWN');
+  assert.equal(archiveEligibility({...e,ts:'2026-11-14T11:00:01.000Z'},AS_OF).status,'UNKNOWN');
+});
+test('only opaque issuer-issued caller scopes can read; forged roles/crew never spawn SQL',async()=>{
+  const n=count();for(const forged of [null,{},principal,{role:'demo_admin',crew_ids:['CREW-03']}])await assert.rejects(readDesignatedTool(forged,call()));
+  assert.throws(()=>issueCaller({},principal));assert.throws(()=>issueCaller(issuer,{...principal,role:'system_admin'}));
+  assert.throws(()=>issueCaller(issuer,{...principal,role:'invented'}));
+  await assert.rejects(readDesignatedTool(context({crew_ids:['CREW-01']}),call()),e=>e.code==='CREW_SCOPE_DENIED');
+  assert.throws(()=>issueCaller(issuer,{...principal,role:'astronaut',crew_id:'CREW-01'},{crew_ids:['CREW-03']}));assert.equal(count(),n);
+});
+test('trusted astronaut self-read works and other crew is denied',async()=>{
+  const c=issueCaller(issuer,{...principal,role:'astronaut',crew_id:'CREW-01'},{crew_ids:['CREW-01']});
+  assert.equal((await readDesignatedTool(c,call('get_current_vitals','CREW-01'))).results[0].data_status,'KNOWN');
+  const n=count();await assert.rejects(readDesignatedTool(c,call()),e=>e.code==='SELF_ONLY');assert.equal(count(),n);
+});
+test('invalid requests, caller SQL/paths/identity/clock and view overrides reject without SQL',async()=>{
+  const c=context(),n=count();for(const v of [{...call(),tool:'execute_sql'},{...call(),role:'demo_admin'},
+    {...call(),args:{...call().args,sql:'SELECT * FROM risk_events'}},{...call(),args:{...call().args,path:'../../operational.sqlite'}},
+    {...call(),args:{...call().args,as_of:AS_OF}},call('get_current_vitals','CREW-99'),call('get_current_vitals','CREW-03',['heart_rate','heart_rate'])])await assert.rejects(readDesignatedTool(c,v));
+  await assert.rejects(readDesignatedTool(c,call(),{source_path:'/data/runtime/astra.sqlite'}));
+  assert.throws(()=>issueCaller(issuer,principal,{view:'earth'}));assert.throws(()=>issueCaller(issuer,principal,{source:{path:'/operational.sqlite'}}));assert.equal(count(),n);
+});
+for(const kind of ['bytes','manifest','wal','shm','journal','symlink','replacement','missing','extra','hardlink'])test('negative byte-copy rejection before SQL: '+kind,async()=>{
+  const s=await negativeCopy(issuer,kind),c=context({source:s}),n=count();await assert.rejects(readDesignatedTool(c,call()));assert.equal(count(),n);
+});
+test('fixed negative SQL attempts and filesystem writes denied; operational/user roots absent',async()=>{
+  const v=await readDesignatedTool(context(),call(),{control:qualificationControl(issuer,'negative')});assert.equal(v.results[0].qualification_control,true);assert.ok(v.results[0].denied>=4);
+  const m=designationInfo(issuer).measurements.at(-1),isolation=m.events.find(e=>e.event==='DESIGNATED_ISOLATION');
+  assert.equal(isolation.blocked_paths['/mnt'],true);assert.equal(isolation.blocked_paths['/home'],true);assert.equal(isolation.blocked_paths['/data'],true);
+  assert.ok(Object.values(isolation.blocked_paths).every(v=>v===true));record('write-and-path-denial',{measurement:m});
+});
+test('timeout and cancellation stop owned workers and cannot commit a successful result',async()=>{
+  for(const [kind,code] of [['timeout','TIMEOUT'],['cancel','CANCELLED']]){
+    let err;try{await readDesignatedTool(context(),call(),{control:qualificationControl(issuer,kind)});}catch(e){err=e;}
+    assert.equal(err?.code,code);const v=await verifyDesignatedTrace(issuer,err.trace_id);assert.equal(v.workflow_outcome,'STOPPED');assert.ok(v.executed_calls.every(c=>c.status!=='COMPLETED'));
+    const m=designationInfo(issuer).measurements.at(-1);assert.equal(m.owned_remaining,0);assert.equal(m.observer_pending,0);record(kind,{measurement:m,recovery_status:v.status});
+  }
+});
+test('genuine caller cancellation before dispatch prevents a worker',async()=>{
+  const abort=new AbortController();abort.abort();const n=count();await assert.rejects(readDesignatedTool(context(),call(),{signal:abort.signal}),e=>e.code==='CANCELLED');assert.equal(count(),n);
+});
+test('trace startup failure prevents SQL and result failure cannot fabricate completion',async()=>{
+  const n=count();await assert.rejects(readDesignatedTool(context(),call(),{control:qualificationControl(issuer,'normal',{fault:(kind,type)=>{if(kind==='append'&&type==='CALL_STARTED')throw Error('forced trace failure');}})}),e=>e.code==='TRACE_PERSISTENCE_FAILED');assert.equal(count(),n);
+  let error;try{await readDesignatedTool(context(),call(),{control:qualificationControl(issuer,'normal',{fault:kind=>{if(kind==='result')throw Error('forced result failure');}})});}catch(e){error=e;}
+  assert.equal(error?.code,'TRACE_PERSISTENCE_FAILED');const v=await recoverTrace(error.trace_id,{root:initial.trace_root});assert.equal(v.status,'INCOMPLETE');assert.equal(v.executed_calls[0].status,'INCOMPLETE');
+  record('trace-failure',{result_error:error.code,recovery_status:v.status});
+});
+test('interrupted trace and corrupted committed result recovery never replay SQL',async()=>{
+  const t=await ExecutionTrace.create({synthetic:true},{root:initial.trace_root});await t.append('CALL_REQUESTED',{call_id:'call-01'});await t.close();const n=count();
+  const recovered=await recoverTrace(t.id,{root:initial.trace_root});assert.equal(recovered.status,'INCOMPLETE');assert.equal(recovered.replayed_calls,0);
+  const source=await readDesignatedTool(context(),call()),file=join(initial.trace_root,source.run_id,'call-01.json');await writeFile(file,'{}\n');
+  await assert.rejects(verifyDesignatedTrace(issuer,source.run_id),e=>e.code==='RESULT_CORRUPT');assert.equal(count(),n+1);
+});
+test('CLI exposes only a fictional crew selector; no path, SQL or role options',()=>{
+  assert.equal(parseArgs([]),'CREW-03');for(const c of ['CREW-01','CREW-06'])assert.equal(parseArgs(['--crew='+c]),c);
+  for(const a of [['--path=../../operational.sqlite'],['--role=demo_admin'],['--crew=CREW-99'],['--crew=CREW-01','--sql=SELECT']])assert.throws(()=>parseArgs(a));
+});
+test('all reader measurements clean up; canonical source and donor remain byte-identical',async()=>{
+  const info=designationInfo(issuer);assert.ok(info.measurements.length>=16);assert.ok(info.measurements.every(m=>m.owned_remaining===0&&m.observer_pending===0&&m.max_counted_bytes<CAPS.storage&&m.peak_observed_RSS<CAPS.rss));
+  assert.equal(sha(await readFile(join(info.source_path,'source.sqlite'))),SOURCE_SHA);assert.equal(info.manifest_sha256,initial.manifest_sha256);
+  assert.equal(sha(await readFile('/var/tmp/astra-n16-04-gJ6VxS/originals/elevated/source.sqlite')),SOURCE_SHA);
+});

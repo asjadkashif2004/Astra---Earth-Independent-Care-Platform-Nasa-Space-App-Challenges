@@ -1,0 +1,1 @@
+{"code":"MASTER_WORKFLOW_INCOMPLETE","native_budget":{"halted":null,"maximum":12,"reservations":[{"ordinal":1,"stage":"get_current_vitals"},{"ordinal":2,"stage":"get_data_quality"},{"ordinal":3,"stage":"get_personal_baseline"},{"ordinal":4,"stage":"get_open_risk_events"}]}}

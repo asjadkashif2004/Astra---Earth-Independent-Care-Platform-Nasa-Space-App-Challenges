@@ -1,0 +1,120 @@
+{
+  "schema_version": "astra.n12.legacy-diagnostic.v1",
+  "scope": "Existing pure-helper source-contract diagnostics only. Not N12 qualification, not an operational/security incident, and not counted as passing safety tests.",
+  "current_forecast_sha256": "1bbbace5e95397ad21b5525897e704fbcda3c1bfd0d7943eb8bd17fb65e9cfb8",
+  "model_calibration_sha256": "1c143331303fb92a9b03300ae3dcc84314f61213228e08e489f9b9138ceb6cbf",
+  "cases": [
+    {
+      "name": "negative_horizon",
+      "note": "Pure helper has no horizon validation; existing HTTP path always uses its fixed default.",
+      "result": {
+        "available": true,
+        "target": "heart_rate",
+        "horizon_minutes": -30,
+        "estimate": 63.900000000000006,
+        "lower": 63.64580720122835,
+        "upper": 64.15419279877166,
+        "slope_per_minute": 0.10000000000000009,
+        "history_count": 20,
+        "model_version": "linear-trend-v2",
+        "clinical_diagnosis": null,
+        "synthetic": true,
+        "confidence": "synthetic research only",
+        "interval_label": "Uncalibrated residual interval; assumes the current trend continues.",
+        "calibration": null,
+        "trained_through": "2026-11-14T11:19:00.000Z"
+      },
+      "nonfinite_available": false
+    },
+    {
+      "name": "interior_invalid_timestamp",
+      "note": "Interior invalid time can produce nonfinite arithmetic while available remains true.",
+      "result": {
+        "available": true,
+        "target": "heart_rate",
+        "horizon_minutes": 30,
+        "estimate": null,
+        "lower": null,
+        "upper": null,
+        "slope_per_minute": null,
+        "history_count": 20,
+        "model_version": "linear-trend-v2",
+        "clinical_diagnosis": null,
+        "synthetic": true,
+        "confidence": "synthetic research only",
+        "interval_label": "Uncalibrated residual interval; assumes the current trend continues.",
+        "calibration": null,
+        "trained_through": "2026-11-14T11:19:00.000Z"
+      },
+      "nonfinite_available": true
+    },
+    {
+      "name": "duplicate_observations",
+      "note": "Pure helper has no observation-ID/duplicate eligibility check.",
+      "result": {
+        "available": true,
+        "target": "heart_rate",
+        "horizon_minutes": 30,
+        "estimate": 69.9,
+        "lower": 69.54032484880625,
+        "upper": 70.25967515119376,
+        "slope_per_minute": 0.10000000000000003,
+        "history_count": 20,
+        "model_version": "linear-trend-v2",
+        "clinical_diagnosis": null,
+        "synthetic": true,
+        "confidence": "synthetic research only",
+        "interval_label": "Uncalibrated residual interval; assumes the current trend continues.",
+        "calibration": null,
+        "trained_through": "2026-11-14T11:19:00.000Z"
+      },
+      "nonfinite_available": false
+    },
+    {
+      "name": "interior_out_of_order",
+      "note": "Chronological input is an implicit caller assumption, not enforced by this pure helper.",
+      "result": {
+        "available": true,
+        "target": "heart_rate",
+        "horizon_minutes": 30,
+        "estimate": 69.9,
+        "lower": 69.53879371690492,
+        "upper": 70.26120628309509,
+        "slope_per_minute": 0.10000000000000009,
+        "history_count": 20,
+        "model_version": "linear-trend-v2",
+        "clinical_diagnosis": null,
+        "synthetic": true,
+        "confidence": "synthetic research only",
+        "interval_label": "Uncalibrated residual interval; assumes the current trend continues.",
+        "calibration": null,
+        "trained_through": "2026-11-14T11:19:00.000Z"
+      },
+      "nonfinite_available": false
+    },
+    {
+      "name": "future_endpoint",
+      "note": "There is no issue/knowledge cutoff argument. The existing canonical ingest guards are separate; this is not evidence of an actual HTTP future leak.",
+      "result": {
+        "available": true,
+        "target": "heart_rate",
+        "horizon_minutes": 30,
+        "estimate": 66.90000229324204,
+        "lower": 65.34019013318812,
+        "upper": 68.45981445329596,
+        "slope_per_minute": 2.6359135684918492e-8,
+        "history_count": 20,
+        "model_version": "linear-trend-v2",
+        "clinical_diagnosis": null,
+        "synthetic": true,
+        "confidence": "synthetic research only",
+        "interval_label": "Uncalibrated residual interval; assumes the current trend continues.",
+        "calibration": null,
+        "trained_through": "2099-01-01T00:00:00.000Z"
+      },
+      "nonfinite_available": false
+    }
+  ],
+  "repair_status": "NOT IMPLEMENTED: new N12 source/time/horizon contract requires the inactive sequencing proposal to be explicitly activated; legacy code is preserved.",
+  "new_N12_candidates": 0
+}

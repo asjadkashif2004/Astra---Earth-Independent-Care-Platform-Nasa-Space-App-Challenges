@@ -1,0 +1,161 @@
+// N16-06B: one reserved startup; all source inspection is metadata-only.
+import { spawn } from 'node:child_process';
+import { open,mkdir,readFile,lstat,readdir,realpath,rename,unlink } from 'node:fs/promises';
+import { constants as C } from 'node:fs';
+import { join,resolve,dirname,basename } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { randomUUID } from 'node:crypto';
+import { safeDirectory,readAt } from '../services/agent/read-context.mjs';
+import { parseJSON,stable,sha } from '../services/agent/read-contract.mjs';
+import { commitContainment } from '../services/agent/containment-diagnostics.mjs';
+import { QualificationBatch } from '../services/agent/qualification-batch.mjs';
+import { CONTAINMENT_PIN_POLICY,verifyDependencyPins } from '../services/agent/dependency-pins.mjs';
+
+const PROJECT=fileURLToPath(new URL('../',import.meta.url));
+const OUT=join(PROJECT,'artifacts/n16-06b-20261029');
+const CODE_PLAN='artifacts/n16-06c-20261029/corrected-code-plan.json';
+const ROOT='/var/tmp/astra-n16-designated-2v0ytq';
+const SOURCE={source_id:'astra.n16.designated-synthetic.elevated.v1',sha256:'4b1a3d8d9bdb832ae54b35a43e4412f18914756984893f8cb181b37955caff73'};
+const CAPS={rss:536870912,storage:67108864,wall:1000,output:65536,cleanup:250};
+const STAGED=['scripts/n16-containment-only.mjs','services/agent/containment-diagnostics.mjs','services/agent/read-contract.mjs','packages/contracts.mjs'];
+const requireState=(v,code)=>{if(!v)throw Object.assign(Error(code),{code});};
+async function metadataBytes(file,max=1048576){requireState(file.endsWith('.json'),'METADATA_ONLY');const d=await safeDirectory(dirname(file));
+  try{const s=await lstat(d.at(basename(file)));requireState(s.isFile()&&!s.isSymbolicLink()&&s.nlink===1&&s.size<=max,'UNSAFE_METADATA');
+    return await readAt(d.fd,basename(file),max);
+  }finally{await d.close();}}
+async function json(file,max=1048576){return parseJSON((await metadataBytes(file,max)).toString(),max);}
+async function atomic(name,value){const d=await safeDirectory(OUT),temp=name+'.tmp-'+randomUUID();let f;
+  try{f=await open(d.at(temp),C.O_CREAT|C.O_EXCL|C.O_WRONLY|C.O_NOFOLLOW,0o600);await f.writeFile(stable(value)+'\n');await f.sync();await f.close();f=null;
+    await rename(d.at(temp),d.at(name));await d.handle.sync();
+  }finally{if(f)await f.close();try{await unlink(d.at(temp));}catch(e){if(e.code!=='ENOENT')throw e;}await d.close();}}
+async function journal(value){const f=await open(join(OUT,'resources.jsonl'),'a',0o600);try{await f.writeFile(stable({at:new Date().toISOString(),...value})+'\n');await f.sync();}finally{await f.close();}}
+async function count(path){const s=await lstat(path);requireState(s.isDirectory()&&!s.isSymbolicLink(),'UNSAFE_ACCOUNTING_PATH');let n=s.blocks*512;
+  for(const e of await readdir(path,{withFileTypes:true})){try{const p=join(path,e.name),st=await lstat(p);if(st.isDirectory())n+=await count(p);else n+=Math.max(st.size,st.blocks*512);}catch(error){if(error.code!=='ENOENT')throw error;}}
+  return n;
+}
+async function sourceMetadata(){
+  const dir=await safeDirectory(join(ROOT,'source'));try{const d=await dir.handle.stat({bigint:true}),f=await lstat(dir.at('source.sqlite'),{bigint:true});
+    requireState(f.isFile()&&!f.isSymbolicLink()&&f.nlink===1n&&f.size===65536n&&(f.mode&0o777n)===0o400n&&(d.mode&0o777n)===0o500n,'SOURCE_METADATA_INVALID');
+    requireState((await readdir(`/proc/self/fd/${dir.fd}`)).sort().join()==='source.sqlite','UNEXPECTED_SOURCE_MEMBER');
+    return {directory:{dev:String(d.dev),ino:String(d.ino)},file:{dev:String(f.dev),ino:String(f.ino),birth_ns:String(f.birthtimeNs),change_ns:String(f.ctimeNs)}};
+  }finally{await dir.close();}}
+async function tree(pid){const rows=[];async function visit(id){try{
+    const text=await readFile(`/proc/${id}/status`,'utf8'),stat=await readFile(`/proc/${id}/stat`,'utf8');
+    rows.push({pid:id,birth:stat.slice(stat.lastIndexOf(')')+2).split(' ')[19],hwm:Number(/^VmHWM:\s+(\d+)/m.exec(text)?.[1]??0)*1024});
+    const children=await readFile(`/proc/${id}/task/${id}/children`,'utf8');for(const p of children.trim().split(/\s+/).filter(Boolean))await visit(Number(p));
+  }catch(e){if(!['ENOENT','ESRCH'].includes(e.code))throw e;}}await visit(pid);return rows;}
+async function counted(){let n=0;for(const p of [ROOT,OUT,join(PROJECT,'artifacts/n16-06-20261029'),join(PROJECT,'artifacts/n16-06a-20261029')])n+=await count(p);
+  for(const p of ['scripts/n16-containment-probe.mjs','services/agent/dependency-pins.mjs',CODE_PLAN,...STAGED]){const s=await lstat(join(PROJECT,p));n+=Math.max(s.size,s.blocks*512);}return n;}
+export async function preflight(){
+  await mkdir(OUT,{recursive:true});requireState(process.version==='v24.21.0'&&process.platform==='linux'&&process.arch==='x64','RUNTIME_MISMATCH');
+  const metadata=await json(join(OUT,'preflight-metadata.json'));
+  const reg=await json(join(PROJECT,'artifacts/n16-06-20261029/registration.json'));
+  requireState(reg.root===ROOT&&reg.manifest_sha256==='5dab2628827a80b3af1f0a5d37ef64763144aba1510e7b0c7ea653a3f5ac286c','REGISTRATION_MISMATCH');
+  const rawManifest=await metadataBytes(join(ROOT,'metadata/manifest.json'),65536);requireState(sha(rawManifest)===reg.manifest_sha256,'MANIFEST_CHANGED');
+  const manifest=parseJSON(rawManifest.toString(),65536);requireState(manifest.source_id===SOURCE.source_id&&manifest.source_sha256===SOURCE.sha256&&manifest.source_bytes===65536,'SOURCE_POLICY_MISMATCH');
+  requireState(sha(await metadataBytes(join(ROOT,'owner.json'),4096))===reg.owner_sha256,'OWNER_MISMATCH');
+  const identity=await sourceMetadata();requireState(stable(identity)===stable(manifest.source_identity),'SOURCE_INSTANCE_CHANGED');
+  requireState(metadata.root===ROOT&&metadata.expected_source_sha256===SOURCE.sha256,'PREFLIGHT_SCOPE_MISMATCH');
+  await verifyDependencyPins(CONTAINMENT_PIN_POLICY,{
+    readInventory:(path,max)=>metadataBytes(join(PROJECT,path),max),
+    readDependency:path=>readFile(join(PROJECT,path))
+  });
+  const qa=await readFile(join(OUT,'preflight-qa.txt'),'utf8');requireState(qa.includes('ℹ pass 45\n')&&qa.includes('ℹ fail 0\n')&&qa.includes('ℹ skipped 0\n'),'MANDATORY_QA_FAILED');
+  const plan=await json(join(PROJECT,CODE_PLAN));
+  const allowedCode=[...STAGED,'scripts/n16-containment-probe.mjs','services/agent/dependency-pins.mjs','services/agent/qualification-batch.mjs','services/agent/read-context.mjs'].sort();
+  requireState(stable(Object.keys(plan.code_pins).sort())===stable(allowedCode),'UNEXPECTED_CODE_PIN_PATH');
+  for(const [file,h] of Object.entries(plan.code_pins))requireState(sha(await readFile(join(PROJECT,file)))===h,'PROBE_PLAN_CHANGED');
+  const self=await tree(process.pid);requireState(self.length===1&&self[0].hwm>0&&self[0].hwm<CAPS.rss,'RSS_OBSERVER_UNAVAILABLE');
+  const bytes=await counted();requireState(bytes<CAPS.storage-1048576,'STORAGE_ADMISSION_FAILED');
+  const token={source_id:SOURCE.source_id,kind:'diagnostic_persistence_preflight',nonce:randomUUID()};await atomic('persistence-check.json',token);
+  requireState(stable(await json(join(OUT,'persistence-check.json')))===stable(token),'PERSISTENCE_UNAVAILABLE');
+  const result={status:'PASS_PREFLIGHT',source:SOURCE,source_identity:identity,manifest_sha256:reg.manifest_sha256,
+    code_pins:plan.code_pins,caps:CAPS,counted_bytes:bytes,preflight_self_RSS:self[0].hwm,database_byte_reads:0,probe_startups:0,
+    enforcement:'20ms non-overlapping RSS/storage observer, stop on unknown measurement or breach, startup release barrier, parent-death binding, Node heap64MiB, CPU1s, wall1s. Monitored limits, not hard quotas.'};
+  await atomic('preflight.json',result);return result;
+}
+function args(fd){const a=['--unshare-all','--die-with-parent','--new-session','--cap-drop','ALL','--clearenv','--setenv','PATH','/usr/bin',
+  '--setenv','PYTHONDONTWRITEBYTECODE','1','--ro-bind','/usr','/usr','--ro-bind','/lib','/lib','--ro-bind','/lib64','/lib64','--dir','/runtime',
+  '--ro-bind',process.execPath,'/runtime/node','--dir','/code','--ro-bind-fd',String(fd),'/fixture'];
+  for(const p of STAGED)a.push('--ro-bind',join(PROJECT,p),'/code/'+p);
+  a.push('--proc','/proc','--dev','/dev','--remount-ro','/','--chdir','/', '/usr/bin/python3','-c',
+    'import os,resource; resource.setrlimit(resource.RLIMIT_CORE,(0,0)); resource.setrlimit(resource.RLIMIT_CPU,(1,1)); os.closerange(3,256); os.execv("/runtime/node",["/runtime/node","--jitless","--max-old-space-size=64","/code/scripts/n16-containment-only.mjs"])');return a;
+}
+export async function runProbe(){
+  const pf=await preflight(),reserved=await open(join(OUT,'probe-reserved.json'),C.O_CREAT|C.O_EXCL|C.O_WRONLY|C.O_NOFOLLOW,0o600);
+  try{await reserved.writeFile(stable({task:'N16-06B',maximum_attempts:1,source:SOURCE,at:new Date().toISOString()})+'\n');await reserved.sync();}finally{await reserved.close();}
+  const batch=new QualificationBatch({persist:async record=>{await atomic('first-failure.json',record);return {durable:true,hash:record.hash};}});
+  const events=[],seen=new Map();let child,directory,reason=null,signal=null,exitCode=null,actualStarts=0,samples=0,maxRSS=0,maxStorage=0,
+    sampler=Promise.resolve(),sampleBusy=false,handler=Promise.resolve(),handlingError=null,diagnostic=null,acknowledged=false,ready=false,receivedDiagnostic=false,
+    interval,timer,escalation,closed,spawnRecord=Promise.resolve(),nativeStarted=null,nativeEnded=null,stdout='',stderr='',ownedRemaining=0;
+  const stop=code=>{if(reason)return;reason=code;if(!child?.pid||nativeEnded!==null)return;try{process.kill(-child.pid,'SIGTERM');}catch(e){if(e.code!=='ESRCH')throw e;}
+    escalation=setTimeout(()=>{try{process.kill(-child.pid,'SIGKILL');}catch(e){if(e.code!=='ESRCH')throw e;}},CAPS.cleanup);};
+  const sample=async()=>{const owned=child?await tree(child.pid):[];for(const p of owned)seen.set(p.pid,p.birth);
+    const parent=await tree(process.pid);requireState(parent[0]?.hwm>0,'RSS_OBSERVER_FAILED');maxRSS=Math.max(maxRSS,parent[0].hwm,...owned.map(p=>p.hwm),0);
+    const bytes=await counted();maxStorage=Math.max(maxStorage,bytes);samples++;
+    await journal({phase:'resource',owned,parent_hwm:parent[0].hwm,counted_bytes:bytes});
+    requireState(maxRSS<CAPS.rss,'RSS_LIMIT');requireState(bytes<CAPS.storage,'STORAGE_LIMIT');};
+  const persistDiagnostic=async record=>{await atomic('diagnostic.json',record);return {durable:true,hash:record.hash};};
+  try{await batch.run('single_containment_probe',async permit=>{
+    directory=await safeDirectory(join(ROOT,'source'));await sample();
+    permit.markStarted();nativeStarted=performance.now();child=spawn('/usr/bin/bwrap',args(3),{detached:true,stdio:['pipe','pipe','pipe',directory.fd],env:{PATH:'/usr/bin'}});
+    child.once('spawn',()=>{actualStarts=1;spawnRecord=atomic('startup.json',{task:'N16-06B',attempted_startups:1,actual_startups:1,pid:child.pid,source_id:SOURCE.source_id})
+      .catch(error=>{handlingError??=error;stop('STARTUP_RECORD_FAILED');});});
+    const abort=()=>stop('BATCH_BLOCKED');permit.signal.addEventListener('abort',abort,{once:true});
+    child.stdin.on('error',()=>{});child.stderr.on('data',b=>{stderr+=b;if(Buffer.byteLength(stderr)>8192)stop('STDERR_LIMIT');});
+    interval=setInterval(()=>{if(sampleBusy)return;sampleBusy=true;sampler=sample().catch(e=>stop(e.code??'RESOURCE_ACCOUNTING_FAILED')).finally(()=>{sampleBusy=false;});},20);
+    timer=setTimeout(()=>stop('PROBE_DEADLINE'),CAPS.wall);
+    child.stdout.on('data',b=>{stdout+=b;if(Buffer.byteLength(stdout)>CAPS.output){stop('OUTPUT_LIMIT');return;}
+      while(stdout.includes('\n')){const i=stdout.indexOf('\n'),line=stdout.slice(0,i);stdout=stdout.slice(i+1);
+        handler=handler.then(async()=>{const event=parseJSON(line,CAPS.output);events.push(event);
+          requireState(event.database_byte_reads===0&&event.SQLite_connections===0&&event.SQL_statements===0,'PROBE_DATA_BOUNDARY_FAILED');
+          requireState(event.rss<CAPS.rss&&event.kernel_max_rss<CAPS.rss,'RSS_LIMIT');maxRSS=Math.max(maxRSS,event.kernel_max_rss);
+          await journal({phase:'probe_event',event});
+          if(event.event==='PROBE_READY'){
+            requireState(!ready,'DUPLICATE_READY');ready=true;
+            requireState(stable(event.source_metadata)===stable(pf.source_identity)&&Object.values(event.blocked_paths).every(v=>v===true),'PROBE_METADATA_OR_PATH_FAILED');
+            await spawnRecord;await sample();batch.assertOpen();requireState(!reason,'RESOURCE_NOT_READY');
+            child.stdin.write(stable({command:'run_containment_once',expected_identity:pf.source_identity})+'\n');
+          }else if(event.event==='CONTAINMENT_DIAGNOSTIC'){
+            requireState(ready&&!receivedDiagnostic,'PROBE_PROTOCOL_FAILED');receivedDiagnostic=true;diagnostic=event.diagnostic;
+            requireState(event.metadata_unchanged===true,'SOURCE_METADATA_CHANGED');
+            await commitContainment(diagnostic,SOURCE,{persist:persistDiagnostic,block:f=>batch.trip(f),acknowledge:ack=>new Promise((resolve,reject)=>{
+              batch.assertOpen();requireState(!reason,'PROBE_ALREADY_STOPPED');child.stdin.write(stable(ack)+'\n',error=>{if(error)reject(error);else{acknowledged=true;child.stdin.end();resolve();}});
+            })});
+          }else if(event.event==='PROBE_FAILED'){throw Object.assign(Error(event.code),{code:event.code});}
+          else requireState(event.event==='CONTAINMENT_PROBE_PASS'&&acknowledged&&event.diagnostic_hash===diagnostic?.hash,'PROBE_PROTOCOL_FAILED');
+        }).catch(error=>{handlingError??=error;batch.trip({code:error.code??'PROBE_PROTOCOL_FAILED',stage:'containment'});stop(error.code??'PROBE_PROTOCOL_FAILED');});
+      }
+    });
+    closed=new Promise(resolve=>{child.once('error',()=>stop('PROBE_START_FAILED'));child.once('close',(code,sig)=>{nativeEnded=performance.now();resolve({code,sig});});});
+    const exit=await closed;exitCode=exit.code;signal=exit.sig;clearInterval(interval);clearTimeout(timer);clearTimeout(escalation);await sampler;await spawnRecord;await handler;
+    try{await sample();}catch(error){stop(error.code??'RESOURCE_ACCOUNTING_FAILED');}
+    for(const [pid,birth] of seen){const p=await tree(pid);if(p[0]?.birth===birth)ownedRemaining++;}
+    requireState(ownedRemaining===0,'PROBE_CLEANUP_FAILED');requireState(!handlingError,handlingError?.code??'PROBE_HANDLER_FAILED');requireState(!reason,reason??'PROBE_FAILED');
+    requireState(exitCode===0&&ready&&receivedDiagnostic&&acknowledged&&events.some(e=>e.event==='CONTAINMENT_PROBE_PASS'),'PROBE_INCOMPLETE');
+  });}catch(error){reason??=error.code??'PROBE_FAILED';}
+  finally{
+    if(child&&nativeEnded===null){stop('SUPERVISOR_FAILED');if(closed)await closed;}
+    clearInterval(interval);clearTimeout(timer);clearTimeout(escalation);await sampler;await handler;if(directory)await directory.close();
+  }
+  let batchState;try{batchState=await batch.drain();}catch(error){reason??=error.code;batchState=batch.state();}
+  const after=await sourceMetadata();requireState(stable(after)===stable(pf.source_identity),'SOURCE_METADATA_CHANGED');
+  const proofComplete=diagnostic?.qualified===true;
+  const pass=!reason&&exitCode===0&&proofComplete&&acknowledged&&ownedRemaining===0;
+  const outcome=pass?'PASS':diagnostic?.proof&&diagnostic?.probes?.some(p=>!p.accepted)?'BLOCKED':'INCONCLUSIVE';
+  const legacy=diagnostic?.probes?.length===3?{root_check:diagnostic.probes[0].code==='EROFS',directory_check:diagnostic.probes[1].code==='EROFS',database_check:['EROFS','ENOENT'].includes(diagnostic.probes[2].code)}:null;
+  const result={task:'N16-06B',outcome,scope:'CONTAINMENT_ONLY',actual_startups:actualStarts,attempted_startups:batchState.attempted_startups,
+    reason,exit_code:exitCode,signal,diagnostic,diagnostic_durably_acknowledged:acknowledged,
+    legacy_guard_comparison:legacy?{...legacy,would_pass:legacy.root_check&&legacy.directory_check&&legacy.database_check}:null,
+    native_wall_ms:nativeEnded!==null?nativeEnded-nativeStarted:null,sampled_and_reported_peak_RSS:maxRSS,max_counted_storage:maxStorage,
+    samples,owned_remaining:ownedRemaining,observer_pending:sampleBusy?1:0,batch:batchState,events,stderr,
+    source_metadata_before:pf.source_identity,source_metadata_after:after,expected_source_sha256:SOURCE.sha256,source_byte_hash_reverified:false,
+    database_byte_reads:0,SQLite_connections:0,SQL_statements:0,network_requests:0,downloads:0,SQL_qualification_replayed:false,
+    resource_limit_kind:'Active monitored RSS/storage; not hard quotas. Kernel CPU1s, wall1s, heap64MiB and parent-death binding supplement monitoring.'};
+  await atomic('result.json',result);return result;
+}
+if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
+  try{requireState(process.argv.length<=3&&(!process.argv[2]||process.argv[2]==='--preflight-only'),'NO_CALLER_OPTIONS');
+    const result=process.argv[2]?await preflight():await runProbe();process.stdout.write(JSON.stringify(result)+'\n');if(result.outcome&&result.outcome!=='PASS')process.exitCode=1;
+  }catch(error){await atomic('stopped.json',{outcome:'BLOCKED',code:error.code??'PREFLIGHT_FAILED',probe_startups:'Inspect reservation/result; no retry authorized',database_byte_reads:0,SQLite_connections:0,SQL_statements:0});process.stderr.write(JSON.stringify({outcome:'BLOCKED',code:error.code??'PREFLIGHT_FAILED'})+'\n');process.exitCode=1;}
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": "astra.n05.review-packet.v1",
+  "source_identity_sha256": "4b20cbb6d86180be8f447524336dca78fb8cb6ed1cb4d6e178e6b10c6dd8dee1",
+  "scope": "Future source fidelity/visual review, not a new mandatory certification rule or runtime authority",
+  "reviewer": {
+    "name": null,
+    "role": null,
+    "independent": null,
+    "conflicts": null
+  },
+  "reviewed_versions": {
+    "source": "BodyParts3D4.3 / FMA3.0",
+    "source_inputs_sha256": "897d0c6f6dc5846e98de251e76f8e65efcf3aa1a470421654d1badd309448902",
+    "LOD": "astra.reference-lod.v1"
+  },
+  "decision": "PENDING",
+  "decided_at": null,
+  "findings": null,
+  "disagreements": null,
+  "owner": {
+    "name": null,
+    "decision": "PENDING",
+    "at": null
+  },
+  "clinical_approval": false,
+  "N06_authorized": false
+}

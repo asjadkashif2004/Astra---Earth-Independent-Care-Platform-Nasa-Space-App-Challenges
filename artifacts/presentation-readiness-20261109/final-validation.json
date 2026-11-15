@@ -1,0 +1,436 @@
+{
+  "schema_version": "astra.presentation.final.v1",
+  "result": "READY WITH LIMITATIONS",
+  "owner_mission_date": "2026-11-09",
+  "completed_at": "2026-11-08T22:23:48.755Z",
+  "matrix": {
+    "Windows_CLI": "PASS",
+    "WSL_CLI": "PASS",
+    "failed_launch_recovery": "PASS",
+    "dashboard_six_crew": "PASS",
+    "crew_binding": "PASS",
+    "N09_to_N02_alert": "PASS",
+    "authorized_acknowledgement": "PASS",
+    "N05_N06_anatomy": "PASS",
+    "N08_ingest_replay": "PASS",
+    "restart_recovery": "PASS",
+    "error_session_role_controls": "PASS",
+    "responsive_keyboard_native_200_zoom": "PASS",
+    "N13_N14_offline_lexical_attribution": "PASS",
+    "unsupported_general_questions": "ABSTAIN",
+    "personal_treatment_request": "REJECTED",
+    "archived_N12_forecast": "PASS",
+    "fresh_N12_compute": "NOT RUN: no new calibration/evaluation campaign",
+    "N14_scientific_corpus_application_integration": "NOT AUTHORIZED",
+    "fresh_Qwen_inference": "NOT AUTHORIZED / 0 starts",
+    "N15_positive_support_rules": "INACTIVE",
+    "N16_operational_dispatch": "INACTIVE / 0 workers",
+    "recorded_N16_backup": "PASS",
+    "physical_AC20": "NOT TESTED / UNVERIFIED",
+    "clinical_independent_review_release": "OPEN / unchanged"
+  },
+  "qa": {
+    "passed": 258,
+    "failed": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "scope": "Distinct cases from regression-delivery.tap; repeated earlier runs are not added"
+  },
+  "browser": [
+    {
+      "status": "passed",
+      "browser": {
+        "protocolVersion": "1.3",
+        "product": "Chrome/156.0.8078.80",
+        "revision": "@fb096c0011f9d50f0a264a9376420cdea9c421e3",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "jsVersion": "15.6.75.27"
+      },
+      "started_at": "2026-11-08T22:13:18.772Z",
+      "finished_at": "2026-11-08T22:15:24.976Z",
+      "checks": 14,
+      "passed": 14,
+      "audits": 4,
+      "native_Tab_checks": 60,
+      "console_errors": [],
+      "cleanup": {
+        "browser_exited": true,
+        "profile_removed": true,
+        "database_directory_removed": true,
+        "Node_memory": {
+          "rss": 241356800,
+          "heapTotal": 176054272,
+          "heapUsed": 52291928,
+          "external": 6515249,
+          "arrayBuffers": 2311062
+        },
+        "N16_designated_starts": 0,
+        "Qwen_executions": 0,
+        "model_training": 0,
+        "database_snapshots": 0
+      },
+      "temporary_SQLite_bytes": 25296896
+    },
+    {
+      "status": "passed",
+      "browser": {
+        "protocolVersion": "1.3",
+        "product": "Chrome/156.0.8078.80",
+        "revision": "@fb096c0011f9d50f0a264a9376420cdea9c421e3",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "jsVersion": "15.6.75.27"
+      },
+      "started_at": "2026-11-08T22:19:40.428Z",
+      "finished_at": "2026-11-08T22:21:35.525Z",
+      "checks": 14,
+      "passed": 14,
+      "audits": 4,
+      "native_Tab_checks": 60,
+      "console_errors": [],
+      "cleanup": {
+        "browser_exited": true,
+        "profile_removed": true,
+        "database_directory_removed": true,
+        "Node_memory": {
+          "rss": 243757056,
+          "heapTotal": 181788672,
+          "heapUsed": 61777416,
+          "external": 8315047,
+          "arrayBuffers": 4110860
+        },
+        "N16_designated_starts": 0,
+        "Qwen_executions": 0,
+        "model_training": 0,
+        "database_snapshots": 0
+      },
+      "temporary_SQLite_bytes": 24625152
+    }
+  ],
+  "measurements": {
+    "scope": "Observed reference timings including browser transport and finite transition waits where applicable; not physical FPS or hard resource guarantees",
+    "Windows_CLI": [
+      {
+        "startup_and_authenticated_shell_ms": 706.4318,
+        "crew": [
+          "CREW-01",
+          "CREW-02",
+          "CREW-03",
+          "CREW-04",
+          "CREW-05",
+          "CREW-06"
+        ],
+        "at": "2026-11-08T21:58:05.754Z",
+        "url": "http://127.0.0.1:57880",
+        "PID": 17664
+      },
+      {
+        "startup_and_authenticated_shell_ms": 241.51960000000008,
+        "crew": [
+          "CREW-01",
+          "CREW-02",
+          "CREW-03",
+          "CREW-04",
+          "CREW-05",
+          "CREW-06"
+        ],
+        "at": "2026-11-08T21:58:06.637Z",
+        "url": "http://127.0.0.1:57880",
+        "PID": 13100
+      }
+    ],
+    "WSL_CLI": [
+      {
+        "startup_and_authenticated_shell_ms": 784.427047,
+        "crew": [
+          "CREW-01",
+          "CREW-02",
+          "CREW-03",
+          "CREW-04",
+          "CREW-05",
+          "CREW-06"
+        ],
+        "at": "2026-11-08T21:58:03.613Z",
+        "url": "http://127.0.0.1:41869",
+        "PID": 10724
+      },
+      {
+        "startup_and_authenticated_shell_ms": 624.1009919999999,
+        "crew": [
+          "CREW-01",
+          "CREW-02",
+          "CREW-03",
+          "CREW-04",
+          "CREW-05",
+          "CREW-06"
+        ],
+        "at": "2026-11-08T21:58:04.931Z",
+        "url": "http://127.0.0.1:41869",
+        "PID": 10759
+      }
+    ],
+    "crew_switch_including_mesh_load": {
+      "samples": 6,
+      "min_ms": 8215.718399999998,
+      "median_ms": 8701.930800000002,
+      "p95_ms": 8880.571000000004,
+      "max_ms": 8880.571000000004
+    },
+    "region_control_to_panel": {
+      "samples": 9,
+      "min_ms": 381.4829000000027,
+      "median_ms": 390.07810000000245,
+      "p95_ms": 715.546399999992,
+      "max_ms": 715.546399999992
+    },
+    "health_API": {
+      "samples": 8,
+      "min_ms": 0.8396999999968102,
+      "median_ms": 1.2488999999914085,
+      "p95_ms": 14.732300000003306,
+      "max_ms": 14.732300000003306
+    },
+    "other": {
+      "crew_switch_ms": [
+        8435.272,
+        8800.234400000001,
+        8356.706300000002,
+        8701.930800000002,
+        8880.571000000004,
+        8215.718399999998
+      ],
+      "region_ms": [
+        386.29069999999956,
+        390.07810000000245,
+        385.33940000000075,
+        382.0590000000011,
+        381.4829000000027,
+        391.0891000000047,
+        431.5456000000122,
+        427.39370000000054,
+        715.546399999992
+      ],
+      "waveform_import_ms": 388.59189999999944,
+      "waveform_playback_observed_ms": 901.0854999999938,
+      "scenario_start_and_300s_step_ms": 1420.0503999999928,
+      "cold_restart_and_recovered_panel_ms": 8370.909599999999,
+      "health_API_ms": [
+        14.732300000003306,
+        2.389000000010128,
+        1.6644000000087544,
+        1.2488999999914085,
+        0.8616999999940163,
+        0.8931000000011409,
+        0.8396999999968102,
+        0.9456999999965774
+      ]
+    },
+    "browser_heap": {
+      "used": 38050591,
+      "total": 95457355,
+      "limit": 4395630592
+    },
+    "graphics_cleanup": {
+      "draws": 2842,
+      "buffers": 0,
+      "programs": 0,
+      "textures": 0,
+      "live_contexts": 0,
+      "context_losses": 7,
+      "invalidated": {
+        "buffers": 0,
+        "programs": 0,
+        "textures": 10
+      },
+      "RAF_pending": 0
+    },
+    "cold_recovery": {
+      "before": {
+        "risk_events": 1,
+        "waveform_sources": 1,
+        "n09_events": 26,
+        "n12_jobs": 0
+      },
+      "after": {
+        "risk_events": 1,
+        "waveform_sources": 1,
+        "n09_events": 26,
+        "n12_jobs": 0
+      },
+      "new_N12_jobs": 0
+    },
+    "offline_duration_ms": 2233.280174,
+    "offline_memory": {
+      "rss": 279748608,
+      "heapTotal": 163467264,
+      "heapUsed": 38065072,
+      "external": 24238006,
+      "arrayBuffers": 21414479
+    }
+  },
+  "recording": {
+    "status": "SAVED",
+    "file": "presentation.webm",
+    "frames": 220,
+    "capped_at_five_minutes": false,
+    "bytes": 822987,
+    "fps": 2,
+    "silent": true,
+    "source": "Actual application browser screenshots encoded by installed Chrome MediaRecorder",
+    "errors": [
+      "Browser command timeout: Page.captureScreenshot"
+    ],
+    "physical_FPS_evidence": false,
+    "playback": {
+      "current_time": 0.2962,
+      "width": 1280,
+      "height": 720,
+      "decoded_frames": 4,
+      "error": null
+    }
+  },
+  "preservation": {
+    "pinned_files": 327,
+    "unchanged": 313,
+    "intentional": [
+      {
+        "path": "apps/mission-control-web/n09.mjs",
+        "before": "d9b924ef3898a9a4d01817c015ea13c078498957d2ca9c78730484685192ec19",
+        "after": "0bba8c5ffd11772248c7faed2b4c73da1dfe4be98f96e29d34fba7a8b180d282"
+      },
+      {
+        "path": "apps/mission-control-web/styles.css",
+        "before": "6c1f39caf51fe3ab3b08d83067f86bdaec38a71ff61eb69f2a6e81dafe48e57f",
+        "after": "168eb2056f759455143ccba61fe681ef4a949df88e53aa2b669871f61623e0ae"
+      },
+      {
+        "path": "apps/mission-control-web/sw.js",
+        "before": "57f81049ff9e0009dead6870fb1a5505584f50f2bca53914b64ee77b6ea24adb",
+        "after": "4df14dad176e5db9821bd2847a5d26f50ee0b4584817df8eb3962b4bc3995be0"
+      },
+      {
+        "path": "apps/mission-control-web/waveforms.mjs",
+        "before": "ab7ba5fdfd829e335d618c054fe5431a88ee98f5e83c71930bb8fbec51087ab5",
+        "after": "6211ae5486a8009f4496c73e5ddf8ef71ec9cc942b4941193c6adade6fbccc57"
+      },
+      {
+        "path": "scripts/browser-acceptance.mjs",
+        "before": "57f97bdb5a82f12c31125240402f3aff6e01a5ad2032e129e195797cc9e54840",
+        "after": "e9f4c48b6009ac0b486277acf737bbc954498d083b9c32f004d6b176512e0758"
+      },
+      {
+        "path": "tests/n08-frontend.test.mjs",
+        "before": "534e4f3f820f07043934bda4813c71cb628469b7fe37112b9dbb1f1be9897724",
+        "after": "1ab91461c37a81b6ba9fec6d693cf8bd46cd82506a830bc945121e08a2c7281e"
+      },
+      {
+        "path": "AGENTS.md",
+        "before": "1d230b883c4272011c0ddcc757b0664f0bd4bd3d5bbecfbd339972745d1f982e",
+        "after": "6c8163956d414b013a0bfb09d6d4f82640f92523ca26b4897a01f74d660485a6"
+      },
+      {
+        "path": "README.md",
+        "before": "4a48f1bb5f4d899b8855c2ff5fcb4340b9dac5719155d4fe06051ad79b20f7a9",
+        "after": "ad66a7ce2612db67ef9e15492fbee04897c8c285a73a65a114eea49066c58db4"
+      },
+      {
+        "path": "docs/MASTER_PLAN.md",
+        "before": "b58e9a32e2f89498fd0ee61a80ceece9817f6f60b6473cec18bea42de3301f14",
+        "after": "08263e9b202375a0c3980f1bc989d2c0f0f211438f47a108d943b920dbfc8726"
+      },
+      {
+        "path": "docs/MODULE_TRACKER.md",
+        "before": "50aea9fc2daa50df804022f3a72b3fea11bc923411e33862bb8b50262168b18d",
+        "after": "86e02cf3948af53eb6b8ccd6234fa09c15220bad0ce7fcacc67d3490c2f4a0d2"
+      },
+      {
+        "path": "docs/CORE_AI_PRIORITY.md",
+        "before": "5b22504e8a55559646f36f26d9ebd473026a295dc881f9c68c7202057f7ed583",
+        "after": "0d6102e1103a8b77a52ca1347f1ee147da6a42703d91cc5878923939d7ff70b9"
+      },
+      {
+        "path": "docs/DECISIONS.md",
+        "before": "ba001bc7831fcf0b6487e0583f5f9c35f528d5f980d3b86f7bcb4ba1d5f26436",
+        "after": "04d74113ff6e316ea2ffc76ba49e1042f281fb394fbd41944f047fa695473b75"
+      },
+      {
+        "path": "docs/FEATURE_AUDIT.md",
+        "before": "5a693de954442ed9bf9967c80fbfe9922e7bb1202a3e396081218f8968f94e73",
+        "after": "ab8bbb768e1e6a6e75799ecb8056568f28326d2ab281876e860e6ce62bbfd57d"
+      },
+      {
+        "path": "docs/SESSION_HANDOFF.md",
+        "before": "ea8f8d4c76fc6094d327aeeab6ba6659546b2525f69da3cb8070a5dbfc97fa49",
+        "after": "406e9d012f8f477fd510b54a01a9ac303c4d462ab0756b426ddbfdcbc0b7fc46"
+      }
+    ],
+    "unexpected": [],
+    "additional_existing_document_edits": [
+      {
+        "path": "docs/SETUP.md",
+        "sha256": "54c7aece5d6467733e046e10f279307c47591656f30084cbeb25e2c29aec925f",
+        "scope": "Presentation addendum; original body retained; outside initial pin set"
+      }
+    ],
+    "formal_table_hashes_unchanged": {
+      "docs/MASTER_PLAN.md": "dfae36eddba1fcf90956f325f2913cb75ffb7abf152aee57ef10d9c13faf35d7",
+      "docs/MODULE_TRACKER.md": "a7ec1eacb3958f6b3225e3a5748e911e80c71af13b6d3048cd26fdace0588006",
+      "docs/CORE_AI_PRIORITY.md": "dbad3d753f85b715059d469f9bbde79c58021014f662a6a6f318779ad73c8e02",
+      "docs/FEATURE_AUDIT.md": "23cc8fa61ca963625a3663e5d03655feb21acf4d96776c913bc939145d48a014",
+      "docs/DECISIONS.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "added": [
+      {
+        "path": "scripts/browser-presentation.mjs",
+        "sha256": "227d6166d3e71e8d3b97e030feca971e534b6370667d3fca3579fcb44a3122ff",
+        "bytes": 11494
+      },
+      {
+        "path": "scripts/presentation-recording.mjs",
+        "sha256": "a5d14db132c06b3ac3bfd09577dea115becd3ee33246728fcf09b1ed06d42746",
+        "bytes": 4185
+      },
+      {
+        "path": "scripts/presentation-startup-check.mjs",
+        "sha256": "fb472a7e66c59839e4dc42833952f44737831109db7479ea87d82c2ef603b58a",
+        "bytes": 3793
+      },
+      {
+        "path": "scripts/presentation-evidence-check.mjs",
+        "sha256": "09912c50f3d853540ecae8beb0261214f1e89bbf9fda2456df6008b94c745fe1",
+        "bytes": 5030
+      },
+      {
+        "path": "scripts/presentation-finalize.mjs",
+        "sha256": "55fb3be8a9d51f6a2412c7f712b7047dc7f18cbb1f369693c52c8156cdd76e76",
+        "bytes": 14439
+      },
+      {
+        "path": "tests/presentation-scenario.test.mjs",
+        "sha256": "eb96af26051a63ad895437d7ca91bf825fcba2cd8e5fae519a4d9073de28f211",
+        "bytes": 2468
+      },
+      {
+        "path": "docs/ASTRA_FINAL_DEMO_READINESS.md",
+        "sha256": "934701c38b88851f84551b43889a1c95c32557d927774e5f588f20222cd46c6b",
+        "bytes": 22901
+      },
+      {
+        "path": "docs/demo/PRESENTATION_CHECKLIST.md",
+        "sha256": "32b26f644d814af42b3a5c08323a9174601b6aa57aafb56670a88dc261cf6ac5",
+        "bytes": 1676
+      }
+    ],
+    "original_assets": "Existing asset tests verified source/GLB/runtime pins; no asset bytes edited",
+    "NASA_sources": "N13/N14 source and corpus hashes reverified",
+    "historical_files": "No historical artifacts overwritten or deleted; no SQLite snapshots or model copies",
+    "large_or_sealed_files": "Not opened for new rehash/inference; no designated N16 sources/workers",
+    "operational_database_opened": false
+  },
+  "storage": {
+    "new_artifact_files_before_manifest": 119,
+    "new_artifact_bytes_before_manifest": 29877863,
+    "retained_SQLite_snapshots": 0
+  },
+  "formal_module_statuses": "UNCHANGED",
+  "stop": "Mission delivered; no further campaign, inference, module or deployment authorized"
+}

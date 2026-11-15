@@ -1,0 +1,30 @@
+{
+  "binary_decode_20_ms": 1.3134149999996225,
+  "csv_decode_5_ms": 49.859849000000395,
+  "ingest_ms": 1.2233539999997447,
+  "windows_20_ms": 17.809329000000616,
+  "input_bytes": {
+    "binary": 45486,
+    "csv": 198074
+  },
+  "memory": {
+    "rss": 374558720,
+    "heapTotal": 204222464,
+    "heapUsed": 100086784,
+    "external": 14415390,
+    "arrayBuffers": 10075186
+  },
+  "kernel_max_RSS_KiB": 372908,
+  "native_N16_starts": 0,
+  "model_executions": 0,
+  "external_network_requests": 0,
+  "temporary_SQLite_bytes": 650776,
+  "temporary_SQLite_files": [
+    "synthetic.sqlite",
+    "synthetic.sqlite-shm",
+    "synthetic.sqlite-wal"
+  ],
+  "input_limit_bytes": 256000,
+  "retained_payload_ceiling_bytes": 8388608,
+  "limitation": "Process observations / kernel high-water, not an enforced RSS quota; parent test process may include preceding tests. No browser/GPU memory claim."
+}

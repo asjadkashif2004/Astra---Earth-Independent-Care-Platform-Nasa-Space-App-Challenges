@@ -1,0 +1,1 @@
+{"ref":"refs/tags/v0.7.0","node_id":"REF_kwDOJH_K4LByZWZzL3RhZ3MvdjAuNy4w","url":"https://api.github.com/repos/ggml-org/llama.cpp/git/refs/tags/v0.7.0","object":{"sha":"757cad021b357f417065ddbc41a6e8f87c1f8136","type":"tag","url":"https://api.github.com/repos/ggml-org/llama.cpp/git/tags/757cad021b357f417065ddbc41a6e8f87c1f8136"}}

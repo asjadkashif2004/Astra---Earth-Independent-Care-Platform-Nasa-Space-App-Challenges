@@ -1,0 +1,32 @@
+{
+  "records": [
+    {
+      "name": "candidate-release",
+      "url": "https://api.github.com/repos/ggml-org/llama.cpp/releases/tags/v0.7.0",
+      "started_utc": "2026-10-25T16:36:30.897897+00:00",
+      "complete": true,
+      "path": "candidate-release.txt",
+      "bytes": 35722,
+      "sha256": "3057d0b60d7282ba0f8e304a1b814b640c1922db7691230387925e90baebf988",
+      "mime": "application/json",
+      "elapsed_seconds": 1.0482302860000345,
+      "final_url": "https://api.github.com/repos/ggml-org/llama.cpp/releases/tags/v0.7.0",
+      "link": null,
+      "rate_remaining": "59"
+    },
+    {
+      "name": "candidate-tag",
+      "url": "https://api.github.com/repos/ggml-org/llama.cpp/git/ref/tags/v0.7.0",
+      "started_utc": "2026-10-25T16:36:31.952728+00:00"
+    }
+  ],
+  "body_bytes": 36053,
+  "elapsed_seconds": 1.7255050629973994,
+  "limits": {
+    "per_resource_bytes": 262144,
+    "total_body_bytes": 2000000,
+    "request_seconds": 15,
+    "overall_seconds": 120
+  },
+  "model_or_runtime_binaries": false
+}

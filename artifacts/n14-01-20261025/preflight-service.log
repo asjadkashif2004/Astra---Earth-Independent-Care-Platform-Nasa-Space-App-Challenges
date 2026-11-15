@@ -1,0 +1,36 @@
+Running as unit: astra-n14-01-oewmeal8-preflight.service; invocation ID: 5f61944415e84b98b1241eb802b61aa0
+Traceback (most recent call last):
+  File "/var/tmp/astra-n14-01-oEWmeAl8/astra-n14-01-acquire.py", line 106, in <module>
+    {'preflight':preflight,'acquire':acquire}[mode]()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/var/tmp/astra-n14-01-oEWmeAl8/astra-n14-01-acquire.py", line 83, in preflight
+    metadata=get('https://huggingface.co/api/models/'+repo+'/revision/'+revision+'?blobs=true','publisher-model.json',65536,15)
+  File "/var/tmp/astra-n14-01-oEWmeAl8/astra-n14-01-acquire.py", line 46, in get
+    response.fp.raw._sock.settimeout(remaining)
+    ^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'raw'
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 238, in partial_apport_excepthook
+    return apport_excepthook(binary, exc_type, exc_obj, exc_tb)
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 152, in apport_excepthook
+    os.open(pr_filename, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o640), "wb"
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 30] Read-only file system: '/var/crash/_var_tmp_astra-n14-01-oEWmeAl8_astra-n14-01-acquire.py.1000.crash'
+
+Original exception was:
+Traceback (most recent call last):
+  File "/var/tmp/astra-n14-01-oEWmeAl8/astra-n14-01-acquire.py", line 106, in <module>
+    {'preflight':preflight,'acquire':acquire}[mode]()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/var/tmp/astra-n14-01-oEWmeAl8/astra-n14-01-acquire.py", line 83, in preflight
+    metadata=get('https://huggingface.co/api/models/'+repo+'/revision/'+revision+'?blobs=true','publisher-model.json',65536,15)
+  File "/var/tmp/astra-n14-01-oEWmeAl8/astra-n14-01-acquire.py", line 46, in get
+    response.fp.raw._sock.settimeout(remaining)
+    ^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'raw'
+          Finished with result: exit-code
+Main processes terminated with: code=exited, status=1/FAILURE
+               Service runtime: 2.716s
+             CPU time consumed: 1.579s
+                   Memory peak: 358.3M (swap: 0B)

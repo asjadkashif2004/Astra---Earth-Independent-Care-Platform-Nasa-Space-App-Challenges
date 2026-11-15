@@ -1,0 +1,47 @@
+✔ N07-02: only the exact OSD-1 aggregate URL is added; child endpoints,other studies,queries,hosts and cross-source approval reject (9.618074ms)
+✔ N07-02: strict approval rejects unknown fields,rights upgrades,invented dates,clinical scope and unbounded resources (2.022806ms)
+✔ N07-02: shipped original verifies organism,identity,measurement context and actual dates with unavailable counts preserved (61.914846ms)
+✔ N07-02: absent/error metadata fails closed;other/mixed studies and unsafe child references are rejected (0.98368ms)
+✔ N07-02: unknown,human,mixed or altered organism and missing reviewed NASA context are not accepted (0.712224ms)
+✔ N07-02: newly introduced source-license/access fields require review rather than silently inheriting old permission (0.982688ms)
+✔ N07-02: optional unavailable fields become null;prose counts and concatenated investigator names never fabricate units or labels (0.406283ms)
+✔ N07-02: malformed types,calendar dates,mission order and release timestamps reject (1.341721ms)
+✔ N07-02: source/title/author and UTF-8/hash integrity gates reject modified content or a misleading source manifest (1.576297ms)
+✔ N07-02: OSDR uses the original guarded cache and atomically retains one source without following metadata links (35.402401ms)
+✔ N07-02: 403/503 and invalid 200 metadata never publish an original;cache failures cannot create medical data (42.034193ms)
+✔ N07-02: card and split policy are bound to source SHA,approval,receipt and actual study identity (5.273938ms)
+✔ N07-02: dataset-card tampering cannot invent sample counts,version,organism or downloaded measurements (6.413665ms)
+✔ N07-02: split validation rejects fabricated assignments/counts/labels/readiness and leakage-prone policies (12.442199ms)
+✔ N07-02: proposed train/validation/test roles expose independent-mission and technical-replicate limitations without executing a split (1.103949ms)
+✔ N07-02: shipped dataset documentation is complete,offline and reproducible with unchanged original/manifest bytes (90.712836ms)
+✔ N07-02: actual CLI option parser selects only the two reviewed sources and preserves NTRS defaults (0.897937ms)
+✔ N07: exact-resource allowlist rejects unknown hosts, IDs, userinfo, schemes, ports, fragments, query strings and alternate references (0.495432ms)
+✔ N07: strict approval requires complete attribution, actual use conditions, version/date limitations, bounded size/type/hash and nonclinical scope (1.378471ms)
+✔ N07: exact source identity/public-rights/author/version fields are checked after hashing; HTML, invalid UTF-8 and altered bytes reject (1.981238ms)
+✔ N07: original bytes, provenance and receipt commit together; repeated offline verification/acquire never refetch or overwrite (41.995357ms)
+✔ N07: interruption resumes only the verified prefix with exact Range and If-Range; original sequence and receipt survive restart (34.751625ms)
+✔ N07: crash recovery truncates only an uncommitted partial tail; committed prefix integrity remains mandatory (35.795748ms)
+✔ N07: corrupt partials and approval drift fail before any network; they cannot become accepted originals (43.214926ms)
+✔ N07: redirects, HTML, compressed responses, unsupported headers and size overrun reject without a retry (121.914212ms)
+✔ N07: resumed 200, wrong range and changed/missing strong ETag never mix representations (84.233024ms)
+✔ N07: early clean EOF retains a safe partial for explicit resume rather than accepting incomplete data (29.652621ms)
+✔ N07: without an ETag, exact range plus final pinned SHA permits safe resume and rejects mixed source bytes (54.921483ms)
+✔ N07: full-size SHA mismatch is rejected permanently; snapshot change never updates the pin or original (21.702906ms)
+✔ N07: deadlines cover pending headers/body and external cancellation; no background commit after timeout (41.634106ms)
+✔ N07: request count is durable and bounded across explicit resume attempts; there is no automatic retry (38.724362ms)
+✔ N07: monotonic deadline bounds an endless empty-chunk stream even if microtasks delay the timeout callback (105.903957ms)
+✔ N07: explicit mid-stream cancellation retains only committed bytes and a new invocation resumes safely (30.30934ms)
+✔ N07: concurrent/stale locks fail safely without removing someone else's lock (8.722545ms)
+✔ N07: symbolic roots and symbolic partial files cannot escape the dedicated cache (24.555678ms)
+✔ N07: completed manifests, original bytes and receipt hashes are rechecked; tampering never triggers a repair download (89.852379ms)
+✔ N07: interrupted directory promotion resumes offline; full bytes without confirmed response completion are insufficient (57.061839ms)
+✔ N07: untrusted links and instruction-like strings are preserved as inert original bytes, never followed or executed (20.628381ms)
+✔ N07: shipped single NASA metadata snapshot verifies offline against the reviewed source and its complete manifest (50.545424ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 39
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1396.756331

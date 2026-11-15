@@ -1,0 +1,12 @@
+Checking: N06 native click-to-panel and actual source-to-panel latency with exact reading controls
+Checking: N06 actual HTTP read latency and real SQLite noninterference counter
+Checking: N06 API unavailable/denied clears readings and explicit retry recovers
+Checking: N06 unsupported WebGL keeps authorized textual metrics and keyboard region controls
+{
+  "status": "passed",
+  "browser": "Chrome/156.0.8078.80",
+  "checks": 4,
+  "failed": [],
+  "screenshots": 0,
+  "report": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n06-engineering-20261105\\browser-latency-03\\report.json"
+}

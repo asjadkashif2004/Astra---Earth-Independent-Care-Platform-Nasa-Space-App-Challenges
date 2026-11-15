@@ -1,0 +1,193 @@
+"""One offline qualification continuation; acquired code is never executed here."""
+from pathlib import Path, PurePosixPath
+import hashlib,json,os,platform,re,resource,shutil,stat,subprocess,sys,tarfile,tempfile,threading,time
+
+PROJECT=Path('/mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai')
+sys.dont_write_bytecode=True
+sys.path.insert(0,str(PROJECT/'scripts'))
+import n15_probe_accounting as accounting
+
+MARK=Path('/tmp/astra-n15-03b-attempt.json')
+if MARK.exists():raise SystemExit('STOP: N15-03B was already attempted; no retry')
+LIMIT=2000000000;WATERMARK=1350000000
+resource.setrlimit(resource.RLIMIT_AS,(LIMIT,LIMIT));resource.setrlimit(resource.RLIMIT_CORE,(0,0))
+REUSED=Path('/var/tmp/astra-n15-03-swuxjpfe')
+ARCHIVE=REUSED/'llama-b11669-bin-ubuntu-x64.tar.gz'
+SHA='cf07c1c112d709bd67e522017471de57ed0ec8bea031d732c5422351c07f65ac'
+root=Path(tempfile.mkdtemp(prefix='astra-n15-03b-',dir='/var/tmp'));os.chmod(root,0o700)
+MARK.write_text(json.dumps({'root':str(root),'runtime_executed':False}))
+for name in ['tmp','home','cache']: (root/name).mkdir()
+started=time.monotonic();halt=threading.Event();children={};child_lock=threading.Lock();failures=[];peaks={};samples=[]
+state={'status':'PREFLIGHT','root':str(root),'reused_root':str(REUSED),'network_bytes':0,'network_seconds':0,'new_acquisition_bytes':0,'native_runtime_commands':0,'model_loaded':False,'limits':{'storage_ceiling':1500000000,'watermark':WATERMARK,'RSS_ceiling':LIMIT,'RSS_precaution':1800000000,'monitor_interval_seconds':.25},'dependency_results':[]}
+
+def atomic(name,data):accounting.atomic_json(root/name,data)
+def log(kind,**data):
+ with open(root/'events.jsonl','a') as f:f.write(json.dumps({'elapsed_seconds':time.monotonic()-started,'event':kind,**data})+'\n');f.flush();os.fsync(f.fileno())
+
+def storage():
+ # Own atomic renames and the extra symlink/root metadata walk share the same lock.
+ with accounting._IO_LOCK:
+  a=b=0
+  for base in [root,REUSED]:
+   x,y=accounting.disk_usage(base);a+=x;b+=y
+   info=base.lstat();a+=info.st_size;b+=info.st_blocks*512
+   for parent,dirs,files in os.walk(base,followlinks=False):
+    for name in dirs+files:
+     p=Path(parent)/name;info=p.lstat()
+     if stat.S_ISLNK(info.st_mode):a+=info.st_size;b+=info.st_blocks*512
+  for p in [Path(__file__),Path('/tmp/astra-n15-03b-focused-tests.txt'),MARK]:
+   info=p.stat();a+=info.st_size;b+=info.st_blocks*512
+ return a,b
+
+def scan():
+ a,b=storage()
+ if max(a,b)>=WATERMARK:raise RuntimeError('Storage precautionary watermark')
+ with child_lock:pids=[os.getpid()]+list(children)
+ rss={}
+ for pid in pids:
+  try:text=Path('/proc',str(pid),'status').read_text()
+  except FileNotFoundError:continue
+  value=int(re.search(r'^VmRSS:\s+(\d+)',text,re.M)[1])*1024
+  hwm=int(re.search(r'^VmHWM:\s+(\d+)',text,re.M)[1])*1024
+  peaks[str(pid)]=max(peaks.get(str(pid),0),value,hwm);rss[str(pid)]=value
+  if max(value,hwm)>=1800000000:raise RuntimeError('RSS precautionary limit')
+ available=int(re.search(r'^MemAvailable:\s+(\d+)',Path('/proc/meminfo').read_text(),re.M)[1])*1024
+ if available<1500000000:raise RuntimeError('Host memory headroom below planning floor')
+ return {'elapsed_seconds':time.monotonic()-started,'apparent_bytes':a,'allocated_bytes':b,'RSS_bytes':rss,'peak_observed_RSS':dict(peaks),'MemAvailable':available}
+
+def observe():
+ while not halt.is_set():
+  tick=time.monotonic()
+  try:
+   sample=scan();samples.append(sample);atomic('resources-latest.json',sample)
+   with open(root/'resources.jsonl','a') as f:f.write(json.dumps(sample)+'\n');f.flush();os.fsync(f.fileno())
+  except Exception as e:
+   accounting.fail_closed(str(e),failures=failures,stop_event=halt,active=children,active_lock=child_lock,report_failure=lambda r:atomic('accounting-failure.json',r));return
+  halt.wait(max(0,.25-(time.monotonic()-tick)))
+
+def gate():
+ if failures:raise RuntimeError(failures[0])
+ scan()
+
+def phase(name):
+ gate();state['stage']=name;atomic('report.json',state);log('phase',name=name);print(json.dumps({'stage':name,'root':str(root)}),flush=True)
+
+def tool(args,name,timeout=15):
+ gate()
+ def limits():
+  resource.setrlimit(resource.RLIMIT_AS,(LIMIT,LIMIT));resource.setrlimit(resource.RLIMIT_CORE,(0,0));resource.setrlimit(resource.RLIMIT_FSIZE,(4194304,4194304));resource.setrlimit(resource.RLIMIT_CPU,(10,10))
+ env={'PATH':'/usr/bin:/bin:/usr/sbin','HOME':str(root/'home'),'TMPDIR':str(root/'tmp'),'XDG_CACHE_HOME':str(root/'cache'),'LC_ALL':'C','PYTHONDONTWRITEBYTECODE':'1'}
+ t=time.monotonic()
+ with open(root/(name+'.stdout'),'wb') as out,open(root/(name+'.stderr'),'wb') as err:
+  with child_lock:
+   if failures or halt.is_set():raise RuntimeError('Accounting gate closed')
+   p=subprocess.Popen(args,stdin=subprocess.DEVNULL,stdout=out,stderr=err,close_fds=True,env=env,preexec_fn=limits)
+   children[p.pid]=p
+  try:result=p.wait(timeout=timeout)
+  except subprocess.TimeoutExpired:p.kill();p.wait();raise RuntimeError('Tool deadline '+name)
+  finally:
+   with child_lock:children.pop(p.pid,None)
+ log('tool',args=args,exit_code=result,elapsed_seconds=time.monotonic()-t)
+ gate()
+ if result:raise RuntimeError('Tool failed '+name+' exit '+str(result))
+ return (root/(name+'.stdout')).read_text(errors='replace')
+
+observer=threading.Thread(target=observe,daemon=True)
+try:
+ testlog=Path('/tmp/astra-n15-03b-focused-tests.txt').read_text()
+ if 'Ran 30 tests' not in testlog or not testlog.rstrip().endswith('OK'):raise RuntimeError('Corrected helper focused preflight did not pass')
+ state['focused_tests_passed']=30
+ initial=scan();atomic('resources-latest.json',initial);samples.append(initial);observer.start()
+ phase('disk-and-archive-integrity')
+ mount=tool(['findmnt','-T',str(root),'-no','FSTYPE,SOURCE,OPTIONS'],'scratch-mount')
+ if mount.split()[0] in ['tmpfs','ramfs']:raise RuntimeError('RAM-backed runtime scratch rejected')
+ state['scratch_mount']=mount.strip()
+ h=hashlib.sha256();n=0
+ with ARCHIVE.open('rb') as f:
+  for chunk in iter(lambda:f.read(65536),b''):gate();h.update(chunk);n+=len(chunk)
+ if n!=17851611 or h.hexdigest()!=SHA:raise RuntimeError('Reused archive size/hash mismatch')
+ state['archive']={'path':str(ARCHIVE),'bytes':n,'sha256':h.hexdigest(),'integrity':'PASS'}
+
+ phase('filesystem-and-network-isolation-preflight')
+ (root/'private-canary').write_text('owned private QA canary')
+ hostns=os.readlink('/proc/self/ns/net')
+ code="import json,os,pathlib,resource,socket; paths="+repr([str(PROJECT),str(REUSED),str(root/'private-canary'),'/home','/root','/mnt'])+"; visible=[p for p in paths if pathlib.Path(p).exists()]; ns=os.readlink('/proc/self/ns/net'); routes=pathlib.Path('/proc/net/route').read_text().splitlines()[1:]; assert not visible; assert not routes; assert ns!="+repr(hostns)+"; print(json.dumps({'private_paths_visible':visible,'routes':routes,'interfaces':socket.if_nameindex(),'network_namespace':ns,'AS_limit':resource.getrlimit(resource.RLIMIT_AS),'cwd':os.getcwd()}))"
+ args=['bwrap','--unshare-all','--die-with-parent','--new-session','--cap-drop','ALL','--clearenv','--ro-bind','/usr','/usr','--symlink','usr/bin','/bin','--symlink','usr/lib','/lib','--symlink','usr/lib64','/lib64','--proc','/proc','--dev','/dev','--bind',str(root/'tmp'),'/tmp','--chdir','/tmp','--setenv','PATH','/usr/bin:/bin','--setenv','HOME','/tmp/home','--setenv','TMPDIR','/tmp','--setenv','XDG_CACHE_HOME','/tmp/cache','--','/usr/bin/python3','-B','-I','-c',code]
+ state['isolation_preflight']=json.loads(tool(args,'isolation-preflight'));state['isolation_preflight']['host_network_namespace']=hostns
+
+ phase('archive-safety-and-reused-extraction')
+ members=[];seen=set()
+ with tarfile.open(ARCHIVE,'r:gz') as archive:
+  for m in archive:
+   p=PurePosixPath(m.name)
+   if p.is_absolute() or '..' in p.parts or '\\' in m.name or str(p) in seen or m.mode&0o6000:raise RuntimeError('Unsafe archive member')
+   seen.add(str(p))
+   if not(m.isfile() or m.isdir() or m.issym()):raise RuntimeError('Unsupported archive member type')
+   if m.issym() and (PurePosixPath(m.linkname).is_absolute() or '..' in PurePosixPath(m.linkname).parts):raise RuntimeError('Unsafe archive link')
+   members.append({'name':str(p),'size':m.size,'link':m.linkname,'type':'file' if m.isfile() else 'dir' if m.isdir() else 'symlink'})
+ old=json.loads((REUSED/'archive-inventory.json').read_text());assert len(old)==len(members)==61
+ extracted=REUSED/'extracted'
+ for actual,saved in zip(members,old):
+  if any(actual[k]!=saved[k] for k in ['name','size','link','type']):raise RuntimeError('Archive inventory changed')
+  p=extracted/actual['name'];info=p.lstat()
+  if actual['type']=='file':
+   if not stat.S_ISREG(info.st_mode):raise RuntimeError('Unexpected extraction file type')
+   hfile=hashlib.sha256()
+   with p.open('rb') as f:
+    for chunk in iter(lambda:f.read(65536),b''):hfile.update(chunk)
+   if info.st_size!=actual['size'] or hfile.hexdigest()!=saved['sha256']:raise RuntimeError('Reused member integrity mismatch')
+  elif actual['type']=='symlink':
+   if not stat.S_ISLNK(info.st_mode) or os.readlink(p)!=actual['link'] or not p.resolve().is_relative_to(extracted.resolve()):raise RuntimeError('Reused symlink mismatch/escape')
+  elif not stat.S_ISDIR(info.st_mode):raise RuntimeError('Reused directory mismatch')
+ state['safe_members_verified']=61;state['member_hashes_verified']=sum(x['type']=='file' for x in old)
+ atomic('archive-reverification.json',{'archive':state['archive'],'members':members,'regular_bytes':sum(x['size'] for x in members)})
+
+ phase('required-system-library-resolution')
+ cache=tool(['/usr/sbin/ldconfig','-p'],'host-library-cache')
+ allowed=[]
+ for line in cache.splitlines():
+  match=re.match(r'\s*(\S+)\s+\(([^)]+)\)\s+=>\s+(\S+)',line)
+  if match and 'x86-64' in match[2]:allowed.append({'soname':match[1],'path':match[3]})
+ bundle=extracted/'llama-b11669'
+ for name in ['llama-completion','libllama-completion-impl.so','libggml-base.so.0']:
+  p=bundle/name
+  metadata=tool(['readelf','-h','-l','-d','-n','-V',str(p)],'elf-'+name)
+  if 'Advanced Micro Devices X86-64' not in metadata or 'ELF64' not in metadata:raise RuntimeError('ELF architecture mismatch')
+  needed=re.findall(r'\(NEEDED\).*?\[(.*?)\]',metadata)
+  entry={'name':name,'needed':needed,'results':[]};state['dependency_results'].append(entry)
+  for soname in needed:
+   local=bundle/soname
+   if local.is_file() and local.resolve().is_relative_to(bundle.resolve()):resolved={'soname':soname,'kind':'archive','path':str(local.resolve())}
+   else:
+    candidates=[x for x in allowed if x['soname']==soname]
+    candidates.extend({'soname':soname,'path':str(base/soname)} for base in [Path('/usr/lib/x86_64-linux-gnu'),Path('/lib/x86_64-linux-gnu'),Path('/usr/lib64'),Path('/lib64')])
+    found=None
+    for x in candidates:
+     q=Path(x['path'])
+     if q.is_file() and q.resolve().is_relative_to(Path('/usr/lib').resolve()):found=q.resolve();break
+    if found is None:
+     entry['results'].append({'soname':soname,'status':'UNAVAILABLE','allowed_host_paths_checked':[x['path'] for x in candidates]})
+     atomic('dependency-results.json',state['dependency_results'])
+     raise RuntimeError('Required library unavailable in archive/allowed host libraries: '+soname)
+    resolved={'soname':soname,'kind':'host','path':str(found)}
+   entry['results'].append(resolved)
+  atomic('dependency-results.json',state['dependency_results'])
+ state['status']='STATIC_REVIEW_PENDING_NO_NATIVE_EXECUTION'
+ phase('remaining-license-security-CPU-review-pending')
+except BaseException as exc:
+ state['status']='BLOCKED';state['failure']={'stage':state.get('stage'),'type':type(exc).__name__,'reason':str(exc)}
+ log('failure',**state['failure']);print(json.dumps({'status':'BLOCKED','failure':state['failure']}),flush=True)
+finally:
+ halt.set()
+ if observer.is_alive():observer.join(3)
+ with child_lock:
+  for child in children.values():
+   if child.poll() is None:child.kill();child.wait()
+ state['elapsed_seconds']=time.monotonic()-started;state['accounting_failures']=failures
+ state['resources']={'samples':len(samples),'peak_observed_RSS':peaks,'parent_kernel_peak_RSS':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss*1024,'maximum_child_kernel_peak_RSS':resource.getrusage(resource.RUSAGE_CHILDREN).ru_maxrss*1024,'observer_alive':observer.is_alive(),'owned_children_remaining':len(children)}
+ if samples:
+  state['resources']['max_sampled_apparent_bytes']=max(x['apparent_bytes'] for x in samples);state['resources']['max_sampled_allocated_bytes']=max(x['allocated_bytes'] for x in samples)
+ a,b=storage();state['resources'].update(final_apparent_bytes=a,final_allocated_bytes=b)
+ atomic('report.json',state)
+ print(json.dumps({'status':state['status'],'root':str(root),'resources':state['resources'],'new_acquisition_bytes':0,'network_bytes':0,'native_runtime_commands':0}),flush=True)
+ if state['status']=='BLOCKED':raise SystemExit(1)

@@ -1,0 +1,240 @@
+{
+  "fixture_version": "astra.n07.split-fixtures.v1",
+  "units": [
+    {
+      "id": "SYN-U-0",
+      "source_id": "SYN-D-0",
+      "source_sha256": "bc1eaa32995d545cdb6a0f2fc39232da31da72413fab783fe0a596799c7c80b0",
+      "subject": "SYN-P-0",
+      "session": "SYN-S-0",
+      "scenario": "SYN-C-0",
+      "related": [],
+      "content_sha256": "6466f22ce5f74761b01f758739d6c08337ed8c6f1e1b7832f130b02fc51aaf9b",
+      "start_seconds": 0,
+      "end_seconds": 20,
+      "synthetic": true
+    },
+    {
+      "id": "SYN-U-1",
+      "source_id": "SYN-D-1",
+      "source_sha256": "33b2ebe68c6fe463374b6509c4b2cf98d4a7a222ef2fc0858a4861419320cd7f",
+      "subject": "SYN-P-1",
+      "session": "SYN-S-1",
+      "scenario": "SYN-C-1",
+      "related": [],
+      "content_sha256": "525e15c247e1284e88548db828c7799131977b4559658db4f60ed9362033f808",
+      "start_seconds": 100,
+      "end_seconds": 120,
+      "synthetic": true
+    },
+    {
+      "id": "SYN-U-2",
+      "source_id": "SYN-D-2",
+      "source_sha256": "b48e4c0eccea0d989e155e654d4986bd96f96aa2ab70a78585b3cb9a246c57e3",
+      "subject": "SYN-P-2",
+      "session": "SYN-S-2",
+      "scenario": "SYN-C-2",
+      "related": [],
+      "content_sha256": "a3a695d1194dc406151f81da8e5ee82c2a5193cec476519f378aedadde0e9d0b",
+      "start_seconds": 200,
+      "end_seconds": 220,
+      "synthetic": true
+    },
+    {
+      "id": "SYN-U-3",
+      "source_id": "SYN-D-3",
+      "source_sha256": "4a38265683eb486d094b4e34920d7a32a23ad4015ff5cfdf7a3b6d2fd806b2cd",
+      "subject": "SYN-P-3",
+      "session": "SYN-S-3",
+      "scenario": "SYN-C-3",
+      "related": [],
+      "content_sha256": "41050fd57446b6802b89bf9b71e77871d04e88e62444810b4d8226aa94e8442a",
+      "start_seconds": 300,
+      "end_seconds": 320,
+      "synthetic": true
+    },
+    {
+      "id": "SYN-U-4",
+      "source_id": "SYN-D-4",
+      "source_sha256": "b067b9e8f27fd46f3aa1f79d2f97b0223b8b9282a85307fd55536e737ebc8270",
+      "subject": "SYN-P-4",
+      "session": "SYN-S-4",
+      "scenario": "SYN-C-4",
+      "related": [],
+      "content_sha256": "3b5e203a2e7dbad9d759b23fed4ed81af37ad0cba4b22f98e0028afec11e0c5c",
+      "start_seconds": 400,
+      "end_seconds": 420,
+      "synthetic": true
+    },
+    {
+      "id": "SYN-U-5",
+      "source_id": "SYN-D-5",
+      "source_sha256": "6d8d93ff7d728e3b3765835197a2622ea9e95f2acecd5d7252c502b7488bad1f",
+      "subject": "SYN-P-5",
+      "session": "SYN-S-5",
+      "scenario": "SYN-C-5",
+      "related": [],
+      "content_sha256": "501c91e95e47af533065c85c5dffd6f6130831d567e31b2ac87236e175fdd6e7",
+      "start_seconds": 500,
+      "end_seconds": 520,
+      "synthetic": true
+    },
+    {
+      "id": "SYN-U-6",
+      "source_id": "SYN-D-6",
+      "source_sha256": "e4960111bd221534a3b569ce0c593a8b79d3f26540124be2ae98d82ddafdfc6b",
+      "subject": "SYN-P-6",
+      "session": "SYN-S-6",
+      "scenario": "SYN-C-6",
+      "related": [],
+      "content_sha256": "07c8c351ca7eca7cbb7e6f28c710bf498a6a76852c561c79f18ebb19e46d2fd5",
+      "start_seconds": 600,
+      "end_seconds": 620,
+      "synthetic": true
+    },
+    {
+      "id": "SYN-U-7",
+      "source_id": "SYN-D-7",
+      "source_sha256": "0e5259e6c6f792f76cb17bdfb69c1caaab7b99e986790a2f5bae4e510a1772e5",
+      "subject": "SYN-P-7",
+      "session": "SYN-S-7",
+      "scenario": "SYN-C-7",
+      "related": [],
+      "content_sha256": "3af7725e8963cbec0cceb4c2145699a8f441877f5027ca253d25d9cc4bdc87e0",
+      "start_seconds": 700,
+      "end_seconds": 720,
+      "synthetic": true
+    },
+    {
+      "id": "SYN-U-8",
+      "source_id": "SYN-D-8",
+      "source_sha256": "1fa96d67ed601f7efd3508793ded3ee5568ec904e92e9b4fc002b474b44d9a9c",
+      "subject": "SYN-P-8",
+      "session": "SYN-S-8",
+      "scenario": "SYN-C-8",
+      "related": [],
+      "content_sha256": "91502987c5bc2522006dbb1c52c77cd78d2078833e74ebbc3d060e455f332f73",
+      "start_seconds": 800,
+      "end_seconds": 820,
+      "synthetic": true
+    },
+    {
+      "id": "SYN-U-9",
+      "source_id": "SYN-D-9",
+      "source_sha256": "fb904f7f5a6ddde013436ad45f0b72f4c377e4d987288c775a147fa7a6c3d043",
+      "subject": "SYN-P-9",
+      "session": "SYN-S-9",
+      "scenario": "SYN-C-9",
+      "related": [],
+      "content_sha256": "7bda9309ff4268faf1d5b2ce01b1ec94f50e88473e9d1dc45030c3da30fbc4d9",
+      "start_seconds": 900,
+      "end_seconds": 920,
+      "synthetic": true
+    },
+    {
+      "id": "SYN-U-10",
+      "source_id": "SYN-D-10",
+      "source_sha256": "18ed8cfd855cbb56a1bc0c20d234da0454e173af25e0fae488125717bf13a6d5",
+      "subject": "SYN-P-10",
+      "session": "SYN-S-10",
+      "scenario": "SYN-C-10",
+      "related": [],
+      "content_sha256": "81da6baf8bde4126d5bd2121f44d2ef61cd8cefd8cfe43df641c97a8cc605fac",
+      "start_seconds": 1000,
+      "end_seconds": 1020,
+      "synthetic": true
+    },
+    {
+      "id": "SYN-U-11",
+      "source_id": "SYN-D-11",
+      "source_sha256": "5c49b007e881df9b09725b4db535ef89e43fcb01d5bc02c6c81029256ff72a2a",
+      "subject": "SYN-P-11",
+      "session": "SYN-S-11",
+      "scenario": "SYN-C-11",
+      "related": [],
+      "content_sha256": "228ba3c6cb43aa557d66b9ce5a64836ccf779b5eba7ea2e78f1d3d7075737a08",
+      "start_seconds": 1100,
+      "end_seconds": 1120,
+      "synthetic": true
+    }
+  ],
+  "manifest": {
+    "schema_version": "astra.n07.split.v1",
+    "policy": {
+      "schema_version": "astra.n07.split-policy.v1",
+      "version": "synthetic-grouped-v1",
+      "seed": 71030,
+      "mode": "group",
+      "ratios": [
+        0.6,
+        0.2,
+        0.2
+      ],
+      "purge_gap_seconds": 0,
+      "preprocessing_fit": "training_only"
+    },
+    "input_sha256": "64547411ce574af664c7ba68be3f62ed694b40266ec91f8b8096e0b60adf039f",
+    "status": "ENGINEERING_FIXTURE_ONLY",
+    "synthetic": true,
+    "executed": true,
+    "groups": 12,
+    "assignments": [
+      {
+        "id": "SYN-U-0",
+        "partition": "train"
+      },
+      {
+        "id": "SYN-U-1",
+        "partition": "test"
+      },
+      {
+        "id": "SYN-U-10",
+        "partition": "train"
+      },
+      {
+        "id": "SYN-U-11",
+        "partition": "train"
+      },
+      {
+        "id": "SYN-U-2",
+        "partition": "test"
+      },
+      {
+        "id": "SYN-U-3",
+        "partition": "train"
+      },
+      {
+        "id": "SYN-U-4",
+        "partition": "train"
+      },
+      {
+        "id": "SYN-U-5",
+        "partition": "test"
+      },
+      {
+        "id": "SYN-U-6",
+        "partition": "validation"
+      },
+      {
+        "id": "SYN-U-7",
+        "partition": "train"
+      },
+      {
+        "id": "SYN-U-8",
+        "partition": "validation"
+      },
+      {
+        "id": "SYN-U-9",
+        "partition": "train"
+      }
+    ],
+    "counts": {
+      "train": 7,
+      "validation": 2,
+      "test": 3
+    },
+    "scientific_validation": false,
+    "independent_heldout_claim": false,
+    "excluded_units": []
+  }
+}

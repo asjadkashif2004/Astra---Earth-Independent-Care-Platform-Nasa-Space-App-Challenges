@@ -1,0 +1,52 @@
+{
+  "schema_version": "astra.n14.matched-spec.v1",
+  "task": "N14-03",
+  "revision": "span-only-matched-v1",
+  "evidence_packet_sha256": "aa93cf5062b03b87dbd57b96e756965fe90f9883854d456167462269c34ed6d4",
+  "source_index_sha256": "56f62593fa9a6a80d010be77bf0654c1225198d1d052704e9301a61f4f65d39c",
+  "source_vectors_sha256": "578e1b152cff43974293f7bd4369c72a747b60cff8e6dc81236f7676f521f665",
+  "representation": {
+    "fields": ["anchor.text"],
+    "transform": "identity; exact full original-bound UTF-16 span text",
+    "excluded_scoring_fields": ["key", "source_context", "title", "role", "limits", "version", "expected_answers"],
+    "windows": 34,
+    "units": 33,
+    "document_vectors": "reuse original verified span-only vectors; no document re-embedding",
+    "overlength": "reject; no truncation, merging or new windows"
+  },
+  "queries": {
+    "source": "existing frozen N13-03 packet questions",
+    "ids": ["P01","P02","P03","P04","P05","P06","P07","P08","S01","S02","S03","S04","S05","S06","S07","S08","S09","S10","S11","S12","S13","S14","S15","S16","S17","S18","S19","S20","S21","S22","S23","S24","U01","U02","U03","U04","U05","U06","U07","U08"],
+    "order": "listed ID order",
+    "text_transform": "identity; no query rewriting",
+    "status": "all previously inspected; seen/tuning/diagnostic only",
+    "warmup": ["This is an example sentence", "Each sentence is converted"]
+  },
+  "preprocessing": {
+    "lexical": "existing terms(): unique lowercase ASCII alphanumeric terms, length>2, same existing stop list; evidence text only",
+    "semantic": "unchanged verified BERT WordPiece encoder, CLS/SEP, maximum256tokens, masks, mean pooling and L2 normalization",
+    "query_guard": "same existing validQuery() for both methods"
+  },
+  "ranking": {
+    "lexical": "one point per distinct query term present in span text",
+    "semantic": "cosine dot product of normalized384-dimensional vectors",
+    "score_cutoff": null,
+    "cutoff_note": "raw top-k diagnostic for both methods; zero/negative scores may appear and are not support. Original asymmetric thresholds were lexical3/semantic0, so historical comparison is not a single-variable ablation.",
+    "tie_break": "ascending existing window ID using en locale",
+    "unit_deduplication": "highest-scoring window per unit before top-k",
+    "k": [3,5],
+    "hybrid": false
+  },
+  "evaluation": {
+    "positive_cases": 32,
+    "unsupported_cases": 8,
+    "recall": "macro average over unchanged positive provisional expected-unit sets; unsupported cases excluded",
+    "comparison": "original saved asymmetric rows, same40seen questions; no original rerun",
+    "historical_cohorts": "may describe old24/16cohorts, explicitly both now seen; no fresh holdout claim",
+    "tuning_search": "none; one fixed policy",
+    "clinical_or_entailment_validation": false,
+    "independent_numerical_parity": "unverified; retained limitation"
+  },
+  "execution": {"provider":"cpu","intra_op_threads":2,"sequential":true,"network":"kernel-denied plus JS networking guard","query_deadline_ms":5000,"evaluation_deadline_ms":180000,"overall_deadline_ms":300000},
+  "resources": {"storage_policy":"Choice B expressly approved for N14-03 only; transient overshoot risk acknowledged","storage_ceiling_bytes":1500000000,"storage_watermark_bytes":1350000000,"per_process_rss_bytes":1000000000,"extra_aggregate_cgroup_limit_bytes":900000000,"model_acquisition_ceiling_bytes":30000000,"runtime_acquisition_ceiling_bytes":300000000,"network_ceiling_ms":480000,"new_downloads_and_installs":false}
+}

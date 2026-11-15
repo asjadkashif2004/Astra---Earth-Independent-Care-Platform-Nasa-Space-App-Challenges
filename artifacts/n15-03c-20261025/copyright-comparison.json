@@ -1,0 +1,6 @@
+{
+  "local_sha256": "d7815dd2364180835891947d96d808878204dea45b8597602a7952332195fbea",
+  "remote_sha256": "d7815dd2364180835891947d96d808878204dea45b8597602a7952332195fbea",
+  "exact_match": true,
+  "package_license_pending": "Recheck acquired libgomp1 copyright/symlink, applicable source offer and notices before redistribution; no .deb acquired."
+}

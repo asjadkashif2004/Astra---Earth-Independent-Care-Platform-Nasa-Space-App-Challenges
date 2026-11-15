@@ -1,0 +1,50 @@
+{
+  "external_collection_closed": true,
+  "limit_s": 180,
+  "observed_start_utc": "2026-10-26 19:57:22 UTC",
+  "observed_end_utc": "2026-10-26 19:57:27 UTC",
+  "elapsed_window_s_approximately": 5,
+  "clock_granularity_s": 1,
+  "selected_requests": [
+    {
+      "url": "https://www.gnu.org/licenses/gpl-faq.html#InternalDistribution",
+      "purpose": "Optional explanatory aid; primary license texts already preserved locally.",
+      "attempts": 1,
+      "result": "Tool timeout; no usable body.",
+      "required_evidence": false,
+      "retry": false
+    }
+  ],
+  "new_complete_metadata_bodies": 0,
+  "new_package_or_binary_bytes": 0,
+  "network_transport_bytes": "Not exposed by web tool; not claimed zero.",
+  "no_CVE_source_retries_or_mirrors": true,
+  "reused_primary_evidence": [
+    "artifacts/n15-03f-20261027/static-dependency-closure.json",
+    "artifacts/n15-03e-20261026/host-packages.json",
+    "artifacts/n15-03e-20261026/component-notice-inventory.json",
+    "artifacts/n15-03e-20261026/llama-advisory-matrix.json",
+    "artifacts/n15-03e-20261026/httplib-advisory-matrix.json",
+    "artifacts/n15-03e-20261026/ubuntu-security-selected-packages.json",
+    "artifacts/n15-03f-20261027/other-security-review.json",
+    "artifacts/n15-03f-20261027/fix-and-license-evidence.json",
+    "docs/N15_03F_ZLIB_QUALIFICATION.md",
+    "docs/N15_03F_LIBRARY_LOADING_PLAN.md"
+  ],
+  "license_evidence": [
+    "artifacts/n15-03e-20261026/license-llama.cpp-MIT.txt",
+    "artifacts/n15-03e-20261026/vendor-cpp-httplib-LICENSE.original",
+    "artifacts/n15-03e-20261026/vendor-cpp-httplib-header.original",
+    "artifacts/n15-03e-20261026/notice-nlohmann-MIT-derived.txt",
+    "artifacts/n15-03e-20261026/notice-sheredom-Unlicense-derived.txt",
+    "artifacts/n15-03e-20261026/copyright-gcc-16-base.txt",
+    "artifacts/n15-03e-20261026/license-GPL-3.txt",
+    "artifacts/n15-03e-20261026/copyright-libc6.txt",
+    "artifacts/n15-03e-20261026/license-LGPL-2.1.txt",
+    "artifacts/n15-03e-20261026/copyright-libssl3t64.txt",
+    "artifacts/n15-03e-20261026/license-Apache-2.0.txt",
+    "artifacts/n15-03e-20261026/../n15-03f-20261027/notice-zlib-copyright.txt",
+    "artifacts/n15-03e-20261026/copyright-libzstd1.txt"
+  ],
+  "prior_failed_partial_responses": "Not reopened as complete security evidence. No claim current authoritative sources were all fetched or all advisories absent."
+}

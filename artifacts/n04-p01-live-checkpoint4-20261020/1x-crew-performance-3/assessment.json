@@ -1,0 +1,746 @@
+{
+  "method": "Strict OCR plus exact thresholded numeric glyph identity to OCR/manual-reviewed PNG references;no fuzzy matching,digit substitution,physical display or pixel-perfect claim",
+  "threshold_luminance": 145,
+  "runs": [
+    {
+      "directory": "/mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/artifacts/n04-p01-live-checkpoint4-20261020/1x-crew-performance-3",
+      "headed": true,
+      "protocol": {
+        "rate": 1,
+        "context": "crew",
+        "trials": 1,
+        "firstTrial": 3,
+        "modes": [
+          "performance"
+        ],
+        "seconds": 60,
+        "warmup_seconds": 10,
+        "viewport": [
+          1920,
+          1080
+        ],
+        "scalar_observations_per_second": 60,
+        "diagnostic_only": false,
+        "clock": "Host1Hz deadlines;source/host receipt/DOM/compositor/capture clocks retained separately",
+        "capture": "Actual browser PNG completion is a conservative rendered-capture bound,not physical panel timing. Offline OCR validates visible captured text separately.",
+        "instrumentation_version": "p01-explicit-batches-focus-3",
+        "continuous_guard": {
+          "poll_ms": 250,
+          "stale_ms": 1000,
+          "startup_ms": 8000,
+          "max_active_ms": 75000,
+          "required": true,
+          "method": "Sticky page lifecycle events and periodic focus/visibility checks;one read-only native foreground observer;first failure aborts;no reactivation or retry"
+        },
+        "user_assisted_startup": {
+          "required": true,
+          "operator_wait_cap_ms": 60000,
+          "scope": "Unmeasured preparation;explicit READY inside owned Chrome once per process;fresh native/page checks every trial;no retry or inherited confirmation"
+        },
+        "raw_evidence": "Per-batch raw.jsonl writes and pre-summary raw.json;observer I/O remains part of host scheduling,not a physical presentation measurement",
+        "png_encoding": {
+          "lossless": true,
+          "optimizeForSpeed": true,
+          "scale": "min(2,2500/visible numeric union width);application viewport/render quality unchanged"
+        },
+        "preconditioning": {
+          "target_tick": 840,
+          "mission_step": 1,
+          "fast_build_only": true
+        }
+      },
+      "status": "passed",
+      "console_errors": [],
+      "images": 60,
+      "numbers": 360,
+      "trials": [
+        {
+          "name": "1x-crew-performance-3",
+          "rate": 1,
+          "context": "crew",
+          "mode": "performance",
+          "passed": false,
+          "errors": [
+            "Unverified visible numeric sample 0",
+            "Unverified visible numeric sample 1",
+            "Unverified visible numeric sample 60",
+            "Unverified visible numeric sample 120",
+            "Unverified visible numeric sample 240"
+          ],
+          "groups": [
+            {
+              "key": "CREW-01:heart_rate",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 55,
+              "capture_bound_p95_ms": 256
+            },
+            {
+              "key": "CREW-01:hrv",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 55,
+              "capture_bound_p95_ms": 256
+            },
+            {
+              "key": "CREW-01:spo2",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 55,
+              "capture_bound_p95_ms": 256
+            },
+            {
+              "key": "CREW-01:respiratory_rate",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 55,
+              "capture_bound_p95_ms": 256
+            },
+            {
+              "key": "CREW-01:sleep_duration",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 55,
+              "capture_bound_p95_ms": 256
+            },
+            {
+              "key": "CREW-01:temperature",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 55,
+              "capture_bound_p95_ms": 256
+            },
+            {
+              "key": "CREW-02:heart_rate",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 38,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-02:hrv",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 38,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-02:spo2",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 38,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-02:respiratory_rate",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 38,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-02:sleep_duration",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 38,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-02:temperature",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 38,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-03:heart_rate",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 57,
+              "capture_bound_p95_ms": 290
+            },
+            {
+              "key": "CREW-03:hrv",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 57,
+              "capture_bound_p95_ms": 290
+            },
+            {
+              "key": "CREW-03:spo2",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 57,
+              "capture_bound_p95_ms": 290
+            },
+            {
+              "key": "CREW-03:respiratory_rate",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 57,
+              "capture_bound_p95_ms": 290
+            },
+            {
+              "key": "CREW-03:sleep_duration",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 57,
+              "capture_bound_p95_ms": 290
+            },
+            {
+              "key": "CREW-03:temperature",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 57,
+              "capture_bound_p95_ms": 290
+            },
+            {
+              "key": "CREW-04:heart_rate",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 87,
+              "capture_bound_p95_ms": 295
+            },
+            {
+              "key": "CREW-04:hrv",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 87,
+              "capture_bound_p95_ms": 295
+            },
+            {
+              "key": "CREW-04:spo2",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 87,
+              "capture_bound_p95_ms": 295
+            },
+            {
+              "key": "CREW-04:respiratory_rate",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 87,
+              "capture_bound_p95_ms": 295
+            },
+            {
+              "key": "CREW-04:sleep_duration",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 87,
+              "capture_bound_p95_ms": 295
+            },
+            {
+              "key": "CREW-04:temperature",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 87,
+              "capture_bound_p95_ms": 295
+            },
+            {
+              "key": "CREW-05:heart_rate",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 67,
+              "capture_bound_p95_ms": 297
+            },
+            {
+              "key": "CREW-05:hrv",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 67,
+              "capture_bound_p95_ms": 297
+            },
+            {
+              "key": "CREW-05:spo2",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 67,
+              "capture_bound_p95_ms": 297
+            },
+            {
+              "key": "CREW-05:respiratory_rate",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 67,
+              "capture_bound_p95_ms": 297
+            },
+            {
+              "key": "CREW-05:sleep_duration",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 67,
+              "capture_bound_p95_ms": 297
+            },
+            {
+              "key": "CREW-05:temperature",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 67,
+              "capture_bound_p95_ms": 297
+            },
+            {
+              "key": "CREW-06:heart_rate",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 79,
+              "capture_bound_p95_ms": 331
+            },
+            {
+              "key": "CREW-06:hrv",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 79,
+              "capture_bound_p95_ms": 331
+            },
+            {
+              "key": "CREW-06:spo2",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 79,
+              "capture_bound_p95_ms": 331
+            },
+            {
+              "key": "CREW-06:respiratory_rate",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 79,
+              "capture_bound_p95_ms": 331
+            },
+            {
+              "key": "CREW-06:sleep_duration",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 79,
+              "capture_bound_p95_ms": 331
+            },
+            {
+              "key": "CREW-06:temperature",
+              "count": 10,
+              "expected_count": 10,
+              "dom_p95_ms": 79,
+              "capture_bound_p95_ms": 331
+            }
+          ],
+          "scalar_batches": [
+            {
+              "observed_at": "2026-11-14T11:15:20.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:21.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:22.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:23.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:24.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:25.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:26.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:27.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:28.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:29.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:30.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:31.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:32.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:33.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:34.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:35.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:36.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:37.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:38.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:39.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:40.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:41.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:42.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:43.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:44.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:45.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:46.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:47.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:48.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:49.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:50.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:51.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:52.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:53.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:54.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:55.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:56.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:57.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:58.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:15:59.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:16:00.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:16:01.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:16:02.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:16:03.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:16:04.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:16:05.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:16:06.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:16:07.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:16:08.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:16:09.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:16:10.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:16:11.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:16:12.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:16:13.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:16:14.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:16:15.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:16:16.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:16:17.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:16:18.000Z",
+              "stored_scalars": 60
+            },
+            {
+              "observed_at": "2026-11-14T11:16:19.000Z",
+              "stored_scalars": 60
+            }
+          ],
+          "stress": {
+            "pending_packets": 881,
+            "pending_bytes": 58597033,
+            "required_at_1x": {
+              "packets": 825,
+              "bytes": 54000000,
+              "origin": "Unchanged-backend failing60-second baseline;not a clinical or general queue capacity limit"
+            }
+          },
+          "tick_p95_ms": 47.339899999999034,
+          "deadline_lateness_max_ms": 114.38969999999972,
+          "dom_p95_ms": 70,
+          "capture_bound_p95_ms": 295,
+          "transport_to_receipt_p95_ms": 44,
+          "server_before_write_p95_ms": 39,
+          "receipt_to_dom_p95_ms": 4,
+          "frame_feedback_scope": "Compositor feedback only;headless mode and physical presentation limitations remain report-level constraints"
+        }
+      ]
+    }
+  ],
+  "unverified": [
+    {
+      "file": "/mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/artifacts/n04-p01-live-checkpoint4-20261020/1x-crew-performance-3/1x-crew-performance-3-0.png",
+      "id": 0,
+      "crew_id": "CREW-01",
+      "metric": "heart_rate",
+      "expected": "67",
+      "screenshot_sha256": "4538d73fbab24d1ab477170a258fc8624f5289affb00acca1a240ac25ec3da18",
+      "glyph": {
+        "sha256": "e567e0c855b2a60675550a14bb07a81170be22ebc76f5ed716c10f53034acb5c",
+        "width": 45,
+        "height": 35,
+        "ink_pixels": 262
+      },
+      "glyph_error": null,
+      "ocr_matched": false,
+      "matched": false,
+      "reference": null
+    },
+    {
+      "file": "/mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/artifacts/n04-p01-live-checkpoint4-20261020/1x-crew-performance-3/1x-crew-performance-3-0.png",
+      "id": 1,
+      "crew_id": "CREW-01",
+      "metric": "hrv",
+      "expected": "53",
+      "screenshot_sha256": "4538d73fbab24d1ab477170a258fc8624f5289affb00acca1a240ac25ec3da18",
+      "glyph": {
+        "sha256": "3f44eaf5ccf3ac1c63192413e83672e1ac38286f9e5bc2b7e143e585de5f8035",
+        "width": 41,
+        "height": 35,
+        "ink_pixels": 235
+      },
+      "glyph_error": null,
+      "ocr_matched": false,
+      "matched": false,
+      "reference": null
+    },
+    {
+      "file": "/mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/artifacts/n04-p01-live-checkpoint4-20261020/1x-crew-performance-3/1x-crew-performance-3-10.png",
+      "id": 60,
+      "crew_id": "CREW-02",
+      "metric": "heart_rate",
+      "expected": "68",
+      "screenshot_sha256": "beee622929d102fa31ab569f89cb823afe7b4cc330afedbe9a6abfab0db9046b",
+      "glyph": {
+        "sha256": "9c76871e3680a228ef739ba463da7f2ac06979d63147a5e95636d80ce4877615",
+        "width": 45,
+        "height": 35,
+        "ink_pixels": 448
+      },
+      "glyph_error": null,
+      "ocr_matched": false,
+      "matched": false,
+      "reference": null
+    },
+    {
+      "file": "/mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/artifacts/n04-p01-live-checkpoint4-20261020/1x-crew-performance-3/1x-crew-performance-3-20.png",
+      "id": 120,
+      "crew_id": "CREW-03",
+      "metric": "heart_rate",
+      "expected": "68",
+      "screenshot_sha256": "2a82d9b89a217b430e0bc52d3ed816376fc1b3f24c7e080cb31d2e5ae9fef48b",
+      "glyph": {
+        "sha256": "38c21ed35cdbfcbd351b1ef617bd21334403b4667adfac500c0c99e57ae70ae1",
+        "width": 45,
+        "height": 35,
+        "ink_pixels": 376
+      },
+      "glyph_error": null,
+      "ocr_matched": false,
+      "matched": false,
+      "reference": null
+    },
+    {
+      "file": "/mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/artifacts/n04-p01-live-checkpoint4-20261020/1x-crew-performance-3/1x-crew-performance-3-40.png",
+      "id": 240,
+      "crew_id": "CREW-05",
+      "metric": "heart_rate",
+      "expected": "69",
+      "screenshot_sha256": "3eb1751bdfb269cbbd345fdcc21f59e6515782abd0c1f0bec44ff85b6a78b5ce",
+      "glyph": {
+        "sha256": "616d1542e70c7af0846e80924f294f4242e66e4cee05cd606f32f2596bdc09f2",
+        "width": 45,
+        "height": 34,
+        "ink_pixels": 385
+      },
+      "glyph_error": null,
+      "ocr_matched": false,
+      "matched": false,
+      "reference": null
+    }
+  ],
+  "verified_numbers": 355,
+  "total_numbers": 360,
+  "direct_ocr_matches": 355,
+  "exact_reference_matches": 0,
+  "reviewed_manual_anchors": 0,
+  "coverage": [
+    {
+      "rate": 1,
+      "context": "overview",
+      "mode": "standard",
+      "trials": [],
+      "complete": false
+    },
+    {
+      "rate": 1,
+      "context": "overview",
+      "mode": "performance",
+      "trials": [],
+      "complete": false
+    },
+    {
+      "rate": 1,
+      "context": "crew",
+      "mode": "standard",
+      "trials": [],
+      "complete": false
+    },
+    {
+      "rate": 1,
+      "context": "crew",
+      "mode": "performance",
+      "trials": [
+        "1x-crew-performance-3"
+      ],
+      "complete": false
+    },
+    {
+      "rate": 30,
+      "context": "overview",
+      "mode": "standard",
+      "trials": [],
+      "complete": false
+    },
+    {
+      "rate": 30,
+      "context": "overview",
+      "mode": "performance",
+      "trials": [],
+      "complete": false
+    },
+    {
+      "rate": 30,
+      "context": "crew",
+      "mode": "standard",
+      "trials": [],
+      "complete": false
+    },
+    {
+      "rate": 30,
+      "context": "crew",
+      "mode": "performance",
+      "trials": [],
+      "complete": false
+    }
+  ],
+  "all_trial_bounds_pass": false,
+  "headed_acceptance_supported": false
+}

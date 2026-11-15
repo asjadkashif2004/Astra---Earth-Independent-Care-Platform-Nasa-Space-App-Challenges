@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "apparent_bytes": 630017509,
+  "allocated_bytes": 632442880,
+  "ceiling": 1500000000,
+  "watermark": 1350000000,
+  "method": "conservative related roots plus pinned files; overlaps overcounted",
+  "native_commands": 0,
+  "network": 0,
+  "downloads": 0,
+  "native_RSS": "NOT_MEASURED",
+  "hard_quota_claim": false
+}

@@ -1,0 +1,171 @@
+{
+  "modified_count": 18,
+  "added_count": 11,
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "status": "modified",
+      "before_sha256": "88acfb1bf219f18a416f9566890e353ebc59cd58f0453d5228383fb2d13d6d9f",
+      "after_sha256": "2c4c0e78ab8d107998e5be7de11e79249eb101821d563eaa0b6a3826e3137f15"
+    },
+    {
+      "path": "docs/MASTER_PLAN.md",
+      "status": "modified",
+      "before_sha256": "dc14b942cef7a8449241d03a7c3796202ad5a6671728217b7c4098e7b2f2915e",
+      "after_sha256": "11043d6b3a24bb8549e814c2570158f2d2224c159fa187b824737e3bbf8f024d"
+    },
+    {
+      "path": "docs/MODULE_TRACKER.md",
+      "status": "modified",
+      "before_sha256": "0df6a47a15a076abb43fdedca56bffd5d02a42fec4d65ed7ce18d01eeff0add0",
+      "after_sha256": "02c52e95615484f601ed73544f3ef94ee51503163ed8c71cfb7d4e5e38fa8431"
+    },
+    {
+      "path": "docs/CORE_AI_PRIORITY.md",
+      "status": "modified",
+      "before_sha256": "52e15ae47a5928171641b935c6c8d5815a63b4e2a410ad24779b61b94ba6693b",
+      "after_sha256": "e8ad93f02c060790a98dff49d94df705c98fd2433cc240da27c7f24484db5140"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "status": "modified",
+      "before_sha256": "b13eba5052b7ad1e6b5b1d7a285e364a1386c7e9354ed382ded45de467a9c968",
+      "after_sha256": "9a7c808029fd89d23007e2324b888decaa9fc9b8b2b566fe44e35807d5db4e00"
+    },
+    {
+      "path": "docs/FEATURE_AUDIT.md",
+      "status": "modified",
+      "before_sha256": "11a677c6a826c2ebd1d9ab65d3a6de1049827d7eeb5694280b5c777a14317c06",
+      "after_sha256": "c23305ce1a00f1bf64ab08650b6d5f81992064937ac0f70e30f7ba7dd6592841"
+    },
+    {
+      "path": "docs/SESSION_HANDOFF.md",
+      "status": "modified",
+      "before_sha256": "1a11c4ef7eed5e211490e54a3a71d34906eb8ca37e2ab5813678e30299a425c5",
+      "after_sha256": "b70570910bd23b18a4caa23692fc49247d71e78ec98beb4ee7d06c686e6a13ec"
+    },
+    {
+      "path": "services/api/engine.mjs",
+      "status": "modified",
+      "before_sha256": "ab830fdb40f307366270d6f14cfde000289cf2c33c3f28b8e51e50dc3fca04a2",
+      "after_sha256": "ae05533c1d2b8b47dcef04747fb6b35665cd9fdba8f288dabf8259b8a53b5363"
+    },
+    {
+      "path": "services/api/server.mjs",
+      "status": "modified",
+      "before_sha256": "278ad5b62f3232c8945bb45055f5a19f7a506fbcffcca02366c857b9e33d7417",
+      "after_sha256": "c64ef4bf9ffde702e0b39d32f3bdbda177ff911f27b97366997d95c32f01ab45"
+    },
+    {
+      "path": "services/api/store.mjs",
+      "status": "modified",
+      "before_sha256": "72e7f58db9206fc33fcc1fed8c49eae972787e306d7aa19397a418b5df910117",
+      "after_sha256": "09a2f8f542263e193fdeaf61a348accc9a9ce2d20e4c9a94c82778d1e950f183"
+    },
+    {
+      "path": "apps/mission-control-web/app.mjs",
+      "status": "modified",
+      "before_sha256": "6bfd8085bf9e32ac032fa9d3234c9f18403665a3de18feb9c3598d6d87cd41ff",
+      "after_sha256": "a4591ada0e4182688b286e7e7a843229b50c0558166925f26e5cf613664faa17"
+    },
+    {
+      "path": "apps/mission-control-web/index.html",
+      "status": "modified",
+      "before_sha256": "5405e68e8778ceb8e0f759f32215e614c1084fb550853b871fa4c2d571751b20",
+      "after_sha256": "b40ec3cf0b81392ae658b5b95ab641c2af3b46449d064d5804f447d4a5909007"
+    },
+    {
+      "path": "apps/mission-control-web/sw.js",
+      "status": "modified",
+      "before_sha256": "6ea0adea4e1571d19c931c21c0a610acc18e4261f5dca1828f10b0bb7847b5b9",
+      "after_sha256": "ead38e83a99fa68aeed369d78eb73d34607bb471a48a10bb1ba241410bedc3b2"
+    },
+    {
+      "path": "scripts/browser-acceptance.mjs",
+      "status": "modified",
+      "before_sha256": "a3cb2350153e282d8b3b59684c72c85be5ea0b8a6a03ef37d01ae5fd7757cee2",
+      "after_sha256": "97b808273fd67dea3a3234ccea921035e668ce48a4587c35b8fa5a7ac4a9bfbe"
+    },
+    {
+      "path": "scripts/frontend-smoke.mjs",
+      "status": "modified",
+      "before_sha256": "ca2de6d15ca9efd53dcaffb7f6f96a36968296526bce9a5780dfa9766f19ba9f",
+      "after_sha256": "f9002bc6eda331fc2575fced0d69b03f28e54d4ef216697f476807bd6f2080e1"
+    },
+    {
+      "path": "tests/dom-harness.mjs",
+      "status": "modified",
+      "before_sha256": "8b9e7ed579a53e5e37c37cdc7fa525d0db0ac7cc7d2d7bb087e6fb521a972ade",
+      "after_sha256": "e6ff480d366fd28f3daa55802a88eebab51e81f516ebd28a36fb94f57c69bfca"
+    },
+    {
+      "path": "tests/sleep-lifecycle.test.mjs",
+      "status": "modified",
+      "before_sha256": "eb21863fcea9290813989ae8445b8e8116862dc6fc003d0eee53b6404050138c",
+      "after_sha256": "18bdaab9ac2fbf0283ed21027b9e826c9d40eab5f6dda242cf04f4fedbe4fe3a"
+    },
+    {
+      "path": "tests/n08.test.mjs",
+      "status": "modified",
+      "before_sha256": "d2c385fb089385f4ca16ac73113191c2fcb347c31e0bd8f5f2bffe6b6f4327e1",
+      "after_sha256": "952c561082ef1931fca70df32afb5595af6ccf183bc0e627e3a3a9c86693b64e"
+    },
+    {
+      "path": "services/telemetry-simulator/n09-model.mjs",
+      "status": "added",
+      "after_sha256": "128fdf1678b54d62bbf75206b05be135a30ac83bb4929e842bcb8da06285dd79"
+    },
+    {
+      "path": "services/telemetry-simulator/n09-engine.mjs",
+      "status": "added",
+      "after_sha256": "b4a1bd86aaf5f85f42606f5a59470c3c6857a54fe91a7abb7407a9005d140684"
+    },
+    {
+      "path": "services/telemetry-simulator/n09-evaluation.mjs",
+      "status": "added",
+      "after_sha256": "604cd5d9847d61e3f410d09af0444dd4973b94e3527f4ce262632799e6f21d35"
+    },
+    {
+      "path": "apps/mission-control-web/n09.mjs",
+      "status": "added",
+      "after_sha256": "d9b924ef3898a9a4d01817c015ea13c078498957d2ca9c78730484685192ec19"
+    },
+    {
+      "path": "apps/mission-control-web/n09.css",
+      "status": "added",
+      "after_sha256": "7fa5194fd309526c164f52709c9354b7b7725896fdabd23242eb3c5ba56c83bc"
+    },
+    {
+      "path": "scripts/browser-n09-full.mjs",
+      "status": "added",
+      "after_sha256": "4676ab01caf815d121b94cf60a7b2c4bb00e6a4a37b6c06b0aa0cd3c6a7494c8"
+    },
+    {
+      "path": "tests/n09.test.mjs",
+      "status": "added",
+      "after_sha256": "3d23d491342fc3991452ae1b5a97c5b9c0386953df8b717f4f9ae48ade272892"
+    },
+    {
+      "path": "tests/n09-evaluation.test.mjs",
+      "status": "added",
+      "after_sha256": "e6aa913758ab619f6c11b42555e8ac6d66afce9cac08fc6c37c5f48c1354b244"
+    },
+    {
+      "path": "docs/DE_N09_SYNTHETIC_01.md",
+      "status": "added",
+      "after_sha256": "ca419495ed5cb9093d27e5de35bf81da029de57291d2b385bc029ceeaa02074e"
+    },
+    {
+      "path": "docs/N09_SYNTHETIC_CONTRACT.md",
+      "status": "added",
+      "after_sha256": "55c3862f3424d38d9f20c03b922f60fd1b340728c2083b749af6eeeb5dbb8294"
+    },
+    {
+      "path": "docs/N09_FINAL_ENGINEERING_COMPLETION.md",
+      "status": "added",
+      "after_sha256": "c34ac2b3fb70559cd10696a5096684861b1002bbc11c44602a021cbdac4b6800"
+    }
+  ],
+  "task_artifacts_separate": true,
+  "scope": "N09 code, explicit integration hooks, QA fixture support and governance only"
+}

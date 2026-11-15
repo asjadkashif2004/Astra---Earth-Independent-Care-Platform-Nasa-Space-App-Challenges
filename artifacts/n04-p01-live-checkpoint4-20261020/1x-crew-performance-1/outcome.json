@@ -1,0 +1,104 @@
+{
+  "recorded_at": "2026-10-19T21:27:56.582014+00:00",
+  "id": "1x-crew-performance-1",
+  "outcome": "PASS",
+  "individually_accepted": true,
+  "evidence_directory": "artifacts/n04-p01-live-checkpoint4-20261020/1x-crew-performance-1",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/155.0.8059.80",
+    "revision": "@43a195105613ac83c21d3f14de279f4a045c7da0",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "jsVersion": "15.5.35.23"
+  },
+  "started_at": "2026-10-19T21:22:59.826Z",
+  "finished_at": "2026-10-19T21:24:38.369Z",
+  "dom_p95_ms": 80,
+  "capture_p95_ms": 329,
+  "worst_group_dom_p95_ms": 84,
+  "worst_group_capture_p95_ms": 330,
+  "groups": 36,
+  "verified_numbers": 360,
+  "total_numbers": 360,
+  "direct_ocr_matches": 355,
+  "reviewed_manual_anchors": 4,
+  "source_correlation_provenance_cadence": "passed",
+  "stress": {
+    "pending_packets": 881,
+    "pending_bytes": 58597033,
+    "required_at_1x": {
+      "packets": 825,
+      "bytes": 54000000,
+      "origin": "Unchanged-backend failing60-second baseline;not a clinical or general queue capacity limit"
+    }
+  },
+  "guard": {
+    "started_host_ms": 1792445015503,
+    "ended_host_ms": 1792445076264,
+    "required_through_host_ms": 1792445076195,
+    "last_native": {
+      "source_at_ms": 1792445076262,
+      "host_at_ms": 1792445076263
+    },
+    "native_identity": {
+      "selected_owner_pid": 132,
+      "source_at_ms": 1792445015917,
+      "foreground_handle": "0x1A08B4",
+      "type": "sample",
+      "selected_handle": "0x1A08B4",
+      "foreground_pid": 132,
+      "owned": true,
+      "title_matches": true,
+      "selected_class": "Chrome_WidgetWin_1",
+      "pid": 132,
+      "check_ms": 8.6396
+    },
+    "native_samples": 232,
+    "page_samples": 243,
+    "page": {
+      "started_at_ms": 1792445015960,
+      "source_at_ms": 1792445076264,
+      "visibility": "visible",
+      "focused": true,
+      "failure": null,
+      "stats": {
+        "checks": 243,
+        "total_check_ms": 3.199999988079071,
+        "max_check_ms": 0.20000000298023224
+      }
+    },
+    "limits": {
+      "poll_ms": 250,
+      "stale_ms": 1000,
+      "startup_ms": 8000,
+      "max_active_ms": 75000
+    },
+    "native_check_ms": {
+      "total": 28.9368,
+      "max": 8.6396
+    },
+    "failure": null,
+    "limitation": "Event detection plus 250ms sampling;sub-poll native changes may escape. Observer overhead is included,not subtracted;not physical visibility or scanout proof."
+  },
+  "owned_pid": 132,
+  "owned_hwnd": "0x1A08B4",
+  "startup_checkpoint": "passed;trusted user READY inside owned Chrome;unchanged activation helper once",
+  "zero_console_errors": true,
+  "out_of_window_samples": 0,
+  "evidence_sha256": {
+    "report.json": "314aacec0c158262a5d3f5aaf27762268db3e6e59a84ecc6ebaa9010258f0407",
+    "assessment.json": "a6ee9f612f76fae79515da09afda6d6c7ae84ab64d6622043d6b107a686942b3",
+    "assessment-reviewed.json": "8b55548dcebf47bd60434f02d5f9ccd0e3a5e6e654ebb01181738b7ab1782df7",
+    "ocr.json": "dafbf990f792bf614d34b107c8360662b70e085e05a1d69c9f70e9278bc666a2",
+    "ocr-manifest.json": "728cad504a18523515967af1ba843265674092c4a107a8f4685544d1a1ebcb2b",
+    "reviews.json": "47a8886246dca96a9e7b8ca184bb90531acdec3fc90a615454d9fe8480906c23",
+    "1x-crew-performance-1.startup.json": "9d7158b16ad38351febd9cc769f3e77f370779181327f30e0497adb7aef3ffd0",
+    "1x-crew-performance-1.raw.json": "af7b90b26a2a29a0e8cfe86151f190d42244fa94c518e39126da78664f188944",
+    "1x-crew-performance-1.raw.jsonl": "32919cf8195d89b56ad41832a7e60da30d3f767a9d3816f4763cf756599300b7",
+    "1x-crew-performance-1.trace.json.gz": "f72e15be730357a3e8e7abe30915254a1b23608933d7c8c593a90aeee3504033"
+  },
+  "scope_limitations": "Individual trial only;full 24-trial matrix open. Capture completion and compositor feedback are not physical scanout, presented FPS or designated minimum judge certification.",
+  "n04": "Partial",
+  "n03": "Partial",
+  "ac20": "Open / Unverified"
+}

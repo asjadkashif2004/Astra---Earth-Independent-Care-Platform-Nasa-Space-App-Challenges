@@ -1,0 +1,13 @@
+{
+  "mandatory_mock_pass": 140,
+  "syntax_pass": 7,
+  "code_pins_verified": 22,
+  "unchanged_old_hashes": 526,
+  "intentional_changes": [
+    "services/agent/single-select-contract.mjs",
+    "services/agent/single-select-runtime.mjs",
+    "tests/n16-single-select.test.mjs"
+  ],
+  "native_SQL_starts": 0,
+  "full_source_hash_and_runtime_preflight": "Required next inside one-use controller; no startup unless all gates pass."
+}

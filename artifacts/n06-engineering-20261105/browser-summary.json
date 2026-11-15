@@ -1,0 +1,375 @@
+{
+  "schema_version": "astra.n06.browser-summary.v1",
+  "qualification_reports": [
+    "browser-08",
+    "browser-zoom-04",
+    "browser-latency-03",
+    "browser-temporal-01"
+  ],
+  "qualification_group_executions": 46,
+  "distinct_qualified_definitions": 35,
+  "qualification_groups_failed": 0,
+  "physical_viewport_zoom_combinations": 8,
+  "native_Tab_checks_reference_controls": 120,
+  "native_Tab_checks_N06_controls": 96,
+  "contrast_bounds": 327,
+  "axe_violations": 0,
+  "all_launches": 16,
+  "all_reports": [
+    {
+      "path": "browser-01/report.json",
+      "status": "failed",
+      "checks": 1,
+      "reason": "The expression evaluated to a falsy value:\n\n  assert.ok(await c.evaluate(t('[data-n06-metric=heart_rate]')+'.includes('+JSON.stringify(String(v.values.heart_rate))+')'))\n",
+      "cleanup": {
+        "browser_exited": true,
+        "profile_removed": true,
+        "database_directory_removed": true,
+        "Node_memory": {
+          "rss": 73383936,
+          "heapTotal": 19800064,
+          "heapUsed": 15585352,
+          "external": 5473182,
+          "arrayBuffers": 922726
+        },
+        "N16_designated_starts": 0,
+        "Qwen_executions": 0,
+        "model_training": 0,
+        "database_snapshots": 0
+      }
+    },
+    {
+      "path": "browser-02/report.json",
+      "status": "failed",
+      "checks": 2,
+      "reason": "Expected \"actual\" not to be strictly deep-equal to:\n\n[\n  0.12,\n  0.9400000000000002,\n  3.1\n]\n",
+      "cleanup": {
+        "browser_exited": true,
+        "profile_removed": true,
+        "database_directory_removed": true,
+        "Node_memory": {
+          "rss": 73687040,
+          "heapTotal": 23633920,
+          "heapUsed": 11131872,
+          "external": 4907799,
+          "arrayBuffers": 277638
+        },
+        "N16_designated_starts": 0,
+        "Qwen_executions": 0,
+        "model_training": 0,
+        "database_snapshots": 0
+      }
+    },
+    {
+      "path": "browser-03/report.json",
+      "status": "failed",
+      "checks": 12,
+      "reason": "The expression evaluated to a falsy value:\n\n  assert.ok(await c.evaluate(t('#n06-detail')+'.includes(\"SIM-CREW-01\")'))\n",
+      "cleanup": {
+        "browser_exited": true,
+        "profile_removed": true,
+        "database_directory_removed": true,
+        "Node_memory": {
+          "rss": 137867264,
+          "heapTotal": 85843968,
+          "heapUsed": 28370072,
+          "external": 5521376,
+          "arrayBuffers": 976689
+        },
+        "N16_designated_starts": 0,
+        "Qwen_executions": 0,
+        "model_training": 0,
+        "database_snapshots": 0
+      }
+    },
+    {
+      "path": "browser-04/report.json",
+      "status": "passed",
+      "checks": 22,
+      "reason": null,
+      "cleanup": {
+        "browser_exited": true,
+        "profile_removed": true,
+        "database_directory_removed": true,
+        "Node_memory": {
+          "rss": 136884224,
+          "heapTotal": 49422336,
+          "heapUsed": 19175584,
+          "external": 5362866,
+          "arrayBuffers": 1289751
+        },
+        "N16_designated_starts": 0,
+        "Qwen_executions": 0,
+        "model_training": 0,
+        "database_snapshots": 0
+      }
+    },
+    {
+      "path": "browser-05/report.json",
+      "status": "failed",
+      "checks": 23,
+      "reason": "The expression evaluated to a falsy value:\n\n  assert.ok(await c.evaluate('window.__n05.draws')-first<8)\n",
+      "cleanup": {
+        "browser_exited": true,
+        "profile_removed": true,
+        "database_directory_removed": true,
+        "Node_memory": {
+          "rss": 202940416,
+          "heapTotal": 159948800,
+          "heapUsed": 51019488,
+          "external": 5882121,
+          "arrayBuffers": 1305914
+        },
+        "N16_designated_starts": 0,
+        "Qwen_executions": 0,
+        "model_training": 0,
+        "database_snapshots": 0
+      }
+    },
+    {
+      "path": "browser-06/report.json",
+      "status": "passed",
+      "checks": 24,
+      "reason": null,
+      "cleanup": {
+        "browser_exited": true,
+        "profile_removed": true,
+        "database_directory_removed": true,
+        "Node_memory": {
+          "rss": 135856128,
+          "heapTotal": 47935488,
+          "heapUsed": 13059208,
+          "external": 5360915,
+          "arrayBuffers": 1287800
+        },
+        "N16_designated_starts": 0,
+        "Qwen_executions": 0,
+        "model_training": 0,
+        "database_snapshots": 0
+      }
+    },
+    {
+      "path": "browser-07/report.json",
+      "status": "passed",
+      "checks": 23,
+      "reason": null,
+      "cleanup": {
+        "browser_exited": true,
+        "profile_removed": true,
+        "database_directory_removed": true,
+        "Node_memory": {
+          "rss": 134066176,
+          "heapTotal": 15945728,
+          "heapUsed": 11464640,
+          "external": 4385226,
+          "arrayBuffers": 312111
+        },
+        "N16_designated_starts": 0,
+        "Qwen_executions": 0,
+        "model_training": 0,
+        "database_snapshots": 0
+      }
+    },
+    {
+      "path": "browser-08/report.json",
+      "status": "passed",
+      "checks": 25,
+      "reason": null,
+      "cleanup": {
+        "browser_exited": true,
+        "profile_removed": true,
+        "database_directory_removed": true,
+        "Node_memory": {
+          "rss": 201080832,
+          "heapTotal": 152080384,
+          "heapUsed": 29780504,
+          "external": 5381343,
+          "arrayBuffers": 1308228
+        },
+        "N16_designated_starts": 0,
+        "Qwen_executions": 0,
+        "model_training": 0,
+        "database_snapshots": 0
+      }
+    },
+    {
+      "path": "browser-latency-01/report.json",
+      "status": "failed",
+      "checks": 1,
+      "reason": "The expression evaluated to a falsy value:\n\n  assert.ok(p95(selection.map(s=>s.ms))<500)\n",
+      "cleanup": {
+        "browser_exited": true,
+        "profile_removed": true,
+        "database_directory_removed": true,
+        "Node_memory": {
+          "rss": 98451456,
+          "heapTotal": 48578560,
+          "heapUsed": 16134680,
+          "external": 5504414,
+          "arrayBuffers": 953958
+        },
+        "N16_designated_starts": 0,
+        "Qwen_executions": 0,
+        "model_training": 0,
+        "database_snapshots": 0
+      }
+    },
+    {
+      "path": "browser-latency-02/report.json",
+      "status": "failed",
+      "checks": 1,
+      "reason": "The expression evaluated to a falsy value:\n\n  assert.ok(p95(selection.map(s=>s.ms))<500)\n",
+      "cleanup": {
+        "browser_exited": true,
+        "profile_removed": true,
+        "database_directory_removed": true,
+        "Node_memory": {
+          "rss": 97386496,
+          "heapTotal": 49008640,
+          "heapUsed": 18596008,
+          "external": 5596290,
+          "arrayBuffers": 1045834
+        },
+        "N16_designated_starts": 0,
+        "Qwen_executions": 0,
+        "model_training": 0,
+        "database_snapshots": 0
+      }
+    },
+    {
+      "path": "browser-latency-03/report.json",
+      "status": "passed",
+      "checks": 4,
+      "reason": null,
+      "cleanup": {
+        "browser_exited": true,
+        "profile_removed": true,
+        "database_directory_removed": true,
+        "Node_memory": {
+          "rss": 98029568,
+          "heapTotal": 47132672,
+          "heapUsed": 20427272,
+          "external": 6766329,
+          "arrayBuffers": 2687445
+        },
+        "N16_designated_starts": 0,
+        "Qwen_executions": 0,
+        "model_training": 0,
+        "database_snapshots": 0
+      }
+    },
+    {
+      "path": "browser-temporal-01/report.json",
+      "status": "passed",
+      "checks": 2,
+      "reason": null,
+      "cleanup": {
+        "browser_exited": true,
+        "profile_removed": true,
+        "database_directory_removed": true,
+        "Node_memory": {
+          "rss": 87191552,
+          "heapTotal": 23109632,
+          "heapUsed": 13670264,
+          "external": 4362207,
+          "arrayBuffers": 283323
+        },
+        "N16_designated_starts": 0,
+        "Qwen_executions": 0,
+        "model_training": 0,
+        "database_snapshots": 0
+      }
+    },
+    {
+      "path": "browser-zoom-01/report.json",
+      "status": "passed",
+      "checks": 14,
+      "reason": null,
+      "cleanup": {
+        "browser_exited": true,
+        "profile_removed": true,
+        "database_directory_removed": true,
+        "Node_memory": {
+          "rss": 97935360,
+          "heapTotal": 52789248,
+          "heapUsed": 20395440,
+          "external": 4516560,
+          "arrayBuffers": 437676
+        },
+        "N16_designated_starts": 0,
+        "Qwen_executions": 0,
+        "model_training": 0,
+        "database_snapshots": 0
+      }
+    },
+    {
+      "path": "browser-zoom-02/report.json",
+      "status": "failed",
+      "checks": 14,
+      "reason": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   {\n+     id: 'scrollable-region-focusable',\n+     nodes: [\n+       {\n+         html: '<div class=\"table-wrap\">',\n+         summary: 'Fix any of the following:\\n' +\n+           '  Element should have focusable content\\n' +\n+           '  Element should be focusable',\n+         target: [\n+           '.table-wrap'\n+         ]\n+       }\n+     ]\n+   }\n+ ]\n- []\n",
+      "cleanup": {
+        "browser_exited": true,
+        "profile_removed": true,
+        "database_directory_removed": true,
+        "Node_memory": {
+          "rss": 84996096,
+          "heapTotal": 35663872,
+          "heapUsed": 23339648,
+          "external": 4877432,
+          "arrayBuffers": 798548
+        },
+        "N16_designated_starts": 0,
+        "Qwen_executions": 0,
+        "model_training": 0,
+        "database_snapshots": 0
+      }
+    },
+    {
+      "path": "browser-zoom-03/report.json",
+      "status": "passed",
+      "checks": 14,
+      "reason": null,
+      "cleanup": {
+        "browser_exited": true,
+        "profile_removed": true,
+        "database_directory_removed": true,
+        "Node_memory": {
+          "rss": 85770240,
+          "heapTotal": 37359616,
+          "heapUsed": 19674744,
+          "external": 4501526,
+          "arrayBuffers": 422642
+        },
+        "N16_designated_starts": 0,
+        "Qwen_executions": 0,
+        "model_training": 0,
+        "database_snapshots": 0
+      }
+    },
+    {
+      "path": "browser-zoom-04/report.json",
+      "status": "passed",
+      "checks": 15,
+      "reason": null,
+      "cleanup": {
+        "browser_exited": true,
+        "profile_removed": true,
+        "database_directory_removed": true,
+        "Node_memory": {
+          "rss": 95838208,
+          "heapTotal": 38178816,
+          "heapUsed": 25336704,
+          "external": 4623061,
+          "arrayBuffers": 544177
+        },
+        "N16_designated_starts": 0,
+        "Qwen_executions": 0,
+        "model_training": 0,
+        "database_snapshots": 0
+      }
+    }
+  ],
+  "fresh_browser": "Installed Chrome156.0.8078.80; no downloads",
+  "physical_AC20": "UNVERIFIED; no designated machine presented-frame evidence",
+  "post_final_renderer_temporal_fix": "browser-temporal-01 directly verifies missing historical phase/cleanup; unaffected workflows retained from browser-08/zoom-04."
+}

@@ -1,0 +1,321 @@
+{
+  "qualification": "PARTIAL",
+  "scope": "Metadata/source inspection only; native/binary qualification and resource policy pending",
+  "candidate_commit": "620d2225cc436ab0b001e3200e590e3b286ef9ab",
+  "stable_tag": "v0.7.0",
+  "linked_same_commit_build": "b11669",
+  "asset": {
+    "id": 644416747,
+    "name": "llama-b11669-bin-ubuntu-x64.tar.gz",
+    "size": 17851611,
+    "digest": "sha256:cf07c1c112d709bd67e522017471de57ed0ec8bea031d732c5422351c07f65ac",
+    "browser_download_url": "https://github.com/ggml-org/llama.cpp/releases/download/b11669/llama-b11669-bin-ubuntu-x64.tar.gz"
+  },
+  "advisories": [
+    {
+      "advisory": "GHSA-3p4r-fq3f-q74v",
+      "cve": "CVE-2026-27940",
+      "severity": "high",
+      "component": "GGUF allocation arithmetic",
+      "publisher_ranges": [
+        {
+          "package": {
+            "ecosystem": "",
+            "name": "llama.cpp"
+          },
+          "vulnerable_version_range": "<= b8145",
+          "patched_versions": ">= b8146",
+          "vulnerable_functions": []
+        }
+      ],
+      "fix_commit": "418dea39cea85d3496c8b04a118c3b17f3940ad8",
+      "candidate_ancestor_verified": true,
+      "profile": "core",
+      "verification": "Source metadata/patch inspection only; not binary or exploit verification",
+      "publisher_range_discrepancy": false
+    },
+    {
+      "advisory": "GHSA-j8rj-fmpv-wcxw",
+      "cve": "CVE-2026-34159",
+      "severity": "critical",
+      "component": "RPC GRAPH_COMPUTE",
+      "publisher_ranges": [
+        {
+          "package": {
+            "ecosystem": "other",
+            "name": "llama.cpp"
+          },
+          "vulnerable_version_range": "<= b7991",
+          "patched_versions": "",
+          "vulnerable_functions": []
+        }
+      ],
+      "fix_commit": "39bf0d3c6a95803e0f41aaba069ffbee26721042",
+      "candidate_ancestor_verified": true,
+      "profile": "excluded RPC",
+      "verification": "Source metadata/patch inspection only; not binary or exploit verification",
+      "publisher_range_discrepancy": false
+    },
+    {
+      "advisory": "GHSA-96jg-mvhq-q7q7",
+      "cve": "CVE-2026-33298",
+      "severity": "high",
+      "component": "GGUF tensor byte size",
+      "publisher_ranges": [
+        {
+          "package": {
+            "ecosystem": "",
+            "name": "ggml-org/llama.cpp"
+          },
+          "vulnerable_version_range": "< b7437",
+          "patched_versions": "b7824",
+          "vulnerable_functions": []
+        }
+      ],
+      "fix_commit": "4e5b83b226919c146fbfa754641a6772bcb2d722",
+      "candidate_ancestor_verified": true,
+      "profile": "core",
+      "verification": "Source metadata/patch inspection only; not binary or exploit verification",
+      "publisher_range_discrepancy": true
+    },
+    {
+      "advisory": "GHSA-8947-pfff-2f3c",
+      "cve": "CVE-2026-21869",
+      "severity": "low",
+      "component": "server n_discard",
+      "publisher_ranges": [
+        {
+          "package": {
+            "ecosystem": "ggml-org/llama.cpp",
+            "name": "llama.cpp"
+          },
+          "vulnerable_version_range": "<= 55d4206c8",
+          "patched_versions": ">= c78fb90",
+          "vulnerable_functions": []
+        }
+      ],
+      "fix_commit": "c78fb909b23758f5e418cf98a69bc8a0ef142fb8",
+      "candidate_ancestor_verified": true,
+      "profile": "excluded server",
+      "verification": "Source metadata/patch inspection only; not binary or exploit verification",
+      "publisher_range_discrepancy": false
+    },
+    {
+      "advisory": "GHSA-vgg9-87g3-85w8",
+      "cve": "CVE-2025-53630",
+      "severity": "high",
+      "component": "GGUF accumulated size",
+      "publisher_ranges": [
+        {
+          "package": {
+            "ecosystem": "llama.cpp",
+            "name": ""
+          },
+          "vulnerable_version_range": "<26a48ad",
+          "patched_versions": "26a48ad",
+          "vulnerable_functions": []
+        }
+      ],
+      "fix_commit": "26a48ad699d50b6268900062661bd22f3e792579",
+      "candidate_ancestor_verified": true,
+      "profile": "core",
+      "verification": "Source metadata/patch inspection only; not binary or exploit verification",
+      "publisher_range_discrepancy": false
+    },
+    {
+      "advisory": "GHSA-7rxv-5jhh-j6xx",
+      "cve": "CVE-2025-52566",
+      "severity": "high",
+      "component": "tokenization",
+      "publisher_ranges": [
+        {
+          "package": {
+            "ecosystem": "llama.cpp",
+            "name": ""
+          },
+          "vulnerable_version_range": "<b5721",
+          "patched_versions": "b5721",
+          "vulnerable_functions": []
+        }
+      ],
+      "fix_commit": "dd6e6d0b6a4bbe3ebfc931d1eb14db2f2b1d70af",
+      "candidate_ancestor_verified": true,
+      "profile": "core",
+      "verification": "Source metadata/patch inspection only; not binary or exploit verification",
+      "publisher_range_discrepancy": false
+    },
+    {
+      "advisory": "GHSA-g4cc-763q-h9h6",
+      "cve": null,
+      "severity": "medium",
+      "component": "vocabulary display",
+      "publisher_ranges": [
+        {
+          "package": {
+            "ecosystem": "llama.cpp",
+            "name": ""
+          },
+          "vulnerable_version_range": "c33fe8b8",
+          "patched_versions": "c33fe8b8",
+          "vulnerable_functions": []
+        }
+      ],
+      "fix_commit": "c33fe8b8c4427202706b1434e9fc8ab5752c9cac",
+      "candidate_ancestor_verified": true,
+      "profile": "core",
+      "verification": "Source metadata/patch inspection only; not binary or exploit verification",
+      "publisher_range_discrepancy": true
+    },
+    {
+      "advisory": "GHSA-8wwf-w4qm-gpqr",
+      "cve": "CVE-2025-49847",
+      "severity": "high",
+      "component": "vocabulary token_to_piece",
+      "publisher_ranges": [
+        {
+          "package": {
+            "ecosystem": "",
+            "name": "llama.cpp"
+          },
+          "vulnerable_version_range": "All versions before patch",
+          "patched_versions": ">= b5662",
+          "vulnerable_functions": []
+        }
+      ],
+      "fix_commit": "3cfbbdb44e08fd19429fed6cc85b982a91f0efd5",
+      "candidate_ancestor_verified": true,
+      "profile": "core",
+      "verification": "Source metadata/patch inspection only; not binary or exploit verification",
+      "publisher_range_discrepancy": false
+    },
+    {
+      "advisory": "GHSA-wcr5-566p-9cwj",
+      "cve": "CVE-2024-42479",
+      "severity": "critical",
+      "component": "RPC SET_TENSOR",
+      "publisher_ranges": [
+        {
+          "package": {
+            "ecosystem": "",
+            "name": ""
+          },
+          "vulnerable_version_range": "< b3561",
+          "patched_versions": ">= b3561",
+          "vulnerable_functions": []
+        }
+      ],
+      "fix_commit": "b72942fac998672a79a1ae3c03b340f7e629980b",
+      "candidate_ancestor_verified": true,
+      "profile": "excluded RPC",
+      "verification": "Source metadata/patch inspection only; not binary or exploit verification",
+      "publisher_range_discrepancy": false
+    },
+    {
+      "advisory": "GHSA-5vm9-p64x-gqw9",
+      "cve": "CVE-2024-42478",
+      "severity": "medium",
+      "component": "RPC GET_TENSOR",
+      "publisher_ranges": [
+        {
+          "package": {
+            "ecosystem": "",
+            "name": ""
+          },
+          "vulnerable_version_range": "< b3561",
+          "patched_versions": ">= b3561",
+          "vulnerable_functions": []
+        }
+      ],
+      "fix_commit": "b72942fac998672a79a1ae3c03b340f7e629980b",
+      "candidate_ancestor_verified": true,
+      "profile": "excluded RPC",
+      "verification": "Source metadata/patch inspection only; not binary or exploit verification",
+      "publisher_range_discrepancy": false
+    },
+    {
+      "advisory": "GHSA-mqp6-7pv6-fqjf",
+      "cve": "CVE-2024-42477",
+      "severity": "medium",
+      "component": "RPC tensor type",
+      "publisher_ranges": [
+        {
+          "package": {
+            "ecosystem": "",
+            "name": ""
+          },
+          "vulnerable_version_range": "< b3561",
+          "patched_versions": ">= b3561",
+          "vulnerable_functions": []
+        }
+      ],
+      "fix_commit": "b72942fac998672a79a1ae3c03b340f7e629980b",
+      "candidate_ancestor_verified": true,
+      "profile": "excluded RPC",
+      "verification": "Source metadata/patch inspection only; not binary or exploit verification",
+      "publisher_range_discrepancy": false
+    },
+    {
+      "advisory": "GHSA-49q7-2jmh-92fp",
+      "cve": "CVE-2024-41130",
+      "severity": "medium",
+      "component": "GGUF null name",
+      "publisher_ranges": [
+        {
+          "package": {
+            "ecosystem": "",
+            "name": ""
+          },
+          "vulnerable_version_range": "<=b3426",
+          "patched_versions": "b3427",
+          "vulnerable_functions": []
+        }
+      ],
+      "fix_commit": "07283b1a90e1320aae4762c7e03c879043910252",
+      "candidate_ancestor_verified": true,
+      "profile": "core",
+      "verification": "Source metadata/patch inspection only; not binary or exploit verification",
+      "publisher_range_discrepancy": false
+    },
+    {
+      "advisory": "GHSA-p5mv-gjc5-mwqv",
+      "cve": "CVE-2024-32878",
+      "severity": "high",
+      "component": "GGUF uninitialized cleanup",
+      "publisher_ranges": [
+        {
+          "package": {
+            "ecosystem": "",
+            "name": "llama.cpp"
+          },
+          "vulnerable_version_range": "b2715",
+          "patched_versions": "b2740",
+          "vulnerable_functions": []
+        }
+      ],
+      "fix_commit": "83b72cb086ce46a33dececc86bfe4648b6120aa8",
+      "candidate_ancestor_verified": true,
+      "profile": "core",
+      "verification": "Source metadata/patch inspection only; not binary or exploit verification",
+      "publisher_range_discrepancy": true
+    }
+  ],
+  "advisory_source_ancestries_verified": 13,
+  "blanket_or_binary_security_clearance": false,
+  "metadata_complete_records": 55,
+  "request_urls": 57,
+  "failed_urls_repeated": false,
+  "collector_body_bytes": 1022882,
+  "active_collection_seconds": 50.331045501996414,
+  "collection_failures_preserved": 2,
+  "source_and_prior_evidence_files_preserved": 739,
+  "markdown_documents": 11,
+  "local_links_resolved": 519,
+  "module_ids_preserved": 26,
+  "N15": "Not Started",
+  "N16": "Not Started",
+  "all_other_statuses_unchanged": true,
+  "model_runtime_or_source_archive_acquired": false,
+  "installed_compiled_inference_or_benchmark": false,
+  "native_or_application_tests_run": false,
+  "validation": "PASS"
+}

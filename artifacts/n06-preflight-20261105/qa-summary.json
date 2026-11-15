@@ -1,0 +1,32 @@
+{
+  "schema_version": "astra.n06.preflight-qa.v1",
+  "counts": {
+    "tests": 228,
+    "pass": 228,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "duration_ms": 102360.002428
+  },
+  "scope": "Existing independent N01/N02/N03/N05/N08/N09/N10/N12 and archived trace-view compatibility only. Not N06 implementation acceptance.",
+  "files": [
+    "tests/foundation.test.mjs",
+    "tests/monitoring-integrity.test.mjs",
+    "tests/integration.test.mjs",
+    "tests/frontend-correctness.test.mjs",
+    "tests/n03-lifecycle.test.mjs",
+    "tests/anatomy.test.mjs",
+    "tests/n05-renderer.test.mjs",
+    "tests/n08-frontend.test.mjs",
+    "tests/n09.test.mjs",
+    "tests/n10-frontend.test.mjs",
+    "tests/n12-frontend.test.mjs",
+    "tests/n16-trace-view.test.mjs"
+  ],
+  "fresh_browser_launches": 0,
+  "N06_positive_workflow": "NOT RUN / AUTHORIZATION BLOCKED",
+  "N06_rows_qualified": 0,
+  "restricted_native_model_or_N16_starts": 0,
+  "source": "compatibility-01.tap"
+}

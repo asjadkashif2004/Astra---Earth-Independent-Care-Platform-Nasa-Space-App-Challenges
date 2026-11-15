@@ -1,0 +1,12 @@
+{
+  "task": "N16-06H",
+  "authority": "QA_ONLY_NO_NATIVE_SOURCE_SQL_OR_RESOURCE_RENEWAL",
+  "historical_controller_pin": "eef9b28958b44eb26f525debec4c0dfa611bcbc95970bfc5b7f181aafbe9f979",
+  "current_code_pins": {
+    "scripts/n16-quality-qualification.mjs": "316a95552ce6ecda3a16c5530e223c91370182c64a82f71a00d4bdd20409423b",
+    "services/agent/resource-journal.mjs": "cdeab0a0e2677df036ac1ba9d71f9608834fb8eea544fdc9727537ae2feb40f1",
+    "tests/n16-resource-journal.test.mjs": "faff730a3414cf9eee7d13038807d691f2fc6f4c8033347a5c1dc2ab8af025b8"
+  },
+  "historical_G_code_plan_preserved": true,
+  "requires_separate_execution_approval": true
+}

@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "counts": {
+    "events": 32,
+    "committed": 6,
+    "workers": 2,
+    "evaluations": 2,
+    "retained_bytes": 9291128,
+    "temporary_db_bytes": 22156664
+  },
+  "duration_ms": 28948.464076,
+  "maximum_sampled_RSS_bytes": 396136448,
+  "kernel_max_RSS_KiB": 400456,
+  "validated_forecast_max_ms": 145.15022999999928,
+  "experiment_performance": {
+    "elapsed_ms": 5661.848351999999,
+    "estimator_max_ms": 10.504887999999482,
+    "estimator_p95_ms": 0.3151990000005753,
+    "target_ms": 250,
+    "scope": "One 31-point trend computation; whole validated forecast latency separately measured",
+    "process_rss_bytes": 167563264
+  },
+  "resource_samples_reconciled": true,
+  "source_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+  "source_revision1_preserved": true,
+  "cold_recovery": "PASS",
+  "replay_executions": 0,
+  "source_integrity": "Content-addressed authored synthetic source; deterministic rebuild separately tested",
+  "N02_preservation": {
+    "state": "fbdfb76df8f4f2ae31df792da8399cddc514d03173ada3afa216a0d300d4468d",
+    "alerts": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "telemetry": 60,
+    "N11": 0
+  },
+  "N11_fit": 0,
+  "N16_starts": 0,
+  "Qwen": 0,
+  "network_requests": 0,
+  "model_promotions": 0,
+  "limitations": "Observed shared-process RSS and kernel max, not hard peak limits or target hardware. Fixed worker has no external calls; no OS network isolation claimed. Synthetic data, clinical generalization unverified."
+}

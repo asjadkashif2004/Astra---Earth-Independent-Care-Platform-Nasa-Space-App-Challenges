@@ -1,0 +1,68 @@
+{
+  "status": "PASS_WITH_MEASUREMENT_LIMITS",
+  "final_QA_root": "/var/tmp/astra-n16-04-gJ6VxS",
+  "process_measurements": 41,
+  "peak_sampled_owned_process_VmHWM_bytes": 55922688,
+  "maximum_child_receipt_RSS_bytes": 56479744,
+  "maximum_monitored_counted_bytes": 25126553,
+  "conservative_extra_unlinked_test_fixture_bytes": 131072,
+  "monitored_max_plus_known_unlinked_fixture_bound_bytes": 25257625,
+  "RSS_ceiling_bytes": 536870912,
+  "storage_ceiling_bytes": 67108864,
+  "maximum_observer_flush_ms": 96.16155599999911,
+  "all_final_owned_remaining_zero": true,
+  "all_final_observer_pending_zero": true,
+  "task_processes_at_postflight": [],
+  "retained_roots": [
+    {
+      "root": "/var/tmp/astra-n16-04-AiJiRR",
+      "counted_bytes": 28672
+    },
+    {
+      "root": "/var/tmp/astra-n16-04-V9xF1z",
+      "counted_bytes": 626688
+    },
+    {
+      "root": "/var/tmp/astra-n16-04-qYxTxJ",
+      "counted_bytes": 3039232
+    },
+    {
+      "root": "/var/tmp/astra-n16-04-sC9iVI",
+      "counted_bytes": 3055616
+    },
+    {
+      "root": "/var/tmp/astra-n16-04-ghLM3A",
+      "counted_bytes": 3756032
+    },
+    {
+      "root": "/var/tmp/astra-n16-04-e2m7jx",
+      "counted_bytes": 684032
+    },
+    {
+      "root": "/var/tmp/astra-n16-04-TJcIPp",
+      "counted_bytes": 3731456
+    },
+    {
+      "root": "/var/tmp/astra-n16-04-2bJ0Y2",
+      "counted_bytes": 3887104
+    },
+    {
+      "root": "/var/tmp/astra-n16-04-aaCV9S",
+      "counted_bytes": 626688
+    },
+    {
+      "root": "/var/tmp/astra-n16-04-gJ6VxS",
+      "counted_bytes": 3878912
+    }
+  ],
+  "counted_storage_postflight_before_report_bytes": 25216665,
+  "network_requests": 0,
+  "downloads": 0,
+  "SQL_executed_by_postflight": false,
+  "limitations": [
+    "Sampled VmHWM and child receipt RSS are observations, not complete lifetime peak certification.",
+    "Storage is monitored, not a hard quota.",
+    "Runtime path scans do not separately count open-unlinked source pins; two final-suite negative controls can retain at most two 65536-byte original DBs until closeQualification releases handles. The conservative bound is reported separately.",
+    "Completed previous task roots were treated as immutable and counted at admission; postflight recount is point-in-time."
+  ]
+}

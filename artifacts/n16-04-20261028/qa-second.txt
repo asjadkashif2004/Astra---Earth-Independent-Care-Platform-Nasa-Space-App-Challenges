@@ -1,0 +1,39 @@
+✔ contract is exactly four tools and deterministic authored fixture data (1612.140843ms)
+✔ actual authorized SQL reads for CREW-01 (257.35381ms)
+✔ actual authorized SQL reads for CREW-02 (250.008556ms)
+✔ actual authorized SQL reads for CREW-03 (228.502564ms)
+✔ actual authorized SQL reads for CREW-04 (242.11006ms)
+✔ actual authorized SQL reads for CREW-05 (232.83369ms)
+✔ actual authorized SQL reads for CREW-06 (232.086164ms)
+✔ four actual SQL tools produce18 durable events and cold recovery without replay (1073.520124ms)
+✔ missing data remains UNKNOWN (231.992099ms)
+✔ stale data remains UNKNOWN (235.032128ms)
+✔ malformed data remains UNKNOWN (232.555205ms)
+✔ untrusted data remains UNKNOWN (241.754004ms)
+✔ quality provenance and empty fixture risk scope never become new health conclusions (499.050575ms)
+✔ unauthorized anonymous never spawns reader (7.81686ms)
+✔ unauthorized system_admin never spawns reader (7.067276ms)
+✔ unauthorized astronaut never spawns reader (7.921305ms)
+✔ unauthorized invented never spawns reader (8.069064ms)
+✔ authorized self-read succeeds without caller role overrides (248.048324ms)
+✔ invalid names, arguments, crew and paths reject before SQL (8.100938ms)
+✔ tampering, symlinks, extra files and hardlinks fail before a reader starts (44.106932ms)
+✔ SQL authorizer and read-only filesystem reject writes/schema/attach/unapproved reads with unchanged files (254.153462ms)
+✔ WAL concurrent writer: stable old snapshot, committed new value, checkpoint busy and reader-only noninterference (1774.033684ms)
+✔ exclusive synthetic writer produces bounded BUSY without changing reader permissions (734.882617ms)
+✔ missing WAL cannot silently return older generation; missing SHM behavior is recorded without sidecar writes (1373.78976ms)
+✔ missing database never creates a replacement source (265.281531ms)
+✔ timeouts, cancellation and pre-aborted calls terminate only owned processes and withhold results (2068.5972ms)
+✔ held read snapshot enforces its own transaction deadline (676.907754ms)
+✔ trace start and completion checkpoint failures fail closed with zero/unpublished SQL results (316.041821ms)
+✔ cold trace recovery detects corrupt results and incomplete checkpoints without replay (21.056355ms)
+✔ CLI has no arbitrary source, SQL, role or operational path option (0.304068ms)
+✔ all immutable original fixture hashes survive qualification unchanged (11.009212ms)
+ℹ tests 31
+ℹ suites 0
+ℹ pass 31
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13517.191223

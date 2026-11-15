@@ -1,0 +1,6 @@
+{
+  "apparent_bytes": 97646103,
+  "allocated_bytes": 98979840,
+  "watermark_bytes": 1350000000,
+  "storage_policy": "Monitored; no hard quota; delivery includes complete changed documents, duplicate-counted aliases conservatively."
+}

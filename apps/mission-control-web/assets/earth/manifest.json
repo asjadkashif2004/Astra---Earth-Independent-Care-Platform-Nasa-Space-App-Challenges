@@ -1,0 +1,80 @@
+{
+  "version": "n04-earth-1",
+  "acquired_at": "2026-10-18T04:25:53.799Z",
+  "credit": "NASA Earth Observatory / NASA Goddard Space Flight Center; Reto Stöckli; Blue Marble compositing enhancements by Robert Simmon",
+  "usage": "NASA educational/informational media reuse guidelines; no endorsement. Source pages identify NASA imagery, no third-party copyright notice for selected textures. Retain credit.",
+  "usage_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+  "scope": "Historical visual assets only; not real-time weather, medical data or actual mission tracking",
+  "transfer_budget_bytes": 4000000,
+  "total_bytes": 1202603,
+  "assets": [
+    {
+      "file": "day-2048.jpg",
+      "width": 2048,
+      "height": 1024,
+      "bytes": 236028,
+      "sha256": "097a4b671941e23e1188245b01045c43bd7ba26c0f77c6e4ae59face597b87bd",
+      "source_sha256": "2048023ccc62250c677c0f4b03d4362f997b130eb0154a6cad00aa1b27c390b9",
+      "source_dimensions": [
+        5400,
+        2700
+      ],
+      "transform": "Chromium Canvas2D high-quality resize; JPEG quality0.88; no geography or cloud painting",
+      "source_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-base/august/world.200408.3x5400x2700.jpg",
+      "source_page": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-map/",
+      "creator": "Reto Stöckli / NASA Earth Observatory, NASA Goddard Space Flight Center",
+      "historical": "August2004 surface composite"
+    },
+    {
+      "file": "day-1024.jpg",
+      "width": 1024,
+      "height": 512,
+      "bytes": 70574,
+      "sha256": "1c40512db369e7778e1830c9d7cab11f724d556ee7049c8f5a3cad2eddb8180e",
+      "source_sha256": "2048023ccc62250c677c0f4b03d4362f997b130eb0154a6cad00aa1b27c390b9",
+      "source_dimensions": [
+        5400,
+        2700
+      ],
+      "transform": "Chromium Canvas2D high-quality resize; JPEG quality0.88; no geography or cloud painting",
+      "source_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-base/august/world.200408.3x5400x2700.jpg",
+      "source_page": "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/base-map/",
+      "creator": "Reto Stöckli / NASA Earth Observatory, NASA Goddard Space Flight Center",
+      "historical": "August2004 surface composite"
+    },
+    {
+      "file": "cloud-2048.jpg",
+      "width": 2048,
+      "height": 1024,
+      "bytes": 703225,
+      "sha256": "62a2ca3c3246c574407ea3e23d19b14642f382a10d82852b8975d84f77eb3d85",
+      "source_sha256": "daddaad84d7a33bbbc86cdda3f591099f57cee8607b7bcf3b67eb7e4f7a1c793",
+      "source_dimensions": [
+        2048,
+        1024
+      ],
+      "transform": "Chromium Canvas2D high-quality resize; JPEG quality0.88; no geography or cloud painting",
+      "source_url": "https://eoimages.gsfc.nasa.gov/images/imagerecords/57000/57747/cloud_combined_2048.jpg",
+      "source_page": "https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/",
+      "creator": "Reto Stöckli / NASA Earth Observatory, NASA Goddard Space Flight Center",
+      "historical": "Blue Marble2002 cloud composite; not current weather"
+    },
+    {
+      "file": "cloud-1024.jpg",
+      "width": 1024,
+      "height": 512,
+      "bytes": 192776,
+      "sha256": "ab8db970a00c7fb7cec3c24d0d4a90fcdc2fd3a8d4c8b0e2eacede4221368bd4",
+      "source_sha256": "daddaad84d7a33bbbc86cdda3f591099f57cee8607b7bcf3b67eb7e4f7a1c793",
+      "source_dimensions": [
+        2048,
+        1024
+      ],
+      "transform": "Chromium Canvas2D high-quality resize; JPEG quality0.88; no geography or cloud painting",
+      "source_url": "https://eoimages.gsfc.nasa.gov/images/imagerecords/57000/57747/cloud_combined_2048.jpg",
+      "source_page": "https://science.nasa.gov/earth/earth-observatory/the-blue-marble-true-color-global-imagery-at-1km-resolution/",
+      "creator": "Reto Stöckli / NASA Earth Observatory, NASA Goddard Space Flight Center",
+      "historical": "Blue Marble2002 cloud composite; not current weather"
+    }
+  ]
+}

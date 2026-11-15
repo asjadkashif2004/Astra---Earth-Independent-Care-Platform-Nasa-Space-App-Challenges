@@ -1,0 +1,38 @@
+{
+  "task": "N16-06G",
+  "request_mode": "n16-06g-single-quality-v1",
+  "worker_entry_mode": "n16-06f-single-select-v1",
+  "maximum_startups": 1,
+  "call": {
+    "tool": "get_data_quality",
+    "crew_id": "CREW-03",
+    "metrics": [
+      "heart_rate"
+    ]
+  },
+  "code_pins": {
+    "scripts/n16-single-select-qualification.mjs": "c6f93ec3e5fe24085ab3707c5fc1b2ed707009120f62854e69814be03543e7a6",
+    "services/agent/designated-worker.mjs": "b41c4ecec39ac40039e32e698549c495cec2654c0fce8edde22ec32ecf07a21e",
+    "services/agent/designated-source.mjs": "d5383c10610c777d500254ddcde3113d69e21d1451d9fe64df9873ee2695bb2f",
+    "services/agent/single-select-contract.mjs": "c560f10852e3b1ff2a7859cdc6fbf547df0aad5067e6988e7db581b284a525ac",
+    "services/agent/single-select-source.mjs": "c758e38ffe26eebf6301d0f919cc50a44d0f6414cf6894dd2acc3e694e0cd7d9",
+    "services/agent/single-select-runtime.mjs": "742d24ec8cc580d7f9b7190eb63ca09d49d0efd897242f881f24752eb484ffdc",
+    "services/agent/designated-contract.mjs": "6a8beeae2ce4687b216e15ced65adeef8faab3b308816b7c93f45aedbdecd9c5",
+    "services/agent/sqlite-fixture-contract.mjs": "a5f496d16326fda1df8d9eeec0d8a015970a8854023257f659b8df464e6b0d1c",
+    "services/agent/read-contract.mjs": "1b7ce5f7d1362eb776d2eb9e4aede141b99c4fc0729c0b02c47f8a2156b071f6",
+    "services/agent/read-context.mjs": "fa643178b9920feb186f4762ffe6da54041813cf4f71f84ed54b34568a769f44",
+    "services/agent/execution-trace.mjs": "0f1c8dd816c6641c5b6581e823b006a09663600a394b2c75a569d04fa39ac138",
+    "services/agent/containment-diagnostics.mjs": "58bfbb12dc5c1ee1be5057acc26b5d7ff2d04c640e63284ffbbeccb0ba00de7b",
+    "services/agent/qualification-batch.mjs": "ae1cacad6b5da3073b24f569cb4cdf9251128c36efbf560b87430ccd9e938bc5",
+    "services/agent/dependency-pins.mjs": "57b1f5988946314ed5b1bd30a36f01b15e0c597896aea905ae938f23cfafc374",
+    "packages/contracts.mjs": "d5f3809213fc95bd77a7831006a557b2220af249a5ff3be36df6d9ebf57eef18",
+    "docs/N16_05_SOURCE_SPEC.json": "f28e5829bb4f7354a2ab6c6202efc23a0985d1dcb6ac401522f4716fb62a1669",
+    "tests/n16-single-select.test.mjs": "f8e74657a05be4af291b71469e3accb3e255a9f6315c0b7da797fad5a9987cf1",
+    "tests/n16-containment-qa.test.mjs": "c1f083aec8b5d4dd06e1f4526eed1e6b1e29402bc0de48bdaf5b0e225a822f92",
+    "tests/n16-dependency-pins.test.mjs": "e7500dbb8edaad5fad55c1243356aa979117c55855a86ec2a1c98031f05fcbfc",
+    "services/agent/single-quality-contract.mjs": "2eb87721d1139f9af6edf17ac54ec4ff653c3f1f28b7b0d6e3b29b04363b46c6",
+    "scripts/n16-quality-qualification.mjs": "eef9b28958b44eb26f525debec4c0dfa611bcbc95970bfc5b7f181aafbe9f979",
+    "tests/n16-single-quality.test.mjs": "ba5a4ee44e4075a084e0355ba665c1f3d5eeef9511daee5f8e926587fc333796"
+  },
+  "policy": "Reuse fixed observation SELECT and isolated F executor; quality-specific trusted policy; no other tool or setup SQL. Existing F defaults and all historical source/evidence preserved."
+}

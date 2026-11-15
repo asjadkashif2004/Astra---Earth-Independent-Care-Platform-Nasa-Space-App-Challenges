@@ -1,0 +1,2 @@
+{ "child-pid": 4428, "cgroup-namespace": 4026532230, "ipc-namespace": 4026532228, "mnt-namespace": 4026532226, "net-namespace": 4026532231, "pid-namespace": 4026532229, "uts-namespace": 4026532227 }
+{ "exit-code": 0 }

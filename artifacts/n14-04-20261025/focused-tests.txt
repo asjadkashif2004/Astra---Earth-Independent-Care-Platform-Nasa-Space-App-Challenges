@@ -1,0 +1,54 @@
+Command: node --test --test-isolation=none tests/hybrid-retrieval.test.mjs tests/claim-assessment.test.mjs
+Exit: 0
+✔ claim v2: literal-positive (16.982074ms)
+✔ claim v2: wrong-source-identical-quote-exists-elsewhere (1.571565ms)
+✔ claim v2: wrong-role (0.71094ms)
+✔ claim v2: missing-role (0.323605ms)
+✔ claim v2: null-role (0.358581ms)
+✔ claim v2: altered-quote (0.718154ms)
+✔ claim v2: partial-quote (1.291313ms)
+✔ claim v2: fabricated-citation (0.302054ms)
+✔ claim v2: corrupt-page (0.478418ms)
+✔ claim v2: corrupt-original (0.424456ms)
+✔ claim v2: corrupt-range (0.325929ms)
+✔ claim v2: corrupt-chunk (0.666827ms)
+✔ claim v2: corrupt-section (0.488958ms)
+✔ claim v2: clinical-assertion-real-binding (0.493688ms)
+✔ claim v2: unverified-paraphrase (0.522002ms)
+✔ claim v2: scope-expansion (0.432772ms)
+✔ claim v2: missing-qualifier (0.60547ms)
+✔ claim v2: wrong-context (1.564671ms)
+✔ claim v2: injection-real-binding (0.346719ms)
+✔ claim v2: similarity-is-not-proof (0.235527ms)
+✔ claim v2: builder matches independently constructed request (0.323965ms)
+✔ claim v2: matching second source accepts only its own complete canonical binding (0.432762ms)
+✔ claim v2: matching client/index lies cannot replace authoritative role (0.482827ms)
+✔ claim v2: authoritative evidence is required; legacy strings do not bind (0.271716ms)
+✔ claim v2: wrong hash, unit, offset unit and unknown citation metadata reject (1.01079ms)
+✔ claim v2: missing/null role has an explicit reason (0.184381ms)
+✔ claim v2: exact text declared paraphrase remains unverified (0.301503ms)
+✔ claim v2: location-only evidence never supports a literal claim (0.35276ms)
+✔ claim v2: an original containing instructions is data, never executable support (0.44743ms)
+✔ claim v2: malformed, oversized, cyclic and accessor inputs fail closed without execution (0.333113ms)
+✔ claim QA: deterministic positive and negative controls pass (10.98264ms)
+✔ claim QA: reject-everything and accept-everything checkers FAIL (1.39552ms)
+✔ claim QA: unbound provisional rejection is NOT assessed accuracy (0.559733ms)
+✔ hybrid: frozen specification admits exactly two fixed candidates (7.254027ms)
+✔ hybrid: RRF arithmetic independently checked and all lexical top5retained (0.643051ms)
+✔ hybrid: append-only fills vacancies without any existing-order changes (0.182516ms)
+✔ hybrid: empty/short source lists handled without invented tail ranks (0.283639ms)
+✔ hybrid: malformed,duplicate,overdepth or executable-looking IDs reject (0.167197ms)
+✔ hybrid: deterministic bounded rotations preserve every baseline unit (7.841282ms)
+✔ hybrid: input lists never mutated and output ranks remain traceable (0.27374ms)
+✔ hybrid: RRF top3regression is reported despite preserved top5 (0.376775ms)
+✔ hybrid: equal-recall swaps expose lost and gained expected IDs (0.17899ms)
+✔ hybrid: unsupported questions do not invent recall denominators (0.556196ms)
+✔ hybrid: saved-input preparation resolves canonical roles/spans without inference (227.239868ms)
+ℹ tests 44
+ℹ suites 0
+ℹ pass 44
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 439.640276

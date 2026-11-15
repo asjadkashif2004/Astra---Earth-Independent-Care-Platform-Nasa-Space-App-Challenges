@@ -1,0 +1,531 @@
+--- before/services/api/server.mjs
++++ after/services/api/server.mjs
+@@ -10,6 +10,7 @@
+ import { fixtureTraceResponse } from '../agent/fixture-trace-view.mjs';
+ import { append as appendN10,legacyConsent } from '../n10/ledger.mjs';
+ import { project as projectN10 } from '../n10/projection.mjs';
++import * as waveform from '../waveforms/service.mjs';
+ 
+ const ROOT = fileURLToPath(new URL('../../', import.meta.url));
+ const WEB = resolve(ROOT, 'apps/mission-control-web');
+@@ -130,6 +131,41 @@
+         store.audit(identity.id, 'auth.logout', identity.id); json(res, 200, { ok: true }, { 'Set-Cookie': 'astra_session=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0' }); return;
+       }
+       let match;
++      if((match=/^\/v1\/crew\/(CREW-\d{2})\/waveforms(?:\/([A-Za-z0-9_.-]+)(?:\/chunks\/(ECG|PPG|RESP)\/(\d+))?)?$/.exec(path))
++        ||req.method==='POST'&&path==='/v1/ingest/waveforms'){
++        if(!demo)throw new AppError(403,'WAVEFORM_DEMO_ONLY','Synthetic waveform engineering is demo-only.');
++        const crew=match?.[1]??req.headers['x-waveform-crew'];
++        waveform.authorize(identity,crew,req.method==='POST');
++        const keys=[...url.searchParams.keys()];if(new Set(keys).size!==keys.length)throw new AppError(422,'WAVEFORM_QUERY','Duplicate query option.');
++        if(req.method==='POST'&&!match?.[2]){
++          if(keys.some(k=>k!=='format'))throw new AppError(422,'WAVEFORM_QUERY','Unknown ingest query.');
++          const format=url.searchParams.get('format'),type=format==='binary'?'application/octet-stream':format==='csv'?'text/csv':null;
++          if(!type||String(req.headers['content-type']??'').split(';')[0]!==type)throw new AppError(415,'WAVEFORM_FORMAT','Use the exact supported binary or CSV media type.');
++          const chunks=[];let size=0;const deadline=setTimeout(()=>req.destroy(new AppError(408,'WAVEFORM_TIMEOUT','Waveform upload deadline.')),8000);deadline.unref();
++          try{for await(const part of req){size+=part.length;if(size>256000)throw new AppError(413,'BODY_TOO_LARGE','Waveform input exceeds256000bytes.');chunks.push(part);}}finally{clearTimeout(deadline);}
++          if(req.aborted)throw new AppError(400,'WAVEFORM_INTERRUPTED','Incomplete waveform input.');
++          const raw=Buffer.concat(chunks);let result;
++          try{result=waveform.ingest(store,identity,crew,{format,bytes:raw,expectedHash:req.headers['x-waveform-sha256']},engine.state.now);}
++          catch(e){store.audit(identity.id,'waveform.rejected','upload',{crew_id:crew,format,bytes:size,source_sha256:waveform.sha(raw),reason:typeof e.code==='string'?e.code.slice(0,96):'PERSISTENCE_FAILURE'});throw e;}
++          json(res,result.idempotent?200:201,result);return;
++        }
++        if(req.method==='GET'){
++          const before=url.searchParams.get('before')??new Date(engine.state.now).toISOString();
++          if(!match[2]){
++            if(keys.some(k=>k!=='before'))throw new AppError(422,'WAVEFORM_QUERY','Unknown source-list query.');
++            json(res,200,waveform.list(store,identity,crew,before,engine.state.now));return;
++          }
++          if(match[3]){
++            if(keys.some(k=>k!=='before'))throw new AppError(422,'WAVEFORM_QUERY','Unknown chunk query.');
++            const c=waveform.readChunk(store,identity,crew,match[2],match[3],Number(match[4]),before,engine.state.now);
++            res.writeHead(200,{...headers,'Content-Type':'application/octet-stream','Cache-Control':'no-store','X-Waveform-SHA256':c.sha256,'X-Waveform-Source-SHA256':c.source_sha256,'X-Waveform-Start':c.start_at,'X-Waveform-Samples':String(c.sample_count)});res.end(c.bytes);return;
++          }
++          if(keys.some(k=>!['before','channel','from_ms','until_ms','points'].includes(k)))throw new AppError(422,'WAVEFORM_QUERY','Unknown window query.');
++          if(!url.searchParams.has('until_ms')||['from_ms','until_ms','points'].some(k=>url.searchParams.has(k)&&!/^\d+$/.test(url.searchParams.get(k))))throw new AppError(422,'WAVEFORM_QUERY','Supply integer window bounds.');
++          json(res,200,waveform.windowData(store,identity,crew,match[2],{before,channel:url.searchParams.get('channel'),from_ms:Number(url.searchParams.get('from_ms')??0),until_ms:Number(url.searchParams.get('until_ms')),points:Number(url.searchParams.get('points')??200)},engine.state.now));return;
++        }
++        throw new AppError(405,'WAVEFORM_METHOD','Unsupported implemented waveform operation.');
++      }
+       if((match=/^\/v1\/n10\/crew\/(CREW-\d{2})(?:\/(records))?$/.exec(path))){
+         if(!demo)throw new AppError(403,'N10_DEMO_ONLY','N10 is available only in the fictional local demonstration.');
+         const crew=match[1];
+@@ -258,6 +294,11 @@
+ function randomId() { return `CHECK-${hash([Date.now(), Math.random()]).slice(0, 16)}`; }
+ function openapi() {
+   const routes = [
++    ['post','/v1/ingest/waveforms','Demo-only authenticated synthetic ASTRAWV1 or ASTRA CSV v1 import; 256000-byte cap, required SHA256 and fictional crew headers;201 new/200 idempotent; no public or operational ingest'],
++    ['get','/v1/crew/{id}/waveforms','Verified synthetic source revisions known by cutoff; UNKNOWN if absent; least-privilege waveform scope'],
++    ['post','/v1/crew/{id}/waveforms','Same synthetic binary/CSV ingest with route-bound fictional crew'],
++    ['get','/v1/crew/{id}/waveforms/{recording}','Bounded min/max sample bins, missingness, source-bound experimental peaks; explicit until_ms; no per-sample JSON'],
++    ['get','/v1/crew/{id}/waveforms/{recording}/chunks/{channel}/{index}','1–5second float32LE binary channel block with hash and source/time headers'],
+     ['get','/v1/crew/{id}/sleep-sessions','Completed synthetic sleep records and immutable revisions; before filters knowledge time'],
+     ['get', '/v1/health', 'Public readiness'], ['get', '/v1/state', 'Role-scoped mission state'], ['get', '/v1/missions', 'Missions'], ['get', '/v1/missions/{id}/crew', 'Crew'], ['get', '/v1/crew/{id}', 'Crew profile'], ['get', '/v1/crew/{id}/telemetry', 'Historical snapshots'],
+     ['get', '/v1/stream/missions/{id}', 'Authenticated SSE snapshots'], ['post', '/v1/ingest/telemetry', 'Service-token synthetic ingest'], ['get', '/v1/alerts', 'Risk events'], ['post', '/v1/alerts/{id}/ack', 'Human acknowledgement'],
+--- before/services/api/store.mjs
++++ after/services/api/store.mjs
+@@ -39,6 +39,13 @@
+       CREATE TRIGGER IF NOT EXISTS n10_no_update BEFORE UPDATE ON n10_records BEGIN SELECT RAISE(ABORT,'append-only N10'); END;
+       CREATE TRIGGER IF NOT EXISTS n10_no_delete BEFORE DELETE ON n10_records BEGIN SELECT RAISE(ABORT,'append-only N10'); END;
+       INSERT OR IGNORE INTO schema_versions VALUES(4,datetime('now'));
++      CREATE TABLE IF NOT EXISTS waveform_sources(crew_id TEXT NOT NULL,recording_id TEXT NOT NULL,revision INTEGER NOT NULL,json TEXT NOT NULL,original BLOB NOT NULL,PRIMARY KEY(crew_id,recording_id,revision));
++      CREATE TABLE IF NOT EXISTS waveform_chunks(crew_id TEXT NOT NULL,recording_id TEXT NOT NULL,revision INTEGER NOT NULL,channel TEXT NOT NULL,chunk_index INTEGER NOT NULL,start_at TEXT NOT NULL,sample_count INTEGER NOT NULL,sha256 TEXT NOT NULL,samples BLOB NOT NULL,PRIMARY KEY(crew_id,recording_id,revision,channel,chunk_index),FOREIGN KEY(crew_id,recording_id,revision) REFERENCES waveform_sources(crew_id,recording_id,revision));
++      CREATE TRIGGER IF NOT EXISTS waveform_source_no_update BEFORE UPDATE ON waveform_sources BEGIN SELECT RAISE(ABORT,'append-only waveform sources'); END;
++      CREATE TRIGGER IF NOT EXISTS waveform_source_no_delete BEFORE DELETE ON waveform_sources BEGIN SELECT RAISE(ABORT,'retained waveform sources'); END;
++      CREATE TRIGGER IF NOT EXISTS waveform_chunk_no_update BEFORE UPDATE ON waveform_chunks BEGIN SELECT RAISE(ABORT,'immutable waveform chunks'); END;
++      CREATE TRIGGER IF NOT EXISTS waveform_chunk_no_delete BEFORE DELETE ON waveform_chunks BEGIN SELECT RAISE(ABORT,'retained waveform chunks'); END;
++      INSERT OR IGNORE INTO schema_versions VALUES(5,datetime('now'));
+       CREATE TABLE IF NOT EXISTS predictions(id TEXT PRIMARY KEY, crew_id TEXT NOT NULL, created_at TEXT NOT NULL, json TEXT NOT NULL);
+       CREATE TABLE IF NOT EXISTS knowledge_documents(id TEXT PRIMARY KEY, json TEXT NOT NULL);
+       CREATE TABLE IF NOT EXISTS knowledge_chunks(id TEXT PRIMARY KEY, document_id TEXT NOT NULL REFERENCES knowledge_documents(id), json TEXT NOT NULL);
+--- before/apps/mission-control-web/app.mjs
++++ after/apps/mission-control-web/app.mjs
+@@ -5,10 +5,12 @@
+ import { present, validSnapshot, monitoringState, RequestGate, patchContent } from '/shared/presentation.mjs';
+ import { mountFixtureTrace } from './fixture-trace.mjs';
+ import { mountN10 } from './n10.mjs';
++import { mountWaveforms } from './waveforms.mjs';
++import * as waveformFormats from '/shared/waveforms.mjs';
+ 
+ const root = document.querySelector('#app');
+-let n10Dispose=null;
+-const NAV = [['overview','overview','Mission overview'],['crew','crew','Crew health'],['n10','clock','Sleep & resilience'],['agent','brain','Health agent'],['comms','comms','Communications'],['knowledge','book','Research library'],['scenario','flask','Scenario lab'],['sources','shield','Evidence & provenance']];
++let n10Dispose=null,waveDispose=null;
++const NAV = [['overview','overview','Mission overview'],['crew','crew','Crew health'],['n10','clock','Sleep & resilience'],['waveforms','activity','Signal archive'],['agent','brain','Health agent'],['comms','comms','Communications'],['knowledge','book','Research library'],['scenario','flask','Scenario lab'],['sources','shield','Evidence & provenance']];
+ let identity = null, state = null, connected = false, page = 'overview', crewId = 'CREW-03', view = 'spacecraft';
+ let source = null, scenes = [], history = [], histories = new Map(), chartMetric = 'heart_rate', queryResult = null, provenance = null;
+ let reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+@@ -88,6 +90,7 @@
+   const save = document.querySelector('#save-checkin'); if (save) save.disabled = !canAct('checkin') || reaction.phase !== 'complete' || busy.has('checkin');
+ }
+ function resetSession() {
++  waveDispose?.();waveDispose=null;
+   n10Dispose?.();n10Dispose=null;
+   sessionVersion++; requests.invalidate(); stateRequest++; source?.close(); source = null;
+   clearTimeout(reaction.timer); reaction = { phase: 'idle', trials: [], readyAt: 0, timer: null };
+@@ -175,6 +178,7 @@
+   renderPage(); document.querySelector('#main')?.focus({ preventScroll: true }); window.scrollTo({ top: 0, behavior: reducedMotion ? 'instant' : 'smooth' });
+ }
+ function renderPage() {
++  waveDispose?.();waveDispose=null;
+   n10Dispose?.();n10Dispose=null;
+   requests.invalidate(); historyRequest++; history = [];
+   disposeScenes();
+@@ -183,12 +187,16 @@
+   document.querySelector('#breadcrumb').textContent = NAV.find(n => n[0] === page)?.[2] ?? ({ cognitive: 'Crew check-in', replay: 'Mission replay' }[page] ?? 'Mission workspace');
+   main.classList.remove('animation-enter'); void main.offsetWidth; main.classList.add('animation-enter');
+   if (identity.role === 'system_admin') { renderSystemAudit(main); return; }
+-  const pages = { overview: renderOverview, crew: renderCrew, n10:renderN10, agent: renderAgent, comms: renderComms, knowledge: renderKnowledge, scenario: renderScenarios, sources: renderSources, cognitive: renderCognitive, replay: renderReplay };
++  const pages = { overview: renderOverview, crew: renderCrew, n10:renderN10, waveforms:renderWaveforms, agent: renderAgent, comms: renderComms, knowledge: renderKnowledge, scenario: renderScenarios, sources: renderSources, cognitive: renderCognitive, replay: renderReplay };
+   (pages[page] ?? renderOverview)(main); syncControls(); refreshTop();
+ }
+ function renderN10(main){
+   main.innerHTML='';const current=currentRequest();
+   n10Dispose=mountN10(main,{crew:crewId,crews:state.crew.map(c=>c.id),onCrew:next=>{if(state.crew.some(c=>c.id===next)){crewId=next;renderPage();}},identity,api,isCurrent:current,now:state.mission.spacecraft_time,earth:view==='earth'});
++}
++function renderWaveforms(main){
++  main.innerHTML='';const current=currentRequest();
++  waveDispose=mountWaveforms(main,{crew:crewId,crews:state.crew.map(c=>c.id),onCrew:next=>{if(state.crew.some(c=>c.id===next)){crewId=next;renderPage();}},identity,api,isCurrent:current,now:state.mission.spacecraft_time,earth:view==='earth',formats:waveformFormats});
+ }
+ function refreshTop() {
+   const clock = document.querySelector('[data-live="clock"]'); if (clock) clock.textContent = Number.isFinite(state.mission.speed) ? `${time(state.mission.spacecraft_time)} UTC · ${state.mission.speed}×` : 'Crew telemetry outside this role’s scope';
+@@ -602,7 +610,7 @@
+ }
+ const heartbeat=setInterval(()=>{if(connected&&lastPacketAt&&Date.now()-lastPacketAt>5000){connected=false;refreshLive();}void pollStatus();},2000);
+ window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change',()=>syncGraphics());
+-window.addEventListener('pagehide',()=>{n10Dispose?.();n10Dispose=null;source?.close();source=null;requests.invalidate();disposeScenes();});
++window.addEventListener('pagehide',()=>{waveDispose?.();waveDispose=null;n10Dispose?.();n10Dispose=null;source?.close();source=null;requests.invalidate();disposeScenes();});
+ window.addEventListener('pageshow',event=>{if(event.persisted&&identity&&state){renderPage();connectStream();void pollStatus();}});
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden&&identity&&state){refreshLive();void pollStatus();}});
+ if('serviceWorker'in navigator)navigator.serviceWorker.register('/sw.js').catch(error=>console.info('PWA cache unavailable:',error.message));
+--- before/apps/mission-control-web/index.html
++++ after/apps/mission-control-web/index.html
+@@ -11,6 +11,7 @@
+   <link rel="stylesheet" href="/mission.css">
+   <link rel="stylesheet" href="/anatomy.css">
+   <link rel="stylesheet" href="/n10.css">
++  <link rel="stylesheet" href="/waveforms.css">
+   <title>ASTRA Command · Crew Health Intelligence</title>
+ </head>
+ <body>
+--- before/apps/mission-control-web/sw.js
++++ after/apps/mission-control-web/sw.js
+@@ -1,5 +1,5 @@
+-const CACHE = 'astra-shell-v7-n10';
+-const SHELL = ['/', '/index.html', '/styles.css', '/mission.css', '/anatomy.css', '/anatomy.mjs', '/n10.mjs', '/n10.css', '/fixture-trace.mjs', '/app.mjs', '/scenes.mjs', '/earth.mjs', '/ui.mjs', '/shared/contracts.mjs', '/shared/presentation.mjs', '/icon.svg', '/manifest.webmanifest'];
++const CACHE = 'astra-shell-v8-n08';
++const SHELL = ['/', '/index.html', '/styles.css', '/mission.css', '/anatomy.css', '/anatomy.mjs', '/n10.mjs', '/n10.css', '/waveforms.mjs', '/waveforms.css', '/shared/waveforms.mjs', '/fixture-trace.mjs', '/app.mjs', '/scenes.mjs', '/earth.mjs', '/ui.mjs', '/shared/contracts.mjs', '/shared/presentation.mjs', '/icon.svg', '/manifest.webmanifest'];
+ self.addEventListener('install', event => { event.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
+ self.addEventListener('activate', event => { event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k.startsWith('astra-shell-') && k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
+ self.addEventListener('fetch', event => {
+--- before/scripts/browser-acceptance.mjs
++++ after/scripts/browser-acceptance.mjs
+@@ -14,6 +14,7 @@
+ import { n05Checks } from './browser-n05-01.mjs';
+ import { n09Checks } from './browser-n09-d01.mjs';
+ import { n10Checks } from './browser-n10.mjs';
++import { n08Checks } from './browser-n08.mjs';
+ 
+ const closureMode=process.argv.includes('--closure');
+ const nativeZoom=process.argv.includes('--zoom=2')?2:1;
+@@ -23,7 +24,9 @@
+ const report={status:'blocked',started_at:new Date().toISOString(),checks:[],screenshots:[],console_errors:[],http_errors:[],viewports:[],caveats:['No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation.','Pointer/keyboard/rendered DOM checks and screenshots supplement human visual, text-contrast and assistive-technology review; they do not establish WCAG conformance.']};
+ let app,browser,profile,dbDirectory,activeCheck='startup';let sequence=0,buffer='';const pending=new Map(),events=new Map();let session;
+ const n10Deadline=process.argv.includes('--n10')?performance.now()+900000:Infinity;
++const n08Deadline=process.argv.includes('--n08')?performance.now()+900000:Infinity;
+ function send(method,params={},sessionId=session){
++  if(performance.now()>n08Deadline&&method!=='Browser.close')return Promise.reject(new Error('N08 browser campaign deadline reached'));
+   if(performance.now()>n10Deadline&&method!=='Browser.close')return Promise.reject(new Error('N10 browser campaign deadline reached'));
+   return new Promise((resolve,reject)=>{
+     const id=++sequence,timer=setTimeout(()=>{pending.delete(id);reject(new Error('Browser command timeout: '+method));},10000);
+@@ -100,11 +103,12 @@
+     report.native_zoom_preferences={factor:nativeZoom,partition_key:'x',level,disposable_profile:true};
+   }
+   const flags=[...(process.argv.includes('--headed')?['--start-fullscreen']:['--headless']),'--disable-dev-shm-usage','--no-first-run','--no-default-browser-check','--remote-debugging-pipe','--user-data-dir='+profile,'about:blank'];
+-  if(process.argv.includes('--n10'))flags.unshift('--disable-background-networking','--disable-component-update','--disable-sync','--no-pings','--disable-default-apps');
++  if(process.argv.includes('--n10')||process.argv.includes('--n08'))flags.unshift('--disable-background-networking','--disable-component-update','--disable-sync','--no-pings','--disable-default-apps');
+   if(closureMode)flags.unshift('--force-device-scale-factor=1');
+   if(process.env.ASTRA_BROWSER_NO_SANDBOX==='1')flags.unshift('--no-sandbox');
+   browser=spawn(executable,flags,{stdio:['ignore','ignore','pipe','pipe','pipe']});
+   if(process.argv.includes('--n10'))report.N10_browser_start={pid:browser.pid,source:'Existing installed Chrome, disposable profile',Node:process.version,Node_memory:process.memoryUsage(),at:new Date().toISOString()};
++  if(process.argv.includes('--n08'))report.N08_browser_start={pid:browser.pid,source:'Existing installed Chrome, disposable profile',Node:process.version,Node_memory:process.memoryUsage(),at:new Date().toISOString()};
+   browser.stdio[3].on('error',error=>{for(const p of pending.values()){clearTimeout(p.timer);p.reject(Object.assign(error,{blocked:true}));}pending.clear();});
+   browser.stdio[4].setEncoding('utf8');browser.stdio[4].on('data',receive);let stderr='';browser.stderr.on('data',data=>{stderr=(stderr+data.toString()).slice(-3000);});
+   browser.once('error',error=>{for(const p of pending.values()){clearTimeout(p.timer);p.reject(Object.assign(error,{blocked:true}));}pending.clear();});
+@@ -116,7 +120,9 @@
+   await viewport(1920,1080);
+   const base='http://127.0.0.1:'+app.server.address().port;
+   await send('Page.navigate',{url:base});await wait('!!document.querySelector("#login-form")');
+-  if(process.argv.includes('--n10')){
++  if(process.argv.includes('--n08')){
++    await n08Checks(context);
++  }else if(process.argv.includes('--n10')){
+     await n10Checks(context);
+   }else if(process.argv.includes('--n09-d01')){
+     await n09Checks(context);
+@@ -245,5 +251,6 @@
+   if(process.argv.includes('--p01')&&dbDirectory){copyFileSync(join(dbDirectory,'acceptance.sqlite'),join(directory,'fixture.sqlite'));report.synthetic_fixture='fixture.sqlite';}
+   if(profile)rmSync(profile,{recursive:true,force:true,maxRetries:10,retryDelay:200});if(dbDirectory)rmSync(dbDirectory,{recursive:true,force:true,maxRetries:10,retryDelay:200});
+   if(process.argv.includes('--n10'))report.N10_cleanup={application_closed:!!app,browser_exited:!browser||browser.exitCode!==null||browser.signalCode!==null,profile_removed:!profile||!existsSync(profile),database_directory_removed:!dbDirectory||!existsSync(dbDirectory),Node_memory:process.memoryUsage(),N16_designated_starts:0,model_executions:0};
++  if(process.argv.includes('--n08'))report.N08_cleanup={application_closed:!!app,browser_exited:!browser||browser.exitCode!==null||browser.signalCode!==null,profile_removed:!profile||!existsSync(profile),database_directory_removed:!dbDirectory||!existsSync(dbDirectory),Node_memory:process.memoryUsage(),N16_designated_starts:0,model_executions:0};
+   report.finished_at=new Date().toISOString();writeFileSync(join(directory,'report.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:report.status,browser:report.browser?.product,checks:report.checks.length,failed:report.checks.filter(c=>c.status==='failed'),screenshots:report.screenshots.length,reason:report.reason,report:join(directory,'report.json')},null,2));
+ }
+--- before/scripts/frontend-smoke.mjs
++++ after/scripts/frontend-smoke.mjs
+@@ -33,7 +33,7 @@
+ };
+ const entry=new URL('../apps/mission-control-web/app.mjs',import.meta.url);
+ let code=readFileSync(entry,'utf8');
+-for(const [from,to] of [['/shared/contracts.mjs',new URL('../packages/contracts.mjs',import.meta.url)],['/shared/presentation.mjs',new URL('../packages/presentation.mjs',import.meta.url)],['./ui.mjs',new URL('./ui.mjs',entry)],['./scenes.mjs',new URL('./scenes.mjs',entry)],['./anatomy.mjs',new URL('./anatomy.mjs',entry)],['./fixture-trace.mjs',new URL('./fixture-trace.mjs',entry)],['./n10.mjs',new URL('./n10.mjs',entry)]])code=code.replace(`from '${from}'`,`from '${to.href}'`);
++for(const [from,to] of [['/shared/contracts.mjs',new URL('../packages/contracts.mjs',import.meta.url)],['/shared/waveforms.mjs',new URL('../packages/waveforms.mjs',import.meta.url)],['/shared/presentation.mjs',new URL('../packages/presentation.mjs',import.meta.url)],['./ui.mjs',new URL('./ui.mjs',entry)],['./scenes.mjs',new URL('./scenes.mjs',entry)],['./anatomy.mjs',new URL('./anatomy.mjs',entry)],['./fixture-trace.mjs',new URL('./fixture-trace.mjs',entry)],['./n10.mjs',new URL('./n10.mjs',entry)],['./waveforms.mjs',new URL('./waveforms.mjs',entry)]])code=code.replace(`from '${from}'`,`from '${to.href}'`);
+ const flush=async()=>{for(let i=0;i<20;i++)await new Promise(resolve=>setImmediate(resolve));};
+ try{
+   await import(`data:text/javascript;base64,${Buffer.from(code).toString('base64')}`);
+--- before/tests/dom-harness.mjs
++++ after/tests/dom-harness.mjs
+@@ -109,7 +109,7 @@
+   set('fetch',async(path,options={})=>intercept?intercept(path,options,fetchAPI):fetchAPI(path,options));
+   let code=readFileSync(new URL('../apps/mission-control-web/app.mjs',import.meta.url),'utf8');
+   code=code.replace(['from',"'./anatomy.mjs'"].join(' '),['from',"'"+new URL('../apps/mission-control-web/anatomy.mjs',import.meta.url).href+"'"].join(' '));
+-  for(const [from,to]of [['/shared/contracts.mjs','../packages/contracts.mjs'],['/shared/presentation.mjs','../packages/presentation.mjs'],['./ui.mjs','../apps/mission-control-web/ui.mjs'],['./fixture-trace.mjs','../apps/mission-control-web/fixture-trace.mjs'],['./n10.mjs','../apps/mission-control-web/n10.mjs'],['./scenes.mjs','../apps/mission-control-web/scenes.mjs']])code=code.replace("from '"+from+"'","from '"+new URL(to,import.meta.url).href+"'");
++  for(const [from,to]of [['/shared/contracts.mjs','../packages/contracts.mjs'],['/shared/waveforms.mjs','../packages/waveforms.mjs'],['/shared/presentation.mjs','../packages/presentation.mjs'],['./ui.mjs','../apps/mission-control-web/ui.mjs'],['./fixture-trace.mjs','../apps/mission-control-web/fixture-trace.mjs'],['./n10.mjs','../apps/mission-control-web/n10.mjs'],['./waveforms.mjs','../apps/mission-control-web/waveforms.mjs'],['./scenes.mjs','../apps/mission-control-web/scenes.mjs']])code=code.replace("from '"+from+"'","from '"+new URL(to,import.meta.url).href+"'");
+   code+='\nexport {consume,navigate,refreshLive,pollStatus,refreshState,probeCases,loadForecast,loadHistory};\nexport const inspect=()=>({identity,state,view,crewId,history,health,connected,scenes,caseStates,busy});\nexport const stop=()=>{clearInterval(heartbeat);source?.close();requests.invalidate();disposeScenes();};\n';
+   const flush=async()=>{for(let i=0;i<25;i++)await new Promise(resolve=>setImmediate(resolve));};
+   let module;
+--- before/tests/integration.test.mjs
++++ after/tests/integration.test.mjs
+@@ -111,7 +111,9 @@
+     assert.equal((await call(`/v1/alerts/${risk.id}/ack`, admin, {})).status, 200);
+     const audit = await (await call('/v1/audit', admin)).json(); assert.equal(audit.chain_valid, true); assert.ok(audit.events.some(e => e.action === 'alert.acknowledged'));
+     const response = await call('/v1/openapi.json', admin); assert.equal(response.status, 200);
+-    assert.equal((await call('/v1/crew/CREW-03/waveforms', admin)).status, 501);
++    const waveforms=await call('/v1/crew/CREW-03/waveforms',admin);
++    assert.equal(waveforms.status,200);const waveformList=await waveforms.json();assert.equal(waveformList.status,'UNKNOWN');assert.deepEqual(waveformList.recordings,[]);
++    assert.equal((await call('/v1/public/waveforms',admin)).status,501,'Unimplemented public acquisition remains unsupported');
+     assert.equal(CREW.length, 6);
+   } finally { await app.close(); }
+ });
+--- before/tests/sleep-lifecycle.test.mjs
++++ after/tests/sleep-lifecycle.test.mjs
+@@ -95,7 +95,8 @@
+     app=make({dbPath:legacyPath});assert.equal(c3(app).sleep_session,null);assert.equal(sleepDetails(c3(app)).label,'Sleep observation');app.engine.tick(30);
+     assert.equal(c3(app).sleep_session.historical_fixture,true);assert.notEqual(c3(app).values.sleep_duration,8.91);
+     for(const row of bytes)assert.equal(app.store.db.prepare('SELECT json FROM snapshots WHERE id=?').get(row.id).json,row.json);
+-    assert.equal(app.store.db.prepare('SELECT MAX(version) AS v FROM schema_versions').get().v,4);
++    assert.equal(app.store.db.prepare('SELECT MAX(version) AS v FROM schema_versions').get().v,5);
++    assert.equal(app.store.db.prepare('SELECT COUNT(*) AS n FROM schema_versions WHERE version=4').get().n,1,'N10 schema remains present alongside N08');
+     assert.equal(app.store.db.prepare('SELECT COUNT(*) AS n FROM schema_versions WHERE version=3').get().n,1,'Sleep schema still recreated independently of additive N10 migration');
+   }finally{if(app)await app.close();rmSync(dir,{recursive:true,force:true});}
+ });
+--- before/docs/CORE_AI_PRIORITY.md
++++ after/docs/CORE_AI_PRIORITY.md
+@@ -1,4 +1,8 @@
+ # Core AI priority and anatomy deferral — 2026-10-23
++
++## N08 synthetic engineering delivered —2026-10-30; original full gates open / STOP
++
++The owner activated [DE-N08-SYNTHETIC-01](DE_N08_SYNTHETIC_01.md) only for this delivered fictional waveform/CSV implementation. [Completion](N08_FINAL_ENGINEERING_COMPLETION.md):10/10synthetic branches/593QA passes/0fail/1known missing-source skip/12real Chrome checks. Real-public-source/scientific validation and full N07/N06/release prerequisites remain. N08 In Progress; N06 remains deferred, N02 sole alert authority, no model/research support-policy or operational/N16 access. N09/N11 gain an inactive source-bound interface, not full dependency satisfaction or implementation approval. All unrelated statuses and medical/scientific reviews remain; task permission expires at delivery.
+ 
+ ## N08 consolidated preflight —2026-10-30; original gate retained / STOP
+ 
+--- before/docs/DECISIONS.md
++++ after/docs/DECISIONS.md
+@@ -1,4 +1,8 @@
+ # Decisions
++
++## ADR-084 — activate exact N08 synthetic exception and deliver its full bounded engineering scope —2026-10-30
++
++Owner explicitly activates the preexisting proposal DE-N08-SYNTHETIC-01 (original SHA4255454d34192bd04398957884c57fe872fbb4c31f07ee0430445a9ac6a32ce1), after consistency review, for one full synthetic implementation/UI/QA campaign. [Contract](N08_SYNTHETIC_CONTRACT.md) freezes narrow formats/bounds/privacy/retention and inactive downstream/N06 semantics. [Completion](N08_FINAL_ENGINEERING_COMPLETION.md) delivers10/10synthetic branches,593automated passes/0fail/1known real-source skip and12actual Chrome checks. Initial ordinary fixture/async test failures remain preserved; no security guard or scientific acceptance threshold was waived. Additive waveform tables/API/UI do not modify N02 alert authority, N10 functionality, N16 qualified stack or research rules. Full public-waveform/N07/N06/scientific/release gates remain; formal N08 In Progress and all unrelated statuses retained. Task-only authority expires at delivery; no automatic acquisition, deployment, downstream module or twin work.
+ 
+ ## ADR-083 — preserve N08 prerequisite authority and prepare a reviewable synthetic exception —2026-10-30
+ 
+--- before/docs/DE_N08_SYNTHETIC_01.md
++++ after/docs/DE_N08_SYNTHETIC_01.md
+@@ -1,4 +1,10 @@
+-# DE-N08-SYNTHETIC-01 — proposed synthetic N08 engineering sequencing exception
++# DE-N08-SYNTHETIC-01 — activated synthetic N08 engineering sequencing exception
++
++## Owner activation —2026-10-30
++
++The owner explicitly approved the exact proposed content SHA2564255454d34192bd04398957884c57fe872fbb4c31f07ee0430445a9ac6a32ce1 and one consolidated synthetic N08 engineering implementation/integration/QA mission. Scope consistency passes. Original proposal bytes are preserved in artifacts/n08-engineering-20261030/originals; the unfilled historical form below is not a fabricated signature. Only fictional waveform/CSV fixtures and fresh synthetic application/test instances are authorized. No authentic medical-source ingestion/acquisition, operational/sealed database, N16/model, N02 rule or deferred N06 twin work is granted. Full N07/source/review/release and actual twin gates remain. The task expires at delivery; see N08_SYNTHETIC_CONTRACT.md for exact finite engineering semantics.
++
++## Original proposal — preserved history
+ 
+ 2026-10-30. **PROPOSED / INACTIVE. No implementation authority is created by this document.**
+ 
+@@ -49,3 +55,7 @@
+ - Consolidated implementation authorization:
+ 
+ No independent scientific reviewer or owner signature is fabricated. **STOP: proposal inactive.**
++
++## Activated task delivered —2026-10-30; STOP
++
++The preceding original proposal/form is historical. The explicit owner activation at the top governs this one delivered task; [completion](N08_FINAL_ENGINEERING_COMPLETION.md) records10/10synthetic branches,593automated passes/0fail/1known unavailable-source skip and12real Chrome passes. Formal N08 In Progress; original N07/authentic-source/scientific/N06/release gates remain. No fabricated signature or human review has been added. Task-only execution/resources expire at delivery; the activation record grants no automatic follow-on campaign, authentic-source ingest, operational deployment, anatomy or other-module authority.
+--- before/docs/FEATURE_AUDIT.md
++++ after/docs/FEATURE_AUDIT.md
+@@ -1,4 +1,8 @@
+ # ASTRA feature audit — initial2026-10-17, planning updated2026-10-25
++
++## N08 full synthetic engineering delivered —2026-10-30
++
++[Completion](N08_FINAL_ENGINEERING_COMPLETION.md) supersedes only the historical missing N08 synthetic engineering statements below: strict ASTRAWV1/CSV, schema5 immutable originals/chunks, least-privilege actual API, deterministic bounded windows/decimation/gaps/experimental peaks, integrated replay/source import UI and cold recovery are delivered.10/10synthetic branches pass;593QA/0fail/1existing missing-source skip,12real Chrome checks/four viewports. Public waveform, scientifically validated peak/BP source and actual N06 twin requirements stay unverified/blocked, with N07 full acceptance open. All old evidence and unrelated features remain; formal N08 In Progress. No N02 monitoring, N10/N16, model/research or operational database authority is changed. STOP.
+ 
+ ## N08 full-scope preflight —2026-10-30; no implementation authority through incomplete N07
+ 
+@@ -425,7 +429,7 @@
+ | R05 Hybrid edge/ground architecture and independent failure boundaries | Partial | ENG, COM, API, SW, enrichment worker | E02; E12 independent original risk / optional worker faults | F10 repaired; single local process with worker, no independent ground deployment/ground agent or full offline/browser proof. | P0; N02 complete,N17,N18,N22 |
+ | R06 Persist missions and crew profiles | Partial | DB, ENG, CT | E02 store and restart tests | Mission metadata partly derived in snapshot rather than persisted fields; no avatar asset registry. Version1 only; migrations not evolution-tested. | P0; N05,N22 |
+ | R07 Indexed scalar history and personalized versioned baselines | Partial | DB, ENG, SIM, TEL | E02 transactions/history/restart; E11 retained observation/upgrade | Per-channel provenance/ownership preserved. Calibration archive and baseline revision workflow remain absent. | P0; N01 complete, N09 |
+-| R08 Persist binary waveform chunks/sample metadata/hash/URI | Missing | DB (no waveform table) | E08 schema inspection | No chunk object storage, binary channels, compression, retention or checksums. | P0 ingest contract/P2 rich signals; N07,N08 |
++| R08 Persist binary waveform chunks/sample metadata/hash/URI | Partial; synthetic engineering PASS | Store schema5; packages/waveforms; services/waveforms | N08 current593QA/12Chrome; original+chunk hashes/atomic recovery; old E08 retained |1–5s binary channel blocks and bounded retention work; general public scientific-source/compressed large-file scope not qualified. | P0 ingest contract/P2 rich signals; N07,N08 |
+ | R09 Persist risk events, predictions and agent cases | Partial | DB, ENG | E02 escalation/restart/check-in prediction persistence | Truncated record searches, no full case lifecycle/ground responses; forecast versions not registered artifacts. | P0/P1; N12,N16,N18,N22 |
+ | R10 Persist knowledge documents/chunks and versions | Partial | API, DB, CORP | E02 ten records and summary hashes | One summary chunk/document; no original document hashes, embeddings, page anchors or full ingestion. | P0; N13,N14 |
+ | R11 Persist communications, scenario runs and audit | Partial | DB, ENG, COM | E02 blackout disk restart/audit chain | Resend, round-trip, retention and audit pagination missing; model changes unavailable to audit. | P0; N18,N21,N22 |
+@@ -433,7 +437,7 @@
+ | R13 Canonical synthetic scalar schema and per-channel ordering | Complete | CT, ENG, TEL | E11 malformed metadata/source/time/order/duplicate/rollback tests | Verified for supported synthetic scalar contract, with stricter documented inputs. Public/binary replay and generated OpenAPI are separate R16/R36/R58 gates. | P0; N01 complete |
+ | R14 Explainable risk/status schema | Partial | DET, ENG, UI | E02; E12 single/multi/rate/Gray, versioned rules, per-channel quality and endpoint provenance | N02 backend evidence repaired. Score explicitly uncalibrated; actual panel/browser and advanced evaluation remain. | P0; N02 complete,N03,N11 |
+ | R15 Mission, crew profile and telemetry APIs | Partial | API, ENG, DB | E02 socket-free handler tests | No full generated schemas or live HTTP verification; filtered history only latest capped records; data ownership F02/F03. | P0; N01,N03,N22 |
+-| R16 Waveform read/ingest endpoints | Missing | API waveform catch-all | E08 returns explicit 501 | Neither binary ingest nor authorized clinical/research replay works. | P0 interface/P2 rich replay; N08 |
++| R16 Waveform read/ingest endpoints | Partial; synthetic engineering PASS | API waveform routes/authorized sessions | N08 actual binary/CSV/window/chunk HTTP + Chrome; old E08 retained | Demo-only synthetic operations work; public acquisition stays501 and clinical/operational authority is not granted. | P0 interface/P2 rich replay; N08 |
+ | R17 Authenticated mission streaming | Partial | API, UI | E02 SSE payload/self scope/session expiry | SSE is an allowed alternative. Real reconnect/order/backpressure/multi-client and browser delivery unmeasured. | P0; N03,N22 |
+ | R18 Service-authenticated scalar ingest | Partial | AUTH, API, ENG, TEL | E02 service token; E11 full imported handler/history/SSE/queue path | F02/F03/F11 repaired. Backend N01 contract verified; actual socket/browser and future source adapters remain open. | P0; N01 complete, N03,N08 |
+ | R19 Alert listing and human acknowledgement | Partial | ENG, API, UI | E12; E13 pending202/failure/recovery/409/duplicate guard/recorded-vs-current UI | Software lifecycle safeguards pass; actual browser, long-duration presentation and distinct ground review remain open. | P0; N02 complete,N03 browser,N18,N22 |
+@@ -445,15 +449,15 @@
+ | R25 Six-person updating mission grid, statuses, charts | Partial | UI, UX, ENG, presentation,mission.css | E17 actual six-profile values/provenance,distinct insignias,observed-time trends,Gray/reception/live updates and four-viewports | N04 presentation implemented and browser checked;mandatory user visual/performance gates remain in N04_ACCEPTANCE. Full advanced research system is not certified. | P0; N04,N26 |
+ | R26 Cinematic Earth/spacecraft/orbit/environment/clock | Partial | GL,earth.mjs,UI,mission.css,ENV,assets/earth | E17 real WebGL2 screenshots,camera/asset-failure/blackout checks,local imagery/hash/credit tests | Natural surface/clouds/day-night/atmosphere,schematic solar-wing vehicle/orbit/link and truthful environment/times implemented. Historical textures and illustrative trajectory are labeled. User visual approval/performance gates remain;full ground exchange and live environmental adapters are N18/N19. | P0; N04,N18,N19 |
+ | R27 Integrated alert center, AI cases, link status | Partial | UI, ENG, AG, COM | E13/E15 actual pending/failure/recovery/ack409/one-report and health503/disconnect paths | F13 UI claims repaired; workflow labeled reference rather than executed tools. Full agent/triage and ground response remain open. | P0; N03 browser,N16,N18 |
+-| R28 Synchronized mission timeline and replay | Partial | UI renderReplay, DB history | E13 quality/Earth cutoff; E14 request states; E15 actual stored-time slider/chart | Scalar inspection≤1000 rows; playback clock/full timeline/twin/waveforms remain open. | P0/P1; N03 browser,N06,N08,N10 |
++| R28 Synchronized mission timeline and replay | Partial | UI renderReplay, DB history; N08 Signal archive; N10 replay | E13/E14/E15 retained; N08 source+knowledge prefix/correction replay and Chrome controls | Synthetic waveform and N10 replay work; actual twin/public-source/full integrated timeline acceptance remains open. | P0/P1; N03 browser,N06,N08,N10 |
+ | R29 Responsive 1080p UI, accessibility/reduced motion | Partial | UX,UI,GL,mission.css,design system | E16/E17 actual native200%,all nine routes/four viewports,axe/AX/keyboard/focus/contrast bounds/live announcements;independent quality/reduced-motion checks | Bounded checks pass with raw axe incompletes retained. No formal WCAG/spoken-screen-reader/physical-device certification. N04 visual/performance and N26 integrated gates remain. | P0; N04,N26 |
+ | R30 Blue translucent 360° anatomical twin | Partial | GL,anatomy.mjs,anatomy-runtime.mjs,licensed GLBs | E21 real Chrome reference skin/skeleton/heart/lungs, layers/orbit/zoom/reset and retained schematic; source/derived SHA256 and license manifest | Real translucent generic anatomy foundation exists; personalized data-linked anatomy, picking, physiological motion and complete N05 performance gates remain N05/N06. No clinical-fidelity claim. | P0; N05,N06 |
+ | R31 Measurement-driven heart/respiratory animation | Partial | GL, UI updateCrew | E05 HR/RR frame differences | Not beat/R-peak replay; rate changes reset effective phase; reduced mode freezes motion; 2D has no breathing animation. Browser timing not verified. | P0; N06,N08 |
+ | R32 Evidence-linked region/layer inspection and transitions | Partial | GL, UI, ENG display | E02 evidence helper, E05 thorax warning | Screen-height click bands, no mesh picking/organ data; head risk annotation lacks corresponding evidence highlight; layers cosmetic. No camera focus timeline. | P0; N05,N06 |
+ | R33 LOD, asset budget, WebGL2/2D fallback | Partial | GL,UX,AnatomyScene,source/build manifests | E13/E15 retained;E21 budget/hash/lifecycle tests and real Chrome context-loss/load-error/cancellation/text+schematic Canvas fallback, buffer cleanup and four-size/native200% checks | Plain GLB baseline and progressive component loading implemented. Multiple mesh LODs, DE sustained performance/load/memory evidence and advanced restoration remain open. N03/AC-20 certification unchanged. | P0; N05,N06,N26 |
+ | R34 Seeded baseline+circadian+activity+sleep+noise model | Partial | SIM,sleep.mjs,ledger | E02 retained;E22 deterministic completed sessions/corrections/replay/non-sleep golden | Completed sleep now has an explicit daily lifecycle. Tick sine,synthetic prior without dated baseline archive,individual sleep schedule and scientific longitudinal validation remain F14/N09. | P0; N09,N10 |
+-| R35 Artifacts/missingness/contradictory sensor handling | Partial | SIM, DET, ENG | E02 dropout/suspect/mixed-quality tests | Preset quality flags; no independent sensor-fusion/artifact detector or measured artifact recall. | P0; N08,N09,N11 |
+-| R36 CSV/public replay and separate scalar/binary streams | Missing | SIM, CAT only | E08 no parser/raw files | No actual CSV import/replay, channel alignment, decimation or public waveform stream. | P0 interface/P2 expansion; N07,N08 |
++| R35 Artifacts/missingness/contradictory sensor handling | Partial | SIM, DET, ENG; services/waveforms/signal | E02 retained; N08 finite/gap/declared-quality/rate-abstention controls | Waveform coverage/gaps/UNKNOWN work; declared flags are not independently validated sensor-fusion/artifact detection or measured recall. | P0; N08,N09,N11 |
++| R36 CSV/public replay and separate scalar/binary streams | Partial; synthetic engineering PASS | packages/waveforms; services/waveforms; integrated Signal archive | N08 actual CSV/binary intake/normalization/chunks/window/replay/browser/cold recovery; E08 historical | Strict fictional formats work with separate scalar authority; authentic public waveform execution/validation remains blocked by source/review gates. | P0 interface/P2 expansion; N07,N08 |
+ | R37 Mandatory Tier A robust personal baseline/single+multi/persistence/rate/quality | Partial | SIM, DET, ENG | E12 Tier A v2 single/multi/rate/timer/direction/quality/context; frozen nominal/drift unchanged | N02 rule requirements verified for synthetic scalars. Dated archive/daily learning/version transition and broader/public model evaluation remain N09/N11. | P0; N02 complete,N09,N11 |
+ | R38 EWMA and Tier B Isolation Forest; Tier C if justified | Missing | DET, model cards | E08 robust rules only | No EWMA/multivariate learned detector or comparison experiment. Temporal models only if frozen tests prove improvement. | P1/P2; N07,N08,N11 |
+ | R39 Chronological forecasts, deterioration, uncertainty/calibration | Partial | PRED, ENG, models/forecast-calibration.json | E02 abstention; E03 held-out nominal results | Three metrics/30min only; deterioration abstains, not modeled. No SD target/horizon suite, median AE, scenario-disjoint or public-data calibration. | P1; N09,N11,N12 |
+@@ -470,7 +474,7 @@
+ | R50 Encryption, controlled export, SBOM/security CI | Partial | API reports, DB, PKG | E02 export permission; E08 headers/SQL | Raw DB unencrypted; actual check-ins present. No encrypted backup/key lifecycle, SBOM/secret/dependency scan CI or release signing. | P0/P1; N01,N21,N22 |
+ | R51 OSD-575/656 historical research integration | Partial | CAT, CORP overview, docs/references | E08 catalogue only | No downloaded study metadata/files/license/hash, no discrete longitudinal study explorer. | P1/P2; N07,N13,N20 |
+ | R52 Radiation/environment with RadLab public context | Partial | ENV, SIM, UI, CAT | E02 illustrative env threshold test | Values entirely synthetic. No validated external API ingestion, per-crew shield/location exposure model or dose history UI. | P1; N07,N19 |
+-| R53 BIDMC/Sleep-EDF/PTT-PPG dataset integration | Partial | CAT;acquisition/BIDMC adapter | E25 complete numerics original/card/rights;53focused passes | One BIDMC numerics sample acquired;waveforms,live/replay integration,Sleep-EDF/PTT and verified independent splits absent. | P1/P2; N07,N08,N10 |
++| R53 BIDMC/Sleep-EDF/PTT-PPG dataset integration | Partial | CAT;acquisition/BIDMC adapter; separate N08 fictional codec | E25 original/card/rights retained; N07 source gates and N08 synthetic evidence separate | One BIDMC numerics original is retained; authentic waveform/Sleep-EDF/PTT replay/independent splits absent. Synthetic waveform tests do not close those data obligations. | P1/P2; N07,N08,N10 |
+ | R54 Immune/omics discrete research context only | Partial | CORP, CAT, UI sources | E02 provenance labels; E08 | Correct no-live-omics boundary; actual historical exploration and study/sample/timepoint metadata missing. | P1/P2; N07,N20 |
+ | R55 Voluntary fatigue/cognitive personal tracking | Partial | UI, API checkins, DB | E02 separate actual values; E11 private scope; E14 request states; E15 real early-click exclusion/five timed trials/save/source separation | F04 and request presentation repaired. No longitudinal baseline, mood/consent or validated instrument. Browser timings are approximate automated test inputs. | P1; N01 complete,N03 browser,N10 |
+ | R56 Cited report generation and model cards | Partial | AG, API reports/models, model-cards | E02 human ack/citations/export access | Templated JSON works; no Markdown/PDF report, baseline/trend attachments, model artifact registry, per-case complete provenance or ground review response. | P1; N12,N16,N18 |
+--- before/docs/MASTER_PLAN.md
++++ after/docs/MASTER_PLAN.md
+@@ -1,4 +1,8 @@
+ # ASTRA controlled development roadmap
++
++## N08 full synthetic engineering delivered —2026-10-30; STOP
++
++Owner activated the exact [DE-N08-SYNTHETIC-01](DE_N08_SYNTHETIC_01.md) proposal for one fictional-source build. [Completion](N08_FINAL_ENGINEERING_COMPLETION.md):10/10synthetic branches qualified, strict binary/CSV/schema5 chunks, authenticated API, gap-aware decimation/experimental peaks, real replay UI, rollback/cold recovery and inactive source-bound N06/downstream timing interface.593automated passes/0fail/1existing real-Sleep-pair skip;12real Chrome checks/four viewports pass. No real waveform acquisition/validation, N06 implementation, N02 rule, N10/N16/model or operational-data change. **Formal N08 In Progress**: full N07/public-source/scientific/N06/release gates retained. Historical blocked record below remains historical. Current task expires; no next module or source request follows.
+ 
+ ## N08 consolidated preflight —2026-10-30; dependency/exception BLOCKED / STOP
+ 
+@@ -324,7 +328,7 @@
+ | N05 Anatomical assets and renderer foundation — **In Progress — Deferred** | Legally reusable optimized human/organ geometry; translucent anatomy, organ/skeleton hierarchy, plain GLB baseline, progressive LOD/size budgets. ADR-019 records approved Three.js adapter and release/license decision. R06/R30/R33/R67. Preserve delivered N05-01;remaining work paused by the2026-10-23 priority decision. | Verified N03 evidence under DE-AC20-01;N04 Complete;N05-01 approval exhausted;new bounded resumption approval required | N05-01 delivers loaded generic reference skin/bones/heart/lungs, hash/license manifests, independent layers/camera, progressive group loading and cancellation/fallback/disposal evidence. Full N05 active-camera/telemetry DE protocol≥30FPS reduced quality/60FPS standard target, multi-LOD and load/memory/integrated latency evidence remain outstanding. Combined critical graphics≤20,000,000 bytes remains mandatory. No clinical fidelity or AC-20 certification. |
+ | N06 Data-linked anatomical interaction — **Not Started — Deferred** | Continuous HR/RR timing, actual organ/region picking, layers/labels/evidence focus, head/thorax mapping, replay/live transitions, keyboard control, context-loss recovery. R28/R31–R33/AC02–04/08/20. Retained scope,not a waived requirement. | N01,N02,N05;separate N06 approval and explicit resumption of this deferred priority | Integrated3D judge-profile evidence on the explicitly designated minimum machine:three warmed60-second trials at1920×1080 under DE protocol,≥30FPS active performance mode/60FPS desktop target,unchanged latency budgets. Evidence→region,keyboard,quality/stale freeze,phase continuity and recovery tests. N08 later adds waveform beats;N26 must revalidate final system. No automatic N03/AC-20 closure. |
+ | N07 Public data acquisition foundation — **In Progress; local engineering complete; external sources/splits open; STOP** | Allowlist,version/license/attribution/hash manifests,resumable cache,subject/time splits;small public BIDMC/Sleep-EDF/PTT samples and OSDR/RadLab metadata. R36/R51–R54/R67. [Final local report](N07_FINAL_ENGINEERING_COMPLETION.md) retains three originals/two cards and adds source cards/atomic bundle/inactive descriptors; missing source bytes are not substituted. | N01 Complete; no new exception/acquisition; original source/access/grouping/review gates retained |421passes/0fail/1real-pair skip;212syntax files;7/16full acceptance rows PASS/9open. Actual local intake/cards/cold recovery and synthetic grouped split mechanics pass. Complete Sleep/PTT/named OSD/RadLab metadata, cards and real independent partitions remain; full N07/N13/downstream gates are not closed. |
+-| N08 Binary waveform/CSV ingest and replay — **Not Started; dependency-blocked; STOP** | Chunk table/object persistence,1–5 s binary channels, authorized read/ingest, public/CSV replay, decimation, signal quality/R-peaks/derived values, optional BP only from verified source. R08/R12/R16/R35/R36/R53. | N01,N07; N06 for twin | Chunk integrity/order/auth tests, actual public replay UI and beat synchronization with source/license labels, memory/throughput/retention checks; no per-sample JSON. |
++| N08 Binary waveform/CSV ingest and replay — **In Progress; synthetic engineering10/10 qualified; STOP** | Chunk table/object persistence,1–5 s binary channels, authorized read/ingest, public/CSV replay, decimation, signal quality/R-peaks/derived values, optional BP only from verified source. R08/R12/R16/R35/R36/R53. [Synthetic completion](N08_FINAL_ENGINEERING_COMPLETION.md). | N01,N07; N06 for twin. Task-only DE-N08-SYNTHETIC-01 accommodates synthetic sequencing only. | Synthetic API/UI/binary/CSV/replay/chunk/recovery/quality/experimental-peak/resource/privacy branches pass;593QA/12Chrome checks. Actual public replay and N06 integrated beat synchronization remain source/authority/review gated; original full acceptance is not waived. |
+ | N09 Longitudinal simulator and baseline archive — **In Progress; N09-D01 delivered; STOP** | Dated personal baselines, actual24 h circadian/sleep/activity schedules, multiday deficit/drift, independent artifact/contradiction labels, versioned scenario manifests and stop behavior. R07/R20/R34/R35/R37. [N09-D01 completion](N09_D01_COMPLETION.md) covers only the selected-crew fixed HR demo. | N01,N02,N07,N08 for full module; [DE-N09-DEMO-01](DE_N09_DEMO_01.md) supported only the delivered separately approved synthetic scalar slice. No full-module prerequisite waiver or follow-on approval. | Seed/label replay equality, clock-cadence invariance, true multiday evidence, time/crew/scenario separation and no label leakage; preserve primary demo. N09-D01's ownership/provenance/persistence/restart/rollback/role/queue tests and bounded browser evidence pass, but cannot close these full-module gates. |
+ | N10 Sleep, cognition and countermeasures — **In Progress; synthetic engineering10/10 qualified; STOP** | Sleep-stage/schedule/deficit, consented optional mood/task checks, personal longitudinal task baseline, exercise sessions/workload/adherence/movement, synchronized replay. R28/R53/R55/health domains. [Final synthetic report](N10_FINAL_ENGINEERING_COMPLETION.md). | N01,N03,N07,N09 | Actual browser early-click/range/skip/task timing tests, personal scope, daily/stage aggregations, countermeasure histories, no diagnostic score/ranking; explicit device limits. Synthetic acceptance passes under DE-N10-SYNTHETIC-01; original prerequisites/reviews/release gates remain. |
+ | N11 Explainable advanced anomaly evaluation | EWMA and multivariate Isolation Forest or measured equivalent, sensor quality/fusion, reproducible train/eval/registry; temporal model only if better than simpler baseline. R35/R37/R38/R59. | N02,N07–N10 | Precision/recall/false alerts per crew-day/latency/scenario matrix, artifact recall/false failure, subject/time/scenario holdouts, interpretable contributors and CPU budget. Document rejected models. |
+--- before/docs/MODULE_TRACKER.md
++++ after/docs/MODULE_TRACKER.md
+@@ -1,4 +1,12 @@
+ # Module tracker
++
++## N08 full synthetic engineering delivered —2026-10-30; STOP
++
++[Completion](N08_FINAL_ENGINEERING_COMPLETION.md)/[matrix](../artifacts/n08-engineering-20261030/requirement-matrix.json):10/10synthetic branches implemented/qualified under explicit owner activation. Genuine binary/CSV → transaction/chunks → verified windows → integrated replay → cold recovery, full role/quality/UNKNOWN boundaries,593automated passes/0fail/1existing real-source skip and12real Chrome checks/four viewports. Source/knowledge clocks and corrections remain bound, missing data never becomes an alert. Full public-waveform/N07/scientific/N06/release gates stay open; **formal N08 In Progress**, all unrelated statuses unchanged. N02/ack/Earth/N10/N16/research evidence preserved; no source acquisition, inference or operational/sealed DB access. Current task permission expires; STOP, no automatic N09/N11 or source request.
++
++## N08 full synthetic engineering activated —2026-10-30
++
++Owner explicitly activated the reviewed [DE-N08-SYNTHETIC-01](DE_N08_SYNTHETIC_01.md), exact original SHA4255454d..., and authorized one consolidated implementation. Consistency passes; no unrelated exception or prerequisite is relaxed. Scope: strict fictional binary/CSV formats,1–5s durable chunks, authorized demo-only API, deterministic time/quality/decimation/experimental peak processing, inactive timestamped twin/downstream interfaces, actual replay UI/browser and focused regression/recovery/resource evidence. [Contract](N08_SYNTHETIC_CONTRACT.md) freezes finite policies. N08 In Progress once source implementation begins; original public-source/N07/N06/review/release gates stay open. No operational/sealed database, downloads/model/N16 worker, N02 monitoring or existing N10 scientific behavior changes.
+ 
+ ## N08 consolidated preflight delivered —2026-10-30; implementation BLOCKED / STOP
+ 
+@@ -452,7 +460,8 @@
+ | N15 Offline language-model assistance | **In Progress; N15-10 delivered; inactive/STOP** | [N15-10](N15_10_COMPLETION.md):92focused passes; separate saved-output gate, explicit quotation ACCEPT/attribution only, numeric Hz veto. No reviewed factual rule: factual answers ABSTAIN. N15-08B discrimination failure preserved; no prompt promotion, independent scientific/clinical/release validation or integration. |
+ | N16 Executed Crew Health Agent | **In Progress; authorized synthetic engineering4/4 qualified; STOP** | [Final report](N16_MASTER_COMPLETION_REPORT.md): four actual SQL tools/coordinator/18events/cold recovery0, standalone recorded demo,583focused passes;4fresh native starts and exact source integrity. Earlier partial campaign/G INCONCLUSIVE preserved. No operational/LLM integration or full prerequisite closure; N10/N12/N14 and conditional N15/full gates retained. |
+ | N10 Sleep, cognition and countermeasures | **In Progress; synthetic engineering10/10 qualified; STOP** | [Final report](N10_FINAL_ENGINEERING_COMPLETION.md); task-only exception delivered/expired. Original N03/N07/N09 and all release/review gates remain. |
+-| N08,N11–N12,N17–N26 | **Awaiting separate approvals**,no implementation authorized | Existing dependency/verification table in MASTER_PLAN retained |
++| N08 Binary waveform/CSV ingest and replay | **In Progress; synthetic engineering10/10 qualified; STOP** | [Completion](N08_FINAL_ENGINEERING_COMPLETION.md); full N07/authentic-source/N06/review/release gates remain; no follow-on authority. |
++| N11–N12,N17–N26 | **Awaiting separate approvals**,no implementation authorized | Existing dependency/verification table in MASTER_PLAN retained |
+ | AC-20 | **Open / Unverified;release blocker** | N06 integrated3D evidence and N26 final revalidation;minimum judge hardware still undesignated |
+ 
+ Recommended priority branch:N07→N13→N14→optional N15. DE-N07-N13-01 adds only the initial publication-slice sequencing exception;full prerequisite edges remain. Full N16 remains gated on N02,N10,N12,N14,and N15 if used;a static template/allowlist is not an executed agent. N10/N17/N18's N03 prerequisites are outside DE-AC20-01's N04/N05-only exception and need satisfaction or a separately approved explicit exception before implementation. Neither completed-sleep repair nor anatomy deferral closes those gates. No module IDs,medical rules or release criteria are changed.
+--- before/docs/N08_FINAL_ENGINEERING_COMPLETION.md
++++ after/docs/N08_FINAL_ENGINEERING_COMPLETION.md
+@@ -1,3 +1,95 @@
++# N08 full synthetic engineering completion —2026-10-30
++
++**N08 FULL ENGINEERING MISSION RESULT: ENGINEERING COMPLETE within the explicitly approved synthetic scope. Formal N08: In Progress.** All ten synthetic engineering branches are implemented and qualified. Actual public waveform validation, scientific review, full N07 prerequisite satisfaction and N06 anatomical-twin execution are not supplied by synthetic testing.
++
++[Exact contract](N08_SYNTHETIC_CONTRACT.md) · [activated exception](DE_N08_SYNTHETIC_01.md) · [current matrix](../artifacts/n08-engineering-20261030/requirement-matrix.json) · [end-to-end source/output packet](../artifacts/n08-engineering-20261030/e2e.json) · [593-pass consolidated QA](../artifacts/n08-engineering-20261030/qa-final.txt) · [105-pass final boundary checks](../artifacts/n08-engineering-20261030/qa-boundary-final.txt) · [real Chrome acceptance](../artifacts/n08-engineering-20261030/browser-02/report.json) · [preservation](../artifacts/n08-engineering-20261030/final-validation.json).
++
++## Authority and original requirements
++
++The owner explicitly activated the exact DE-N08-SYNTHETIC-01 proposal, original SHA256 `4255454d34192bd04398957884c57fe872fbb4c31f07ee0430445a9ac6a32ce1`. It permits one consolidated fictional-source engineering/UI/QA campaign in fresh synthetic test/application instances. No operational or N16 sealed database, N16 worker, real patient-source ingestion, external acquisition, model inference, deployment or unrelated exception is authorized. The original proposal/report and pre-activation blocked evidence are retained unchanged under the old artifact root and this mission's originals directory.
++
++The authoritative module remains **Binary waveform/CSV ingest and replay**, with N01/N07 prerequisites and N06 for twin. The full primary Markdown was read and the preserved PDF compared offline with the previously pinned parser; pages6/17/27 retain the schema, short binary chunks, separate scalar stream, decimation and performance guidance. See [PDF comparison](../artifacts/n08-engineering-20261030/primary-pdf-comparison.json). W1–W10 below are the existing audit groups, not newly invented official requirement IDs. Their original full-scope matrix remains unchanged in artifacts/n08-final-20261030.
++
++| Group / original IDs | Delivered and executed synthetic engineering | Qualification | Full-source / formal gap |
++|---|---|---|---|
++| W1 R08/R12 — binary chunks | ASTRAWV1 v1, explicit float32LE/header/time/channel/unit/source/quality validation; original BLOB plus hashed1–5s channel blocks; atomic schema5 commit, append-only revisions, idempotency and cold recovery. | PASS | Full N07 remains open. |
++| W2 R16/R35 — authorized API | Actual binary/CSV intake, verified source list, bounded windows and raw binary chunk responses; trusted session role/crew, owner-bound corrections, denied/invalid/timeout responses. | PASS | No operational/public clinical ingest permission. |
++| W3 R36/R53 — CSV/public adapters | Strict versioned synthetic CSV, exact grid/units/columns, empty-cell gaps, full rejection with row/column reason, deterministic normalization and genuine file-picker import/replay. | PASS for synthetic CSV | Complete approved public waveforms/license/time provenance absent. Public acquisition stays501. |
++| W4 R28/R36 — replay/UI | Integrated Signal archive, source/channel/cutoff/range/seek/play/pause/resume; real source timestamps, source and knowledge cutoffs, failed/empty/loading/denied/Earth states. | PASS | Not live acquisition; broader N17/offline/release evidence remains separate. |
++| W5 R12/R36 — decimation | Bounded min/max bins retain actual extrema timestamps, explicit gap counts and source lineage; SVG never joins across a missing bin. | PASS | No large-file or general scientific reconstruction claim. |
++| W6 R35/R36 — quality | Declared quality, finite coverage and UNKNOWN/PARTIAL/KNOWN remain separate from valid engineering format and clinical validity; corrupt persisted evidence fails closed. | PASS | Actual sensor/artifact and scientific quality validation unverified. |
++| W7 R35/R36/R53 — peaks/derived values | Source-bound experimental ECG candidate peaks, >=250ms separation, quality/coverage/history-gated descriptive rate; observed statistics; BP always UNKNOWN. | PASS for known fictional controls | No clinical R-peak validation or verified BP source; real signal/reviewer gate remains. |
++| W8 R28/R31/R36 — beat/twin timing | Actual candidate frame/source timestamp/hash/revision to chunk-index/frame-offset mapping, exposed as versioned INACTIVE_N06_GATE interface. | PASS for authorized inactive interface | **Actual anatomical animation/synchronization NOT IMPLEMENTED/NOT TESTED: N06 deferred.** |
++| W9 R35/R50/R53 — privacy/integrity | Least-privilege authenticated fictional crew, server-owned actor, safe IDs/no paths/SQL/URLs, expected source SHA, immutable originals/chunks, non-mutating projections, no public-source relabeling or private-data requests. | PASS | No production identity, real patient or independent clinical approval claimed. |
++| W10 R08/R12/R36 — reliability/resources | Finite file/time/channel/rate/sample/disk/retention limits, rollback, interruption/deadline/cancellation, restart and cold-process recovery, bounded chart requests and real cleanup/resource evidence. | PASS | No power-loss, unbounded streaming, absolute RSS, physical offline or cross-platform certification. |
++
++**Counting:10/10 synthetic groups implemented and qualified; this is not10/10 unconditional original full-module acceptance.** W3 public-source execution and W8 actual twin integration explicitly remain source/authorization blocked. The broader scientific/independent-review and release obligations are retained rather than weakened.
++
++## Backend, formats and durable state
++
++`packages/waveforms.mjs` implements two exact formats, not generic EDF/WFDB or arbitrary binary/CSV support. ASTRAWV1 has an8-byte magic, version/endian/float32 markers, bounded canonical UTF-8 metadata and exact interleaved frames. CSV has a fixed preamble, canonical metadata, exact timestamp/channel[unit] header and unquoted decimal grid. Unsupported versions, encodings, units, fields, timestamps, lengths, channels, formulas/quotes, duplicate or reordered rows, malformed UTF-8, infinities and noncanonical NaNs reject. Explicit missing values are canonical float32 NaN/empty CSV cells, never zeros.
++
++Bounds were frozen before execution:256,000input bytes,8KiB metadata,1–3channels, authorized50/100/125/250/500Hz rates, integer1–60s recordings and5s blocks with1–4s tails. No resampling, conversion or unsupported gap interpolation occurs. CSV decimal-to-float32 normalization is versioned; original and normalized digests are distinct. Input metadata labels are an authored-source declaration, not independently authenticated biomedical measurements.
++
++Additive Store schema5 creates waveform_sources and waveform_chunks only, with foreign-key provenance and update/delete-rejection triggers. Prior schema1–4 and N02/N10 tables retain their behavior. Samples remain binary BLOBs, not a JSON object per sample. Composite crew/recording/revision/channel/index keys give stable chunk addresses through the authorized binary endpoint; rate/unit/source are verified from the linked immutable source metadata. Source insertion, all chunks and successful import audit commit in one transaction. Repeated identical owned source imports return200/idempotent without duplicate audit or chunks; changed same-version inputs and foreign-owner corrections reject. Corrected samples append a revision bound to the previous full-file hash; old bytes remain.
++
++Retention preserves at most64source revisions and8MiB of original plus normalized payload per crew. Further writes reject at capacity; reads do not evict history. This payload cap excludes ordinary application schema/audit overhead, which is measured separately. No whole large waveform is accepted; processing is bounded by the small input cap and chart bins. This is not a general eight-minute/full-night waveform importer.
++
++The application retains its existing read/write SQLite connection for authorized synthetic instances; N08 does not assert that this connection or the filesystem is immutable. Append-only waveform tables, transactional writes and actual before/after records establish the tested read-side nonmutation boundary. No operational database was opened to verify it and no sealed N16 database was rehashed.
++
++## API and privacy contract
++
++All waveform operations are demo-only and authenticated. Demo Administrator and self-scoped Astronaut can import; those roles plus Mission Control/Flight Surgeon can read. Viewer/Researcher/System Administrator cannot access raw waveforms. Caller role/crew headers do not override server-owned sessions. Source metadata crew must match the trusted request crew. There is no caller-selected server file, SQL, URL or database path.
++
++- POST `/v1/ingest/waveforms?format=binary|csv`: raw exact media type, X-Waveform-Crew and full X-Waveform-SHA256;201committed/200idempotent. Route-bound POST `/v1/crew/{crew}/waveforms` is equivalent.
++- GET `/v1/crew/{crew}/waveforms?before=...`: verified latest owned-source revisions known by the cutoff, UNKNOWN if absent.
++- GET `/v1/crew/{crew}/waveforms/{recording}?before=...&channel=...&from_ms=...&until_ms=...&points=...`: bounded source-prefix/window bins with explicit required end, provenance and quality. Unknown/duplicate query fields reject.
++- GET `/v1/crew/{crew}/waveforms/{recording}/chunks/{channel}/{index}?before=...`: actual float32LE bytes with chunk/source SHA, source start and sample count headers.
++
++The route catalogue is updated. Unsupported public acquisition remains HTTP501; no fake200 is supplied. Upload streams have an8s deadline and byte cap; interrupted streams cannot commit. Parser failures retain only bounded hash/format/byte count/reason in audit, never raw content, credentials or host paths. Source and all chunk hashes/lengths/metadata are checked before a source/window/chunk is returned; corrupted data is unavailable, not repaired or made healthy.
++
++## Replay, signal processing and application interface
++
++Signal archive is integrated into the existing demo app and offline shell. Every source/file/generator/import/channel/range/playback control works. Source selection shows an explicit loading state and clears old samples while replacement data is pending. Cancellation/navigation prevents stale rendering or late upload admission; server commitment uncertainty is handled by hash idempotency. The original N10 UI/module and existing Health Agent fixture viewer remain unchanged and were regression-tested.
++
++All sample analysis uses only the requested `[from_ms,until_ms)` prefix/window; source end and server-owned mission knowledge time must both precede the cutoff. Host playback time does not advance source records or mission monitoring. Corrections are replayed only once their knowledge cutoff is reached. Source time, mission knowledge time and host submission are separately displayed. Replay reads never update the source/audit or scalar/alert/baseline/comms records.
++
++Positive ECG local maxima above0.8mV with250ms refractory spacing are **experimental fictional-control candidates**, not validated R peaks. >=3candidates and complete good window coverage are needed for a descriptive mean-interval rate. Gap/poor/insufficient data withholds it. There is no PPG-to-BP estimate, clinical classification, diagnosis, medical recommendation or alert. Peak-to-chunk timing exists as an inactive future N06 interface; no anatomy, N09 simulation, N10 calculation, N11 model, N12/N16 dispatcher or N14/N15 support rule consumes it automatically.
++
++## Executed acceptance and QA
++
++The saved [end-to-end packet](../artifacts/n08-engineering-20261030/e2e.json), [binary original](../artifacts/n08-engineering-20261030/synthetic-original.bin) and [CSV original](../artifacts/n08-engineering-20261030/synthetic-original.csv) demonstrate actual authored source → strict parser → canonical normalization → transaction/chunks → verified window → replay → disk restart recovery. A genuinely separate Node process reopens the disposable synthetic database, verifies binary+CSV sources/windows and performs zero re-imports. A process exiting inside an uncommitted transaction leaves no partial source/chunks/audit after recovery. This is process-interruption evidence, not power-loss certification.
++
++Final consolidated run: **594cases,593PASS/0FAIL/1SKIP**,42.775s. The skip is the preexisting unavailable complete real Sleep-EDF pair and supplies no N08 credit. This includes100N08 controls and257affected N01/N02/N09/N10/UI/trace-view regressions, plus236passing offline source/claim/relevance controls. Tests deliberately exclude all expired N16 SQL/native qualification suites and model inference. Final105affected N08/UI/API boundary cases pass after an additional missing/malformed actor-identity rejection guard; these overlap the consolidated run and are not counted again. No skips are reported as passes. Existing176baseline checks remain covered by the affected regression set.
++
++Controls exercise malformed/truncated/oversized binary/CSV, each rate/tail, canonical missing values, exact chunks/hashes, role/crew/header forgery, bounded audit, duplicate/revision conflicts, source/cutoff/range errors, corruption, complete/gap/poor-quality controls, exact candidate times, BP UNKNOWN, transaction rollback, storage capacity, cancellation/deadline, delayed responses, no stale chart/source binding, no read mutations, cold recovery, actual HTTP and accept-all/reject-all substitutes. Resource, API and viewer tests operate on fresh memory/OS-temp synthetic stores only.
++
++Real installed **Chrome156.0.8078.74** passes **12/12browser checks**, four viewports1920/1366/768/390,12native Tab transitions plus native ArrowRight seek, actual file-picker CSV import/correction, binary import, gap/channel/range/play/pause/resume/seek, invalid files/cutoffs, injected503 recovery, source history, restart, crew/role denial, Earth exclusion and preserved N10/Health Agent UI. Seven screenshots and zero captured JavaScript errors are saved. Expected401/422/403 and injected503 responses are retained as negative-control evidence. Two browser launches used separate disposable DB/profile/file roots, all cleaned. Run01failed on an asynchronous test assertion; it remains failed. Run02passes after explicit loading/wait behavior, not a relaxed coverage assertion. Browser acceptance does not establish WCAG conformance, target-device GPU/FPS, real sensor timing or physically Internet-disconnected operation.
++
++Ordinary failures are preserved: initial generator omitted synthetic:true and was rejected before ingestion; first88-case QA had three test-fixture defects (wrong audit method, caller-supplied login crew assumption and oversized CSV benchmark), then88/88passed. The first integrated run had the obsolete501expectation; a subsequent test-only missing await was corrected. Historical reports/journals are not rewritten as passes. No safety/source/authorization guard was bypassed.
++
++## Resources and noninterference
++
++[Fresh-process benchmark](../artifacts/n08-engineering-20261030/performance/resources.json):30s three-channel125Hz input; binary45,486bytes/CSV198,074bytes. Twenty binary decodes7.338ms, five CSV decodes56.542ms, actual import3.470ms,20verified/decimated windows26.506ms. Process RSS87,392,256bytes; kernel maxRSS85,344KiB; temporary SQLite+WAL+SHM650,776bytes, removed. These are observed timings/high-water figures, not enforced RSS quotas or worst-case guarantees. Combined-test process memory includes preceding application/DOM fixtures; its separate measurement is retained in resources.json.
++
++Passing browser workflow11.209s; Node process observed RSS83,591,168bytes/kernel maxRSS87,704KiB, temporary authored upload files266,164bytes,3durable source revisions/2visible sources. Browser/GPU process memory is not measured by those Node figures. Upload8s, input/retention/array limits, sequential bounded chart requests and finite test scopes are enforced in code; sampled memory/storage do not establish absolute host limits. There are no N08-owned native workers. Test child processes exit and browser/server/profile/input/database roots clean up.
++
++No scientific acquisition, external request, dependency installation, model execution, N16 worker/source, operational database/API, monitoring-rule, clinical-policy or N06 implementation was performed. All browser application URLs use loopback/local assets. Background-network-disabling flags were used, but this is not OS-level browser network-isolation evidence. Separate noninterference tests compare telemetry, risk, baseline, communication, cognition and waveform records; N08 never feeds derived values to N02. Existing human acknowledgement and Earth-delivery paths pass unchanged.
++
++## Exact changes, preservation and formal closure
++
++New: packages/waveforms.mjs; services/waveforms/service.mjs and signal.mjs; apps/mission-control-web/waveforms.mjs and waveforms.css; tests/n08.test.mjs and n08-frontend.test.mjs; scripts/browser-n08.mjs; docs/N08_SYNTHETIC_CONTRACT.md; this mission's artifact root. Modified existing code: Store additive schema5, Server narrow waveform branch/catalogue, app navigation/mount/disposal, index/style/offline shell entries, explicit smoke/DOM import mappings, browser driver task routing/cleanup, integration501expectation and schema-version test. Exact old/new hashes and unified diffs are in the artifact inventory; governance changes are separately listed. No package or unrelated implementation is changed.
++
++The1,827-file before inventory includes approved scientific originals, application/agent/research code and prior N07/N08/N10/N16 evidence. Final preservation verifies all protected files except the explicit authorized edits; original blocked report/proposal and each intentionally changed old file are separately preserved. Engine/detector/comms/simulator/N10 module/fixture viewer/N14/N15 and N16 source/worker/evidence bytes remain pinned. No operational or sealed database-byte comparison is claimed: neither was accessed or rehashed. See final-validation.json for exact counts, hashes, table-row preservation and changed-file inventory.
++
++**Formal N08 remains In Progress.** Genuine blockers: complete approved authentic public waveform/rights/time/quality evidence and its independent scientific review; full N07 source/split obligations; N06 authorized implementation/integrated beat synchronization; original release/hardware/privacy/independent acceptance gates. Synthetic engineering does not close these requirements. N01/N02/N04 stay Complete; N03 Partial/AC-20 Open; N05/N06 deferred; N07/N09/N10/N13/N14/N15/N16 and all other module statuses/review gates remain unchanged. N15 rule stays inactive and prompt unpromoted.
++
++N09/N11 now have a tested inactive synthetic chunk/quality/peak-time interface available for a future separately approved integration; no automatic prerequisite satisfaction, source/model training or next-module authority follows. Exactly one justified next decision is authentic-source review/acquisition and validation authority for one complete public waveform under retained N07/N08 requirements. It is not started. **STOP; this consolidated task and unused test/startup permissions expire at delivery.**
++
++---
++
++## Preserved historical report — pre-activation blocked mission
++
+ # N08 consolidated mission result —2026-10-30
+ 
+ **N08 FULL MODULE MISSION RESULT: BLOCKED. Formal N08: Not Started; dependency/exception blocked.** This is a genuine pre-implementation authority boundary, not an ordinary coding failure. All independently authorized discovery, concrete exception preparation, existing-source/API baseline QA and preservation are delivered. No N08 feature implementation or qualification is claimed.
+--- before/docs/SESSION_HANDOFF.md
++++ after/docs/SESSION_HANDOFF.md
+@@ -1,4 +1,14 @@
+-# ASTRA session handoff — N08 preflight blocked; new exception proposed/inactive; STOP
++# ASTRA session handoff — N08 synthetic engineering complete; formal In Progress; STOP
++
++## LATEST N08 full synthetic engineering mission —2026-10-30; delivered / STOP
++
++Read [completion](N08_FINAL_ENGINEERING_COMPLETION.md), [contract](N08_SYNTHETIC_CONTRACT.md), [matrix](../artifacts/n08-engineering-20261030/requirement-matrix.json), [real browser](../artifacts/n08-engineering-20261030/browser-02/report.json), [end-to-end](../artifacts/n08-engineering-20261030/e2e.json) and [preservation](../artifacts/n08-engineering-20261030/final-validation.json). Owner explicitly activated exact DE-N08-SYNTHETIC-01 proposal; one complete fictional-source campaign delivered.10/10synthetic engineering branches pass: raw binary/strict CSV, atomic append-only schema5 original/chunk storage, role/crew-bound API, source/knowledge cutoff/revisions, bounded extrema/gap views, experimental source-time candidates/BP UNKNOWN and inactive N06 timing interface, actual integrated Signal archive/replay and cold process recovery0.
++
++Final consolidated593PASS/0FAIL/1SKIP of594cases; the skip is the retained unavailable real Sleep-EDF pair, not N08 acceptance. Additional105affected final identity/UI/API checks pass but overlap; no double counting. Actual installed Chrome156.0.8078.74passes12/12checks/four viewports/12native Tab transitions/real ArrowRight seek, binary and file-picker CSV/correction, gaps/channels/play/pause/resume/ranges/role/Earth/restart/error recovery. Two browser launches, all disposable DB/profile/file roots cleaned; failed first async assertion and initial fixtures remain failed/preserved. Final source syntax and evidence pins are in final-validation. Fresh-process benchmark45,486binary/198,074CSV bytes, import3.470ms/20windows26.506ms, Node RSS87,392,256bytes/kernel85,344KiB, tempSQLite650,776bytes; sampled/kernel observations, not hard memory caps.
++
++No acquisition/install/model/N16 native/operational or sealed database, N02 rule, N10 module, N06 anatomy, acknowledgement/Earth or N14/N15 policy change. Existing baseline/API/smoke/trace-view/source/claim controls pass. Current payload cap256KB,1–60s/rates50–500Hz,1–3channels/1–5sblocks;64revisions/8MiB percrew reject at capacity, preserve originals; no large EDF/WFDB or clinical parser claim. Opening archive does not run tools/models or feed scalar monitoring.
++
++**Formal N08 In Progress.** Full approved authentic waveform/rights/scientific quality/reviewer obligations, full N07 and actual N06 twin/release gates remain open. N01/N02/N04 Complete; N03 Partial/AC-20 Open; N05/N06 deferred; N07/N09/N10/N13/N14/N15/N16 and other statuses unchanged. N15 factual rule inactive/prompt unpromoted. No current implementation or unused permission survives delivery. Exactly one justified next decision is separately approved authentic-source acquisition/review/validation for one complete public waveform; do not start it, N09, N11 or another module automatically. Historical preflight below is retained.
+ 
+ ## LATEST N08 consolidated mission —2026-10-30; BLOCKED before implementation
+ 
+--- before/AGENTS.md
++++ after/AGENTS.md
+@@ -3,6 +3,7 @@
+ Read `docs/SESSION_HANDOFF.md`, `docs/MODULE_TRACKER.md`, `docs/FEATURE_AUDIT.md`, `docs/MASTER_PLAN.md`, `docs/DECISIONS.md`, and the relevant source before changing code. The primary specification is `research/ASTRA_Deep_Research.md` (read completely before a new architecture change); compare `research/ASTRA_Deep_Research.pdf` for presentation details. Original root research files are preserved.
+ 
+ ## Permanent user approval workflow — effective 2026-10-17
++- **Latest N08 full synthetic engineering mission —2026-10-30; ENGINEERING COMPLETE / STOP.** Owner explicitly activated exact DE-N08-SYNTHETIC-01 and authorized one consolidated fictional-source build. Read [completion](docs/N08_FINAL_ENGINEERING_COMPLETION.md), [contract](docs/N08_SYNTHETIC_CONTRACT.md), [matrix](artifacts/n08-engineering-20261030/requirement-matrix.json), [real Chrome](artifacts/n08-engineering-20261030/browser-02/report.json), [preservation](artifacts/n08-engineering-20261030/final-validation.json).10/10synthetic branches qualified: strict ASTRAWV1/CSV, immutable original+1–5s channel BLOBs/schema5, authenticated crew/role/owner-bound APIs, source+knowledge replay/corrections, bounded extrema/gaps/quality/experimental peaks, BP UNKNOWN/inactive N06 timing interface and integrated Signal archive.593automated passes/0fail/1existing missing real-Sleep-pair skip;105final affected controls overlap, not extra distinct tests. Actual installed Chrome156.0.8078.74passes12/12checks/four viewports/12native Tab transitions/native cursor/file-picker/correction/restart/privacy controls; two launches and all temporary roots closed.219syntax files pass. Original failed fixtures/browser01/blocked preflight preserved. Finite256KB/1–60s/1–3channels/50–500Hz inputs,64revisions/8MiB percrew payload cap reject at capacity; no large/general medical parser claim. Fresh-process import3.470ms/20windows26.506ms/RSS87,392,256bytes/kernel85,344KiB/tempSQLite650,776bytes; observed not absolute resource guarantee. **Formal N08 In Progress**: full approved real waveform/N07/source/review/N06-twin/release requirements remain open. No N16 worker/sealed/operational DB/model/acquisition/N02 rule/N10 module/N14–15 policy change. All unrelated statuses/reviews preserved, N15 rule inactive/prompt unpromoted. Current task/exception permission expires at delivery; no automatic source request, anatomy, N09/N11 or another module.
+ - **Latest N08 consolidated mission —2026-10-30; implementation BLOCKED / STOP.** Read [report](docs/N08_FINAL_ENGINEERING_COMPLETION.md), [matrix](artifacts/n08-final-20261030/requirement-matrix.json), [inactive proposal](docs/DE_N08_SYNTHETIC_01.md) and [preservation](artifacts/n08-final-20261030/final-validation.json). Exact N08 is Binary waveform/CSV ingest and replay, dependencies N01/N07 and N06 for twin. N07 remains In Progress/N06 deferred; no preexisting N08 exception exists. Owner Phase3 explicitly prohibits activating a newly authored unreviewed exception. Proposed DE-N08-SYNTHETIC-01 is INACTIVE, no N08 feature/schema/UI or source acquisition implemented. Existing-source/N01/N02/API baseline223PASS/0FAIL/1real-Sleep-pair SKIP, five new artifact-only controls prove401/501/no chunk or alert mutation and inactive N07 descriptor; not N08 qualification.0/10full N08 groups implemented/qualified. Original code/N07/N10/N16/source/evidence and other statuses/gates unchanged; no operational/sealed DB, listener/browser/N16 worker/model/network/mount/permission action. Formal N08 Not Started/dependency-blocked. Exact next permission: explicitly activate the reviewed DE-N08-SYNTHETIC-01 and authorize one consolidated synthetic build; no automatic activation, real-data/twin expansion or other module.
+ - **Latest N07 full local engineering mission —2026-10-30; ENGINEERING COMPLETE WITH EXTERNAL GATES / STOP.** Read [report](docs/N07_FINAL_ENGINEERING_COMPLETION.md), [contract](docs/N07_LOCAL_ENGINEERING_CONTRACT.md), [inventory](artifacts/n07-final-20261030/source-inventory-final.json), [matrix](artifacts/n07-final-20261030/requirement-matrix.json) and [preservation](artifacts/n07-final-20261030/final-validation.json). Owner authorized retained-local-source engineering only, no new exception/acquisition. Three N07 originals/2retained dataset cards verify;3new structural source cards/blank review packets and inactive downstream descriptors, atomic content-addressed bundle and cold recovery0 delivered. Two N13 PDFs/33existing evidence-unit specifications are inventory-only/unchanged. Synthetic12-unit7/2/3group/time split mechanics pass; actual patient/experimental splits remain blocked/N/A.421tests pass/0fail/1real-Sleep-pair skip;92affected final N07 controls pass;212syntax files clean. Directory-handle post-rename readback defect reproduced with disposable files, fixed by closing synced handles before reacquiring; original failure retained. Existing1,692pins preserved except intended governance; all old executable/N10/N16/scientific/model/evidence bytes unchanged. Zero external requests, model, operational/sealed DB, N16 worker, source/mount/permission or N02 change.7/16original acceptance rows pass;5partial/4blocked require missing Sleep/PTT/RadLab/named OSD source/rights/cards/real grouping evidence. Formal **N07 In Progress**; other statuses/reviews/gates retained, no scientific approval fabricated, N15 rule inactive. Task authority expires; STOP, no automatic acquisition or next module.
+ - **Latest N10 full synthetic engineering mission —2026-10-30; ENGINEERING COMPLETE / STOP.** Owner explicitly activated DE-N10-SYNTHETIC-01 and authorized one consolidated synthetic implementation/UI/QA campaign. Read [final report](docs/N10_FINAL_ENGINEERING_COMPLETION.md), [contract](docs/N10_CONTRACT.md), [browser](artifacts/n10-final-20261030/browser-04/report.json) and [preservation](artifacts/n10-final-20261030/final-validation.json). All10groups pass; schema4 append-only/source-bound ledger, sleep/stage/schedule/descriptive accounting, consent/private same-person task reference, exercise/adherence/movement, dual-time replay and integrated Sleep & resilience page delivered.257automated+12file-only evidence controls pass/0final failures/skips; real installed Chrome156passes10/10groups/four viewports/12native keyboard transitions/20actual timed trials,16records recovered/replay0;204syntax files clean. Earlier failed fixtures/browser runs preserved. Four browser launches use fresh temp DB/profile and clean up; no operational/sealed DB/N16 worker/model/acquisition/N02 rule or research-policy change. Full source/evidence preservation pinned; no sealed DB rehash. Synthetic engineering complete only: **formal N10 In Progress**, original N03/AC20/N07/N09/transitive/scientific/release gates retained; all other module statuses/reviews unchanged. Task/exception permission expires at delivery, no automatic next module/integration.

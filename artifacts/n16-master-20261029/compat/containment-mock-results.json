@@ -1,0 +1,313 @@
+{
+  "scope": "DETERMINISTIC_MOCKS_ONLY",
+  "actual_worker_starts": 0,
+  "SQL_operations": 0,
+  "database_files_opened": 0,
+  "mount_changes": 0,
+  "note": "Positive mount fixtures and errno cases are synthetic test inputs, not observations of the blocked runtime.",
+  "reports": [
+    {
+      "case": "EACCES",
+      "qualified": true,
+      "diagnostic": {
+        "schema_version": "astra.n16.containment-diagnostic.v1",
+        "source": {
+          "source_id": "astra.n16.designated-synthetic.elevated.v1",
+          "sha256": "4b1a3d8d9bdb832ae54b35a43e4412f18914756984893f8cb181b37955caff73"
+        },
+        "stage": "containment",
+        "proof": {
+          "kind": "PROC_SELF_MOUNTINFO",
+          "namespace": "mnt:[42]",
+          "mountinfo_sha256": "cd9996cbc69b94e2f7986ec48c56ffe78500d6c1b559598897ceb3c49a735ec1",
+          "targets": [
+            {
+              "target": "root",
+              "mount_point": "/",
+              "mount_id": 1,
+              "per_mount_options": [
+                "ro"
+              ],
+              "read_only": true
+            },
+            {
+              "target": "source_directory",
+              "mount_point": "/fixture",
+              "mount_id": 2,
+              "per_mount_options": [
+                "ro",
+                "nosuid",
+                "nodev"
+              ],
+              "read_only": true
+            },
+            {
+              "target": "source_file",
+              "mount_point": "/fixture",
+              "mount_id": 2,
+              "per_mount_options": [
+                "ro",
+                "nosuid",
+                "nodev"
+              ],
+              "read_only": true
+            }
+          ]
+        },
+        "probes": [
+          {
+            "stage": "root",
+            "operation": "create_root_file",
+            "expected": "write_denied_on_verified_read_only_mount",
+            "observed": "denied",
+            "code": "EACCES",
+            "errno": -13,
+            "syscall": "open",
+            "denial_kind": "permission_denial",
+            "accepted": true
+          },
+          {
+            "stage": "source_directory",
+            "operation": "create_source_file",
+            "expected": "write_denied_on_verified_read_only_mount",
+            "observed": "denied",
+            "code": "EACCES",
+            "errno": -13,
+            "syscall": "open",
+            "denial_kind": "permission_denial",
+            "accepted": true
+          },
+          {
+            "stage": "source_file",
+            "operation": "open_source_readwrite",
+            "expected": "write_denied_on_verified_read_only_mount",
+            "observed": "denied",
+            "code": "EACCES",
+            "errno": -13,
+            "syscall": "open",
+            "denial_kind": "permission_denial",
+            "accepted": true
+          }
+        ],
+        "namespace_stable": true,
+        "mount_error": null,
+        "qualified": true,
+        "failed_subcheck": null,
+        "hash": "ae032ad476a650c6be0f3721c30e4be929824300a568d6bf07d06b74025e45f0"
+      }
+    },
+    {
+      "case": "EROFS",
+      "qualified": true,
+      "diagnostic": {
+        "schema_version": "astra.n16.containment-diagnostic.v1",
+        "source": {
+          "source_id": "astra.n16.designated-synthetic.elevated.v1",
+          "sha256": "4b1a3d8d9bdb832ae54b35a43e4412f18914756984893f8cb181b37955caff73"
+        },
+        "stage": "containment",
+        "proof": {
+          "kind": "PROC_SELF_MOUNTINFO",
+          "namespace": "mnt:[42]",
+          "mountinfo_sha256": "cd9996cbc69b94e2f7986ec48c56ffe78500d6c1b559598897ceb3c49a735ec1",
+          "targets": [
+            {
+              "target": "root",
+              "mount_point": "/",
+              "mount_id": 1,
+              "per_mount_options": [
+                "ro"
+              ],
+              "read_only": true
+            },
+            {
+              "target": "source_directory",
+              "mount_point": "/fixture",
+              "mount_id": 2,
+              "per_mount_options": [
+                "ro",
+                "nosuid",
+                "nodev"
+              ],
+              "read_only": true
+            },
+            {
+              "target": "source_file",
+              "mount_point": "/fixture",
+              "mount_id": 2,
+              "per_mount_options": [
+                "ro",
+                "nosuid",
+                "nodev"
+              ],
+              "read_only": true
+            }
+          ]
+        },
+        "probes": [
+          {
+            "stage": "root",
+            "operation": "create_root_file",
+            "expected": "write_denied_on_verified_read_only_mount",
+            "observed": "denied",
+            "code": "EROFS",
+            "errno": -30,
+            "syscall": "open",
+            "denial_kind": "mount_denial",
+            "accepted": true
+          },
+          {
+            "stage": "source_directory",
+            "operation": "create_source_file",
+            "expected": "write_denied_on_verified_read_only_mount",
+            "observed": "denied",
+            "code": "EROFS",
+            "errno": -30,
+            "syscall": "open",
+            "denial_kind": "mount_denial",
+            "accepted": true
+          },
+          {
+            "stage": "source_file",
+            "operation": "open_source_readwrite",
+            "expected": "write_denied_on_verified_read_only_mount",
+            "observed": "denied",
+            "code": "EROFS",
+            "errno": -30,
+            "syscall": "open",
+            "denial_kind": "mount_denial",
+            "accepted": true
+          }
+        ],
+        "namespace_stable": true,
+        "mount_error": null,
+        "qualified": true,
+        "failed_subcheck": null,
+        "hash": "437ee108c39caee4d3b7c5d6cad210bbe7e926025341b2143328dedce6d3788d"
+      }
+    },
+    {
+      "case": "EPERM",
+      "qualified": true,
+      "diagnostic": {
+        "schema_version": "astra.n16.containment-diagnostic.v1",
+        "source": {
+          "source_id": "astra.n16.designated-synthetic.elevated.v1",
+          "sha256": "4b1a3d8d9bdb832ae54b35a43e4412f18914756984893f8cb181b37955caff73"
+        },
+        "stage": "containment",
+        "proof": {
+          "kind": "PROC_SELF_MOUNTINFO",
+          "namespace": "mnt:[42]",
+          "mountinfo_sha256": "cd9996cbc69b94e2f7986ec48c56ffe78500d6c1b559598897ceb3c49a735ec1",
+          "targets": [
+            {
+              "target": "root",
+              "mount_point": "/",
+              "mount_id": 1,
+              "per_mount_options": [
+                "ro"
+              ],
+              "read_only": true
+            },
+            {
+              "target": "source_directory",
+              "mount_point": "/fixture",
+              "mount_id": 2,
+              "per_mount_options": [
+                "ro",
+                "nosuid",
+                "nodev"
+              ],
+              "read_only": true
+            },
+            {
+              "target": "source_file",
+              "mount_point": "/fixture",
+              "mount_id": 2,
+              "per_mount_options": [
+                "ro",
+                "nosuid",
+                "nodev"
+              ],
+              "read_only": true
+            }
+          ]
+        },
+        "probes": [
+          {
+            "stage": "root",
+            "operation": "create_root_file",
+            "expected": "write_denied_on_verified_read_only_mount",
+            "observed": "denied",
+            "code": "EPERM",
+            "errno": -1,
+            "syscall": "open",
+            "denial_kind": "permission_denial",
+            "accepted": true
+          },
+          {
+            "stage": "source_directory",
+            "operation": "create_source_file",
+            "expected": "write_denied_on_verified_read_only_mount",
+            "observed": "denied",
+            "code": "EPERM",
+            "errno": -1,
+            "syscall": "open",
+            "denial_kind": "permission_denial",
+            "accepted": true
+          },
+          {
+            "stage": "source_file",
+            "operation": "open_source_readwrite",
+            "expected": "write_denied_on_verified_read_only_mount",
+            "observed": "denied",
+            "code": "EPERM",
+            "errno": -1,
+            "syscall": "open",
+            "denial_kind": "permission_denial",
+            "accepted": true
+          }
+        ],
+        "namespace_stable": true,
+        "mount_error": null,
+        "qualified": true,
+        "failed_subcheck": null,
+        "hash": "59725ffd16fdf8239e76d2d61d6f3ec45d64d807daf025d2afac855c7e3fa473"
+      }
+    },
+    {
+      "case": "first_failure_latch",
+      "mock_startups": 1,
+      "state": {
+        "blocked": true,
+        "first_failure": {
+          "code": "SOURCE_NOT_READONLY",
+          "stage": "worker",
+          "attempts": 1
+        },
+        "attempted_startups": 1,
+        "admitted": 1,
+        "running": 0,
+        "queued": 0,
+        "not_run": [
+          {
+            "label": "queued",
+            "status": "NOT_RUN"
+          },
+          {
+            "label": "late",
+            "status": "NOT_RUN"
+          }
+        ],
+        "executed_failures": [
+          {
+            "label": "first",
+            "code": "SOURCE_NOT_READONLY"
+          }
+        ],
+        "persistence_error": null
+      }
+    }
+  ]
+}

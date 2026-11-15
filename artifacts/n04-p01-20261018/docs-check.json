@@ -1,0 +1,16 @@
+{
+  "documents": 11,
+  "local_links_checked": 100,
+  "broken_links": [],
+  "R_ids": 68,
+  "missing_R": [],
+  "AC_ids": 25,
+  "missing_AC": [],
+  "N_ids": 26,
+  "missing_N": [],
+  "n03_partial_recorded": true,
+  "ac20_open_recorded": true,
+  "n04_to_n05_dependency_retained": true,
+  "stop_recorded": true,
+  "passed": true
+}

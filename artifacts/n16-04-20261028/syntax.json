@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "file": "services/agent/sqlite-fixture-contract.mjs",
+      "exit_code": 0,
+      "stderr": "",
+      "sha256": "a5f496d16326fda1df8d9eeec0d8a015970a8854023257f659b8df464e6b0d1c"
+    },
+    {
+      "file": "services/agent/sqlite-fixture-process.mjs",
+      "exit_code": 0,
+      "stderr": "",
+      "sha256": "3a7009f7a9eff8591430c6fa01ef10503a18e0bca31887165211ac026d499745"
+    },
+    {
+      "file": "services/agent/sqlite-fixture-runner.mjs",
+      "exit_code": 0,
+      "stderr": "",
+      "sha256": "f4aff7365bf6af4f02bf60b00d5dcd0418abeada1989b94283005f34aa85f730"
+    },
+    {
+      "file": "scripts/n16-sqlite-demo.mjs",
+      "exit_code": 0,
+      "stderr": "",
+      "sha256": "62ef77a4932ec19eb5261f73fca17b1a848a18f0aa2568b91d993456246f8af4"
+    },
+    {
+      "file": "tests/n16-sqlite.test.mjs",
+      "exit_code": 0,
+      "stderr": "",
+      "sha256": "d17da53ea1edeb6527c2890d03b2d84f2425f4154a75ba5d95b315bf0ff23988"
+    }
+  ],
+  "SQL_executed": false
+}

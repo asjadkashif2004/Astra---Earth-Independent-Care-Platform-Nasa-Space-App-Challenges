@@ -1,0 +1,20 @@
+Checking: N03 landing native zoom, responsive entry and accessible identity controls
+Checking: N03 overview reflow, accessible names and axe audit at four viewports
+Checking: N03 crew reflow, accessible names and axe audit at four viewports
+Checking: N03 n10 reflow, accessible names and axe audit at four viewports
+Checking: N03 waveforms reflow, accessible names and axe audit at four viewports
+Checking: N03 agent reflow, accessible names and axe audit at four viewports
+Checking: N03 comms reflow, accessible names and axe audit at four viewports
+Checking: N03 knowledge reflow, accessible names and axe audit at four viewports
+Checking: N03 scenario reflow, accessible names and axe audit at four viewports
+Checking: N03 sources reflow, accessible names and axe audit at four viewports
+Checking: N03 replay reflow, accessible names and axe audit at four viewports
+Checking: N03 cognitive reflow, accessible names and axe audit at four viewports
+{
+  "status": "passed",
+  "browser": "Chrome/156.0.8078.80",
+  "checks": 12,
+  "failed": [],
+  "screenshots": 4,
+  "report": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n03-engineering-20261104\\browser-zoom-01\\report.json"
+}

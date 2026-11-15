@@ -1,0 +1,97 @@
+✔ N11 contract rejects version (93.167129ms)
+✔ N11 contract rejects role in JSON (90.299772ms)
+✔ N11 contract rejects SQL (89.002139ms)
+✔ N11 contract rejects path (86.507266ms)
+✔ N11 contract rejects wrong crew (86.046921ms)
+✔ N11 contract rejects bad seed (84.993334ms)
+✔ N11 contract rejects NaN (102.2146ms)
+✔ N11 contract rejects fraction (91.615766ms)
+✔ N11 contract rejects timestamp (98.480741ms)
+✔ N11 contract rejects future (85.896376ms)
+✔ N11 contract rejects policy (82.964349ms)
+✔ N11 contract rejects duplicate exclusion (86.034247ms)
+✔ N11 contract rejects too many exclusions (85.313135ms)
+✔ N11 contract rejects out of range exclusion (83.45396ms)
+✔ N11 contract rejects traversal (83.404715ms)
+✔ N11 contract rejects source substitute (86.255313ms)
+✔ N11 contract rejects empty identity (84.00732ms)
+✔ N11 explicit role/identity controls reject all unauthorized callers (84.870544ms)
+✔ N11 references are learned from eligible past-only observations with immutable exclusions and versions (124.541588ms)
+✔ N11 EWMA exact numeric update, persistence and input rejection (1.005884ms)
+✖ N11 real isolation trees fit reproducibly and distinguish dense points from remote points (30.548046ms)
+✔ N11 missing is UNKNOWN without fabricated values or a clinical review (0.389291ms)
+✔ N11 suspect is UNKNOWN without fabricated values or a clinical review (0.132232ms)
+✔ N11 artifact is UNKNOWN without fabricated values or a clinical review (0.150376ms)
+✔ N11 confidence is UNKNOWN without fabricated values or a clinical review (0.104779ms)
+✔ N11 exercise is UNKNOWN without fabricated values or a clinical review (0.099349ms)
+✔ N11 numeric artifact check is independent of declared artifact labels (0.213857ms)
+✔ N11 units/times/source and out-of-order/stale gaps fail conservatively (0.397526ms)
+✔ N11 dataset rejects wrong generator (50.740333ms)
+✔ N11 dataset rejects group contamination (60.973972ms)
+✔ N11 dataset rejects future (74.508572ms)
+✔ N11 dataset rejects label injection (55.191553ms)
+✔ N11 dataset rejects wrong unit (49.102294ms)
+✔ N11 dataset rejects duplicate (47.587474ms)
+✔ N11 dataset rejects wrong dates (47.046646ms)
+✔ N11 corpus rebuild is deterministic and separates inference features from authored targets (358.892241ms)
+✔ N11 metric zero denominators and UNKNOWN negatives cannot manufacture a passing result (0.433404ms)
+✔ N11 N07 retained provenance remains metadata-only; tamper never touches originals (6.304614ms)
+✔ N11 accept-all/reject-all and static scoring substitutes fail meaningful controls (44.781667ms)
+✔ N11 genuine worker commits a bound report while N02/telemetry/crew/comms stay unchanged (1622.200017ms)
+✔ N11 cancellation/timeout terminate owned workers without false results; repeated cancel is safe (364.502461ms)
+✔ N11 worker startup failure is durable and cannot create a false completion (99.167526ms)
+✔ N11 result/trace persistence failures roll back results and preserve N02 authority (1397.318513ms)
+✖ N11 source/crew bound N08/N09 and nonprivate N10 context are genuine integrations (158.145955ms)
+✔ N11 correction versions and cold process recovery preserve old results without replay (3107.676924ms)
+✔ N11 actual API validates authentication/schema/query/scope and preserves old models API (1309.137573ms)
+✔ N11 existing evidence page mounts real empty/permission/error states without automatic model execution (544.56161ms)
+ℹ tests 47
+ℹ suites 0
+ℹ pass 45
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 12014.833338
+
+✖ failing tests:
+
+test at tests/n11.test.mjs:22:1
+✖ N11 real isolation trees fit reproducibly and distinguish dense points from remote points (30.548046ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 0.49999999999999994
+  - 0.5
+  
+      at TestContext.<anonymous> (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/n11.test.mjs:22:459)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0.49999999999999994,
+    expected: 0.5,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/n11.test.mjs:40:1
+✖ N11 source/crew bound N08/N09 and nonprivate N10 context are genuine integrations (158.145955ms)
+  AppError: Waveform rejected: WAVEFORM_RANGE
+      at check (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/packages/waveforms.mjs:5:75)
+      at windowData (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/services/waveforms/service.mjs:76:3)
+      at contexts (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/services/n11/sources.mjs:19:290)
+      at TestContext.<anonymous> (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/n11.test.mjs:41:140)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+    status: 422,
+    code: 'WAVEFORM_RANGE'
+  }

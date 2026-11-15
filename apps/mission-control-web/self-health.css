@@ -1,0 +1,104 @@
+/* My health (astronaut self-view) and NASA five-hazard map. Status colors keep their monitoring meaning:
+   teal = within range, amber = review, red = priority review, gray = unknown / not tracked. */
+.self-content { display:grid; gap:16px; }
+.self-verdict { --risk:var(--gray); display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:20px; align-items:start; padding:24px; border-left:3px solid var(--risk); }
+.self-verdict.green { --risk:var(--green); }
+.self-verdict.amber { --risk:var(--amber); }
+.self-verdict.red { --risk:var(--red); }
+.self-verdict-icon { display:grid; place-items:center; width:56px; height:56px; border-radius:50%; color:var(--risk); background:color-mix(in srgb,var(--risk) 12%,transparent); border:1px solid color-mix(in srgb,var(--risk) 35%,transparent); }
+.self-verdict h2 { font-size:26px; font-weight:400; letter-spacing:-.4px; margin:6px 0 8px; color:var(--warm,#f0ece6); }
+.self-verdict p { font-size:13px; line-height:1.6; color:var(--muted); max-width:760px; }
+.self-verdict-status { display:grid; justify-items:end; gap:8px; text-align:right; }
+.self-verdict-status .status { font-size:11px; }
+.self-verdict-status small { font-size:10px; color:var(--muted); }
+.self-flagged { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:12px; }
+.self-flagged small { font-size:9px; letter-spacing:.8px; text-transform:uppercase; color:var(--muted); }
+.self-flagged span { font-family:Consolas,monospace; font-size:11px; padding:4px 8px; border-radius:6px; border:1px solid color-mix(in srgb,var(--risk) 40%,transparent); color:var(--warm,#f0ece6); }
+.self-safety { margin:0; }
+.self-safety span { line-height:1.5; }
+.self-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:16px; align-items:start; }
+.self-change-list, .self-step-list { list-style:none; margin:0; padding:6px 0; }
+.self-change { --risk:var(--green); display:flex; justify-content:space-between; gap:14px; padding:12px 20px; border-bottom:1px solid var(--edge,#2a2930); }
+.self-change.amber { --risk:var(--amber); }
+.self-change.gray { --risk:var(--gray); }
+.self-change div { display:grid; gap:3px; min-width:0; }
+.self-change strong { font-size:13px; font-weight:500; }
+.self-change small { font-size:10px; color:var(--muted); }
+.self-change > span { display:grid; justify-items:end; gap:3px; text-align:right; font-size:12px; color:var(--risk); }
+.self-change > span small { font-family:Consolas,monospace; }
+.self-step-list { counter-reset:step; }
+.self-step { counter-increment:step; display:grid; grid-template-columns:28px minmax(0,1fr); gap:12px; align-items:start; padding:14px 20px; border-bottom:1px solid var(--edge,#2a2930); }
+.self-step::before { content:counter(step); display:grid; place-items:center; width:24px; height:24px; border-radius:50%; font-size:11px; color:var(--accent,#f3a64a); border:1px solid color-mix(in srgb,var(--accent,#f3a64a) 45%,transparent); }
+.self-step > div { display:grid; gap:4px; }
+.self-step strong { font-size:13px; font-weight:500; }
+.self-step p { font-size:11px; line-height:1.55; color:var(--muted); }
+.self-step .button { grid-column:2; justify-self:start; margin-top:4px; }
+.self-note { color:var(--amber) !important; }
+
+.self-reported { display:flex; gap:8px; align-items:flex-start; margin-top:12px; padding:8px 10px; border-radius:8px; font-size:12px !important; color:var(--warm,#f0ece6) !important; background:color-mix(in srgb,var(--violet,#9875e8) 12%,transparent); border:1px solid color-mix(in srgb,var(--violet,#9875e8) 35%,transparent); }
+.self-reported svg { flex:none; margin-top:2px; color:var(--violet,#9875e8); }
+
+/* Symptom self-report. Violet marks the person's own words; it is not a monitoring severity colour. */
+.self-report { scroll-margin-top:80px; }
+.self-report-body { display:grid; grid-template-columns:minmax(0,1.6fr) minmax(0,1fr); }
+.symptom-form { display:grid; gap:14px; padding:18px 20px; border-right:1px solid var(--edge,#2a2930); }
+.self-report-intro { font-size:12px; color:var(--muted); line-height:1.5; }
+.symptom-group { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:8px; margin:0; padding:0; border:0; }
+.symptom-group legend { grid-column:1/-1; padding:0 0 6px; font-size:10px; letter-spacing:.9px; text-transform:uppercase; color:var(--muted); }
+.symptom-item { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:8px 10px; border:1px solid var(--edge,#2a2930); border-radius:9px; font-size:12px; transition:border-color 150ms,background 150ms; }
+.symptom-item.chosen { border-color:color-mix(in srgb,var(--violet,#9875e8) 60%,transparent); background:color-mix(in srgb,var(--violet,#9875e8) 10%,transparent); }
+.symptom-item select { width:auto; min-width:104px; padding:5px 8px; font-size:12px; }
+.symptom-note { display:grid; gap:6px; font-size:12px; }
+.symptom-note small { color:var(--muted); }
+.symptom-note textarea { resize:vertical; min-height:52px; font:inherit; }
+.symptom-actions { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+.symptom-actions small { flex:1 1 260px; font-size:10px; line-height:1.5; color:var(--muted); }
+.symptom-history { padding:18px 20px; min-width:0; }
+.symptom-history h3 { font-size:13px; font-weight:500; margin-bottom:10px; }
+.symptom-entries { list-style:none; margin:0; padding:0; display:grid; gap:10px; }
+.symptom-entry { display:grid; gap:7px; padding:10px 12px; border:1px solid var(--edge,#2a2930); border-radius:9px; }
+.symptom-entry-head { display:flex; justify-content:space-between; gap:8px; font-size:12px; }
+.symptom-entry-head small { font-family:Consolas,monospace; font-size:10px; color:var(--muted); }
+.symptom-entry p { font-size:11px; line-height:1.5; color:var(--muted); }
+.symptom-chips { display:flex; flex-wrap:wrap; gap:6px; }
+.symptom-chip { font-size:10px; padding:3px 8px; border-radius:999px; border:1px solid color-mix(in srgb,var(--violet,#9875e8) 40%,transparent); color:var(--warm,#f0ece6); }
+.symptom-chip.sev-3 { border-color:var(--amber); }
+
+.hazard-panel { margin-top:20px; }
+.hazard-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px; padding:16px 18px 6px; }
+.hazard-card { --risk:var(--gray); display:grid; gap:10px; align-content:start; min-width:0; padding:16px; border:1px solid var(--edge,#2a2930); border-top:2px solid var(--risk); border-radius:12px; background:linear-gradient(160deg,#1b1a20,#111116 80%); }
+.hazard-card.green { --risk:var(--green); }
+.hazard-card.amber { --risk:var(--amber); }
+.hazard-card.red { --risk:var(--red); }
+.hazard-head { display:flex; gap:9px; align-items:center; }
+.hazard-glyph { display:grid; place-items:center; width:28px; height:28px; border-radius:8px; color:var(--risk); background:color-mix(in srgb,var(--risk) 12%,transparent); flex:none; }
+.hazard-head h3 { font-size:13px; font-weight:500; line-height:1.25; }
+.hazard-card .status { font-size:10px; white-space:normal; }
+.hazard-about { font-size:11px; line-height:1.55; color:var(--muted); }
+.hazard-tracked { display:grid; gap:6px; margin:0; }
+.hazard-tracked div { display:flex; justify-content:space-between; gap:8px; font-size:11px; }
+.hazard-tracked dt { color:var(--muted); }
+.hazard-tracked dd { margin:0; text-align:right; font-family:Consolas,monospace; color:var(--warm,#f0ece6); }
+.hazard-missing { font-size:10px; line-height:1.55; color:var(--muted); }
+.hazard-missing strong { color:var(--gray); font-weight:500; }
+.hazard-coverage { height:4px; border-radius:4px; background:#2a2930; overflow:hidden; }
+.hazard-coverage span { display:block; height:100%; background:var(--violet,#9875e8); }
+.hazard-coverage-label { font-size:9px; letter-spacing:.6px; color:var(--muted); }
+.hazard-panel > .evidence-foot { padding:8px 18px 16px; }
+
+@media (max-width:1400px) { .hazard-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media (max-width:1000px) {
+  .self-grid { grid-template-columns:minmax(0,1fr); }
+  .self-report-body { grid-template-columns:minmax(0,1fr); }
+  .symptom-form { border-right:0; border-bottom:1px solid var(--edge,#2a2930); }
+  .hazard-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:640px) {
+  .self-verdict { grid-template-columns:minmax(0,1fr); padding:18px; }
+  .self-verdict-status { justify-items:start; text-align:left; }
+  .self-verdict h2 { font-size:22px; }
+  .hazard-grid { grid-template-columns:minmax(0,1fr); padding:12px; }
+  .self-change, .self-step { padding:12px 14px; }
+  .symptom-form, .symptom-history { padding:14px; }
+  .symptom-group { grid-template-columns:minmax(0,1fr); }
+}

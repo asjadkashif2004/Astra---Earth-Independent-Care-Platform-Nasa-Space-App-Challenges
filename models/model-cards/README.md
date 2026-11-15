@@ -1,0 +1,25 @@
+# Model and data cards
+
+## Personalized robust baseline — robust-personal-v2
+The generator creates720 synthetic calibration observations per metric/person; the claimed30-day window is not yet a dated archive (N09). Centers are medians; scales are1.4826×MAD with a floor. Frozen baselines are not updated using injected scenarios. Two-sided deviation rules: two metrics at absolute z≥2 for90s→Amber; one at≥4 for120s→Amber; two at≥4 for180s or one at≥6 for180s→Red. A consistent observed rate≥3 robust-scale units/minute over60–120s, persisting60s with at least three observations, independently requests Amber. Thresholds have separate continuous timers. Full rule/history/freshness/reset specification: [N02_CONTRACTS](../../docs/N02_CONTRACTS.md).
+
+Observation time determines persistence; re-evaluation of cached data cannot advance it. Exercise/recovery excludes HR/HRV/RR resting and rate rules. Missing, stale, suspect, artifact, invalid baseline or unreliable data produces Gray and clears pending history. Current and rate-start evidence retain source provenance. Higher-priority events create distinct risks/jobs/cases requiring fresh acknowledgement. Optional case construction now runs after committed detection in bounded workers with durable restart/retry; case availability is asynchronous.
+
+Evidence strength is a heuristic, not a disease probability. Baselines, thresholds and scenario distributions are fictional; tests do not demonstrate clinical validity, generalization or certified safety. No training on actual astronaut records occurred. Nominal evaluation uses seeds 81/902 across six crew and a full day each (12 crew-days); scenario regression uses separate controlled perturbations. Extreme/unmodeled events can be missed. No Isolation Forest, neural autoencoder or disease classifier is installed.
+
+## Trend projection — linear-trend-v2
+Ordinary least squares on the latest 60 reliable historical observations, using only past points; at least 12 observations and five minutes of reliable history are required. Initial residual-only bands covered 40% of 25 synthetic test windows, so v2 adds a frozen split-conformal absolute-error quantile from 120 nominal synthetic calibration examples per metric. Calibration seeds 101/211/307/419/521/631/739/853 exclude CREW-03. Each calibration window uses 60 past points at 30-second cadence and a 30-minute future label; windows are separated by 180 ticks to avoid overlap.
+
+The bundled JSON records quantiles, generation settings and scope. It applies only to 30-minute outputs with exactly 60 reliable 30-second samples. The frozen evaluation uses separate seeds and CREW-03; 25 forecast windows showed 96% empirical coverage and 2.17 bpm MAE. Evaluation windows overlap, and sample size is small. These numbers apply only to this nominal synthetic generator. Other histories retain explicitly **uncalibrated** residual intervals. Current multi-signal deviations or >2 SD target deviations abstain rather than applying a nominal calibration band to drift. There is no clinical coverage, disease-prediction or real-astronaut generalization claim.
+
+## Local retrieval — curated-lexical-v1
+Ten short checked-source paraphrases under `knowledge/sources.json`; summaries are hashed/versioned at runtime. Matching topics return verbatim **project-authored summaries**, not quotations from the source publication. Output includes source URL/title/publisher/section/date/hash. The frozen 30-question suite checks citation identity and topical retrieval; it does not establish biomedical answer correctness. Lexical overlap can select broad context rather than a specific answer. Unsupported topics abstain; unsafe queries redirect to qualified review. No embeddings, vector database, local instruct model or paid AI service is used.
+
+## Environment — environment-illustrative-v1
+Review when synthetic CO₂ >2000 ppm or dose rate >0.05 mSv/h. These are **illustrative demonstration thresholds**, not NASA limits, radiation illness prediction, or certified cabin control logic. Input numbers and cumulative exposure are synthetic. NASA OSDR/RadLab is listed for context and not connected.
+
+## Case graph — constrained-graph-v1
+Accepts an existing detector event, checks recorded evidence/quality, retrieves source context, recommends human review and voluntary check-in, and drafts a report. Acknowledgement gates queue insertion. No shell/SQL, arbitrary browsing, original-alert creation, baseline/telemetry modification, prescriptions, or independent diagnosis is exposed. No LLM runs the graph.
+
+## Synthetic mission data
+Six named fictional crew; 10 scalar metrics at one generated point per real runtime tick, each labeled with simulator sampling and accelerated mission time. Per-point provenance includes seed, scenario, and generator version. Core telemetry is never a NASA feed. Voluntary reaction/fatigue check-ins are actual browser task measurements, separately labeled `source=user_checkin`, `synthetic=false`; these are not added to simulated telemetry or used for diagnosis. Public datasets remain catalogue links until actual acquisition/license/hash verification.

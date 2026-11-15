@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scope": "documentation and deterministic packet integrity only",
+  "packet_sha256": "838da8a05404f4c174924190b4fb343a1ac794f379a6adf9b9ee9b33bd3bd074",
+  "rule_sha256": "997fa6d762d77bbabc57ed4ef4eb1c3c3168567d057d4a19aa1fb5d2abe3da0a",
+  "packet_files": 10,
+  "packet_bytes": 37125,
+  "integrity_checks": 11,
+  "documents_checked": 5,
+  "local_links_resolved": 427,
+  "all_reviewer_fields_blank": true,
+  "implementation_or_activation": false,
+  "errors": []
+}

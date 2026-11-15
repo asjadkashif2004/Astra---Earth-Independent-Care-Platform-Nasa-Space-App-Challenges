@@ -1,0 +1,1860 @@
+[
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-overview\\30x-overview-performance-3-25.png",
+    "id": 550,
+    "crew_id": "CREW-01",
+    "metric": "heart_rate",
+    "expected": "64",
+    "screenshot_sha256": "a140d5441586edde3ad9560c54be965d8202ff58b3339e692ae787b2cbfc9bef",
+    "glyph": {
+      "sha256": "c4fe4b62a05fb0ce35ecedadf5e309b9ed453c868994fa42e19ffbbfd86f6a02",
+      "width": 55,
+      "height": 43,
+      "ink_pixels": 739
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 1,
+    "directory": "after-30x-overview",
+    "basename": "30x-overview-performance-3-25.png",
+    "rect": {
+      "x": 4.807692307692308,
+      "y": 5.959535256410256,
+      "width": 57.59214743589744,
+      "height": 76.92307692307693
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-standard-1-10.png",
+    "id": 60,
+    "crew_id": "CREW-02",
+    "metric": "heart_rate",
+    "expected": "68",
+    "screenshot_sha256": "f52e975ff6251f356ce73c13e2c508bf11c2d80eb01f42d625ac20594d58cd60",
+    "glyph": {
+      "sha256": "c319f2a57c33fca9e50aebc4cace333aabc465714321142221b4912a2a520aa9",
+      "width": 45,
+      "height": 35,
+      "ink_pixels": 402
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 2,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-standard-1-10.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 6.81890869140625,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-standard-1-10.png",
+    "id": 61,
+    "crew_id": "CREW-02",
+    "metric": "hrv",
+    "expected": "55",
+    "screenshot_sha256": "f52e975ff6251f356ce73c13e2c508bf11c2d80eb01f42d625ac20594d58cd60",
+    "glyph": {
+      "sha256": "4584cc778300169d4942cedbcefc8d8072632221f13a95309cf61411294846d7",
+      "width": 43,
+      "height": 36,
+      "ink_pixels": 301
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 3,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-standard-1-10.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 6.81890869140625,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-standard-1-10.png",
+    "id": 63,
+    "crew_id": "CREW-02",
+    "metric": "respiratory_rate",
+    "expected": "14",
+    "screenshot_sha256": "f52e975ff6251f356ce73c13e2c508bf11c2d80eb01f42d625ac20594d58cd60",
+    "glyph": {
+      "sha256": "38cca5afcbf6a02f886e03650da94bbf57ec18dedef65d971ef23d8e14a3a6b5",
+      "width": 44,
+      "height": 35,
+      "ink_pixels": 277
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 4,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-standard-1-10.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 290.81890869140625,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-standard-1-30.png",
+    "id": 183,
+    "crew_id": "CREW-04",
+    "metric": "respiratory_rate",
+    "expected": "14",
+    "screenshot_sha256": "d11024c5f7d8850a107a803b570199378373944845e3cbaf8ec622e8c8a48c7f",
+    "glyph": {
+      "sha256": "b9d9f510bb40dcba4353373de23a985f365168bd7774b4d1b8f92c76cc6f9ec1",
+      "width": 43,
+      "height": 35,
+      "ink_pixels": 179
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 5,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-standard-1-30.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 290.82080078125,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-standard-1-50.png",
+    "id": 301,
+    "crew_id": "CREW-06",
+    "metric": "hrv",
+    "expected": "59",
+    "screenshot_sha256": "93a9d0d7897cb107177dde87fcf0d8b9631e4ac0ce4d16e0d4d3df5535b5f4ec",
+    "glyph": {
+      "sha256": "f28843cf7be71c064f3dd733d4093b2ecf61084efa8979d57d8b617d6a0bfbcc",
+      "width": 44,
+      "height": 35,
+      "ink_pixels": 321
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 6,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-standard-1-50.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 6.820068359375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-standard-2-20.png",
+    "id": 123,
+    "crew_id": "CREW-03",
+    "metric": "respiratory_rate",
+    "expected": "14",
+    "screenshot_sha256": "13e3a09aad14645ac91a7077f59ed59e8b36a81d62ff01c580705c1e291feb14",
+    "glyph": {
+      "sha256": "36c9764f5790b11a398e327385e3fc46af3b9d78be9134e2a8627f9b7ee1a8a3",
+      "width": 43,
+      "height": 35,
+      "ink_pixels": 242
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 7,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-standard-2-20.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 290.82196044921875,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-standard-2-30.png",
+    "id": 180,
+    "crew_id": "CREW-04",
+    "metric": "heart_rate",
+    "expected": "70",
+    "screenshot_sha256": "e8f852a7e14fb783b414bd2573ec49630c0ad9555112cd11512300837c94c35f",
+    "glyph": {
+      "sha256": "5f5a7f6473fdaac65f03655cbd3e4f6a91bda4783c18c3c56a4e37c89dc37147",
+      "width": 46,
+      "height": 35,
+      "ink_pixels": 290
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 8,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-standard-2-30.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 6.821533203125,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-standard-2-30.png",
+    "id": 181,
+    "crew_id": "CREW-04",
+    "metric": "hrv",
+    "expected": "56",
+    "screenshot_sha256": "e8f852a7e14fb783b414bd2573ec49630c0ad9555112cd11512300837c94c35f",
+    "glyph": {
+      "sha256": "2a4c026045950ca80eb458ffcbb87f3957c8592707c28866d07ae710d112ac60",
+      "width": 44,
+      "height": 35,
+      "ink_pixels": 307
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 9,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-standard-2-30.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 6.821533203125,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-standard-2-40.png",
+    "id": 241,
+    "crew_id": "CREW-05",
+    "metric": "hrv",
+    "expected": "59",
+    "screenshot_sha256": "8c9ccc9b9a4a1985bb99226ba25bf14d09984421696b8886189692eb9477f3f8",
+    "glyph": {
+      "sha256": "03c2b93ca9df30036c90f274fec0b5c5c2811cdabf0665bc252f043af2115322",
+      "width": 44,
+      "height": 36,
+      "ink_pixels": 352
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 10,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-standard-2-40.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 6.8228759765625,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-standard-2-50.png",
+    "id": 303,
+    "crew_id": "CREW-06",
+    "metric": "respiratory_rate",
+    "expected": "14",
+    "screenshot_sha256": "c5e3090d115516c7135a7b61ede6bd90469a02104788083da2f371984c9ee082",
+    "glyph": {
+      "sha256": "64ff40aac9f73ef493df66e38519ba5ea59d0dbc11bd1f98f04d12bd6c62b4b6",
+      "width": 43,
+      "height": 35,
+      "ink_pixels": 240
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 11,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-standard-2-50.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 290.851318359375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-standard-3-10.png",
+    "id": 60,
+    "crew_id": "CREW-02",
+    "metric": "heart_rate",
+    "expected": "70",
+    "screenshot_sha256": "bb646e3d09dd80e94e6cf03f7d52b6f40ed176279c10e9d3955c748a6159e586",
+    "glyph": {
+      "sha256": "83d06bb4a022eca9f9df5ee2f5811872522473fbd97fd726fb3d32d24398b05d",
+      "width": 45,
+      "height": 35,
+      "ink_pixels": 336
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 12,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-standard-3-10.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 6.5770263671875,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-standard-3-10.png",
+    "id": 61,
+    "crew_id": "CREW-02",
+    "metric": "hrv",
+    "expected": "56",
+    "screenshot_sha256": "bb646e3d09dd80e94e6cf03f7d52b6f40ed176279c10e9d3955c748a6159e586",
+    "glyph": {
+      "sha256": "85f8a42dc4824dfd17255d0b1c72a54bd4d6f6f0a8b3cb12c6171b855109aa13",
+      "width": 44,
+      "height": 35,
+      "ink_pixels": 361
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 13,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-standard-3-10.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 6.5770263671875,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-standard-3-40.png",
+    "id": 243,
+    "crew_id": "CREW-05",
+    "metric": "respiratory_rate",
+    "expected": "14",
+    "screenshot_sha256": "fac244af56a316373433d8343329bc8415a741b90f9e0128220304a446534639",
+    "glyph": {
+      "sha256": "2dfc3c5b0234293fd430ed8811265e536bf2afa469f6bb77a87fcbec7e0e74cd",
+      "width": 43,
+      "height": 35,
+      "ink_pixels": 291
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 14,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-standard-3-40.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 291.95135498046875,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-standard-3-20.png",
+    "id": 120,
+    "crew_id": "CREW-03",
+    "metric": "heart_rate",
+    "expected": "69",
+    "screenshot_sha256": "951e124108bf597c8a76e37d551bca2e33e6b55f6a04638ac3d36f355cd0da76",
+    "glyph": {
+      "sha256": "3bc2c4abe23a4494a9206262a4f105a153b439eb8703ef51965613a195d69ea0",
+      "width": 45,
+      "height": 35,
+      "ink_pixels": 398
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 15,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-standard-3-20.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 6.82379150390625,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-standard-3-20.png",
+    "id": 121,
+    "crew_id": "CREW-03",
+    "metric": "hrv",
+    "expected": "55",
+    "screenshot_sha256": "951e124108bf597c8a76e37d551bca2e33e6b55f6a04638ac3d36f355cd0da76",
+    "glyph": {
+      "sha256": "d341e36aaf0eea9fc5bdfa1a39b8848291ac7ec49ccd767623782e1185c9e1d3",
+      "width": 43,
+      "height": 35,
+      "ink_pixels": 309
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 16,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-standard-3-20.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 6.82379150390625,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-standard-3-30.png",
+    "id": 180,
+    "crew_id": "CREW-04",
+    "metric": "heart_rate",
+    "expected": "68",
+    "screenshot_sha256": "d3efc9f2ca0e7242fda7187c5f27d22d9eeab7081b7ca519b33b43a20e5b4300",
+    "glyph": {
+      "sha256": "0d802dd09f501defccfd4e1e1f42acc3298e6dd63cfcebcdc18ed4de46c3dc00",
+      "width": 45,
+      "height": 35,
+      "ink_pixels": 428
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 17,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-standard-3-30.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 6.5960693359375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-standard-3-30.png",
+    "id": 181,
+    "crew_id": "CREW-04",
+    "metric": "hrv",
+    "expected": "56",
+    "screenshot_sha256": "d3efc9f2ca0e7242fda7187c5f27d22d9eeab7081b7ca519b33b43a20e5b4300",
+    "glyph": {
+      "sha256": "8837b844fda33a936c3c1ef060adb2c040b3235b921294b4d6fbdf94f0274f68",
+      "width": 44,
+      "height": 35,
+      "ink_pixels": 361
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 18,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-standard-3-30.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 6.5960693359375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-standard-3-40.png",
+    "id": 241,
+    "crew_id": "CREW-05",
+    "metric": "hrv",
+    "expected": "54",
+    "screenshot_sha256": "fac244af56a316373433d8343329bc8415a741b90f9e0128220304a446534639",
+    "glyph": {
+      "sha256": "b34b6ab641da866b67c11af4ca05bf49cf8d4a62946972b54e4d9b7cc24d0b19",
+      "width": 45,
+      "height": 35,
+      "ink_pixels": 347
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 19,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-standard-3-40.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 7.95135498046875,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-performance-1-10.png",
+    "id": 61,
+    "crew_id": "CREW-02",
+    "metric": "hrv",
+    "expected": "54",
+    "screenshot_sha256": "468b289260f21defe6edec21e8c10a7afe924107e6bf36bdc7f762498003efa8",
+    "glyph": {
+      "sha256": "84d1079422838c6eaa17a1a57603a87bf4c8be6c7227009fa6dbcd269332481e",
+      "width": 45,
+      "height": 34,
+      "ink_pixels": 288
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 20,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-performance-1-10.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 6.822509765625,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-performance-1-20.png",
+    "id": 121,
+    "crew_id": "CREW-03",
+    "metric": "hrv",
+    "expected": "53",
+    "screenshot_sha256": "47478d9b95b5991b90e3cc8ac498283942dbba1e1fc3d709720388863a430d2f",
+    "glyph": {
+      "sha256": "722a0db9e21767f7dd3e4ec448c9dbadc97506c96f6decd33410e7b07f173ef8",
+      "width": 42,
+      "height": 34,
+      "ink_pixels": 198
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 21,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-performance-1-20.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 6.82080078125,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-performance-1-40.png",
+    "id": 241,
+    "crew_id": "CREW-05",
+    "metric": "hrv",
+    "expected": "58",
+    "screenshot_sha256": "de88d00566bb78267f4bbb64b7d96ce6f0b6d2ef05c46d6c00c7a06b8732de70",
+    "glyph": {
+      "sha256": "a67eeda845ab3e223f883e6eb57fc98aba9dc3b4a9566db0c0ef24a317667e9a",
+      "width": 43,
+      "height": 35,
+      "ink_pixels": 307
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 22,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-performance-1-40.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 6.8193359375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-performance-3-50.png",
+    "id": 303,
+    "crew_id": "CREW-06",
+    "metric": "respiratory_rate",
+    "expected": "15",
+    "screenshot_sha256": "6589ad60e7a6291893c324f626092e4fdb2fa8e540fb5b5954db9a955a0d8bb2",
+    "glyph": {
+      "sha256": "e54e85d230af7cd3fe565e6925069060b88f3a5d29b8813a233d1e565fb21808",
+      "width": 40,
+      "height": 34,
+      "ink_pixels": 199
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 23,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-performance-3-50.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 290.81866455078125,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-performance-1-50.png",
+    "id": 303,
+    "crew_id": "CREW-06",
+    "metric": "respiratory_rate",
+    "expected": "15",
+    "screenshot_sha256": "7dda6ffdde436934d972bc315a35e0bb74ed0acbe1bdc7965dd96ec6fd13db90",
+    "glyph": {
+      "sha256": "b8d2d8a2e899b4c674c7ccb6fcb383fc05e82fb6cfb4041b85838c4a913fe2e2",
+      "width": 41,
+      "height": 34,
+      "ink_pixels": 228
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 24,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-performance-1-50.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 290.59844970703125,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-performance-2-0.png",
+    "id": 3,
+    "crew_id": "CREW-01",
+    "metric": "respiratory_rate",
+    "expected": "13",
+    "screenshot_sha256": "a21981f9c8e40f2f6b73fe5fcb44460b70626f05ff7356c7dba66a236ef1b7a6",
+    "glyph": {
+      "sha256": "bd8f2594e392b9040c950972c73b24e4585a287bb13ceaf98a42bb1c59fdd617",
+      "width": 41,
+      "height": 35,
+      "ink_pixels": 222
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 25,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-performance-2-0.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 290.81915283203125,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-performance-2-10.png",
+    "id": 63,
+    "crew_id": "CREW-02",
+    "metric": "respiratory_rate",
+    "expected": "14",
+    "screenshot_sha256": "a34aab86283e32f6e30d7d72c59314b0f8fb62be953109d95b2d21f1d32a06eb",
+    "glyph": {
+      "sha256": "618c40434de8b5c3b23332ae88eacfd196c04c10ebe372b953bdb7bf3e93c892",
+      "width": 41,
+      "height": 34,
+      "ink_pixels": 188
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 26,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-performance-2-10.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 290.81695556640625,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-performance-2-30.png",
+    "id": 180,
+    "crew_id": "CREW-04",
+    "metric": "heart_rate",
+    "expected": "69",
+    "screenshot_sha256": "82c4dcb298f93a20284c82e46508d4671c58cfb8ffc7b7c8f1206733db3eef16",
+    "glyph": {
+      "sha256": "544c5d8fbd6fc3e0438e4fa38c3d05f21b767731b7c902de8ed730c62a839144",
+      "width": 44,
+      "height": 35,
+      "ink_pixels": 386
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 27,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-performance-2-30.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 7.224609375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-performance-2-30.png",
+    "id": 181,
+    "crew_id": "CREW-04",
+    "metric": "hrv",
+    "expected": "56",
+    "screenshot_sha256": "82c4dcb298f93a20284c82e46508d4671c58cfb8ffc7b7c8f1206733db3eef16",
+    "glyph": {
+      "sha256": "ccc4323d6b63309189986f399d799ede1caa9e8b8b5bda80ff62488c45e626c3",
+      "width": 44,
+      "height": 35,
+      "ink_pixels": 353
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 28,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-performance-2-30.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 7.224609375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-performance-3-10.png",
+    "id": 60,
+    "crew_id": "CREW-02",
+    "metric": "heart_rate",
+    "expected": "68",
+    "screenshot_sha256": "9b0f06339a8d45cc63472275dea61873a0f1d0b26fae15551d7833f901b064ee",
+    "glyph": {
+      "sha256": "0778ca5cd127d2772824dd7876a93173a8f4b73bda34d309f19b796827413bbb",
+      "width": 44,
+      "height": 35,
+      "ink_pixels": 414
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 29,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-performance-3-10.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 7.2296142578125,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-performance-3-10.png",
+    "id": 61,
+    "crew_id": "CREW-02",
+    "metric": "hrv",
+    "expected": "55",
+    "screenshot_sha256": "9b0f06339a8d45cc63472275dea61873a0f1d0b26fae15551d7833f901b064ee",
+    "glyph": {
+      "sha256": "5afe944822ab7a57313658ad0f13d3ad5e3bcad56dd080b08ed39d4e7394373e",
+      "width": 42,
+      "height": 35,
+      "ink_pixels": 291
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 30,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-performance-3-10.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 7.2296142578125,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-performance-3-20.png",
+    "id": 121,
+    "crew_id": "CREW-03",
+    "metric": "hrv",
+    "expected": "55",
+    "screenshot_sha256": "258c5f32fd22da493744ccca4bc8711163fc4cb1685c54d734ea849acd00d7e8",
+    "glyph": {
+      "sha256": "619c4e4f9439f442cf0d1e8c6304810b12f7209ff23d31da901390c628f15b7d",
+      "width": 42,
+      "height": 34,
+      "ink_pixels": 197
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 31,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-performance-3-20.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 6.81396484375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-performance-3-30.png",
+    "id": 180,
+    "crew_id": "CREW-04",
+    "metric": "heart_rate",
+    "expected": "67",
+    "screenshot_sha256": "5b64fa394aa123e84b426b3c97b797dd55b6e4f0c612e618383fad2b87dc8cd3",
+    "glyph": {
+      "sha256": "aa51ac7e9a6e79eccf97707822dc438d132b66c7a0d22c9ff60236135b755af4",
+      "width": 45,
+      "height": 35,
+      "ink_pixels": 317
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 32,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-performance-3-30.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 6.5770263671875,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-1x-crew\\1x-crew-performance-3-40.png",
+    "id": 240,
+    "crew_id": "CREW-05",
+    "metric": "heart_rate",
+    "expected": "68",
+    "screenshot_sha256": "f11ae8751427fa6d956e84efd60bdeb0e4114e25a59eda829e52c6498f983013",
+    "glyph": {
+      "sha256": "3a61c833d9f2a6b64a6ac5429a7a5b80cfc055015e706c684d04e39ee33cf89f",
+      "width": 44,
+      "height": 35,
+      "ink_pixels": 437
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 33,
+    "directory": "after-1x-crew",
+    "basename": "1x-crew-performance-3-40.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 6.57568359375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-1-0.png",
+    "id": 3,
+    "crew_id": "CREW-01",
+    "metric": "respiratory_rate",
+    "expected": "13",
+    "screenshot_sha256": "58f0b862f222ebe7f05344f9f77d47e599155ab4e1a053b9c2a21dd3cb377842",
+    "glyph": null,
+    "glyph_error": "No readable numeric glyph mask",
+    "ocr_matched": true,
+    "matched": false,
+    "reference": null,
+    "index": 34,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-1-0.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 290.81842041015625,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-1-10.png",
+    "id": 61,
+    "crew_id": "CREW-02",
+    "metric": "hrv",
+    "expected": "54",
+    "screenshot_sha256": "f6eea517b802473f67077a2c86466895f42e5b1e2d7008928098161a76ecc518",
+    "glyph": {
+      "sha256": "35d92afd78f89c252ac500b704494bdf43829835d59a7bf58836a5fac368abe9",
+      "width": 44,
+      "height": 35,
+      "ink_pixels": 268
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 35,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-1-10.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 6.8179931640625,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-3-20.png",
+    "id": 123,
+    "crew_id": "CREW-03",
+    "metric": "respiratory_rate",
+    "expected": "14",
+    "screenshot_sha256": "3c150abfe220e5749fe02675e4a055ce20585474e2c8b0ccee8a0d81e488c85c",
+    "glyph": {
+      "sha256": "2c969b1615275211ad379a31b073fd16069baf9592a4ca89067b738ab9b8da6f",
+      "width": 43,
+      "height": 35,
+      "ink_pixels": 226
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 36,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-3-20.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 290.8212890625,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-2-40.png",
+    "id": 240,
+    "crew_id": "CREW-05",
+    "metric": "heart_rate",
+    "expected": "69",
+    "screenshot_sha256": "717857fb9896c37f7336dd097d810613f12cf0a4969334a58124b47f74f33e86",
+    "glyph": {
+      "sha256": "98f23327fe9874677cd42836fccd224f7e9d8788ed5986ba94f423d0e1c47f83",
+      "width": 45,
+      "height": 36,
+      "ink_pixels": 406
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 37,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-2-40.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 7.22802734375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-1-30.png",
+    "id": 180,
+    "crew_id": "CREW-04",
+    "metric": "heart_rate",
+    "expected": "69",
+    "screenshot_sha256": "a9e2f8e497e5d8f94dc77e28d7423d245a0a62fd38a5afecf1f74619c70b2b44",
+    "glyph": {
+      "sha256": "7cff7a657c1b4a5f85f72d9dccf2a1214215d149499ab094ce04110e73401272",
+      "width": 45,
+      "height": 36,
+      "ink_pixels": 420
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 38,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-1-30.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 6.5753173828125,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-1-30.png",
+    "id": 181,
+    "crew_id": "CREW-04",
+    "metric": "hrv",
+    "expected": "58",
+    "screenshot_sha256": "a9e2f8e497e5d8f94dc77e28d7423d245a0a62fd38a5afecf1f74619c70b2b44",
+    "glyph": {
+      "sha256": "d022e14de24fd1e557253aa2dd219ec01eaed9537df673b09f7e620676d26e36",
+      "width": 44,
+      "height": 36,
+      "ink_pixels": 399
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 39,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-1-30.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 6.5753173828125,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-1-40.png",
+    "id": 241,
+    "crew_id": "CREW-05",
+    "metric": "hrv",
+    "expected": "55",
+    "screenshot_sha256": "baf6710a6c1eac33e53e319c2e9e5cbd1668c1ba94c74829267249db2096754f",
+    "glyph": {
+      "sha256": "f920e20e365cd5d98fdc15b2f9459f8a2281f2e99f67a656ea7a390d2d5b0fe6",
+      "width": 42,
+      "height": 35,
+      "ink_pixels": 237
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 40,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-1-40.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 6.8382568359375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-1-50.png",
+    "id": 300,
+    "crew_id": "CREW-06",
+    "metric": "heart_rate",
+    "expected": "70",
+    "screenshot_sha256": "3bc70207ab085251bad57aa1dfcb6723d87d0faa6868c7035b93a2d409446768",
+    "glyph": {
+      "sha256": "8706e89c59af357c7822908d11b76783bd4754397999f0e2044eacfe6b03ec0d",
+      "width": 45,
+      "height": 36,
+      "ink_pixels": 316
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 41,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-1-50.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 7.2249755859375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-2-0.png",
+    "id": 1,
+    "crew_id": "CREW-01",
+    "metric": "hrv",
+    "expected": "53",
+    "screenshot_sha256": "b5b7493d384ac5786e0f8d3926812df2215f3395b8132cb12dd1eadc46b36791",
+    "glyph": {
+      "sha256": "0b7671f51875c525c06e6e327e01ef5af619bb10e01f69d17ed9a4e11335d49f",
+      "width": 40,
+      "height": 35,
+      "ink_pixels": 93
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 42,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-2-0.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 6.0550537109375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-2-10.png",
+    "id": 60,
+    "crew_id": "CREW-02",
+    "metric": "heart_rate",
+    "expected": "68",
+    "screenshot_sha256": "ca66817ce47444b33b331d256aa2299eb20115d8a4a1baae71e70e890631086e",
+    "glyph": {
+      "sha256": "8392248331bf1f9cdabe97a545761c5a37813e5737c1f3b0a1d9d58560e629cc",
+      "width": 45,
+      "height": 35,
+      "ink_pixels": 384
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 43,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-2-10.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 7.230224609375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-2-10.png",
+    "id": 61,
+    "crew_id": "CREW-02",
+    "metric": "hrv",
+    "expected": "55",
+    "screenshot_sha256": "ca66817ce47444b33b331d256aa2299eb20115d8a4a1baae71e70e890631086e",
+    "glyph": {
+      "sha256": "fcf469dad1744dd527ccc7f18b9a6aab99b31b0a62c1119fa1d5a7f8295630e1",
+      "width": 43,
+      "height": 35,
+      "ink_pixels": 255
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 44,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-2-10.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 7.230224609375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-2-10.png",
+    "id": 63,
+    "crew_id": "CREW-02",
+    "metric": "respiratory_rate",
+    "expected": "14",
+    "screenshot_sha256": "ca66817ce47444b33b331d256aa2299eb20115d8a4a1baae71e70e890631086e",
+    "glyph": {
+      "sha256": "a3b617086ae86bb170b7143b86defcdee9db3ac3c35e0fa0a2e4d4fcb880ecc9",
+      "width": 44,
+      "height": 35,
+      "ink_pixels": 246
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 45,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-2-10.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 291.230224609375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-3-50.png",
+    "id": 300,
+    "crew_id": "CREW-06",
+    "metric": "heart_rate",
+    "expected": "68",
+    "screenshot_sha256": "b4d0ad51f78b7c08cfb670b17c326e3e803639b77e2328107564e65de0a5a8f1",
+    "glyph": {
+      "sha256": "392149de4884b87643f63a3b5b28c1481761e6024fa2a9d01e0a0744c8b9f159",
+      "width": 45,
+      "height": 36,
+      "ink_pixels": 429
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 46,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-3-50.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 7.227294921875,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-2-30.png",
+    "id": 181,
+    "crew_id": "CREW-04",
+    "metric": "hrv",
+    "expected": "53",
+    "screenshot_sha256": "7e4c83aefdf427ba457be44ccd548ffb4310e9bad99d5cba48788777b6fd6809",
+    "glyph": {
+      "sha256": "20870ae76825dcdef3fb98a1c53405fdc8901593998298027f71ae946fa0e2e1",
+      "width": 43,
+      "height": 36,
+      "ink_pixels": 310
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 47,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-2-30.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 7.2257080078125,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-2-50.png",
+    "id": 301,
+    "crew_id": "CREW-06",
+    "metric": "hrv",
+    "expected": "59",
+    "screenshot_sha256": "2b2803e1619d485a992583de1266d1710cfeee30db285c0b635188e4823f214c",
+    "glyph": {
+      "sha256": "9bc17fe6813fa6201512b2fa6044ac0ee332c6fe6c6c7e77c62660415f19d8fc",
+      "width": 44,
+      "height": 36,
+      "ink_pixels": 360
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 48,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-2-50.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 7.89739990234375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-3-0.png",
+    "id": 3,
+    "crew_id": "CREW-01",
+    "metric": "respiratory_rate",
+    "expected": "14",
+    "screenshot_sha256": "764aa14c14b177867dfe56a52a8bdf44024941b7f9b1e77a9e9ddd8f689ee5bf",
+    "glyph": {
+      "sha256": "b2dd7aec3489133403585e11c6eba2bee8206f7d3e7d10d19e1f2dc72adced51",
+      "width": 40,
+      "height": 26,
+      "ink_pixels": 54
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 49,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-3-0.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 291.6141357421875,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-3-10.png",
+    "id": 61,
+    "crew_id": "CREW-02",
+    "metric": "hrv",
+    "expected": "52",
+    "screenshot_sha256": "a41881b8e02455ebe78d811f31ae6723119df8e53afa799cfef95c88a2656513",
+    "glyph": {
+      "sha256": "0e4d3dbc4e555cda8a584b651c6f08d0a9a3dfb3919616297ef91b9c17a1a74e",
+      "width": 43,
+      "height": 35,
+      "ink_pixels": 256
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 50,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-3-10.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 6.8157958984375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-3-10.png",
+    "id": 63,
+    "crew_id": "CREW-02",
+    "metric": "respiratory_rate",
+    "expected": "13",
+    "screenshot_sha256": "a41881b8e02455ebe78d811f31ae6723119df8e53afa799cfef95c88a2656513",
+    "glyph": {
+      "sha256": "1efabedcc16135a522ee692c4afb5bf83ee9dc69ab38477d0a77f857cd0f1505",
+      "width": 42,
+      "height": 35,
+      "ink_pixels": 222
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 51,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-3-10.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 290.8157958984375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-3-20.png",
+    "id": 121,
+    "crew_id": "CREW-03",
+    "metric": "hrv",
+    "expected": "55",
+    "screenshot_sha256": "3c150abfe220e5749fe02675e4a055ce20585474e2c8b0ccee8a0d81e488c85c",
+    "glyph": {
+      "sha256": "ca42f5fca64eb473afbe30d28dc6db779e51a7f70cc4b2eb6ff3ce980d83eaf3",
+      "width": 42,
+      "height": 35,
+      "ink_pixels": 234
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 52,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-3-20.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 6.8212890625,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-3-30.png",
+    "id": 181,
+    "crew_id": "CREW-04",
+    "metric": "hrv",
+    "expected": "56",
+    "screenshot_sha256": "077ff371db43e764e53a0454c0b6f93b98ee3f96871ffb5b4422f7f299b5ec04",
+    "glyph": {
+      "sha256": "7f8aa5551f2ee676d172560624eb7a2419166a8b1806d746ddfe5f700e8ee2e9",
+      "width": 43,
+      "height": 35,
+      "ink_pixels": 199
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 53,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-3-30.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 6.8209228515625,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-standard-3-40.png",
+    "id": 243,
+    "crew_id": "CREW-05",
+    "metric": "respiratory_rate",
+    "expected": "15",
+    "screenshot_sha256": "7c2d668fb7d2f22984706b713816fef2feb97bd57f623d9504570cb940f86be5",
+    "glyph": {
+      "sha256": "fdef7d2712871c2809b20a2f0b53c243dc57046d5e83e88b761c829701e37159",
+      "width": 41,
+      "height": 35,
+      "ink_pixels": 196
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 54,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-standard-3-40.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 290.82086181640625,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-performance-1-0.png",
+    "id": 0,
+    "crew_id": "CREW-01",
+    "metric": "heart_rate",
+    "expected": "67",
+    "screenshot_sha256": "81d6b7b33c40b5900fd20c4bc3b37845df1f4e221e08b0ed10c8c82da104f518",
+    "glyph": {
+      "sha256": "4556d5e01d4edc740554241265b4caa64faed7ead53baa6d4a9cc400bff23b2b",
+      "width": 45,
+      "height": 35,
+      "ink_pixels": 237
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 55,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-performance-1-0.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 6.82000732421875,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-performance-1-10.png",
+    "id": 60,
+    "crew_id": "CREW-02",
+    "metric": "heart_rate",
+    "expected": "70",
+    "screenshot_sha256": "4ff5c7b9c0d992b53ba36a7efec427c95e32b30966d4ed7efcc04a0ab6c03d63",
+    "glyph": {
+      "sha256": "7d4114904c228900d2812cf6004689654c2c51f878751050738b66e875979e07",
+      "width": 44,
+      "height": 35,
+      "ink_pixels": 162
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 56,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-performance-1-10.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 6.81597900390625,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-performance-1-10.png",
+    "id": 63,
+    "crew_id": "CREW-02",
+    "metric": "respiratory_rate",
+    "expected": "14",
+    "screenshot_sha256": "4ff5c7b9c0d992b53ba36a7efec427c95e32b30966d4ed7efcc04a0ab6c03d63",
+    "glyph": {
+      "sha256": "5cac32bb5b3a7310574451c77c20566a5618e96488f13b99c5b9052a05683d79",
+      "width": 41,
+      "height": 34,
+      "ink_pixels": 171
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 57,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-performance-1-10.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 290.81597900390625,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-performance-2-40.png",
+    "id": 240,
+    "crew_id": "CREW-05",
+    "metric": "heart_rate",
+    "expected": "69",
+    "screenshot_sha256": "f2adbc65c126607f03a158126351b8a6fdd07cfe61aba6221e01f9da945f41db",
+    "glyph": {
+      "sha256": "f7f04bd95dfb5c3de3360a95d7b3e9a8101dd7aaed09f12143740cad96b4f54c",
+      "width": 45,
+      "height": 35,
+      "ink_pixels": 406
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 58,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-performance-2-40.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 7.2318115234375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-performance-1-30.png",
+    "id": 180,
+    "crew_id": "CREW-04",
+    "metric": "heart_rate",
+    "expected": "68",
+    "screenshot_sha256": "cebf4069e71cd44024467ec69f61517218960c2ba503812766b85e63623e8d09",
+    "glyph": {
+      "sha256": "2ba5556673239f704c89dbfabb7ff677c8acea5468ce12cd0656578a3c47cce8",
+      "width": 42,
+      "height": 33,
+      "ink_pixels": 163
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 59,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-performance-1-30.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 6.8194580078125,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-performance-1-40.png",
+    "id": 240,
+    "crew_id": "CREW-05",
+    "metric": "heart_rate",
+    "expected": "68",
+    "screenshot_sha256": "9944e933baaa516507ac416ade446d1732cb78eb0bacbede7e1019de773dc131",
+    "glyph": {
+      "sha256": "a2ec8bec627ab922beae7191d1cf3bbfababb9f33b8a03242297930717282bf2",
+      "width": 45,
+      "height": 35,
+      "ink_pixels": 445
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 60,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-performance-1-40.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 7.9051513671875,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-performance-3-10.png",
+    "id": 60,
+    "crew_id": "CREW-02",
+    "metric": "heart_rate",
+    "expected": "67",
+    "screenshot_sha256": "2580d9320d56972b16dab6bdc42dd0090f58aa42d2ac3084bad7b30869eb9c2a",
+    "glyph": {
+      "sha256": "e5da6024fc6b70353efe93a07b54241a8f3c09853d34c0902d11cb7b65415106",
+      "width": 45,
+      "height": 36,
+      "ink_pixels": 303
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 61,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-performance-3-10.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 7.9010009765625,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-performance-2-30.png",
+    "id": 180,
+    "crew_id": "CREW-04",
+    "metric": "heart_rate",
+    "expected": "68",
+    "screenshot_sha256": "4cd1197d468ebf2cdb791e2778e1f4322af98b84eb2797f1379da74212071874",
+    "glyph": {
+      "sha256": "05d26416631b5b5e1b6d82a6f7e362b451cc351390089937eb2a5d65de8e97e7",
+      "width": 45,
+      "height": 35,
+      "ink_pixels": 435
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 62,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-performance-2-30.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 7.896484375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-performance-2-40.png",
+    "id": 241,
+    "crew_id": "CREW-05",
+    "metric": "hrv",
+    "expected": "58",
+    "screenshot_sha256": "f2adbc65c126607f03a158126351b8a6fdd07cfe61aba6221e01f9da945f41db",
+    "glyph": {
+      "sha256": "2a8f1eff6ed8727d93de218d6fe5841bec5ada98ddcb5d67b5d32449c61861d1",
+      "width": 43,
+      "height": 35,
+      "ink_pixels": 367
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 63,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-performance-2-40.png",
+    "rect": {
+      "x": 649.84375,
+      "y": 7.2318115234375,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-performance-2-50.png",
+    "id": 303,
+    "crew_id": "CREW-06",
+    "metric": "respiratory_rate",
+    "expected": "15",
+    "screenshot_sha256": "03cdb62dba3691be65a62d82e1dcebd4d28599244d5236f90e4f9aa68b3e60f7",
+    "glyph": {
+      "sha256": "e056c7b3b06aa13d2dacd99ec1e207c25a74ccb2d09f9285c7ee61dee63a0dc8",
+      "width": 42,
+      "height": 35,
+      "ink_pixels": 225
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 64,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-performance-2-50.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 291.2208251953125,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-performance-2-50.png",
+    "id": 300,
+    "crew_id": "CREW-06",
+    "metric": "heart_rate",
+    "expected": "71",
+    "screenshot_sha256": "03cdb62dba3691be65a62d82e1dcebd4d28599244d5236f90e4f9aa68b3e60f7",
+    "glyph": {
+      "sha256": "36977134714d8923532949c7e427347924f510d99904139593142b49c4d2bb82",
+      "width": 39,
+      "height": 35,
+      "ink_pixels": 218
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 65,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-performance-2-50.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 7.2208251953125,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-performance-3-20.png",
+    "id": 120,
+    "crew_id": "CREW-03",
+    "metric": "heart_rate",
+    "expected": "68",
+    "screenshot_sha256": "6e9b4279dd511b8b00bab883331faea8b6d2f33fc219556ca42812fdb1996fca",
+    "glyph": {
+      "sha256": "a90f43d2030be1f7890cb8ae250b7b1c171f314c1c33dce27c0e27eed0f00e7b",
+      "width": 45,
+      "height": 35,
+      "ink_pixels": 360
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 66,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-performance-3-20.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 6.82098388671875,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-performance-3-30.png",
+    "id": 180,
+    "crew_id": "CREW-04",
+    "metric": "heart_rate",
+    "expected": "69",
+    "screenshot_sha256": "7715213d0d5f6a0f1f68037046e4ca00bce9976f91120887b23da529ad5f485e",
+    "glyph": {
+      "sha256": "1ea5ecec7180c2155f46000fd69cbc416e8a03fd8ac94786dac53b6056c4fd35",
+      "width": 45,
+      "height": 36,
+      "ink_pixels": 386
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 67,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-performance-3-30.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 7.22607421875,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-performance-3-40.png",
+    "id": 240,
+    "crew_id": "CREW-05",
+    "metric": "heart_rate",
+    "expected": "68",
+    "screenshot_sha256": "6cffbac54abde9b232bf59857d27ca5f4317bb05cf3140700ebf4435ae9d767f",
+    "glyph": {
+      "sha256": "71625ecc18e91f46c7210e39889d99d231e8db34c8a04f7b6668aa4ed829f7f7",
+      "width": 45,
+      "height": 36,
+      "ink_pixels": 411
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 68,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-performance-3-40.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 7.22869873046875,
+      "width": 49.125,
+      "height": 66
+    }
+  },
+  {
+    "file": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n04-p01-20261018\\after-30x-crew\\30x-crew-performance-3-50.png",
+    "id": 300,
+    "crew_id": "CREW-06",
+    "metric": "heart_rate",
+    "expected": "69",
+    "screenshot_sha256": "fd6ccd6a791aa5bd55f6d679a7a6ea7cd21553a22b4fdeb7fa60d833667d7637",
+    "glyph": {
+      "sha256": "91ef037aaf01441827eae5860f53e1de25129a8c52ffa43c8b1a0c4710d90904",
+      "width": 45,
+      "height": 35,
+      "ink_pixels": 336
+    },
+    "glyph_error": null,
+    "ocr_matched": false,
+    "matched": false,
+    "reference": null,
+    "index": 69,
+    "directory": "after-30x-crew",
+    "basename": "30x-crew-performance-3-50.png",
+    "rect": {
+      "x": 6.78125,
+      "y": 6.819580078125,
+      "width": 49.125,
+      "height": 66
+    }
+  }
+]

@@ -1,0 +1,216 @@
+{
+  "at": "2026-10-19T20:46:21.481Z",
+  "scope": "Only15 outstanding headed trials;sequential;verify each before next;first failure stops entire batch;no retries or QA changes",
+  "status": "STOPPED at first failed trial;no retry or second collection",
+  "newly_accepted": 0,
+  "total_accepted": 9,
+  "required": 24,
+  "remaining": 15,
+  "accepted_trials": [
+    "1x-overview-standard-1",
+    "1x-overview-standard-2",
+    "1x-overview-standard-3",
+    "1x-overview-performance-1",
+    "1x-overview-performance-2",
+    "1x-overview-performance-3",
+    "1x-crew-standard-1",
+    "1x-crew-standard-2",
+    "1x-crew-standard-3"
+  ],
+  "trials": [
+    {
+      "rate": 1,
+      "context": "crew",
+      "mode": "performance",
+      "trial": 1,
+      "id": "1x-crew-performance-1",
+      "status": "failed;not accepted",
+      "evidence": "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/outcome.json",
+      "outcome_sha256": "2f282abd4a5b55ea4a34120a29cac589091647fe47ee6e7eb788d7fcb02a5a75",
+      "reason": "Trial guard: Native helper heartbeat missing"
+    },
+    {
+      "rate": 1,
+      "context": "crew",
+      "mode": "performance",
+      "trial": 2,
+      "id": "1x-crew-performance-2",
+      "status": "not attempted;batch stopped"
+    },
+    {
+      "rate": 1,
+      "context": "crew",
+      "mode": "performance",
+      "trial": 3,
+      "id": "1x-crew-performance-3",
+      "status": "not attempted;batch stopped"
+    },
+    {
+      "rate": 30,
+      "context": "overview",
+      "mode": "standard",
+      "trial": 1,
+      "id": "30x-overview-standard-1",
+      "status": "not attempted;batch stopped"
+    },
+    {
+      "rate": 30,
+      "context": "overview",
+      "mode": "standard",
+      "trial": 2,
+      "id": "30x-overview-standard-2",
+      "status": "not attempted;batch stopped"
+    },
+    {
+      "rate": 30,
+      "context": "overview",
+      "mode": "standard",
+      "trial": 3,
+      "id": "30x-overview-standard-3",
+      "status": "not attempted;batch stopped"
+    },
+    {
+      "rate": 30,
+      "context": "overview",
+      "mode": "performance",
+      "trial": 1,
+      "id": "30x-overview-performance-1",
+      "status": "not attempted;batch stopped"
+    },
+    {
+      "rate": 30,
+      "context": "overview",
+      "mode": "performance",
+      "trial": 2,
+      "id": "30x-overview-performance-2",
+      "status": "not attempted;batch stopped"
+    },
+    {
+      "rate": 30,
+      "context": "overview",
+      "mode": "performance",
+      "trial": 3,
+      "id": "30x-overview-performance-3",
+      "status": "not attempted;batch stopped"
+    },
+    {
+      "rate": 30,
+      "context": "crew",
+      "mode": "standard",
+      "trial": 1,
+      "id": "30x-crew-standard-1",
+      "status": "not attempted;batch stopped"
+    },
+    {
+      "rate": 30,
+      "context": "crew",
+      "mode": "standard",
+      "trial": 2,
+      "id": "30x-crew-standard-2",
+      "status": "not attempted;batch stopped"
+    },
+    {
+      "rate": 30,
+      "context": "crew",
+      "mode": "standard",
+      "trial": 3,
+      "id": "30x-crew-standard-3",
+      "status": "not attempted;batch stopped"
+    },
+    {
+      "rate": 30,
+      "context": "crew",
+      "mode": "performance",
+      "trial": 1,
+      "id": "30x-crew-performance-1",
+      "status": "not attempted;batch stopped"
+    },
+    {
+      "rate": 30,
+      "context": "crew",
+      "mode": "performance",
+      "trial": 2,
+      "id": "30x-crew-performance-2",
+      "status": "not attempted;batch stopped"
+    },
+    {
+      "rate": 30,
+      "context": "crew",
+      "mode": "performance",
+      "trial": 3,
+      "id": "30x-crew-performance-3",
+      "status": "not attempted;batch stopped"
+    }
+  ],
+  "remaining_trial_ids": [
+    "1x-crew-performance-1",
+    "1x-crew-performance-2",
+    "1x-crew-performance-3",
+    "30x-overview-standard-1",
+    "30x-overview-standard-2",
+    "30x-overview-standard-3",
+    "30x-overview-performance-1",
+    "30x-overview-performance-2",
+    "30x-overview-performance-3",
+    "30x-crew-standard-1",
+    "30x-crew-standard-2",
+    "30x-crew-standard-3",
+    "30x-crew-performance-1",
+    "30x-crew-performance-2",
+    "30x-crew-performance-3"
+  ],
+  "attempted": 1,
+  "not_attempted": 14,
+  "source_files_checked": 87,
+  "historical_files_checked": 659,
+  "original_fixture_unchanged": true,
+  "latency_and_numeric_summary": {
+    "host_batches": 40,
+    "captures": 39,
+    "numeric_samples": 234,
+    "pngs": 40,
+    "completed_trials": 0,
+    "last_host": {
+      "second": 39,
+      "started_host_ms": 1792442697122,
+      "completed_host_ms": 1792442698407,
+      "tick_ms": 1287.9364999999962,
+      "deadline_lateness_ms": 13.262700000006589,
+      "observed_at": "2026-11-14T11:15:59.000Z"
+    },
+    "last_capture": {
+      "second": 38,
+      "observed_at": "2026-11-14T11:15:58.000Z",
+      "file": "1x-crew-performance-1-38.png",
+      "capture_completed_host_ms": 1792442696315,
+      "metric_ids": [
+        228,
+        229,
+        230,
+        231,
+        232,
+        233
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "dpr": 1.0000000149011612,
+        "scale": 1
+      }
+    },
+    "partial_dom_p95_ms": 57,
+    "partial_capture_completion_p95_ms": 268,
+    "scope": "39 captured batches only;not a qualifying60-second/per-group/numeric/source-verified acceptance result",
+    "numeric_verified": 0,
+    "numeric_assessment": "Not run;first guard failure already invalidates collection",
+    "final_ownership_coverage": "Not reached"
+  },
+  "final_visual_approval_eligible_for_n04_closure": false,
+  "eligibility_reason": "15 mandatory headed trials remain unaccepted;explicit final visual approval also pending",
+  "n04_status": "Partial",
+  "n03_status": "Partial",
+  "ac20": "Open / Unverified",
+  "next_action": "STOP;separate approval needed for any bounded read-only investigation or retry;do not run another collection automatically"
+}

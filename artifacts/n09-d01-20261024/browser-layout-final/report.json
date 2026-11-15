@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "started_at": "2026-10-24T17:26:42.224Z",
+  "checks": [
+    {
+      "name": "N09-D01 real selector, fixed profile, keyboard focus and two viewport layouts",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    "scenario-1920x1080.png",
+    "scenario-390x844.png",
+    "scenario-controls-mobile.png"
+  ],
+  "console_errors": [],
+  "http_errors": [
+    {
+      "url": "http://127.0.0.1:55235/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    }
+  ],
+  "viewports": [
+    {
+      "page": "Scenario Lab N09-D01",
+      "width": 1920,
+      "height": 1080,
+      "document_overflow": false
+    },
+    {
+      "page": "Scenario Lab N09-D01",
+      "width": 390,
+      "height": 844,
+      "document_overflow": false
+    }
+  ],
+  "caveats": [
+    "No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation.",
+    "Pointer/keyboard/rendered DOM checks and screenshots supplement human visual, text-contrast and assistive-technology review; they do not establish WCAG conformance."
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/155.0.8059.86",
+    "revision": "@804d6b05f089b27af8342622a36558c49401a1d4",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "jsVersion": "15.5.35.25"
+  },
+  "finished_at": "2026-10-24T17:26:45.724Z"
+}

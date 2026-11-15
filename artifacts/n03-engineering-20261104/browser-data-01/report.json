@@ -1,0 +1,258 @@
+{
+  "status": "passed",
+  "started_at": "2026-11-04T18:00:45.571Z",
+  "checks": [
+    {
+      "name": "N03 exact six-metric values for all six canonical crew and four environment values",
+      "status": "passed"
+    },
+    {
+      "name": "N03 real-browser suspended-page handlers cancel reads and recover without stale presentation",
+      "status": "passed"
+    },
+    {
+      "name": "N03 real-browser error notice has a named region and recovers actual readiness",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [],
+  "console_errors": [],
+  "http_errors": [
+    {
+      "url": "http://127.0.0.1:54212/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    },
+    {
+      "url": "http://127.0.0.1:54212/v1/health",
+      "status": 503,
+      "stage": "N03 real-browser error notice has a named region and recovers actual readiness"
+    }
+  ],
+  "viewports": [],
+  "caveats": [
+    "No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation.",
+    "Pointer/keyboard/rendered DOM checks and screenshots supplement human visual, text-contrast and assistive-technology review; they do not establish WCAG conformance."
+  ],
+  "native_zoom_preferences": {
+    "factor": 1,
+    "partition_key": "x",
+    "level": 0,
+    "disposable_profile": true
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/156.0.8078.80",
+    "revision": "@fb096c0011f9d50f0a264a9376420cdea9c421e3",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "jsVersion": "15.6.75.27"
+  },
+  "N03_numeric_comparisons": [
+    {
+      "crew": "CREW-01",
+      "keys": [
+        "heart_rate",
+        "hrv",
+        "spo2",
+        "respiratory_rate",
+        "sleep_duration",
+        "temperature"
+      ],
+      "actual": [
+        "65",
+        "52",
+        "97.9",
+        "14",
+        "7.5",
+        "36.6"
+      ],
+      "expected": [
+        "65",
+        "52",
+        "97.9",
+        "14",
+        "7.5",
+        "36.6"
+      ],
+      "synthetic": true
+    },
+    {
+      "crew": "CREW-02",
+      "keys": [
+        "heart_rate",
+        "hrv",
+        "spo2",
+        "respiratory_rate",
+        "sleep_duration",
+        "temperature"
+      ],
+      "actual": [
+        "69",
+        "54",
+        "98.1",
+        "14",
+        "7.7",
+        "36.7"
+      ],
+      "expected": [
+        "69",
+        "54",
+        "98.1",
+        "14",
+        "7.7",
+        "36.7"
+      ],
+      "synthetic": true
+    },
+    {
+      "crew": "CREW-03",
+      "keys": [
+        "heart_rate",
+        "hrv",
+        "spo2",
+        "respiratory_rate",
+        "sleep_duration",
+        "temperature"
+      ],
+      "actual": [
+        "68",
+        "57",
+        "98.1",
+        "15",
+        "7.9",
+        "36.7"
+      ],
+      "expected": [
+        "68",
+        "57",
+        "98.1",
+        "15",
+        "7.9",
+        "36.7"
+      ],
+      "synthetic": true
+    },
+    {
+      "crew": "CREW-04",
+      "keys": [
+        "heart_rate",
+        "hrv",
+        "spo2",
+        "respiratory_rate",
+        "sleep_duration",
+        "temperature"
+      ],
+      "actual": [
+        "69",
+        "55",
+        "98.3",
+        "14",
+        "7.8",
+        "36.8"
+      ],
+      "expected": [
+        "69",
+        "55",
+        "98.3",
+        "14",
+        "7.8",
+        "36.8"
+      ],
+      "synthetic": true
+    },
+    {
+      "crew": "CREW-05",
+      "keys": [
+        "heart_rate",
+        "hrv",
+        "spo2",
+        "respiratory_rate",
+        "sleep_duration",
+        "temperature"
+      ],
+      "actual": [
+        "68",
+        "55",
+        "98.2",
+        "14",
+        "8.0",
+        "36.7"
+      ],
+      "expected": [
+        "68",
+        "55",
+        "98.2",
+        "14",
+        "8.0",
+        "36.7"
+      ],
+      "synthetic": true
+    },
+    {
+      "crew": "CREW-06",
+      "keys": [
+        "heart_rate",
+        "hrv",
+        "spo2",
+        "respiratory_rate",
+        "sleep_duration",
+        "temperature"
+      ],
+      "actual": [
+        "68",
+        "56",
+        "98.3",
+        "14",
+        "8.1",
+        "36.7"
+      ],
+      "expected": [
+        "68",
+        "56",
+        "98.3",
+        "14",
+        "8.1",
+        "36.7"
+      ],
+      "synthetic": true
+    }
+  ],
+  "N03_environment": {
+    "co2_ppm": 722,
+    "temperature_c": 22.1,
+    "humidity_percent": 44,
+    "oxygen_percent": 20.9,
+    "dose_rate_msv_h": 0.016,
+    "cumulative_msv": 36.1,
+    "synthetic": true,
+    "warning": false,
+    "evidence": [],
+    "model_version": "environment-illustrative-v1",
+    "interpretation": "Synthetic environmental context. Review measurements and approved onboard procedures; these thresholds are not certified exposure limits.",
+    "compared_values": 4
+  },
+  "N03_suspension": {
+    "requests_during_suspension": 0,
+    "handler_recovery": true,
+    "actual_BFcache_eviction_restoration_verified": false,
+    "method": "PageTransitionEvent handler contract in actual Chrome; not proof of native BFcache selection"
+  },
+  "N03_temporary_storage_bytes": 6598656,
+  "N03_cleanup": {
+    "browser_exited": true,
+    "profile_removed": true,
+    "database_directory_removed": true,
+    "Node_memory": {
+      "rss": 61313024,
+      "heapTotal": 12623872,
+      "heapUsed": 9529784,
+      "external": 4350753,
+      "arrayBuffers": 277638
+    },
+    "N16_designated_starts": 0,
+    "Qwen_executions": 0,
+    "model_training": 0,
+    "database_snapshots": 0
+  },
+  "finished_at": "2026-11-04T18:01:01.821Z"
+}

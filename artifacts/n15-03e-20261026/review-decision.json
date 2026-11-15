@@ -1,0 +1,91 @@
+{
+  "decision": "BLOCKED",
+  "date": "2026-10-26",
+  "reason": "Concrete required host dependency is below Ubuntu publisher-fixed zlib package version for USN-8954-1/CVE-2026-85091. Other essential current package/CVE and notice closure remains incomplete. This is not a claim that help/version triggers the vulnerability.",
+  "source_package_assessment": {
+    "source": "gcc-16",
+    "version": "16-20260322-1ubuntu1",
+    "binary": "libgomp1:amd64",
+    "identity": "VERIFIED: authenticated binary Source/control fields, ELF package note and official exact-version dsc agree",
+    "overall_current_security": "UNKNOWN",
+    "issues": [
+      {
+        "id": "CVE-2023-4039",
+        "notice": "USN-7700-1",
+        "notice_date": "2025-08-19",
+        "scope": "GCC AArch64 stack-protector code-generation issue; notice covers gcc-10/11/12 for Ubuntu20.04/22.04",
+        "classification": "NOT_APPLICABLE_TO_AMD64_NO_COMPILATION_STARTUP_PROFILE",
+        "basis": "Actual artifact architecture x86-64; no compiler or AArch64 code-generation workload authorized. This is not a gcc-16 publisher fixed-version determination.",
+        "source": "https://lists.ubuntu.com/archives/ubuntu-security-announce/2025-August/009681.html"
+      }
+    ],
+    "unknowns": [
+      "Complete current gcc-16/Resolute vulnerability/patch assessment not obtained",
+      "Detailed official CVE JSON declares 2022201 bytes, above262144byte resource cap; body not downloaded",
+      "Exact source changelog exceeds its262144byte resource cap; no truncated original accepted",
+      "Complete release-specific host dependency advisory assessment remains unknown; empty vendor feeds/search results do not certify safety"
+    ],
+    "current_signed_index_review": {
+      "complete_index_verified": true,
+      "date": "2026-10-25",
+      "libgomp_gcc_runtime_entries": "No entries in this security pocket; not absence of vulnerabilities or full -updates status",
+      "libc_OpenSSL": "Installed versions match this signed security pocket, not a full CVE assessment",
+      "zlib": "Installed version below security fixed package; concrete current dependency obstacle"
+    }
+  },
+  "llama_known_source_fixes": 13,
+  "cpp_httplib_range_assessments": 23,
+  "regular_archive_files_verified": 50,
+  "ELF_inventory": 49,
+  "CPU_variants": 14,
+  "new_signed_security_metadata": "Fresh October25security release and complete signed main/amd64package index verified; installed zlib below fixed version",
+  "notice_status": "Pinned/source/package notices preserved with labeled derived notices; not complete all-archive distribution qualification",
+  "network": {
+    "requests": 14,
+    "complete": 12,
+    "body_bytes": 1493103,
+    "elapsed_s": 14.52548883400027,
+    "retries": 0,
+    "scope": "14 finite direct metadata requests; 13 original URLs plus one signed-index follow-up, each once. Official USN web inspection/discovery is separate and not included in collector body/time totals."
+  },
+  "native_execution": false,
+  "new_binary_acquisition": false,
+  "storage_policy_renewal": false,
+  "startup_qualified": false,
+  "N15": "Not Started",
+  "N16": "Not Started",
+  "other_statuses_unchanged": true,
+  "smallest_next_proposal": "One separately approved isolated staging/static-qualification task for exact Ubuntu zlib1g:amd64=1:1.3.dfsg+really1.3.1-1ubuntu3.2, publisher size61786/SHA10084666f747247550c3e82f9a12cbfd9184c19241a42eb34d8893ecb8e03b35, with explicit acquisition/storage bounds; preserve runtime/libgomp pins, no OS install/native/model execution. This resolves the concrete dependency obstacle only; finish remaining current-source advisory/notice checks before a separately approved startup.",
+  "zlib_security_finding": {
+    "notice": "USN-8954-1",
+    "CVE": "CVE-2026-85091",
+    "published": "2026-10-22",
+    "review_date": "2026-10-26",
+    "official_source": "https://ubuntu.com/security/notices/USN-8954-1",
+    "source_method": "Official notice inspected through web tool; this is a reviewer record, not raw publisher-response bytes or a publisher SHA. Exact fixed version independently corroborated by verified signed Packages metadata.",
+    "description": "zlib non-blocking-write handling heap-buffer-overflow issue; publisher describes possible denial of service/arbitrary code execution with crafted input",
+    "package": "zlib1g:amd64",
+    "source_package": "zlib",
+    "installed_version": "1:1.3.dfsg+really1.3.1-1ubuntu3.1",
+    "publisher_fixed_version": "1:1.3.dfsg+really1.3.1-1ubuntu3.2",
+    "installed_less_than_fixed": true,
+    "classification": "KNOWN_UNREMEDIATED_PACKAGE_SECURITY_DEPENDENCY",
+    "actual_dependency_evidence": "Same current libcrypto.so.3 hash as prior static closure; DT_NEEDED includes libz.so.1; current libz host path/hash and installed zlib1g version recorded.",
+    "reachability": "Not tested. No claim that help/version exercises vulnerable non-blocking-write functions, no exploit/PoC/native execution. Package security gate not cleared.",
+    "severity": "Not independently established from this USN; no invented score",
+    "proposed_fixed_package": {
+      "Package": "zlib1g",
+      "Source": "zlib",
+      "Version": "1:1.3.dfsg+really1.3.1-1ubuntu3.2",
+      "Architecture": "amd64",
+      "SHA256": "10084666f747247550c3e82f9a12cbfd9184c19241a42eb34d8893ecb8e03b35",
+      "Filename": "pool/main/z/zlib/zlib1g_1.3.dfsg+really1.3.1-1ubuntu3.2_amd64.deb",
+      "size": 61786,
+      "depends": "libc6 (>= 2.14)",
+      "installed_size_KiB": 169,
+      "downloaded": false,
+      "actual_package_hash_verified": false
+    },
+    "no_system_or_package_change": true
+  }
+}

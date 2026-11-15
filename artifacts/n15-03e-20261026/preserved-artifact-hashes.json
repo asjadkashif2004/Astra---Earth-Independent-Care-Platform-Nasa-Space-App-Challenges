@@ -1,0 +1,14 @@
+{
+  "runtime": {
+    "path": "/var/tmp/astra-n15-03-swuxjpfe/llama-b11669-bin-ubuntu-x64.tar.gz",
+    "sha256": "cf07c1c112d709bd67e522017471de57ed0ec8bea031d732c5422351c07f65ac",
+    "bytes": 17851611
+  },
+  "package": {
+    "path": "/var/tmp/astra-n15-03d-4s2m9qlg/libgomp1_16-20260322-1ubuntu1_amd64.deb",
+    "sha256": "add19738c63794d2aa9ac529d3b8aebe2e88980faecb6c1c59f07aefd6c3c314",
+    "bytes": 162278
+  },
+  "acquired_native_loading": false,
+  "new_binary_acquisition": false
+}

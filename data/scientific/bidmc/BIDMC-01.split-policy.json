@@ -1,0 +1,64 @@
+{
+  "schema_version": "astra.split-policy.v1",
+  "dataset_id": "BIDMC-1.0.0",
+  "status": "blocked_single_record_and_unverified_cross_archive_identity",
+  "source": {
+    "source_id": "physionet-bidmc-01-numerics",
+    "original_name": "bidmc_01_Numerics.csv",
+    "original_bytes": 7644,
+    "original_sha256": "27d43794cf2e7150db10e8bfe61d2bfdb26873a8f1629ffc5fbee5c9a4eb6ef5",
+    "approval_sha256": "5344111b804432ac1c8836bae3c82db60d8ccce7e72a0938fd779586d78bbfde",
+    "url": "https://physionet.org/files/bidmc/1.0.0/bidmc_csv/bidmc_01_Numerics.csv",
+    "canonical_url": "https://physionet.org/content/bidmc/1.0.0/",
+    "retrieval_started_at": "2026-10-23T15:32:16.439Z",
+    "retrieved_at": "2026-10-23T15:32:23.482Z",
+    "publisher_checksum_verified": false
+  },
+  "available": {
+    "record_ids": [
+      "bidmc_01"
+    ],
+    "source_subject_numbers": [
+      "01"
+    ],
+    "recording_count": 1,
+    "row_count": 481,
+    "independently_verified_subject_count": null,
+    "absolute_time_boundaries": null
+  },
+  "unit_of_independence": {
+    "proposed": "Original patient/stay,with all linked BIDMC/MIMIC recordings,channels and windows grouped together.",
+    "verified": false,
+    "cross_archive_patient_and_session_ids": null
+  },
+  "time_boundaries": {
+    "record": "bidmc_01",
+    "start_seconds": 0,
+    "end_seconds": 480,
+    "cadence_seconds": 1,
+    "absolute_start_at": null,
+    "absolute_end_at": null
+  },
+  "proposed_policy": {
+    "train": "Fit preprocessing and model parameters only on separately verified training patient/stay groups.",
+    "validation": "Use disjoint verified patient/stay groups;keep overlapping or adjacent windows and repeated channels together.",
+    "test": "Reserve unseen verified patient/stay groups;check MIMIC/BIDMC duplication before allocation.The single selected recording cannot supply an independent test.",
+    "random_row_split_allowed": false,
+    "related_windows_and_channels_together": true,
+    "preprocessing_fit": "training_only",
+    "chronological_order_required": true,
+    "purge_gap_seconds": null,
+    "ratios": null,
+    "seed": null,
+    "label_definition": null
+  },
+  "assignments": [],
+  "executed": false,
+  "independently_validated": false,
+  "unresolved": [
+    "One recording cannot provide independent train/validation/test patient groups.",
+    "Filename supplies a local subject number,not a verified global MIMIC patient/stay identity.",
+    "Absolute recording times and cross-archive duplicates are unverified.",
+    "Future targets and chronological window/purge policy require review before splitting."
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "schema_version": "astra.n12.exception-inventory.v1",
+  "captured_before_new_proposal": true,
+  "proposals": [
+    {
+      "path": "docs/DE_AC20_01.md",
+      "sha256": "d1e6c8c912ca500162b2aec01de2bfa2a45ef98b78591f7aaa9cce8bb3b950a7",
+      "title": "# DE-AC20-01 — approved dependency exception",
+      "N12_references": []
+    },
+    {
+      "path": "docs/DE_N07_N13_01.md",
+      "sha256": "c319dd8e0fab8969b99b8ebe3ee15a7e1b58630842f32a65034b352e2155ed70",
+      "title": "# DE-N07-N13-01 — Initial publication corpus dependency exception",
+      "N12_references": [
+        "The normal full dependency applies when N07 is completed, or the owner revokes/replaces this decision. Full N07 acceptance is never waived. Full N13 and later prerequisites remain required; N16 still requires N02/N10/N12/N14 and N15 if used. [DE-AC20-01](DE_AC20_01.md) remains limited to N04/N05's use of verified N03 evidence; this decision does not extend it to N10/N17/N18. N06 integrated performance evidence and N26 final revalidation remain required."
+      ]
+    },
+    {
+      "path": "docs/DE_N07_N13_01_N13_02.md",
+      "sha256": "7b40bdf9b0cfc22d6e8db36e8d8b31716a4316096e872bba6ca39880d14e22c6",
+      "title": "# DE-N07-N13-01 — bounded N13-02 extension",
+      "N12_references": []
+    },
+    {
+      "path": "docs/DE_N07_N13_01_N13_03.md",
+      "sha256": "c8d1e220e38ea192dbb606d8ff07258ee10793e148ef65dcc9c7ef52fa5c5584",
+      "title": "# DE-N07-N13-01 — N13-03 task-specific continuation",
+      "N12_references": []
+    },
+    {
+      "path": "docs/DE_N08_SYNTHETIC_01.md",
+      "sha256": "10c33ff36747e60e8aa9c8202ffcd590b495b43fd8d13181baec50660cdaa32d",
+      "title": "# DE-N08-SYNTHETIC-01 — activated synthetic N08 engineering sequencing exception",
+      "N12_references": [
+        "- Provide tested inactive provenance/quality/chunk/peak-time contracts for later N09/N10/N11/N12/N16 consumers. No new simulator/model/LLM/tool workstream, N10 alteration, N16 source/worker invocation or unreviewed scientific rule activation.",
+        "Original N01/N07/N06 dependencies and N07's missing complete Sleep/PTT/RadLab/named-study/card/independence obligations remain. N03/AC-20, N05/N06 deferral, N09/N10/N11/N12/N13/N14/N15/N16 and scientific/release reviews remain unchanged. This is engineering sequencing only, not production, medical, clinical, astronaut-connectivity or scientific generalization approval."
+      ]
+    },
+    {
+      "path": "docs/DE_N09_DEMO_01.md",
+      "sha256": "89683bba72b91f5ab9973c3ca4e62802fef9c6e7a61fed2593fd2538735a8ed9",
+      "title": "# DE-N09-DEMO-01 — bounded Scenario Lab demonstration sequencing",
+      "N12_references": [
+        "States are unchanged: N01/N02/N04 Complete; N03 Partial; N05 In Progress — Deferred; N06 Not Started — Deferred; N07/N13 In Progress and inactive; **N08/N09 Not Started, implementation unapproved**; AC-20 Open / Unverified. A delivered demo slice could not mark full N09 Complete or make N10–N12/N16/N26 eligible by itself."
+      ]
+    },
+    {
+      "path": "docs/DE_N09_SYNTHETIC_01.md",
+      "sha256": "34367c668c2de28775fef957b9b85ef475d7cee206c86d50a62262efee2026ba",
+      "title": "# DE-N09-SYNTHETIC-01 — owner-activated synthetic engineering sequencing exception",
+      "N12_references": [
+        "N07 remains In Progress with missing authentic data/rights/grouping/review obligations. N08 remains In Progress with authentic-source/N06/release gates open; only its already-qualified synthetic reader is eligible here. N03 Partial/AC-20 Open and N06 deferred stay unchanged. N10 scientific/privacy/release, N11/N12/full N16 prerequisites, N13/N14/N15 independent review and all original release gates remain. No full prerequisite is declared Complete.",
+        "This is owner sequencing approval, not independent scientific/medical review. No reviewer/signature is fabricated. Task authority expires at delivery or a mandatory safety/authority boundary; no automatic N11/N12/N16 or authentic-source acquisition follows. Formal N09 remains In Progress unless every original acceptance gate is legitimately met.",
+        "The owner repeated the consolidated N09 authorization after the original delivery. The existing scope was reviewed and reused; no duplicate exception, additional capability or broader data/model/tool authority is created. No synthetic implementation is missing. This renewal permits only the actual verification used here: existing focused N09/N02/legacy-demo tests in fresh memory/OS-temp synthetic instances and new evidence under artifacts/n09-engineering-20261031/reverification-01, within the originally approved output root and frozen N09 contract bounds. No production code change or new browser execution was necessary; original full qualification/browser evidence remains source-pin verified and unchanged. Fresh116/116controls and zero-replay cold recovery pass. Formal N09 and every original source/review/hardware/release gate remain open. This verification authority ends at delivery. N11's separate proposal remains INACTIVE; no N12/N16, acquisition, operational data or model authority follows."
+      ]
+    },
+    {
+      "path": "docs/DE_N10_SYNTHETIC_01.md",
+      "sha256": "d15d949b8cf75d0dc088bd7b6a632a9103deea10bfb298da0bfe834523f4c739",
+      "title": "# DE-N10-SYNTHETIC-01 — activated N10 synthetic-engineering sequencing exception",
+      "N12_references": [
+        "- Keep prospective N12/N16 input/output interfaces inert; no runtime connection, new tool call or expansion of N16's source/trace/presentation authority.",
+        "No access to active operational databases, telemetry paths, private user data, credentials or running production APIs. No source database export, N16 sealed-source reuse, permission relaxation, new exception activation or model inference. No N07 acquisition, N08 waveform work, N09 simulator overhaul, N11/N12 model training, N14/N15 support-policy change or N16 integration. No diagnosis, treatment, clinical normative scores, population ranking, inferred disease, scientific approval or real astronaut connectivity claim."
+      ]
+    },
+    {
+      "path": "docs/DE_N11_SYNTHETIC_01.md",
+      "sha256": "63c0a5eeed7ca4242c1836e3c612be2561978775ce87bcf3588160247f0c1776",
+      "title": "# DE-N11-SYNTHETIC-01 — proposed synthetic anomaly-evaluation sequencing exception",
+      "N12_references": [
+        "- Use fresh memory/OS-temp synthetic application/test stores and separately designated N11 outputs only. Preserve atomic artifact publication, idempotency, failure/cancellation, no read-side mutation and cold recovery without replay. Prepare tested inactive N12/N16 consumer interfaces without implementing either module.",
+        "No active operational database, real crew/patient data, N16 sealed database or native worker; no Qwen/LLM, arbitrary SQL or paths, external request/acquisition, package/model download or installation, source permission or mount change, production deployment, diagnosis or treatment. No N12 prediction activation, N16 tool/Health Agent connection, N14/N15 policy change or unreviewed factual-support rule. N15's proposed rule stays inactive and experimental prompt unpromoted.",
+        "Full N07 source/rights/grouping/annotation obligations and applicable authentic-source/scientific review remain. Full N08 real-waveform/release and twin-specific N06 requirements remain; N06 stays deferred. N03 remains Partial and AC-20 Open / Unverified. N09/N10 original source/review/release gates remain. N11/N12/N16 and all transitive dependencies remain formal gates. No independent reviewer or owner approval is manufactured."
+      ]
+    },
+    {
+      "path": "docs/DE_N13_N14_01.md",
+      "sha256": "289a7c6784030b9e8106321084519743dacf1ae3ec2f7d6f10e1962fce7453ed",
+      "title": "# DE-N13-N14-01 — one offline research retrieval experiment",
+      "N12_references": [
+        "- **N15/N16:** no approval or prerequisite change. N16 still requires N02/N10/N12/N14, and N15 only if used; N10/N12 and their N03/N07/N08/N09/N11 dependencies remain. The existing N03 exception applies only to N04/N05.",
+        "This technical amendment does not expand the research-only sequencing exception, erase earlier probe failures, close N07/N13, change their pending review statuses or approve N14 implementation. Earlier probe/implementation approvals are exhausted, not revived. The smallest next task after A/B approval is one separately approved isolated direct-runtime compatibility probe, without model download/inference or ASTRA edits. **N14 Not Started; N07/N13/N09 In Progress; N04 Complete; N03 Partial; N05/N06 Deferred; AC-20 Open / Unverified.** Full N14/N15/N16, N10/N12 and release gates remain. STOP after documentation; no automatic retry or next module."
+      ]
+    },
+    {
+      "path": "docs/DE_N14_N15_01.md",
+      "sha256": "f0f53d4ca0c35003f5f1d50cf8db284d392e562537dc668cc9b81f37b281a337",
+      "title": "# DE-N14-N15-01 — activated research-only N15 sequencing exception",
+      "N12_references": [
+        "Full dependencies remain: **N15←N14**; **N16←N02,N10,N12,N14**, and N15 if used. N10/N12 and their N03/N07/N08/N09/N11 prerequisites remain; DE-AC20-01 is still limited to N04/N05. No N16 or later sequencing exception is created. N05/N06 remain deferred. Full N07/N13/N14 scientific and acquisition requirements, independent human review, original N15 cold/warm/safety/offline gates and N26 release verification are not waived."
+      ]
+    },
+    {
+      "path": "docs/DE_N16_DESIGNATED_READ_01.md",
+      "sha256": "4546413cc55df81b1d153e088f8428a662e86f1872d17ca13233f5550142d7d5",
+      "title": "# DE-N16-DESIGNATED-READ-01 — activated synthetic-source qualification exception",
+      "N12_references": [
+        "| N12 ← N09/N11 | Remains incomplete; no forecast, prediction, diagnosis or inferred risk. |",
+        "N16's original N02/N10/N12/N14 and conditional N15 dependencies remain unchanged. The proposal permits qualifying one isolated source before full prerequisites close; it cannot count missing prerequisite outputs as delivered. No operational table, user record, credential, private check-in, real/imported telemetry, active API or other database is eligible. No SQL/shell/path supplied by a caller, source fallback, Health Agent/UI/Scenario Lab/monitoring integration, autonomous write, treatment, N17/N18 or model work is granted."
+      ]
+    },
+    {
+      "path": "docs/DE_N16_READONLY_01.md",
+      "sha256": "6ea1dc810f048c2b86e000f9edc98477cd7d810eb9e8928fe2fca342b9bda834",
+      "title": "# DE-N16-READONLY-01 — activated fixture-only sequencing exception",
+      "N12_references": [
+        "N16 stays In Progress, not Complete; original N02/N10/N12/N14 and conditional N15 prerequisites, full transitive/scientific/medical/release gates and all other module statuses remain unchanged. This task grants no future operational adapter, Qwen connection, actions or additional tools. Authority expires at bounded delivery or a blocking safety failure; STOP after reporting. [N16-02 contract](N16_02_CONTRACT.md) will record the implementation and verified limits.",
+        "The owner explicitly activated this narrow exception and approved one four-tool fixture-only CLI/trace task. Preflight found no substantive scope, safety or authority contradiction: the prior not-activated language below records the planning checkpoint, not a competing grant. Only current vitals, data quality, personal baseline and existing-risk-record reads against pinned synthetic fixtures are eligible. No live constructors/DB/API, LLM, action tools, N15 support-rule activation or unrelated prerequisite relaxation. Original N02/N10/N12/N14 and conditional N15/full transitive/review gates remain. N16 becomes In Progress only when actual implementation begins, not Complete; N15 and other statuses unchanged. Task authority expires after this bounded delivery/actual blocking safety failure; no automatic follow-on.",
+        "The [master roadmap](MASTER_PLAN.md) requires **N02, N10, N12 and N14**, plus **N15 when using an LLM**, for full N16. [AI priority governance](CORE_AI_PRIORITY.md) permits proposing an explicit narrow sequencing decision; it does not allow partial prerequisites to be silently counted as complete. Existing N07→N13, N13→N14, N14→N15 and N09 demo exceptions grant no N16 authority.",
+        "| N12 | Not Started; evaluated prediction foundation incomplete | Explicit task-only sequencing exception would be needed. No forecast/predictive-risk tool or output. |",
+        "Full chains remain: N10←N01/N03/N07/N09; N12←N09/N11; N11←N02/N07–N10; N09←N01/N02/N07/N08; N08←N01/N07, with its retained N06 twin obligation. DE-AC20-01 does not automatically extend N03 evidence to N10. N05/N06 remain Deferred; AC-20 Open / Unverified.",
+        "- No N10 cognition/check-in or N12 predictions/risk estimates; no organ-disease inference or clinical recommendation."
+      ]
+    },
+    {
+      "path": "docs/DE_N16_SQLITE_FIXTURE_01.md",
+      "sha256": "a156389047bad32ea690d4036a7828806c76bac36fbb73227cf5d2f32e7a938f",
+      "title": "# DE-N16-SQLITE-FIXTURE-01 — activated N16-04 scratch SQLite qualification exception",
+      "N12_references": [
+        "N02 remains the sole monitoring/alert authority. No alerts, baselines, observations, acknowledgements, queues or medical state in ASTRA may be created/modified by this work. N16 full dependencies remain N02/N10/N12/N14 and N15 when an LLM is used; N10/N12 are incomplete, N14/N15 In Progress. Original transitive N03/N07/N08/N09/N11, N06 twin-specific, independent scientific/medical, security and release obligations remain open. This proposal adds no LLM authority and closes no prerequisite. N15-11's rule stays unreviewed/inactive; the experimental prompt stays unpromoted."
+      ]
+    }
+  ],
+  "N12_specific_proposals": [],
+  "decision": "NO PREEXISTING N12 EXCEPTION FOUND; owner Phase3 prohibits activating a newly authored substitute"
+}

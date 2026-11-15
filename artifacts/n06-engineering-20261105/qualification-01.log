@@ -1,0 +1,8 @@
+file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/scripts/n06-qualification.mjs:19
+ const coldStart=performance.now(),child=spawnSync(process.execPath,['--input-type=module','-e',childCode,db,query.toString()],{encoding:'utf8',timeout:15000,maxBuffer:256000});if(child.status!==0)throw Error(child.stderr||'Cold child failed');const cold=JSON.parse(child.stdout);if(cold.hash!==expected||cold.read_mutations!==0)throw Error('Cold source identity/side-effect mismatch');report.cold_recovery={duration_ms:performance.now()-coldStart,...cold,new_commitments:0,read_projection_recomputed:true};
+                                                                                                                                                                                                                                                                                                                                               ^
+
+Error: Cold source identity/side-effect mismatch
+    at file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/scripts/n06-qualification.mjs:19:336
+
+Node.js v24.21.0

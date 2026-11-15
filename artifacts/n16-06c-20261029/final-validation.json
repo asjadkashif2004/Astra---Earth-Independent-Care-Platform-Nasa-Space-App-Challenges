@@ -1,0 +1,50 @@
+{
+  "task": "N16-06C",
+  "outcome": "PASS_QA_ONLY",
+  "mandatory_tests": {
+    "pass": 32,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "syntax_checks_pass": 3,
+  "authentic_dependencies_verified": 4,
+  "immutable_inventory_digests_verified": 2,
+  "corrected_code_plan_files": 8,
+  "probe_startups": 0,
+  "complete_preflight_executions": 0,
+  "source_metadata_inspections": 0,
+  "database_byte_reads": 0,
+  "SQLite_connections": 0,
+  "SQL_statements": 0,
+  "model_or_native_runtime_execution": 0,
+  "network_requests": 0,
+  "downloads_or_installs": 0,
+  "mount_or_source_permission_changes": 0,
+  "new_synthetic_database_fixtures": 0,
+  "protected_files_checked": 427,
+  "protected_unchanged": 426,
+  "intentional_existing_source_changes": [
+    {
+      "file": "scripts/n16-containment-probe.mjs",
+      "before": "bafd9060a49fab11a60d85993884dcd9d138f1e626ccda33be370a0f7f0b1b7c",
+      "after": "c4935fb08f97b43f6208707cff06c7e7fd8c0736979818b4e3ef8b57e51b4dc6"
+    }
+  ],
+  "authoritative_table_rows_preserved": 106,
+  "prior_governance_bodies_preserved": true,
+  "actual_containment_errno_or_mount_evidence": "NOT_RUN; remains unknown",
+  "database_or_native_binary_hashes_reverified": false,
+  "code_files_changed": [
+    "scripts/n16-containment-probe.mjs",
+    "services/agent/dependency-pins.mjs",
+    "tests/n16-dependency-pins.test.mjs"
+  ],
+  "corrected_code_plan_sha256": "582bf5e5f8f056c30f77c1c64305af558b977e9d8c08e61d9d6c457221a31e35",
+  "existing_exception_modified": false,
+  "startup_or_resource_authority_renewed": false,
+  "statuses": "N16/N15/N14/N13/N07/N09 In Progress; N01/N02/N04 Complete; N03 Partial; N05 In Progress - Deferred; N06 Not Started - Deferred; AC-20 Open / Unverified; all other statuses and gates unchanged.",
+  "next_task": "Separately approve one fresh containment-only probe with exact source-metadata/resource authority and new durable output records; no database bytes, SQLite, SQL or retry.",
+  "task_authority": "EXHAUSTED / STOP; no automatic probe",
+  "local_links_resolved": 860
+}

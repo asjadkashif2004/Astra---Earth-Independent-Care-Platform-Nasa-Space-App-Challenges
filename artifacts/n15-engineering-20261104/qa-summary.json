@@ -1,0 +1,39 @@
+{
+  "suites": {
+    "N15_new": {
+      "tests": 113,
+      "pass": 113,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "duration_ms": 88238.040181
+    },
+    "Node_affected_regressions": {
+      "tests": 422,
+      "pass": 422,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "duration_ms": 46600.62348
+    },
+    "Python_static_mock_regressions": {
+      "tests": 90,
+      "passed": 90,
+      "failed": 0,
+      "skipped": 0,
+      "evidence": "python-regression.txt"
+    }
+  },
+  "distinct_passed": 625,
+  "failed": 0,
+  "skipped": 0,
+  "cancelled": 0,
+  "syntax_files": 275,
+  "initial_111_overlap_not_added": true,
+  "deliberate_failing_before": "ack-failing-before.tap retained; repaired, never counted passing",
+  "native_inferences": 0,
+  "simulated_outputs_not_native_proof": true,
+  "actual_native_E2E": "NOT_RUN_AUTHORIZATION_BLOCKED",
+  "actual_browser": "NOT_RUN_AUTHORIZATION_BLOCKED",
+  "independent_scientific_reviews": 0
+}

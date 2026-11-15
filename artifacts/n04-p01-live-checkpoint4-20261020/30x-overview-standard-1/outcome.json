@@ -1,0 +1,109 @@
+{
+  "recorded_at": "2026-10-19T21:36:33.407281+00:00",
+  "id": "30x-overview-standard-1",
+  "outcome": "PASS",
+  "individually_accepted": true,
+  "evidence_directory": "artifacts/n04-p01-live-checkpoint4-20261020/30x-overview-standard-1",
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/155.0.8059.80",
+    "revision": "@43a195105613ac83c21d3f14de279f4a045c7da0",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "jsVersion": "15.5.35.23"
+  },
+  "started_at": "2026-10-19T21:33:14.747Z",
+  "finished_at": "2026-10-19T21:34:47.360Z",
+  "dom_p95_ms": 35,
+  "capture_p95_ms": 283,
+  "worst_group_dom_p95_ms": 39,
+  "worst_group_capture_p95_ms": 286,
+  "groups": 22,
+  "verified_numbers": 1320,
+  "total_numbers": 1320,
+  "direct_ocr_matches": 1272,
+  "reviewed_manual_anchors": 3,
+  "source_correlation_provenance_cadence": "passed",
+  "stress": {
+    "pending_packets": 25,
+    "pending_bytes": 1690343,
+    "required_at_1x": {
+      "packets": 825,
+      "bytes": 54000000,
+      "origin": "Unchanged-backend failing60-second baseline;not a clinical or general queue capacity limit"
+    }
+  },
+  "guard": {
+    "started_host_ms": 1792445623909,
+    "ended_host_ms": 1792445684782,
+    "required_through_host_ms": 1792445684665,
+    "last_native": {
+      "source_at_ms": 1792445684781,
+      "host_at_ms": 1792445684781
+    },
+    "native_identity": {
+      "selected_owner_pid": 18480,
+      "source_at_ms": 1792445624328,
+      "foreground_handle": "0x2E082E",
+      "type": "sample",
+      "selected_handle": "0x2E082E",
+      "foreground_pid": 18480,
+      "owned": true,
+      "title_matches": true,
+      "selected_class": "Chrome_WidgetWin_1",
+      "pid": 18480,
+      "check_ms": 8.3047
+    },
+    "native_samples": 233,
+    "page_samples": 243,
+    "page": {
+      "started_at_ms": 1792445624372,
+      "source_at_ms": 1792445684782,
+      "visibility": "visible",
+      "focused": true,
+      "failure": null,
+      "stats": {
+        "checks": 243,
+        "total_check_ms": 3.0000000074505806,
+        "max_check_ms": 0.10000000149011612
+      }
+    },
+    "limits": {
+      "poll_ms": 250,
+      "stale_ms": 1000,
+      "startup_ms": 8000,
+      "max_active_ms": 75000
+    },
+    "native_check_ms": {
+      "total": 28.717299999999994,
+      "max": 8.3047
+    },
+    "failure": null,
+    "limitation": "Event detection plus 250ms sampling;sub-poll native changes may escape. Observer overhead is included,not subtracted;not physical visibility or scanout proof."
+  },
+  "owned_pid": 18480,
+  "owned_hwnd": "0x2E082E",
+  "startup_checkpoint": "passed;trusted user READY inside owned Chrome;unchanged activation helper once",
+  "zero_console_errors": true,
+  "out_of_window_samples": 0,
+  "compositor_feedback": {
+    "supported": true,
+    "complete_frames": 3486,
+    "minimum_complete_per_second": 54
+  },
+  "evidence_sha256": {
+    "report.json": "453a710410650ee8fd8c76dcf938fc2699106f15320ec7cf54ed4e25f01daaaa",
+    "assessment.json": "706ea720a06334a409a7beb0268ce361c835d2f5496f11057fbc99a0128335dd",
+    "assessment-reviewed.json": "ecb143535093eb2d7083a64407adf0a0d2cf6fb35d872e33ac83117626b04f82",
+    "ocr.json": "5bced4a24b5a512163a0a4c366ad61832b3210c6d32e44bed335c35149ef9456",
+    "ocr-manifest.json": "c447c3bad64a2c5dacf4ab1f1a1e7975c18db2eec5863b5bb4a02287999a9645",
+    "reviews.json": "e744cb7c682d3208c2b736fbd730aa6e919497fe5e2905b7b5ada9b030f48f64",
+    "30x-overview-standard-1.startup.json": "a7a1153b0d80ef7a6f0011e42027b47a07a55fc0b7a237e29cfc1ec6111f7ab7",
+    "30x-overview-standard-1.raw.json": "f45a48ea112393219b62357dad33422fbfd2e4f161c6ed381ee0ce0f2dd5467e",
+    "30x-overview-standard-1.raw.jsonl": "83fc2aad3eee9f7846fb19aa3a3ff8f24f8ecad13956f1081831cd48164b48db",
+    "30x-overview-standard-1.trace.json.gz": "5b55e42add27682585491471aef410eb039a8f0a6e12100d13f652d3d1c93aef"
+  },
+  "scope_limitations": "Individual trial only;full 24-trial matrix open. Capture completion and compositor feedback are not physical scanout, presented FPS or designated minimum judge certification.",
+  "n04": "Partial",
+  "n03": "Partial",
+  "ac20": "Open / Unverified"
+}

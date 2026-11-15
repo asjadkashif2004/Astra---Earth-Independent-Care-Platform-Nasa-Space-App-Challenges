@@ -1,0 +1,51 @@
+{
+  "schema_version": "astra.split-policy.v1",
+  "study_id": "OSD-1",
+  "status": "blocked_pending_independence_and_target_review",
+  "source": {
+    "source_id": "nasa-osdr-osd-1",
+    "original_sha256": "cfe7d81c59efc3b01b4407db0854b4224b51bfcb9d8b4f590fc8467ededa6d64",
+    "original_bytes": 8054,
+    "approval_sha256": "9b86e8ab62d477642136b9490949fc4182e4a25e4f91c63177e26a2864dce312",
+    "metadata_url": "https://visualization.osdr.nasa.gov/biodata/api/v2/dataset/OSD-1/",
+    "canonical_url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-1",
+    "retrieved_at": "2026-10-23T14:42:44.379Z"
+  },
+  "unit_of_independence": {
+    "proposed": "Verified biological experimental unit (possibly a fly pool or vial),grouped with shared mission/hardware/run and technical derivatives.",
+    "verified": false,
+    "actual_unit_ids": null
+  },
+  "proposed_policy": {
+    "train": "Fit models and all normalization/feature selection on training groups only,after independence and target review.",
+    "validation": "Tune using disjoint verified biological groups;keep all pooled,technical,assay and repeated measurements together.",
+    "test": "For mission generalization,hold out an independent mission/study/cohort,with overlapping source experiments and duplicates excluded. This one-study snapshot cannot establish such a test.",
+    "random_row_split_allowed": false,
+    "gene_probe_split_allowed": false,
+    "related_observations_must_stay_together": true,
+    "cross_study_duplicate_check_required": true,
+    "preprocessing_fit": "training_only",
+    "ratios": null,
+    "seed": null,
+    "label_definition": null
+  },
+  "availability": {
+    "selected_studies": [
+      "OSD-1"
+    ],
+    "independent_unit_count": null,
+    "sample_count": null,
+    "train_count": null,
+    "validation_count": null,
+    "test_count": null
+  },
+  "assignments": [],
+  "executed": false,
+  "unresolved": [
+    "Identify actual pooling/vial/biological replicate and shared hardware/run IDs.",
+    "Define the nonclinical prediction/research target and source labels before any split.",
+    "Obtain separately authorized measurement/sample metadata and check source permissions.",
+    "Establish sufficient independent groups/missions and check duplicates across related archives/studies.",
+    "Review preprocessing leakage and group/mission confounding;do not use genes/probes as independent subjects."
+  ]
+}

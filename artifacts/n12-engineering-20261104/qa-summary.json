@@ -1,0 +1,37 @@
+{
+  "N12": {
+    "tests": 112,
+    "pass": 112,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "duration_ms": 27344.423703
+  },
+  "regressions": {
+    "tests": 557,
+    "pass": 557,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "duration_ms": 55169.649875
+  },
+  "legacy_integration": {
+    "tests": 11,
+    "pass": 11,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "duration_ms": 4487.272916
+  },
+  "total_distinct_automated_passed": 680,
+  "failed": 0,
+  "skipped": 0,
+  "real_browser": {
+    "status": "passed",
+    "passed": 11,
+    "failed": 0,
+    "version": "Chrome/156.0.8078.80",
+    "keyboard_transitions": 12
+  },
+  "historical_counts_not_added": true
+}

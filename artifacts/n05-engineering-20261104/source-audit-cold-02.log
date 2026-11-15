@@ -1,0 +1,1 @@
+{"status":"PASS","identity_sha256":"4b20cbb6d86180be8f447524336dca78fb8cb6ed1cb4d6e178e6b10c6dd8dee1","originals":326,"components":5,"detail_triangles":663277,"coarse_triangles":253117,"critical_graphics_bytes":19467297,"elapsed_ms":16895.356131,"max_observed_RSS_bytes":175955968}

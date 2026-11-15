@@ -1,0 +1,75 @@
+"""Single N15-04B acquisition/static phase. No acquired native execution."""
+from pathlib import Path
+import hashlib,importlib.util,json,os,shutil,sys,time
+sys.dont_write_bytecode=True
+def load(name,path):
+    spec=importlib.util.spec_from_file_location(name,path);m=importlib.util.module_from_spec(spec);sys.modules[name]=m;spec.loader.exec_module(m);return m
+c=load('n15_04_common','/tmp/astra-n15-04b-common.py')
+g=load('n15_04_gguf','/tmp/astra-n15-04b-gguf.py')
+c.setup('acquisition')
+try:
+    c.phase('metadata-rights-resources-preflight')
+    mount=c.trusted(['/usr/bin/findmnt','-T',str(c.base),'-no','FSTYPE,SOURCE'],'scratch-filesystem')
+    if mount['exit_code'] or mount['stdout'].split()[0] in ['tmpfs','ramfs']:raise RuntimeError('Disk-backed scratch unavailable')
+    c.state['scratch_filesystem']=mount['stdout'].strip()
+    prior=c.PROJECT/'artifacts/n15-metadata-20261025'
+    revision='9217f5db79a29953eb74d5343926648285ec7e67'
+    filename='qwen2.5-0.5b-instruct-q4_k_m.gguf'
+    expected='74a4da8c9fdbcd15bd1f6d01d621410d31c6fc00986f5eb687824e7b93d7a9db'
+    metadata=json.loads((prior/'model-revision.txt').read_text())
+    tree=json.loads((prior/'model-tree.txt').read_text())
+    row=next(r for r in tree if r['path']==filename)
+    if metadata['sha']!=revision or metadata['id']!='Qwen/Qwen2.5-0.5B-Instruct-GGUF' or metadata['private']:raise RuntimeError('Exact publisher revision mismatch')
+    if row['size']!=491400032 or row['lfs']['size']!=491400032 or row['lfs']['oid']!=expected:raise RuntimeError('Publisher size/hash unavailable or inconsistent')
+    for name,path in [('model-license.txt','LICENSE'),('model-readme.txt','README.md'),('model-lfs-pointer.txt',filename)]:
+        raw=(prior/name).read_bytes()
+        blob=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()
+        if blob!=next(t['oid'] for t in tree if t['path']==path):raise RuntimeError('Pinned publisher Git blob mismatch '+path)
+    if c.sha(prior/'model-license.txt')!='832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e':raise RuntimeError('Model license hash mismatch')
+    pointer=(prior/'model-lfs-pointer.txt').read_text()
+    if expected not in pointer or 'size 491400032' not in pointer:raise RuntimeError('Independent LFS pointer association failed')
+    (c.base/'model-notices').mkdir()
+    for name in ['model-license.txt','model-readme.txt','model-lfs-pointer.txt','model-tree.txt','model-revision.txt']:shutil.copyfile(prior/name,c.base/'model-notices'/name)
+    c.atomic('model-qualification.json',{'repo':metadata['id'],'revision':revision,'file':filename,'size':491400032,'expected_sha256':expected,'integrity_basis':'Preserved pinned publisher API/tree/LFS pointer and independent Git blob associations','license':'Apache-2.0','license_sha256':'832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e','new_metadata_requests':0})
+    c.atomic('static-parser-controls.json',{'controls':g.controls(),'count':6})
+    if max(c.storage())+491400032+5000000>=1350000000:raise RuntimeError('Complete model plus reserve would cross storage watermark')
+    c.baseline()
+    c.phase('retained-runtime-and-library-hash-preflight')
+    retained=[(c.RUNTIME/'llama-b11669-bin-ubuntu-x64.tar.gz','cf07c1c112d709bd67e522017471de57ed0ec8bea031d732c5422351c07f65ac'),(c.GOMP/'libgomp1_16-20260322-1ubuntu1_amd64.deb','add19738c63794d2aa9ac529d3b8aebe2e88980faecb6c1c59f07aefd6c3c314'),(c.ZLIB/'zlib1g_1.3.dfsg+really1.3.1-1ubuntu3.2_amd64.deb','10084666f747247550c3e82f9a12cbfd9184c19241a42eb34d8893ecb8e03b35')]
+    for p,expected_hash in retained:
+        c.gate()
+        if c.sha(p)!=expected_hash:raise RuntimeError('Retained original hash mismatch')
+    closure=json.loads((c.PROJECT/'artifacts/n15-03f-20261027/static-dependency-closure.json').read_text())['records']
+    for name,record in closure.items():
+        p=Path(record['path']);c.gate()
+        if c.sha(p)!=record['sha256']:raise RuntimeError('Retained library hash mismatch: '+name)
+        if not any(p.is_relative_to(base) for base in c.count_roots):c.admitted_external.append(p)
+    c.atomic('retained-hashes.json',{'originals':3,'native_files':17,'status':'PASS'})
+    c.phase('single-approved-model-download')
+    before=time.monotonic()
+    result=c.trusted(['/usr/bin/python3','-B','/tmp/astra-n15-04b-download.py',str(c.root)],'model-download',720)
+    c.state['download_process_elapsed_s']=time.monotonic()-before
+    receipt=json.loads((c.root/'download-receipt.json').read_text())
+    c.state['acquisition']=receipt
+    if result['exit_code'] or not receipt['complete']:raise RuntimeError('Single model acquisition did not complete; no retry')
+    c.phase('complete-model-hash-and-static-GGUF')
+    partial=c.root/(filename+'.part')
+    if partial.stat().st_size!=491400032 or c.sha(partial)!=expected:raise RuntimeError('Independent full-original byte/SHA verification failed')
+    with partial.open('rb') as f:info=g.inspect_gguf(f,partial.stat().st_size)
+    meta=info['metadata'];tokens=info['special_token_ids']
+    if meta.get('general.architecture')!='qwen2' or meta.get('general.file_type')!=15:raise RuntimeError('Approved Qwen2 Q4_K_M architecture/quantization not confirmed')
+    if not isinstance(meta.get('qwen2.context_length'),int) or meta['qwen2.context_length']<1024:raise RuntimeError('Context policy unsupported')
+    if meta.get('tokenizer.ggml.model')!='gpt2' or any(t not in tokens for t in ['<|im_start|>','<|im_end|>','<|endoftext|>']):raise RuntimeError('Required Qwen tokenizer/special tokens absent')
+    if meta.get('tokenizer.ggml.eos_token_id')!=tokens['<|im_end|>']:raise RuntimeError('EOS association mismatch')
+    c.atomic('gguf-static.json',info)
+    with c.accounting._IO_LOCK:os.replace(partial,c.root/filename)
+    (c.root/filename).chmod(0o400)
+    c.state['model']={'path':str(c.root/filename),'sha256':expected,'bytes':491400032,'GGUF_version':info['version'],'architecture':'qwen2','quantization':'Q4_K_M','context_header':meta['qwen2.context_length'],'tensor_count':info['tensor_count'],'metadata_count':info['metadata_count'],'special_token_ids':tokens}
+    c.state['status']='ACQUIRED_STATIC_VERIFIED'
+    c.accounting.atomic_json(c.MARK,{'task':'N15-04B','scratch':str(c.base),'phase':'acquisition_verified','download_attempts':1,'native_commands':0})
+except BaseException as exc:
+    c.state['status']='BLOCKED';c.state['failure']={'stage':c.state.get('stage'),'type':type(exc).__name__,'reason':str(exc)}
+    c.event('failure',**c.state['failure'])
+finally:
+    c.finish()
+if c.state['status']!='ACQUIRED_STATIC_VERIFIED':raise SystemExit(1)

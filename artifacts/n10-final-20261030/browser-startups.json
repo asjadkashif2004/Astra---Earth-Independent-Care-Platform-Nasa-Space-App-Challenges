@@ -1,0 +1,89 @@
+{
+  "maximum": 4,
+  "attempts": [
+    {
+      "ordinal": 1,
+      "directory": "browser-01",
+      "status": "ADMITTED_ONCE",
+      "code_pins": {
+        "services/n10/contracts.mjs": "080c64f7b90695a2c821c069b60fe5c6ee79b8c90ad4169fca3a26959cceb61f",
+        "services/n10/ledger.mjs": "efe4ace318b24b4308824c71dde15636ec04d36f4e4f563f7488db4d37234e12",
+        "services/n10/projection.mjs": "f2dcae097ddf54fec89f59055dbc590b0272cfc508f69c57e8b3888e6ed6f071",
+        "services/api/server.mjs": "215a542fa41557796a275cda2c52d2952dd3ca792a4282533d27d5d991f6cc12",
+        "services/api/store.mjs": "c190990de7ced2e9c858cbad6788f5465fd1570e2facf3108be04d0a8861808b",
+        "apps/mission-control-web/app.mjs": "91827061843c64f2bf3b19cdab6252ab027b301a0d1813aa40ef47bee9b6379a",
+        "apps/mission-control-web/n10.mjs": "c57ec39b7df9227c7b1e362454f095cc433b5183d6a609dfc215ce29d151746e",
+        "apps/mission-control-web/n10.css": "c1d7f2eda6762a6435173c694993f6373239a5e2b16736dbc6e8ede1863726f4",
+        "scripts/browser-acceptance.mjs": "9b3f10595ed6dd364dc8c982b9e7670749456259868ceebe6bbbece31c7c088e",
+        "scripts/browser-n10.mjs": "956d69f176e0a7da1e54abf793d22258bc2cb00677a1c1517391019c15fb3c57",
+        "docs/N10_CONTRACT.md": "95cd71e3f1be8452210784bb7e98ef9543ca8cd2d51151e5935420e054050a58",
+        "tests/n10.test.mjs": "ef80437087079ff4b14ea622a879c9873d7dee839931331eecd477269abf8ff3",
+        "tests/fixtures/n10.mjs": "943d5866ed8af80c0ba44cdde79a17d0b060a14ffddf79d2445ed68dcd5cf9bf"
+      }
+    },
+    {
+      "ordinal": 2,
+      "directory": "browser-02",
+      "status": "ADMITTED_ONCE",
+      "code_pins": {
+        "services/n10/contracts.mjs": "080c64f7b90695a2c821c069b60fe5c6ee79b8c90ad4169fca3a26959cceb61f",
+        "services/n10/ledger.mjs": "efe4ace318b24b4308824c71dde15636ec04d36f4e4f563f7488db4d37234e12",
+        "services/n10/projection.mjs": "9c23f6fbfabbe2e182f76e5f824bb7867cceae1ae038d7d89c560505bdf0809b",
+        "services/api/server.mjs": "215a542fa41557796a275cda2c52d2952dd3ca792a4282533d27d5d991f6cc12",
+        "services/api/store.mjs": "c190990de7ced2e9c858cbad6788f5465fd1570e2facf3108be04d0a8861808b",
+        "apps/mission-control-web/app.mjs": "91827061843c64f2bf3b19cdab6252ab027b301a0d1813aa40ef47bee9b6379a",
+        "apps/mission-control-web/n10.mjs": "6fd94793c274c00f48268750baf8b16c262bbf721444024712e8025dfd03f687",
+        "apps/mission-control-web/n10.css": "c1d7f2eda6762a6435173c694993f6373239a5e2b16736dbc6e8ede1863726f4",
+        "scripts/browser-acceptance.mjs": "9b3f10595ed6dd364dc8c982b9e7670749456259868ceebe6bbbece31c7c088e",
+        "scripts/browser-n10.mjs": "7acfa35fae240ba6099d83c26b15e823a1efd14b60e5392dc945120aba0c8c56",
+        "docs/N10_CONTRACT.md": "07ac53c07ae204fa3237ff720669d6d7f28b5eba2f3ee3c260b02bd861c0000e",
+        "tests/n10.test.mjs": "44bc167b4597c9836ca520798463fdac83dfc412495ab28275f360067fe7f988",
+        "tests/fixtures/n10.mjs": "943d5866ed8af80c0ba44cdde79a17d0b060a14ffddf79d2445ed68dcd5cf9bf"
+      }
+    },
+    {
+      "ordinal": 3,
+      "directory": "browser-03",
+      "status": "ADMITTED_ONCE",
+      "code_pins": {
+        "services/n10/contracts.mjs": "080c64f7b90695a2c821c069b60fe5c6ee79b8c90ad4169fca3a26959cceb61f",
+        "services/n10/ledger.mjs": "efe4ace318b24b4308824c71dde15636ec04d36f4e4f563f7488db4d37234e12",
+        "services/n10/projection.mjs": "9c23f6fbfabbe2e182f76e5f824bb7867cceae1ae038d7d89c560505bdf0809b",
+        "services/api/server.mjs": "215a542fa41557796a275cda2c52d2952dd3ca792a4282533d27d5d991f6cc12",
+        "services/api/store.mjs": "c190990de7ced2e9c858cbad6788f5465fd1570e2facf3108be04d0a8861808b",
+        "apps/mission-control-web/app.mjs": "91827061843c64f2bf3b19cdab6252ab027b301a0d1813aa40ef47bee9b6379a",
+        "apps/mission-control-web/n10.mjs": "c1f5553fa9bf58c3e90b98e38faa53186ddc0969bcc1e4e50c068bcfe00a3ec0",
+        "apps/mission-control-web/n10.css": "c1d7f2eda6762a6435173c694993f6373239a5e2b16736dbc6e8ede1863726f4",
+        "scripts/browser-acceptance.mjs": "9b3f10595ed6dd364dc8c982b9e7670749456259868ceebe6bbbece31c7c088e",
+        "scripts/browser-n10.mjs": "7acfa35fae240ba6099d83c26b15e823a1efd14b60e5392dc945120aba0c8c56",
+        "docs/N10_CONTRACT.md": "07ac53c07ae204fa3237ff720669d6d7f28b5eba2f3ee3c260b02bd861c0000e",
+        "tests/n10.test.mjs": "44bc167b4597c9836ca520798463fdac83dfc412495ab28275f360067fe7f988",
+        "tests/fixtures/n10.mjs": "943d5866ed8af80c0ba44cdde79a17d0b060a14ffddf79d2445ed68dcd5cf9bf"
+      }
+    },
+    {
+      "ordinal": 4,
+      "directory": "browser-04",
+      "status": "ADMITTED_ONCE",
+      "code_pins": {
+        "services/n10/contracts.mjs": "080c64f7b90695a2c821c069b60fe5c6ee79b8c90ad4169fca3a26959cceb61f",
+        "services/n10/ledger.mjs": "efe4ace318b24b4308824c71dde15636ec04d36f4e4f563f7488db4d37234e12",
+        "services/n10/projection.mjs": "9c23f6fbfabbe2e182f76e5f824bb7867cceae1ae038d7d89c560505bdf0809b",
+        "services/api/server.mjs": "215a542fa41557796a275cda2c52d2952dd3ca792a4282533d27d5d991f6cc12",
+        "services/api/store.mjs": "c190990de7ced2e9c858cbad6788f5465fd1570e2facf3108be04d0a8861808b",
+        "apps/mission-control-web/app.mjs": "91827061843c64f2bf3b19cdab6252ab027b301a0d1813aa40ef47bee9b6379a",
+        "apps/mission-control-web/n10.mjs": "c1f5553fa9bf58c3e90b98e38faa53186ddc0969bcc1e4e50c068bcfe00a3ec0",
+        "apps/mission-control-web/n10.css": "c1d7f2eda6762a6435173c694993f6373239a5e2b16736dbc6e8ede1863726f4",
+        "scripts/browser-acceptance.mjs": "9b3f10595ed6dd364dc8c982b9e7670749456259868ceebe6bbbece31c7c088e",
+        "scripts/browser-n10.mjs": "80641365e4f6a7887cc1ad0535799a73386dce9e46d275c7dc3f4b2dc774037a",
+        "docs/N10_CONTRACT.md": "639861ddd467692b3de886d4a441ca04bf1dbf9a4d57f7e259a08226860fa5f9",
+        "tests/n10.test.mjs": "44bc167b4597c9836ca520798463fdac83dfc412495ab28275f360067fe7f988",
+        "tests/fixtures/n10.mjs": "943d5866ed8af80c0ba44cdde79a17d0b060a14ffddf79d2445ed68dcd5cf9bf"
+      }
+    }
+  ],
+  "initial_QA_estimate": 3,
+  "estimate_revision": "One final bounded ordinary-QA correction under the existing consolidated owner mission; no owner resource boundary changed.",
+  "status": "DELIVERED_CLOSED",
+  "unused_permission_survives": false
+}

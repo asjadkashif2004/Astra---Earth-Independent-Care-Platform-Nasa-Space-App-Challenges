@@ -1,0 +1,50 @@
+{
+  "scope": "Small explicitly authored synthetic fixture; observations, not resource guarantees.",
+  "fixture": "astra.n10.synthetic-fixtures.v1",
+  "network_acquisitions": 0,
+  "N16_starts": 0,
+  "models": 0,
+  "application_startup_ms": 270.99095,
+  "records": 22,
+  "read_projections": 75,
+  "unchanged_ledger_sha256": "2af9d165091a480b2ac4f786f72f775a1d5188f14d98963973ba66ad00922563",
+  "file_sizes_during_run": {
+    "measure.sqlite": 5419008,
+    "measure.sqlite-shm": 32768,
+    "measure.sqlite-wal": 4136512
+  },
+  "logical_bytes": 9588288,
+  "operation_ms": {
+    "create": {
+      "count": 22,
+      "minimum": 0.870902000000001,
+      "maximum": 3.3913459999999986,
+      "mean": 1.6536174090908948
+    },
+    "projection": {
+      "count": 25,
+      "minimum": 1.6305939999999737,
+      "maximum": 3.6665219999999863,
+      "mean": 2.3369373599999927
+    },
+    "daily": {
+      "count": 25,
+      "minimum": 1.7836039999999684,
+      "maximum": 15.455367000000024,
+      "mean": 2.686509959999985
+    },
+    "history": {
+      "count": 25,
+      "minimum": 1.8704790000001594,
+      "maximum": 4.381745000000137,
+      "mean": 2.4449730400000043
+    }
+  },
+  "total_elapsed_ms": 550.73251,
+  "observed_Node_RSS_bytes": 88444928,
+  "Node_kernel_maxRSS_bytes": 88576000,
+  "cleanup": {
+    "application_closed": true,
+    "temporary_database_removed": true
+  }
+}

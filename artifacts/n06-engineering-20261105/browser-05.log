@@ -1,0 +1,38 @@
+Checking: N06 actual verified geometry and authorized source-to-panel positive control
+Checking: N06 real mesh ray picking and camera orbit/zoom/layers/LOD preservation
+Checking: N06 mapped respiratory-left selection, limitations and UNKNOWN
+Checking: N06 mapped respiratory-right selection, limitations and UNKNOWN
+Checking: N06 mapped body selection, limitations and UNKNOWN
+Checking: N06 mapped head selection, limitations and UNKNOWN
+Checking: N06 mapped skeleton selection, limitations and UNKNOWN
+Checking: N06 mapped thorax selection, limitations and UNKNOWN
+Checking: N06 genuine persisted N02 open/acknowledged evidence and historical acknowledgement cutoff
+Checking: N06 preserved native touch rotation, pinch, keyboard and camera bounds
+Checking: N06 same-crew N08 archive source/channel/cursor/gap and history navigation
+Checking: N06 N09 actual scenario time, pause/stop/reset and historical cutoff
+Checking: N06 existing N02 alert/acknowledgement evidence and reads preserve all writes
+Checking: N06 crew switching and delayed old-crew response cannot contaminate panel
+Checking: N06 dropout freezes timing, UNKNOWN and no organ-damage inference
+Checking: N06 history slider, return-to-current and refresh recovery
+Checking: N06 1920x1080 keyboard/reflow/axe/contrast
+Checking: N06 1366x768 keyboard/reflow/axe/contrast
+Checking: N06 768x1024 keyboard/reflow/axe/contrast
+Checking: N06 390x844 keyboard/reflow/axe/contrast
+Checking: N06 reference region/panel latency, sampled memory and bounded active rendering
+Checking: N06 context loss/missing asset and retained accessible detail recovery
+Checking: N06 native reduced motion, suspend/resume and renderer cleanup
+{
+  "status": "failed",
+  "browser": "Chrome/156.0.8078.80",
+  "checks": 23,
+  "failed": [
+    {
+      "name": "N06 native reduced motion, suspend/resume and renderer cleanup",
+      "status": "failed",
+      "reason": "The expression evaluated to a falsy value:\n\n  assert.ok(await c.evaluate('window.__n05.draws')-first<8)\n"
+    }
+  ],
+  "screenshots": 2,
+  "reason": "The expression evaluated to a falsy value:\n\n  assert.ok(await c.evaluate('window.__n05.draws')-first<8)\n",
+  "report": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n06-engineering-20261105\\browser-05\\report.json"
+}

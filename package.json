@@ -1,0 +1,24 @@
+{
+  "name": "astra-command",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Earth-independent crew health intelligence research simulator",
+  "type": "module",
+  "engines": {
+    "node": ">=24.21.0 <25"
+  },
+  "scripts": {
+    "start": "node services/api/server.mjs",
+    "dev": "node --watch services/api/server.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test --test-isolation=none tests/*.test.mjs",
+    "test:browser": "node scripts/browser-acceptance.mjs",
+    "benchmark": "node scripts/benchmark.mjs",
+    "evaluate": "node scripts/evaluate.mjs",
+    "calibrate": "node scripts/calibrate-forecast.mjs",
+    "manifest": "node scripts/artifact-manifest.mjs"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  }
+}

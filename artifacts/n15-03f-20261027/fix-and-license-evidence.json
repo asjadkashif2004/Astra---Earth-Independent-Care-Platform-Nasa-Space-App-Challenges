@@ -1,0 +1,11 @@
+{
+  "USN": "USN-8954-1",
+  "CVE": "CVE-2026-85091",
+  "exact_package_version": "1:1.3.dfsg+really1.3.1-1ubuntu3.2",
+  "fix_entries": [
+    "zlib (1:1.3.dfsg+really1.3.1-1ubuntu3.2) resolute-security; urgency=medium\n\n  * SECURITY UPDATE: heap buffer overflow in gz_vacate() during non-blocking\n    gzwrite() operations\n    - debian/patches/CVE-2026-85091.patch: reset stale input buffer pointer\n      on gz_comp() error in gz_write() in gzwrite.c\n    - CVE-2026-85091\n\n -- Shafayat Hossain Majumder <shafayat.majumder@canonical.com>  Wed, 21 Oct 2026 16:56:20 -0400\n\n"
+  ],
+  "license": "Zlib",
+  "copyright_sha256": "9e5b96d63773a5d177ba264254390f792be07e41748ebd94730981c6cac31cc6",
+  "proof_scope": "Authenticated exact package plus publisher notice and packaged changelog; not exploit/independent patch execution."
+}

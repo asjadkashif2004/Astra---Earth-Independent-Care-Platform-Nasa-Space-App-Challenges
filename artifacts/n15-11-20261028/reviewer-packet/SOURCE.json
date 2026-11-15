@@ -1,0 +1,61 @@
+{
+  "clinical_validation": false,
+  "evidence_window": {
+    "anchor": {
+      "base_citations": [
+        {
+          "chunk_id": "chunk-f44e1fdc0cad3332ef682ee0ade70dc3f213c6f546440ed495f5e5ace8ce549b",
+          "chunk_sha256": "64c1af1ee12fb4398813fcaac40a883a603d4359e95807f51775180b011f92e1",
+          "document_id": "nasa-std-3001-v2-f",
+          "end": 1499,
+          "original_sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+          "page_index": 134,
+          "page_sha256": "47b8276cae1dd2f97e43759ed3cf4e8adc97f4f495bea22c321891bed6c79c07",
+          "section_id": "section-c6a47409f8625d081e1f5ffc27fb8620d97a58ff0421b3b1b93a16e4a03553ff",
+          "source_url": "https://standards.nasa.gov/system/files/tmp/NASA-STD-3001%20Vol%202%20Rev%20F.pdf",
+          "start": 1248
+        }
+      ],
+      "base_section_labels_authoritative": false,
+      "document_id": "nasa-std-3001-v2-f",
+      "end": 1499,
+      "offset_unit": "UTF-16 code units",
+      "original_sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+      "page_index": 134,
+      "page_sha256": "47b8276cae1dd2f97e43759ed3cf4e8adc97f4f495bea22c321891bed6c79c07",
+      "start": 1248,
+      "text": "[V2 7070] The system shall provide volume, restraint, accommodations, environmental control \n(e.g., vibration, lighting, noise, and temperature), and degree of privacy for sleep for each \ncrewmember, to support overall crew health and performance. \n \n",
+      "text_sha256": "64c1af1ee12fb4398813fcaac40a883a603d4359e95807f51775180b011f92e1"
+    },
+    "claim_readiness": "bounded_source_text",
+    "id": "window-ac8d6151e692badfd03a7755d10976b91434022f57fb270e7a0e92855eb7eb84",
+    "key": "sleep-accommodation-requirement",
+    "limits": "System-design shall statement;does not certify ASTRA or establish a personal medical threshold.",
+    "review": "pending_independent_review",
+    "role": "formal_requirement",
+    "section_id": "curated-section-87045f304cde4557b1c08a5703298fef2f7d61f8e9041b94979d60bfec6af86b",
+    "source": {
+      "attribution": "NASA Office of the Chief Health and Medical Officer. NASA-STD-3001 Volume 2 Revision F, approved 2026-07-14. NASA Technical Standards System.",
+      "authors": [
+        "NASA Office of the Chief Health and Medical Officer"
+      ],
+      "canonical_url": "https://standards.nasa.gov/standard/NASA/NASA-STD-3001_VOL_2",
+      "document_id": "nasa-std-3001-v2-f",
+      "original_file": "NASA-STD-3001 Vol 2 Rev F.pdf",
+      "original_sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+      "publication_date_note": "Official active standards catalogue: Revision F, Document Date 07/14/2026; verified 2026-10-24. Earlier E/D files are not substituted.",
+      "published_on": "2026-07-14",
+      "publisher": "NASA Technical Standards System",
+      "rights_note": "Local informational corpus of NASA-authored material; retain source,revision and notices. Public access does not license third-party standards,figures or cited works. No endorsement or compliance certification. Stop on conflicting internal reproduction notices. Future AI-output attribution must be reviewed separately.",
+      "title": "NASA Spaceflight Human-System Standard, Volume 2: Human Factors, Habitability, and Environmental Health",
+      "version": "F"
+    },
+    "source_context": "RevisionF7.9.1,V2 7070",
+    "unit_id": "evidence-unit-19d7540f3b1bdcbb43e11baa163e931b82ede3c8133b5ad56728655fbc97e1b0"
+  },
+  "original_project_path": "data/corpus/n13-01/originals/NASA-STD-3001 Vol 2 Rev F.pdf",
+  "page_numbering": "1-based physical PDF ordinal; not an inferred printed-page label",
+  "physical_pdf_page": 134,
+  "schema_version": "astra.n15.support-rule-source.v1",
+  "source_review_status": "pending_independent_review"
+}

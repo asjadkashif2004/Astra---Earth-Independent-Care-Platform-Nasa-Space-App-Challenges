@@ -1,0 +1,949 @@
+{
+  "run": {
+    "schema_version": "astra.n09.run.v1",
+    "id": "ba605bf2-6110-418b-b2c9-6b59ae68a732",
+    "status": "COMPLETED",
+    "execution_status": "COMPLETED",
+    "last_failure": null,
+    "revision": 21,
+    "seed": 42017,
+    "definition_version": "n09-source-time-v1",
+    "started_at": "2026-11-14T11:00:00.000Z",
+    "known_at": "2026-11-14T11:00:00.000Z",
+    "host_started_at": "2026-10-31T06:40:07.549Z",
+    "source_now": "2026-11-19T11:00:00.000Z",
+    "mission_now": "2026-11-19T11:00:00.000Z",
+    "data_source": "RECORDED_N09_OBSERVATIONS",
+    "elapsed_seconds": 432000,
+    "duration_seconds": 432000,
+    "cadence_seconds": 3600,
+    "frames": 121,
+    "assignments": [
+      {
+        "crew_id": "CREW-01",
+        "scenario_id": "nominal",
+        "onset_seconds": 0,
+        "elapsed_seconds": 432000,
+        "status": "COMPLETED"
+      },
+      {
+        "crew_id": "CREW-02",
+        "scenario_id": "nominal",
+        "onset_seconds": 0,
+        "elapsed_seconds": 432000,
+        "status": "COMPLETED"
+      },
+      {
+        "crew_id": "CREW-03",
+        "scenario_id": "sleep-fatigue",
+        "onset_seconds": 0,
+        "elapsed_seconds": 432000,
+        "status": "COMPLETED"
+      },
+      {
+        "crew_id": "CREW-04",
+        "scenario_id": "nominal",
+        "onset_seconds": 0,
+        "elapsed_seconds": 432000,
+        "status": "COMPLETED"
+      },
+      {
+        "crew_id": "CREW-05",
+        "scenario_id": "nominal",
+        "onset_seconds": 0,
+        "elapsed_seconds": 432000,
+        "status": "COMPLETED"
+      },
+      {
+        "crew_id": "CREW-06",
+        "scenario_id": "nominal",
+        "onset_seconds": 0,
+        "elapsed_seconds": 432000,
+        "status": "COMPLETED"
+      }
+    ],
+    "crew": [
+      {
+        "id": "CREW-01",
+        "values": {
+          "heart_rate": 66.71,
+          "hrv": 51.64,
+          "spo2": 97.83,
+          "respiratory_rate": 13.16,
+          "temperature": 36.63,
+          "sleep_duration": 7.75,
+          "fatigue": 2.39,
+          "reaction_time": 256.36,
+          "exercise": 106.79,
+          "radiation": 0.016
+        },
+        "quality": "good",
+        "status": "green",
+        "observed_at": "2026-11-19T11:00:00.000Z",
+        "metric_quality": {
+          "heart_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "hrv": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "spo2": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "respiratory_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "temperature": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "sleep_duration": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "fatigue": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "reaction_time": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "exercise": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "radiation": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          }
+        }
+      },
+      {
+        "id": "CREW-02",
+        "values": {
+          "heart_rate": 66.73,
+          "hrv": 53.72,
+          "spo2": 98.06,
+          "respiratory_rate": 13.51,
+          "temperature": 36.7,
+          "sleep_duration": 7.85,
+          "fatigue": 2.7,
+          "reaction_time": 259.38,
+          "exercise": 107.11,
+          "radiation": 0.016
+        },
+        "quality": "good",
+        "status": "green",
+        "observed_at": "2026-11-19T11:00:00.000Z",
+        "metric_quality": {
+          "heart_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "hrv": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "spo2": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "respiratory_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "temperature": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "sleep_duration": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "fatigue": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "reaction_time": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "exercise": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "radiation": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          }
+        }
+      },
+      {
+        "id": "CREW-03",
+        "values": {
+          "heart_rate": 67.51,
+          "hrv": 54.64,
+          "spo2": 98.11,
+          "respiratory_rate": 14.07,
+          "temperature": 36.69,
+          "sleep_duration": 5.95,
+          "fatigue": 4.69,
+          "reaction_time": 306.66,
+          "exercise": 109.58,
+          "radiation": 0.016
+        },
+        "quality": "good",
+        "status": "amber",
+        "observed_at": "2026-11-19T11:00:00.000Z",
+        "metric_quality": {
+          "heart_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "hrv": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "spo2": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "respiratory_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "temperature": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "sleep_duration": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "fatigue": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "reaction_time": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "exercise": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "radiation": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          }
+        }
+      },
+      {
+        "id": "CREW-04",
+        "values": {
+          "heart_rate": 69.61,
+          "hrv": 55.63,
+          "spo2": 98.28,
+          "respiratory_rate": 14.11,
+          "temperature": 36.75,
+          "sleep_duration": 8.05,
+          "fatigue": 2.76,
+          "reaction_time": 264.6,
+          "exercise": 114.06,
+          "radiation": 0.016
+        },
+        "quality": "good",
+        "status": "green",
+        "observed_at": "2026-11-19T11:00:00.000Z",
+        "metric_quality": {
+          "heart_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "hrv": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "spo2": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "respiratory_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "temperature": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "sleep_duration": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "fatigue": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "reaction_time": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "exercise": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "radiation": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          }
+        }
+      },
+      {
+        "id": "CREW-05",
+        "values": {
+          "heart_rate": 68.89,
+          "hrv": 56.21,
+          "spo2": 98.43,
+          "respiratory_rate": 14.48,
+          "temperature": 36.77,
+          "sleep_duration": 8.15,
+          "fatigue": 2.86,
+          "reaction_time": 269.17,
+          "exercise": 113.44,
+          "radiation": 0.016
+        },
+        "quality": "good",
+        "status": "green",
+        "observed_at": "2026-11-19T11:00:00.000Z",
+        "metric_quality": {
+          "heart_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "hrv": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "spo2": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "respiratory_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "temperature": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "sleep_duration": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "fatigue": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "reaction_time": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "exercise": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "radiation": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          }
+        }
+      },
+      {
+        "id": "CREW-06",
+        "values": {
+          "heart_rate": 70.19,
+          "hrv": 57.92,
+          "spo2": 98.43,
+          "respiratory_rate": 14.36,
+          "temperature": 36.84,
+          "sleep_duration": 8.25,
+          "fatigue": 2.98,
+          "reaction_time": 271.02,
+          "exercise": 113.95,
+          "radiation": 0.016
+        },
+        "quality": "good",
+        "status": "green",
+        "observed_at": "2026-11-19T11:00:00.000Z",
+        "metric_quality": {
+          "heart_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "hrv": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "spo2": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "respiratory_rate": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "temperature": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "sleep_duration": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "fatigue": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "reaction_time": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "exercise": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          },
+          "radiation": {
+            "status": "good",
+            "confidence": 0.98,
+            "artifact": false,
+            "stale": false
+          }
+        }
+      }
+    ],
+    "calibration_hash": "78ec839343fd2de395f67ba3efd0aa4ba3d17181390d2b5daa1470b569ba4d05",
+    "config_hash": "b06393ec0e81c8e355f0c1649c321003092e9dec55da01ca596d213349ee478e",
+    "synthetic": true,
+    "clinical_validation": false,
+    "completed_days": {
+      "CREW-01": [
+        {
+          "session_id": "SLEEP-7786bf6e1e8ad61aed68856d444c820f",
+          "end_at": "2026-11-15T07:00:00.000Z",
+          "reference_hours": 7.75,
+          "observed_hours": 7.75,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-86340098fda1a1750fd517e77dffdbf1",
+          "end_at": "2026-11-16T07:00:00.000Z",
+          "reference_hours": 7.75,
+          "observed_hours": 7.75,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-c9a57207d82b9e1d0dc69241865786af",
+          "end_at": "2026-11-17T07:00:00.000Z",
+          "reference_hours": 7.75,
+          "observed_hours": 7.75,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-a40073d6bb7bdcea87673aa11ec41df4",
+          "end_at": "2026-11-18T07:00:00.000Z",
+          "reference_hours": 7.75,
+          "observed_hours": 7.75,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-e3dcb65f2b233e7befebce78e7babe39",
+          "end_at": "2026-11-19T07:00:00.000Z",
+          "reference_hours": 7.75,
+          "observed_hours": 7.75,
+          "quality": "good"
+        }
+      ],
+      "CREW-02": [
+        {
+          "session_id": "SLEEP-06e96927001bf57d2c227fa385b9952b",
+          "end_at": "2026-11-15T07:10:00.000Z",
+          "reference_hours": 7.85,
+          "observed_hours": 7.85,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-a29973ef148d088fc5b8b1b0fe6d5a6d",
+          "end_at": "2026-11-16T07:10:00.000Z",
+          "reference_hours": 7.85,
+          "observed_hours": 7.85,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-402fbe3f4d6f2cbd7803fc85ffe89261",
+          "end_at": "2026-11-17T07:10:00.000Z",
+          "reference_hours": 7.85,
+          "observed_hours": 7.85,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-d92232deb43a050f4a3fca868f938187",
+          "end_at": "2026-11-18T07:10:00.000Z",
+          "reference_hours": 7.85,
+          "observed_hours": 7.85,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-70f3d667e1af7d099664a8a476a62fba",
+          "end_at": "2026-11-19T07:10:00.000Z",
+          "reference_hours": 7.85,
+          "observed_hours": 7.85,
+          "quality": "good"
+        }
+      ],
+      "CREW-03": [
+        {
+          "session_id": "SLEEP-f64dfca08c56d7b31b960af0627a7f49",
+          "end_at": "2026-11-15T07:20:00.000Z",
+          "reference_hours": 7.95,
+          "observed_hours": 6.95,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-f190a468ef980e80ed512c25a754b669",
+          "end_at": "2026-11-16T07:20:00.000Z",
+          "reference_hours": 7.95,
+          "observed_hours": 6.45,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-c695d9f124d83b8b5769f57df75d6f50",
+          "end_at": "2026-11-17T07:20:00.000Z",
+          "reference_hours": 7.95,
+          "observed_hours": 5.95,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-2efdda919a4b0415c47a49452cce1fb3",
+          "end_at": "2026-11-18T07:20:00.000Z",
+          "reference_hours": 7.95,
+          "observed_hours": 5.95,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-e3550cba506f2ead91771985ac3a1475",
+          "end_at": "2026-11-19T07:20:00.000Z",
+          "reference_hours": 7.95,
+          "observed_hours": 5.95,
+          "quality": "good"
+        }
+      ],
+      "CREW-04": [
+        {
+          "session_id": "SLEEP-4062e51bd050fa380dabdd82ee831dc8",
+          "end_at": "2026-11-15T07:30:00.000Z",
+          "reference_hours": 8.05,
+          "observed_hours": 8.05,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-e8d61a1c77ed87b2ab515fcde85a2235",
+          "end_at": "2026-11-16T07:30:00.000Z",
+          "reference_hours": 8.05,
+          "observed_hours": 8.05,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-3fad3ac53bf187f51466cfe46371f2c6",
+          "end_at": "2026-11-17T07:30:00.000Z",
+          "reference_hours": 8.05,
+          "observed_hours": 8.05,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-e2999d22e37e1f46dc3767801d699fdc",
+          "end_at": "2026-11-18T07:30:00.000Z",
+          "reference_hours": 8.05,
+          "observed_hours": 8.05,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-f35f7dc5f69e877d224f703242bc6be8",
+          "end_at": "2026-11-19T07:30:00.000Z",
+          "reference_hours": 8.05,
+          "observed_hours": 8.05,
+          "quality": "good"
+        }
+      ],
+      "CREW-05": [
+        {
+          "session_id": "SLEEP-e08c54b9079a98a9702e4728b9c7d5e0",
+          "end_at": "2026-11-15T07:40:00.000Z",
+          "reference_hours": 8.15,
+          "observed_hours": 8.15,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-840ef3650af4b90ca1d79b834f28cbf5",
+          "end_at": "2026-11-16T07:40:00.000Z",
+          "reference_hours": 8.15,
+          "observed_hours": 8.15,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-4cd974b2062afc230423f76dfb93d971",
+          "end_at": "2026-11-17T07:40:00.000Z",
+          "reference_hours": 8.15,
+          "observed_hours": 8.15,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-d11e10052486682c95c37c821d4d5543",
+          "end_at": "2026-11-18T07:40:00.000Z",
+          "reference_hours": 8.15,
+          "observed_hours": 8.15,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-b980c265236384cc03bd35615e37b9c2",
+          "end_at": "2026-11-19T07:40:00.000Z",
+          "reference_hours": 8.15,
+          "observed_hours": 8.15,
+          "quality": "good"
+        }
+      ],
+      "CREW-06": [
+        {
+          "session_id": "SLEEP-b1fcef70eece2a553091f5aadb66fecd",
+          "end_at": "2026-11-15T07:50:00.000Z",
+          "reference_hours": 8.25,
+          "observed_hours": 8.25,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-b92fb330e7fc5751effb6d4f0016e6a6",
+          "end_at": "2026-11-16T07:50:00.000Z",
+          "reference_hours": 8.25,
+          "observed_hours": 8.25,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-3f809c6c92bb3c31d3d641f247b45dbc",
+          "end_at": "2026-11-17T07:50:00.000Z",
+          "reference_hours": 8.25,
+          "observed_hours": 8.25,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-182171e141e224972c8554c221c62b83",
+          "end_at": "2026-11-18T07:50:00.000Z",
+          "reference_hours": 8.25,
+          "observed_hours": 8.25,
+          "quality": "good"
+        },
+        {
+          "session_id": "SLEEP-bd36f24a10fb005dc77a465a271edc37",
+          "end_at": "2026-11-19T07:50:00.000Z",
+          "reference_hours": 8.25,
+          "observed_hours": 8.25,
+          "quality": "good"
+        }
+      ]
+    },
+    "waveform": null,
+    "alert_authority": "N02 only; no diagnosis or automatic acknowledgement",
+    "recovered_after_restart": false
+  },
+  "final_context": {
+    "CREW-01": {
+      "plan": {
+        "version": "n09-daily-utc-v1",
+        "crew_id": "CREW-01",
+        "reference_hours": 7.75,
+        "completion": 1795071600000,
+        "start_at": "2026-11-18T23:15:00.000Z",
+        "end_at": "2026-11-19T07:00:00.000Z",
+        "next_sleep_start_at": "2026-11-19T23:15:00.000Z",
+        "next_sleep_end_at": "2026-11-20T07:00:00.000Z",
+        "exercise_start": 1795107600000,
+        "exercise_end": 1795111200000,
+        "timezone": "UTC",
+        "synthetic": true
+      },
+      "completed_days": 5,
+      "shortfall_hours": 0,
+      "status": "KNOWN",
+      "formula": "sum(max(0, authored_reference_hours - completed_observed_hours)); complete covered days only",
+      "clinical_sleep_debt": false
+    },
+    "CREW-02": {
+      "plan": {
+        "version": "n09-daily-utc-v1",
+        "crew_id": "CREW-02",
+        "reference_hours": 7.85,
+        "completion": 1795072200000,
+        "start_at": "2026-11-18T23:19:00.000Z",
+        "end_at": "2026-11-19T07:10:00.000Z",
+        "next_sleep_start_at": "2026-11-19T23:19:00.000Z",
+        "next_sleep_end_at": "2026-11-20T07:10:00.000Z",
+        "exercise_start": 1795108200000,
+        "exercise_end": 1795111800000,
+        "timezone": "UTC",
+        "synthetic": true
+      },
+      "completed_days": 5,
+      "shortfall_hours": 0,
+      "status": "KNOWN",
+      "formula": "sum(max(0, authored_reference_hours - completed_observed_hours)); complete covered days only",
+      "clinical_sleep_debt": false
+    },
+    "CREW-03": {
+      "plan": {
+        "version": "n09-daily-utc-v1",
+        "crew_id": "CREW-03",
+        "reference_hours": 7.95,
+        "completion": 1795072800000,
+        "start_at": "2026-11-18T23:23:00.000Z",
+        "end_at": "2026-11-19T07:20:00.000Z",
+        "next_sleep_start_at": "2026-11-19T23:23:00.000Z",
+        "next_sleep_end_at": "2026-11-20T07:20:00.000Z",
+        "exercise_start": 1795108800000,
+        "exercise_end": 1795112400000,
+        "timezone": "UTC",
+        "synthetic": true
+      },
+      "completed_days": 5,
+      "shortfall_hours": 8.5,
+      "status": "KNOWN",
+      "formula": "sum(max(0, authored_reference_hours - completed_observed_hours)); complete covered days only",
+      "clinical_sleep_debt": false
+    },
+    "CREW-04": {
+      "plan": {
+        "version": "n09-daily-utc-v1",
+        "crew_id": "CREW-04",
+        "reference_hours": 8.05,
+        "completion": 1795073400000,
+        "start_at": "2026-11-18T23:27:00.000Z",
+        "end_at": "2026-11-19T07:30:00.000Z",
+        "next_sleep_start_at": "2026-11-19T23:27:00.000Z",
+        "next_sleep_end_at": "2026-11-20T07:30:00.000Z",
+        "exercise_start": 1795109400000,
+        "exercise_end": 1795113000000,
+        "timezone": "UTC",
+        "synthetic": true
+      },
+      "completed_days": 5,
+      "shortfall_hours": 0,
+      "status": "KNOWN",
+      "formula": "sum(max(0, authored_reference_hours - completed_observed_hours)); complete covered days only",
+      "clinical_sleep_debt": false
+    },
+    "CREW-05": {
+      "plan": {
+        "version": "n09-daily-utc-v1",
+        "crew_id": "CREW-05",
+        "reference_hours": 8.15,
+        "completion": 1795074000000,
+        "start_at": "2026-11-18T23:31:00.000Z",
+        "end_at": "2026-11-19T07:40:00.000Z",
+        "next_sleep_start_at": "2026-11-19T23:31:00.000Z",
+        "next_sleep_end_at": "2026-11-20T07:40:00.000Z",
+        "exercise_start": 1795110000000,
+        "exercise_end": 1795113600000,
+        "timezone": "UTC",
+        "synthetic": true
+      },
+      "completed_days": 5,
+      "shortfall_hours": 0,
+      "status": "KNOWN",
+      "formula": "sum(max(0, authored_reference_hours - completed_observed_hours)); complete covered days only",
+      "clinical_sleep_debt": false
+    },
+    "CREW-06": {
+      "plan": {
+        "version": "n09-daily-utc-v1",
+        "crew_id": "CREW-06",
+        "reference_hours": 8.25,
+        "completion": 1795074600000,
+        "start_at": "2026-11-18T23:35:00.000Z",
+        "end_at": "2026-11-19T07:50:00.000Z",
+        "next_sleep_start_at": "2026-11-19T23:35:00.000Z",
+        "next_sleep_end_at": "2026-11-20T07:50:00.000Z",
+        "exercise_start": 1795110600000,
+        "exercise_end": 1795114200000,
+        "timezone": "UTC",
+        "synthetic": true
+      },
+      "completed_days": 5,
+      "shortfall_hours": 0,
+      "status": "KNOWN",
+      "formula": "sum(max(0, authored_reference_hours - completed_observed_hours)); complete covered days only",
+      "clinical_sleep_debt": false
+    }
+  },
+  "n10_kinds": [
+    {
+      "kind": "exercise",
+      "n": 30
+    },
+    {
+      "kind": "exercise_plan",
+      "n": 30
+    },
+    {
+      "kind": "schedule",
+      "n": 30
+    }
+  ],
+  "source_times": [
+    "2026-11-15T07:20:00.000Z",
+    "2026-11-16T07:20:00.000Z",
+    "2026-11-17T07:20:00.000Z",
+    "2026-11-18T07:20:00.000Z",
+    "2026-11-19T07:20:00.000Z"
+  ],
+  "earlier_context": {
+    "plan": {
+      "version": "n09-daily-utc-v1",
+      "crew_id": "CREW-03",
+      "reference_hours": 7.95,
+      "completion": 1794640800000,
+      "start_at": "2026-11-13T23:23:00.000Z",
+      "end_at": "2026-11-14T07:20:00.000Z",
+      "next_sleep_start_at": "2026-11-14T23:23:00.000Z",
+      "next_sleep_end_at": "2026-11-15T07:20:00.000Z",
+      "exercise_start": 1794676800000,
+      "exercise_end": 1794680400000,
+      "timezone": "UTC",
+      "synthetic": true
+    },
+    "completed_days": 0,
+    "shortfall_hours": null,
+    "status": "UNKNOWN",
+    "formula": "sum(max(0, authored_reference_hours - completed_observed_hours)); complete covered days only",
+    "clinical_sleep_debt": false
+  }
+}

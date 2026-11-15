@@ -1,0 +1,5183 @@
+{
+  "status": "failed",
+  "started_at": "2026-11-04T21:10:23.979Z",
+  "checks": [
+    {
+      "name": "N06 actual verified geometry and authorized source-to-panel positive control",
+      "status": "passed"
+    },
+    {
+      "name": "N06 real mesh ray picking and camera orbit/zoom/layers/LOD preservation",
+      "status": "passed"
+    },
+    {
+      "name": "N06 mapped respiratory-left selection, limitations and UNKNOWN",
+      "status": "passed"
+    },
+    {
+      "name": "N06 mapped respiratory-right selection, limitations and UNKNOWN",
+      "status": "passed"
+    },
+    {
+      "name": "N06 mapped body selection, limitations and UNKNOWN",
+      "status": "passed"
+    },
+    {
+      "name": "N06 mapped head selection, limitations and UNKNOWN",
+      "status": "passed"
+    },
+    {
+      "name": "N06 mapped skeleton selection, limitations and UNKNOWN",
+      "status": "passed"
+    },
+    {
+      "name": "N06 mapped thorax selection, limitations and UNKNOWN",
+      "status": "passed"
+    },
+    {
+      "name": "N06 genuine persisted N02 open/acknowledged evidence and historical acknowledgement cutoff",
+      "status": "passed"
+    },
+    {
+      "name": "N06 preserved native touch rotation, pinch, keyboard and camera bounds",
+      "status": "passed"
+    },
+    {
+      "name": "N06 same-crew N08 archive source/channel/cursor/gap and history navigation",
+      "status": "passed"
+    },
+    {
+      "name": "N06 N09 actual scenario time, pause/stop/reset and historical cutoff",
+      "status": "passed"
+    },
+    {
+      "name": "N06 existing N02 alert/acknowledgement evidence and reads preserve all writes",
+      "status": "passed"
+    },
+    {
+      "name": "N06 crew switching and delayed old-crew response cannot contaminate panel",
+      "status": "passed"
+    },
+    {
+      "name": "N06 dropout freezes timing, UNKNOWN and no organ-damage inference",
+      "status": "passed"
+    },
+    {
+      "name": "N06 history slider, return-to-current and refresh recovery",
+      "status": "passed"
+    },
+    {
+      "name": "N06 1920x1080 keyboard/reflow/axe/contrast",
+      "status": "passed"
+    },
+    {
+      "name": "N06 1366x768 keyboard/reflow/axe/contrast",
+      "status": "passed"
+    },
+    {
+      "name": "N06 768x1024 keyboard/reflow/axe/contrast",
+      "status": "passed"
+    },
+    {
+      "name": "N06 390x844 keyboard/reflow/axe/contrast",
+      "status": "passed"
+    },
+    {
+      "name": "N06 reference region/panel latency, sampled memory and bounded active rendering",
+      "status": "passed"
+    },
+    {
+      "name": "N06 context loss/missing asset and retained accessible detail recovery",
+      "status": "passed"
+    },
+    {
+      "name": "N06 native reduced motion, suspend/resume and renderer cleanup",
+      "status": "failed",
+      "reason": "The expression evaluated to a falsy value:\n\n  assert.ok(await c.evaluate('window.__n05.draws')-first<8)\n"
+    }
+  ],
+  "screenshots": [
+    "n06-linked-crew.png",
+    "failure-23.png"
+  ],
+  "console_errors": [],
+  "http_errors": [
+    {
+      "url": "http://127.0.0.1:54904/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    },
+    {
+      "url": "http://127.0.0.1:54904/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    },
+    {
+      "url": "http://127.0.0.1:54904/assets/anatomy/body.glb",
+      "status": 503,
+      "stage": "N06 context loss/missing asset and retained accessible detail recovery"
+    }
+  ],
+  "viewports": [],
+  "caveats": [
+    "No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation.",
+    "Pointer/keyboard/rendered DOM checks and screenshots supplement human visual, text-contrast and assistive-technology review; they do not establish WCAG conformance."
+  ],
+  "native_zoom_preferences": {
+    "factor": 1,
+    "partition_key": "x",
+    "level": 0,
+    "disposable_profile": true
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/156.0.8078.80",
+    "revision": "@fb096c0011f9d50f0a264a9376420cdea9c421e3",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "jsVersion": "15.6.75.27"
+  },
+  "scope": "N06 authorized synthetic anatomy/data linkage only; no clinical or operational AI use",
+  "N05_audits": [
+    {
+      "physical_width": 1920,
+      "physical_height": 1080,
+      "zoom": 1,
+      "layout": {
+        "width": 1920,
+        "dpr": 1,
+        "visual_scale": 1,
+        "css_zoom": "1",
+        "overflow": false
+      },
+      "axe": {
+        "version": "4.11.1",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": [
+              {
+                "target": [
+                  "#n06-heading"
+                ]
+              },
+              {
+                "target": [
+                  "section[aria-labelledby=\"n06-heading\"] > p:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"cardiovascular\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"respiratory-left\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"body\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"skeleton\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"head\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"thorax\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-clear=\"\"]"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-status"
+                ]
+              },
+              {
+                "target": [
+                  ":root"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"respiratory_rate\"] > dt"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"respiratory_rate\"] > dd"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"spo2\"] > dt"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"spo2\"] > dd"
+                ]
+              },
+              {
+                "target": [
+                  ":root"
+                ]
+              },
+              {
+                "target": [
+                  ":root"
+                ]
+              },
+              {
+                "target": [
+                  ":root"
+                ]
+              },
+              {
+                "target": [
+                  ":root"
+                ]
+              },
+              {
+                "target": [
+                  ":root"
+                ]
+              },
+              {
+                "target": [
+                  "details:nth-child(6) > summary"
+                ]
+              },
+              {
+                "target": [
+                  "details:nth-child(7) > summary"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-refresh"
+                ]
+              },
+              {
+                "target": [
+                  "section:nth-child(3) > .panel-heading > h2"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-key > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-key > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(3)"
+                ]
+              },
+              {
+                "target": [
+                  "section:nth-child(4) > .panel-heading > h2"
+                ]
+              },
+              {
+                "target": [
+                  ":root"
+                ]
+              },
+              {
+                "target": [
+                  "span"
+                ]
+              },
+              {
+                "target": [
+                  ":root"
+                ]
+              },
+              {
+                "target": [
+                  "strong"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "heading-order",
+            "nodes": [
+              {
+                "target": [
+                  ":root"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "contrast": [
+        {
+          "target": [
+            "#n06-heading"
+          ],
+          "text": "Anatomy & health linkage",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section[aria-labelledby=\"n06-heading\"] > p:nth-child(2)"
+          ],
+          "text": "SYNTHETIC / RESEARCH DEMONSTRATION · no organ diagnosis",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"cardiovascular\"]"
+          ],
+          "text": "Cardiovascular · heart surfaces",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"respiratory-left\"]"
+          ],
+          "text": "Respiratory · left lung",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"body\"]"
+          ],
+          "text": "Body envelope",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"skeleton\"]"
+          ],
+          "text": "Skeleton · no bone measurement",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"head\"]"
+          ],
+          "text": "Head context · geometry unavailable",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"thorax\"]"
+          ],
+          "text": "Thorax context · conceptual",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-clear=\"\"]"
+          ],
+          "text": "Clear selection",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-status"
+          ],
+          "text": "UNKNOWN · Transport/monitoring unavailable, suspended or Earth view.",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ":root"
+          ],
+          "text": "ASTRA Command · Crew Health Intelligence\n\n\n  Skip to mission workspace\n  ASTRAEARTH-INDEPENDENT CARE",
+          "resolved": true,
+          "minimum_ratio": 20.355393988464613,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            5,
+            5,
+            8
+          ],
+          "background_high": [
+            5,
+            5,
+            8
+          ],
+          "foreground": [
+            255,
+            255,
+            255
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ":root"
+          ],
+          "text": "ASTRA Command · Crew Health Intelligence\n\n\n  Skip to mission workspace\n  ASTRAEARTH-INDEPENDENT CARE",
+          "resolved": true,
+          "minimum_ratio": 20.355393988464613,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            5,
+            5,
+            8
+          ],
+          "background_high": [
+            5,
+            5,
+            8
+          ],
+          "foreground": [
+            255,
+            255,
+            255
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ":root"
+          ],
+          "text": "ASTRA Command · Crew Health Intelligence\n\n\n  Skip to mission workspace\n  ASTRAEARTH-INDEPENDENT CARE",
+          "resolved": true,
+          "minimum_ratio": 20.355393988464613,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            5,
+            5,
+            8
+          ],
+          "background_high": [
+            5,
+            5,
+            8
+          ],
+          "foreground": [
+            255,
+            255,
+            255
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ":root"
+          ],
+          "text": "ASTRA Command · Crew Health Intelligence\n\n\n  Skip to mission workspace\n  ASTRAEARTH-INDEPENDENT CARE",
+          "resolved": true,
+          "minimum_ratio": 20.355393988464613,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            5,
+            5,
+            8
+          ],
+          "background_high": [
+            5,
+            5,
+            8
+          ],
+          "foreground": [
+            255,
+            255,
+            255
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ":root"
+          ],
+          "text": "ASTRA Command · Crew Health Intelligence\n\n\n  Skip to mission workspace\n  ASTRAEARTH-INDEPENDENT CARE",
+          "resolved": true,
+          "minimum_ratio": 20.355393988464613,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            5,
+            5,
+            8
+          ],
+          "background_high": [
+            5,
+            5,
+            8
+          ],
+          "foreground": [
+            255,
+            255,
+            255
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ":root"
+          ],
+          "text": "ASTRA Command · Crew Health Intelligence\n\n\n  Skip to mission workspace\n  ASTRAEARTH-INDEPENDENT CARE",
+          "resolved": true,
+          "minimum_ratio": 20.355393988464613,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            5,
+            5,
+            8
+          ],
+          "background_high": [
+            5,
+            5,
+            8
+          ],
+          "foreground": [
+            255,
+            255,
+            255
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "details:nth-child(6) > summary"
+          ],
+          "text": "Region history and source-time replay",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "details:nth-child(7) > summary"
+          ],
+          "text": "Authorized synthetic waveform archive",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-refresh"
+          ],
+          "text": "Refresh authorized reads",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section:nth-child(3) > .panel-heading > h2"
+          ],
+          "text": "Personal trend",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-key > span:nth-child(1)"
+          ],
+          "text": "Observed · synthetic",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-key > span:nth-child(2)"
+          ],
+          "text": "Personal baseline ±2 SD",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(1)"
+          ],
+          "text": "09:30:00 UTC",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(2)"
+          ],
+          "text": "10:28:00",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(3)"
+          ],
+          "text": "11:13:01",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section:nth-child(4) > .panel-heading > h2"
+          ],
+          "text": "Evidence & review",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ":root"
+          ],
+          "text": "ASTRA Command · Crew Health Intelligence\n\n\n  Skip to mission workspace\n  ASTRAEARTH-INDEPENDENT CARE",
+          "resolved": true,
+          "minimum_ratio": 20.355393988464613,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            5,
+            5,
+            8
+          ],
+          "background_high": [
+            5,
+            5,
+            8
+          ],
+          "foreground": [
+            255,
+            255,
+            255
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ":root"
+          ],
+          "text": "ASTRA Command · Crew Health Intelligence\n\n\n  Skip to mission workspace\n  ASTRAEARTH-INDEPENDENT CARE",
+          "resolved": true,
+          "minimum_ratio": 20.355393988464613,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            5,
+            5,
+            8
+          ],
+          "background_high": [
+            5,
+            5,
+            8
+          ],
+          "foreground": [
+            255,
+            255,
+            255
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "strong"
+          ],
+          "text": "ARES I / MARS TRANSIT",
+          "resolved": true,
+          "minimum_ratio": 15.134670939711457,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            10,
+            10,
+            14
+          ],
+          "background_high": [
+            24,
+            23,
+            29
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        }
+      ],
+      "keyboard": [
+        {
+          "name": "Data-linked schematic",
+          "focus": true,
+          "outline": 2,
+          "left": 413.71875,
+          "right": 551.078125,
+          "top": 379.21875,
+          "bottom": 415.21875
+        },
+        {
+          "name": "Generic adult male reference anatomy. Reference body, skeleton, heart surfaces and lungs. Drag to orbit; arrow keys rotate; plus and minus zoom; Home resets. Not individual astronaut anatomy.",
+          "focus": true,
+          "outline": 2,
+          "left": 263,
+          "right": 897.390625,
+          "top": 396.21875,
+          "bottom": 916.21875
+        },
+        {
+          "name": "Body envelope",
+          "focus": true,
+          "outline": 2,
+          "left": 283,
+          "right": 381.4375,
+          "top": 871.71875,
+          "bottom": 915.71875
+        },
+        {
+          "name": "Skeleton",
+          "focus": true,
+          "outline": 2,
+          "left": 389.4375,
+          "right": 455.125,
+          "top": 871.71875,
+          "bottom": 915.71875
+        },
+        {
+          "name": "Heart surfaces & lungs",
+          "focus": true,
+          "outline": 2,
+          "left": 463.125,
+          "right": 603.203125,
+          "top": 871.71875,
+          "bottom": 915.71875
+        },
+        {
+          "name": "Orbit left",
+          "focus": true,
+          "outline": 2,
+          "left": 283,
+          "right": 350.546875,
+          "top": 871.71875,
+          "bottom": 915.71875
+        },
+        {
+          "name": "Orbit right",
+          "focus": true,
+          "outline": 2,
+          "left": 358.546875,
+          "right": 434.09375,
+          "top": 871.71875,
+          "bottom": 915.71875
+        },
+        {
+          "name": "Tilt up",
+          "focus": true,
+          "outline": 2,
+          "left": 442.09375,
+          "right": 495.40625,
+          "top": 871.71875,
+          "bottom": 915.71875
+        },
+        {
+          "name": "Tilt down",
+          "focus": true,
+          "outline": 2,
+          "left": 503.40625,
+          "right": 572.421875,
+          "top": 871.71875,
+          "bottom": 915.71875
+        },
+        {
+          "name": "Zoom in",
+          "focus": true,
+          "outline": 2,
+          "left": 580.421875,
+          "right": 644.65625,
+          "top": 871.71875,
+          "bottom": 915.71875
+        },
+        {
+          "name": "Zoom out",
+          "focus": true,
+          "outline": 2,
+          "left": 652.65625,
+          "right": 725.078125,
+          "top": 871.71875,
+          "bottom": 915.71875
+        },
+        {
+          "name": "Reset camera",
+          "focus": true,
+          "outline": 2,
+          "left": 733.078125,
+          "right": 823.4375,
+          "top": 871.71875,
+          "bottom": 915.71875
+        },
+        {
+          "name": "Reference source, license & limitations",
+          "focus": true,
+          "outline": 2,
+          "left": 283,
+          "right": 877.390625,
+          "top": 879.5,
+          "bottom": 915.890625
+        },
+        {
+          "name": "Automatic · viewport / performanceOriginal derived detailCoarse reference approximation",
+          "focus": true,
+          "outline": 2,
+          "left": 283,
+          "right": 541,
+          "top": 871.890625,
+          "bottom": 915.890625
+        },
+        {
+          "name": "Reload reference model",
+          "focus": true,
+          "outline": 2,
+          "left": 553,
+          "right": 708.9375,
+          "top": 871.890625,
+          "bottom": 915.890625
+        }
+      ]
+    },
+    {
+      "physical_width": 1366,
+      "physical_height": 768,
+      "zoom": 1,
+      "layout": {
+        "width": 1366,
+        "dpr": 1,
+        "visual_scale": 1,
+        "css_zoom": "1",
+        "overflow": false
+      },
+      "axe": {
+        "version": "4.11.1",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": [
+              {
+                "target": [
+                  "#n06-heading"
+                ]
+              },
+              {
+                "target": [
+                  "section[aria-labelledby=\"n06-heading\"] > p:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"cardiovascular\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"respiratory-left\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"body\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"skeleton\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"head\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"thorax\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-clear=\"\"]"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-status"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"respiratory_rate\"] > dt"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"respiratory_rate\"] > dd"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"spo2\"] > dt"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"spo2\"] > dd"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > h3"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(4)"
+                ]
+              },
+              {
+                "target": [
+                  "p:nth-child(5)"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(6)"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > small"
+                ]
+              },
+              {
+                "target": [
+                  "details:nth-child(6) > summary"
+                ]
+              },
+              {
+                "target": [
+                  "details:nth-child(7) > summary"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-refresh"
+                ]
+              },
+              {
+                "target": [
+                  "section:nth-child(3) > .panel-heading > h2"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-key > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-key > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(3)"
+                ]
+              },
+              {
+                "target": [
+                  "section:nth-child(4) > .panel-heading > h2"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-status > .status.green"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-status > .status.green > span"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-evidence > .empty-state"
+                ]
+              },
+              {
+                "target": [
+                  ".empty-state > strong"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "contrast": [
+        {
+          "target": [
+            "#n06-heading"
+          ],
+          "text": "Anatomy & health linkage",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section[aria-labelledby=\"n06-heading\"] > p:nth-child(2)"
+          ],
+          "text": "SYNTHETIC / RESEARCH DEMONSTRATION · no organ diagnosis",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"cardiovascular\"]"
+          ],
+          "text": "Cardiovascular · heart surfaces",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"respiratory-left\"]"
+          ],
+          "text": "Respiratory · left lung",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"body\"]"
+          ],
+          "text": "Body envelope",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"skeleton\"]"
+          ],
+          "text": "Skeleton · no bone measurement",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"head\"]"
+          ],
+          "text": "Head context · geometry unavailable",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"thorax\"]"
+          ],
+          "text": "Thorax context · conceptual",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-clear=\"\"]"
+          ],
+          "text": "Clear selection",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-status"
+          ],
+          "text": "CREW-03 · Respiratory · right lung · CURRENT SYNTHETIC · AVAILABLE · 2026-11-14T11:13:01.000Z",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(1)"
+          ],
+          "text": "General RR/SpO₂ context, not a lung-specific measurement or disease localization.",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"respiratory_rate\"] > dt"
+          ],
+          "text": "respiratory_rate [/min]",
+          "resolved": true,
+          "minimum_ratio": 12.269944009338495,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            221,
+            213,
+            245
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"respiratory_rate\"] > dd"
+          ],
+          "text": "13.68 · goodSource 2026-11-14T11:13:01.000Z · known 2026-11-14T11:13:01.000Zsimulator · SIM-CREW-03 ",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"spo2\"] > dt"
+          ],
+          "text": "spo2 [%]",
+          "resolved": true,
+          "minimum_ratio": 12.269944009338495,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            221,
+            213,
+            245
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"spo2\"] > dd"
+          ],
+          "text": "98.27 · goodSource 2026-11-14T11:13:01.000Z · known 2026-11-14T11:13:01.000Zsimulator · SIM-CREW-03 ",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > h3"
+          ],
+          "text": "N02 monitoring · read only",
+          "resolved": true,
+          "minimum_ratio": 13.410802472956737,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            230,
+            224,
+            241
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(4)"
+          ],
+          "text": "green · no diagnosis or new alert",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "p:nth-child(5)"
+          ],
+          "text": "No mapped persisted event known by cutoff. This is not an all-clear.",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(6)"
+          ],
+          "text": "N09: AVAILABLE · 198b12f4-bbae-457a-a3e8-0ea631c82c6a · source 2026-11-14T11:07:01.000Z · elapsed 0s",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > small"
+          ],
+          "text": "Mapping astra.n06.link.v1 · astra.telemetry.v1 / N02 read only. Source and knowledge cutoff 2026-11-",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "details:nth-child(6) > summary"
+          ],
+          "text": "Region history and source-time replay",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "details:nth-child(7) > summary"
+          ],
+          "text": "Authorized synthetic waveform archive",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-refresh"
+          ],
+          "text": "Refresh authorized reads",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section:nth-child(3) > .panel-heading > h2"
+          ],
+          "text": "Personal trend",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-key > span:nth-child(1)"
+          ],
+          "text": "Observed · synthetic",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-key > span:nth-child(2)"
+          ],
+          "text": "Personal baseline ±2 SD",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(1)"
+          ],
+          "text": "09:30:00 UTC",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(2)"
+          ],
+          "text": "10:28:00",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(3)"
+          ],
+          "text": "11:13:01",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section:nth-child(4) > .panel-heading > h2"
+          ],
+          "text": "Evidence & review",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-status > .status.green"
+          ],
+          "text": "●Nominal",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-status > .status.green > span"
+          ],
+          "text": "●",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-evidence > .empty-state"
+          ],
+          "text": "No persistent review eventReadings are assessed against this crew member’s synthetic personal baseli",
+          "resolved": true,
+          "minimum_ratio": 5.30745762245066,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            127,
+            144,
+            167
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".empty-state > strong"
+          ],
+          "text": "No persistent review event",
+          "resolved": true,
+          "minimum_ratio": 10.07607534414651,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            185,
+            199,
+            218
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        }
+      ],
+      "keyboard": [
+        {
+          "name": "Data-linked schematic",
+          "focus": true,
+          "outline": 2,
+          "left": 413.71875,
+          "right": 551.078125,
+          "top": 43.25,
+          "bottom": 79.25
+        },
+        {
+          "name": "Generic adult male reference anatomy. Reference body, skeleton, heart surfaces and lungs. Drag to orbit; arrow keys rotate; plus and minus zoom; Home resets. Not individual astronaut anatomy.",
+          "focus": true,
+          "outline": 2,
+          "left": 263,
+          "right": 675.796875,
+          "top": 84.25,
+          "bottom": 604.25
+        },
+        {
+          "name": "Body envelope",
+          "focus": true,
+          "outline": 2,
+          "left": 283,
+          "right": 381.4375,
+          "top": 559.75,
+          "bottom": 603.75
+        },
+        {
+          "name": "Skeleton",
+          "focus": true,
+          "outline": 2,
+          "left": 389.4375,
+          "right": 455.125,
+          "top": 559.75,
+          "bottom": 603.75
+        },
+        {
+          "name": "Heart surfaces & lungs",
+          "focus": true,
+          "outline": 2,
+          "left": 463.125,
+          "right": 603.203125,
+          "top": 559.75,
+          "bottom": 603.75
+        },
+        {
+          "name": "Orbit left",
+          "focus": true,
+          "outline": 2,
+          "left": 283,
+          "right": 350.546875,
+          "top": 559.75,
+          "bottom": 603.75
+        },
+        {
+          "name": "Orbit right",
+          "focus": true,
+          "outline": 2,
+          "left": 358.546875,
+          "right": 434.09375,
+          "top": 559.75,
+          "bottom": 603.75
+        },
+        {
+          "name": "Tilt up",
+          "focus": true,
+          "outline": 2,
+          "left": 442.09375,
+          "right": 495.40625,
+          "top": 559.75,
+          "bottom": 603.75
+        },
+        {
+          "name": "Tilt down",
+          "focus": true,
+          "outline": 2,
+          "left": 503.40625,
+          "right": 572.421875,
+          "top": 559.75,
+          "bottom": 603.75
+        },
+        {
+          "name": "Zoom in",
+          "focus": true,
+          "outline": 2,
+          "left": 580.421875,
+          "right": 644.65625,
+          "top": 559.75,
+          "bottom": 603.75
+        },
+        {
+          "name": "Zoom out",
+          "focus": true,
+          "outline": 2,
+          "left": 283,
+          "right": 355.421875,
+          "top": 559.75,
+          "bottom": 603.75
+        },
+        {
+          "name": "Reset camera",
+          "focus": true,
+          "outline": 2,
+          "left": 363.421875,
+          "right": 453.78125,
+          "top": 559.75,
+          "bottom": 603.75
+        },
+        {
+          "name": "Reference source, license & limitations",
+          "focus": true,
+          "outline": 2,
+          "left": 283,
+          "right": 655.796875,
+          "top": 291.3125,
+          "bottom": 327.703125
+        },
+        {
+          "name": "Automatic · viewport / performanceOriginal derived detailCoarse reference approximation",
+          "focus": true,
+          "outline": 2,
+          "left": 283,
+          "right": 541,
+          "top": 365.703125,
+          "bottom": 409.703125
+        },
+        {
+          "name": "Reload reference model",
+          "focus": true,
+          "outline": 2,
+          "left": 283,
+          "right": 438.9375,
+          "top": 421.703125,
+          "bottom": 465.703125
+        }
+      ]
+    },
+    {
+      "physical_width": 768,
+      "physical_height": 1024,
+      "zoom": 1,
+      "layout": {
+        "width": 768,
+        "dpr": 1,
+        "visual_scale": 1,
+        "css_zoom": "1",
+        "overflow": false
+      },
+      "axe": {
+        "version": "4.11.1",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": [
+              {
+                "target": [
+                  "#n06-heading"
+                ]
+              },
+              {
+                "target": [
+                  "section[aria-labelledby=\"n06-heading\"] > p:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"cardiovascular\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"respiratory-left\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"body\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"skeleton\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"head\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"thorax\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-clear=\"\"]"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-status"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"respiratory_rate\"] > dt"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"respiratory_rate\"] > dd"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"spo2\"] > dt"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"spo2\"] > dd"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > h3"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(4)"
+                ]
+              },
+              {
+                "target": [
+                  "p:nth-child(5)"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(6)"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > small"
+                ]
+              },
+              {
+                "target": [
+                  "details:nth-child(6) > summary"
+                ]
+              },
+              {
+                "target": [
+                  "details:nth-child(7) > summary"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-refresh"
+                ]
+              },
+              {
+                "target": [
+                  "section:nth-child(3) > .panel-heading > h2"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-key > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-key > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(3)"
+                ]
+              },
+              {
+                "target": [
+                  "section:nth-child(4) > .panel-heading > h2"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-status > .status.green"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-status > .status.green > span"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-evidence > .empty-state"
+                ]
+              },
+              {
+                "target": [
+                  ".empty-state > strong"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "contrast": [
+        {
+          "target": [
+            "#n06-heading"
+          ],
+          "text": "Anatomy & health linkage",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section[aria-labelledby=\"n06-heading\"] > p:nth-child(2)"
+          ],
+          "text": "SYNTHETIC / RESEARCH DEMONSTRATION · no organ diagnosis",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"cardiovascular\"]"
+          ],
+          "text": "Cardiovascular · heart surfaces",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"respiratory-left\"]"
+          ],
+          "text": "Respiratory · left lung",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"body\"]"
+          ],
+          "text": "Body envelope",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"skeleton\"]"
+          ],
+          "text": "Skeleton · no bone measurement",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"head\"]"
+          ],
+          "text": "Head context · geometry unavailable",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"thorax\"]"
+          ],
+          "text": "Thorax context · conceptual",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-clear=\"\"]"
+          ],
+          "text": "Clear selection",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-status"
+          ],
+          "text": "CREW-03 · Respiratory · right lung · CURRENT SYNTHETIC · AVAILABLE · 2026-11-14T11:13:01.000Z",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(1)"
+          ],
+          "text": "General RR/SpO₂ context, not a lung-specific measurement or disease localization.",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"respiratory_rate\"] > dt"
+          ],
+          "text": "respiratory_rate [/min]",
+          "resolved": true,
+          "minimum_ratio": 12.269944009338495,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            221,
+            213,
+            245
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"respiratory_rate\"] > dd"
+          ],
+          "text": "13.68 · goodSource 2026-11-14T11:13:01.000Z · known 2026-11-14T11:13:01.000Zsimulator · SIM-CREW-03 ",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"spo2\"] > dt"
+          ],
+          "text": "spo2 [%]",
+          "resolved": true,
+          "minimum_ratio": 12.269944009338495,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            221,
+            213,
+            245
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"spo2\"] > dd"
+          ],
+          "text": "98.27 · goodSource 2026-11-14T11:13:01.000Z · known 2026-11-14T11:13:01.000Zsimulator · SIM-CREW-03 ",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > h3"
+          ],
+          "text": "N02 monitoring · read only",
+          "resolved": true,
+          "minimum_ratio": 13.410802472956737,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            230,
+            224,
+            241
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(4)"
+          ],
+          "text": "green · no diagnosis or new alert",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "p:nth-child(5)"
+          ],
+          "text": "No mapped persisted event known by cutoff. This is not an all-clear.",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(6)"
+          ],
+          "text": "N09: AVAILABLE · 198b12f4-bbae-457a-a3e8-0ea631c82c6a · source 2026-11-14T11:07:01.000Z · elapsed 0s",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > small"
+          ],
+          "text": "Mapping astra.n06.link.v1 · astra.telemetry.v1 / N02 read only. Source and knowledge cutoff 2026-11-",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "details:nth-child(6) > summary"
+          ],
+          "text": "Region history and source-time replay",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "details:nth-child(7) > summary"
+          ],
+          "text": "Authorized synthetic waveform archive",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-refresh"
+          ],
+          "text": "Refresh authorized reads",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section:nth-child(3) > .panel-heading > h2"
+          ],
+          "text": "Personal trend",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-key > span:nth-child(1)"
+          ],
+          "text": "Observed · synthetic",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-key > span:nth-child(2)"
+          ],
+          "text": "Personal baseline ±2 SD",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(1)"
+          ],
+          "text": "09:30:00 UTC",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(2)"
+          ],
+          "text": "10:28:00",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(3)"
+          ],
+          "text": "11:13:01",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section:nth-child(4) > .panel-heading > h2"
+          ],
+          "text": "Evidence & review",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-status > .status.green"
+          ],
+          "text": "●Nominal",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-status > .status.green > span"
+          ],
+          "text": "●",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-evidence > .empty-state"
+          ],
+          "text": "No persistent review eventReadings are assessed against this crew member’s synthetic personal baseli",
+          "resolved": true,
+          "minimum_ratio": 5.30745762245066,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            127,
+            144,
+            167
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".empty-state > strong"
+          ],
+          "text": "No persistent review event",
+          "resolved": true,
+          "minimum_ratio": 10.07607534414651,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            185,
+            199,
+            218
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        }
+      ],
+      "keyboard": [
+        {
+          "name": "Data-linked schematic",
+          "focus": true,
+          "outline": 2,
+          "left": 236,
+          "right": 373.359375,
+          "top": 456.640625,
+          "bottom": 492.640625
+        },
+        {
+          "name": "Generic adult male reference anatomy. Reference body, skeleton, heart surfaces and lungs. Drag to orbit; arrow keys rotate; plus and minus zoom; Home resets. Not individual astronaut anatomy.",
+          "focus": true,
+          "outline": 2,
+          "left": 215,
+          "right": 473,
+          "top": 324.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Body envelope",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 333.4375,
+          "top": 800.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Skeleton",
+          "focus": true,
+          "outline": 2,
+          "left": 341.4375,
+          "right": 407.125,
+          "top": 800.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Heart surfaces & lungs",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 375.078125,
+          "top": 800.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Orbit left",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 302.546875,
+          "top": 800.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Orbit right",
+          "focus": true,
+          "outline": 2,
+          "left": 310.546875,
+          "right": 386.09375,
+          "top": 800.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Tilt up",
+          "focus": true,
+          "outline": 2,
+          "left": 394.09375,
+          "right": 447.40625,
+          "top": 800.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Tilt down",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 304.015625,
+          "top": 800.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Zoom in",
+          "focus": true,
+          "outline": 2,
+          "left": 312.015625,
+          "right": 376.25,
+          "top": 800.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Zoom out",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 307.421875,
+          "top": 800.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Reset camera",
+          "focus": true,
+          "outline": 2,
+          "left": 315.421875,
+          "right": 405.78125,
+          "top": 800.640625,
+          "bottom": 844.640625
+        },
+        {
+          "name": "Reference source, license & limitations",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 453,
+          "top": 411.984375,
+          "bottom": 448.375
+        },
+        {
+          "name": "Automatic · viewport / performanceOriginal derived detailCoarse reference approximation",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 453,
+          "top": 486.375,
+          "bottom": 530.375
+        },
+        {
+          "name": "Reload reference model",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 390.9375,
+          "top": 542.375,
+          "bottom": 586.375
+        }
+      ]
+    },
+    {
+      "physical_width": 390,
+      "physical_height": 844,
+      "zoom": 1,
+      "layout": {
+        "width": 390,
+        "dpr": 1,
+        "visual_scale": 1,
+        "css_zoom": "1",
+        "overflow": false
+      },
+      "axe": {
+        "version": "4.11.1",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": [
+              {
+                "target": [
+                  "#n06-heading"
+                ]
+              },
+              {
+                "target": [
+                  "section[aria-labelledby=\"n06-heading\"] > p:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"cardiovascular\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"respiratory-left\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"body\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"skeleton\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"head\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-region=\"thorax\"]"
+                ]
+              },
+              {
+                "target": [
+                  "button[data-n06-clear=\"\"]"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-status"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"respiratory_rate\"] > dt"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"respiratory_rate\"] > dd"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"spo2\"] > dt"
+                ]
+              },
+              {
+                "target": [
+                  "div[data-n06-metric=\"spo2\"] > dd"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > h3"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(4)"
+                ]
+              },
+              {
+                "target": [
+                  "p:nth-child(5)"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > p:nth-child(6)"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-detail > small"
+                ]
+              },
+              {
+                "target": [
+                  "details:nth-child(6) > summary"
+                ]
+              },
+              {
+                "target": [
+                  "details:nth-child(7) > summary"
+                ]
+              },
+              {
+                "target": [
+                  "#n06-refresh"
+                ]
+              },
+              {
+                "target": [
+                  "section:nth-child(3) > .panel-heading > h2"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-key > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-key > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(1)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(2)"
+                ]
+              },
+              {
+                "target": [
+                  ".chart-axis > span:nth-child(3)"
+                ]
+              },
+              {
+                "target": [
+                  "section:nth-child(4) > .panel-heading > h2"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-status > .status.green"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-status > .status.green > span"
+                ]
+              },
+              {
+                "target": [
+                  "#crew-evidence > .empty-state"
+                ]
+              },
+              {
+                "target": [
+                  ".empty-state > strong"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "contrast": [
+        {
+          "target": [
+            "#n06-heading"
+          ],
+          "text": "Anatomy & health linkage",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section[aria-labelledby=\"n06-heading\"] > p:nth-child(2)"
+          ],
+          "text": "SYNTHETIC / RESEARCH DEMONSTRATION · no organ diagnosis",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"cardiovascular\"]"
+          ],
+          "text": "Cardiovascular · heart surfaces",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"respiratory-left\"]"
+          ],
+          "text": "Respiratory · left lung",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"body\"]"
+          ],
+          "text": "Body envelope",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"skeleton\"]"
+          ],
+          "text": "Skeleton · no bone measurement",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"head\"]"
+          ],
+          "text": "Head context · geometry unavailable",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-region=\"thorax\"]"
+          ],
+          "text": "Thorax context · conceptual",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "button[data-n06-clear=\"\"]"
+          ],
+          "text": "Clear selection",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-status"
+          ],
+          "text": "CREW-03 · Respiratory · right lung · CURRENT SYNTHETIC · AVAILABLE · 2026-11-14T11:13:01.000Z",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(1)"
+          ],
+          "text": "General RR/SpO₂ context, not a lung-specific measurement or disease localization.",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"respiratory_rate\"] > dt"
+          ],
+          "text": "respiratory_rate [/min]",
+          "resolved": true,
+          "minimum_ratio": 12.269944009338495,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            221,
+            213,
+            245
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"respiratory_rate\"] > dd"
+          ],
+          "text": "13.68 · goodSource 2026-11-14T11:13:01.000Z · known 2026-11-14T11:13:01.000Zsimulator · SIM-CREW-03 ",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"spo2\"] > dt"
+          ],
+          "text": "spo2 [%]",
+          "resolved": true,
+          "minimum_ratio": 12.269944009338495,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            221,
+            213,
+            245
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "div[data-n06-metric=\"spo2\"] > dd"
+          ],
+          "text": "98.27 · goodSource 2026-11-14T11:13:01.000Z · known 2026-11-14T11:13:01.000Zsimulator · SIM-CREW-03 ",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > h3"
+          ],
+          "text": "N02 monitoring · read only",
+          "resolved": true,
+          "minimum_ratio": 13.410802472956737,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            230,
+            224,
+            241
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(4)"
+          ],
+          "text": "green · no diagnosis or new alert",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "p:nth-child(5)"
+          ],
+          "text": "No mapped persisted event known by cutoff. This is not an all-clear.",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > p:nth-child(6)"
+          ],
+          "text": "N09: AVAILABLE · 198b12f4-bbae-457a-a3e8-0ea631c82c6a · source 2026-11-14T11:07:01.000Z · elapsed 0s",
+          "resolved": true,
+          "minimum_ratio": 13.476580758926849,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            228,
+            226,
+            235
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-detail > small"
+          ],
+          "text": "Mapping astra.n06.link.v1 · astra.telemetry.v1 / N02 read only. Source and knowledge cutoff 2026-11-",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "details:nth-child(6) > summary"
+          ],
+          "text": "Region history and source-time replay",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "details:nth-child(7) > summary"
+          ],
+          "text": "Authorized synthetic waveform archive",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#n06-refresh"
+          ],
+          "text": "Refresh authorized reads",
+          "resolved": true,
+          "minimum_ratio": 14.33066249770733,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            19.38,
+            19.38,
+            24.330000000000002
+          ],
+          "background_high": [
+            29.28,
+            28.29,
+            34.23
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section:nth-child(3) > .panel-heading > h2"
+          ],
+          "text": "Personal trend",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-key > span:nth-child(1)"
+          ],
+          "text": "Observed · synthetic",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-key > span:nth-child(2)"
+          ],
+          "text": "Personal baseline ±2 SD",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(1)"
+          ],
+          "text": "09:30:00 UTC",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(2)"
+          ],
+          "text": "10:28:00",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".chart-axis > span:nth-child(3)"
+          ],
+          "text": "11:13:01",
+          "resolved": true,
+          "minimum_ratio": 8.003130887864783,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            178,
+            175,
+            185
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "section:nth-child(4) > .panel-heading > h2"
+          ],
+          "text": "Evidence & review",
+          "resolved": true,
+          "minimum_ratio": 14.685334396381492,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            240,
+            236,
+            230
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-status > .status.green"
+          ],
+          "text": "●Nominal",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-status > .status.green > span"
+          ],
+          "text": "●",
+          "resolved": true,
+          "minimum_ratio": 8.570815388869628,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            84,
+            201,
+            183
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            "#crew-evidence > .empty-state"
+          ],
+          "text": "No persistent review eventReadings are assessed against this crew member’s synthetic personal baseli",
+          "resolved": true,
+          "minimum_ratio": 5.30745762245066,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            127,
+            144,
+            167
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        },
+        {
+          "target": [
+            ".empty-state > strong"
+          ],
+          "text": "No persistent review event",
+          "resolved": true,
+          "minimum_ratio": 10.07607534414651,
+          "required": 4.5,
+          "pass": true,
+          "background_low": [
+            17,
+            17,
+            22
+          ],
+          "background_high": [
+            27,
+            26,
+            32
+          ],
+          "foreground": [
+            185,
+            199,
+            218
+          ],
+          "method": "Conservative computed CSS gradient-stop/ancestor bounds; no rendered-pixel/physical-display certification"
+        }
+      ],
+      "keyboard": [
+        {
+          "name": "Data-linked schematic",
+          "focus": true,
+          "outline": 2,
+          "left": 167.71875,
+          "right": 305.078125,
+          "top": 329.75,
+          "bottom": 365.75
+        },
+        {
+          "name": "Generic adult male reference anatomy. Reference body, skeleton, heart surfaces and lungs. Drag to orbit; arrow keys rotate; plus and minus zoom; Home resets. Not individual astronaut anatomy.",
+          "focus": true,
+          "outline": 2,
+          "left": 17,
+          "right": 358,
+          "top": 159.75,
+          "bottom": 679.75
+        },
+        {
+          "name": "Body envelope",
+          "focus": true,
+          "outline": 2,
+          "left": 37,
+          "right": 135.4375,
+          "top": 636.25,
+          "bottom": 680.25
+        },
+        {
+          "name": "Skeleton",
+          "focus": true,
+          "outline": 2,
+          "left": 143.4375,
+          "right": 209.125,
+          "top": 636.25,
+          "bottom": 680.25
+        },
+        {
+          "name": "Heart surfaces & lungs",
+          "focus": true,
+          "outline": 2,
+          "left": 37,
+          "right": 177.078125,
+          "top": 636.25,
+          "bottom": 680.25
+        },
+        {
+          "name": "Orbit left",
+          "focus": true,
+          "outline": 2,
+          "left": 37,
+          "right": 104.546875,
+          "top": 636.25,
+          "bottom": 680.25
+        },
+        {
+          "name": "Orbit right",
+          "focus": true,
+          "outline": 2,
+          "left": 112.546875,
+          "right": 188.09375,
+          "top": 636.25,
+          "bottom": 680.25
+        },
+        {
+          "name": "Tilt up",
+          "focus": true,
+          "outline": 2,
+          "left": 196.09375,
+          "right": 249.40625,
+          "top": 636.25,
+          "bottom": 680.25
+        },
+        {
+          "name": "Tilt down",
+          "focus": true,
+          "outline": 2,
+          "left": 257.40625,
+          "right": 326.421875,
+          "top": 636.25,
+          "bottom": 680.25
+        },
+        {
+          "name": "Zoom in",
+          "focus": true,
+          "outline": 2,
+          "left": 37,
+          "right": 101.234375,
+          "top": 636.25,
+          "bottom": 680.25
+        },
+        {
+          "name": "Zoom out",
+          "focus": true,
+          "outline": 2,
+          "left": 109.234375,
+          "right": 181.65625,
+          "top": 636.25,
+          "bottom": 680.25
+        },
+        {
+          "name": "Reset camera",
+          "focus": true,
+          "outline": 2,
+          "left": 189.65625,
+          "right": 280.015625,
+          "top": 636.25,
+          "bottom": 680.25
+        },
+        {
+          "name": "Reference source, license & limitations",
+          "focus": true,
+          "outline": 2,
+          "left": 37,
+          "right": 338,
+          "top": 329.8125,
+          "bottom": 366.203125
+        },
+        {
+          "name": "Automatic · viewport / performanceOriginal derived detailCoarse reference approximation",
+          "focus": true,
+          "outline": 2,
+          "left": 37,
+          "right": 295,
+          "top": 404.203125,
+          "bottom": 448.203125
+        },
+        {
+          "name": "Reload reference model",
+          "focus": true,
+          "outline": 2,
+          "left": 37,
+          "right": 192.9375,
+          "top": 460.203125,
+          "bottom": 504.203125
+        }
+      ]
+    }
+  ],
+  "N06_native_pick": {
+    "projected_center": {
+      "x": 586.079044488437,
+      "y": 374.51578310360475
+    },
+    "cardiovascular_picked": true
+  },
+  "N06_N02_evidence": {
+    "event_id": "RISK-3d96b933",
+    "acknowledgement_fixture": true,
+    "independent_human_review_claimed": false,
+    "historical_status": "open"
+  },
+  "N06_waveform": {
+    "source": "SYN-n06-browser",
+    "hash": "a9f7e9dde6e168d2950f22c0d76b89cee46b79e99bcd3be201bf3c8e9f4051a7",
+    "known_at": "2026-11-14T11:06:01.000Z"
+  },
+  "N06_performance": {
+    "selection_end_to_end_ms": [
+      471.34610000000976,
+      535.9856,
+      564.1189999999915,
+      549.6465000000026,
+      535.5488000000041,
+      1217.8826000000117,
+      581.9774000000034,
+      565.3074999999953,
+      533.1162999999942,
+      615.8163999999961,
+      535.842599999989,
+      565.0146999999997
+    ],
+    "selection_p95_ms": 1217.8826000000117,
+    "active_reference_duration_ms": 61689.67640000001,
+    "raf_samples": 3595,
+    "raf_p95_ms": 17.099999999998545,
+    "max_observed_JS_heap_bytes": 52368861,
+    "samples": [
+      {
+        "heap": 42828937,
+        "draws": 802
+      },
+      {
+        "heap": 44299712,
+        "draws": 862
+      },
+      {
+        "heap": 45621273,
+        "draws": 917
+      },
+      {
+        "heap": 47039593,
+        "draws": 972
+      },
+      {
+        "heap": 50952620,
+        "draws": 1027
+      },
+      {
+        "heap": 52368861,
+        "draws": 1082
+      },
+      {
+        "heap": 38110863,
+        "draws": 1137
+      },
+      {
+        "heap": 38802301,
+        "draws": 1192
+      },
+      {
+        "heap": 38071954,
+        "draws": 1247
+      },
+      {
+        "heap": 39589129,
+        "draws": 1302
+      },
+      {
+        "heap": 41018930,
+        "draws": 1357
+      },
+      {
+        "heap": 42366423,
+        "draws": 1412
+      },
+      {
+        "heap": 41162396,
+        "draws": 1462
+      },
+      {
+        "heap": 42567852,
+        "draws": 1517
+      },
+      {
+        "heap": 44023013,
+        "draws": 1572
+      },
+      {
+        "heap": 39038203,
+        "draws": 1627
+      },
+      {
+        "heap": 44604870,
+        "draws": 1682
+      },
+      {
+        "heap": 45970756,
+        "draws": 1737
+      },
+      {
+        "heap": 38783899,
+        "draws": 1792
+      },
+      {
+        "heap": 40198607,
+        "draws": 1847
+      },
+      {
+        "heap": 45761343,
+        "draws": 1902
+      },
+      {
+        "heap": 47155631,
+        "draws": 1957
+      },
+      {
+        "heap": 39752590,
+        "draws": 2012
+      },
+      {
+        "heap": 41174932,
+        "draws": 2067
+      },
+      {
+        "heap": 46747318,
+        "draws": 2122
+      },
+      {
+        "heap": 48129126,
+        "draws": 2177
+      },
+      {
+        "heap": 40075553,
+        "draws": 2232
+      },
+      {
+        "heap": 41514164,
+        "draws": 2287
+      },
+      {
+        "heap": 47135056,
+        "draws": 2337
+      },
+      {
+        "heap": 48537628,
+        "draws": 2392
+      },
+      {
+        "heap": 40415317,
+        "draws": 2447
+      },
+      {
+        "heap": 41878931,
+        "draws": 2502
+      },
+      {
+        "heap": 47575687,
+        "draws": 2557
+      },
+      {
+        "heap": 49075923,
+        "draws": 2612
+      },
+      {
+        "heap": 40653676,
+        "draws": 2667
+      },
+      {
+        "heap": 42228413,
+        "draws": 2722
+      },
+      {
+        "heap": 46455700,
+        "draws": 2777
+      },
+      {
+        "heap": 47960270,
+        "draws": 2832
+      },
+      {
+        "heap": 40985635,
+        "draws": 2887
+      },
+      {
+        "heap": 42581401,
+        "draws": 2942
+      },
+      {
+        "heap": 46851500,
+        "draws": 2997
+      },
+      {
+        "heap": 48369589,
+        "draws": 3052
+      },
+      {
+        "heap": 41319318,
+        "draws": 3107
+      },
+      {
+        "heap": 42916123,
+        "draws": 3162
+      },
+      {
+        "heap": 47239697,
+        "draws": 3217
+      },
+      {
+        "heap": 48781730,
+        "draws": 3272
+      },
+      {
+        "heap": 41651250,
+        "draws": 3327
+      },
+      {
+        "heap": 43256763,
+        "draws": 3382
+      },
+      {
+        "heap": 47635066,
+        "draws": 3437
+      },
+      {
+        "heap": 41322675,
+        "draws": 3492
+      },
+      {
+        "heap": 42818200,
+        "draws": 3547
+      },
+      {
+        "heap": 44398874,
+        "draws": 3602
+      },
+      {
+        "heap": 48774961,
+        "draws": 3657
+      },
+      {
+        "heap": 42237081,
+        "draws": 3712
+      },
+      {
+        "heap": 43858275,
+        "draws": 3767
+      },
+      {
+        "heap": 45322656,
+        "draws": 3822
+      },
+      {
+        "heap": 44932064,
+        "draws": 3877
+      },
+      {
+        "heap": 46459298,
+        "draws": 3932
+      },
+      {
+        "heap": 48010274,
+        "draws": 3987
+      }
+    ],
+    "scope": "Reference installed Chrome; rAF and JS heap are not physical presented FPS or hard peak/GPU guarantees"
+  },
+  "reason": "The expression evaluated to a falsy value:\n\n  assert.ok(await c.evaluate('window.__n05.draws')-first<8)\n",
+  "N05_temporary_SQLite_post_checkpoint_bytes": 28635136,
+  "N05_cleanup": {
+    "browser_exited": true,
+    "profile_removed": true,
+    "database_directory_removed": true,
+    "Node_memory": {
+      "rss": 202940416,
+      "heapTotal": 159948800,
+      "heapUsed": 51019488,
+      "external": 5882121,
+      "arrayBuffers": 1305914
+    },
+    "N16_designated_starts": 0,
+    "Qwen_executions": 0,
+    "model_training": 0,
+    "database_snapshots": 0
+  },
+  "finished_at": "2026-11-04T21:13:20.222Z"
+}

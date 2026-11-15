@@ -1,0 +1,40 @@
+{
+  "version": "nominal-synthetic-calibration-v1",
+  "status": "frozen",
+  "generator_version": "1.0.0",
+  "method": "split-conformal absolute-error quantile",
+  "horizon_minutes": 30,
+  "target_coverage": 0.9,
+  "samples_per_metric": 120,
+  "seeds": [
+    101,
+    211,
+    307,
+    419,
+    521,
+    631,
+    739,
+    853
+  ],
+  "crew_indices": [
+    0,
+    1,
+    3,
+    4,
+    5
+  ],
+  "held_out_crew": "CREW-03",
+  "window_starts": [
+    0,
+    180,
+    360
+  ],
+  "observations_per_history": 60,
+  "cadence_seconds": 30,
+  "quantiles": {
+    "heart_rate": 3.760982772992463,
+    "hrv": 5.429661757895737,
+    "sleep_duration": 0.5752160785403326
+  },
+  "limitations": "Calibration uses only nominal synthetic profiles. No clinical validity, drift coverage or exchangeability guarantee is asserted. Do not retrain on the frozen evaluation seeds."
+}

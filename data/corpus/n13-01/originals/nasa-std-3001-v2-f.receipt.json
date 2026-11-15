@@ -1,0 +1,18 @@
+{
+  "schema_version": "astra.publication-receipt.v1",
+  "id": "nasa-std-3001-v2-f",
+  "url": "https://standards.nasa.gov/system/files/tmp/NASA-STD-3001%20Vol%202%20Rev%20F.pdf",
+  "filename": "NASA-STD-3001 Vol 2 Rev F.pdf",
+  "bytes": 6753988,
+  "sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f",
+  "started_at": "2026-10-24T08:11:20.189Z",
+  "completed_at": "2026-10-24T08:11:23.153Z",
+  "network_ms": 2963,
+  "http_status": 200,
+  "requests": 1,
+  "redirects": 0,
+  "response_complete": true,
+  "publisher_checksum": null,
+  "checksum_note": "SHA-256 computed from complete local original; no independent publisher checksum supplied.",
+  "etag": null
+}

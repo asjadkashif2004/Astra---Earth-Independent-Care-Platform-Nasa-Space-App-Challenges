@@ -1,0 +1,59 @@
+{
+  "records": [
+    {
+      "name": "rpc-rce-fix",
+      "url": "https://api.github.com/repos/ggml-org/llama.cpp/commits/39bf0d3c6a95803e0f41aaba069ffbee26721042",
+      "started_utc": "2026-10-25T16:44:16.626386+00:00",
+      "complete": true,
+      "path": "rpc-rce-fix.txt",
+      "bytes": 5435,
+      "sha256": "7dd017aa87412b7b8e71668467173331397c40e0b021148a7e5cff2fbcae77a2",
+      "mime": "application/json",
+      "elapsed_seconds": 0.8411684000020614,
+      "final_url": "https://api.github.com/repos/ggml-org/llama.cpp/commits/39bf0d3c6a95803e0f41aaba069ffbee26721042",
+      "link": null,
+      "rate_remaining": "25"
+    },
+    {
+      "name": "rpc-rce-fix-ancestry",
+      "url": "https://api.github.com/repos/ggml-org/llama.cpp/compare/39bf0d3c6a95803e0f41aaba069ffbee26721042...620d2225cc436ab0b001e3200e590e3b286ef9ab?per_page=1&page=2",
+      "started_utc": "2026-10-25T16:44:17.478769+00:00",
+      "complete": true,
+      "path": "rpc-rce-fix-ancestry.txt",
+      "bytes": 14000,
+      "sha256": "7fbab5ca0d5c54fad85ea67d632388b2e38e1f8862cfe6a0be3a6ebdbba32bd6",
+      "mime": "application/json",
+      "elapsed_seconds": 1.327510828999948,
+      "final_url": "https://api.github.com/repos/ggml-org/llama.cpp/compare/39bf0d3c6a95803e0f41aaba069ffbee26721042...620d2225cc436ab0b001e3200e590e3b286ef9ab?per_page=1&page=2",
+      "link": "<https://api.github.com/repositories/612354784/compare/39bf0d3c6a95803e0f41aaba069ffbee26721042...620d2225cc436ab0b001e3200e590e3b286ef9ab?per_page=1&page=3177>; rel=\"last\", <https://api.github.com/repositories/612354784/compare/39bf0d3c6a95803e0f41aaba069ffbee26721042...620d2225cc436ab0b001e3200e590e3b286ef9ab?per_page=1&page=3>; rel=\"next\", <https://api.github.com/repositories/612354784/compare/39bf0d3c6a95803e0f41aaba069ffbee26721042...620d2225cc436ab0b001e3200e590e3b286ef9ab?per_page=1&page=1>; rel=\"first\", <https://api.github.com/repositories/612354784/compare/39bf0d3c6a95803e0f41aaba069ffbee26721042...620d2225cc436ab0b001e3200e590e3b286ef9ab?per_page=1&page=1>; rel=\"prev\"",
+      "rate_remaining": "24"
+    },
+    {
+      "name": "gguf-disclosure-period-history",
+      "url": "https://api.github.com/repos/ggml-org/llama.cpp/commits?sha=620d2225cc436ab0b001e3200e590e3b286ef9ab&path=ggml.c&since=2024-04-01T00%3A00%3A00Z&until=2024-05-15T00%3A00%3A00Z&per_page=30",
+      "started_utc": "2026-10-25T16:44:18.814379+00:00",
+      "complete": true,
+      "path": "gguf-disclosure-period-history.txt",
+      "bytes": 113988,
+      "sha256": "ebc6327fa4d3031ad5c3b784dd97664f0426fe013b81402e2f03f546d743eecc",
+      "mime": "application/json",
+      "elapsed_seconds": 1.2239769080006226,
+      "final_url": "https://api.github.com/repos/ggml-org/llama.cpp/commits?sha=620d2225cc436ab0b001e3200e590e3b286ef9ab&path=ggml.c&since=2024-04-01T00%3A00%3A00Z&until=2024-05-15T00%3A00%3A00Z&per_page=30",
+      "link": null,
+      "rate_remaining": "23"
+    }
+  ],
+  "body_bytes": 133423,
+  "elapsed_seconds": 3.421877785000106,
+  "prior_body_bytes": 853214,
+  "prior_execution_seconds": 43.967860261996975,
+  "cumulative_body_bytes": 986637,
+  "limits": {
+    "per_resource_bytes": 262144,
+    "total_body_bytes": 2000000,
+    "request_seconds": 15,
+    "overall_active_collection_seconds": 120
+  },
+  "model_or_runtime_binaries": false,
+  "failed_requests_repeated": false
+}

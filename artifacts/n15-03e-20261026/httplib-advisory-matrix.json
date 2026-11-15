@@ -1,0 +1,577 @@
+[
+  {
+    "advisory": "GHSA-vq69-f637-8fhr",
+    "cve": "CVE-2026-103930",
+    "severity": "low",
+    "summary": "cpp-httplib open_stream serializes CRLF in request target into HTTP request line",
+    "published_at": "2026-10-02T03:10:55Z",
+    "updated_at": "2026-10-02T03:10:55Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": ""
+        },
+        "vulnerable_version_range": "0.29.0 <= 0.50.1",
+        "patched_versions": "0.51.0",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.51.0"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-22mf-w2v3-r2jv",
+    "cve": "CVE-2026-102944",
+    "severity": "high",
+    "summary": "Cookie header leaked on cross-origin redirect",
+    "published_at": "2026-09-30T03:21:37Z",
+    "updated_at": "2026-09-30T03:21:37Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "c++/c",
+          "name": "httplib.h"
+        },
+        "vulnerable_version_range": "v.0.50.0",
+        "patched_versions": "v0.51.0",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.51.0"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-w7p7-f35j-mw7q",
+    "cve": "CVE-2026-77358",
+    "severity": "medium",
+    "summary": "Use-after-free of TLS session in WebSocketClient::shutdown_and_close()",
+    "published_at": "2026-08-21T22:46:50Z",
+    "updated_at": "2026-08-21T22:46:50Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "c++/c",
+          "name": "httplib.h"
+        },
+        "vulnerable_version_range": "v0.49.0",
+        "patched_versions": "v0.50.1",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.50.1"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-2r2h-jc8w-w66c",
+    "cve": "CVE-2026-77341",
+    "severity": "medium",
+    "summary": "CRLF injection via unvalidated HTTP trailer headers in chunked response writing",
+    "published_at": "2026-08-21T22:46:28Z",
+    "updated_at": "2026-08-21T22:46:28Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "c/c++",
+          "name": "httplib.h"
+        },
+        "vulnerable_version_range": "v0.49.0 (commit 0fa4912)",
+        "patched_versions": "v0.50.0",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.50.0"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-8ffh-4p95-g3p2",
+    "cve": "CVE-2026-54919",
+    "severity": "high",
+    "summary": "TLS certificate chain verification bypassed for IP-literal hosts on Mbed TLS and wolfSSL backends",
+    "published_at": "2026-06-16T22:11:09Z",
+    "updated_at": "2026-06-16T22:11:09Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "other",
+          "name": "cpp-httplib"
+        },
+        "vulnerable_version_range": ">= 0.31.0, < 0.47.0",
+        "patched_versions": "0.47.0",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.47.0"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-hg3g-vrg8-578g",
+    "cve": "CVE-2026-46527",
+    "severity": "high",
+    "summary": "cpp-httplib: Malicious `X-Forwarded-For` Under Trusted-Proxy Configuration Triggers Empty `vector::front()`, Leading to Undefined Behavior and Server Crash",
+    "published_at": "2026-05-16T00:20:00Z",
+    "updated_at": "2026-05-16T00:20:00Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": ""
+        },
+        "vulnerable_version_range": "<0.44.0",
+        "patched_versions": "0.44.0",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.44.0"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-xjxg-64p4-vj4m",
+    "cve": "CVE-2026-45372",
+    "severity": "high",
+    "summary": "HTTP header value percent-decoding in server-side `parse_header` enables CRLF injection",
+    "published_at": "2026-05-12T22:04:14Z",
+    "updated_at": "2026-05-12T22:04:14Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": ""
+        },
+        "vulnerable_version_range": "<=0.43.4",
+        "patched_versions": "0.44.0",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.44.0"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-h6wq-j5mv-f3q8",
+    "cve": "CVE-2026-45352",
+    "severity": "medium",
+    "summary": "DoS: Negative chunk-size in chunked Transfer-Encoding",
+    "published_at": "2026-05-12T02:30:53Z",
+    "updated_at": "2026-05-12T02:30:53Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": "cpp-httplib"
+        },
+        "vulnerable_version_range": "<=0.43.3",
+        "patched_versions": "0.43.4",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.43.4"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-jv63-rm9j-6jwc",
+    "cve": "CVE-2026-34441",
+    "severity": "medium",
+    "summary": "HTTP Request Smuggling via Unconsumed GET Request Body",
+    "published_at": "2026-03-31T01:27:07Z",
+    "updated_at": "2026-03-31T06:37:14Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": "cpp-httplib"
+        },
+        "vulnerable_version_range": "<=0.38.0",
+        "patched_versions": "0.40.0",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.40.0"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-6hrp-7fq9-3qv2",
+    "cve": "CVE-2026-33745",
+    "severity": "high",
+    "summary": "cpp-httplib Client Leaks Authentication Credentials to Untrusted Hosts on Cross-Origin HTTP Redirect",
+    "published_at": "2026-03-25T16:00:36Z",
+    "updated_at": "2026-03-25T16:00:36Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": "cpp-httplib"
+        },
+        "vulnerable_version_range": "<=0.38.0",
+        "patched_versions": "0.39.0",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.39.0"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-c3h8-fqq4-xm4g",
+    "cve": "CVE-2026-32627",
+    "severity": "high",
+    "summary": "Silent TLS Certificate Verification Bypass on HTTPS Redirect via Proxy",
+    "published_at": "2026-03-13T16:55:51Z",
+    "updated_at": "2026-03-13T16:55:51Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": "httplib.h"
+        },
+        "vulnerable_version_range": "<=0.37.1",
+        "patched_versions": "0.37.2",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.37.2"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-39q5-hh6x-jpxx",
+    "cve": "CVE-2026-31870",
+    "severity": "high",
+    "summary": "Remote Process Crash via Malformed Content-Length Response Header",
+    "published_at": "2026-03-10T17:02:16Z",
+    "updated_at": "2026-03-10T17:02:16Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": "httplib.h"
+        },
+        "vulnerable_version_range": "<= 0.37.0",
+        "patched_versions": "0.37.1",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.37.1"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-qq6v-r583-3h69",
+    "cve": "CVE-2026-29076",
+    "severity": "medium",
+    "summary": "Stack Overflow Denial of Service (DoS) via std::regex in multipart filename parsing",
+    "published_at": "2026-03-06T23:41:43Z",
+    "updated_at": "2026-03-06T23:41:43Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": ""
+        },
+        "vulnerable_version_range": "<= 0.35.0",
+        "patched_versions": "0.37.0",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.37.0"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-8mpw-r4gc-xm7q",
+    "cve": "CVE-2026-28434",
+    "severity": "medium",
+    "summary": "Default exception handler leaks e.what() to clients via EXCEPTION_WHAT response header",
+    "published_at": "2026-03-02T22:53:12Z",
+    "updated_at": "2026-03-02T22:53:12Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": "httplib.h"
+        },
+        "vulnerable_version_range": "<= 0.34.0",
+        "patched_versions": "0.35.0",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.35.0"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-xvfx-w463-6fpp",
+    "cve": "CVE-2026-28435",
+    "severity": "high",
+    "summary": "Payload size limit bypass via gzip decompression in ContentReader (streaming) allows oversized request bodies in cpp-httplib",
+    "published_at": "2026-03-02T22:53:35Z",
+    "updated_at": "2026-03-02T22:53:35Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": "cpp-httplib"
+        },
+        "vulnerable_version_range": "<= 0.34.0",
+        "patched_versions": "0.35.0",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.35.0"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-h934-98h4-j43q",
+    "cve": "CVE-2026-22776",
+    "severity": "high",
+    "summary": "Denial of service (DOS) using zip bomb",
+    "published_at": "2026-01-10T12:00:39Z",
+    "updated_at": "2026-01-10T12:00:39Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": ""
+        },
+        "vulnerable_version_range": "<=0.29.0",
+        "patched_versions": "0.30.1",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.30.1"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-wpc6-j37r-jcx7",
+    "cve": "CVE-2026-21428",
+    "severity": "critical",
+    "summary": "CRLF injection in http headers",
+    "published_at": "2026-01-01T17:38:42Z",
+    "updated_at": "2026-01-05T13:26:54Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": ""
+        },
+        "vulnerable_version_range": "<=0.29.0",
+        "patched_versions": "0.30.0",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.30.0"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-gfpf-r66f-5mh2",
+    "cve": "CVE-2025-66577",
+    "severity": "medium",
+    "summary": "Untrusted HTTP Header Handling: X-Forwarded-For/X-Real-IP Trust ",
+    "published_at": "2025-12-05T15:34:38Z",
+    "updated_at": "2025-12-05T15:34:38Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": ""
+        },
+        "vulnerable_version_range": "<=0.26.0",
+        "patched_versions": "0.27.0",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.27.0"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-xm2j-vfr9-mg9m",
+    "cve": "CVE-2025-66570",
+    "severity": "critical",
+    "summary": "Untrusted HTTP Header Handling: Internal Header Shadowing (REMOTE*/LOCAL*)",
+    "published_at": "2025-10-28T00:42:21Z",
+    "updated_at": "2025-12-05T15:18:02Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": ""
+        },
+        "vulnerable_version_range": "<=0.26.0",
+        "patched_versions": "0.27.0",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.27.0"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-j6p8-779x-p5pw",
+    "cve": "CVE-2025-53628",
+    "severity": "medium",
+    "summary": "HTTP Header Smuggling due to insecure trailers merge",
+    "published_at": "2025-07-10T16:27:37Z",
+    "updated_at": "2025-07-10T21:43:27Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": "cpp-httplib"
+        },
+        "vulnerable_version_range": "<= 0.22.0",
+        "patched_versions": "0.23.0",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.23.0"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-qjmq-h3cc-qv6w",
+    "cve": "CVE-2025-53629",
+    "severity": "high",
+    "summary": "Persistency of Unbounded Memory Allocation in Chunked/No-Length Requests Vulnerability",
+    "published_at": "2025-07-10T16:27:27Z",
+    "updated_at": "2025-07-10T16:27:27Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": ""
+        },
+        "vulnerable_version_range": "< 0.22.0",
+        "patched_versions": "0.23.0",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.23.0"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-xjhg-gf59-p92h",
+    "cve": "CVE-2025-52887",
+    "severity": "high",
+    "summary": "Unlimited number of http header fields causes memory leak",
+    "published_at": "2025-06-25T20:20:56Z",
+    "updated_at": "2025-06-25T20:20:56Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": ""
+        },
+        "vulnerable_version_range": "0.21.0",
+        "patched_versions": "0.22.0",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.22.0"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  },
+  {
+    "advisory": "GHSA-px83-72rx-v57c",
+    "cve": "CVE-2025-46728",
+    "severity": "high",
+    "summary": "Unbounded Memory Allocation in Chunked/No-Length Requests",
+    "published_at": "2025-05-05T22:51:27Z",
+    "updated_at": "2025-05-05T22:51:27Z",
+    "ranges": [
+      {
+        "package": {
+          "ecosystem": "",
+          "name": ""
+        },
+        "vulnerable_version_range": "<=0.20.0",
+        "patched_versions": "0.20.1",
+        "vulnerable_functions": []
+      }
+    ],
+    "pinned_source_version": "0.61.0",
+    "published_fix_versions": [
+      "0.20.1"
+    ],
+    "classification": "OUTSIDE_PUBLISHER_AFFECTED_RANGE_AT_SOURCE_VERSION",
+    "limit": "Published version-range assessment, not verified vendor-fix ancestry or comprehensive binary security proof."
+  }
+]

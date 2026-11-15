@@ -1,0 +1,95 @@
+{
+  "task": "N15-06",
+  "outcome": "STRUCTURAL_PASS_ANSWER_ABSTAIN",
+  "native_generations": 1,
+  "native_exit": 0,
+  "runtime_accepted_grammar_and_output_matches_finite_language": true,
+  "grammar_sha256": "d6e32d1a74bf8526a6e48ad05e2025c9ef2c7a96425631e890db7bf7ee22f09e",
+  "grammar_bytes": 183,
+  "grammar_changed_after_output": false,
+  "parser_changed": false,
+  "N14_contract_index_corpus_changed": false,
+  "raw_model_output": "{\"decision\":\"ABSTAIN\",\"evidence_ids\":[]} [end of text]\n\n\n",
+  "main_answer": "ABSTAIN",
+  "main_reason": "model_selected_abstention",
+  "returned_quotations": 0,
+  "returned_supporting_citations": 0,
+  "positive_live_quotation_gate": "OPEN; valid structure is not successful supported evidence selection",
+  "performance": {
+    "constrained_output": {
+      "grammar_sha256": "d6e32d1a74bf8526a6e48ad05e2025c9ef2c7a96425631e890db7bf7ee22f09e",
+      "scope": "structure and retrieved-ID membership only",
+      "selection": {
+        "decision": "ABSTAIN",
+        "evidence_ids": [],
+        "schema_version": "astra.research-selection.v1",
+        "transport_trailer_removed": true
+      },
+      "status": "PASS"
+    },
+    "counted_storage_bytes": 610955264,
+    "decode_runs": 15,
+    "exit_code": 0,
+    "kernel_command_tree_peak_RSS_bytes": 644726784,
+    "native_commands": 1,
+    "native_sampled_peak_RSS_bytes": 616169472,
+    "native_wall_s": 7.116744921999725,
+    "network_requests": 0,
+    "new_download_bytes": 0,
+    "performance": {
+      "decode_eval": [
+        656.27,
+        15,
+        22.86
+      ],
+      "load_ms": [
+        3799.59
+      ],
+      "prompt_eval": [
+        3797.55,
+        230,
+        60.57
+      ]
+    },
+    "stdout": "{\"decision\":\"ABSTAIN\",\"evidence_ids\":[]} [end of text]\n\n\n",
+    "timeout_hit": false,
+    "verified_isolation": true
+  },
+  "corrected_CLI_elapsed_ms": 214823.774717,
+  "runtime_phase_elapsed_s": 213.73445486299988,
+  "resources": {
+    "elapsed_s": 213.73445486299988,
+    "observations": 21,
+    "final_apparent": 609094740,
+    "final_allocated": 610955264,
+    "max_sampled_allocated": 610951168,
+    "process_RSS_peaks": {
+      "4231": 35139584,
+      "4427": 2359296,
+      "4428": 616165376
+    },
+    "supervisor_kernel_lifetime_RSS_bytes": 35139584,
+    "max_reaped_child_kernel_RSS_bytes": 644726784,
+    "owned_processes_remaining": 0,
+    "observer_alive": false
+  },
+  "supervisor_max_sample_gap_s": 20.467888546000268,
+  "native_max_sample_gap_s": 0.027171494999947754,
+  "native_samples": 227,
+  "new_downloads": 0,
+  "network_requests": 0,
+  "focused_tests": {
+    "Node": 66,
+    "Python": 10,
+    "pass": 76,
+    "fail": 0,
+    "non_generative": true
+  },
+  "scope": "One seen structural demonstration. No fresh holdout, scientific/clinical, relevance or entailment validation.",
+  "security_limitations": "Prior G current-advisory/binary/redistribution gaps retained; no new security certification.",
+  "N15": "In Progress",
+  "N16": "Not Started",
+  "other_statuses_and_independent_reviews": "unchanged",
+  "resource_authority": "N15-06 only; expires at delivery",
+  "next_task": "Separately approved tiny selection-relevance/abstention diagnostic with frozen constrained grammar, parser and canonical citations; predefined technically reviewed supported/unsupported cases, fresh resources, no forced SELECT or N16 integration."
+}

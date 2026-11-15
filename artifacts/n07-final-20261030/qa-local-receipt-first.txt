@@ -1,0 +1,119 @@
+✔ Source full original/approval/receipt/legacy card verification nasa-ntrs-20205008796 (194.145702ms)
+✔ Source full original/approval/receipt/legacy card verification nasa-osdr-osd-1 (48.529851ms)
+✔ Source full original/approval/receipt/legacy card verification physionet-bidmc-01-numerics (57.590468ms)
+✔ Trusted source-launch role rejects viewer (0.449494ms)
+✔ Trusted source-launch role rejects astronaut (0.125028ms)
+✔ Trusted source-launch role rejects system_admin (0.097666ms)
+✔ Trusted source-launch role rejects flight_surgeon (0.128354ms)
+✔ Trusted source-launch role rejects null (0.142771ms)
+✔ Trusted source-launch role rejects researcher;sudo (0.183518ms)
+✔ Forged caller/context and arbitrary source path never resolve (21.965894ms)
+✔ Positive capability and explicit registry revocation remain discriminative (0.211822ms)
+✔ Annotation rejects misquote (0.551227ms)
+✔ Annotation rejects offset (0.413876ms)
+✔ Annotation rejects page (0.500291ms)
+✔ Annotation rejects unit (0.521961ms)
+✔ Annotation rejects unknown field (1.04744ms)
+✔ Annotation rejects numeric support claim (0.366205ms)
+✔ Annotation rejects medical relevance (0.304849ms)
+✔ Annotation rejects wrong source (0.380523ms)
+✔ Annotation rejects wrong digest (0.356878ms)
+✔ Annotation rejects wrong schema (0.411381ms)
+✔ Annotation rejects injected instruction (0.530598ms)
+✔ Positive literal byte spans bind original fields without semantic/numeric promotion (8.578374ms)
+✔ Annotation append/correction/exclusion/revocation preserves originals and rejects revival (4.425861ms)
+✔ History integrity rejects hash (0.244604ms)
+✔ History integrity rejects review approval (0.147631ms)
+✔ History integrity rejects revision (0.176305ms)
+✔ History integrity rejects chain (0.169392ms)
+✔ Reviewer forms stay blank and any card change invalidates packet identity (1.121159ms)
+✔ Inactive downstream descriptor preserves nonclinical boundary N08 (1.792585ms)
+✔ Inactive downstream descriptor preserves nonclinical boundary N09 (2.349102ms)
+✔ Inactive downstream descriptor preserves nonclinical boundary N10 (1.56387ms)
+✔ Inactive downstream descriptor preserves nonclinical boundary N11 (1.525588ms)
+✔ Inactive downstream descriptor preserves nonclinical boundary N13 (2.015589ms)
+✔ Inactive downstream descriptor preserves nonclinical boundary N14 (2.021329ms)
+✔ Inactive downstream descriptor preserves nonclinical boundary N15 (2.394228ms)
+✔ Descriptors reject forged authorization and unapproved target (0.159062ms)
+✔ Read path boundary rejects ../secret (1.295511ms)
+✔ Read path boundary rejects /etc/passwd (0.464943ms)
+✔ Read path boundary rejects x/../../secret (0.490252ms)
+✔ Read path boundary rejects x\secret (0.448112ms)
+✔ Read path boundary rejects x//secret (0.498797ms)
+✔ Read path boundary rejects C:secret (0.482807ms)
+✔ Bounded read positive plus wrong hash, missing/oversize/encoding independent controls (4.621869ms)
+✔ Symlink/hardlink/directory substitution fails before data exposure (4.332319ms)
+✔ Copied verified bytes cannot mutate the verified-context evidence (0.451938ms)
+✔ Named source replacement, unexpected metadata hash and absent original cannot reuse a prior validation (6.225194ms)
+✔ Local bundle actual atomic publication/readback/reuse and cold-process recovery (761.454122ms)
+✔ Bundle bytes rebuild identically across independent output roots (603.458214ms)
+✔ Abrupt process exit preserves honest recovery state before_rename (718.248241ms)
+✔ Abrupt process exit preserves honest recovery state before_final_readback (562.059258ms)
+✔ Persistence/ack failure stays visible before_write (7.97154ms)
+✔ Persistence/ack failure stays visible before_file_sync (8.976028ms)
+✔ Persistence/ack failure stays visible before_directory_sync (12.702736ms)
+✔ Persistence/ack failure stays visible before_rename (144.862285ms)
+✔ Persistence/ack failure stays visible before_parent_ack (145.733402ms)
+✔ Persistence/ack failure stays visible before_final_readback (145.989543ms)
+✔ Pending write cancellation and concurrent admission cannot falsely complete (10.65615ms)
+✔ Tampered/truncated/extra bundle files and swapped manifest fail closed (914.67569ms)
+✔ Source output root traversal/symlink and staged replacement cannot write elsewhere (8.753656ms)
+✖ Inventory distinguishes authentic/curated/synthetic/rejected/unavailable without source substitution (259.707397ms)
+✔ Group split positive reproducible across order with stable seed and counts (2.014867ms)
+✔ Leakage grouping retains shared subject (0.530452ms)
+✔ Leakage grouping retains shared session (0.334986ms)
+✔ Leakage grouping retains shared scenario (0.410891ms)
+✔ Leakage grouping retains shared source_id (0.314848ms)
+✔ Leakage grouping retains shared source_sha256 (0.461356ms)
+✔ Leakage grouping retains shared content_sha256 (0.508135ms)
+✔ Transitive related/duplicate groups cannot cross partitions (0.5ms)
+✔ Chronology/purge boundary and insufficient groups fail honestly (0.62082ms)
+✔ Split rejects duplicate unit (0.265214ms)
+✔ Split rejects real source (0.154003ms)
+✔ Split rejects forged real identity (0.134616ms)
+✔ Split rejects bad hash (0.147731ms)
+✔ Split rejects backward time (0.161828ms)
+✔ Split rejects malformed interval (0.175052ms)
+✔ Split rejects unknown field (0.148953ms)
+✔ Split manifest tamper detection membership (0.753201ms)
+✔ Split manifest tamper detection missing unit (0.645216ms)
+✔ Split manifest tamper detection seed (0.667197ms)
+✔ Split manifest tamper detection digest (0.556997ms)
+✔ Split manifest tamper detection approval (0.545947ms)
+✔ Actual source splitting remains blocked/not-applicable with zero invented groups (0.814547ms)
+✔ Invalid split policy fails ratios (0.212584ms)
+✔ Invalid split policy fails zero ratio (0.154664ms)
+✔ Invalid split policy fails seed (0.151046ms)
+✔ Invalid split policy fails mode (0.140296ms)
+✔ Invalid split policy fails preprocessing (0.130989ms)
+✔ Invalid split policy fails gap (0.135357ms)
+✔ Invalid split policy fails version (0.125248ms)
+✔ CLI rejects URLs, paths, acquisition and unknown flags (0.238754ms)
+✔ Reject-all and accept-all substitutes fail positive and negative controls (0.797484ms)
+ℹ tests 92
+ℹ suites 0
+ℹ pass 91
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4859.12477
+
+✖ failing tests:
+
+test at tests/n07-local.test.mjs:143:1
+✖ Inventory distinguishes authentic/curated/synthetic/rejected/unavailable without source substitution (259.707397ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(p.retrieved_at&&p.privacy==='PUBLIC_RESEARCH_PUBLICATION')
+  
+      at TestContext.<anonymous> (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/n07-local.test.mjs:147:74)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

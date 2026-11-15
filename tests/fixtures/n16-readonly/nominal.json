@@ -1,0 +1,852 @@
+{
+  "as_of": "2026-11-14T11:00:00.000Z",
+  "crew": [
+    {
+      "baselines": {
+        "heart_rate": {
+          "basis": "Authored synthetic schema reference; not a learned personal or 30-day archive.",
+          "center": 67.8,
+          "count": null,
+          "method": "authored_fixture_reference",
+          "scale": 4.5,
+          "synthetic": true,
+          "unit": "/min",
+          "version": "n16-fixture-baseline-v1",
+          "window_days": null
+        },
+        "respiratory_rate": {
+          "basis": "Authored synthetic schema reference; not a learned personal or 30-day archive.",
+          "center": 13.8,
+          "count": null,
+          "method": "authored_fixture_reference",
+          "scale": 1.5,
+          "synthetic": true,
+          "unit": "/min",
+          "version": "n16-fixture-baseline-v1",
+          "window_days": null
+        },
+        "spo2": {
+          "basis": "Authored synthetic schema reference; not a learned personal or 30-day archive.",
+          "center": 97.9,
+          "count": null,
+          "method": "authored_fixture_reference",
+          "scale": 0.65,
+          "synthetic": true,
+          "unit": "%",
+          "version": "n16-fixture-baseline-v1",
+          "window_days": null
+        }
+      },
+      "crew_id": "CREW-01",
+      "metric_observations": {
+        "heart_rate": {
+          "crew_id": "CREW-01",
+          "event_id": "N16:nominal:CREW-01:heart_rate",
+          "metric": {
+            "code": "8867-4",
+            "name": "heart_rate",
+            "system": "http://loinc.org",
+            "unit": "/min",
+            "value": 67.8
+          },
+          "mission_id": "MARS-DEMO-01",
+          "provenance": {
+            "generator_version": "n16-authored-fixture-v1",
+            "scenario_id": "n16-fixture-nominal",
+            "seed": 42017,
+            "synthetic": true
+          },
+          "quality": {
+            "artifact": false,
+            "confidence": 0.99,
+            "status": "good"
+          },
+          "received_ts": "2026-11-14T11:00:00.000Z",
+          "schema_version": "astra.telemetry.v1",
+          "source": {
+            "clock": "mission_simulation",
+            "device_id": "FIXTURE-CREW-01",
+            "kind": "simulator",
+            "runtime_hz": 1,
+            "sampling_hz": 1
+          },
+          "ts": "2026-11-14T11:00:00.000Z"
+        },
+        "respiratory_rate": {
+          "crew_id": "CREW-01",
+          "event_id": "N16:nominal:CREW-01:respiratory_rate",
+          "metric": {
+            "code": "9279-1",
+            "name": "respiratory_rate",
+            "system": "http://loinc.org",
+            "unit": "/min",
+            "value": 13.8
+          },
+          "mission_id": "MARS-DEMO-01",
+          "provenance": {
+            "generator_version": "n16-authored-fixture-v1",
+            "scenario_id": "n16-fixture-nominal",
+            "seed": 42017,
+            "synthetic": true
+          },
+          "quality": {
+            "artifact": false,
+            "confidence": 0.99,
+            "status": "good"
+          },
+          "received_ts": "2026-11-14T11:00:00.000Z",
+          "schema_version": "astra.telemetry.v1",
+          "source": {
+            "clock": "mission_simulation",
+            "device_id": "FIXTURE-CREW-01",
+            "kind": "simulator",
+            "runtime_hz": 1,
+            "sampling_hz": 1
+          },
+          "ts": "2026-11-14T11:00:00.000Z"
+        },
+        "spo2": {
+          "crew_id": "CREW-01",
+          "event_id": "N16:nominal:CREW-01:spo2",
+          "metric": {
+            "code": "59408-5",
+            "name": "spo2",
+            "system": "http://loinc.org",
+            "unit": "%",
+            "value": 97.9
+          },
+          "mission_id": "MARS-DEMO-01",
+          "provenance": {
+            "generator_version": "n16-authored-fixture-v1",
+            "scenario_id": "n16-fixture-nominal",
+            "seed": 42017,
+            "synthetic": true
+          },
+          "quality": {
+            "artifact": false,
+            "confidence": 0.99,
+            "status": "good"
+          },
+          "received_ts": "2026-11-14T11:00:00.000Z",
+          "schema_version": "astra.telemetry.v1",
+          "source": {
+            "clock": "mission_simulation",
+            "device_id": "FIXTURE-CREW-01",
+            "kind": "simulator",
+            "runtime_hz": 1,
+            "sampling_hz": 1
+          },
+          "ts": "2026-11-14T11:00:00.000Z"
+        }
+      }
+    },
+    {
+      "baselines": {
+        "heart_rate": {
+          "basis": "Authored synthetic schema reference; not a learned personal or 30-day archive.",
+          "center": 67.9,
+          "count": null,
+          "method": "authored_fixture_reference",
+          "scale": 4.5,
+          "synthetic": true,
+          "unit": "/min",
+          "version": "n16-fixture-baseline-v1",
+          "window_days": null
+        },
+        "respiratory_rate": {
+          "basis": "Authored synthetic schema reference; not a learned personal or 30-day archive.",
+          "center": 13.9,
+          "count": null,
+          "method": "authored_fixture_reference",
+          "scale": 1.5,
+          "synthetic": true,
+          "unit": "/min",
+          "version": "n16-fixture-baseline-v1",
+          "window_days": null
+        },
+        "spo2": {
+          "basis": "Authored synthetic schema reference; not a learned personal or 30-day archive.",
+          "center": 98.0,
+          "count": null,
+          "method": "authored_fixture_reference",
+          "scale": 0.65,
+          "synthetic": true,
+          "unit": "%",
+          "version": "n16-fixture-baseline-v1",
+          "window_days": null
+        }
+      },
+      "crew_id": "CREW-02",
+      "metric_observations": {
+        "heart_rate": {
+          "crew_id": "CREW-02",
+          "event_id": "N16:nominal:CREW-02:heart_rate",
+          "metric": {
+            "code": "8867-4",
+            "name": "heart_rate",
+            "system": "http://loinc.org",
+            "unit": "/min",
+            "value": 67.9
+          },
+          "mission_id": "MARS-DEMO-01",
+          "provenance": {
+            "generator_version": "n16-authored-fixture-v1",
+            "scenario_id": "n16-fixture-nominal",
+            "seed": 42017,
+            "synthetic": true
+          },
+          "quality": {
+            "artifact": false,
+            "confidence": 0.99,
+            "status": "good"
+          },
+          "received_ts": "2026-11-14T11:00:00.000Z",
+          "schema_version": "astra.telemetry.v1",
+          "source": {
+            "clock": "mission_simulation",
+            "device_id": "FIXTURE-CREW-02",
+            "kind": "simulator",
+            "runtime_hz": 1,
+            "sampling_hz": 1
+          },
+          "ts": "2026-11-14T11:00:00.000Z"
+        },
+        "respiratory_rate": {
+          "crew_id": "CREW-02",
+          "event_id": "N16:nominal:CREW-02:respiratory_rate",
+          "metric": {
+            "code": "9279-1",
+            "name": "respiratory_rate",
+            "system": "http://loinc.org",
+            "unit": "/min",
+            "value": 13.9
+          },
+          "mission_id": "MARS-DEMO-01",
+          "provenance": {
+            "generator_version": "n16-authored-fixture-v1",
+            "scenario_id": "n16-fixture-nominal",
+            "seed": 42017,
+            "synthetic": true
+          },
+          "quality": {
+            "artifact": false,
+            "confidence": 0.99,
+            "status": "good"
+          },
+          "received_ts": "2026-11-14T11:00:00.000Z",
+          "schema_version": "astra.telemetry.v1",
+          "source": {
+            "clock": "mission_simulation",
+            "device_id": "FIXTURE-CREW-02",
+            "kind": "simulator",
+            "runtime_hz": 1,
+            "sampling_hz": 1
+          },
+          "ts": "2026-11-14T11:00:00.000Z"
+        },
+        "spo2": {
+          "crew_id": "CREW-02",
+          "event_id": "N16:nominal:CREW-02:spo2",
+          "metric": {
+            "code": "59408-5",
+            "name": "spo2",
+            "system": "http://loinc.org",
+            "unit": "%",
+            "value": 98.0
+          },
+          "mission_id": "MARS-DEMO-01",
+          "provenance": {
+            "generator_version": "n16-authored-fixture-v1",
+            "scenario_id": "n16-fixture-nominal",
+            "seed": 42017,
+            "synthetic": true
+          },
+          "quality": {
+            "artifact": false,
+            "confidence": 0.99,
+            "status": "good"
+          },
+          "received_ts": "2026-11-14T11:00:00.000Z",
+          "schema_version": "astra.telemetry.v1",
+          "source": {
+            "clock": "mission_simulation",
+            "device_id": "FIXTURE-CREW-02",
+            "kind": "simulator",
+            "runtime_hz": 1,
+            "sampling_hz": 1
+          },
+          "ts": "2026-11-14T11:00:00.000Z"
+        }
+      }
+    },
+    {
+      "baselines": {
+        "heart_rate": {
+          "basis": "Authored synthetic schema reference; not a learned personal or 30-day archive.",
+          "center": 68.0,
+          "count": null,
+          "method": "authored_fixture_reference",
+          "scale": 4.5,
+          "synthetic": true,
+          "unit": "/min",
+          "version": "n16-fixture-baseline-v1",
+          "window_days": null
+        },
+        "respiratory_rate": {
+          "basis": "Authored synthetic schema reference; not a learned personal or 30-day archive.",
+          "center": 14.0,
+          "count": null,
+          "method": "authored_fixture_reference",
+          "scale": 1.5,
+          "synthetic": true,
+          "unit": "/min",
+          "version": "n16-fixture-baseline-v1",
+          "window_days": null
+        },
+        "spo2": {
+          "basis": "Authored synthetic schema reference; not a learned personal or 30-day archive.",
+          "center": 98.1,
+          "count": null,
+          "method": "authored_fixture_reference",
+          "scale": 0.65,
+          "synthetic": true,
+          "unit": "%",
+          "version": "n16-fixture-baseline-v1",
+          "window_days": null
+        }
+      },
+      "crew_id": "CREW-03",
+      "metric_observations": {
+        "heart_rate": {
+          "crew_id": "CREW-03",
+          "event_id": "N16:nominal:CREW-03:heart_rate",
+          "metric": {
+            "code": "8867-4",
+            "name": "heart_rate",
+            "system": "http://loinc.org",
+            "unit": "/min",
+            "value": 68.0
+          },
+          "mission_id": "MARS-DEMO-01",
+          "provenance": {
+            "generator_version": "n16-authored-fixture-v1",
+            "scenario_id": "n16-fixture-nominal",
+            "seed": 42017,
+            "synthetic": true
+          },
+          "quality": {
+            "artifact": false,
+            "confidence": 0.99,
+            "status": "good"
+          },
+          "received_ts": "2026-11-14T11:00:00.000Z",
+          "schema_version": "astra.telemetry.v1",
+          "source": {
+            "clock": "mission_simulation",
+            "device_id": "FIXTURE-CREW-03",
+            "kind": "simulator",
+            "runtime_hz": 1,
+            "sampling_hz": 1
+          },
+          "ts": "2026-11-14T11:00:00.000Z"
+        },
+        "respiratory_rate": {
+          "crew_id": "CREW-03",
+          "event_id": "N16:nominal:CREW-03:respiratory_rate",
+          "metric": {
+            "code": "9279-1",
+            "name": "respiratory_rate",
+            "system": "http://loinc.org",
+            "unit": "/min",
+            "value": 14.0
+          },
+          "mission_id": "MARS-DEMO-01",
+          "provenance": {
+            "generator_version": "n16-authored-fixture-v1",
+            "scenario_id": "n16-fixture-nominal",
+            "seed": 42017,
+            "synthetic": true
+          },
+          "quality": {
+            "artifact": false,
+            "confidence": 0.99,
+            "status": "good"
+          },
+          "received_ts": "2026-11-14T11:00:00.000Z",
+          "schema_version": "astra.telemetry.v1",
+          "source": {
+            "clock": "mission_simulation",
+            "device_id": "FIXTURE-CREW-03",
+            "kind": "simulator",
+            "runtime_hz": 1,
+            "sampling_hz": 1
+          },
+          "ts": "2026-11-14T11:00:00.000Z"
+        },
+        "spo2": {
+          "crew_id": "CREW-03",
+          "event_id": "N16:nominal:CREW-03:spo2",
+          "metric": {
+            "code": "59408-5",
+            "name": "spo2",
+            "system": "http://loinc.org",
+            "unit": "%",
+            "value": 98.1
+          },
+          "mission_id": "MARS-DEMO-01",
+          "provenance": {
+            "generator_version": "n16-authored-fixture-v1",
+            "scenario_id": "n16-fixture-nominal",
+            "seed": 42017,
+            "synthetic": true
+          },
+          "quality": {
+            "artifact": false,
+            "confidence": 0.99,
+            "status": "good"
+          },
+          "received_ts": "2026-11-14T11:00:00.000Z",
+          "schema_version": "astra.telemetry.v1",
+          "source": {
+            "clock": "mission_simulation",
+            "device_id": "FIXTURE-CREW-03",
+            "kind": "simulator",
+            "runtime_hz": 1,
+            "sampling_hz": 1
+          },
+          "ts": "2026-11-14T11:00:00.000Z"
+        }
+      }
+    },
+    {
+      "baselines": {
+        "heart_rate": {
+          "basis": "Authored synthetic schema reference; not a learned personal or 30-day archive.",
+          "center": 68.1,
+          "count": null,
+          "method": "authored_fixture_reference",
+          "scale": 4.5,
+          "synthetic": true,
+          "unit": "/min",
+          "version": "n16-fixture-baseline-v1",
+          "window_days": null
+        },
+        "respiratory_rate": {
+          "basis": "Authored synthetic schema reference; not a learned personal or 30-day archive.",
+          "center": 14.1,
+          "count": null,
+          "method": "authored_fixture_reference",
+          "scale": 1.5,
+          "synthetic": true,
+          "unit": "/min",
+          "version": "n16-fixture-baseline-v1",
+          "window_days": null
+        },
+        "spo2": {
+          "basis": "Authored synthetic schema reference; not a learned personal or 30-day archive.",
+          "center": 98.2,
+          "count": null,
+          "method": "authored_fixture_reference",
+          "scale": 0.65,
+          "synthetic": true,
+          "unit": "%",
+          "version": "n16-fixture-baseline-v1",
+          "window_days": null
+        }
+      },
+      "crew_id": "CREW-04",
+      "metric_observations": {
+        "heart_rate": {
+          "crew_id": "CREW-04",
+          "event_id": "N16:nominal:CREW-04:heart_rate",
+          "metric": {
+            "code": "8867-4",
+            "name": "heart_rate",
+            "system": "http://loinc.org",
+            "unit": "/min",
+            "value": 68.1
+          },
+          "mission_id": "MARS-DEMO-01",
+          "provenance": {
+            "generator_version": "n16-authored-fixture-v1",
+            "scenario_id": "n16-fixture-nominal",
+            "seed": 42017,
+            "synthetic": true
+          },
+          "quality": {
+            "artifact": false,
+            "confidence": 0.99,
+            "status": "good"
+          },
+          "received_ts": "2026-11-14T11:00:00.000Z",
+          "schema_version": "astra.telemetry.v1",
+          "source": {
+            "clock": "mission_simulation",
+            "device_id": "FIXTURE-CREW-04",
+            "kind": "simulator",
+            "runtime_hz": 1,
+            "sampling_hz": 1
+          },
+          "ts": "2026-11-14T11:00:00.000Z"
+        },
+        "respiratory_rate": {
+          "crew_id": "CREW-04",
+          "event_id": "N16:nominal:CREW-04:respiratory_rate",
+          "metric": {
+            "code": "9279-1",
+            "name": "respiratory_rate",
+            "system": "http://loinc.org",
+            "unit": "/min",
+            "value": 14.1
+          },
+          "mission_id": "MARS-DEMO-01",
+          "provenance": {
+            "generator_version": "n16-authored-fixture-v1",
+            "scenario_id": "n16-fixture-nominal",
+            "seed": 42017,
+            "synthetic": true
+          },
+          "quality": {
+            "artifact": false,
+            "confidence": 0.99,
+            "status": "good"
+          },
+          "received_ts": "2026-11-14T11:00:00.000Z",
+          "schema_version": "astra.telemetry.v1",
+          "source": {
+            "clock": "mission_simulation",
+            "device_id": "FIXTURE-CREW-04",
+            "kind": "simulator",
+            "runtime_hz": 1,
+            "sampling_hz": 1
+          },
+          "ts": "2026-11-14T11:00:00.000Z"
+        },
+        "spo2": {
+          "crew_id": "CREW-04",
+          "event_id": "N16:nominal:CREW-04:spo2",
+          "metric": {
+            "code": "59408-5",
+            "name": "spo2",
+            "system": "http://loinc.org",
+            "unit": "%",
+            "value": 98.2
+          },
+          "mission_id": "MARS-DEMO-01",
+          "provenance": {
+            "generator_version": "n16-authored-fixture-v1",
+            "scenario_id": "n16-fixture-nominal",
+            "seed": 42017,
+            "synthetic": true
+          },
+          "quality": {
+            "artifact": false,
+            "confidence": 0.99,
+            "status": "good"
+          },
+          "received_ts": "2026-11-14T11:00:00.000Z",
+          "schema_version": "astra.telemetry.v1",
+          "source": {
+            "clock": "mission_simulation",
+            "device_id": "FIXTURE-CREW-04",
+            "kind": "simulator",
+            "runtime_hz": 1,
+            "sampling_hz": 1
+          },
+          "ts": "2026-11-14T11:00:00.000Z"
+        }
+      }
+    },
+    {
+      "baselines": {
+        "heart_rate": {
+          "basis": "Authored synthetic schema reference; not a learned personal or 30-day archive.",
+          "center": 68.2,
+          "count": null,
+          "method": "authored_fixture_reference",
+          "scale": 4.5,
+          "synthetic": true,
+          "unit": "/min",
+          "version": "n16-fixture-baseline-v1",
+          "window_days": null
+        },
+        "respiratory_rate": {
+          "basis": "Authored synthetic schema reference; not a learned personal or 30-day archive.",
+          "center": 14.2,
+          "count": null,
+          "method": "authored_fixture_reference",
+          "scale": 1.5,
+          "synthetic": true,
+          "unit": "/min",
+          "version": "n16-fixture-baseline-v1",
+          "window_days": null
+        },
+        "spo2": {
+          "basis": "Authored synthetic schema reference; not a learned personal or 30-day archive.",
+          "center": 98.3,
+          "count": null,
+          "method": "authored_fixture_reference",
+          "scale": 0.65,
+          "synthetic": true,
+          "unit": "%",
+          "version": "n16-fixture-baseline-v1",
+          "window_days": null
+        }
+      },
+      "crew_id": "CREW-05",
+      "metric_observations": {
+        "heart_rate": {
+          "crew_id": "CREW-05",
+          "event_id": "N16:nominal:CREW-05:heart_rate",
+          "metric": {
+            "code": "8867-4",
+            "name": "heart_rate",
+            "system": "http://loinc.org",
+            "unit": "/min",
+            "value": 68.2
+          },
+          "mission_id": "MARS-DEMO-01",
+          "provenance": {
+            "generator_version": "n16-authored-fixture-v1",
+            "scenario_id": "n16-fixture-nominal",
+            "seed": 42017,
+            "synthetic": true
+          },
+          "quality": {
+            "artifact": false,
+            "confidence": 0.99,
+            "status": "good"
+          },
+          "received_ts": "2026-11-14T11:00:00.000Z",
+          "schema_version": "astra.telemetry.v1",
+          "source": {
+            "clock": "mission_simulation",
+            "device_id": "FIXTURE-CREW-05",
+            "kind": "simulator",
+            "runtime_hz": 1,
+            "sampling_hz": 1
+          },
+          "ts": "2026-11-14T11:00:00.000Z"
+        },
+        "respiratory_rate": {
+          "crew_id": "CREW-05",
+          "event_id": "N16:nominal:CREW-05:respiratory_rate",
+          "metric": {
+            "code": "9279-1",
+            "name": "respiratory_rate",
+            "system": "http://loinc.org",
+            "unit": "/min",
+            "value": 14.2
+          },
+          "mission_id": "MARS-DEMO-01",
+          "provenance": {
+            "generator_version": "n16-authored-fixture-v1",
+            "scenario_id": "n16-fixture-nominal",
+            "seed": 42017,
+            "synthetic": true
+          },
+          "quality": {
+            "artifact": false,
+            "confidence": 0.99,
+            "status": "good"
+          },
+          "received_ts": "2026-11-14T11:00:00.000Z",
+          "schema_version": "astra.telemetry.v1",
+          "source": {
+            "clock": "mission_simulation",
+            "device_id": "FIXTURE-CREW-05",
+            "kind": "simulator",
+            "runtime_hz": 1,
+            "sampling_hz": 1
+          },
+          "ts": "2026-11-14T11:00:00.000Z"
+        },
+        "spo2": {
+          "crew_id": "CREW-05",
+          "event_id": "N16:nominal:CREW-05:spo2",
+          "metric": {
+            "code": "59408-5",
+            "name": "spo2",
+            "system": "http://loinc.org",
+            "unit": "%",
+            "value": 98.3
+          },
+          "mission_id": "MARS-DEMO-01",
+          "provenance": {
+            "generator_version": "n16-authored-fixture-v1",
+            "scenario_id": "n16-fixture-nominal",
+            "seed": 42017,
+            "synthetic": true
+          },
+          "quality": {
+            "artifact": false,
+            "confidence": 0.99,
+            "status": "good"
+          },
+          "received_ts": "2026-11-14T11:00:00.000Z",
+          "schema_version": "astra.telemetry.v1",
+          "source": {
+            "clock": "mission_simulation",
+            "device_id": "FIXTURE-CREW-05",
+            "kind": "simulator",
+            "runtime_hz": 1,
+            "sampling_hz": 1
+          },
+          "ts": "2026-11-14T11:00:00.000Z"
+        }
+      }
+    },
+    {
+      "baselines": {
+        "heart_rate": {
+          "basis": "Authored synthetic schema reference; not a learned personal or 30-day archive.",
+          "center": 68.3,
+          "count": null,
+          "method": "authored_fixture_reference",
+          "scale": 4.5,
+          "synthetic": true,
+          "unit": "/min",
+          "version": "n16-fixture-baseline-v1",
+          "window_days": null
+        },
+        "respiratory_rate": {
+          "basis": "Authored synthetic schema reference; not a learned personal or 30-day archive.",
+          "center": 14.3,
+          "count": null,
+          "method": "authored_fixture_reference",
+          "scale": 1.5,
+          "synthetic": true,
+          "unit": "/min",
+          "version": "n16-fixture-baseline-v1",
+          "window_days": null
+        },
+        "spo2": {
+          "basis": "Authored synthetic schema reference; not a learned personal or 30-day archive.",
+          "center": 98.4,
+          "count": null,
+          "method": "authored_fixture_reference",
+          "scale": 0.65,
+          "synthetic": true,
+          "unit": "%",
+          "version": "n16-fixture-baseline-v1",
+          "window_days": null
+        }
+      },
+      "crew_id": "CREW-06",
+      "metric_observations": {
+        "heart_rate": {
+          "crew_id": "CREW-06",
+          "event_id": "N16:nominal:CREW-06:heart_rate",
+          "metric": {
+            "code": "8867-4",
+            "name": "heart_rate",
+            "system": "http://loinc.org",
+            "unit": "/min",
+            "value": 68.3
+          },
+          "mission_id": "MARS-DEMO-01",
+          "provenance": {
+            "generator_version": "n16-authored-fixture-v1",
+            "scenario_id": "n16-fixture-nominal",
+            "seed": 42017,
+            "synthetic": true
+          },
+          "quality": {
+            "artifact": false,
+            "confidence": 0.99,
+            "status": "good"
+          },
+          "received_ts": "2026-11-14T11:00:00.000Z",
+          "schema_version": "astra.telemetry.v1",
+          "source": {
+            "clock": "mission_simulation",
+            "device_id": "FIXTURE-CREW-06",
+            "kind": "simulator",
+            "runtime_hz": 1,
+            "sampling_hz": 1
+          },
+          "ts": "2026-11-14T11:00:00.000Z"
+        },
+        "respiratory_rate": {
+          "crew_id": "CREW-06",
+          "event_id": "N16:nominal:CREW-06:respiratory_rate",
+          "metric": {
+            "code": "9279-1",
+            "name": "respiratory_rate",
+            "system": "http://loinc.org",
+            "unit": "/min",
+            "value": 14.3
+          },
+          "mission_id": "MARS-DEMO-01",
+          "provenance": {
+            "generator_version": "n16-authored-fixture-v1",
+            "scenario_id": "n16-fixture-nominal",
+            "seed": 42017,
+            "synthetic": true
+          },
+          "quality": {
+            "artifact": false,
+            "confidence": 0.99,
+            "status": "good"
+          },
+          "received_ts": "2026-11-14T11:00:00.000Z",
+          "schema_version": "astra.telemetry.v1",
+          "source": {
+            "clock": "mission_simulation",
+            "device_id": "FIXTURE-CREW-06",
+            "kind": "simulator",
+            "runtime_hz": 1,
+            "sampling_hz": 1
+          },
+          "ts": "2026-11-14T11:00:00.000Z"
+        },
+        "spo2": {
+          "crew_id": "CREW-06",
+          "event_id": "N16:nominal:CREW-06:spo2",
+          "metric": {
+            "code": "59408-5",
+            "name": "spo2",
+            "system": "http://loinc.org",
+            "unit": "%",
+            "value": 98.4
+          },
+          "mission_id": "MARS-DEMO-01",
+          "provenance": {
+            "generator_version": "n16-authored-fixture-v1",
+            "scenario_id": "n16-fixture-nominal",
+            "seed": 42017,
+            "synthetic": true
+          },
+          "quality": {
+            "artifact": false,
+            "confidence": 0.99,
+            "status": "good"
+          },
+          "received_ts": "2026-11-14T11:00:00.000Z",
+          "schema_version": "astra.telemetry.v1",
+          "source": {
+            "clock": "mission_simulation",
+            "device_id": "FIXTURE-CREW-06",
+            "kind": "simulator",
+            "runtime_hz": 1,
+            "sampling_hz": 1
+          },
+          "ts": "2026-11-14T11:00:00.000Z"
+        }
+      }
+    }
+  ],
+  "fixture_id": "nominal",
+  "mission_id": "MARS-DEMO-01",
+  "risk_events": {
+    "coverage": "unknown",
+    "reason": "No independently preserved N02 event is supplied by this authored schema fixture; no detector was run.",
+    "record_origin": "unavailable",
+    "records": []
+  },
+  "scenario_id": "n16-fixture-nominal",
+  "scenario_run_id": "N16-FIXTURE-NOMINAL",
+  "schema_version": "astra.n16.synthetic-fixture.v1",
+  "synthetic": true,
+  "view": "onboard"
+}

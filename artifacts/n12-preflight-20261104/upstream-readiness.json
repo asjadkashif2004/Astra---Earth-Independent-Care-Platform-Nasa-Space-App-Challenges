@@ -1,0 +1,175 @@
+{
+  "schema_version": "astra.n12.upstream-readiness.v1",
+  "N07_retained_inventory_sha256": "cb76d62bd42e88479625b23e92996ecdc5e85cad3e640b748bbf837141b7853c",
+  "N07": [
+    {
+      "id": "nasa-ntrs-20205008796",
+      "category": "A_AUTHENTIC_ORIGINAL",
+      "module": "N07",
+      "title": "Market Survey 2020:  Commercial Clinical Decision Support Systems and Wellness Tools",
+      "sha256": "3429154f91f4bc5476fc7adb7ee18f5a811b8bed2de7acad0f5c94e530ebb4f0",
+      "rights": {
+        "statement": "Work of the US Gov. Public Use Permitted.",
+        "license_id": null,
+        "terms_url": "https://www.sti.nasa.gov/disclaimers/",
+        "harvesting_url": "https://www.sti.nasa.gov/harvesting-data-from-ntrs/",
+        "record_url": "https://ntrs.nasa.gov/citations/20205008796",
+        "reviewed_on": "2026-10-23",
+        "attribution": "NASA STI Compliance and Distribution Services, NASA Ames Research Center; B. Burian, K. Martin and T. Shaw. Market Survey 2020: Commercial Clinical Decision Support Systems and Wellness Tools. NTRS 20205008796; 2021 NASA HRP Investigators' Workshop.",
+        "restrictions": [
+          "This approval covers only the public metadata JSON, not linked documents, vendor websites, images or any other NTRS record.",
+          "Credit NASA STI Compliance and Distribution Services as the metadata source; do not imply NASA endorsement or claim ownership of NASA material.",
+          "No blanket CC0 or Creative Commons license is inferred. The record's determinationType is GOV_PUBLIC_USE_PERMITTED and containsThirdPartyMaterial is false; its separate belongsToUsGov boolean is false. Metadata harvesting is independently expressly permitted by the official harvesting page.",
+          "NASA provides no warranty of accuracy, fitness or third-party rights. This historical market-survey abstract is not a clinical protocol or validation of ASTRA."
+        ]
+      },
+      "scope": "public_scientific_metadata",
+      "review": "NOT_INDEPENDENTLY_SCIENTIFICALLY_APPROVED",
+      "reason": null
+    },
+    {
+      "id": "nasa-osdr-osd-1",
+      "category": "A_AUTHENTIC_ORIGINAL",
+      "module": "N07",
+      "title": "Expression data from drosophila melanogaster",
+      "sha256": "cfe7d81c59efc3b01b4407db0854b4224b51bfcb9d8b4f590fc8467ededa6d64",
+      "rights": {
+        "statement": "NASA dataset-specific catalogue: accessLevel public; license https://www.usa.gov/government-works. No study-specific SPDX license is supplied by the selected API response.",
+        "license_id": null,
+        "terms_url": "https://science.data.nasa.gov/about/license",
+        "harvesting_url": "https://visualization.osdr.nasa.gov/biodata/api/",
+        "record_url": "https://data.nasa.gov/dataset/expression-data-from-drosophila-melanogaster-a0600",
+        "reviewed_on": "2026-10-23",
+        "attribution": "Data are courtesy of the NASA Open Science Data Repository. Expression data from drosophila melanogaster, OSD-1 / GLDS-1. Credit the named investigators/publication authors and NASA OSDR; no NASA endorsement is implied.",
+        "restrictions": [
+          "This approval covers only one public nonhuman OSD-1 aggregate metadata JSON, not raw omics, sample records, images, linked articles or other studies.",
+          "The official dataset-specific catalogue links to OSD-1 and lists public access plus the government-works use URL. USAGov warns that third-party works, endorsement and international-rights limits can apply; hosting alone is not a license.",
+          "NASA Science Data Licenses states that unrestricted NASA-led mission data falls under its CC0 default, with source-specific notices taking precedence. The selected metadata identifies NASA, STS-121 and NASA funding; no restrictive notice is present. This record preserves the catalogue's actual statement and does not relabel it as an explicit study-level CC0 grant.",
+          "No redistribution or clinical-use permission for referenced raw measurements or publications is asserted. Future payload acquisition requires a fresh source/file-specific review.",
+          "The compact API has no explicit license or access-control field; public access was checked on the exact anonymous HTTPS endpoint and the NASA catalogue. Licence/access changes or identity/hash differences must fail closed."
+        ]
+      },
+      "scope": "public_nonhuman_study_metadata",
+      "review": "NOT_INDEPENDENTLY_SCIENTIFICALLY_APPROVED",
+      "reason": null
+    },
+    {
+      "id": "physionet-bidmc-01-numerics",
+      "category": "A_AUTHENTIC_ORIGINAL",
+      "module": "N07",
+      "title": "BIDMC PPG and Respiration Dataset \u2014 record 01 numerics",
+      "sha256": "27d43794cf2e7150db10e8bfe61d2bfdb26873a8f1629ffc5fbee5c9a4eb6ef5",
+      "rights": {
+        "statement": "Open Data Commons Attribution License v1.0 (ODC-By-1.0); preserve the accompanying legacy PhysioNet modified-data notice and attribution. Verbatim original only.",
+        "license_id": "ODC-By-1.0",
+        "terms_url": "https://physionet.org/content/bidmc/view-license/1.0.0/",
+        "harvesting_url": "https://archive.physionet.org/copying.shtml#data",
+        "record_url": "https://physionet.org/content/bidmc/1.0.0/",
+        "reviewed_on": "2026-10-23",
+        "attribution": "Contains information from the BIDMC PPG and Respiration Dataset v1.0.0,Marco Pimentel,Alistair Johnson,Peter Charlton and David Clifton,PhysioNet,DOI:10.13026/C2208R,made available under the ODC Attribution License v1.0.Cite Pimentel et al.,Towards a Robust Estimation of Respiratory Rate from Pulse Oximeters,DOI:10.1109/TBME.2016.2613124,and the PhysioNet resource citation listed in the source README.",
+        "restrictions": [
+          "Retain the ODC-By license URI,attribution and all accompanying source notices with redistributed bytes/documentation;no sublicense or additional restriction on granted database rights.",
+          "Original CSV is unmodified and retained verbatim.The source's existing MIMIC-II extraction/Matlab/CSV modification notice is retained separately,unchanged.",
+          "Future modified data must be distinctly named and identified with source/changes under the legacy policy;this task produces no modified signal dataset.",
+          "Database licensing does not waive privacy,personality,trademark or other content rights.No re-identification,patient linkage or implied clinical/PhysioNet endorsement."
+        ],
+        "legacy_notice_url": "https://physionet.org/files/bidmc/1.0.0/LICENSE",
+        "legacy_notice_sha256": "76576a17b505dce71773415a18e965982bc8c0c9a60da71f1adb9df7644332a0"
+      },
+      "scope": "public_patient_derived_physiological_numerics",
+      "review": "NOT_INDEPENDENTLY_SCIENTIFICALLY_APPROVED",
+      "reason": null
+    },
+    {
+      "id": "sleep-edfx-SC4001E0-PSG",
+      "category": "E_UNAVAILABLE_OR_UNAUTHORIZED_ACQUISITION",
+      "module": null,
+      "title": "Sleep-EDF SC4001E0 PSG",
+      "sha256": null,
+      "rights": null,
+      "scope": null,
+      "review": "SOURCE_ACQUISITION_PENDING",
+      "reason": "Original transfer incomplete; existing partial cannot be promoted; fresh exact-source acquisition/recovery authority required."
+    },
+    {
+      "id": "sleep-edfx-SC4001EC-Hypnogram",
+      "category": "E_UNAVAILABLE_OR_UNAUTHORIZED_ACQUISITION",
+      "module": null,
+      "title": "Sleep-EDF SC4001EC Hypnogram",
+      "sha256": null,
+      "rights": null,
+      "scope": null,
+      "review": "SOURCE_ACQUISITION_PENDING",
+      "reason": "Not requested after PSG failure; no accepted original annotation or paired card."
+    },
+    {
+      "id": "ptt-ppg",
+      "category": "E_UNAVAILABLE_OR_UNAUTHORIZED_ACQUISITION",
+      "module": null,
+      "title": "Pulse Transit Time PPG",
+      "sha256": null,
+      "rights": null,
+      "scope": null,
+      "review": "SOURCE_ACQUISITION_PENDING",
+      "reason": "Exact file/use/size/group metadata review and separate acquisition approval required."
+    },
+    {
+      "id": "radlab-BPD",
+      "category": "E_UNAVAILABLE_OR_UNAUTHORIZED_ACQUISITION",
+      "module": null,
+      "title": "RadLab BPD/BioSentinel metadata",
+      "sha256": null,
+      "rights": null,
+      "scope": null,
+      "review": "SOURCE_ACQUISITION_PENDING",
+      "reason": "Retained oversized JSON and HTTP500 HTML reviews did not yield a complete approved original; no current availability claim."
+    },
+    {
+      "id": "OSD-575",
+      "category": "E_UNAVAILABLE_OR_UNAUTHORIZED_ACQUISITION",
+      "module": null,
+      "title": "Named OSD-575 study metadata",
+      "sha256": null,
+      "rights": null,
+      "scope": null,
+      "review": "SOURCE_ACQUISITION_PENDING",
+      "reason": "Catalogue only; specific metadata, rights, release and payload not acquired. OSD-1 is not a substitute."
+    },
+    {
+      "id": "OSD-656",
+      "category": "E_UNAVAILABLE_OR_UNAUTHORIZED_ACQUISITION",
+      "module": null,
+      "title": "Named OSD-656 study metadata",
+      "sha256": null,
+      "rights": null,
+      "scope": null,
+      "review": "SOURCE_ACQUISITION_PENDING",
+      "reason": "Catalogue only; specific metadata, rights, release and payload not acquired. OSD-1 is not a substitute."
+    }
+  ],
+  "N08": "Synthetic verified windows/quality/replay available; real-source/N06/release gates open. No new consumption activated.",
+  "N09": "Dated six-fictional-crew generator/calibration/replay and authored partitions exist; N12 consumer remains INACTIVE.",
+  "N10": "Authorized nonprivate context exists; private mood/consent/task/history excluded from generic prediction consumers.",
+  "N11": {
+    "schema_version": "astra.n11.engineering-disposition.v1",
+    "result_hash": "56464a2cffa9cddfd6700f9f1713c78993a0b66f1dfdac2edf9cba72cb7ee097",
+    "policy_hash": "ceac615c1bddcc152dba12dd0756d8a0f47a6c3f748757822d7b1d85fcb2cf6b",
+    "thresholds_retuned": false,
+    "isolation_forest": {
+      "status": "REJECTED_FOR_PROMOTION",
+      "reason": "No demonstrated benefit on inspected synthetic cases: test0TP/4FN;44false alert episodes on separately reported seen nominal days",
+      "model_hash": "d9ce01bcdf5625314df59f77ca99af0d826981292f117e11f86ff28e1015477b"
+    },
+    "ewma": {
+      "status": "RESEARCH_COMPARISON_ONLY_NOT_PROMOTED",
+      "reason": "4/4authored positive events, no proven benefit over existing TierA; no clinical validation"
+    },
+    "temporal_extension": "NOT_JUSTIFIED",
+    "human_scientific_review": "PENDING",
+    "operational_promotion_authorized": false
+  },
+  "N14_N15": "Support/relevance/scientific gates OPEN; N15 rule INACTIVE, no Qwen.",
+  "N16": "No operational integration, designated-source or worker permission; prerequisite N12 remains unsatisfied.",
+  "scientifically_qualified_N12_training_sources": [],
+  "fresh_acquisition_or_candidate_execution": false
+}

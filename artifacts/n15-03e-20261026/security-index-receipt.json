@@ -1,0 +1,33 @@
+{
+  "url": "https://security.ubuntu.com/ubuntu/dists/resolute-security/main/binary-amd64/Packages.xz",
+  "started_utc": "2026-10-26T07:42:57.761751+00:00",
+  "complete": true,
+  "prior_requests": 13,
+  "prior_body_bytes": 886923,
+  "byte_limit": 606180,
+  "time_limit_s": 15,
+  "runtime_or_package_binary": false,
+  "status": 200,
+  "headers": {
+    "Date": "Mon, 26 Oct 2026 07:42:53 GMT",
+    "Server": "Apache/2.4.58 (Ubuntu)",
+    "Last-Modified": "Sun, 25 Oct 2026 13:28:03 GMT",
+    "ETag": "\"93fe4-65eaa2ed7625c\"",
+    "Accept-Ranges": "bytes",
+    "Content-Length": "606180",
+    "Cache-Control": "max-age=0, proxy-revalidate, s-maxage=3300",
+    "Expires": "Mon, 26 Oct 2026 07:42:53 GMT",
+    "Connection": "close",
+    "Content-Type": "application/x-xz"
+  },
+  "bytes": 606180,
+  "sha256": "c9f4f90adfc5fcb1228e0aea6369c868ffa227b005782a1738ecdbb47fc46d56",
+  "decoded_bytes": 3192760,
+  "decoded_sha256": "c69a86813b52e0db2a7820d7a9c54dff5afc7a635fc58812e9928e6299beb2c5",
+  "selected_package_names": [
+    "libc6",
+    "libssl3t64",
+    "zlib1g"
+  ],
+  "elapsed_s": 1.9115200450000884
+}

@@ -1,0 +1,18 @@
+{
+  "validation": "PASS",
+  "scope": "Offline original-file, historical-artifact metadata, new-evidence hash, documentation and status checks only; not a probe retry or native compatibility result",
+  "source_prior_data_files_SHA256_preserved": 807,
+  "historical_artifact_size_mtime_preserved": 5237,
+  "new_evidence_hashes_verified": 156,
+  "markdown_documents": 9,
+  "local_links_resolved": 499,
+  "module_ids_preserved": 26,
+  "probe_outcome": "BLOCKED",
+  "native_runtime_commands": 0,
+  "model_acquisition_or_inference": false,
+  "N15": "Not Started",
+  "N16": "Not Started",
+  "all_other_module_statuses_unchanged": true,
+  "application_tests_or_browser_runs": false,
+  "resource_policy_exhausted": true
+}

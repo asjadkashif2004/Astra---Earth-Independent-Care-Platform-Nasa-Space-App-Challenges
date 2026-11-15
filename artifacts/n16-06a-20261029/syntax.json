@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "method": "node --check; sources parsed only, not imported/executed",
+  "files": {
+    "services/agent/designated-source.mjs": "a197fb2ffae55eb44cf9b65a43ad1be4ef9d8f89f2a9058744196c6fb56d751e",
+    "tests/n16-designated.test.mjs": "51c74a0266c363d7c0a4ce25345a340e08078881fd7a7dd210343c0a0cf7739b",
+    "services/agent/containment-diagnostics.mjs": "58bfbb12dc5c1ee1be5057acc26b5d7ff2d04c640e63284ffbbeccb0ba00de7b",
+    "services/agent/qualification-batch.mjs": "ae1cacad6b5da3073b24f569cb4cdf9251128c36efbf560b87430ccd9e938bc5",
+    "services/agent/designated-worker.mjs": "2fac3411b862751097cfce20a06752426dd1548cc68a85a1738dc7c303c449ad",
+    "tests/n16-containment-qa.test.mjs": "c1f083aec8b5d4dd06e1f4526eed1e6b1e29402bc0de48bdaf5b0e225a822f92"
+  },
+  "checks": 6,
+  "worker_executed": false
+}

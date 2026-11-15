@@ -1,0 +1,43 @@
+{
+  "url": "https://physionet.org/files/bidmc/1.0.0/bidmc_csv/bidmc_01_Numerics.csv",
+  "started_at": "2026-10-23T15:26:40.660305+00:00",
+  "requests": 1,
+  "maximum_bytes": 65536,
+  "deadline_ms": 15000,
+  "publisher_checksum_status": "Optional exact SHA256SUMS metadata review timed out;not retried;no publisher-checksum verification claimed.",
+  "completed_at": "2026-10-23T15:26:49.030133+00:00",
+  "status": 200,
+  "content_type": "text/plain; charset=utf-8",
+  "bytes": 7644,
+  "sha256": "27d43794cf2e7150db10e8bfe61d2bfdb26873a8f1629ffc5fbee5c9a4eb6ef5",
+  "etag": "\"5b2a8bbd-1ddc\"",
+  "complete": true,
+  "header": [
+    "Time [s]",
+    " HR",
+    " PULSE",
+    " RESP",
+    " SpO2"
+  ],
+  "rows": 481,
+  "first_time": "0",
+  "last_time": "480",
+  "missing_tokens": [
+    "NaN"
+  ],
+  "license_notice": {
+    "url": "https://physionet.org/files/bidmc/1.0.0/LICENSE",
+    "bytes": 939,
+    "sha256": "76576a17b505dce71773415a18e965982bc8c0c9a60da71f1adb9df7644332a0",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "started_at": "2026-10-23T15:25:29.375753+00:00",
+    "completed_at": "2026-10-23T15:25:32.381342+00:00",
+    "file": "data/scientific/bidmc/source-notices/LICENSE"
+  },
+  "publisher_checksum_review": {
+    "url": "https://physionet.org/files/bidmc/1.0.0/SHA256SUMS.txt",
+    "outcome": "15-second deadline while reading;no partial bytes saved;no retry",
+    "publisher_checksum_verified": false
+  }
+}

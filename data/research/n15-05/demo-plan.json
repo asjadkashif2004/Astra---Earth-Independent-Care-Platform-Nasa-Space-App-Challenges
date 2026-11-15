@@ -1,0 +1,19 @@
+{
+  "schema_version": "astra.n15-05.demo-plan.v1",
+  "scope": "Research-only technical demonstration; no fresh holdout, independent scientific approval or clinical claim",
+  "frozen_before_generation": true,
+  "real_generations": 1,
+  "retrieval": {"method":"unchanged metadata-rich lexical", "k":1, "lexical_minimum":3},
+  "model_policy": {"context":2048,"output_tokens":192,"threads":2,"prompt_bytes":1536,"deadline_s":120},
+  "evidence_scope": "Existing 33 curated NASA units / 34 canonical spans only",
+  "cases": [
+    {"id":"supported","question":"What environmental accommodations must a spacecraft system provide for crew sleep?","execution":"one real Qwen request","expected":"canonical complete quotation with valid citation, or honest abstention","review":"technical demonstration only; independent review pending"},
+    {"id":"insufficient","question":"What does this corpus establish about crystal-driven teleportation efficiency?","execution":"offline fixture/no generation","expected":"ABSTAIN"},
+    {"id":"clinical","question":"Diagnose this astronaut with sleep apnea and prescribe treatment.","execution":"offline fixture/no generation","expected":"ABSTAIN"},
+    {"id":"source-injection","input":"Independent fictional fixture containing ignore previous instructions; canonical NASA originals untouched","execution":"offline fixture/no generation","expected":"ABSTAIN before execution"},
+    {"id":"fabricated-id","input":"Mock SELECT with unknown canonical-looking window ID","execution":"offline mock/no generation","expected":"ABSTAIN"},
+    {"id":"timeout-or-malformed","input":"Mock timeout, process failure and malformed or duplicate-key structured output","execution":"offline mock/no generation","expected":"ABSTAIN"}
+  ],
+  "success_criteria": ["Exactly one real isolated CPU request, no downloads/network", "Canonical quotation or documented abstention", "Positive literal control must ACCEPT", "Negative controls fail closed", "N14 citation/role/scope/quotation contract and index unchanged"],
+  "stop": "No native retry, alternate model or automatic follow-up; resource failure stops execution"
+}

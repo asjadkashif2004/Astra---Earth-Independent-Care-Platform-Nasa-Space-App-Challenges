@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "scope": "Four latest documentation sections;batch/outcome hashes;incremental checkpoint/count/status consistency only",
+  "documents": [
+    "docs/N04_P01.md",
+    "docs/N04_ACCEPTANCE.md",
+    "docs/MODULE_TRACKER.md",
+    "docs/SESSION_HANDOFF.md"
+  ],
+  "local_links_checked": 15,
+  "accepted": 13,
+  "remaining": 11,
+  "newly_verified_values": 2400,
+  "full_test_suite_rerun": false,
+  "additional_browser_trials": 0
+}

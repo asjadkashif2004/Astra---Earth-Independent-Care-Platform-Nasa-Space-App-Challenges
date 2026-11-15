@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<link rel="stylesheet" href="js/extjs-4.1.1/resources/css/ext-all.css" type="text/css" media="all">
+
+<title>obj2FMA</title>
+<style>
+* {
+	font-size:12px;
+	font-family: tahoma, arial, verdana, sans-serif;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+table {
+	table-layout: fixed;
+	border-collapse: collapse;
+	width: 100%;
+	margin-bottom: 2px;
+}
+tr>td {
+	vertical-align: top;
+}
+tr.head>td {
+	text-align: center;
+	font-weight: bold;
+	background-color: #cccccc;
+}
+td {
+	padding: 2px;
+}
+tr:nth-child(odd) {
+	background-color: #f0f0f0;
+}
+.row_number {
+	width: 44px;
+	text-align: right;
+	background-color: #cccccc;
+	-moz-user-select:-moz-none;
+	-khtml-user-select:none;
+	-webkit-user-select:none;
+	display: none;
+}
+.art_id {
+	width: 70px;
+	max-width: 70px;
+}
+.rep_id {
+	width: 70px;
+	max-width: 70px;
+}
+.cdi_name {
+	width: 70px;
+	max-width: 70px;
+}
+
+</style>
+</head>
+<body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/extjs-4.1.1/ext-all.js"></script>
+<script type="text/javascript"><!--
+Ext.BLANK_IMAGE_URL = "js/extjs-4.1.1/resources/themes/images/default/tree/s.gif";
+Ext.Loader.setConfig({enabled: true});
+Ext.require([
+	'*'
+]);
+Ext.onReady(function() {
+	Ext.getBody().load({
+		ajaxOptions: {
+			timeout: 300000
+		},
+		url:'./get-info.cgi',
+		params:{"cmd":"upload-all-list","load":1,"md_abbr":"bp3d","md_id":1,"mr_id":1,"mv_id":6,"title":"obj2FMA","tree":"isa","version":"4.3"},
+		loadMask: 'Making table. It may take a while ...',
+		success:function(self,response,options){
+			if(window.console && window.console.log){
+				console.log("success()");
+				console.log(this);
+				console.log(response);
+				console.log(options);
+			}
+		},
+		failure:function(self,response,options){
+			if(window.console && window.console.log){
+				console.log("failure()");
+				console.log(this);
+				console.log(response);
+				console.log(options);
+			}
+		}
+	});
+});
+</script>
+</body>
+</html>

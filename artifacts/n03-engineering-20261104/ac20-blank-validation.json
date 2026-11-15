@@ -1,0 +1,25 @@
+{
+  "schema_version": "astra.ac20.validation.v1",
+  "status": "NOT_VERIFIED",
+  "issues": [
+    "Missing device field: id",
+    "Missing device field: cpu",
+    "Missing device field: gpu",
+    "Missing device field: gpu_driver",
+    "Missing device field: os",
+    "Missing device field: browser",
+    "Missing device field: power_mode",
+    "Missing device field: thermal_conditions",
+    "Missing device field: host_placement",
+    "RAM bytes must be a positive integer",
+    "Owner minimum-machine designation is absent or incomplete",
+    "A visible physical browser is required",
+    "Presented-frame evidence required; draw submissions and rAF are diagnostics",
+    "DPR and native zoom must be recorded",
+    "Quality-reduced profile must retain continuous animation",
+    "Six-crew declared 60 scalar/s workload without suppression is required",
+    "Declare all relevant active scenes without duplicates"
+  ],
+  "physical_certification": false,
+  "limitations": "Validates submitted structure and arithmetic only. Does not authenticate human identity, trace authenticity, machine designation, scene completeness, physical presentation or owner acceptance. N06 integrated evidence and N26 final revalidation remain separate."
+}

@@ -1,0 +1,120 @@
+{
+  "status": "failed",
+  "started_at": "2026-10-30T20:11:09.495Z",
+  "checks": [
+    {
+      "name": "N09 actual Scenario Lab, empty state and malformed configuration feedback",
+      "status": "passed"
+    },
+    {
+      "name": "N09 real N08 synthetic import and verified waveform source selection",
+      "status": "passed"
+    },
+    {
+      "name": "N09 genuine multi-crew startup, canonical generation and actual N02 warning/UNKNOWN",
+      "status": "passed"
+    },
+    {
+      "name": "N09 actual bounded waveform display preserves original source and gaps",
+      "status": "passed"
+    },
+    {
+      "name": "N09 per-crew and run pause/resume keep source clock and staleness honest",
+      "status": "passed"
+    },
+    {
+      "name": "N09 historical source/knowledge cutoffs and append-only exclusions",
+      "status": "passed"
+    },
+    {
+      "name": "N09 dated calibration and consent-preserving N10 context are actual reads",
+      "status": "passed"
+    },
+    {
+      "name": "N09 stop/reset and genuine multiday completion with source-bound N10 records",
+      "status": "passed"
+    },
+    {
+      "name": "N09 real restart recovers exact committed frames without replay or duplicate sources",
+      "status": "passed"
+    },
+    {
+      "name": "N09 API failure/recovery and permission/privacy denial",
+      "status": "failed",
+      "reason": "DOM condition timed out: document.querySelector(\"#n09-status\")?.textContent.startsWith(\"Run unavailable\")"
+    }
+  ],
+  "screenshots": [
+    "n09-multi-crew.png",
+    "n09-waveform.png",
+    "n09-multiday.png",
+    "failure-10.png"
+  ],
+  "console_errors": [],
+  "http_errors": [
+    {
+      "url": "http://127.0.0.1:49163/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    },
+    {
+      "url": "http://127.0.0.1:49163/v1/scenarios/cardiorespiratory-drift/start",
+      "status": 422,
+      "stage": "N09 actual Scenario Lab, empty state and malformed configuration feedback"
+    },
+    {
+      "url": "http://127.0.0.1:49163/v1/scenarios/runs/d0e46580-ff2b-4622-8c75-6cd369c51f1d",
+      "status": 503,
+      "stage": "N09 API failure/recovery and permission/privacy denial"
+    }
+  ],
+  "viewports": [],
+  "caveats": [
+    "No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation.",
+    "Pointer/keyboard/rendered DOM checks and screenshots supplement human visual, text-contrast and assistive-technology review; they do not establish WCAG conformance."
+  ],
+  "N09_browser_start": {
+    "pid": 10780,
+    "source": "Existing installed Chrome, disposable profile",
+    "Node": "v24.21.0",
+    "Node_memory": {
+      "rss": 76107776,
+      "heapTotal": 19701760,
+      "heapUsed": 12754944,
+      "external": 4325031,
+      "arrayBuffers": 212131
+    },
+    "at": "2026-10-30T20:11:09.950Z"
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/156.0.8078.74",
+    "revision": "@d331de35ca8ab1358c7a17e4bd41627d55eaef51",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "jsVersion": "15.6.75.25"
+  },
+  "N09_recovery": {
+    "run_id": "d0e46580-ff2b-4622-8c75-6cd369c51f1d",
+    "frames": 73,
+    "frame_hash": "4b258710296b2b64dfa916517aef1bcebefccc67a5d016d407404adf458c9658",
+    "observation_count": 4902,
+    "replayed_ticks": 0
+  },
+  "reason": "DOM condition timed out: document.querySelector(\"#n09-status\")?.textContent.startsWith(\"Run unavailable\")",
+  "N09_cleanup": {
+    "application_closed": true,
+    "browser_exited": true,
+    "profile_removed": true,
+    "database_directory_removed": true,
+    "Node_memory": {
+      "rss": 249430016,
+      "heapTotal": 157216768,
+      "heapUsed": 16627272,
+      "external": 5272055,
+      "arrayBuffers": 1230420
+    },
+    "N16_designated_starts": 0,
+    "model_executions": 0
+  },
+  "finished_at": "2026-10-30T20:11:45.549Z"
+}

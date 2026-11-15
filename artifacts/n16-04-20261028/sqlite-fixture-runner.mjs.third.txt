@@ -1,0 +1,230 @@
+import { spawn } from 'node:child_process';
+import { readFile,writeFile,mkdir,mkdtemp,copyFile,lstat,readdir,realpath,open,rm } from 'node:fs/promises';
+import { join,dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { randomUUID } from 'node:crypto';
+import { constants as C } from 'node:fs';
+import { requirePermission } from '../../packages/contracts.mjs';
+import { safeDirectory,readAt } from './read-context.mjs';
+import { ExecutionTrace,recoverTrace } from './execution-trace.mjs';
+import { parseJSON,plain,stable,sha,fail,validateCall,VERSION,TOOLS } from './read-contract.mjs';
+import { SQLITE_EDITION,PROFILES,CAPS,QUERIES,WRITER_PLAN,rowsFor,projectRows } from './sqlite-fixture-contract.mjs';
+
+const roots=new WeakMap(),sources=new WeakMap();let activeReader=false;
+const PROJECT=fileURLToPath(new URL('../../',import.meta.url));
+export const EVIDENCE=join(PROJECT,'artifacts/n16-04-20261028');
+const sourceCode=['services/agent/sqlite-fixture-process.mjs','services/agent/sqlite-fixture-contract.mjs','services/agent/read-contract.mjs','packages/contracts.mjs'];
+const check=(x,code)=>{if(!x)fail(code);};
+export async function inspectFiles(dir){
+  const d=await safeDirectory(dir);
+  try{
+    const names=await readdir(`/proc/self/fd/${d.fd}`);check(names.every(n=>['source.sqlite','source.sqlite-wal','source.sqlite-shm'].includes(n)),'UNEXPECTED_SOURCE_MEMBER');
+    const result={};for(const name of ['source.sqlite','source.sqlite-wal','source.sqlite-shm']){
+      if(!names.includes(name)){result[name]=null;continue;}
+      const s=await lstat(d.at(name));check(s.isFile()&&!s.isSymbolicLink()&&s.nlink===1,'UNSAFE_SOURCE_FILE');
+      check(s.size<=(name.endsWith('-wal')?CAPS.wal:CAPS.db),'SOURCE_SIZE_LIMIT');
+      const f=await open(d.at(name),C.O_RDONLY|C.O_NOFOLLOW|C.O_NONBLOCK);try{const a=await f.stat();check(a.ino===s.ino&&a.dev===s.dev&&a.isFile(),'SOURCE_CHANGED');const b=await f.readFile();check(b.length<=CAPS.wal,'SOURCE_SIZE_LIMIT');
+        const z=await f.stat();check(a.ino===s.ino&&a.dev===s.dev&&z.size===b.length,'SOURCE_CHANGED');result[name]={bytes:b.length,sha256:sha(b)};
+      }finally{await f.close();}
+    }return result;
+  }finally{await d.close();}
+}
+async function countBytes(path){const root=await lstat(path);check(root.isDirectory()&&!root.isSymbolicLink(),'UNSAFE_ACCOUNTING_ROOT');let total=root.blocks*512;
+  for(const e of await readdir(path,{withFileTypes:true})){
+    const p=join(path,e.name);if(e.isSymbolicLink())continue;
+    try{if(e.isDirectory())total+=await countBytes(p);else if(e.isFile()){const st=await lstat(p);total+=Math.max(st.size,st.blocks*512);}}
+    catch(error){if(error.code!=='ENOENT')throw error;}
+  }return total;
+}
+async function owned(pid){const found=[];async function visit(id){
+  try{const status=await readFile(`/proc/${id}/status`,'utf8');const hwm=Number(/^VmHWM:\s+(\d+)/m.exec(status)?.[1]??0)*1024;
+    const stat=await readFile(`/proc/${id}/stat`,'utf8'),birth=stat.slice(stat.lastIndexOf(')')+2).split(' ')[19];
+    found.push({pid:id,hwm,birth});const children=await readFile(`/proc/${id}/task/${id}/children`,'utf8');for(const child of children.trim().split(/\s+/).filter(Boolean))await visit(Number(child));
+  }catch(e){if(!['ENOENT','ESRCH'].includes(e.code))throw e;}}
+  await visit(pid);return found;
+}
+async function appendEvidence(root,value){const f=await open(join(root,'resources.jsonl'),'a');try{await f.write(stable({...value,at:new Date().toISOString()})+'\n');await f.sync();}finally{await f.close();}}
+async function verifyRoot(r){
+  check(/^\/var\/tmp\/astra-n16-04-[A-Za-z0-9]+$/.test(r.path)&&await realpath(r.path)===r.path,'UNAPPROVED_SCRATCH_ROOT');
+  const st=await lstat(r.path);check(!st.isSymbolicLink()&&st.ino===r.ino&&st.dev===r.dev,'SCRATCH_ROOT_CHANGED');
+  const dir=await safeDirectory(r.path);try{check((await readAt(dir.fd,'owner.json',4096)).toString()===r.owner,'SCRATCH_OWNER_CHANGED');}finally{await dir.close();}
+}
+async function verifyManifest(r){const dir=await safeDirectory(r.path);try{check((await readAt(dir.fd,'manifest.json',65536)).toString()===r.manifestText,'MANIFEST_TAMPERED');}finally{await dir.close();}}
+function sandboxArgs(fd,write){
+  const args=['--unshare-all','--die-with-parent','--new-session','--cap-drop','ALL','--clearenv','--setenv','PATH','/usr/bin',
+    '--setenv','PYTHONDONTWRITEBYTECODE','1','--ro-bind','/usr','/usr','--ro-bind','/lib','/lib','--ro-bind','/lib64','/lib64',
+    '--dir','/runtime','--ro-bind',process.execPath,'/runtime/node','--dir','/code',
+    write?'--bind-fd':'--ro-bind-fd','3','/fixture'];
+  for(const p of sourceCode)args.push('--ro-bind',join(PROJECT,p),'/code/'+p);
+  // Use the inherited directory only for mounting; close it BEFORE Node to prevent an fd-based read-only mount bypass.
+  args.push('--proc','/proc','--dev','/dev','--remount-ro','/','--chdir','/', '/usr/bin/python3','-c',
+    'import os; os.closerange(3,256); os.execv("/runtime/node",["/runtime/node","--jitless","--max-old-space-size=64","/code/services/agent/sqlite-fixture-process.mjs"]+__import__("sys").argv[1:])');
+  return args;
+}
+async function startProcess(token,entry,mode,payload,{deadline=CAPS.toolMs,deadlineAt=performance.now()+deadline,onEvent}={}){
+  const r=roots.get(token);check(r&&entry.root===r,'UNTRUSTED_SCRATCH_CONTEXT');await verifyRoot(r);
+  if(r.manifest)for(const [file,digest] of Object.entries(r.manifest.code_sha256))check(sha(await readFile(join(PROJECT,file)))===digest,'PROGRAM_HASH_MISMATCH');
+  check(['build','writer','read','negative','timeout'].includes(mode),'PROCESS_MODE_FORBIDDEN');
+  const source=await safeDirectory(entry.path),before=performance.now();
+  let child,lines='',stderr='',settled=false,reason=null,peak=0,maxDisk=0,sampling=Promise.resolve(),killTimer;
+  const rows=[],events=[],waiters=[],seen=new Map();
+  const sample=async()=>{
+    const pids=child?await owned(child.pid):[];for(const p of pids)seen.set(p.pid,p.birth);peak=Math.max(peak,...pids.map(p=>p.hwm),0);
+    let disk=await countBytes(EVIDENCE);for(const path of r.countRoots)disk+=await countBytes(path);maxDisk=Math.max(maxDisk,disk);
+    await appendEvidence(r.path,{mode,pid:child?.pid??null,elapsed_ms:performance.now()-before,owned:pids,counted_bytes:disk});
+    if(peak>CAPS.rss)stop('RSS_LIMIT');if(disk>CAPS.storage)stop('STORAGE_LIMIT');
+  };
+  const kill=signal=>{try{process.kill(-child.pid,signal);}catch(e){if(e.code!=='ESRCH')throw e;}};
+  const stop=code=>{if(reason||settled)return;reason=code;if(!child?.pid)return;kill('SIGTERM');killTimer=setTimeout(()=>kill('SIGKILL'),CAPS.cleanupMs);};
+  let resolveDone;
+  const done=new Promise(resolve=>resolveDone=resolve);
+  try{
+    await sample();if(reason)fail(reason);
+    child=spawn('/usr/bin/bwrap',[...sandboxArgs(source.fd,['build','writer'].includes(mode)),mode],
+      {detached:true,stdio:['pipe','pipe','pipe',source.fd],env:{PATH:'/usr/bin'}});
+    const interval=setInterval(()=>{sampling=sampling.then(sample).catch(()=>stop('RESOURCE_ACCOUNTING_FAILED'));},20);
+    const timer=setTimeout(()=>stop('TIMEOUT'),Math.max(1,deadlineAt-performance.now()));
+    child.stdout.on('data',chunk=>{
+      lines+=chunk; if(Buffer.byteLength(lines)>CAPS.result){stop('OUTPUT_LIMIT');return;}
+      while(lines.includes('\n')){const n=lines.indexOf('\n'),line=lines.slice(0,n);lines=lines.slice(n+1);
+        try{const v=parseJSON(line,CAPS.result);events.push(v);rows.push(v);while(waiters.length&&rows.length)waiters.shift()(rows.shift());
+          if(onEvent)Promise.resolve(onEvent(v)).catch(()=>stop('EVENT_HANDLER_FAILED'));
+        }catch{stop('INVALID_PROCESS_OUTPUT');}}
+    });
+    child.stderr.on('data',b=>{stderr+=b;if(Buffer.byteLength(stderr)>8192)stop('STDERR_LIMIT');});
+    child.stdin.on('error',()=>{});
+    child.once('error',()=>stop('PROCESS_START_FAILED'));
+    child.once('close',async(code,signal)=>{
+      clearTimeout(timer);clearTimeout(killTimer);clearInterval(interval);
+      let remaining=0;
+      try{await sampling;await sample();for(const [pid,birth] of seen){const p=await owned(pid);if(p[0]?.birth===birth)remaining++;}if(remaining)reason='PROCESS_CLEANUP_FAILED';
+        if(lines.trim())reason='PARTIAL_OUTPUT';
+      }catch{reason='RESOURCE_ACCOUNTING_FAILED';}
+      settled=true;while(waiters.length)waiters.shift()(null);try{await source.close();}catch{reason='PROCESS_CLEANUP_FAILED';}
+      const result={code,signal,reason,events,stderr,elapsed_ms:performance.now()-before,peak_observed_RSS:peak,max_counted_bytes:maxDisk,owned_remaining:remaining};
+      r.processes.delete(handle);r.measurements.push(result);try{await appendEvidence(r.path,{mode,finished:result});}catch{result.reason='RESOURCE_ACCOUNTING_FAILED';}resolveDone(result);
+    });
+    const handle={send:v=>child.stdin.write(stable(v)+'\n'),end:()=>child.stdin.end(),stop,
+      next:()=>rows.length?Promise.resolve(rows.shift()):settled?Promise.resolve(null):new Promise(resolve=>waiters.push(resolve)),done};
+    r.processes.add(handle);handle.send(payload);return handle;
+  }catch(e){await source.close();throw e;}
+}
+export async function createQualification(){
+  await mkdir(EVIDENCE,{recursive:true});const path=await mkdtemp('/var/tmp/astra-n16-04-'),st=await lstat(path);
+  const registry=join(EVIDENCE,'scratch-roots.json');let countRoots=[];
+  try{countRoots=JSON.parse(await readFile(registry,'utf8'));}catch(e){if(e.code!=='ENOENT')throw e;}
+  check(Array.isArray(countRoots)&&countRoots.every(p=>/^\/var\/tmp\/astra-n16-04-[A-Za-z0-9]+$/.test(p)),'UNSAFE_ROOT_REGISTRY');
+  countRoots.push(path);await writeFile(registry,stable(countRoots)+'\n');await writeFile(join(EVIDENCE,'latest-root.txt'),path+'\n');
+  const owner=stable({edition:SQLITE_EDITION,id:randomUUID(),synthetic:true})+'\n';await writeFile(join(path,'owner.json'),owner,{mode:0o600});
+  for(const d of ['originals','copies','traces'])await mkdir(join(path,d),{mode:0o700});
+  const token=Object.freeze({}),r={path,ino:st.ino,dev:st.dev,owner,countRoots,processes:new Set(),measurements:[],manifest:null};roots.set(token,r);
+  const code_sha256={};for(const file of sourceCode)code_sha256[file]=sha(await readFile(join(PROJECT,file)));
+  const manifest={schema_version:SQLITE_EDITION,synthetic:true,as_of:'2026-11-14T11:00:00.000Z',query_sha256:sha(stable(QUERIES)),code_sha256,writer_plan:WRITER_PLAN,fixtures:{}};
+  for(const profile of PROFILES){const p=join(path,'originals',profile);await mkdir(p);
+    const entry={path:p,profile,root:r};const h=await startProcess(token,entry,'build',{profile},{deadline:CAPS.runMs});h.end();const result=await h.done;
+    if(!(result.code===0&&!result.reason&&result.events[0]?.event==='BUILT'))throw Object.assign(Error('FIXTURE_BUILD_FAILED '+stable(result)),{code:'FIXTURE_BUILD_FAILED'});
+    const files=await inspectFiles(p);manifest.fixtures[profile]={files,rows_sha256:sha(stable(rowsFor(profile,0)))};
+  }
+  r.manifest=manifest;r.manifestText=stable(manifest)+'\n';await writeFile(join(path,'manifest.json'),r.manifestText,{mode:0o600});
+  await writeFile(join(path,'frozen-plan.json'),stable({edition:SQLITE_EDITION,profiles:PROFILES,queries:QUERIES,writer_plan:WRITER_PLAN,
+    caps:CAPS,controls:['normal','barrier','timeout','negative'],expected_generation:[0,1],synthetic:true})+'\n');
+  return token;
+}
+export function qualificationInfo(token){const r=roots.get(token);check(r,'UNTRUSTED_SCRATCH_CONTEXT');return {root:r.path,manifest:structuredClone(r.manifest),measurements:structuredClone(r.measurements)};}
+export async function cloneFixture(token,profile){
+  const r=roots.get(token);check(r&&PROFILES.includes(profile),'PROFILE_FORBIDDEN');await verifyRoot(r);
+  await verifyManifest(r);
+  const original=join(r.path,'originals',profile),state=await inspectFiles(original);
+  check(stable(state)===stable(r.manifest.fixtures[profile].files),'ORIGINAL_FIXTURE_TAMPERED');
+  const path=join(r.path,'copies',randomUUID());await mkdir(path);await copyFile(join(original,'source.sqlite'),join(path,'source.sqlite'));
+  const entry={path,profile,root:r,generation:0,mode:'sealed',files:await inspectFiles(path)},source=Object.freeze({});sources.set(source,entry);return source;
+}
+export function sourceInfo(source){const s=sources.get(source);check(s,'UNTRUSTED_SOURCE');return {path:s.path,profile:s.profile,generation:s.generation};}
+// Trusted qualification helper, not a tool/path option. Copies only an already owned, quiescent test source.
+export async function deriveFixture(token,source,omit=[]){
+  const s=sources.get(source),r=roots.get(token);check(s&&r&&s.root===r&&Array.isArray(omit)&&omit.every(n=>['source.sqlite','source.sqlite-wal','source.sqlite-shm'].includes(n)),'DERIVATION_FORBIDDEN');
+  const before=await inspectFiles(s.path),path=join(r.path,'copies',randomUUID());await mkdir(path);
+  const d=await safeDirectory(s.path);try{for(const [name,value] of Object.entries(before))if(value&&!omit.includes(name))await writeFile(join(path,name),await readAt(d.fd,name,CAPS.wal));}finally{await d.close();}
+  check(stable(before)===stable(await inspectFiles(s.path)),'CONCURRENT_COPY_REJECTED');
+  const tokenOut=Object.freeze({});sources.set(tokenOut,{path,profile:s.profile,generation:s.generation,root:r,mode:'sealed',files:await inspectFiles(path)});return tokenOut;
+}
+export async function writer(token,source,{busy=false}={}){
+  const s=sources.get(source);check(s&&s.root===roots.get(token),'UNTRUSTED_SOURCE');
+  check(!s.writerActive&&(busy||s.profile==='elevated'),'WRITER_PROFILE_FORBIDDEN');s.writerActive=true;
+  const h=await startProcess(token,s,'writer',{profile:s.profile,busy},{deadline:CAPS.runMs});
+  const ready=await h.next();check(ready?.event==='WRITER_READY','WRITER_START_FAILED');s.mode='wal';s.files=await inspectFiles(s.path);
+  if(!busy)check(s.files['source.sqlite-wal']&&s.files['source.sqlite-shm'],'WRITER_SIDECARS_MISSING');
+  return {async step(command){check(['commit','checkpoint','truncate'].includes(command),'WRITER_COMMAND_FORBIDDEN');h.send({command});const row=await h.next();check(row?.event==='WRITER_STEP','WRITER_STEP_FAILED');
+      if(command==='commit')s.generation=1;s.files=await inspectFiles(s.path);return {...row,files:s.files};},
+    async close(){h.send({command:'exit'});h.end();const result=await h.done;s.files=await inspectFiles(s.path);s.mode='sealed';s.writerActive=false;return result;},handle:h};
+}
+async function readSQL(token,source,principal,input,{signal,control='normal',onSnapshot}={}){
+  const deadlineAt=performance.now()+CAPS.toolMs;
+  const call=validateCall(input);requirePermission(principal,'read',call.args.crew_id);
+  const s=sources.get(source),r=roots.get(token);check(s&&r&&s.root===r,'UNTRUSTED_SOURCE');check(!activeReader,'READER_ALREADY_ACTIVE');activeReader=true;
+  try{await verifyRoot(r);
+  await verifyManifest(r);
+  const current=await inspectFiles(s.path);check(stable(current)===stable(s.files),'SOURCE_FILES_TAMPERED');
+  check(['normal','barrier','timeout','negative'].includes(control),'CONTROL_FORBIDDEN');
+  if(signal?.aborted)fail('CANCELLED');
+  const generation=s.generation,mode=control==='negative'?'negative':control==='timeout'?'timeout':'read';
+  const h=await startProcess(token,s,mode,{profile:s.profile,generation,call,barrier:control==='barrier'},
+    {deadlineAt,onEvent:async v=>{if(v.event==='READ_SNAPSHOT'){if(onSnapshot)await onSnapshot();h.send({command:'continue'});h.end();}}});
+  const cancel=()=>h.stop('CANCELLED');signal?.addEventListener('abort',cancel,{once:true});if(signal?.aborted)cancel();
+  if(control!=='barrier')h.end();
+  const result=await h.done;signal?.removeEventListener('abort',cancel);
+  if(result.reason)fail(result.reason);if(performance.now()>deadlineAt)fail('TIMEOUT');if(result.code!==0)fail(result.events.find(e=>e.event==='FAILED')?.code??'SQL_READ_FAILED');
+  const v=result.events.find(e=>e.event===(mode==='negative'?'NEGATIVE_CONTROLS':'RESULT'));check(v,'MISSING_SQL_RESULT');
+  if(mode==='negative')return {...v,process:result};
+  check(plain(v)&&v.receipt.readOnly===true&&v.receipt.actual_sql_queries>=2&&v.receipt.transaction_ms<=CAPS.transactionMs,'INVALID_SQL_RECEIPT');
+  const rows=rowsFor(s.profile,generation),selected=call.tool==='get_open_risk_events'?rows.risks.filter(x=>x.crew_id===call.args.crew_id&&x.status==='open').slice(0,call.args.limit+1)
+    :call.args.metrics.map(m=>rows[call.tool==='get_personal_baseline'?'baselines':'observations'].find(x=>x.crew_id===call.args.crew_id&&x.metric===m)??null);
+  check(stable(v.result)===stable(projectRows(s.profile,generation,call,selected))&&v.receipt.selected_rows_sha256===sha(stable(selected)),'INVALID_SQL_RESULT');
+  return {...v,process:result};
+  }finally{activeReader=false;}
+}
+export async function readTool(token,source,principal,input,options={}){
+  // Every public single-call execution has a durable ledger; native negative controls are explicitly labeled.
+  const call=validateCall(input);requirePermission(principal,'read',call.args.crew_id);if(options.signal?.aborted)fail('CANCELLED');
+  const r=roots.get(token),s=sources.get(source);check(r&&s?.root===r,'UNTRUSTED_SOURCE');
+  const trace=await ExecutionTrace.create({source_kind:'scratch_sqlite',edition:SQLITE_EDITION,synthetic:true,principal,
+    fixture_id:s.profile,crew_id:call.args.crew_id,qualification_control:options.control??'normal',manifest_sha256:sha(r.manifestText)},
+    {root:join(r.path,'traces'),fault:options.traceFault});
+  try{
+    await trace.append('CALL_REQUESTED',{call_id:'call-01'});
+    await trace.append('CALL_VALIDATED',{call_id:'call-01',tool:call.tool,args:call.args});
+    await trace.append('CALL_STARTED',{call_id:'call-01',tool:call.tool});
+    let v;
+    try{v=await readSQL(token,source,principal,call,options);}
+    catch(error){if(trace.failed)throw error;
+      await trace.append(error.code==='TIMEOUT'?'CALL_TIMEOUT':error.code==='CANCELLED'?'CALL_CANCELLED':'CALL_FAILED',{call_id:'call-01',code:error.code??'SQL_READ_FAILED'});
+      await trace.append('RUN_ENDED',{status:'STOPPED'});throw error;}
+    const value={run_id:trace.id,call_id:'call-01',execution_status:'COMPLETED',...(v.result??{tool:call.tool,data_status:'UNKNOWN',qualification_control:true,denied:v.denied}),receipt:v.receipt??null};
+    const result=await trace.result('call-01',value);await trace.append('CALL_COMPLETED',{call_id:'call-01',tool:call.tool,result,data_status:value.data_status});
+    await trace.append('RUN_ENDED',{status:'COMPLETED'});return {...v,trace_id:trace.id};
+  }finally{await trace.close();}
+}
+export async function executeFour(token,source,principal,crew,{fault,signal}={}){
+  const r=roots.get(token),s=sources.get(source);check(r&&s?.root===r,'UNTRUSTED_SOURCE');requirePermission(principal,'read',crew);
+  const trace=await ExecutionTrace.create({source_kind:'scratch_sqlite',edition:SQLITE_EDITION,synthetic:true,principal,crew_id:crew,
+    fixture_id:s.profile,manifest_sha256:sha(r.manifestText)},{root:join(r.path,'traces'),fault});
+  const results=[],start=performance.now();
+  try{for(const [i,tool] of TOOLS.entries()){
+    check(performance.now()-start<CAPS.runMs,'WORKFLOW_TIMEOUT');const callId=`call-0${i+1}`;
+    const call={schema_version:VERSION,tool,args:tool==='get_open_risk_events'?{crew_id:crew,limit:20}:{crew_id:crew,metrics:['heart_rate','respiratory_rate','spo2']}};
+    await trace.append('CALL_REQUESTED',{call_id:callId});validateCall(call);requirePermission(principal,'read',crew);
+    await trace.append('CALL_VALIDATED',{call_id:callId,tool,args:call.args});await trace.append('CALL_STARTED',{call_id:callId,tool});
+    try{const v=await readSQL(token,source,principal,call,{signal}),value={run_id:trace.id,call_id:callId,execution_status:'COMPLETED',...v.result,receipt:v.receipt};
+      const ref=await trace.result(callId,value);await trace.append('CALL_COMPLETED',{call_id:callId,tool,result:ref,data_status:value.data_status});results.push(value);
+    }catch(error){if(trace.failed)throw error;await trace.append(error.code==='TIMEOUT'?'CALL_TIMEOUT':error.code==='CANCELLED'?'CALL_CANCELLED':'CALL_FAILED',{call_id:callId,code:error.code});
+      results.push({execution_status:error.code??'FAILED',data_status:'UNKNOWN'});break;}
+  }
+    await trace.append('RUN_ENDED',{status:results.length===4&&results.every(x=>x.execution_status==='COMPLETED')?'COMPLETED':'STOPPED'});
+  }finally{await trace.close();}
+  return {run_id:trace.id,results,recovery:await recoverTrace(trace.id,{root:join(r.path,'traces')})};
+}
+export async function closeQualification(token){const r=roots.get(token);check(r,'UNTRUSTED_SCRATCH_CONTEXT');
+  for(const h of [...r.processes])h.stop('QUALIFICATION_CLOSED');await Promise.all([...r.processes].map(h=>h.done));
+  await writeFile(join(r.path,'final.json'),stable({synthetic:true,measurements:r.measurements,owned_processes:r.processes.size})+'\n');
+  return qualificationInfo(token);
+}

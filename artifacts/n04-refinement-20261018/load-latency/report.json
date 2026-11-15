@@ -1,0 +1,234 @@
+{
+  "status": "passed",
+  "started_at": "2026-10-18T07:53:44.246Z",
+  "checks": [
+    {
+      "name": "three warm usable rendered reloads and forty actual API requests under six-crew load",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    "warm-shell-0.png",
+    "warm-shell-1.png",
+    "warm-shell-2.png"
+  ],
+  "console_errors": [],
+  "http_errors": [
+    {
+      "url": "http://127.0.0.1:52948/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    }
+  ],
+  "viewports": [],
+  "caveats": [
+    "No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation.",
+    "Pointer/keyboard/rendered DOM checks and screenshots supplement human visual, text-contrast and assistive-technology review; they do not establish WCAG conformance."
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/155.0.8059.80",
+    "revision": "@43a195105613ac83c21d3f14de279f4a045c7da0",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "jsVersion": "15.5.35.23"
+  },
+  "scope": "N04 actual-browser load-latency",
+  "headed": false,
+  "measurement_source_hashes": {
+    "browser-n04.mjs": "57b58ddde549c40f1d1f28506b62863ff755a72f7da0b89edf5793f6fe0a71aa",
+    "browser-acceptance.mjs": "f3d3f5c8770b7dffc5c50e57a03cedc4ce0e462c9820174745c10eedc8d5a416",
+    "frame-evidence.mjs": "5e35f34b2993947c003afa8450b4b45693a1c3e8ff68e32b791c2d018924ff5f"
+  },
+  "runtime_source_hashes": {
+    "app.mjs": "fd072aada2d346d1e32fdf579455550e818edd60fd8405b994af11b39325d525",
+    "styles.css": "53e18065f8ee0288b07eb9a42cae162b8a28ae20d66cf4f90915e6d224439982",
+    "mission.css": "95c917f67afbd7147200ebb761bc4ebfd4c6406030576cb8399136c85700cbd0",
+    "index.html": "a9382bc9ae4b4ea593f5effafe027fc61a310aa136495ede735d34a3fd470b11",
+    "scenes.mjs": "b9ab899a261682928cc0f41c93f5a1d3b5e502a22d93ee4bfebdfa6489621cae",
+    "earth.mjs": "7fbcbac0a0289ba6855533c3f0cb03e1e0a32324f33ba7c1f2ecefe8c6dfd864",
+    "ui.mjs": "113be4436a845b04da6292254c03d04c6ecc783fa6e3f62a2e838a952eef39c1",
+    "sw.js": "7b6670aa0dce09a35996c11b135f177049b8ba46a771a7d47cefb7a2267092ac",
+    "assets/earth/manifest.json": "d33f6207264905268f08b10e679082c190af9af6dae6bd45c163153245f2d023"
+  },
+  "load_latency": {
+    "warm_shell": [
+      {
+        "dom_ready_ms": 114.40000000596046,
+        "reload_to_capture_complete_ms": 434.5713999999998
+      },
+      {
+        "dom_ready_ms": 84.20000000298023,
+        "reload_to_capture_complete_ms": 396.7434999999996
+      },
+      {
+        "dom_ready_ms": 82.79999999701977,
+        "reload_to_capture_complete_ms": 379.00300000000016
+      }
+    ],
+    "api": [
+      {
+        "status": 200,
+        "ms": 4.399999991059303
+      },
+      {
+        "status": 200,
+        "ms": 2.199999988079071
+      },
+      {
+        "status": 200,
+        "ms": 3.1000000089406967
+      },
+      {
+        "status": 200,
+        "ms": 2
+      },
+      {
+        "status": 200,
+        "ms": 3.0999999940395355
+      },
+      {
+        "status": 200,
+        "ms": 3
+      },
+      {
+        "status": 200,
+        "ms": 3.4000000059604645
+      },
+      {
+        "status": 200,
+        "ms": 2
+      },
+      {
+        "status": 200,
+        "ms": 3.0999999940395355
+      },
+      {
+        "status": 200,
+        "ms": 1.7999999970197678
+      },
+      {
+        "status": 200,
+        "ms": 2.5
+      },
+      {
+        "status": 200,
+        "ms": 1.9000000059604645
+      },
+      {
+        "status": 200,
+        "ms": 3.4000000059604645
+      },
+      {
+        "status": 200,
+        "ms": 1.699999988079071
+      },
+      {
+        "status": 200,
+        "ms": 2.7000000029802322
+      },
+      {
+        "status": 200,
+        "ms": 1.5
+      },
+      {
+        "status": 200,
+        "ms": 2.5
+      },
+      {
+        "status": 200,
+        "ms": 1.5
+      },
+      {
+        "status": 200,
+        "ms": 3.2999999970197678
+      },
+      {
+        "status": 200,
+        "ms": 2.300000011920929
+      },
+      {
+        "status": 200,
+        "ms": 3.0999999940395355
+      },
+      {
+        "status": 200,
+        "ms": 1.5999999940395355
+      },
+      {
+        "status": 200,
+        "ms": 2.5
+      },
+      {
+        "status": 200,
+        "ms": 1.4000000059604645
+      },
+      {
+        "status": 200,
+        "ms": 2.5
+      },
+      {
+        "status": 200,
+        "ms": 1.5
+      },
+      {
+        "status": 200,
+        "ms": 3.2000000029802322
+      },
+      {
+        "status": 200,
+        "ms": 1.7000000029802322
+      },
+      {
+        "status": 200,
+        "ms": 2.5
+      },
+      {
+        "status": 200,
+        "ms": 1.5999999940395355
+      },
+      {
+        "status": 200,
+        "ms": 2.7000000029802322
+      },
+      {
+        "status": 200,
+        "ms": 1.5
+      },
+      {
+        "status": 200,
+        "ms": 2.5999999940395355
+      },
+      {
+        "status": 200,
+        "ms": 1.6000000089406967
+      },
+      {
+        "status": 200,
+        "ms": 4.299999997019768
+      },
+      {
+        "status": 200,
+        "ms": 2.1000000089406967
+      },
+      {
+        "status": 200,
+        "ms": 3.699999988079071
+      },
+      {
+        "status": 200,
+        "ms": 2
+      },
+      {
+        "status": 200,
+        "ms": 3.300000011920929
+      },
+      {
+        "status": 200,
+        "ms": 2.5999999940395355
+      }
+    ],
+    "scope": "Warm local shell and rendered capture completion; actual loopback API with six-crew tick/broadcast load. Metric presentation is measured separately; no cold-start or physical scanout certificate.",
+    "api_p95_ms": 4.299999997019768
+  },
+  "finished_at": "2026-10-18T07:53:47.211Z"
+}

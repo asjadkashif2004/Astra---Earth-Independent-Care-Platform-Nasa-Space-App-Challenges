@@ -1,0 +1,46 @@
+{
+  "task": "N15-05",
+  "frozen_utc": "2026-10-27T06:51:51.584762+00:00",
+  "before_generation": true,
+  "real_generation_limit": 1,
+  "supersedes_preparation_spec_sha256": "ddeab530aa395321c0f86936ea5044ad962e4697690ebb1e5712f3666ab2d388",
+  "reason": "Pre-native static comparison exposed WSL path-case aliases; now require samefile plus exact hash/destination/metadata. No provider or ranking changes.",
+  "focus_QA": "53 Node +6 Python PASS; no native/model commands in QA",
+  "files": [
+    {
+      "path": "services/research-answer/selection.mjs",
+      "sha256": "acd4aba6f44ccd538032193de4056de8a1de33ec2bfda6da2308a1a50111879f",
+      "bytes": 6609
+    },
+    {
+      "path": "scripts/n15-research-answer.mjs",
+      "sha256": "a560af29c96d551ae3739f8b9e6d02a80d37b1d8fbd0c5137d304f1057dc20c2",
+      "bytes": 7765
+    },
+    {
+      "path": "scripts/n15_research_runtime.py",
+      "sha256": "ffce4d3f08df03b20f86f01d30d45c2ba306bd05b7b3f9e05e9df12b7997b2c4",
+      "bytes": 11825
+    },
+    {
+      "path": "tests/research-answer.test.mjs",
+      "sha256": "2bece002a670ddbebf223ac66f53a2ce2b4a65a0ece3fa93d44d1c9d1108690c",
+      "bytes": 8467
+    },
+    {
+      "path": "tests/n15_research_runtime_test.py",
+      "sha256": "559ca0684a6e85a36dc5fadfb2fd7a561464419d03055a4a4a69ed3c002008b4",
+      "bytes": 2675
+    },
+    {
+      "path": "data/research/n15-05/demo-plan.json",
+      "sha256": "bed56cbce45fb2c0532dc7bd30efdfcbe189bcfcbe5a7f0d2917014b91fbae53",
+      "bytes": 2129
+    },
+    {
+      "path": "docs/N15_05_PLAN.md",
+      "sha256": "cbf2fbef03059f6fc1cd30224b223f4d09cf15cce594961ded57708252f47368",
+      "bytes": 3897
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "allocated_bytes": 419041280,
+  "apparent_bytes": 413915286,
+  "elapsed_ms": 11427,
+  "peak_process_rss_bytes": 620953600,
+  "policy": "Choice B monitored; not hard quota",
+  "watermark_bytes": 1350000000
+}

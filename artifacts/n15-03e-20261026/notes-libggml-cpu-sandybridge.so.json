@@ -1,0 +1,11 @@
+{
+  "args": [
+    "readelf",
+    "--notes",
+    "--wide",
+    "/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669/libggml-cpu-sandybridge.so"
+  ],
+  "exit_code": 0,
+  "stdout": "\nDisplaying notes found in: .note.gnu.property\n  Owner                Data size \tDescription\n  GNU                  0x00000010\tNT_GNU_PROPERTY_TYPE_0\t      Properties: x86 feature: IBT, SHSTK\n\nDisplaying notes found in: .note.gnu.build-id\n  Owner                Data size \tDescription\n  GNU                  0x00000014\tNT_GNU_BUILD_ID (unique build ID bitstring)\t    Build ID: d5581f93797f759eb2141157dccdce4a8a5a7261\n",
+  "stderr": ""
+}

@@ -1,0 +1,6 @@
+Running as unit: astra-n14-01-oewmeal8-acquisition.service; invocation ID: 1b5524f008ee4d55829b53275e5cae28
+          Finished with result: success
+Main processes terminated with: code=exited, status=0/SUCCESS
+               Service runtime: 10.981s
+             CPU time consumed: 1.083s
+                   Memory peak: 38.8M (swap: 0B)

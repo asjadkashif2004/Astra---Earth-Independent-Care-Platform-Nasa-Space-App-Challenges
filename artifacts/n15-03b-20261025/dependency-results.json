@@ -1,0 +1,86 @@
+[
+  {
+    "name": "llama-completion",
+    "needed": [
+      "libllama-completion-impl.so",
+      "libc.so.6"
+    ],
+    "results": [
+      {
+        "soname": "libllama-completion-impl.so",
+        "kind": "archive",
+        "path": "/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669/libllama-completion-impl.so"
+      },
+      {
+        "soname": "libc.so.6",
+        "kind": "host",
+        "path": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+      }
+    ]
+  },
+  {
+    "name": "libllama-completion-impl.so",
+    "needed": [
+      "libllama-common.so.0",
+      "libllama.so.0",
+      "libggml-base.so.0",
+      "libstdc++.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "results": [
+      {
+        "soname": "libllama-common.so.0",
+        "kind": "archive",
+        "path": "/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669/libllama-common.so.0.7.0"
+      },
+      {
+        "soname": "libllama.so.0",
+        "kind": "archive",
+        "path": "/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669/libllama.so.0.7.0"
+      },
+      {
+        "soname": "libggml-base.so.0",
+        "kind": "archive",
+        "path": "/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669/libggml-base.so.0.27.0"
+      },
+      {
+        "soname": "libstdc++.so.6",
+        "kind": "host",
+        "path": "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35"
+      },
+      {
+        "soname": "libgcc_s.so.1",
+        "kind": "host",
+        "path": "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1"
+      },
+      {
+        "soname": "libc.so.6",
+        "kind": "host",
+        "path": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+      }
+    ]
+  },
+  {
+    "name": "libggml-base.so.0",
+    "needed": [
+      "libgomp.so.1",
+      "libstdc++.so.6",
+      "libm.so.6",
+      "libgcc_s.so.1",
+      "libc.so.6"
+    ],
+    "results": [
+      {
+        "soname": "libgomp.so.1",
+        "status": "UNAVAILABLE",
+        "allowed_host_paths_checked": [
+          "/usr/lib/x86_64-linux-gnu/libgomp.so.1",
+          "/lib/x86_64-linux-gnu/libgomp.so.1",
+          "/usr/lib64/libgomp.so.1",
+          "/lib64/libgomp.so.1"
+        ]
+      }
+    ]
+  }
+]

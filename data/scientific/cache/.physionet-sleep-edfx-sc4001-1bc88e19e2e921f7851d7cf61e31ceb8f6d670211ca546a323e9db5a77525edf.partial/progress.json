@@ -1,0 +1,42 @@
+{
+  "schema_version": "astra.sleep-edf-progress.v1",
+  "approval_sha256": "4f349cb31c2634479077bb442df478ae7f2e4b01749cea7612e0e9a06ba44f81",
+  "publisher_receipt": {
+    "url": "https://physionet.org/files/sleep-edfx/1.0.0/SHA256SUMS.txt",
+    "started_at": "2026-10-24T06:32:04.334766+00:00",
+    "byte_limit": 65536,
+    "deadline_ms": 15000,
+    "requests": 1,
+    "completed_at": "2026-10-24T06:32:17.910747+00:00",
+    "elapsed_network_ms": 13575.972555000022,
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 39799,
+    "sha256": "1bc88e19e2e921f7851d7cf61e31ceb8f6d670211ca546a323e9db5a77525edf",
+    "selected_checksums": {
+      "sleep-cassette/SC4001E0-PSG.edf": "2b40a18adf76af69a42d6db1f30f31d26b369f6d27ca0050ef30147ef892b131",
+      "sleep-cassette/SC4001EC-Hypnogram.edf": "a4cf67694ade1b52a0ddd06d5817fd45d2d3e8bac5302f640f3e9cfbbf12a996"
+    },
+    "etag": "\"5c6dc5f0-9b77\"",
+    "complete": true
+  },
+  "budget": {
+    "payload_bytes": 1186307,
+    "network_ms": 313594
+  },
+  "receipts": [],
+  "current": {
+    "name": "SC4001E0-PSG.edf",
+    "bytes": 1146508,
+    "prefix_sha256": "2f55853bf13fb5fdf322fc6099bedfca3dff14a93b3eb1e5cf9cd276cae10fc9",
+    "response_complete": false,
+    "failure": "ACQUISITION_ABORTED"
+  },
+  "complete": false,
+  "completed_at": null,
+  "failure": {
+    "code": "ACQUISITION_ABORTED",
+    "message": "Acquisition cancelled or its total deadline expired.",
+    "at": "2026-10-24T06:46:29.671Z"
+  }
+}

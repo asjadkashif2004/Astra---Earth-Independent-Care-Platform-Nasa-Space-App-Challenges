@@ -1,0 +1,17 @@
+{
+  "status": "VERIFIED_COMMITTED_CATALOG",
+  "directory": "/mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/artifacts/n13-engineering-20261104/published/bundle-df7aff6aedc45aaa9f042e8b258d6ad16dcbb007a9189a21819c7b7254f79e1e",
+  "manifest_sha256": "df7aff6aedc45aaa9f042e8b258d6ad16dcbb007a9189a21819c7b7254f79e1e",
+  "revision": 1,
+  "parent": null,
+  "catalog_sha256": "3858c2b1fa3a9f7ed71e8ea062b08b0da88c47d6f2a86c56485e49dced424362",
+  "sources": 2,
+  "evidence_units": 33,
+  "evidence_spans": 34,
+  "questions": 40,
+  "independent_approvals": 0,
+  "replayed_acquisitions": 0,
+  "replayed_extractions": 0,
+  "scientific_approval": false,
+  "reused": false
+}

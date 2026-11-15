@@ -1,0 +1,94 @@
+000000000023c5d0 T llama_grammar_accept(llama_grammar*, unsigned int)
+0000000000238810 T llama_grammar_free_impl(llama_grammar*)
+00000000002387f0 T llama_grammar_get_rules(llama_grammar const*)
+00000000002408d0 T llama_grammar_init_impl(llama_vocab const*, char const*, char const*, bool, char const**, unsigned long, int const*, unsigned long)
+000000000023d6b0 T llama_grammar_init_impl(llama_vocab const*, llama_grammar_element const**, unsigned long, unsigned long)
+000000000023c8a0 T llama_grammar_accept_str(llama_grammar&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+000000000023d250 T llama_grammar_apply_impl(llama_grammar const&, llama_token_data_array*)
+000000000023ea90 T llama_grammar_clone_impl(llama_grammar const&)
+0000000000238800 T llama_grammar_get_stacks(llama_grammar*)
+00000000002402c0 T llama_grammar_accept_impl(llama_grammar&, int)
+000000000023df40 T llama_grammar_accept_token(llama_grammar&, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0000000000328ce0 T llama_sampler_backend_begin(llama_sampler*)
+0000000000328920 T llama_sampler_backend_n_nodes(llama_sampler const*)
+0000000000331200 T llama_sampler_init_dry_testing(float, float, int, int, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&)
+000000000023c960 T llama_grammar_reject_candidates_for_stack(std::vector<std::vector<llama_grammar_element, std::allocator<llama_grammar_element> >, std::allocator<std::vector<llama_grammar_element, std::allocator<llama_grammar_element> > > > const&, std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> > const&, std::vector<llama_grammar_candidate, std::allocator<llama_grammar_candidate> > const&)
+0000000000228f50 T llama_context::set_sampler(int, llama_sampler*)
+000000000023b230 T llama_grammar_parser::parse_rule(char const*)
+0000000000239730 T llama_grammar_parser::get_symbol_id(char const*, unsigned long)
+000000000023a600 T llama_grammar_parser::parse_sequence(char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<llama_grammar_element, std::allocator<llama_grammar_element> >&, bool)
+000000000023b0b0 T llama_grammar_parser::parse_alternates(char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned int, bool)
+00000000002399c0 T llama_grammar_parser::generate_symbol_id(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+000000000023b760 T llama_grammar_parser::parse(char const*)
+000000000023b4a0 T llama_grammar_parser::print(_IO_FILE*)
+0000000000239170 T llama_grammar_parser::add_rule(unsigned int, std::vector<llama_grammar_element, std::allocator<llama_grammar_element> > const&)
+0000000000334770 W llama_sampler_grammar::~llama_sampler_grammar()
+0000000000334770 W llama_sampler_grammar::~llama_sampler_grammar()
+0000000000245ef0 W llama_grammar_trigger_pattern::~llama_grammar_trigger_pattern()
+0000000000245ef0 W llama_grammar_trigger_pattern::~llama_grammar_trigger_pattern()
+0000000000238540 T llama_grammar_parser::c_rules() const
+0000000000240040 T llama_grammar_trigger_pattern::find(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) const
+00000000002455b0 W void std::_Destroy_aux<false>::__destroy<std::vector<llama_grammar_element, std::allocator<llama_grammar_element> >*>(std::vector<llama_grammar_element, std::allocator<llama_grammar_element> >*, std::vector<llama_grammar_element, std::allocator<llama_grammar_element> >*)
+0000000000245680 W void std::_Destroy_aux<false>::__destroy<std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> >*>(std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> >*, std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> >*)
+0000000000243f30 W std::vector<llama_grammar_element, std::allocator<llama_grammar_element> >::_M_default_append(unsigned long)
+00000000002443d0 W void std::vector<llama_grammar_element, std::allocator<llama_grammar_element> >::_M_realloc_insert<llama_grammar_element const&>(__gnu_cxx::__normal_iterator<llama_grammar_element*, std::vector<llama_grammar_element, std::allocator<llama_grammar_element> > >, llama_grammar_element const&)
+0000000000244270 W void std::vector<llama_grammar_candidate, std::allocator<llama_grammar_candidate> >::_M_realloc_insert<llama_grammar_candidate const&>(__gnu_cxx::__normal_iterator<llama_grammar_candidate*, std::vector<llama_grammar_candidate, std::allocator<llama_grammar_candidate> > >, llama_grammar_candidate const&)
+00000000002450e0 W void std::vector<llama_grammar_candidate, std::allocator<llama_grammar_candidate> >::_M_realloc_insert<llama_grammar_candidate>(__gnu_cxx::__normal_iterator<llama_grammar_candidate*, std::vector<llama_grammar_candidate, std::allocator<llama_grammar_candidate> > >, llama_grammar_candidate&&)
+00000000002438a0 W std::vector<llama_grammar_candidate, std::allocator<llama_grammar_candidate> >::reserve(unsigned long)
+0000000000244520 W void std::vector<llama_grammar_trigger_pattern, std::allocator<llama_grammar_trigger_pattern> >::_M_realloc_insert<>(__gnu_cxx::__normal_iterator<llama_grammar_trigger_pattern*, std::vector<llama_grammar_trigger_pattern, std::allocator<llama_grammar_trigger_pattern> > >)
+0000000000243970 W std::vector<llama_grammar_trigger_pattern, std::allocator<llama_grammar_trigger_pattern> >::~vector()
+0000000000243970 W std::vector<llama_grammar_trigger_pattern, std::allocator<llama_grammar_trigger_pattern> >::~vector()
+00000000003351b0 W void std::vector<llama_sampler_chain::info, std::allocator<llama_sampler_chain::info> >::_M_realloc_insert<llama_sampler_chain::info>(__gnu_cxx::__normal_iterator<llama_sampler_chain::info*, std::vector<llama_sampler_chain::info, std::allocator<llama_sampler_chain::info> > >, llama_sampler_chain::info&&)
+0000000000244120 W void std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> >::_M_realloc_insert<llama_grammar_element const* const&>(__gnu_cxx::__normal_iterator<llama_grammar_element const**, std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> > >, llama_grammar_element const* const&)
+0000000000244f90 W void std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> >::_M_realloc_insert<llama_grammar_element const*>(__gnu_cxx::__normal_iterator<llama_grammar_element const**, std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> > >, llama_grammar_element const*&&)
+0000000000243be0 W std::vector<std::vector<llama_grammar_element, std::allocator<llama_grammar_element> >, std::allocator<std::vector<llama_grammar_element, std::allocator<llama_grammar_element> > > >::_M_default_append(unsigned long)
+00000000002435f0 W std::vector<std::vector<llama_grammar_element, std::allocator<llama_grammar_element> >, std::allocator<std::vector<llama_grammar_element, std::allocator<llama_grammar_element> > > >::~vector()
+00000000002435f0 W std::vector<std::vector<llama_grammar_element, std::allocator<llama_grammar_element> >, std::allocator<std::vector<llama_grammar_element, std::allocator<llama_grammar_element> > > >::~vector()
+00000000002456d0 W void std::vector<std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> >, std::allocator<std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> > > >::_M_realloc_insert<std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> > const&>(__gnu_cxx::__normal_iterator<std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> >*, std::vector<std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> >, std::allocator<std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> > > > >, std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> > const&)
+0000000000245ae0 W void std::vector<std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> >, std::allocator<std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> > > >::_M_realloc_insert<std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> >&>(__gnu_cxx::__normal_iterator<std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> >*, std::vector<std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> >, std::allocator<std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> > > > >, std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> >&)
+00000000002436f0 W std::vector<std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> >, std::allocator<std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> > > >::reserve(unsigned long)
+0000000000243670 W std::vector<std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> >, std::allocator<std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> > > >::~vector()
+0000000000243670 W std::vector<std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> >, std::allocator<std::vector<llama_grammar_element const*, std::allocator<llama_grammar_element const*> > > >::~vector()
+0000000000234ad0 W std::_Rb_tree<int, std::pair<int const, llama_sampler*>, std::_Select1st<std::pair<int const, llama_sampler*> >, std::less<int>, std::allocator<std::pair<int const, llama_sampler*> > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<int const, llama_sampler*> >, int const&)
+00000000002701c0 W std::_Rb_tree_node<std::pair<int const, llama_sampler*> >* std::_Rb_tree<int, std::pair<int const, llama_sampler*>, std::_Select1st<std::pair<int const, llama_sampler*> >, std::less<int>, std::allocator<std::pair<int const, llama_sampler*> > >::_M_copy<false, std::_Rb_tree<int, std::pair<int const, llama_sampler*>, std::_Select1st<std::pair<int const, llama_sampler*> >, std::less<int>, std::allocator<std::pair<int const, llama_sampler*> > >::_Reuse_or_alloc_node>(std::_Rb_tree_node<std::pair<int const, llama_sampler*> >*, std::_Rb_tree_node_base*, std::_Rb_tree<int, std::pair<int const, llama_sampler*>, std::_Select1st<std::pair<int const, llama_sampler*> >, std::less<int>, std::allocator<std::pair<int const, llama_sampler*> > >::_Reuse_or_alloc_node&)
+00000000000ffd90 W std::_Rb_tree<int, std::pair<int const, llama_sampler*>, std::_Select1st<std::pair<int const, llama_sampler*> >, std::less<int>, std::allocator<std::pair<int const, llama_sampler*> > >::_M_erase(std::_Rb_tree_node<std::pair<int const, llama_sampler*> >*)
+000000000032a940 T llama_perf_sampler
+000000000032a9a0 T llama_perf_sampler_print
+000000000032a9d0 T llama_perf_sampler_reset
+0000000000328560 T llama_sampler_accept
+0000000000328630 T llama_sampler_apply
+000000000032ebe0 T llama_sampler_chain_add
+00000000001fcae0 T llama_sampler_chain_default_params
+00000000003289b0 T llama_sampler_chain_get
+00000000003288d0 T llama_sampler_chain_init
+0000000000328a90 T llama_sampler_chain_n
+0000000000328a10 T llama_sampler_chain_remove
+00000000003287b0 T llama_sampler_clone
+000000000032a120 T llama_sampler_copy
+0000000000328810 T llama_sampler_free
+000000000032a3d0 T llama_sampler_get_seed
+0000000000328400 T llama_sampler_init
+0000000000329d40 T llama_sampler_init_adaptive_p
+0000000000328b40 T llama_sampler_init_dist
+00000000003305a0 T llama_sampler_init_dry
+0000000000333bd0 T llama_sampler_init_grammar
+0000000000333c20 T llama_sampler_init_grammar_lazy
+0000000000333bf0 T llama_sampler_init_grammar_lazy_patterns
+0000000000328ab0 T llama_sampler_init_greedy
+000000000032a010 T llama_sampler_init_infill
+0000000000329ec0 T llama_sampler_init_logit_bias
+00000000003293e0 T llama_sampler_init_min_p
+0000000000329850 T llama_sampler_init_mirostat
+0000000000329960 T llama_sampler_init_mirostat_v2
+0000000000329a60 T llama_sampler_init_penalties
+0000000000329560 T llama_sampler_init_temp
+0000000000329630 T llama_sampler_init_temp_ext
+0000000000329240 T llama_sampler_init_top_k
+0000000000329cb0 T llama_sampler_init_top_n_sigma
+00000000003292f0 T llama_sampler_init_top_p
+00000000003294c0 T llama_sampler_init_typical
+0000000000329720 T llama_sampler_init_xtc
+0000000000328540 T llama_sampler_name
+0000000000328740 T llama_sampler_reset
+000000000032b710 T llama_sampler_sample
+00000000002292f0 T llama_set_sampler

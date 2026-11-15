@@ -1,0 +1,45 @@
+from pathlib import Path
+from urllib.request import Request,build_opener,HTTPRedirectHandler
+import hashlib,json,lzma,re,time,datetime
+ROOT=Path('/tmp/astra-n15-03e-metadata')
+base=json.loads((ROOT/'receipts.json').read_text())
+OUT=ROOT/'security-index-receipt.json'
+if OUT.exists():raise SystemExit('Single signed-index request already recorded; no retry')
+url='https://security.ubuntu.com/ubuntu/dists/resolute-security/main/binary-amd64/Packages.xz'
+receipt={'url':url,'started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'complete':False,'prior_requests':len(base['records']),'prior_body_bytes':base['received_body_bytes'],'byte_limit':606180,'time_limit_s':15,'runtime_or_package_binary':False}
+OUT.write_text(json.dumps(receipt,indent=2)+'\n');start=time.monotonic()
+class NoRedirect(HTTPRedirectHandler):
+ def redirect_request(self,req,fp,code,msg,headers,newurl):raise RuntimeError('Redirect refused: '+newurl)
+try:
+ req=Request(url,headers={'User-Agent':'ASTRA-N15-03E-signed-index-metadata/1.0','Accept-Encoding':'identity'})
+ with build_opener(NoRedirect()).open(req,timeout=15) as r:
+  receipt.update(status=r.status,headers=dict(r.headers));data=bytearray()
+  if r.headers.get('Content-Length') and int(r.headers['Content-Length'])!=606180:raise ValueError('Signed compressed-index length changed')
+  while True:
+   remaining=15-(time.monotonic()-start)
+   if remaining<=0:raise TimeoutError('Single metadata deadline')
+   fp=getattr(r,'fp',None);raw=getattr(fp,'raw',None);sock=getattr(raw,'_sock',None)
+   if sock is not None:sock.settimeout(remaining)
+   b=r.read1(min(8192,606181-len(data)))
+   if not b:break
+   data.extend(b)
+   if len(data)>606180 or len(data)+base['received_body_bytes']>2000000:raise ValueError('Metadata byte cap')
+  if len(data)!=606180 or hashlib.sha256(data).hexdigest()!='c9f4f90adfc5fcb1228e0aea6369c868ffa227b005782a1738ecdbb47fc46d56':raise ValueError('Signed compressed-index integrity mismatch')
+ dec=lzma.LZMADecompressor(memlimit=67108864);text=dec.decompress(data,max_length=3192761)
+ if not dec.eof or dec.unused_data or len(text)!=3192760 or hashlib.sha256(text).hexdigest()!='c69a86813b52e0db2a7820d7a9c54dff5afc7a635fc58812e9928e6299beb2c5':raise ValueError('Signed decoded-index mismatch')
+ (ROOT/'ubuntu-security-Packages.xz.original').write_bytes(data)
+ (ROOT/'ubuntu-security-Packages.txt').write_bytes(text)
+ fields=['libgomp1','libgcc-s1','libstdc++6','libc6','libssl3t64','zlib1g','libzstd1']
+ rows={}
+ for stanza in text.decode().split('\n\n'):
+  name=stanza.split('\n',1)[0].removeprefix('Package: ')
+  if name in fields:
+   d={}
+   for line in stanza.splitlines():
+    if ': ' in line and not line.startswith(' '):k,v=line.split(': ',1);d[k]=v
+   rows.setdefault(name,[]).append({k:d[k] for k in ['Package','Source','Version','Architecture','SHA256','Filename'] if k in d})
+ (ROOT/'ubuntu-security-selected-packages.json').write_text(json.dumps({'signed_release':'2026-10-25','source':'main/binary-amd64/Packages','rows':rows,'absent':[n for n in fields if n not in rows],'limitation':'Package publication/current-security-pocket comparison only; absence is not vulnerability clearance, and -updates is outside this single index.'},indent=2)+'\n')
+ receipt.update(complete=True,bytes=len(data),sha256=hashlib.sha256(data).hexdigest(),decoded_bytes=len(text),decoded_sha256=hashlib.sha256(text).hexdigest(),selected_package_names=list(rows))
+except Exception as e:receipt['error']=type(e).__name__+': '+str(e)
+finally:
+ receipt['elapsed_s']=time.monotonic()-start;OUT.write_text(json.dumps(receipt,indent=2)+'\n');print(json.dumps({k:v for k,v in receipt.items() if k!='headers'}))

@@ -1,0 +1,221 @@
+{
+  "schema_version": "astra.n09.acceptance-matrix.v1",
+  "official_module": "Longitudinal simulator and baseline archive",
+  "grouping_note": "Ten traceability subdivisions of official R07/R20/R34/R35/R37 and primary simulator interfaces, not ten new official IDs.",
+  "implemented": 10,
+  "qualified": 10,
+  "rows": [
+    {
+      "group_id": "G1",
+      "authoritative_requirement_ids": [
+        "R07",
+        "R37"
+      ],
+      "requirement": "Dated personal baseline archive",
+      "existing_implementation": "Existing seeded robust baselines without dated raw archive",
+      "delivered_implementation": "720 hourly dated draws per metric/six crew, immutable calibration hash and run version binding",
+      "missing_authorized_engineering": [],
+      "inputs": "Existing createBaselines seed42017",
+      "outputs": "astra.n09.calibration.v1",
+      "provenance": "AUTHORED_SYNTHETIC; source/config/calibration/version and dual timestamps retained",
+      "integration": "unchanged N02 references; scoped calibration API",
+      "authorization": "Owner consolidated mission + DE-N09-SYNTHETIC-01; expires at delivery",
+      "validation": "all statistics equal, hash/source/time grid and wrong crew reject",
+      "acceptance_evidence": "final-qa/calibration.json",
+      "dependencies": "Original N01/N02/N07/N08; full N07/N08 scientific/source/review gates open, N03/AC-20/N06 deferral/release preserved",
+      "synthetic_engineering_status": "PASS",
+      "full_formal_status": "EXTERNAL_GATES_OPEN"
+    },
+    {
+      "group_id": "G2",
+      "authoritative_requirement_ids": [
+        "R34"
+      ],
+      "requirement": "True daily circadian/sleep/activity schedule",
+      "existing_implementation": "Existing completion ledger and tick-dependent nominal sine",
+      "delivered_implementation": "UTC24h model, six dated personalized plans, future completions",
+      "missing_authorized_engineering": [],
+      "inputs": "Authored daily-plan-v1",
+      "outputs": "source-time observations and authored plans",
+      "provenance": "AUTHORED_SYNTHETIC; source/config/calibration/version and dual timestamps retained",
+      "integration": "canonical sleep and existing N10 ledger",
+      "authorization": "Owner consolidated mission + DE-N09-SYNTHETIC-01; expires at delivery",
+      "validation": "24h periodicity, no premature completion, pause coverage",
+      "acceptance_evidence": "final-qa/multiday.json",
+      "dependencies": "Original N01/N02/N07/N08; full N07/N08 scientific/source/review gates open, N03/AC-20/N06 deferral/release preserved",
+      "synthetic_engineering_status": "PASS",
+      "full_formal_status": "EXTERNAL_GATES_OPEN"
+    },
+    {
+      "group_id": "G3",
+      "authoritative_requirement_ids": [
+        "R34"
+      ],
+      "requirement": "Multiday deficit/drift with explicit coverage",
+      "existing_implementation": "Existing context scalars not completed-day accounting",
+      "delivered_implementation": "Actual multiday completions, bounded authored coupling, atomic canonical corrections",
+      "missing_authorized_engineering": [],
+      "inputs": "Completed covered sleep revisions plus authored reference",
+      "outputs": "covered descriptive shortfall/UNKNOWN and source hash",
+      "provenance": "AUTHORED_SYNTHETIC; source/config/calibration/version and dual timestamps retained",
+      "integration": "unchanged canonical correction/N10 actual sleep",
+      "authorization": "Owner consolidated mission + DE-N09-SYNTHETIC-01; expires at delivery",
+      "validation": "five-day actual execution, missing coverage, immutable past/corrected future",
+      "acceptance_evidence": "final-qa/multiday-trace.json",
+      "dependencies": "Original N01/N02/N07/N08; full N07/N08 scientific/source/review gates open, N03/AC-20/N06 deferral/release preserved",
+      "synthetic_engineering_status": "PASS",
+      "full_formal_status": "EXTERNAL_GATES_OPEN"
+    },
+    {
+      "group_id": "G4",
+      "authoritative_requirement_ids": [
+        "R20",
+        "R34"
+      ],
+      "requirement": "Versioned six-crew scenario definitions and execution",
+      "existing_implementation": "Ten legacy presets and selected-crew fixed HR",
+      "delivered_implementation": "Explicit versioned definitions, independent assignments/onsets, fixed parameters",
+      "missing_authorized_engineering": [],
+      "inputs": "Existing SCENARIOS + authored software parameters",
+      "outputs": "astra.n09.run.v1 with definition/config/calibration hashes",
+      "provenance": "AUTHORED_SYNTHETIC; source/config/calibration/version and dual timestamps retained",
+      "integration": "existing scenario routes and canonical telemetry",
+      "authorization": "Owner consolidated mission + DE-N09-SYNTHETIC-01; expires at delivery",
+      "validation": "all ten scenarios execute, invalid configs and ownership reject",
+      "acceptance_evidence": "qa-final-release.txt",
+      "dependencies": "Original N01/N02/N07/N08; full N07/N08 scientific/source/review gates open, N03/AC-20/N06 deferral/release preserved",
+      "synthetic_engineering_status": "PASS",
+      "full_formal_status": "EXTERNAL_GATES_OPEN"
+    },
+    {
+      "group_id": "G5",
+      "authoritative_requirement_ids": [
+        "R35"
+      ],
+      "requirement": "Artifacts/missingness/contradiction and independent labels",
+      "existing_implementation": "Existing declared telemetry quality",
+      "delivered_implementation": "Deterministic quality, separate authored labels, explicit UNKNOWN",
+      "missing_authorized_engineering": [],
+      "inputs": "Seeded generator and transparent quality probabilities",
+      "outputs": "observations distinct from AUTHORED_LABELS",
+      "provenance": "AUTHORED_SYNTHETIC; source/config/calibration/version and dual timestamps retained",
+      "integration": "N02 receives only canonical observations",
+      "authorization": "Owner consolidated mission + DE-N09-SYNTHETIC-01; expires at delivery",
+      "validation": "dropout/suspect/gray, no label features or alert authority",
+      "acceptance_evidence": "final-qa/evaluation-validation.json",
+      "dependencies": "Original N01/N02/N07/N08; full N07/N08 scientific/source/review gates open, N03/AC-20/N06 deferral/release preserved",
+      "synthetic_engineering_status": "PASS",
+      "full_formal_status": "EXTERNAL_GATES_OPEN"
+    },
+    {
+      "group_id": "G6",
+      "authoritative_requirement_ids": [
+        "R20",
+        "R34"
+      ],
+      "requirement": "Deterministic clocks, cadence and lifecycle",
+      "existing_implementation": "Legacy start/stop and host tick seed variation",
+      "delivered_implementation": "Run-owned grid, per-crew/global pause/resume/stop/reset/step, bounded controls",
+      "missing_authorized_engineering": [],
+      "inputs": "mission source clock + active elapsed + host/known timestamps",
+      "outputs": "sequential validated lifecycle events",
+      "provenance": "AUTHORED_SYNTHETIC; source/config/calibration/version and dual timestamps retained",
+      "integration": "existing Engine tick, comms and UI controls",
+      "authorization": "Owner consolidated mission + DE-N09-SYNTHETIC-01; expires at delivery",
+      "validation": "partition/rate invariance, stale held values, invalid state/idempotency",
+      "acceptance_evidence": "browser-05/report.json",
+      "dependencies": "Original N01/N02/N07/N08; full N07/N08 scientific/source/review gates open, N03/AC-20/N06 deferral/release preserved",
+      "synthetic_engineering_status": "PASS",
+      "full_formal_status": "EXTERNAL_GATES_OPEN"
+    },
+    {
+      "group_id": "G7",
+      "authoritative_requirement_ids": [
+        "R07",
+        "R20"
+      ],
+      "requirement": "Durability, replay, corrections and recovery",
+      "existing_implementation": "Existing engine checkpoint and sleep knowledge replay",
+      "delivered_implementation": "Atomic schema6 records/hash chains/failure journal and source+knowledge replay",
+      "missing_authorized_engineering": [],
+      "inputs": "Trusted run config and actual canonical frames",
+      "outputs": "verified run/event/failure/calibration schemas",
+      "provenance": "AUTHORED_SYNTHETIC; source/config/calibration/version and dual timestamps retained",
+      "integration": "Store transaction/checkpoint; cold Node process",
+      "authorization": "Owner consolidated mission + DE-N09-SYNTHETIC-01; expires at delivery",
+      "validation": "rollback, corruption, failed ack, no false frame, zero-replay restart",
+      "acceptance_evidence": "final-qa/cold-recovery.json",
+      "dependencies": "Original N01/N02/N07/N08; full N07/N08 scientific/source/review gates open, N03/AC-20/N06 deferral/release preserved",
+      "synthetic_engineering_status": "PASS",
+      "full_formal_status": "EXTERNAL_GATES_OPEN"
+    },
+    {
+      "group_id": "G8",
+      "authoritative_requirement_ids": [
+        "R07",
+        "R20"
+      ],
+      "requirement": "Authorized APIs and privacy/source boundaries",
+      "existing_implementation": "Existing N01 authentication, roles and import ownership",
+      "delivered_implementation": "Strict new version/query schemas and scoped projections",
+      "missing_authorized_engineering": [],
+      "inputs": "Server-authenticated principal and fictional crew",
+      "outputs": "bounded run/status/replay/calibration/label/context/window",
+      "provenance": "AUTHORED_SYNTHETIC; source/config/calibration/version and dual timestamps retained",
+      "integration": "existing /v1/scenarios routes; no arbitrary path/SQL",
+      "authorization": "Owner consolidated mission + DE-N09-SYNTHETIC-01; expires at delivery",
+      "validation": "all roles, self scope, invalid args/path/version/source reject",
+      "acceptance_evidence": "qa-final-release.txt",
+      "dependencies": "Original N01/N02/N07/N08; full N07/N08 scientific/source/review gates open, N03/AC-20/N06 deferral/release preserved",
+      "synthetic_engineering_status": "PASS",
+      "full_formal_status": "EXTERNAL_GATES_OPEN"
+    },
+    {
+      "group_id": "G9",
+      "authoritative_requirement_ids": [
+        "R34",
+        "R35",
+        "primary simulator interfaces"
+      ],
+      "requirement": "N02/N08/N10 permitted producer/consumer integration",
+      "existing_implementation": "Existing canonical ingest/detector, N08 reader and N10 append/project",
+      "delivered_implementation": "Actual N02 processing, same-source waveform cursor, nonprivate authored schedule/exercise",
+      "missing_authorized_engineering": [],
+      "inputs": "Verified synthetic N08 binding; actual generated source records",
+      "outputs": "N02 events, bounded waveform windows, N10 context",
+      "provenance": "AUTHORED_SYNTHETIC; source/config/calibration/version and dual timestamps retained",
+      "integration": "no detector-rule change/clinical signal injection/private check-in fabrication",
+      "authorization": "Owner consolidated mission + DE-N09-SYNTHETIC-01; expires at delivery",
+      "validation": "actual alert <=300s, unchanged ack/Earth, UNKNOWN/privacy and N08 lineage",
+      "acceptance_evidence": "browser-05/report.json",
+      "dependencies": "Original N01/N02/N07/N08; full N07/N08 scientific/source/review gates open, N03/AC-20/N06 deferral/release preserved",
+      "synthetic_engineering_status": "PASS",
+      "full_formal_status": "EXTERNAL_GATES_OPEN"
+    },
+    {
+      "group_id": "G10",
+      "authoritative_requirement_ids": [
+        "primary simulator acceptance",
+        "R20",
+        "R34",
+        "R35"
+      ],
+      "requirement": "Usable Scenario Lab, disjoint evaluation and resources",
+      "existing_implementation": "Legacy Scenario Lab and existing installed browser",
+      "delivered_implementation": "Real six-crew controls/timeline/replay/detail, mechanical disjoint producer/evaluation",
+      "missing_authorized_engineering": [],
+      "inputs": "actual new-mode API plus authored partition policy",
+      "outputs": "integrated UI, evaluated feature/label packet, performance and browser records",
+      "provenance": "AUTHORED_SYNTHETIC; source/config/calibration/version and dual timestamps retained",
+      "integration": "existing Mission Control; N11/N12 producer INACTIVE",
+      "authorization": "Owner consolidated mission + DE-N09-SYNTHETIC-01; expires at delivery",
+      "validation": "real browser/keyboard/viewports, no leakage/static or accept-all controls, >100 obs/s",
+      "acceptance_evidence": "performance/resources.json",
+      "dependencies": "Original N01/N02/N07/N08; full N07/N08 scientific/source/review gates open, N03/AC-20/N06 deferral/release preserved",
+      "synthetic_engineering_status": "PASS",
+      "full_formal_status": "EXTERNAL_GATES_OPEN"
+    }
+  ],
+  "formal_module_status": "In Progress",
+  "scientific_review": "PENDING; no independent scientific or clinical approval generated"
+}

@@ -1,0 +1,138 @@
+{
+  "modified_existing": [
+    {
+      "path": "services/api/server.mjs",
+      "before_sha256": "123dc1ed87420e56911c823821cf06ec4018c4d1798a7871847b7d758a57bfbd",
+      "after_sha256": "215a542fa41557796a275cda2c52d2952dd3ca792a4282533d27d5d991f6cc12"
+    },
+    {
+      "path": "services/api/store.mjs",
+      "before_sha256": "6f41231b6072d616a17c6cebef5cd38f8cdf8e6325ab58fd48e8c005bc95f08d",
+      "after_sha256": "c190990de7ced2e9c858cbad6788f5465fd1570e2facf3108be04d0a8861808b"
+    },
+    {
+      "path": "apps/mission-control-web/app.mjs",
+      "before_sha256": "0520f59ba0ceec1a68043cf66d312db95ec03cc6cb7722e9cebd790a49f1f242",
+      "after_sha256": "91827061843c64f2bf3b19cdab6252ab027b301a0d1813aa40ef47bee9b6379a"
+    },
+    {
+      "path": "apps/mission-control-web/index.html",
+      "before_sha256": "0ce4635af49637ff25e2d9e6ca314d51e2952899d51ab86807a810bbbc18748c",
+      "after_sha256": "66cad2527760154d452893c19ee086453076f9fe5885ff93b0da2bc5c823e2d7"
+    },
+    {
+      "path": "apps/mission-control-web/sw.js",
+      "before_sha256": "d80d4a4973db6a5326b4ee5841e341314ddffd080aefd9c7da4dbcffb67c98f0",
+      "after_sha256": "75995a4dd1f930c38df631353bcd8f5ffa9b7e7a36e19c924d12b12c4f9b0635"
+    },
+    {
+      "path": "scripts/browser-acceptance.mjs",
+      "before_sha256": "0106f65ca02a05ccdd9a82f1cc01f76235ddab892677e19767894599ab0b6a1e",
+      "after_sha256": "9b3f10595ed6dd364dc8c982b9e7670749456259868ceebe6bbbece31c7c088e"
+    },
+    {
+      "path": "scripts/frontend-smoke.mjs",
+      "before_sha256": "1a498d02f5683c2e98e3fd237fb6ddde837095d8e0e58ddaeffd4b8c8521dd5e",
+      "after_sha256": "b1648d3c3b95e50fd612649a5deb5df3087231911aeee71e3db7849d37b93171"
+    },
+    {
+      "path": "tests/dom-harness.mjs",
+      "before_sha256": "9d221fb3ececd9d4a6b16c67f68da59dc6983ca65216b9c2732de98d51f1379c",
+      "after_sha256": "9a2f63dd7be6da78ea0eaaf11541486495a21b75c719748b4f0d7daa5f9058d6"
+    },
+    {
+      "path": "tests/sleep-lifecycle.test.mjs",
+      "before_sha256": "055d076702cb781ef59e029cbb7f00fadd88b629cffb370390058fc8303dbd3c",
+      "after_sha256": "6d0cb6934b3e4d8ae76e56073afcafcb4546f8df46b3f5b8ff889ffb7601df76"
+    },
+    {
+      "path": "docs/CORE_AI_PRIORITY.md",
+      "before_sha256": "ca4a0a6b34d7c342c58f775591cad3a3fdee0aa86319303bbf12b2c9b44b843a",
+      "after_sha256": "c36f9f8bb6d2be75f4ec9fe0719a9acfd1b207bb29590f9ce5d58bf4014f8807"
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "before_sha256": "f6395c0801dbf00878f194e437eda8bae8cd3696b99284ec4cd3ac963508e07f",
+      "after_sha256": "a8275b6abb7c2325fd71a3e06db792ae4912f95ca24bb4be538a4cd1b9eda8e6"
+    },
+    {
+      "path": "docs/DE_N10_SYNTHETIC_01.md",
+      "before_sha256": "e56b33be3eb9521c51a796fbb9ac52a1d58847c5915656e9d5d7bc796ffd130c",
+      "after_sha256": "d15d949b8cf75d0dc088bd7b6a632a9103deea10bfb298da0bfe834523f4c739"
+    },
+    {
+      "path": "docs/FEATURE_AUDIT.md",
+      "before_sha256": "d8c2b6cfb2a66890e88d77517f9d80c12e439f53ed2b5847584f862f7e3df9be",
+      "after_sha256": "3df577db87b279f6efb99040d9cec225bfaecb281d8e61f64c2981d13f57ee0c"
+    },
+    {
+      "path": "docs/MASTER_PLAN.md",
+      "before_sha256": "626e2529f12e525852b6d3ea2434f0472706bc76e3129e1631073b83deb40100",
+      "after_sha256": "c0c31efd891648ae7d488adc1d36dea66091ac83fb8ab959f42b8373f40c9ef8"
+    },
+    {
+      "path": "docs/MODULE_TRACKER.md",
+      "before_sha256": "21be7be04d86b80266b6a5581c8adf74ec8b752ae22c8b8cc47e3c2c940f5901",
+      "after_sha256": "2d78322688d8e6421bc63ca14a9ac912320c64af79475cf8a86327aea72cccf9"
+    },
+    {
+      "path": "docs/SESSION_HANDOFF.md",
+      "before_sha256": "cb5be683eb83deb11077fc887958a3d202d77b3365846470e2a9bb1d566f5bee",
+      "after_sha256": "e133c715444298974ecf9ca7b87db41ddaa997b00111c314dd0e4bf854bc00c6"
+    },
+    {
+      "path": "AGENTS.md",
+      "before_sha256": "f6673da2df6ef83151428ce6b70c72b63f6d763a92a1defadb36ace24ff97f90",
+      "after_sha256": "d709eecea963b1e352b7bdddb9347b7266d6e2b1f48ade64366e70cf25a7ae7b"
+    }
+  ],
+  "created_source_contract_report": [
+    {
+      "path": "services/n10/contracts.mjs",
+      "sha256": "080c64f7b90695a2c821c069b60fe5c6ee79b8c90ad4169fca3a26959cceb61f"
+    },
+    {
+      "path": "services/n10/ledger.mjs",
+      "sha256": "efe4ace318b24b4308824c71dde15636ec04d36f4e4f563f7488db4d37234e12"
+    },
+    {
+      "path": "services/n10/projection.mjs",
+      "sha256": "9c23f6fbfabbe2e182f76e5f824bb7867cceae1ae038d7d89c560505bdf0809b"
+    },
+    {
+      "path": "apps/mission-control-web/n10.css",
+      "sha256": "c1d7f2eda6762a6435173c694993f6373239a5e2b16736dbc6e8ede1863726f4"
+    },
+    {
+      "path": "apps/mission-control-web/n10.mjs",
+      "sha256": "c1f5553fa9bf58c3e90b98e38faa53186ddc0969bcc1e4e50c068bcfe00a3ec0"
+    },
+    {
+      "path": "scripts/browser-n10.mjs",
+      "sha256": "80641365e4f6a7887cc1ad0535799a73386dce9e46d275c7dc3f4b2dc774037a"
+    },
+    {
+      "path": "tests/n10-frontend.test.mjs",
+      "sha256": "f667d92fd5ebdd15273eeb11847948cb213840ee6d53883076a70f1b0d0de410"
+    },
+    {
+      "path": "tests/n10.test.mjs",
+      "sha256": "44bc167b4597c9836ca520798463fdac83dfc412495ab28275f360067fe7f988"
+    },
+    {
+      "path": "tests/fixtures/n10.mjs",
+      "sha256": "943d5866ed8af80c0ba44cdde79a17d0b060a14ffddf79d2445ed68dcd5cf9bf"
+    },
+    {
+      "path": "docs/N10_CONTRACT.md",
+      "sha256": "639861ddd467692b3de886d4a441ca04bf1dbf9a4d57f7e259a08226860fa5f9"
+    },
+    {
+      "path": "docs/N10_FINAL_ENGINEERING_COMPLETION.md",
+      "sha256": "dde5b77ce6f987a51c54dd5c8e67921f137e7f53aacd8e644fb0fdd2f3221720"
+    }
+  ],
+  "task_artifacts": "Complete exact per-file inventory is evidence-manifest.json. Historical roots are unchanged.",
+  "implementation_diff": "implementation.diff.txt",
+  "source_snapshots": "final-files"
+}

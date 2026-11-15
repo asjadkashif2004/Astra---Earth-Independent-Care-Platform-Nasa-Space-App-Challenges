@@ -1,0 +1,2 @@
+{"html":"user-guide.html","status":"PASS","pages":12}
+{"html":"technical-report.html","status":"LAYOUT_FAIL","bad":[{"page":"18","height":1123,"scroll":1126,"width":794,"scrollWidth":794,"contentBottom":1080.859375,"footerTop":1071.515625,"overflow":["DIV:Source trail: services/research-retrieval/retrieval.mjs · services/res"]}]}

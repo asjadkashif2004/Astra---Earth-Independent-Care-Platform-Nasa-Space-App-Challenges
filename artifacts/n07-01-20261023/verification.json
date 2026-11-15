@@ -1,0 +1,272 @@
+{
+  "recorded_at": "2026-10-23T14:26:45.345216+00:00",
+  "scope": "N07-01 bounded acquisition only; no corpus/AI/monitoring/browser integration",
+  "status": {
+    "n01": "Complete",
+    "n02": "Complete",
+    "n03": "Partial",
+    "n04": "Complete",
+    "n05": "In Progress — Deferred",
+    "n06": "Not Started — Deferred",
+    "n07": "In Progress; N07-01 delivered; STOP",
+    "ac20": "Open / Unverified"
+  },
+  "environment": {
+    "node": "v24.21.0",
+    "os": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43"
+  },
+  "focused_tests": {
+    "total": 22,
+    "pass": 22,
+    "fail": 0,
+    "skip": 0,
+    "cancelled": 0,
+    "duration_ms": 1067.048825,
+    "log": "focused.log",
+    "sha256": "d4f45eb7cbbaf9636dd98a34bad4abb81becf1d267c6be25edfcc38e3828e41e",
+    "network_in_tests": false,
+    "note": "Synthetic transport/temp cache fixtures plus read-only shipped original; not real range/browser/medical acceptance"
+  },
+  "syntax_imports": {
+    "files": 82,
+    "errors": 0,
+    "log": "check.log",
+    "sha256": "dd86a65d05cbe19f9cfb026dbb2d8496e1908a551df5b0a2781bc801c4c61837"
+  },
+  "acquired_sample": {
+    "source_id": "nasa-ntrs-20205008796",
+    "type": "original public scientific metadata/abstract JSON",
+    "bytes": 6995,
+    "sha256": "3429154f91f4bc5476fc7adb7ee18f5a811b8bed2de7acad0f5c94e530ebb4f0",
+    "source_url": "https://ntrs.nasa.gov/api/citations/20205008796",
+    "retrieval": {
+      "started_at": "2026-10-23T14:14:54.138Z",
+      "completed_at": "2026-10-23T14:14:56.235Z",
+      "etag": null,
+      "requests": 1,
+      "method": "HTTPS GET",
+      "redirects": 0
+    },
+    "workflow_full_get_requests": 1,
+    "separate_read_only_source_review_gets_same_record": 1,
+    "distinct_samples": 1,
+    "linked_files_downloaded": 0,
+    "etag_available": false,
+    "real_partial_resume_tested": false,
+    "offline_verify_command": "node scripts/scientific-acquire.mjs verify",
+    "offline_verify_result": "PASS",
+    "license_id": null,
+    "use_statement": "Work of the US Gov. Public Use Permitted.",
+    "terms_url": "https://www.sti.nasa.gov/disclaimers/",
+    "harvesting_url": "https://www.sti.nasa.gov/harvesting-data-from-ntrs/"
+  },
+  "new_source_files": [
+    {
+      "path": "services/acquisition/source.mjs",
+      "sha256": "1ba52c77678d0abc6c933c51f40f70c2b518743b384cbc23f82339030abec555"
+    },
+    {
+      "path": "services/acquisition/cache.mjs",
+      "sha256": "6df440895d66443375e4391967fcf87d2ad67d5bddfcd333db25b55c5f28dec5"
+    },
+    {
+      "path": "scripts/scientific-acquire.mjs",
+      "sha256": "dd527fd6fb097b7b1d30f1075d43ffa1b49a73d69999cec1920708960f07e5db"
+    },
+    {
+      "path": "tests/scientific-acquisition.test.mjs",
+      "sha256": "8360dbc56363fad5e9f9b7bc5f97af0e426a0d69f4784172543207ecad660ef6"
+    }
+  ],
+  "new_data_files": [
+    {
+      "path": "data/scientific/approved-sources.json",
+      "bytes": 3111,
+      "sha256": "dd8734c19ad3f6e3a0446f5915b13dfa813bc3407a93794c05fdbfcb27eec2ad"
+    },
+    {
+      "path": "data/scientific/README.md",
+      "bytes": 4512,
+      "sha256": "ce24fc643d619a5f03a976db5210808873d477a77527293e186668a2bd5ec236"
+    },
+    {
+      "path": "data/scientific/cache/nasa-ntrs-20205008796-3429154f91f4bc5476fc7adb7ee18f5a811b8bed2de7acad0f5c94e530ebb4f0/original.json",
+      "bytes": 6995,
+      "sha256": "3429154f91f4bc5476fc7adb7ee18f5a811b8bed2de7acad0f5c94e530ebb4f0"
+    },
+    {
+      "path": "data/scientific/cache/nasa-ntrs-20205008796-3429154f91f4bc5476fc7adb7ee18f5a811b8bed2de7acad0f5c94e530ebb4f0/manifest.json",
+      "bytes": 3427,
+      "sha256": "27e4aa9a91a026ce493e321e518a47d82320bdb135316982b3926ffcb8ad8013"
+    },
+    {
+      "path": "data/scientific/cache/nasa-ntrs-20205008796-3429154f91f4bc5476fc7adb7ee18f5a811b8bed2de7acad0f5c94e530ebb4f0/progress.json",
+      "bytes": 445,
+      "sha256": "3043b644c68db84adac2d3333432049a65f57020592ea9a463cd5a7dd396ef36"
+    }
+  ],
+  "documentation_files": [
+    "AGENTS.md",
+    "docs/MASTER_PLAN.md",
+    "docs/MODULE_TRACKER.md",
+    "docs/SESSION_HANDOFF.md",
+    "docs/CORE_AI_PRIORITY.md",
+    "docs/FEATURE_AUDIT.md",
+    "docs/DECISIONS.md",
+    "docs/ARCHITECTURE.md",
+    "docs/REQUIREMENTS.md",
+    "docs/SETUP.md",
+    "docs/TESTING.md",
+    "docs/N07_01_COMPLETION.md"
+  ],
+  "preservation": {
+    "existing_source_qa_asset_license_model_research_dependency_catalogue_files": 460,
+    "modified_existing_files": [],
+    "new_source_files": [
+      "services/acquisition/source.mjs",
+      "services/acquisition/cache.mjs",
+      "scripts/scientific-acquire.mjs",
+      "tests/scientific-acquisition.test.mjs"
+    ],
+    "method": "Before/after SHA-256 inventory compared in-session; no source removals or modifications",
+    "n04_accepted_assessments": [
+      {
+        "path": "artifacts/n04-p01-qa-recovery-20261019/assessment-reviewed.json",
+        "sha256": "507e0ad949ce4be328b32885ab336fa4a182734b513ac68df0904dc7e91f00cd",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-qa-recovery-20261019/assessment-reviewed.json",
+        "sha256": "507e0ad949ce4be328b32885ab336fa4a182734b513ac68df0904dc7e91f00cd",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-qa-recovery-20261019/assessment-reviewed.json",
+        "sha256": "507e0ad949ce4be328b32885ab336fa4a182734b513ac68df0904dc7e91f00cd",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-qa-recovery-20261019/assessment-reviewed.json",
+        "sha256": "507e0ad949ce4be328b32885ab336fa4a182734b513ac68df0904dc7e91f00cd",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-qa-recovery-20261019/assessment-reviewed.json",
+        "sha256": "507e0ad949ce4be328b32885ab336fa4a182734b513ac68df0904dc7e91f00cd",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-qa-recovery-20261019/assessment-reviewed.json",
+        "sha256": "507e0ad949ce4be328b32885ab336fa4a182734b513ac68df0904dc7e91f00cd",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-qa-recovery-20261019/assessment-reviewed.json",
+        "sha256": "507e0ad949ce4be328b32885ab336fa4a182734b513ac68df0904dc7e91f00cd",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-live-guard-recovery-20261019/assessment-reviewed.json",
+        "sha256": "62dd130203b6e257a23373c5333b5178da0f0410652f39d2b76eb19b52a5d4aa",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-crew-standard3-retry-20261019/assessment-reviewed.json",
+        "sha256": "249ce70d1bb744d298aa98aa1e1ca0161912761244b95911b725e9a0f2954519",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-live-checkpoint4-20261020/1x-crew-performance-1/assessment-reviewed.json",
+        "sha256": "8b55548dcebf47bd60434f02d5f9ccd0e3a5e6e654ebb01181738b7ab1782df7",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-live-checkpoint4-20261020/1x-crew-performance-2/assessment-reviewed.json",
+        "sha256": "37be531ab69500045a07491ca90c001b40737ab3bae423bf6550003fd8a3952e",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-live-checkpoint4-20261020/1x-crew-performance-3/assessment-reviewed.json",
+        "sha256": "7ead6c990742766648ea9e1821403bf5e2167235f1b9c5048229a0443fd5588f",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-live-checkpoint4-20261020/30x-overview-standard-1/assessment-reviewed.json",
+        "sha256": "ecb143535093eb2d7083a64407adf0a0d2cf6fb35d872e33ac83117626b04f82",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-final11-20261020/30x-overview-standard-2/assessment-reviewed.json",
+        "sha256": "1a1a57e9d5dc57cdaca94bb0ba4e6d8a083f8453434c9b7e4f3856e2426d8966",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-final11-20261020/30x-overview-standard-3/assessment-reviewed.json",
+        "sha256": "5135c278f05aafbc4c893dbc495cb6356d7c867360550139ab80df9f5523c745",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-final11-20261020/30x-overview-performance-1/assessment-reviewed.json",
+        "sha256": "baa3fbf4ba07f545903e8b14e491c81addfcab7c2eb5f5ab2d9a1bb4d44acecf",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-final11-20261020/30x-overview-performance-2/assessment-reviewed.json",
+        "sha256": "a35ceeab034c014ff03aa1cdcc93082dfb0dca26dd374f36f4cad5ee1052b5a1",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-final11-20261020/30x-overview-performance-3/assessment-reviewed.json",
+        "sha256": "fdd5e9455bab7b8af388b151c3a27c6920297dce4852a91e1d6df3d53502a81c",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-final11-20261020/30x-crew-standard-1/assessment-reviewed.json",
+        "sha256": "479cb23cf154ee97a57f958a85fe6c4f41a9093555a76e124b7bba1bc4e89c55",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-final11-20261020/30x-crew-standard-2/assessment-reviewed.json",
+        "sha256": "dc6177075009b36f80f3fe8d3b537fd793161a0d658f0908746c3777a463a96e",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-final11-20261020/30x-crew-standard-3/assessment-reviewed.json",
+        "sha256": "36eae50b6549d5edc359104055ed1bf3aefe91d72a0b9858ae5c2ada2042caf4",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-final11-20261020/30x-crew-performance-1/assessment-reviewed.json",
+        "sha256": "07aeee69acb8834cee403d1dd64846f39e23e010c1cddb8c739b9394f951c818",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-final11-20261020/30x-crew-performance-2/assessment-reviewed.json",
+        "sha256": "2d9434e206e2888e1416726d547ad59fda84e873ba1753d6b46ef91a24be2923",
+        "unchanged": true
+      },
+      {
+        "path": "artifacts/n04-p01-final11-20261020/30x-crew-performance-3/assessment-reviewed.json",
+        "sha256": "30c91b0cc6ba1619332c11fe6799eb7906b50879b5d35e995b6ec39787d061e2",
+        "unchanged": true
+      }
+    ]
+  },
+  "limitations": [
+    "N07 full datasets/cards/splits/OSDR/RadLab gates remain; N13 not unblocked",
+    "Metadata sample is not a physiological dataset or clinical evidence",
+    "No real partial-range/Windows/power-loss test",
+    "No full regression/evaluation/browser/N04 acceptance run",
+    "Live metadata changes reject the pin; no automatic update",
+    "Operator inspection required for process-kill stale locks",
+    "Hashes are not signatures or tamper-proof local receipts",
+    "No Git commit available"
+  ],
+  "documentation_check": {
+    "markdown_files": 13,
+    "local_links": 209,
+    "missing": [],
+    "balanced_fences": true,
+    "distinct_roadmap_module_ids": 26
+  }
+}

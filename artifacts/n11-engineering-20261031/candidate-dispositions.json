@@ -1,0 +1,18 @@
+{
+  "schema_version": "astra.n11.engineering-disposition.v1",
+  "result_hash": "56464a2cffa9cddfd6700f9f1713c78993a0b66f1dfdac2edf9cba72cb7ee097",
+  "policy_hash": "ceac615c1bddcc152dba12dd0756d8a0f47a6c3f748757822d7b1d85fcb2cf6b",
+  "thresholds_retuned": false,
+  "isolation_forest": {
+    "status": "REJECTED_FOR_PROMOTION",
+    "reason": "No demonstrated benefit on inspected synthetic cases: test0TP/4FN;44false alert episodes on separately reported seen nominal days",
+    "model_hash": "d9ce01bcdf5625314df59f77ca99af0d826981292f117e11f86ff28e1015477b"
+  },
+  "ewma": {
+    "status": "RESEARCH_COMPARISON_ONLY_NOT_PROMOTED",
+    "reason": "4/4authored positive events, no proven benefit over existing TierA; no clinical validation"
+  },
+  "temporal_extension": "NOT_JUSTIFIED",
+  "human_scientific_review": "PENDING",
+  "operational_promotion_authorized": false
+}

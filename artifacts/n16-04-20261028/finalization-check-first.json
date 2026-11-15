@@ -1,0 +1,8 @@
+{
+  "status": "FAILED_CHECKER_ASSUMPTION",
+  "stage": "documentation verification, before output write",
+  "cause": "Verification command compared the tools schema map directly to a list. Corrected to compare its ordered keys.",
+  "production_or_test_source_changes": false,
+  "focused_suite_status_affected": false,
+  "SQL_or_fixture_execution": false
+}

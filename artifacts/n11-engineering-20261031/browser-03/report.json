@@ -1,0 +1,90 @@
+{
+  "status": "failed",
+  "started_at": "2026-10-31T06:37:23.745Z",
+  "checks": [
+    {
+      "name": "N11 actual application registry, empty state and malformed request rejection",
+      "status": "passed"
+    },
+    {
+      "name": "N11 real worker fits candidates, commits actual metrics and shows truthful explanations",
+      "status": "passed"
+    },
+    {
+      "name": "N11 source/knowledge cutoff withholds future aggregates and references",
+      "status": "passed"
+    },
+    {
+      "name": "N11 superseding reference excludes eligible observations without modifying old result",
+      "status": "passed"
+    },
+    {
+      "name": "N11 real worker cancellation is terminal without false committed result",
+      "status": "passed"
+    },
+    {
+      "name": "N11 actual N08 import and same-crew quality/provenance context",
+      "status": "failed",
+      "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'PARTIAL'\n- 'AVAILABLE'\n"
+    }
+  ],
+  "screenshots": [
+    "n11-completed.png",
+    "failure-6.png"
+  ],
+  "console_errors": [],
+  "http_errors": [
+    {
+      "url": "http://127.0.0.1:57723/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    },
+    {
+      "url": "http://127.0.0.1:57723/v1/models/experiments",
+      "status": 422,
+      "stage": "N11 actual application registry, empty state and malformed request rejection"
+    }
+  ],
+  "viewports": [],
+  "caveats": [
+    "No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation.",
+    "Pointer/keyboard/rendered DOM checks and screenshots supplement human visual, text-contrast and assistive-technology review; they do not establish WCAG conformance."
+  ],
+  "N11_browser_start": {
+    "pid": 15876,
+    "source": "Existing installed Chrome, disposable profile",
+    "Node": "v24.21.0",
+    "Node_memory": {
+      "rss": 67858432,
+      "heapTotal": 19963904,
+      "heapUsed": 13286112,
+      "external": 4325031,
+      "arrayBuffers": 212131
+    },
+    "at": "2026-10-31T06:37:24.192Z"
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/156.0.8078.74",
+    "revision": "@d331de35ca8ab1358c7a17e4bd41627d55eaef51",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "jsVersion": "15.6.75.25"
+  },
+  "reason": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'PARTIAL'\n- 'AVAILABLE'\n",
+  "N11_cleanup": {
+    "application_closed": true,
+    "browser_exited": true,
+    "profile_removed": true,
+    "database_directory_removed": true,
+    "Node_memory": {
+      "rss": 240898048,
+      "heapTotal": 157323264,
+      "heapUsed": 16516824,
+      "external": 5550930,
+      "arrayBuffers": 1509295
+    },
+    "N16_designated_starts": 0,
+    "Qwen_executions": 0
+  },
+  "finished_at": "2026-10-31T06:37:37.393Z"
+}

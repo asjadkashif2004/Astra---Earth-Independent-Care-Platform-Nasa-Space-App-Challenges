@@ -1,0 +1,70 @@
+{
+  "task": "N15-07A",
+  "files": [
+    {
+      "path": "initial-qa.json",
+      "size": 593,
+      "sha256": "c7175ce91deec9a5f70683262239286488c0cdd94a9e83b96beb21a7fc08b994"
+    },
+    {
+      "path": "preservation-before.json",
+      "size": 966986,
+      "sha256": "15c312aeef9bae7d4ad5997d6c9a1bf0e1aa5c7912120de5e9086a04778166a5"
+    },
+    {
+      "path": "preservation-validation.json",
+      "size": 3716,
+      "sha256": "f97fb8083c9b9e002ab74e5fa8a7fd92349a891d971e9491b99c45b47698935a"
+    },
+    {
+      "path": "qa-results.json",
+      "size": 16061,
+      "sha256": "4d485dbcf2dee431b79ae7e1ab3c03756d4ca3f59f669005ec573b4c5770e76d"
+    },
+    {
+      "path": "runner-change.diff",
+      "size": 2810,
+      "sha256": "0e05d0deea35aea4631e51243a830ca23becce5b0764cf1d1570da7143d955d1"
+    },
+    {
+      "path": "sources/scripts__n15-selection-diagnostic.mjs.txt",
+      "size": 4561,
+      "sha256": "378359b7e6d06b78d3cefea3e47f71ffac9394f64c115db9f06f552f20288687"
+    },
+    {
+      "path": "sources/scripts__n15_observer_lifecycle.py.txt",
+      "size": 9191,
+      "sha256": "6398f011b4cdc54837ac377b2dba70e6075fea88f316437f6d901fc13462e2af"
+    },
+    {
+      "path": "sources/scripts__n15_research_runtime.py.txt",
+      "size": 15559,
+      "sha256": "9ae1d56e79aa1ebbca461b266181331118dd68585228035f26e2b286a34bbeaf"
+    },
+    {
+      "path": "sources/tests__n15-selection-diagnostic.test.mjs.txt",
+      "size": 10199,
+      "sha256": "58d1883ef2f682fa442258735d51117f3247726445553bf76a212d3fb6d54dc4"
+    },
+    {
+      "path": "sources/tests__n15_observer_lifecycle_test.py.txt",
+      "size": 16977,
+      "sha256": "0ae25a113fa71fcfa63c421f14180cb3750564826f7bdef1723c6dda437d7be4"
+    },
+    {
+      "path": "syntax-results.json",
+      "size": 861,
+      "sha256": "0f97ef9aa8ee7973fafb7e3a4a9f89151e0e1fa08f4be296e3fd9494ed36654a"
+    },
+    {
+      "path": "validation-initial.json",
+      "size": 316,
+      "sha256": "62061a00b87ca3b631f7f04340f3de7a792ccd950b64387e226540788da0e2ae"
+    },
+    {
+      "path": "validation-source.txt",
+      "size": 5799,
+      "sha256": "b5e86ed022500c3e5e31da218d2745d1df4cc4bd73b3409c1864374c69c4bb2d"
+    }
+  ]
+}

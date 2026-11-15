@@ -1,0 +1,12 @@
+{
+  "schema_version": "astra.acquisition-progress.v1",
+  "source_id": "nasa-ntrs-20205008796",
+  "approval_sha256": "f47d05704a07a2118eea42628b0295859c088f8129d966925f5a9ea8650d3671",
+  "bytes": 6995,
+  "prefix_sha256": "3429154f91f4bc5476fc7adb7ee18f5a811b8bed2de7acad0f5c94e530ebb4f0",
+  "etag": null,
+  "started_at": "2026-10-23T14:14:54.138Z",
+  "last_received_at": "2026-10-23T14:14:56.235Z",
+  "requests": 1,
+  "response_complete": true
+}

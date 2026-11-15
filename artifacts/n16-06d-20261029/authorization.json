@@ -1,0 +1,12 @@
+{
+  "task": "N16-06D",
+  "maximum_startups": 1,
+  "source_id": "astra.n16.designated-synthetic.elevated.v1",
+  "memory_bytes": 536870912,
+  "monitored_storage_bytes": 67108864,
+  "network": false,
+  "database_byte_reads": false,
+  "SQLite": false,
+  "SQL": false,
+  "expires": "After first failure or end of N16-06D"
+}

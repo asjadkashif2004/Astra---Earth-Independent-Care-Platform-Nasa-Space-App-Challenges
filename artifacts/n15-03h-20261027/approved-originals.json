@@ -1,0 +1,17 @@
+[
+  {
+    "path": "/var/tmp/astra-n15-03-swuxjpfe/llama-b11669-bin-ubuntu-x64.tar.gz",
+    "bytes": 17851611,
+    "sha256": "cf07c1c112d709bd67e522017471de57ed0ec8bea031d732c5422351c07f65ac"
+  },
+  {
+    "path": "/var/tmp/astra-n15-03d-4s2m9qlg/libgomp1_16-20260322-1ubuntu1_amd64.deb",
+    "bytes": 162278,
+    "sha256": "add19738c63794d2aa9ac529d3b8aebe2e88980faecb6c1c59f07aefd6c3c314"
+  },
+  {
+    "path": "/var/tmp/astra-n15-03f-bat9chx9/zlib1g_1.3.dfsg+really1.3.1-1ubuntu3.2_amd64.deb",
+    "bytes": 61786,
+    "sha256": "10084666f747247550c3e82f9a12cbfd9184c19241a42eb34d8893ecb8e03b35"
+  }
+]

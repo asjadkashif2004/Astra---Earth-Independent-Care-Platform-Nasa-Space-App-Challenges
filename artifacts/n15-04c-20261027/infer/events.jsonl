@@ -1,0 +1,5 @@
+{"elapsed_s": 5.887821309999936, "event": "phase", "name": "verified-acquisition-and-native-preflight"}
+{"elapsed_s": 61.65557260000003, "event": "phase", "name": "backend-file-static-configuration"}
+{"elapsed_s": 106.48180928600004, "event": "phase", "name": "one-network-isolated-generation"}
+{"elapsed_s": 114.55792928999995, "event": "phase", "name": "verify-actual-blocked-filesystem-and-network-view"}
+{"elapsed_s": 118.72445075300004, "event": "first_output", "case": "generation", "release_elapsed_s": 2.0897507019999466}

@@ -1,0 +1,72 @@
+
+/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669/libllama.so.0:     file format elf64-x86-64
+
+
+Disassembly of section .text:
+
+0000000000333620 <llama_sampler_init_grammar_impl(llama_vocab const*, char const*, char const*, bool, char const**, unsigned long, int const*, unsigned long, char const**, unsigned long) [clone .constprop.1]>:
+  333620:	55                   	push   %rbp
+  333621:	48 89 e5             	mov    %rsp,%rbp
+  333624:	41 57                	push   %r15
+  333626:	49 89 ff             	mov    %rdi,%r15
+  333629:	bf 50 00 00 00       	mov    $0x50,%edi
+  33362e:	41 56                	push   %r14
+  333630:	41 55                	push   %r13
+  333632:	49 89 d5             	mov    %rdx,%r13
+  333635:	41 54                	push   %r12
+  333637:	49 89 f4             	mov    %rsi,%r12
+  33363a:	53                   	push   %rbx
+  33363b:	48 81 ec d8 00 00 00 	sub    $0xd8,%rsp
+  333642:	48 8b 45 10          	mov    0x10(%rbp),%rax
+  333646:	48 8b 5d 18          	mov    0x18(%rbp),%rbx
+  33364a:	89 8d 30 ff ff ff    	mov    %ecx,-0xd0(%rbp)
+  333650:	4c 89 85 28 ff ff ff 	mov    %r8,-0xd8(%rbp)
+  333657:	48 89 9d 10 ff ff ff 	mov    %rbx,-0xf0(%rbp)
+  33365e:	4c 89 8d 20 ff ff ff 	mov    %r9,-0xe0(%rbp)
+  333665:	48 89 85 18 ff ff ff 	mov    %rax,-0xe8(%rbp)
+  33366c:	64 48 8b 04 25 28 00 	mov    %fs:0x28,%rax
+  333673:	00 00 
+  333675:	48 89 45 c8          	mov    %rax,-0x38(%rbp)
+  333679:	31 c0                	xor    %eax,%eax
+  33367b:	e8 80 d8 d8 ff       	call   c0f00 <operator new(unsigned long)@plt>
+  333680:	48 8d 58 18          	lea    0x18(%rax),%rbx
+  333684:	4c 8d 70 38          	lea    0x38(%rax),%r14
+  333688:	c6 40 18 00          	movb   $0x0,0x18(%rax)
+  33368c:	48 89 85 38 ff ff ff 	mov    %rax,-0xc8(%rbp)
+  333693:	48 89 58 08          	mov    %rbx,0x8(%rax)
+  333697:	48 c7 40 10 00 00 00 	movq   $0x0,0x10(%rax)
+  33369e:	00 
+  33369f:	4c 89 70 28          	mov    %r14,0x28(%rax)
+  3336a3:	48 c7 40 30 00 00 00 	movq   $0x0,0x30(%rax)
+  3336aa:	00 
+  3336ab:	c6 40 38 00          	movb   $0x0,0x38(%rax)
+  3336af:	4d 85 e4             	test   %r12,%r12
+  3336b2:	0f 84 d8 00 00 00    	je     333790 <llama_sampler_init_grammar_impl(llama_vocab const*, char const*, char const*, bool, char const**, unsigned long, int const*, unsigned long, char const**, unsigned long) [clone .constprop.1]+0x170>
+  3336b8:	41 80 3c 24 00       	cmpb   $0x0,(%r12)
+  3336bd:	0f 84 cd 00 00 00    	je     333790 <llama_sampler_init_grammar_impl(llama_vocab const*, char const*, char const*, bool, char const**, unsigned long, int const*, unsigned long, char const**, unsigned long) [clone .constprop.1]+0x170>
+  3336c3:	ff b5 20 ff ff ff    	push   -0xe0(%rbp)
+  3336c9:	48 8d b5 60 ff ff ff 	lea    -0xa0(%rbp),%rsi
+  3336d0:	0f b6 8d 30 ff ff ff 	movzbl -0xd0(%rbp),%ecx
+  3336d7:	4c 89 ea             	mov    %r13,%rdx
+  3336da:	4c 8b 8d 10 ff ff ff 	mov    -0xf0(%rbp),%r9
+  3336e1:	ff b5 28 ff ff ff    	push   -0xd8(%rbp)
+  3336e7:	4c 89 ff             	mov    %r15,%rdi
+  3336ea:	4c 8b 85 18 ff ff ff 	mov    -0xe8(%rbp),%r8
+  3336f1:	48 89 b5 08 ff ff ff 	mov    %rsi,-0xf8(%rbp)
+  3336f8:	48 89 b5 50 ff ff ff 	mov    %rsi,-0xb0(%rbp)
+  3336ff:	4c 89 e6             	mov    %r12,%rsi
+  333702:	48 c7 85 58 ff ff ff 	movq   $0x0,-0xa8(%rbp)
+  333709:	00 00 00 00 
+  33370d:	c6 85 60 ff ff ff 00 	movb   $0x0,-0xa0(%rbp)
+  333714:	e8 f7 ee d8 ff       	call   c2610 <llama_grammar_init_impl(llama_vocab const*, char const*, char const*, bool, char const**, unsigned long, int const*, unsigned long)@plt>
+  333719:	48 89 85 30 ff ff ff 	mov    %rax,-0xd0(%rbp)
+  333720:	4c 89 e7             	mov    %r12,%rdi
+  333723:	58                   	pop    %rax
+  333724:	4c 89 bd 70 ff ff ff 	mov    %r15,-0x90(%rbp)
+  33372b:	5a                   	pop    %rdx
+  33372c:	4c 8d 7d 88          	lea    -0x78(%rbp),%r15
+  333730:	4c 89 bd 78 ff ff ff 	mov    %r15,-0x88(%rbp)
+  333737:	e8 44 b0 d8 ff       	call   be780 <strlen@plt>
+  33373c:	48                   	rex.W
+  33373d:	89                   	.byte 0x89
+  33373e:	85 28                	test   %ebp,(%rax)

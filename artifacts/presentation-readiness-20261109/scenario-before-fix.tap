@@ -1,0 +1,49 @@
+✖ Presentation scenario refreshes stale displayed revision before a new control (663.273361ms)
+✔ Presentation uncertain committed control retries its identical body and creates one command (641.002584ms)
+✖ Presentation failed pre-control refresh performs no scenario write (499.152018ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 1
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2244.680746
+
+✖ failing tests:
+
+test at tests/presentation-scenario.test.mjs:4:1
+✖ Presentation scenario refreshes stale displayed revision before a new control (663.273361ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Executed step/. Input:
+  
+  'Control failed: Synthetic simulator: N09_REVISION_CONFLICT — input and uncertain request ID retained; refresh before retrying.'
+  
+      at file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/presentation-scenario.test.mjs:4:271
+      at async session (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/presentation-scenario.test.mjs:3:218)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Control failed: Synthetic simulator: N09_REVISION_CONFLICT — input and uncertain request ID retained; refresh before retrying.',
+    expected: /Executed step/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests/presentation-scenario.test.mjs:6:1
+✖ Presentation failed pre-control refresh performs no scenario write (499.152018ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Control failed/. Input:
+  
+  'Executed step; durable state verified.'
+  
+      at file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/presentation-scenario.test.mjs:6:466
+      at async session (file:///mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/tests/presentation-scenario.test.mjs:3:218)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Executed step; durable state verified.',
+    expected: /Control failed/,
+    operator: 'match',
+    diff: 'simple'
+  }

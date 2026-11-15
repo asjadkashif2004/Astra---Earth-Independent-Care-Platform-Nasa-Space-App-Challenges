@@ -1,0 +1,64 @@
+{
+  "draft": {
+    "schema_version": "astra.n14.readiness-result.v1",
+    "valid": true,
+    "stage": "draft",
+    "issues": [],
+    "label_content_id": "labels-f3feaba5120ac3034c631a01e762ebdb2e439097b4ff2f716d525e492ae1b3c9",
+    "structural_review_complete": false,
+    "signatures_authenticated": false,
+    "clinical_validation": false,
+    "evaluation_authorized": false,
+    "evaluation_executed": false,
+    "remaining_human_gates": [
+      "Authenticate actual identities,qualifications,independence and external sign-off records",
+      "Custodian verifies isolated distribution and overlap review;software does not prove blinding",
+      "Owner approves cohort,final content hashes and separate execution/resource authorization"
+    ]
+  },
+  "reviewed": {
+    "schema_version": "astra.n14.readiness-result.v1",
+    "valid": false,
+    "stage": "reviewed",
+    "issues": [
+      {
+        "code": "HUMAN_OVERSIGHT_PENDING",
+        "path": "oversight"
+      },
+      {
+        "code": "VERIFIED_DISTRIBUTION_REQUIRED",
+        "path": "oversight"
+      },
+      {
+        "code": "FROZEN_COHORT_NOT_READY",
+        "path": "$"
+      }
+    ],
+    "label_content_id": "labels-f3feaba5120ac3034c631a01e762ebdb2e439097b4ff2f716d525e492ae1b3c9",
+    "structural_review_complete": false,
+    "signatures_authenticated": false,
+    "clinical_validation": false,
+    "evaluation_authorized": false,
+    "evaluation_executed": false,
+    "remaining_human_gates": [
+      "Authenticate actual identities,qualifications,independence and external sign-off records",
+      "Custodian verifies isolated distribution and overlap review;software does not prove blinding",
+      "Owner approves cohort,final content hashes and separate execution/resource authorization"
+    ]
+  },
+  "promotion": {
+    "status": "NOT_PROMOTED",
+    "baseline": "rich_lexical",
+    "independent_review": "PENDING",
+    "signatures_authenticated": false,
+    "numerical_parity": "UNVERIFIED",
+    "owner_execution_authority": false,
+    "reasons": [
+      "Actual independent scientific review/authentication and owner execution approval required",
+      "Independent identical-graph numerical parity not established",
+      "Seen-data metrics cannot supply promotion evidence"
+    ],
+    "N15_rule_activation": false,
+    "N16_runtime_activation": false
+  }
+}

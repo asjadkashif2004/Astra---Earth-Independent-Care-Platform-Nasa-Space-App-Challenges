@@ -1,0 +1,334 @@
+{
+  "at": "2026-10-19T20:46:21.477Z",
+  "trial": "1x-crew-performance-1",
+  "outcome": "FAIL;guard invalidation;not accepted",
+  "started_at": "2026-10-19T20:44:01.196Z",
+  "finished_at": "2026-10-19T20:44:59.231Z",
+  "browser": "Chrome/155.0.8059.80",
+  "hardware": {
+    "cpu": "AMD Ryzen 5 7430U with Radeon Graphics         ",
+    "logical_cpus": 12,
+    "total_ram": 14861852672,
+    "os": "10.0.26300",
+    "chrome": {
+      "gpu": {
+        "devices": [
+          {
+            "vendorId": 4098,
+            "deviceId": 5607,
+            "subSysId": 1021319082,
+            "revision": 194,
+            "vendorString": "",
+            "deviceString": "AMD Radeon (TM) Graphics",
+            "driverVendor": "AMD",
+            "driverVersion": "31.0.21925.1001"
+          },
+          {
+            "vendorId": 5140,
+            "deviceId": 140,
+            "subSysId": 0,
+            "revision": 0,
+            "vendorString": "",
+            "deviceString": "Microsoft Basic Render Driver",
+            "driverVendor": "",
+            "driverVersion": "10.0.26100.9711"
+          }
+        ],
+        "auxAttributes": {
+          "amdSwitchable": false,
+          "bgra8OverlaySupport": "SOFTWARE",
+          "canSupportThreadedTextureMailbox": false,
+          "directComposition": true,
+          "directMLFeatureLevel": "Not supported",
+          "directRenderingVersion": "",
+          "displayType": "ANGLE_D3D11",
+          "dx12FeatureLevel": "Not supported",
+          "glExtensions": "GL_AMD_performance_monitor GL_ANGLE_base_vertex_base_instance_shader_builtin GL_ANGLE_blob_cache GL_ANGLE_client_arrays GL_ANGLE_clip_cull_distance GL_ANGLE_copy_texture_3d GL_ANGLE_depth_texture GL_ANGLE_framebuffer_blit GL_ANGLE_framebuffer_multisample GL_ANGLE_get_serialized_context_string GL_ANGLE_get_tex_level_parameter GL_ANGLE_instanced_arrays GL_ANGLE_memory_size GL_ANGLE_multiview_multisample GL_ANGLE_pack_reverse_row_order GL_ANGLE_polygon_mode GL_ANGLE_program_binary_readiness_query GL_ANGLE_program_cache_control GL_ANGLE_provoking_vertex GL_ANGLE_renderability_validation GL_ANGLE_request_extension GL_ANGLE_robust_client_memory GL_ANGLE_shader_pixel_local_storage GL_ANGLE_shader_pixel_local_storage_coherent GL_ANGLE_stencil_texturing GL_ANGLE_texture_compression_dxt3 GL_ANGLE_texture_compression_dxt5 GL_ANGLE_texture_multisample GL_ANGLE_texture_usage GL_ANGLE_translated_shader_source GL_APPLE_clip_distance GL_ARM_rgba8 GL_CHROMIUM_bind_generates_resource GL_CHROMIUM_bind_uniform_location GL_CHROMIUM_copy_compressed_texture GL_CHROMIUM_copy_texture GL_CHROMIUM_lose_context GL_EXT_EGL_image_external_wrap_modes GL_EXT_base_instance GL_EXT_blend_func_extended GL_EXT_blend_minmax GL_EXT_clip_control GL_EXT_clip_cull_distance GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_conservative_depth GL_EXT_debug_label GL_EXT_debug_marker GL_EXT_depth_clamp GL_EXT_discard_framebuffer GL_EXT_disjoint_timer_query GL_EXT_draw_buffers GL_EXT_draw_buffers_indexed GL_EXT_draw_elements_base_vertex GL_EXT_float_blend GL_EXT_frag_depth GL_EXT_instanced_arrays GL_EXT_map_buffer_range GL_EXT_occlusion_query_boolean GL_EXT_polygon_offset_clamp GL_EXT_read_format_bgra GL_EXT_render_snorm GL_EXT_robustness GL_EXT_sRGB GL_EXT_shader_texture_lod GL_EXT_texture_border_clamp GL_EXT_texture_compression_bptc GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc_srgb GL_EXT_texture_filter_anisotropic GL_EXT_texture_format_BGRA8888 GL_EXT_texture_mirror_clamp_to_edge GL_EXT_texture_norm16 GL_EXT_texture_rg GL_EXT_texture_storage GL_EXT_texture_type_2_10_10_10_REV GL_EXT_unpack_subimage GL_KHR_debug GL_KHR_parallel_shader_compile GL_KHR_robustness GL_NV_EGL_stream_consumer_external GL_NV_fence GL_NV_framebuffer_blit GL_NV_pack_subimage GL_NV_pixel_buffer_object GL_NV_shader_noperspective_interpolation GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_EGL_image_external_essl3 GL_OES_depth24 GL_OES_depth32 GL_OES_draw_buffers_indexed GL_OES_draw_elements_base_vertex GL_OES_element_index_uint GL_OES_fbo_render_mipmap GL_OES_get_program_binary GL_OES_mapbuffer GL_OES_packed_depth_stencil GL_OES_required_internalformat GL_OES_rgb8_rgba8 GL_OES_sample_variables GL_OES_shader_multisample_interpolation GL_OES_standard_derivatives GL_OES_surfaceless_context GL_OES_texture_border_clamp GL_OES_texture_float GL_OES_texture_float_linear GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_texture_npot GL_OES_texture_stencil8 GL_OES_texture_storage_multisample_2d_array GL_OES_vertex_array_object GL_OVR_multiview GL_OVR_multiview2 ",
+          "glImplementationParts": "(gl=egl-angle,angle=d3d11)",
+          "glRenderer": "ANGLE (AMD, AMD Radeon (TM) Graphics (0x000015E7) Direct3D11 vs_5_0 ps_5_0, D3D11-31.0.21925.1001)",
+          "glResetNotificationStrategy": 33362,
+          "glVendor": "Google Inc. (AMD)",
+          "glVersion": "OpenGL ES 3.0 (ANGLE 2.1.28854 git hash: cccf60cde32c)",
+          "glWsExtensions": "EGL_EXT_create_context_robustness EGL_ANGLE_d3d_share_handle_client_buffer EGL_ANGLE_d3d_texture_client_buffer EGL_ANGLE_surface_d3d_texture_2d_share_handle EGL_ANGLE_query_surface_pointer EGL_ANGLE_window_fixed_size EGL_ANGLE_keyed_mutex EGL_ANGLE_surface_orientation EGL_ANGLE_direct_composition EGL_NV_post_sub_buffer EGL_KHR_create_context EGL_KHR_image EGL_KHR_image_base EGL_KHR_gl_texture_2D_image EGL_KHR_gl_texture_cubemap_image EGL_KHR_gl_renderbuffer_image EGL_KHR_get_all_proc_addresses EGL_KHR_stream EGL_KHR_stream_consumer_gltexture EGL_NV_stream_consumer_gltexture_yuv EGL_ANGLE_stream_producer_d3d_texture EGL_ANGLE_create_context_webgl_compatibility EGL_CHROMIUM_create_context_bind_generates_resource EGL_CHROMIUM_sync_control EGL_EXT_pixel_format_float EGL_KHR_surfaceless_context EGL_ANGLE_display_texture_share_group EGL_ANGLE_display_semaphore_share_group EGL_ANGLE_create_context_client_arrays EGL_ANGLE_program_cache_control EGL_ANGLE_robust_resource_initialization EGL_ANGLE_create_context_extensions_enabled EGL_ANDROID_blob_cache EGL_ANDROID_recordable EGL_ANGLE_image_d3d11_texture EGL_ANGLE_create_context_backwards_compatible EGL_KHR_no_config_context EGL_KHR_create_context_no_error EGL_KHR_reusable_sync EGL_ANGLE_memory_usage_report ",
+          "glWsVendor": "Google Inc. (AMD)",
+          "glWsVersion": "1.5 (ANGLE 2.1.28854 git hash: cccf60cde32c)",
+          "inProcessGpu": false,
+          "initializationTime": 0.105642,
+          "isAsan": false,
+          "isClangCoverage": false,
+          "jpegDecodeAcceleratorSupported": false,
+          "maxMsaaSamples": "8",
+          "nv12OverlaySupport": "SCALING",
+          "optimus": false,
+          "p010OverlaySupport": "SCALING",
+          "passthroughCmdDecoder": true,
+          "pixelShaderVersion": "5.0",
+          "processCrashCount": 0,
+          "rgb10a2OverlaySupport": "SCALING",
+          "sandboxed": true,
+          "skiaBackendType": "GaneshGL",
+          "subpixelFontRendering": true,
+          "supportsD3dSharedImages": true,
+          "supportsDirectML": false,
+          "supportsDx12": false,
+          "supportsOverlays": true,
+          "supportsVulkan": false,
+          "targetCpuBits": 64,
+          "vertexShaderVersion": "5.0",
+          "visibilityCallbackCallCount": 0,
+          "vulkanVersion": "Not supported",
+          "yuy2OverlaySupport": "SOFTWARE"
+        },
+        "featureStatus": {
+          "2d_canvas": "enabled",
+          "direct_rendering_display_compositor": "disabled_off_ok",
+          "gpu_compositing": "enabled",
+          "multiple_raster_threads": "enabled_on",
+          "opengl": "enabled_on",
+          "rasterization": "enabled",
+          "raw_draw": "disabled_off_ok",
+          "skia_graphite": "disabled_off",
+          "trees_in_viz": "disabled_off",
+          "video_decode": "enabled",
+          "video_encode": "enabled",
+          "webgl": "enabled",
+          "webgpu": "enabled",
+          "webnn": "disabled_off"
+        },
+        "driverBugWorkarounds": [
+          "disable_d3d11_vp9_ksvc_decoding",
+          "disable_d3d12_video_encoder",
+          "disable_direct_composition_sw_video_overlays",
+          "disable_h264_accelerator_sw_brc",
+          "disable_nv12_dynamic_textures",
+          "disable_video_overlay_if_moving",
+          "disable_vp_auto_hdr",
+          "disable_vp_super_resolution",
+          "enable_webgl_timer_query_extensions",
+          "exit_on_context_lost",
+          "force_rgb10a2_overlay_support",
+          "disabled_extension_GL_KHR_blend_equation_advanced",
+          "disabled_extension_GL_KHR_blend_equation_advanced_coherent"
+        ],
+        "videoDecoding": [],
+        "videoEncoding": []
+      },
+      "modelName": "",
+      "modelVersion": "",
+      "commandLine": "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --start-fullscreen --disable-dev-shm-usage --no-first-run --no-default-browser-check --remote-debugging-pipe --user-data-dir=\"C:\\Users\\basim\\AppData\\Local\\Temp\\astra-n03-chromium-sIjZTq\" --flag-switches-begin --flag-switches-end about:blank"
+    },
+    "host_placement": "Windows Node/SQLite/Chrome co-located;disposable database/profile",
+    "thermal": "Not instrumented",
+    "power_plan": {
+      "status": 0,
+      "stdout": "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)",
+      "stderr": ""
+    },
+    "display_configuration": {
+      "status": 0,
+      "stdout": "{\"Name\":\"AMD Radeon (TM) Graphics\",\"DriverVersion\":\"31.0.21925.1001\",\"CurrentHorizontalResolution\":1920,\"CurrentVerticalResolution\":1080,\"CurrentRefreshRate\":60}\r\n",
+      "stderr": ""
+    }
+  },
+  "protocol": {
+    "rate": 1,
+    "context": "crew",
+    "trials": 1,
+    "firstTrial": 1,
+    "modes": [
+      "performance"
+    ],
+    "seconds": 60,
+    "warmup_seconds": 10,
+    "viewport": [
+      1920,
+      1080
+    ],
+    "scalar_observations_per_second": 60,
+    "diagnostic_only": false,
+    "clock": "Host1Hz deadlines;source/host receipt/DOM/compositor/capture clocks retained separately",
+    "capture": "Actual browser PNG completion is a conservative rendered-capture bound,not physical panel timing. Offline OCR validates visible captured text separately.",
+    "instrumentation_version": "p01-explicit-batches-focus-3",
+    "continuous_guard": {
+      "poll_ms": 250,
+      "stale_ms": 1000,
+      "startup_ms": 8000,
+      "max_active_ms": 75000,
+      "required": true,
+      "method": "Sticky page lifecycle events and periodic focus/visibility checks;one read-only native foreground observer;first failure aborts;no reactivation or retry"
+    },
+    "raw_evidence": "Per-batch raw.jsonl writes and pre-summary raw.json;observer I/O remains part of host scheduling,not a physical presentation measurement",
+    "png_encoding": {
+      "lossless": true,
+      "optimizeForSpeed": true,
+      "scale": "min(2,2500/visible numeric union width);application viewport/render quality unchanged"
+    },
+    "preconditioning": {
+      "target_tick": 840,
+      "mission_step": 1,
+      "fast_build_only": true
+    }
+  },
+  "native_activation": [
+    {
+      "trial": "1x-crew-performance-1",
+      "host_at_ms": 1792442645644,
+      "status": 0,
+      "stdout": "{\"restore_previous_visibility\":true,\"foreground_request_returned\":true,\"pid\":5760,\"foreground_is_test_window\":true,\"method\":\"Supported ShowWindow/SetForegroundWindow only;no foreground-lock override,topmost change or session unlock\"}\r\n",
+      "stderr": "",
+      "decoded": {
+        "restore_previous_visibility": true,
+        "foreground_request_returned": true,
+        "pid": 5760,
+        "foreground_is_test_window": true,
+        "method": "Supported ShowWindow/SetForegroundWindow only;no foreground-lock override,topmost change or session unlock"
+      }
+    }
+  ],
+  "initial_identity": {
+    "type": "sample",
+    "host_at_ms": 1792442657079,
+    "selected_owner_pid": 5760,
+    "source_at_ms": 1792442657035,
+    "foreground_handle": "0x360672",
+    "selected_handle": "0x360672",
+    "foreground_pid": 5760,
+    "owned": true,
+    "title_matches": true,
+    "selected_class": "Chrome_WidgetWin_1",
+    "pid": 5760,
+    "check_ms": 9.1515
+  },
+  "guard_start": {
+    "type": "guard_started",
+    "host_at_ms": 1792442657081,
+    "pid": 5760,
+    "native_handle": "0x360672",
+    "limits": {
+      "poll_ms": 250,
+      "stale_ms": 1000,
+      "startup_ms": 8000,
+      "max_active_ms": 75000
+    }
+  },
+  "failure": {
+    "trial": "1x-crew-performance-1",
+    "source": "host",
+    "source_at_ms": 1792442698411,
+    "host_at_ms": 1792442698411,
+    "reason": "Native helper heartbeat missing",
+    "detail": {},
+    "utc": "2026-10-19T20:44:58.411Z",
+    "elapsed_since_guard_start_ms": 41330
+  },
+  "partial_evidence": {
+    "host_batches": 40,
+    "captures": 39,
+    "numeric_samples": 234,
+    "pngs": 40,
+    "completed_trials": 0,
+    "last_host": {
+      "second": 39,
+      "started_host_ms": 1792442697122,
+      "completed_host_ms": 1792442698407,
+      "tick_ms": 1287.9364999999962,
+      "deadline_lateness_ms": 13.262700000006589,
+      "observed_at": "2026-11-14T11:15:59.000Z"
+    },
+    "last_capture": {
+      "second": 38,
+      "observed_at": "2026-11-14T11:15:58.000Z",
+      "file": "1x-crew-performance-1-38.png",
+      "capture_completed_host_ms": 1792442696315,
+      "metric_ids": [
+        228,
+        229,
+        230,
+        231,
+        232,
+        233
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080,
+        "dpr": 1.0000000149011612,
+        "scale": 1
+      }
+    },
+    "partial_dom_p95_ms": 57,
+    "partial_capture_completion_p95_ms": 268,
+    "scope": "39 captured batches only;not a qualifying60-second/per-group/numeric/source-verified acceptance result",
+    "numeric_verified": 0,
+    "numeric_assessment": "Not run;first guard failure already invalidates collection",
+    "final_ownership_coverage": "Not reached"
+  },
+  "observation": "Last host tick1287.9365ms overlaps receipt-heartbeat gap;correlation only. No recorded native ownership-loss event;helper crash,actual focus state during gap and cause of tick stall are not established. No further diagnostic performed.",
+  "console_errors": [],
+  "http_errors": [
+    {
+      "url": "http://127.0.0.1:63160/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    }
+  ],
+  "integrity": {
+    "source_files_checked": 87,
+    "source_changes": [],
+    "historical_files_checked": 659,
+    "historical_changes": [],
+    "original_fixture_unchanged": true,
+    "evidence_sha256": {
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-0.png": "ae7c91f411577e6f3465b10c863b8d132446f85c1073127ac4b7ffaaa6662601",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-1.png": "98baf4561c2c258f437574a44a8616ad22f9e3fbce3b233faa8719c5099310f9",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-10.png": "f8923dc315a7279afb35387af114e055e6b4510782f8ba6a0aab0d3b60ffd7dd",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-11.png": "23e485ab1cfa6c7fec2ddcf7766e7517cf0fc9ba3e8244baaab90cda47cc1b53",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-12.png": "508223398ff1047f196369000c6f5152b974a28e50a0b1790f74ec6cb47a4d4a",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-13.png": "435915f1dbeddf30650da3d11c9f9b65916c966644f9e71fe9328794214d40f1",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-14.png": "5ead19c0fdf61bc5b0a9bef5894a55514186b0b0e75143c53f572ee6d175bff3",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-15.png": "a5218de7fc14872b346a9b5f75cf3665c9ddadfda3fa8b2b66d75a86e0af7419",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-16.png": "513840ce52c20ba2a4a1b4c8d388eedfb92db872967cc5d70885cadcce4c09e4",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-17.png": "553e41073e30372a3e3410c15e85124143dab4913a84130f0b2ca919dbe02489",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-18.png": "c4e48c44f7d8393f35801b348a04bad8fcb61d5f345395d6d6ac3a1c53e5e125",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-19.png": "05b62d7e4fa438d1b30451486fd6fe223833db8a97e6accca9beee525d375c56",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-2.png": "12747a6ce5947a9733d51f0e9293440a256dc09bee15112df09037837a3b4090",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-20.png": "7fe26537bd2624e64b80f4057cc77d8c33e2eb049e18c93697940be5049d6f29",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-21.png": "4a365f412466f8e77d5f7cb99523d70fb7ff5f2834dda1149031c6282c7f26a8",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-22.png": "735a15db427160b793e8586071c0579fe1ea9eb485ea407f0b897299d1e7266b",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-23.png": "92ec649edea66b35a3fc16a88966fa3532010f89f6c47a2c6b0e531b300a6bd7",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-24.png": "cef84ecad55f547c92e21f9b81b2c5a71ce9c0573d4abbdc5aa50c8332faae37",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-25.png": "35958f914f03734b83e9a53a1094fb8b3b92efbeb075947206ed9e95ad27c797",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-26.png": "167ef2d5dc64dd85e69aaf4e557393db16f6d7c6762b60be69b77775b4ef4810",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-27.png": "48dbc21923ceeb231cf841ad5ea11ed0846a3133c67f7227b9f73bab7c6e0a0b",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-28.png": "c8045c66b0a8a4951fd8eea2f96851af86ae87230820b4c75c2203f6b41e182d",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-29.png": "fb37f78207c449a769b3b6c5e22b44b262aa1fcddbb6daa0a9c1b255031e8aa0",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-3.png": "a146c66264b7eba3521a2347874c1a3c6e6ef5e47d1558dea4111efde448b9b1",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-30.png": "6a162e6598e38d48d9ecad812fc246c72924f785356950e88a1f927d43d9ba0d",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-31.png": "f107c5ad29e15c0536afcda98dd6526e77a6ebd2ef54cbbddcfedbaf23908ea9",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-32.png": "7085c0e3bf30795651a1a2eec0cca24f6b133f19e606884768069d28dad0c0be",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-33.png": "2c5b23bdbc44002e1db61740488eab51055bae09edd756caa7dc2ca840ec815c",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-34.png": "53d1c1e1bc54294093b920c7c1747b1c16848119ce342893a77607a70adcdb33",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-35.png": "068f6cbe1d7eaf34b469679abfe8940605616cb0ade57c3fec2bac0a9f1768f4",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-36.png": "975a0a6007d91c87de83dcfcc4e92aa793fbbf0f8b0fdc11e2051e65f0bbce73",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-37.png": "eeced22ca2e0747b4744f54830ad4731c7effb00d6424ca9ca31149f038933de",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-38.png": "2cfe1b5028bbe88f695942ca1ee30b0d2dff2fb9e6b395720b66b0bf2804843a",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-4.png": "9148834846f86dc9c312af00f8eb306ad9321976fee8c668061412323c486c6f",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-5.png": "6bbdf06508bd10d4be3a61e3f4ffdc3818d5632b20b82e83657b7b58742fadfb",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-6.png": "3dccc22df1e2a78a007639b82ae76fb8f4bd98575fadd8dacbe63d9cecb89d72",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-7.png": "42694ea517921994fc608e0152e813ca213ae8daa76d610da8a857094d622913",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-8.png": "472402f8e89c4a20996bab961ed3fee3963e65f3d49d9eb01a3d272482da5a0a",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1-9.png": "b6f2480470df156c9ace694ad8c4d852d8f13ead5f3f58e9afca43771aa3fb4e",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/1x-crew-performance-1.raw.jsonl": "2962d43197a2d17eef715f01a8d8a08fa93acf5d0dc8c377d7048dffe641e9dc",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/failure-1.png": "68682f9fdeedd587631557eab729c0c07d7a44e46c8db684535f5004b4a7eb90",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/fixture.sqlite": "97aa359ce1314f7f04cfc3323e8153c489f9c9ac2b3cb7badac7226eea12ce7b",
+      "artifacts/n04-p01-remaining15-20261020/1x-crew-performance-1/report.json": "670545126fca7d260ff63c8ffe02da3043a305e320b9cccb78ffb4d4cf7d93c7"
+    }
+  },
+  "accepted_before": 9,
+  "accepted_after": 9,
+  "newly_accepted": 0,
+  "n04_status": "Partial;final visual approval pending",
+  "n03_status": "Partial",
+  "ac20": "Open / Unverified"
+}

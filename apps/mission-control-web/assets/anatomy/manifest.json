@@ -1,0 +1,7349 @@
+{
+  "version": "astra.reference-anatomy.n05-01.v1",
+  "source_release": "BodyParts3D 4.3 / objects set 4.3 / FMA3.0",
+  "source_url": "https://lifesciencedb.jp/bp3d/",
+  "source_inputs_sha256": "897d0c6f6dc5846e98de251e76f8e65efcf3aa1a470421654d1badd309448902",
+  "license": "CC-BY-SA-2.1-JP",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.1/jp/",
+  "credit": "BodyParts3D, \u00a9 2008 The Database Center for Life Science, licensed under CC Attribution-Share Alike 2.1 Japan",
+  "scope": "Generic adult male reference anatomy. Not an astronaut reconstruction, clinical anatomical certification or physiological simulation. Static geometry; no HR/RR animation or evidence mapping.",
+  "transform": {
+    "source_units": "millimetres; original OBJ Bounds(mm) headers",
+    "source_up": "Z",
+    "scene_units": "metres",
+    "scene_up": "Y",
+    "formula": "[(x-cx)/1000, (z-floor)/1000, -(y-cy)/1000]",
+    "cx_mm": -0.6470000000000198,
+    "cy_mm": -100.76769999999999,
+    "floor_mm": -78.1112,
+    "source_body_bounds_mm": [
+      [
+        -334.119,
+        -246.783,
+        -78.1112
+      ],
+      [
+        332.825,
+        45.2476,
+        1641.36
+      ]
+    ],
+    "note": "Identical rigid rotation, uniform scale and translation for every original component; no per-organ registration or reshaping."
+  },
+  "simplification": "Deterministic per-element vertex clustering; cells body3mm/bones2mm/organs0.9mm, cluster centroids, degenerate/duplicate triangles removed, smooth normals rebuilt. Not clinical fidelity. Original geometry and hashes retained separately.",
+  "assets": [
+    {
+      "file": "body.glb",
+      "bytes": 3782472,
+      "sha256": "a348767f759c8eb909afb36f9c66238b0de35b8047df80edfd90aa611ce83e7a",
+      "components": [
+        "reference.body"
+      ]
+    },
+    {
+      "file": "organs.glb",
+      "bytes": 3643388,
+      "sha256": "6cfcc83ab4e6f04abe5520f5946bd60bcda581414092ae4bea2a732c72d30443",
+      "components": [
+        "reference.heart",
+        "reference.lung.left",
+        "reference.lung.right"
+      ]
+    },
+    {
+      "file": "skeleton.glb",
+      "bytes": 8264480,
+      "sha256": "1f6b8e5a8811f181688512f39e6b3ca56696d413af03a0cec489d8093cdd55f0",
+      "components": [
+        "reference.skeleton"
+      ]
+    }
+  ],
+  "components": [
+    {
+      "id": "reference.body",
+      "layer": "body",
+      "file": "body.glb",
+      "vertices": 75601,
+      "triangles": 163917,
+      "bounds_m": [
+        [
+          -0.33326285714285714,
+          0.0,
+          -0.1460153
+        ],
+        [
+          0.33260276923076926,
+          1.7194711999999999,
+          0.14594580000000001
+        ]
+      ],
+      "members": [
+        {
+          "element_id": "FJ2810",
+          "first_index": 0,
+          "index_count": 491751,
+          "source_vertices": 102467,
+          "source_triangles": 203382,
+          "vertices": 75601,
+          "triangles": 163917,
+          "cell_mm": 3.0,
+          "bounds_m": [
+            [
+              -0.33326285714285714,
+              0.0,
+              -0.1460153
+            ],
+            [
+              0.33260276923076926,
+              1.7194711999999999,
+              0.14594580000000001
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reference.heart",
+      "layer": "organs",
+      "file": "organs.glb",
+      "vertices": 26398,
+      "triangles": 52980,
+      "bounds_m": [
+        [
+          -0.03565669999999998,
+          1.2523012,
+          -0.03059729999999999
+        ],
+        [
+          0.07978660000000003,
+          1.3575892,
+          0.0758373
+        ]
+      ],
+      "members": [
+        {
+          "element_id": "FJ2428",
+          "first_index": 0,
+          "index_count": 93573,
+          "source_vertices": 21053,
+          "source_triangles": 37442,
+          "vertices": 15549,
+          "triangles": 31191,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              -0.022369099999999982,
+              1.2523012,
+              -0.017649999999999992
+            ],
+            [
+              0.07978660000000003,
+              1.3440312,
+              0.0758373
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ2438",
+          "first_index": 93573,
+          "index_count": 20778,
+          "source_vertices": 4284,
+          "source_triangles": 7544,
+          "vertices": 3453,
+          "triangles": 6926,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              -0.02219949999999998,
+              1.2775412000000002,
+              -0.03059729999999999
+            ],
+            [
+              0.06384990000000001,
+              1.3505112000000001,
+              0.05038330000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ2439",
+          "first_index": 114351,
+          "index_count": 44589,
+          "source_vertices": 9887,
+          "source_triangles": 17784,
+          "vertices": 7396,
+          "triangles": 14863,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              -0.03565669999999998,
+              1.2612112,
+              -0.004422699999999992
+            ],
+            [
+              0.00742491000000002,
+              1.3575892,
+              0.061829300000000025
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reference.lung.left",
+      "layer": "organs",
+      "file": "organs.glb",
+      "vertices": 23909,
+      "triangles": 48059,
+      "bounds_m": [
+        [
+          0.0059397700000000195,
+          1.1946312000000001,
+          -0.08497819999999999
+        ],
+        [
+          0.128089,
+          1.4363812,
+          0.09490730000000001
+        ]
+      ],
+      "members": [
+        {
+          "element_id": "FJ6595",
+          "first_index": 0,
+          "index_count": 13224,
+          "source_vertices": 3145,
+          "source_triangles": 5166,
+          "vertices": 2202,
+          "triangles": 4408,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              0.01596010000000002,
+              1.3609345333333334,
+              -0.04321879999999998
+            ],
+            [
+              0.08578580000000002,
+              1.4363812,
+              0.04381830000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6596",
+          "first_index": 13224,
+          "index_count": 17850,
+          "source_vertices": 5523,
+          "source_triangles": 8202,
+          "vertices": 2957,
+          "triangles": 5950,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              0.01944950000000002,
+              1.1975912,
+              -0.08497819999999999
+            ],
+            [
+              0.08857580000000002,
+              1.3126928666666668,
+              0.010177300000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6597",
+          "first_index": 31074,
+          "index_count": 11220,
+          "source_vertices": 3923,
+          "source_triangles": 5126,
+          "vertices": 1857,
+          "triangles": 3740,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              0.017894700000000017,
+              1.3478512,
+              -0.06579639999999999
+            ],
+            [
+              0.09972170000000002,
+              1.4183812,
+              0.017180300000000003
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6598",
+          "first_index": 42294,
+          "index_count": 16944,
+          "source_vertices": 6309,
+          "source_triangles": 8200,
+          "vertices": 2802,
+          "triangles": 5648,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              0.0059397700000000195,
+              1.3154112,
+              -0.06142383333333332
+            ],
+            [
+              0.10928700000000002,
+              1.3764712,
+              0.0813683
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6599",
+          "first_index": 59238,
+          "index_count": 15726,
+          "source_vertices": 5632,
+          "source_triangles": 7566,
+          "vertices": 2613,
+          "triangles": 5242,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              0.030022233333333353,
+              1.2784012,
+              -0.05008946666666665
+            ],
+            [
+              0.12230100000000002,
+              1.3373612000000001,
+              0.09098529999999999
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6600",
+          "first_index": 74964,
+          "index_count": 12594,
+          "source_vertices": 4812,
+          "source_triangles": 5824,
+          "vertices": 2089,
+          "triangles": 4198,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              0.03478660000000002,
+              1.2326012,
+              -0.006647199999999983
+            ],
+            [
+              0.12361900000000002,
+              1.3072475636363639,
+              0.09490730000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6601",
+          "first_index": 87558,
+          "index_count": 12504,
+          "source_vertices": 4909,
+          "source_triangles": 6168,
+          "vertices": 2059,
+          "triangles": 4168,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              0.025049800000000018,
+              1.3002512000000002,
+              -0.082713
+            ],
+            [
+              0.11442640000000004,
+              1.3939312,
+              -0.010390099999999989
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6602",
+          "first_index": 100062,
+          "index_count": 25143,
+          "source_vertices": 8092,
+          "source_triangles": 11148,
+          "vertices": 4175,
+          "triangles": 8381,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              0.03622318571428573,
+              1.1952112,
+              -0.061731699999999994
+            ],
+            [
+              0.128089,
+              1.3167002,
+              0.08952190000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6603",
+          "first_index": 125205,
+          "index_count": 18972,
+          "source_vertices": 5157,
+          "source_triangles": 7690,
+          "vertices": 3155,
+          "triangles": 6324,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              0.06715560000000002,
+              1.1946312000000001,
+              -0.08293619999999999
+            ],
+            [
+              0.126314,
+              1.30915745,
+              0.02651470000000001
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reference.lung.right",
+      "layer": "organs",
+      "file": "organs.glb",
+      "vertices": 25343,
+      "triangles": 51073,
+      "bounds_m": [
+        [
+          -0.127069,
+          1.1969912000000003,
+          -0.0840736
+        ],
+        [
+          -0.004946999999999981,
+          1.4377812,
+          0.09571130000000003
+        ]
+      ],
+      "members": [
+        {
+          "element_id": "FJ6604",
+          "first_index": 0,
+          "index_count": 16677,
+          "source_vertices": 5325,
+          "source_triangles": 7396,
+          "vertices": 2728,
+          "triangles": 5559,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              -0.09083129999999999,
+              1.3407712,
+              -0.04911609999999999
+            ],
+            [
+              -0.00857563999999998,
+              1.4377812,
+              0.04982630000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6605",
+          "first_index": 16677,
+          "index_count": 14016,
+          "source_vertices": 4247,
+          "source_triangles": 6322,
+          "vertices": 2322,
+          "triangles": 4672,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              -0.08901266666666664,
+              1.1970312,
+              -0.0840736
+            ],
+            [
+              -0.01304059999999998,
+              1.3062512000000002,
+              -0.01194197142857142
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6606",
+          "first_index": 30693,
+          "index_count": 13659,
+          "source_vertices": 6672,
+          "source_triangles": 7300,
+          "vertices": 2214,
+          "triangles": 4553,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              -0.11037824999999998,
+              1.3190712,
+              -0.06670299999999998
+            ],
+            [
+              -0.014800466666666645,
+              1.4135612000000002,
+              -0.004463699999999989
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6607",
+          "first_index": 44352,
+          "index_count": 20106,
+          "source_vertices": 7244,
+          "source_triangles": 9526,
+          "vertices": 3341,
+          "triangles": 6702,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              -0.11337899999999997,
+              1.3058712000000001,
+              -0.030074299999999995
+            ],
+            [
+              -0.00511034999999998,
+              1.3877362000000002,
+              0.0825453
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6608",
+          "first_index": 64458,
+          "index_count": 15150,
+          "source_vertices": 6601,
+          "source_triangles": 7734,
+          "vertices": 2515,
+          "triangles": 5050,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              -0.12454199999999997,
+              1.2378569142857145,
+              -0.055928788888888886
+            ],
+            [
+              -0.023943599999999978,
+              1.3303152,
+              0.06340339677419356
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6609",
+          "first_index": 79608,
+          "index_count": 18780,
+          "source_vertices": 5144,
+          "source_triangles": 7784,
+          "vertices": 3127,
+          "triangles": 6260,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              -0.10335839999999999,
+              1.2349712,
+              -0.018539949999999993
+            ],
+            [
+              -0.004946999999999981,
+              1.3196212,
+              0.09571130000000003
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6610",
+          "first_index": 98388,
+          "index_count": 13563,
+          "source_vertices": 5590,
+          "source_triangles": 6602,
+          "vertices": 2235,
+          "triangles": 4521,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              -0.11074199999999998,
+              1.2893612,
+              -0.08278669999999999
+            ],
+            [
+              -0.014399399999999979,
+              1.3822612,
+              -0.013241599999999992
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6611",
+          "first_index": 111951,
+          "index_count": 20196,
+          "source_vertices": 6494,
+          "source_triangles": 9116,
+          "vertices": 3360,
+          "triangles": 6732,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              -0.127069,
+              1.2055312000000002,
+              -0.06778463076923075
+            ],
+            [
+              -0.021358999999999982,
+              1.3130372000000001,
+              0.08154263333333334
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6612",
+          "first_index": 132147,
+          "index_count": 21072,
+          "source_vertices": 6674,
+          "source_triangles": 9506,
+          "vertices": 3501,
+          "triangles": 7024,
+          "cell_mm": 0.9,
+          "bounds_m": [
+            [
+              -0.12440899999999998,
+              1.1969912000000003,
+              -0.0839623
+            ],
+            [
+              -0.01855769999999998,
+              1.3086345333333336,
+              0.022102800000000006
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reference.skeleton",
+      "layer": "skeleton",
+      "file": "skeleton.glb",
+      "vertices": 170684,
+      "triangles": 347248,
+      "bounds_m": [
+        [
+          -0.3230989999999999,
+          0.007707700000000003,
+          -0.11876869999999999
+        ],
+        [
+          0.32452200000000003,
+          1.7143762000000002,
+          0.13527630000000002
+        ]
+      ],
+      "members": [
+        {
+          "element_id": "FJ1228",
+          "first_index": 0,
+          "index_count": 144,
+          "source_vertices": 73,
+          "source_triangles": 80,
+          "vertices": 26,
+          "triangles": 48,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.09351339999999998,
+              0.0103219,
+              0.07472530000000001
+            ],
+            [
+              -0.08657613636363633,
+              0.016473679999999994,
+              0.08382063333333334
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ1232",
+          "first_index": 144,
+          "index_count": 312,
+          "source_vertices": 104,
+          "source_triangles": 158,
+          "vertices": 54,
+          "triangles": 104,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.10236099999999998,
+              0.008933499999999995,
+              0.07004330000000002
+            ],
+            [
+              -0.09413159999999998,
+              0.016369599999999998,
+              0.0827707
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ1245",
+          "first_index": 456,
+          "index_count": 534,
+          "source_vertices": 269,
+          "source_triangles": 360,
+          "vertices": 90,
+          "triangles": 178,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.272425,
+              0.8609762000000001,
+              0.012859800000000008
+            ],
+            [
+              -0.2615533333333333,
+              0.8734221999999999,
+              0.02762130000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ2772",
+          "first_index": 990,
+          "index_count": 1446,
+          "source_vertices": 687,
+          "source_triangles": 1196,
+          "vertices": 240,
+          "triangles": 482,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.018856533333333314,
+              1.5006092000000002,
+              -0.005988533333333323
+            ],
+            [
+              0.01890420000000002,
+              1.5187722000000001,
+              0.02814350000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3152",
+          "first_index": 2436,
+          "index_count": 6894,
+          "source_vertices": 1282,
+          "source_triangles": 2374,
+          "vertices": 1149,
+          "triangles": 2298,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.144225,
+              0.8302642000000001,
+              -0.09964891999999999
+            ],
+            [
+              -0.00214329999999998,
+              1.0359802,
+              0.038251300000000016
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3154",
+          "first_index": 9330,
+          "index_count": 5460,
+          "source_vertices": 1584,
+          "source_triangles": 2790,
+          "vertices": 906,
+          "triangles": 1820,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.032865349999999974,
+              1.1778912,
+              -0.09292950999999999
+            ],
+            [
+              0.03278743333333336,
+              1.2351666545454547,
+              -0.01670989999999999
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3155",
+          "first_index": 14790,
+          "index_count": 5202,
+          "source_vertices": 1593,
+          "source_triangles": 2674,
+          "vertices": 860,
+          "triangles": 1734,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.025840233333333313,
+              1.1539112,
+              -0.08773824999999999
+            ],
+            [
+              0.025822211111111132,
+              1.2073812,
+              -0.008235299999999996
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3156",
+          "first_index": 19992,
+          "index_count": 5514,
+          "source_vertices": 1593,
+          "source_triangles": 2772,
+          "vertices": 910,
+          "triangles": 1838,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.02161639999999998,
+              1.1280712000000002,
+              -0.0781044
+            ],
+            [
+              0.021629400000000017,
+              1.1797012,
+              0.0005143000000000057
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3157",
+          "first_index": 25506,
+          "index_count": 6324,
+          "source_vertices": 1682,
+          "source_triangles": 2972,
+          "vertices": 1045,
+          "triangles": 2108,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.03509524999999998,
+              1.0934312,
+              -0.07154529999999999
+            ],
+            [
+              0.035021000000000024,
+              1.1500912,
+              0.008712300000000013
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3158",
+          "first_index": 31830,
+          "index_count": 3474,
+          "source_vertices": 1078,
+          "source_triangles": 1700,
+          "vertices": 575,
+          "triangles": 1158,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.036597499999999984,
+              1.4254312,
+              -0.08356714999999998
+            ],
+            [
+              0.036382200000000024,
+              1.4549512,
+              -0.013895799999999995
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3159",
+          "first_index": 35304,
+          "index_count": 6474,
+          "source_vertices": 1875,
+          "source_triangles": 3214,
+          "vertices": 1072,
+          "triangles": 2158,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.039623499999999985,
+              1.0704272000000001,
+              -0.06641889999999999
+            ],
+            [
+              0.03937540000000002,
+              1.1178712,
+              0.013952300000000008
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3160",
+          "first_index": 41778,
+          "index_count": 3780,
+          "source_vertices": 1161,
+          "source_triangles": 1938,
+          "vertices": 621,
+          "triangles": 1260,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.03511209999999998,
+              1.4048062,
+              -0.08844472499999997
+            ],
+            [
+              0.035225400000000025,
+              1.4382932,
+              -0.018227999999999994
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3161",
+          "first_index": 45558,
+          "index_count": 3612,
+          "source_vertices": 1323,
+          "source_triangles": 2030,
+          "vertices": 590,
+          "triangles": 1204,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.02876591999999998,
+              1.4953412,
+              -0.0626346
+            ],
+            [
+              0.029106333333333356,
+              1.5238512,
+              -0.012954499999999996
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3162",
+          "first_index": 49170,
+          "index_count": 6540,
+          "source_vertices": 1849,
+          "source_triangles": 3272,
+          "vertices": 1082,
+          "triangles": 2180,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.03949499999999998,
+              1.0458277,
+              -0.07116219999999998
+            ],
+            [
+              0.03935945000000002,
+              1.0877512,
+              0.014585300000000004
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3163",
+          "first_index": 55710,
+          "index_count": 4194,
+          "source_vertices": 1175,
+          "source_triangles": 2038,
+          "vertices": 697,
+          "triangles": 1398,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.032079199999999974,
+              1.3804712,
+              -0.09924759
+            ],
+            [
+              0.03226290000000002,
+              1.4196812,
+              -0.024162449999999995
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3164",
+          "first_index": 59904,
+          "index_count": 3705,
+          "source_vertices": 1469,
+          "source_triangles": 2410,
+          "vertices": 604,
+          "triangles": 1235,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.026794085714285692,
+              1.4828812,
+              -0.06002064999999999
+            ],
+            [
+              0.026938233333333353,
+              1.5102512000000001,
+              -0.011723199999999991
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3165",
+          "first_index": 63609,
+          "index_count": 7104,
+          "source_vertices": 1968,
+          "source_triangles": 3512,
+          "vertices": 1176,
+          "triangles": 2368,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.04192281428571426,
+              1.0167752,
+              -0.0746115
+            ],
+            [
+              0.04172592500000002,
+              1.0613944000000002,
+              0.00963730000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3166",
+          "first_index": 70713,
+          "index_count": 4092,
+          "source_vertices": 1210,
+          "source_triangles": 2066,
+          "vertices": 676,
+          "triangles": 1364,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.03445339999999998,
+              1.3558992,
+              -0.10046823919999999
+            ],
+            [
+              0.03488560000000002,
+              1.3993512000000001,
+              -0.03116279999999999
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3167",
+          "first_index": 74805,
+          "index_count": 4008,
+          "source_vertices": 1539,
+          "source_triangles": 2196,
+          "vertices": 652,
+          "triangles": 1336,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.02874825714285712,
+              1.4719412,
+              -0.06440576666666666
+            ],
+            [
+              0.02886062500000002,
+              1.4959892000000001,
+              -0.009995099999999993
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3168",
+          "first_index": 78813,
+          "index_count": 8112,
+          "source_vertices": 2115,
+          "source_triangles": 3892,
+          "vertices": 1340,
+          "triangles": 2704,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.05035369999999998,
+              0.9827062000000001,
+              -0.08252269999999999
+            ],
+            [
+              0.05012360000000002,
+              1.0329062,
+              -0.001691199999999995
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3169",
+          "first_index": 86925,
+          "index_count": 4392,
+          "source_vertices": 1321,
+          "source_triangles": 2280,
+          "vertices": 721,
+          "triangles": 1464,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.03550449999999998,
+              1.3179552,
+              -0.10078624989999999
+            ],
+            [
+              0.03542180000000002,
+              1.375074836363636,
+              -0.03475869999999999
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3170",
+          "first_index": 91317,
+          "index_count": 3996,
+          "source_vertices": 1498,
+          "source_triangles": 2374,
+          "vertices": 653,
+          "triangles": 1332,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.03038517499999998,
+              1.4598487000000002,
+              -0.0715019
+            ],
+            [
+              0.030193600000000022,
+              1.4828512,
+              -0.009096699999999984
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3171",
+          "first_index": 95313,
+          "index_count": 4512,
+          "source_vertices": 1353,
+          "source_triangles": 2248,
+          "vertices": 748,
+          "triangles": 1504,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.03569169999999998,
+              1.2876695333333334,
+              -0.09947365999999998
+            ],
+            [
+              0.03545310000000002,
+              1.3469811999999999,
+              -0.035556
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3172",
+          "first_index": 99825,
+          "index_count": 3504,
+          "source_vertices": 1324,
+          "source_triangles": 1820,
+          "vertices": 573,
+          "triangles": 1168,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.032376399999999986,
+              1.4431412000000001,
+              -0.07950129999999998
+            ],
+            [
+              0.03215945000000002,
+              1.4697545333333333,
+              -0.010735799999999997
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3173",
+          "first_index": 103329,
+          "index_count": 5340,
+          "source_vertices": 1478,
+          "source_triangles": 2574,
+          "vertices": 883,
+          "triangles": 1780,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.03639638333333331,
+              1.2575012,
+              -0.1000015695
+            ],
+            [
+              0.036965200000000024,
+              1.3196174500000002,
+              -0.033788499999999985
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3174",
+          "first_index": 108669,
+          "index_count": 5196,
+          "source_vertices": 1392,
+          "source_triangles": 2424,
+          "vertices": 858,
+          "triangles": 1732,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.03276814999999998,
+              1.2319462,
+              -0.09961205999999999
+            ],
+            [
+              0.03279970000000002,
+              1.2910612000000001,
+              -0.028740099999999984
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3175",
+          "first_index": 113865,
+          "index_count": 5286,
+          "source_vertices": 1443,
+          "source_triangles": 2586,
+          "vertices": 873,
+          "triangles": 1762,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.033747799999999974,
+              1.2049645333333334,
+              -0.09455692499999999
+            ],
+            [
+              0.033503900000000024,
+              1.2627426285714285,
+              -0.023275999999999995
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3176",
+          "first_index": 119151,
+          "index_count": 3717,
+          "source_vertices": 1433,
+          "source_triangles": 2094,
+          "vertices": 607,
+          "triangles": 1239,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.040681999999999975,
+              1.5405252,
+              -0.0599756
+            ],
+            [
+              0.04087770000000002,
+              1.5593312000000001,
+              -0.013246599999999987
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3177",
+          "first_index": 122868,
+          "index_count": 4140,
+          "source_vertices": 1540,
+          "source_triangles": 2288,
+          "vertices": 673,
+          "triangles": 1380,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.02504844999999998,
+              1.5114112,
+              -0.06409679999999998
+            ],
+            [
+              0.025059266666666687,
+              1.5563678666666665,
+              -0.014228599999999985
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3179",
+          "first_index": 127008,
+          "index_count": 372,
+          "source_vertices": 169,
+          "source_triangles": 240,
+          "vertices": 63,
+          "triangles": 124,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.13298337500000001,
+              0.007899475,
+              0.12009630000000002
+            ],
+            [
+              0.14363,
+              0.014943666666666662,
+              0.13324930000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3180",
+          "first_index": 127380,
+          "index_count": 300,
+          "source_vertices": 188,
+          "source_triangles": 336,
+          "vertices": 52,
+          "triangles": 100,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.1465002,
+              0.007960066666666663,
+              0.11176130000000002
+            ],
+            [
+              0.15511200000000003,
+              0.013544311111111108,
+              0.12243655000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3181",
+          "first_index": 127680,
+          "index_count": 312,
+          "source_vertices": 146,
+          "source_triangles": 226,
+          "vertices": 53,
+          "triangles": 104,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.156123,
+              0.007821266666666668,
+              0.09475280000000003
+            ],
+            [
+              0.164722,
+              0.014530749999999999,
+              0.10562701428571429
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3182",
+          "first_index": 127992,
+          "index_count": 696,
+          "source_vertices": 256,
+          "source_triangles": 378,
+          "vertices": 118,
+          "triangles": 232,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.10315100000000003,
+              0.008104699999999994,
+              0.10995730000000001
+            ],
+            [
+              0.12553140000000002,
+              0.018764599999999996,
+              0.1350943
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3183",
+          "first_index": 128688,
+          "index_count": 474,
+          "source_vertices": 204,
+          "source_triangles": 328,
+          "vertices": 81,
+          "triangles": 158,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.3021743333333334,
+              0.7399621999999999,
+              0.06884630000000001
+            ],
+            [
+              0.311635,
+              0.7534512,
+              0.08565330000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3184",
+          "first_index": 129162,
+          "index_count": 252,
+          "source_vertices": 154,
+          "source_triangles": 198,
+          "vertices": 43,
+          "triangles": 84,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.21969525,
+              0.7551202,
+              0.06775687142857145
+            ],
+            [
+              0.22756112500000003,
+              0.7671372000000001,
+              0.08144584545454545
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3185",
+          "first_index": 129414,
+          "index_count": 246,
+          "source_vertices": 160,
+          "source_triangles": 220,
+          "vertices": 43,
+          "triangles": 82,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.1622454285714286,
+              0.0077250499999999955,
+              0.0756113
+            ],
+            [
+              0.16974850000000002,
+              0.01283469999999999,
+              0.08576555
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3186",
+          "first_index": 129660,
+          "index_count": 420,
+          "source_vertices": 173,
+          "source_triangles": 266,
+          "vertices": 72,
+          "triangles": 140,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.27207200000000004,
+              0.7315242000000001,
+              0.07759130000000002
+            ],
+            [
+              0.28123883333333327,
+              0.7444057999999999,
+              0.09428130000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3187",
+          "first_index": 130080,
+          "index_count": 324,
+          "source_vertices": 140,
+          "source_triangles": 196,
+          "vertices": 53,
+          "triangles": 108,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.2461676,
+              0.7432009142857142,
+              0.07798830000000001
+            ],
+            [
+              0.25422,
+              0.7517491999999999,
+              0.0935373
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3188",
+          "first_index": 130404,
+          "index_count": 444,
+          "source_vertices": 189,
+          "source_triangles": 270,
+          "vertices": 75,
+          "triangles": 148,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.311485,
+              0.7975349142857143,
+              0.056473300000000025
+            ],
+            [
+              0.32452200000000003,
+              0.8203422,
+              0.07231230000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3189",
+          "first_index": 130848,
+          "index_count": 312,
+          "source_vertices": 170,
+          "source_triangles": 200,
+          "vertices": 54,
+          "triangles": 104,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.14244459999999998,
+              0.007822699999999998,
+              0.12024430000000001
+            ],
+            [
+              -0.13183899999999998,
+              0.014954699999999996,
+              0.1333283
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3190",
+          "first_index": 131160,
+          "index_count": 276,
+          "source_vertices": 162,
+          "source_triangles": 260,
+          "vertices": 46,
+          "triangles": 92,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.15402749999999998,
+              0.007913600000000003,
+              0.11168863333333334
+            ],
+            [
+              -0.145282,
+              0.01340599999999999,
+              0.12244513333333333
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3191",
+          "first_index": 131436,
+          "index_count": 342,
+          "source_vertices": 144,
+          "source_triangles": 244,
+          "vertices": 59,
+          "triangles": 114,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.16348,
+              0.007760849999999991,
+              0.09469630000000001
+            ],
+            [
+              -0.154688,
+              0.014560157142857142,
+              0.10565770000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3192",
+          "first_index": 131778,
+          "index_count": 720,
+          "source_vertices": 289,
+          "source_triangles": 440,
+          "vertices": 122,
+          "triangles": 240,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.12436674999999998,
+              0.00821329999999999,
+              0.11005763333333335
+            ],
+            [
+              -0.101938,
+              0.018809599999999996,
+              0.13527630000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3193",
+          "first_index": 132498,
+          "index_count": 372,
+          "source_vertices": 188,
+          "source_triangles": 210,
+          "vertices": 62,
+          "triangles": 124,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.310721,
+              0.7399572000000001,
+              0.06897555
+            ],
+            [
+              -0.30077800000000005,
+              0.7536622,
+              0.08572838333333334
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3194",
+          "first_index": 132870,
+          "index_count": 276,
+          "source_vertices": 140,
+          "source_triangles": 188,
+          "vertices": 48,
+          "triangles": 92,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.22643375,
+              0.7552548666666667,
+              0.06794230000000001
+            ],
+            [
+              -0.218248,
+              0.7673882000000001,
+              0.08074272857142858
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3195",
+          "first_index": 133146,
+          "index_count": 276,
+          "source_vertices": 178,
+          "source_triangles": 210,
+          "vertices": 45,
+          "triangles": 92,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.16831999999999997,
+              0.00775739999999999,
+              0.0755333
+            ],
+            [
+              -0.16075259999999997,
+              0.01296929999999999,
+              0.0857383
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3196",
+          "first_index": 133422,
+          "index_count": 342,
+          "source_vertices": 143,
+          "source_triangles": 174,
+          "vertices": 58,
+          "triangles": 114,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.280159,
+              0.7311782000000001,
+              0.07743730000000003
+            ],
+            [
+              -0.27074239999999994,
+              0.7445172000000001,
+              0.09465563333333334
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3197",
+          "first_index": 133764,
+          "index_count": 258,
+          "source_vertices": 114,
+          "source_triangles": 112,
+          "vertices": 45,
+          "triangles": 86,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.252967,
+              0.743192325,
+              0.07794930000000003
+            ],
+            [
+              -0.244634,
+              0.7521192000000001,
+              0.09361230000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3198",
+          "first_index": 134022,
+          "index_count": 444,
+          "source_vertices": 187,
+          "source_triangles": 240,
+          "vertices": 74,
+          "triangles": 148,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.3230989999999999,
+              0.7973512,
+              0.0563673
+            ],
+            [
+              -0.3098528,
+              0.8202772,
+              0.07215230000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3200",
+          "first_index": 134466,
+          "index_count": 19119,
+          "source_vertices": 8472,
+          "source_triangles": 14510,
+          "vertices": 3139,
+          "triangles": 6373,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.06265549999999999,
+              1.599157866666667,
+              0.006286425000000009
+            ],
+            [
+              0.06263910000000002,
+              1.7080512,
+              0.0766173
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3201",
+          "first_index": 153585,
+          "index_count": 1446,
+          "source_vertices": 687,
+          "source_triangles": 1196,
+          "vertices": 240,
+          "triangles": 482,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.018856533333333314,
+              1.5006092000000002,
+              -0.005988533333333323
+            ],
+            [
+              0.01890420000000002,
+              1.5187722000000001,
+              0.02814350000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3225",
+          "first_index": 155031,
+          "index_count": 9144,
+          "source_vertices": 3419,
+          "source_triangles": 6826,
+          "vertices": 1466,
+          "triangles": 3048,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.01627060000000002,
+              1.1012612,
+              -0.0893664
+            ],
+            [
+              0.12299600000000002,
+              1.236963075,
+              0.016825633333333343
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3226",
+          "first_index": 164175,
+          "index_count": 6579,
+          "source_vertices": 2435,
+          "source_triangles": 4866,
+          "vertices": 1061,
+          "triangles": 2193,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.017053166666666685,
+              1.0863819692307692,
+              -0.08280019999999999
+            ],
+            [
+              0.110681,
+              1.199540430769231,
+              -0.0047589999999999855
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3227",
+          "first_index": 170754,
+          "index_count": 3801,
+          "source_vertices": 1411,
+          "source_triangles": 2818,
+          "vertices": 617,
+          "triangles": 1267,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.017716184615384635,
+              1.0896439272727274,
+              -0.0726708
+            ],
+            [
+              0.08582610000000002,
+              1.1670795333333335,
+              -0.03469789999999999
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3228",
+          "first_index": 174555,
+          "index_count": 3996,
+          "source_vertices": 1641,
+          "source_triangles": 3276,
+          "vertices": 644,
+          "triangles": 1332,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.014512060000000021,
+              1.3884312,
+              -0.03626349999999998
+            ],
+            [
+              0.06898473333333337,
+              1.4484545333333332,
+              0.029499633333333337
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3229",
+          "first_index": 178551,
+          "index_count": 7626,
+          "source_vertices": 2862,
+          "source_triangles": 5594,
+          "vertices": 1212,
+          "triangles": 2542,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.01544555000000002,
+              1.351834057142857,
+              -0.04990135624999999
+            ],
+            [
+              0.09620865,
+              1.4370350461538461,
+              0.06623338333333333
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3230",
+          "first_index": 186177,
+          "index_count": 9489,
+          "source_vertices": 3637,
+          "source_triangles": 7254,
+          "vertices": 1524,
+          "triangles": 3163,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.01348380000000002,
+              1.3219912,
+              -0.06382249999999999
+            ],
+            [
+              0.10822300000000001,
+              1.4140312000000002,
+              0.07828763333333334
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3231",
+          "first_index": 195666,
+          "index_count": 11826,
+          "source_vertices": 4445,
+          "source_triangles": 8850,
+          "vertices": 1900,
+          "triangles": 3942,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.01365550000000002,
+              1.289358342857143,
+              -0.07749299999999998
+            ],
+            [
+              0.11689000000000002,
+              1.3932326285714285,
+              0.0914095
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3232",
+          "first_index": 207492,
+          "index_count": 13311,
+          "source_vertices": 4912,
+          "source_triangles": 9710,
+          "vertices": 2132,
+          "triangles": 4437,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.01476150000000002,
+              1.2505075636363634,
+              -0.08798311428571427
+            ],
+            [
+              0.12641500000000003,
+              1.3692495333333332,
+              0.09679210000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3233",
+          "first_index": 220803,
+          "index_count": 14154,
+          "source_vertices": 5172,
+          "source_triangles": 10264,
+          "vertices": 2297,
+          "triangles": 4718,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.013471400000000022,
+              1.2160612000000002,
+              -0.09709106249999999
+            ],
+            [
+              0.13369350000000002,
+              1.34470995,
+              0.09267050000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3234",
+          "first_index": 234957,
+          "index_count": 13689,
+          "source_vertices": 5054,
+          "source_triangles": 10032,
+          "vertices": 2206,
+          "triangles": 4563,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.01306315000000002,
+              1.1834896000000001,
+              -0.09623204799999999
+            ],
+            [
+              0.13641550000000002,
+              1.3182912000000002,
+              0.07938572857142857
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3235",
+          "first_index": 248646,
+          "index_count": 10977,
+          "source_vertices": 4211,
+          "source_triangles": 8336,
+          "vertices": 1783,
+          "triangles": 3659,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.01309268750000002,
+              1.1529406736842105,
+              -0.09616324999999999
+            ],
+            [
+              0.13226700000000002,
+              1.2891967555555555,
+              0.06177376153846155
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3236",
+          "first_index": 259623,
+          "index_count": 10407,
+          "source_vertices": 3805,
+          "source_triangles": 7576,
+          "vertices": 1674,
+          "triangles": 3469,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.015293700000000021,
+              1.1284281230769233,
+              -0.09320721333333333
+            ],
+            [
+              0.12843000000000002,
+              1.2633112000000002,
+              0.034495425
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3237",
+          "first_index": 270030,
+          "index_count": 3084,
+          "source_vertices": 602,
+          "source_triangles": 1176,
+          "vertices": 516,
+          "triangles": 1028,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.00913520000000002,
+              1.3867812000000002,
+              -0.04638019999999999
+            ],
+            [
+              0.14448550000000004,
+              1.4332912000000002,
+              0.04631030000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3240",
+          "first_index": 273114,
+          "index_count": 1158,
+          "source_vertices": 304,
+          "source_triangles": 578,
+          "vertices": 194,
+          "triangles": 386,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.27321075000000006,
+              0.8385945333333332,
+              0.022638300000000014
+            ],
+            [
+              0.310241,
+              0.8753885333333334,
+              0.05301430000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3241",
+          "first_index": 274272,
+          "index_count": 2370,
+          "source_vertices": 614,
+          "source_triangles": 1172,
+          "vertices": 397,
+          "triangles": 790,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.07548400000000002,
+              0.012928449999999998,
+              0.029203300000000012
+            ],
+            [
+              0.10490260000000003,
+              0.0558676,
+              0.09147330000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3243",
+          "first_index": 276642,
+          "index_count": 1446,
+          "source_vertices": 420,
+          "source_triangles": 774,
+          "vertices": 241,
+          "triangles": 482,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.26248800000000005,
+              0.7971532,
+              0.016382300000000016
+            ],
+            [
+              0.29325999999999997,
+              0.8649115333333334,
+              0.0416653
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3244",
+          "first_index": 278088,
+          "index_count": 1596,
+          "source_vertices": 487,
+          "source_triangles": 774,
+          "vertices": 267,
+          "triangles": 532,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.09144422,
+              0.011947499999999991,
+              0.021922522222222227
+            ],
+            [
+              0.12174500000000002,
+              0.0597003,
+              0.08660330000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3246",
+          "first_index": 279684,
+          "index_count": 1470,
+          "source_vertices": 392,
+          "source_triangles": 708,
+          "vertices": 247,
+          "triangles": 490,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.25319633333333336,
+              0.7987601999999999,
+              0.011712300000000014
+            ],
+            [
+              0.272899,
+              0.8629498,
+              0.04204430000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3247",
+          "first_index": 281154,
+          "index_count": 1656,
+          "source_vertices": 429,
+          "source_triangles": 742,
+          "vertices": 277,
+          "triangles": 552,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.09916196000000002,
+              0.0117333,
+              0.01752696666666668
+            ],
+            [
+              0.13420700000000002,
+              0.05438881999999999,
+              0.0800273
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3249",
+          "first_index": 282810,
+          "index_count": 1116,
+          "source_vertices": 316,
+          "source_triangles": 528,
+          "vertices": 186,
+          "triangles": 372,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.24215150000000002,
+              0.8033642,
+              0.015130300000000006
+            ],
+            [
+              0.254421,
+              0.8631661999999999,
+              0.04114330000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3250",
+          "first_index": 283926,
+          "index_count": 1476,
+          "source_vertices": 437,
+          "source_triangles": 772,
+          "vertices": 248,
+          "triangles": 492,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.10251966666666668,
+              0.010720699999999994,
+              0.006384500000000006
+            ],
+            [
+              0.14309900000000003,
+              0.0460901,
+              0.06865730000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3252",
+          "first_index": 285402,
+          "index_count": 1152,
+          "source_vertices": 282,
+          "source_triangles": 500,
+          "vertices": 192,
+          "triangles": 384,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.22591700000000003,
+              0.8101541999999999,
+              0.019456300000000013
+            ],
+            [
+              0.24595200000000003,
+              0.8646522,
+              0.0436523
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3253",
+          "first_index": 286554,
+          "index_count": 1782,
+          "source_vertices": 447,
+          "source_triangles": 864,
+          "vertices": 296,
+          "triangles": 594,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.10726275000000002,
+              0.00845334,
+              -0.011395499999999987
+            ],
+            [
+              0.15302200000000002,
+              0.038287949999999994,
+              0.05413130000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3256",
+          "first_index": 288336,
+          "index_count": 3156,
+          "source_vertices": 719,
+          "source_triangles": 1288,
+          "vertices": 527,
+          "triangles": 1052,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.04565700000000002,
+              0.009694000000000003,
+              -0.07656089999999999
+            ],
+            [
+              0.10130450000000002,
+              0.058875,
+              -0.0066258999999999875
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3257",
+          "first_index": 291492,
+          "index_count": 708,
+          "source_vertices": 237,
+          "source_triangles": 402,
+          "vertices": 120,
+          "triangles": 236,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.24947000000000005,
+              0.8603935333333332,
+              0.00986696666666667
+            ],
+            [
+              0.26493500000000003,
+              0.8826992,
+              0.026583300000000008
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3258",
+          "first_index": 292200,
+          "index_count": 1848,
+          "source_vertices": 494,
+          "source_triangles": 886,
+          "vertices": 308,
+          "triangles": 616,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.08261200000000002,
+              0.026588899999999995,
+              -0.017538899999999982
+            ],
+            [
+              0.11578100000000002,
+              0.056258199999999994,
+              0.015917300000000013
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3259",
+          "first_index": 294048,
+          "index_count": 9258,
+          "source_vertices": 1623,
+          "source_triangles": 3204,
+          "vertices": 1545,
+          "triangles": 3086,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.03261320000000002,
+              0.4461672,
+              -0.05128549999999999
+            ],
+            [
+              0.15088400000000002,
+              0.9123502000000001,
+              0.011508300000000006
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3260",
+          "first_index": 303306,
+          "index_count": 3210,
+          "source_vertices": 577,
+          "source_triangles": 1124,
+          "vertices": 537,
+          "triangles": 1070,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.08517600000000002,
+              0.053096,
+              -0.052233699999999994
+            ],
+            [
+              0.12075500000000003,
+              0.43717520000000004,
+              -0.02264869999999999
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3261",
+          "first_index": 306516,
+          "index_count": 762,
+          "source_vertices": 280,
+          "source_triangles": 452,
+          "vertices": 129,
+          "triangles": 254,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.23742666666666667,
+              0.8594333666666666,
+              0.010575800000000007
+            ],
+            [
+              0.252217,
+              0.8785318666666666,
+              0.0329373
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3262",
+          "first_index": 307278,
+          "index_count": 9330,
+          "source_vertices": 2073,
+          "source_triangles": 3844,
+          "vertices": 1551,
+          "triangles": 3110,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.14072000000000004,
+              1.1073212000000001,
+              -0.04971179999999999
+            ],
+            [
+              0.241406,
+              1.4146312,
+              -0.0005386999999999916
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3263",
+          "first_index": 316608,
+          "index_count": 966,
+          "source_vertices": 482,
+          "source_triangles": 738,
+          "vertices": 159,
+          "triangles": 322,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.00523821000000002,
+              1.5607978666666666,
+              0.033183300000000006
+            ],
+            [
+              0.01649653333333335,
+              1.5761612000000003,
+              0.06841001428571429
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3264",
+          "first_index": 317574,
+          "index_count": 852,
+          "source_vertices": 305,
+          "source_triangles": 466,
+          "vertices": 137,
+          "triangles": 284,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.08266060000000001,
+              0.043865049999999996,
+              0.008951050000000009
+            ],
+            [
+              0.10231600000000002,
+              0.06669599999999999,
+              0.02956230000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3265",
+          "first_index": 318426,
+          "index_count": 882,
+          "source_vertices": 366,
+          "source_triangles": 640,
+          "vertices": 145,
+          "triangles": 294,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.00807120600000002,
+              1.5760337000000002,
+              0.050107675000000004
+            ],
+            [
+              0.018068100000000017,
+              1.6047412,
+              0.0639643
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3266",
+          "first_index": 319308,
+          "index_count": 180,
+          "source_vertices": 78,
+          "source_triangles": 100,
+          "vertices": 32,
+          "triangles": 60,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.08814180000000002,
+              0.0103249,
+              0.07484030000000001
+            ],
+            [
+              0.09481533333333335,
+              0.016538399999999995,
+              0.08398430000000003
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3267",
+          "first_index": 319488,
+          "index_count": 1182,
+          "source_vertices": 405,
+          "source_triangles": 680,
+          "vertices": 199,
+          "triangles": 394,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.08806760000000002,
+              0.037653266666666664,
+              0.00030080000000000596
+            ],
+            [
+              0.11343000000000002,
+              0.0632001,
+              0.024225300000000016
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3268",
+          "first_index": 320670,
+          "index_count": 528,
+          "source_vertices": 187,
+          "source_triangles": 314,
+          "vertices": 88,
+          "triangles": 176,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.23739900000000003,
+              0.8755773250000001,
+              0.00986030000000001
+            ],
+            [
+              0.253267,
+              0.8879992,
+              0.026251800000000013
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3269",
+          "first_index": 321198,
+          "index_count": 7134,
+          "source_vertices": 3577,
+          "source_triangles": 5198,
+          "vertices": 1136,
+          "triangles": 2378,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.0019431699999999802,
+              1.5421012,
+              0.02609480000000001
+            ],
+            [
+              0.0461449777777778,
+              1.6111912,
+              0.08183990000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3270",
+          "first_index": 328332,
+          "index_count": 252,
+          "source_vertices": 96,
+          "source_triangles": 144,
+          "vertices": 44,
+          "triangles": 84,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.09545340000000002,
+              0.008901849999999996,
+              0.06994130000000001
+            ],
+            [
+              0.10354400000000002,
+              0.016186199999999998,
+              0.08232355000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3271",
+          "first_index": 328584,
+          "index_count": 1674,
+          "source_vertices": 582,
+          "source_triangles": 996,
+          "vertices": 275,
+          "triangles": 558,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.0667672888888889,
+              0.0329668,
+              0.011577800000000013
+            ],
+            [
+              0.09475640000000002,
+              0.0639059,
+              0.0396713
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3273",
+          "first_index": 330258,
+          "index_count": 2760,
+          "source_vertices": 1164,
+          "source_triangles": 1938,
+          "vertices": 447,
+          "triangles": 920,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.0008962399999999801,
+              1.5485012,
+              0.0027818833333333438
+            ],
+            [
+              0.02792548333333335,
+              1.5912303666666665,
+              0.0488013
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3274",
+          "first_index": 333018,
+          "index_count": 13245,
+          "source_vertices": 8367,
+          "source_triangles": 13210,
+          "vertices": 2140,
+          "triangles": 4415,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.00678851399999998,
+              1.5959845333333333,
+              -0.1154995
+            ],
+            [
+              0.07550350000000002,
+              1.7143412,
+              0.030733728571428587
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3275",
+          "first_index": 346263,
+          "index_count": 828,
+          "source_vertices": 180,
+          "source_triangles": 310,
+          "vertices": 138,
+          "triangles": 276,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.06123950000000002,
+              0.4396082,
+              0.00013330000000000552
+            ],
+            [
+              0.10278766666666668,
+              0.4786002,
+              0.021983300000000015
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3276",
+          "first_index": 347091,
+          "index_count": 378,
+          "source_vertices": 116,
+          "source_triangles": 210,
+          "vertices": 65,
+          "triangles": 126,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.23248500000000002,
+              0.8679136999999999,
+              0.026467663636363648
+            ],
+            [
+              0.24067700000000003,
+              0.8793882000000001,
+              0.03682130000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3277",
+          "first_index": 347469,
+          "index_count": 1752,
+          "source_vertices": 368,
+          "source_triangles": 632,
+          "vertices": 294,
+          "triangles": 584,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.22048300000000004,
+              0.8842742,
+              -0.0392984
+            ],
+            [
+              0.27979,
+              1.1131212000000001,
+              0.026484300000000006
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3278",
+          "first_index": 349221,
+          "index_count": 618,
+          "source_vertices": 176,
+          "source_triangles": 312,
+          "vertices": 105,
+          "triangles": 206,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.250244,
+              0.8743662,
+              0.01075930000000001
+            ],
+            [
+              0.27354,
+              0.8897932000000001,
+              0.025676300000000013
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3279",
+          "first_index": 349839,
+          "index_count": 32469,
+          "source_vertices": 14068,
+          "source_triangles": 28106,
+          "vertices": 5261,
+          "triangles": 10823,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.05780928750000002,
+              1.2620812000000001,
+              -0.10578647
+            ],
+            [
+              0.16705200000000003,
+              1.4279012,
+              0.001987888235294126
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3280",
+          "first_index": 382308,
+          "index_count": 2754,
+          "source_vertices": 776,
+          "source_triangles": 1356,
+          "vertices": 459,
+          "triangles": 918,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.05028240000000002,
+              0.04695666666666667,
+              -0.05177964999999999
+            ],
+            [
+              0.09082540000000001,
+              0.08120931,
+              0.004909300000000016
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3281",
+          "first_index": 385062,
+          "index_count": 8091,
+          "source_vertices": 3013,
+          "source_triangles": 4936,
+          "vertices": 1332,
+          "triangles": 2697,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.01227120000000002,
+              1.5537912,
+              -0.0655597
+            ],
+            [
+              0.07311410000000002,
+              1.6293612,
+              0.032334744444444445
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3282",
+          "first_index": 393153,
+          "index_count": 4824,
+          "source_vertices": 880,
+          "source_triangles": 1692,
+          "vertices": 806,
+          "triangles": 1608,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.03568120000000002,
+              0.07201587,
+              -0.04878559999999999
+            ],
+            [
+              0.11010200000000002,
+              0.45178786666666665,
+              0.01374730000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3283",
+          "first_index": 397977,
+          "index_count": 582,
+          "source_vertices": 226,
+          "source_triangles": 356,
+          "vertices": 99,
+          "triangles": 194,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.26574025000000007,
+              0.8639230333333332,
+              0.016990300000000003
+            ],
+            [
+              0.28217700000000007,
+              0.8832373818181819,
+              0.03362850000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3284",
+          "first_index": 398559,
+          "index_count": 540,
+          "source_vertices": 279,
+          "source_triangles": 398,
+          "vertices": 91,
+          "triangles": 180,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.263092,
+              0.8611627,
+              0.013049800000000004
+            ],
+            [
+              0.273936,
+              0.8733812000000001,
+              0.027572300000000015
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3285",
+          "first_index": 399099,
+          "index_count": 486,
+          "source_vertices": 180,
+          "source_triangles": 304,
+          "vertices": 83,
+          "triangles": 162,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.232468,
+              0.8670602,
+              0.013657300000000006
+            ],
+            [
+              0.24327600000000002,
+              0.8805612,
+              0.0287653
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3286",
+          "first_index": 399585,
+          "index_count": 2100,
+          "source_vertices": 496,
+          "source_triangles": 824,
+          "vertices": 350,
+          "triangles": 700,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.19753900000000002,
+              0.8834115333333332,
+              -0.056215399999999985
+            ],
+            [
+              0.2476316666666667,
+              1.1305812000000002,
+              0.022511300000000005
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3287",
+          "first_index": 401685,
+          "index_count": 1962,
+          "source_vertices": 929,
+          "source_triangles": 1434,
+          "vertices": 318,
+          "triangles": 654,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.03255480000000002,
+              1.559196914285714,
+              0.020975300000000006
+            ],
+            [
+              0.06375150000000002,
+              1.6148512000000002,
+              0.0606643
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3288",
+          "first_index": 403647,
+          "index_count": 6738,
+          "source_vertices": 1257,
+          "source_triangles": 2332,
+          "vertices": 1123,
+          "triangles": 2246,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.0033973100000000197,
+              0.8300622000000001,
+              -0.09945275999999999
+            ],
+            [
+              0.145401,
+              1.0362012,
+              0.03832730000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3289",
+          "first_index": 410385,
+          "index_count": 10332,
+          "source_vertices": 2845,
+          "source_triangles": 5576,
+          "vertices": 1706,
+          "triangles": 3444,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.05315499999999998,
+              1.4997462000000001,
+              -0.010859899999999995
+            ],
+            [
+              0.05315693333333335,
+              1.5841911999999998,
+              0.0728743
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3291",
+          "first_index": 420717,
+          "index_count": 624,
+          "source_vertices": 216,
+          "source_triangles": 340,
+          "vertices": 104,
+          "triangles": 208,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.24342900000000003,
+              0.7479321999999999,
+              0.05625680000000001
+            ],
+            [
+              0.2550223333333334,
+              0.7716487,
+              0.0797433
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3292",
+          "first_index": 421341,
+          "index_count": 588,
+          "source_vertices": 219,
+          "source_triangles": 316,
+          "vertices": 100,
+          "triangles": 196,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.253646,
+              0.7479272000000001,
+              0.055768300000000014
+            ],
+            [
+              -0.242116,
+              0.7717152,
+              0.07979930000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3293",
+          "first_index": 421929,
+          "index_count": 420,
+          "source_vertices": 197,
+          "source_triangles": 324,
+          "vertices": 71,
+          "triangles": 140,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.1259586666666667,
+              0.010340533333333334,
+              0.10693270000000002
+            ],
+            [
+              0.13958220000000005,
+              0.0187699,
+              0.12365863333333332
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3294",
+          "first_index": 422349,
+          "index_count": 402,
+          "source_vertices": 185,
+          "source_triangles": 294,
+          "vertices": 68,
+          "triangles": 134,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.13956200000000002,
+              0.009223366666666663,
+              0.09835258571428573
+            ],
+            [
+              0.15217680000000003,
+              0.017002299999999998,
+              0.11468896666666668
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3295",
+          "first_index": 422751,
+          "index_count": 390,
+          "source_vertices": 183,
+          "source_triangles": 284,
+          "vertices": 67,
+          "triangles": 130,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.14979900000000002,
+              0.008546019999999996,
+              0.0846653
+            ],
+            [
+              0.16192499999999999,
+              0.016141700000000002,
+              0.09769130000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3296",
+          "first_index": 423141,
+          "index_count": 504,
+          "source_vertices": 188,
+          "source_triangles": 306,
+          "vertices": 86,
+          "triangles": 168,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.2950705,
+              0.7491667,
+              0.0506353
+            ],
+            [
+              0.309553,
+              0.7693058666666667,
+              0.07127430000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3297",
+          "first_index": 423645,
+          "index_count": 414,
+          "source_vertices": 192,
+          "source_triangles": 254,
+          "vertices": 71,
+          "triangles": 138,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.21982100000000002,
+              0.7657407714285716,
+              0.05448910000000001
+            ],
+            [
+              0.23087520000000006,
+              0.7850072,
+              0.07066855000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3298",
+          "first_index": 424059,
+          "index_count": 210,
+          "source_vertices": 143,
+          "source_triangles": 226,
+          "vertices": 37,
+          "triangles": 70,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.15897575000000003,
+              0.008056899999999999,
+              0.07084830000000002
+            ],
+            [
+              0.16713183333333337,
+              0.014199424999999995,
+              0.07779829999999999
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3299",
+          "first_index": 424269,
+          "index_count": 648,
+          "source_vertices": 229,
+          "source_triangles": 384,
+          "vertices": 108,
+          "triangles": 216,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.2672626,
+              0.7406919777777778,
+              0.05710380000000001
+            ],
+            [
+              0.28076,
+              0.7658067000000001,
+              0.08001180000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3300",
+          "first_index": 424917,
+          "index_count": 438,
+          "source_vertices": 192,
+          "source_triangles": 264,
+          "vertices": 74,
+          "triangles": 146,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.13834899999999997,
+              0.010100899999999996,
+              0.10695605000000001
+            ],
+            [
+              -0.12458999999999998,
+              0.0186526,
+              0.1238013
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3301",
+          "first_index": 425355,
+          "index_count": 486,
+          "source_vertices": 190,
+          "source_triangles": 292,
+          "vertices": 79,
+          "triangles": 162,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.15070999999999998,
+              0.00928009999999999,
+              0.09827430000000001
+            ],
+            [
+              -0.13843499999999997,
+              0.01714034999999999,
+              0.114605175
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3302",
+          "first_index": 425841,
+          "index_count": 426,
+          "source_vertices": 220,
+          "source_triangles": 350,
+          "vertices": 72,
+          "triangles": 142,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.1604904285714286,
+              0.008416299999999993,
+              0.0848083
+            ],
+            [
+              -0.1487078,
+              0.016175699999999998,
+              0.09765963333333334
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3303",
+          "first_index": 426267,
+          "index_count": 492,
+          "source_vertices": 190,
+          "source_triangles": 264,
+          "vertices": 84,
+          "triangles": 164,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.30817999999999995,
+              0.7492901,
+              0.050541300000000004
+            ],
+            [
+              -0.29375299999999993,
+              0.7693441999999999,
+              0.07131530000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3304",
+          "first_index": 426759,
+          "index_count": 402,
+          "source_vertices": 169,
+          "source_triangles": 208,
+          "vertices": 69,
+          "triangles": 134,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.22981374999999996,
+              0.7656812,
+              0.054244744444444444
+            ],
+            [
+              -0.21850974999999997,
+              0.7851982000000001,
+              0.0706713
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3305",
+          "first_index": 427161,
+          "index_count": 204,
+          "source_vertices": 102,
+          "source_triangles": 136,
+          "vertices": 36,
+          "triangles": 68,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.16585299999999997,
+              0.008020799999999995,
+              0.0709040142857143
+            ],
+            [
+              -0.15766199999999997,
+              0.014304899999999997,
+              0.07805030000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3306",
+          "first_index": 427365,
+          "index_count": 618,
+          "source_vertices": 227,
+          "source_triangles": 342,
+          "vertices": 104,
+          "triangles": 206,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.27955499999999994,
+              0.7407035333333333,
+              0.057031300000000014
+            ],
+            [
+              -0.26594100000000004,
+              0.7658397,
+              0.08008930000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3307",
+          "first_index": 427983,
+          "index_count": 1260,
+          "source_vertices": 459,
+          "source_triangles": 744,
+          "vertices": 212,
+          "triangles": 420,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.05857660000000002,
+              0.047137,
+              -0.00626741666666666
+            ],
+            [
+              0.09718780000000003,
+              0.07181409,
+              0.020237300000000003
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3308",
+          "first_index": 429243,
+          "index_count": 1122,
+          "source_vertices": 455,
+          "source_triangles": 716,
+          "vertices": 186,
+          "triangles": 374,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.09591562499999999,
+              0.0473349,
+              -0.006234942857142849
+            ],
+            [
+              -0.05754259999999998,
+              0.0719554,
+              0.020225300000000005
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3309",
+          "first_index": 430365,
+          "index_count": 17277,
+          "source_vertices": 6995,
+          "source_triangles": 12450,
+          "vertices": 2827,
+          "triangles": 5759,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.06114533999999998,
+              1.5558812,
+              -0.11876869999999999
+            ],
+            [
+              0.061146514285714305,
+              1.6625252,
+              0.0001408000000000129
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3310",
+          "first_index": 447642,
+          "index_count": 1044,
+          "source_vertices": 281,
+          "source_triangles": 486,
+          "vertices": 174,
+          "triangles": 348,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.11632516666666665,
+              0.009626749999999993,
+              0.0853023
+            ],
+            [
+              -0.08601259999999998,
+              0.026457249999999995,
+              0.11833763333333334
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3311",
+          "first_index": 448686,
+          "index_count": 630,
+          "source_vertices": 248,
+          "source_triangles": 408,
+          "vertices": 105,
+          "triangles": 210,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.12590300000000001,
+              0.010664722222222221,
+              0.07395363333333334
+            ],
+            [
+              0.14616666666666667,
+              0.02215716666666666,
+              0.10195196666666669
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3312",
+          "first_index": 449316,
+          "index_count": 636,
+          "source_vertices": 255,
+          "source_triangles": 438,
+          "vertices": 107,
+          "triangles": 212,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.135077,
+              0.00874029999999999,
+              0.06386446666666666
+            ],
+            [
+              0.15620266666666668,
+              0.021479699999999994,
+              0.0875298
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3313",
+          "first_index": 449952,
+          "index_count": 822,
+          "source_vertices": 222,
+          "source_triangles": 392,
+          "vertices": 139,
+          "triangles": 274,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.281461,
+              0.7639052000000001,
+              0.033321300000000005
+            ],
+            [
+              0.30338699999999996,
+              0.8013872,
+              0.056103500000000014
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3314",
+          "first_index": 450774,
+          "index_count": 558,
+          "source_vertices": 164,
+          "source_triangles": 274,
+          "vertices": 95,
+          "triangles": 186,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.22293300000000002,
+              0.7816092000000001,
+              0.03790030000000002
+            ],
+            [
+              0.23694100000000004,
+              0.8139012,
+              0.05848230000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3315",
+          "first_index": 451332,
+          "index_count": 642,
+          "source_vertices": 231,
+          "source_triangles": 396,
+          "vertices": 108,
+          "triangles": 214,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.14360650000000003,
+              0.00853565,
+              0.04815305000000001
+            ],
+            [
+              0.16512914285714286,
+              0.018124099999999997,
+              0.07325130000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3316",
+          "first_index": 451974,
+          "index_count": 996,
+          "source_vertices": 264,
+          "source_triangles": 460,
+          "vertices": 168,
+          "triangles": 332,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.2598480000000001,
+              0.7625772,
+              0.03442430000000002
+            ],
+            [
+              0.27777657142857143,
+              0.8030771999999999,
+              0.06332830000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3317",
+          "first_index": 452970,
+          "index_count": 816,
+          "source_vertices": 205,
+          "source_triangles": 376,
+          "vertices": 138,
+          "triangles": 272,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.24113900000000002,
+              0.7681631999999999,
+              0.034941300000000015
+            ],
+            [
+              0.25439200000000006,
+              0.8069952,
+              0.0608333
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3318",
+          "first_index": 453786,
+          "index_count": 678,
+          "source_vertices": 202,
+          "source_triangles": 346,
+          "vertices": 113,
+          "triangles": 226,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.29944566666666667,
+              0.8136402,
+              0.04204730000000001
+            ],
+            [
+              0.31914,
+              0.8450527000000001,
+              0.06381463333333336
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3319",
+          "first_index": 454464,
+          "index_count": 612,
+          "source_vertices": 236,
+          "source_triangles": 414,
+          "vertices": 104,
+          "triangles": 204,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.1326886,
+              0.011415457142857143,
+              0.08280430000000001
+            ],
+            [
+              -0.11087039999999997,
+              0.023564799999999997,
+              0.11060880000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3320",
+          "first_index": 455076,
+          "index_count": 636,
+          "source_vertices": 276,
+          "source_triangles": 422,
+          "vertices": 107,
+          "triangles": 212,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.1447733333333333,
+              0.010729174999999999,
+              0.07381396666666667
+            ],
+            [
+              -0.12442899999999997,
+              0.021587512499999996,
+              0.10194044285714288
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3321",
+          "first_index": 455712,
+          "index_count": 660,
+          "source_vertices": 254,
+          "source_triangles": 438,
+          "vertices": 112,
+          "triangles": 220,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.1548619,
+              0.008637919999999997,
+              0.06364596666666668
+            ],
+            [
+              -0.13387619999999995,
+              0.0213702,
+              0.08752958571428572
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3322",
+          "first_index": 456372,
+          "index_count": 858,
+          "source_vertices": 226,
+          "source_triangles": 386,
+          "vertices": 143,
+          "triangles": 286,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.30211799999999994,
+              0.7639351999999999,
+              0.033325299999999995
+            ],
+            [
+              -0.280331,
+              0.8013081999999999,
+              0.05599030000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3323",
+          "first_index": 457230,
+          "index_count": 618,
+          "source_vertices": 187,
+          "source_triangles": 314,
+          "vertices": 103,
+          "triangles": 206,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.23568199999999997,
+              0.7816031999999999,
+              0.037953300000000016
+            ],
+            [
+              -0.22180699999999998,
+              0.8140582000000002,
+              0.058374800000000004
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3324",
+          "first_index": 457848,
+          "index_count": 612,
+          "source_vertices": 238,
+          "source_triangles": 406,
+          "vertices": 102,
+          "triangles": 204,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.16393366666666664,
+              0.008380099999999998,
+              0.04808170000000002
+            ],
+            [
+              -0.14236324999999997,
+              0.018063899999999997,
+              0.07329263333333334
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3325",
+          "first_index": 458460,
+          "index_count": 1008,
+          "source_vertices": 271,
+          "source_triangles": 458,
+          "vertices": 168,
+          "triangles": 336,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.27675,
+              0.7625252,
+              0.0343613
+            ],
+            [
+              -0.25856100000000004,
+              0.8029721999999999,
+              0.0634333
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3326",
+          "first_index": 459468,
+          "index_count": 828,
+          "source_vertices": 209,
+          "source_triangles": 376,
+          "vertices": 138,
+          "triangles": 276,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.253177,
+              0.7680791999999999,
+              0.0348903
+            ],
+            [
+              -0.239944,
+              0.8068595333333333,
+              0.06107250000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3327",
+          "first_index": 460296,
+          "index_count": 588,
+          "source_vertices": 197,
+          "source_triangles": 318,
+          "vertices": 100,
+          "triangles": 196,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.31799025,
+              0.8137182,
+              0.0418853
+            ],
+            [
+              -0.2982039999999999,
+              0.8451787,
+              0.06411530000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3328",
+          "first_index": 460884,
+          "index_count": 666,
+          "source_vertices": 233,
+          "source_triangles": 380,
+          "vertices": 112,
+          "triangles": 222,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.11223725000000002,
+              0.011435633333333329,
+              0.0827593
+            ],
+            [
+              0.13396983333333334,
+              0.0235702,
+              0.1104970142857143
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3329",
+          "first_index": 461550,
+          "index_count": 1140,
+          "source_vertices": 318,
+          "source_triangles": 516,
+          "vertices": 192,
+          "triangles": 380,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.08737280000000003,
+              0.009715599999999994,
+              0.0853613
+            ],
+            [
+              0.11751987500000001,
+              0.026558999999999996,
+              0.11832496666666666
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3330",
+          "first_index": 462690,
+          "index_count": 9009,
+          "source_vertices": 3415,
+          "source_triangles": 6820,
+          "vertices": 1449,
+          "triangles": 3003,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.12296549999999998,
+              1.1013124499999998,
+              -0.08940609999999999
+            ],
+            [
+              -0.016250799999999982,
+              1.2369141411764706,
+              0.016576800000000006
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3331",
+          "first_index": 471699,
+          "index_count": 6639,
+          "source_vertices": 2437,
+          "source_triangles": 4866,
+          "vertices": 1063,
+          "triangles": 2213,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.11066399999999998,
+              1.0862954857142857,
+              -0.08279524999999999
+            ],
+            [
+              -0.01701934999999998,
+              1.1996566545454548,
+              -0.004749399999999994
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3332",
+          "first_index": 478338,
+          "index_count": 3873,
+          "source_vertices": 1412,
+          "source_triangles": 2818,
+          "vertices": 624,
+          "triangles": 1291,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.08579019999999998,
+              1.0896862,
+              -0.07277549999999999
+            ],
+            [
+              -0.017831999999999983,
+              1.1671732000000001,
+              -0.03470509999999999
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3334",
+          "first_index": 482211,
+          "index_count": 3927,
+          "source_vertices": 1642,
+          "source_triangles": 3276,
+          "vertices": 631,
+          "triangles": 1309,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.06902264999999998,
+              1.3884611999999998,
+              -0.03629071666666666
+            ],
+            [
+              -0.014602199999999982,
+              1.4484678666666666,
+              0.02950841111111112
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3336",
+          "first_index": 486138,
+          "index_count": 7407,
+          "source_vertices": 2861,
+          "source_triangles": 5594,
+          "vertices": 1191,
+          "triangles": 2469,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.09623664999999998,
+              1.3517812,
+              -0.04973721999999999
+            ],
+            [
+              -0.015490166666666647,
+              1.437008977777778,
+              0.0663083
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3338",
+          "first_index": 493545,
+          "index_count": 9435,
+          "source_vertices": 3634,
+          "source_triangles": 7254,
+          "vertices": 1512,
+          "triangles": 3145,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.10822724999999997,
+              1.322009057142857,
+              -0.06384009999999998
+            ],
+            [
+              -0.01359399999999998,
+              1.4140112,
+              0.07828680000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3340",
+          "first_index": 502980,
+          "index_count": 12195,
+          "source_vertices": 4435,
+          "source_triangles": 8832,
+          "vertices": 1952,
+          "triangles": 4065,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.11694599999999998,
+              1.2895212,
+              -0.07751243999999999
+            ],
+            [
+              -0.01443457272727271,
+              1.3933551999999998,
+              0.09137915714285716
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3342",
+          "first_index": 515175,
+          "index_count": 13497,
+          "source_vertices": 4910,
+          "source_triangles": 9710,
+          "vertices": 2171,
+          "triangles": 4499,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.12639966666666666,
+              1.2505976285714289,
+              -0.087996525
+            ],
+            [
+              -0.01479316249999998,
+              1.3692278666666668,
+              0.09681596666666668
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3344",
+          "first_index": 528672,
+          "index_count": 13737,
+          "source_vertices": 5168,
+          "source_triangles": 10246,
+          "vertices": 2218,
+          "triangles": 4579,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.13370199999999996,
+              1.2160492,
+              -0.097107115
+            ],
+            [
+              -0.01428314999999998,
+              1.3437197714285714,
+              0.09270930000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3346",
+          "first_index": 542409,
+          "index_count": 13725,
+          "source_vertices": 5058,
+          "source_triangles": 10032,
+          "vertices": 2210,
+          "triangles": 4575,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.13643799999999998,
+              1.1834995333333334,
+              -0.096234495
+            ],
+            [
+              -0.01309209999999998,
+              1.318283342857143,
+              0.07935811818181819
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3347",
+          "first_index": 556134,
+          "index_count": 11271,
+          "source_vertices": 4199,
+          "source_triangles": 8336,
+          "vertices": 1811,
+          "triangles": 3757,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.13230299999999995,
+              1.1530988923076924,
+              -0.09620320999999998
+            ],
+            [
+              -0.013095671428571409,
+              1.2892912,
+              0.061741352631578955
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3348",
+          "first_index": 567405,
+          "index_count": 10227,
+          "source_vertices": 3808,
+          "source_triangles": 7576,
+          "vertices": 1649,
+          "triangles": 3409,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.12845099999999998,
+              1.1283582000000003,
+              -0.09316739999999998
+            ],
+            [
+              -0.01527709999999998,
+              1.2633239272727275,
+              0.034626761538461545
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3349",
+          "first_index": 577632,
+          "index_count": 1836,
+          "source_vertices": 388,
+          "source_triangles": 672,
+          "vertices": 308,
+          "triangles": 612,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.2788005,
+              0.8839462000000001,
+              -0.03966509999999999
+            ],
+            [
+              -0.219186,
+              1.1131612,
+              0.026140300000000012
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3350",
+          "first_index": 579468,
+          "index_count": 1026,
+          "source_vertices": 307,
+          "source_triangles": 566,
+          "vertices": 170,
+          "triangles": 342,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.30870849999999994,
+              0.8386032,
+              0.022859300000000006
+            ],
+            [
+              -0.27180266666666664,
+              0.8753492000000002,
+              0.05297663333333333
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3351",
+          "first_index": 580494,
+          "index_count": 2328,
+          "source_vertices": 602,
+          "source_triangles": 1122,
+          "vertices": 387,
+          "triangles": 776,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.10362122222222221,
+              0.013007899999999992,
+              0.0291763
+            ],
+            [
+              -0.07432639999999999,
+              0.0559447,
+              0.0914143
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3352",
+          "first_index": 582822,
+          "index_count": 1506,
+          "source_vertices": 418,
+          "source_triangles": 748,
+          "vertices": 252,
+          "triangles": 502,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.29203999999999997,
+              0.7970662,
+              0.016439300000000004
+            ],
+            [
+              -0.261173,
+              0.8648007,
+              0.042019300000000016
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3353",
+          "first_index": 584328,
+          "index_count": 1455,
+          "source_vertices": 515,
+          "source_triangles": 752,
+          "vertices": 241,
+          "triangles": 485,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.12062599999999998,
+              0.011793399999999992,
+              0.021680300000000003
+            ],
+            [
+              -0.0901642333333333,
+              0.059773099999999996,
+              0.08663830000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3354",
+          "first_index": 585783,
+          "index_count": 1374,
+          "source_vertices": 404,
+          "source_triangles": 702,
+          "vertices": 231,
+          "triangles": 458,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.27169899999999997,
+              0.7989512,
+              0.011872800000000005
+            ],
+            [
+              -0.251868,
+              0.8630482,
+              0.04196530000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3355",
+          "first_index": 587157,
+          "index_count": 1518,
+          "source_vertices": 423,
+          "source_triangles": 700,
+          "vertices": 253,
+          "triangles": 506,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.13287399999999996,
+              0.011733800000000003,
+              0.017593300000000013
+            ],
+            [
+              -0.0978905833333333,
+              0.0543433,
+              0.0800893
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3356",
+          "first_index": 588675,
+          "index_count": 1068,
+          "source_vertices": 340,
+          "source_triangles": 536,
+          "vertices": 180,
+          "triangles": 356,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.253094,
+              0.8033902,
+              0.015177966666666676
+            ],
+            [
+              -0.24077899999999997,
+              0.8630997,
+              0.04120330000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3357",
+          "first_index": 589743,
+          "index_count": 1386,
+          "source_vertices": 397,
+          "source_triangles": 674,
+          "vertices": 229,
+          "triangles": 462,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.14174599999999998,
+              0.010767299999999992,
+              0.006471466666666673
+            ],
+            [
+              -0.10121999999999999,
+              0.0461527,
+              0.06879230000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3358",
+          "first_index": 591129,
+          "index_count": 1026,
+          "source_vertices": 279,
+          "source_triangles": 506,
+          "vertices": 173,
+          "triangles": 342,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.24460699999999996,
+              0.8101271999999999,
+              0.019509800000000008
+            ],
+            [
+              -0.22455499999999998,
+              0.8649522,
+              0.04370230000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3359",
+          "first_index": 592155,
+          "index_count": 1710,
+          "source_vertices": 436,
+          "source_triangles": 794,
+          "vertices": 285,
+          "triangles": 570,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.15168399999999996,
+              0.008548699999999996,
+              -0.011304599999999993
+            ],
+            [
+              -0.1059618,
+              0.038231799999999996,
+              0.0541763
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3360",
+          "first_index": 593865,
+          "index_count": 3018,
+          "source_vertices": 739,
+          "source_triangles": 1262,
+          "vertices": 505,
+          "triangles": 1006,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.10013399999999999,
+              0.009620499999999992,
+              -0.07676259999999999
+            ],
+            [
+              -0.04422879999999998,
+              0.058956499999999995,
+              -0.00662274999999999
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3361",
+          "first_index": 596883,
+          "index_count": 774,
+          "source_vertices": 256,
+          "source_triangles": 428,
+          "vertices": 130,
+          "triangles": 258,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.26383500000000004,
+              0.8604622000000001,
+              0.009766300000000016
+            ],
+            [
+              -0.2478075,
+              0.8827082,
+              0.02664930000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3362",
+          "first_index": 597657,
+          "index_count": 3066,
+          "source_vertices": 583,
+          "source_triangles": 1146,
+          "vertices": 513,
+          "triangles": 1022,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.14450549999999998,
+              1.3869212,
+              -0.04635519999999999
+            ],
+            [
+              -0.00901464999999998,
+              1.4335512000000001,
+              0.046038800000000005
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3364",
+          "first_index": 600723,
+          "index_count": 1692,
+          "source_vertices": 543,
+          "source_triangles": 932,
+          "vertices": 282,
+          "triangles": 564,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.11443799999999997,
+              0.026989599999999996,
+              -0.017034999999999998
+            ],
+            [
+              -0.08171949999999999,
+              0.056022899999999994,
+              0.01600030000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3365",
+          "first_index": 602415,
+          "index_count": 8928,
+          "source_vertices": 1574,
+          "source_triangles": 3102,
+          "vertices": 1490,
+          "triangles": 2976,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.14948699999999995,
+              0.44626119999999997,
+              -0.05123749999999999
+            ],
+            [
+              -0.03124729999999998,
+              0.9123632,
+              0.011424300000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3366",
+          "first_index": 611343,
+          "index_count": 3180,
+          "source_vertices": 593,
+          "source_triangles": 1142,
+          "vertices": 532,
+          "triangles": 1060,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.11951799999999999,
+              0.052847599999999995,
+              -0.05217924999999999
+            ],
+            [
+              -0.08369749999999998,
+              0.4371137,
+              -0.022622899999999987
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3367",
+          "first_index": 614523,
+          "index_count": 780,
+          "source_vertices": 335,
+          "source_triangles": 522,
+          "vertices": 129,
+          "triangles": 260,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.25107,
+              0.8594844,
+              0.010638300000000015
+            ],
+            [
+              -0.23616266666666663,
+              0.8786029142857144,
+              0.03277530000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3368",
+          "first_index": 615303,
+          "index_count": 9018,
+          "source_vertices": 2233,
+          "source_triangles": 3784,
+          "vertices": 1499,
+          "triangles": 3006,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.24011424999999997,
+              1.1073112,
+              -0.04972859999999999
+            ],
+            [
+              -0.13944299999999998,
+              1.4146512,
+              -0.0005486999999999966
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3369",
+          "first_index": 624321,
+          "index_count": 900,
+          "source_vertices": 572,
+          "source_triangles": 714,
+          "vertices": 148,
+          "triangles": 300,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.015771733333333312,
+              1.5567578666666666,
+              0.029193300000000023
+            ],
+            [
+              -0.006200283333333313,
+              1.576391866666667,
+              0.0653623
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3370",
+          "first_index": 625221,
+          "index_count": 762,
+          "source_vertices": 288,
+          "source_triangles": 450,
+          "vertices": 129,
+          "triangles": 254,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.10135999999999999,
+              0.04384266666666667,
+              0.008956300000000009
+            ],
+            [
+              -0.08121249999999998,
+              0.06672579999999999,
+              0.02972380000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3371",
+          "first_index": 625983,
+          "index_count": 900,
+          "source_vertices": 401,
+          "source_triangles": 702,
+          "vertices": 148,
+          "triangles": 300,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.017384199999999978,
+              1.5800445333333333,
+              0.050200299999999996
+            ],
+            [
+              -0.00683946999999998,
+              1.6052434222222223,
+              0.0647423
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3372",
+          "first_index": 626883,
+          "index_count": 144,
+          "source_vertices": 73,
+          "source_triangles": 80,
+          "vertices": 26,
+          "triangles": 48,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.09351339999999998,
+              0.0103219,
+              0.07472530000000001
+            ],
+            [
+              -0.08657614545454541,
+              0.016473679999999994,
+              0.08382063333333334
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3373",
+          "first_index": 627027,
+          "index_count": 1080,
+          "source_vertices": 395,
+          "source_triangles": 626,
+          "vertices": 181,
+          "triangles": 360,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.11201166666666665,
+              0.0375468,
+              0.00028310000000000455
+            ],
+            [
+              -0.08675331666666664,
+              0.06299524,
+              0.024376300000000007
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3374",
+          "first_index": 628107,
+          "index_count": 510,
+          "source_vertices": 196,
+          "source_triangles": 332,
+          "vertices": 87,
+          "triangles": 170,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.252002,
+              0.8755734000000001,
+              0.009867300000000015
+            ],
+            [
+              -0.23585499999999998,
+              0.8879312,
+              0.026156300000000014
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3375",
+          "first_index": 628617,
+          "index_count": 7176,
+          "source_vertices": 3513,
+          "source_triangles": 5324,
+          "vertices": 1149,
+          "triangles": 2392,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.04670074999999997,
+              1.5421012,
+              0.028606300000000005
+            ],
+            [
+              0.0002481020000000198,
+              1.6113178666666668,
+              0.08326130000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3376",
+          "first_index": 635793,
+          "index_count": 312,
+          "source_vertices": 104,
+          "source_triangles": 158,
+          "vertices": 54,
+          "triangles": 104,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.10236099999999998,
+              0.008933499999999995,
+              0.07004330000000002
+            ],
+            [
+              -0.09413159999999998,
+              0.016369699999999994,
+              0.0827707
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3377",
+          "first_index": 636105,
+          "index_count": 1650,
+          "source_vertices": 615,
+          "source_triangles": 952,
+          "vertices": 276,
+          "triangles": 550,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.09346509999999998,
+              0.03283799999999999,
+              0.011214300000000009
+            ],
+            [
+              -0.06549339999999998,
+              0.0638816,
+              0.03973930000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3379",
+          "first_index": 637755,
+          "index_count": 2568,
+          "source_vertices": 1132,
+          "source_triangles": 1736,
+          "vertices": 418,
+          "triangles": 856,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.028058779999999985,
+              1.5487612000000002,
+              0.0028178714285714388
+            ],
+            [
+              0.0007942210000000199,
+              1.5912795333333332,
+              0.04882863333333335
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3380",
+          "first_index": 640323,
+          "index_count": 13593,
+          "source_vertices": 8028,
+          "source_triangles": 13002,
+          "vertices": 2199,
+          "triangles": 4531,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.07554149999999998,
+              1.5960337000000002,
+              -0.11535475714285713
+            ],
+            [
+              0.005592943333333353,
+              1.7143712,
+              0.026998300000000013
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3381",
+          "first_index": 653916,
+          "index_count": 852,
+          "source_vertices": 178,
+          "source_triangles": 306,
+          "vertices": 143,
+          "triangles": 284,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.10164099999999998,
+              0.43959719999999997,
+              0.00022430000000001372
+            ],
+            [
+              -0.05997379999999998,
+              0.4789072,
+              0.02195930000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3382",
+          "first_index": 654768,
+          "index_count": 324,
+          "source_vertices": 110,
+          "source_triangles": 190,
+          "vertices": 56,
+          "triangles": 108,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.23957299999999998,
+              0.8678655333333332,
+              0.026481300000000006
+            ],
+            [
+              -0.23130899999999996,
+              0.8792814,
+              0.036854300000000006
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3383",
+          "first_index": 655092,
+          "index_count": 630,
+          "source_vertices": 195,
+          "source_triangles": 322,
+          "vertices": 106,
+          "triangles": 210,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.27227825000000005,
+              0.8747157999999999,
+              0.010806300000000007
+            ],
+            [
+              -0.24868499999999996,
+              0.8899012000000001,
+              0.025895300000000007
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3384",
+          "first_index": 655722,
+          "index_count": 31692,
+          "source_vertices": 13118,
+          "source_triangles": 26172,
+          "vertices": 5147,
+          "triangles": 10564,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.16571674999999997,
+              1.2620852,
+              -0.10577836166666667
+            ],
+            [
+              -0.056566285714285694,
+              1.4279078666666665,
+              0.001993112500000008
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3385",
+          "first_index": 687414,
+          "index_count": 2856,
+          "source_vertices": 812,
+          "source_triangles": 1380,
+          "vertices": 475,
+          "triangles": 952,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.08946659999999998,
+              0.0469551,
+              -0.051714974999999996
+            ],
+            [
+              -0.04898029999999998,
+              0.08122212999999999,
+              0.004801300000000012
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3386",
+          "first_index": 690270,
+          "index_count": 8079,
+          "source_vertices": 3102,
+          "source_triangles": 4928,
+          "vertices": 1329,
+          "triangles": 2693,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.07324769999999999,
+              1.5538661999999999,
+              -0.06546287999999999
+            ],
+            [
+              -0.012286942857142836,
+              1.629511914285714,
+              0.03256074
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3387",
+          "first_index": 698349,
+          "index_count": 4764,
+          "source_vertices": 857,
+          "source_triangles": 1664,
+          "vertices": 795,
+          "triangles": 1588,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.10870599999999997,
+              0.07207403999999999,
+              -0.048694799999999996
+            ],
+            [
+              -0.03456899999999998,
+              0.4519782,
+              0.014067300000000003
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3388",
+          "first_index": 703113,
+          "index_count": 708,
+          "source_vertices": 277,
+          "source_triangles": 434,
+          "vertices": 120,
+          "triangles": 236,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.28084049999999994,
+              0.8640482,
+              0.016962300000000013
+            ],
+            [
+              -0.2644524166666666,
+              0.8836548666666667,
+              0.0335733
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3389",
+          "first_index": 703821,
+          "index_count": 534,
+          "source_vertices": 271,
+          "source_triangles": 360,
+          "vertices": 90,
+          "triangles": 178,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.272425,
+              0.8609762000000001,
+              0.012859800000000008
+            ],
+            [
+              -0.2615533333333333,
+              0.8734221999999999,
+              0.027620300000000014
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3390",
+          "first_index": 704355,
+          "index_count": 372,
+          "source_vertices": 139,
+          "source_triangles": 170,
+          "vertices": 62,
+          "triangles": 124,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.24202833333333332,
+              0.8671397000000001,
+              0.014174300000000003
+            ],
+            [
+              -0.23155499999999998,
+              0.8807012,
+              0.0289683
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3391",
+          "first_index": 704727,
+          "index_count": 2196,
+          "source_vertices": 500,
+          "source_triangles": 834,
+          "vertices": 365,
+          "triangles": 732,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.24653199999999997,
+              0.8832842,
+              -0.05596849999999999
+            ],
+            [
+              -0.196234,
+              1.1305612,
+              0.02272630000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3392",
+          "first_index": 706923,
+          "index_count": 2040,
+          "source_vertices": 934,
+          "source_triangles": 1556,
+          "vertices": 336,
+          "triangles": 680,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.06383439999999999,
+              1.5589878666666668,
+              0.021083800000000007
+            ],
+            [
+              -0.03271343333333331,
+              1.6144278666666667,
+              0.06051230000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3393",
+          "first_index": 708963,
+          "index_count": 21666,
+          "source_vertices": 5293,
+          "source_triangles": 9922,
+          "vertices": 3566,
+          "triangles": 7222,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.05894419999999998,
+              0.8611855333333334,
+              -0.10802144999999999
+            ],
+            [
+              0.05884990000000002,
+              1.0050772,
+              -0.019618149999999994
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ3394",
+          "first_index": 730629,
+          "index_count": 12531,
+          "source_vertices": 4957,
+          "source_triangles": 8154,
+          "vertices": 2028,
+          "triangles": 4177,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.05549913333333332,
+              1.5573841032258064,
+              -0.010185066666666657
+            ],
+            [
+              0.055599000000000016,
+              1.6265712,
+              0.043984085714285734
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6295",
+          "first_index": 743160,
+          "index_count": 3687,
+          "source_vertices": 1391,
+          "source_triangles": 2038,
+          "vertices": 604,
+          "triangles": 1229,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.040681999999999975,
+              1.5405712,
+              -0.06000243999999999
+            ],
+            [
+              0.04087770000000002,
+              1.5593312000000001,
+              -0.013246599999999987
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6296",
+          "first_index": 746847,
+          "index_count": 4134,
+          "source_vertices": 1536,
+          "source_triangles": 2282,
+          "vertices": 672,
+          "triangles": 1378,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.025048399999999978,
+              1.5114072,
+              -0.06409609999999999
+            ],
+            [
+              0.025059266666666687,
+              1.5563712,
+              -0.014228599999999985
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6298",
+          "first_index": 750981,
+          "index_count": 534,
+          "source_vertices": 179,
+          "source_triangles": 238,
+          "vertices": 90,
+          "triangles": 178,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.310092,
+              0.7975192,
+              0.0563673
+            ],
+            [
+              0.323205,
+              0.8202202,
+              0.07230430000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6303",
+          "first_index": 751515,
+          "index_count": 396,
+          "source_vertices": 185,
+          "source_triangles": 260,
+          "vertices": 68,
+          "triangles": 132,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.300572,
+              0.7398152,
+              0.06902205
+            ],
+            [
+              0.310452,
+              0.7535622,
+              0.08584630000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6305",
+          "first_index": 751911,
+          "index_count": 264,
+          "source_vertices": 163,
+          "source_triangles": 222,
+          "vertices": 44,
+          "triangles": 88,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.16055933333333336,
+              0.007707700000000003,
+              0.0756903
+            ],
+            [
+              0.168807,
+              0.012939024999999996,
+              0.08560655
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6306",
+          "first_index": 752175,
+          "index_count": 318,
+          "source_vertices": 162,
+          "source_triangles": 186,
+          "vertices": 54,
+          "triangles": 106,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.2707343333333334,
+              0.7311171999999999,
+              0.0774633
+            ],
+            [
+              0.2799945,
+              0.7444332,
+              0.09430030000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6307",
+          "first_index": 752493,
+          "index_count": 276,
+          "source_vertices": 144,
+          "source_triangles": 164,
+          "vertices": 47,
+          "triangles": 92,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.24463600000000002,
+              0.7429831999999998,
+              0.07812630000000001
+            ],
+            [
+              0.2528882222222222,
+              0.7520357,
+              0.09347130000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6308",
+          "first_index": 752769,
+          "index_count": 450,
+          "source_vertices": 179,
+          "source_triangles": 236,
+          "vertices": 74,
+          "triangles": 150,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.3230989999999999,
+              0.7973512,
+              0.0563673
+            ],
+            [
+              -0.3098534,
+              0.8201442,
+              0.07215230000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6309",
+          "first_index": 753219,
+          "index_count": 12570,
+          "source_vertices": 11662,
+          "source_triangles": 22348,
+          "vertices": 1946,
+          "triangles": 4190,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.01954544999999998,
+              1.5711604857142858,
+              0.02024181724137932
+            ],
+            [
+              0.0197213777777778,
+              1.6151426285714285,
+              0.06865369130434783
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6310",
+          "first_index": 765789,
+          "index_count": 19155,
+          "source_vertices": 8399,
+          "source_triangles": 14448,
+          "vertices": 3133,
+          "triangles": 6385,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.06254669999999998,
+              1.5991283428571426,
+              0.006286487500000009
+            ],
+            [
+              0.06259635000000002,
+              1.7080312000000002,
+              0.07653230000000003
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6347",
+          "first_index": 784944,
+          "index_count": 3090,
+          "source_vertices": 595,
+          "source_triangles": 1166,
+          "vertices": 517,
+          "triangles": 1030,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.00902592000000002,
+              1.3867812000000002,
+              -0.04638019999999999
+            ],
+            [
+              0.144486,
+              1.4332912000000002,
+              0.046309300000000005
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6349",
+          "first_index": 788034,
+          "index_count": 1812,
+          "source_vertices": 382,
+          "source_triangles": 642,
+          "vertices": 304,
+          "triangles": 604,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.21919400000000003,
+              0.8842012,
+              -0.03974669999999999
+            ],
+            [
+              0.278658,
+              1.1130312000000002,
+              0.026379300000000015
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6354",
+          "first_index": 789846,
+          "index_count": 1554,
+          "source_vertices": 401,
+          "source_triangles": 738,
+          "vertices": 259,
+          "triangles": 518,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.26114950000000003,
+              0.7969712,
+              0.016401300000000008
+            ],
+            [
+              0.291985,
+              0.8649568666666667,
+              0.041987300000000005
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6355",
+          "first_index": 791400,
+          "index_count": 1542,
+          "source_vertices": 467,
+          "source_triangles": 752,
+          "vertices": 257,
+          "triangles": 514,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.09002750000000002,
+              0.011796799999999991,
+              0.021724300000000012
+            ],
+            [
+              0.12075500000000003,
+              0.0593789,
+              0.08664830000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6357",
+          "first_index": 792942,
+          "index_count": 1488,
+          "source_vertices": 409,
+          "source_triangles": 692,
+          "vertices": 250,
+          "triangles": 496,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.25181400000000004,
+              0.7987681999999999,
+              0.011758300000000006
+            ],
+            [
+              0.27170900000000003,
+              0.8630352,
+              0.041951300000000004
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6358",
+          "first_index": 794430,
+          "index_count": 1518,
+          "source_vertices": 399,
+          "source_triangles": 700,
+          "vertices": 254,
+          "triangles": 506,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.09775150000000002,
+              0.011808499999999994,
+              0.017682550000000005
+            ],
+            [
+              0.13296100000000002,
+              0.054497649999999995,
+              0.07995930000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6360",
+          "first_index": 795948,
+          "index_count": 1080,
+          "source_vertices": 320,
+          "source_triangles": 528,
+          "vertices": 182,
+          "triangles": 360,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.24072600000000002,
+              0.8034112,
+              0.015206300000000013
+            ],
+            [
+              0.253078,
+              0.8630121999999999,
+              0.04113930000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6361",
+          "first_index": 797028,
+          "index_count": 1374,
+          "source_vertices": 403,
+          "source_triangles": 674,
+          "vertices": 230,
+          "triangles": 458,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.10118500000000002,
+              0.010752200000000002,
+              0.006462133333333346
+            ],
+            [
+              0.14173800000000003,
+              0.0461283,
+              0.06880555000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6363",
+          "first_index": 798402,
+          "index_count": 984,
+          "source_vertices": 272,
+          "source_triangles": 500,
+          "vertices": 166,
+          "triangles": 328,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.22462000000000004,
+              0.8100942,
+              0.019440300000000008
+            ],
+            [
+              0.24466500000000002,
+              0.8648142,
+              0.04369630000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6364",
+          "first_index": 799386,
+          "index_count": 1644,
+          "source_vertices": 431,
+          "source_triangles": 794,
+          "vertices": 276,
+          "triangles": 548,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.10606480000000003,
+              0.008412949999999995,
+              -0.011342449999999994
+            ],
+            [
+              0.151711,
+              0.038253949999999995,
+              0.05440530000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6367",
+          "first_index": 801030,
+          "index_count": 3066,
+          "source_vertices": 729,
+          "source_triangles": 1262,
+          "vertices": 510,
+          "triangles": 1022,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.04419560000000002,
+              0.009816999999999992,
+              -0.0767268
+            ],
+            [
+              0.09996170000000003,
+              0.058673199999999995,
+              -0.006690599999999989
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6368",
+          "first_index": 804096,
+          "index_count": 768,
+          "source_vertices": 264,
+          "source_triangles": 430,
+          "vertices": 128,
+          "triangles": 256,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.24776,
+              0.8606005333333333,
+              0.009964966666666674
+            ],
+            [
+              0.263698,
+              0.8827431999999998,
+              0.026960300000000003
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6369",
+          "first_index": 804864,
+          "index_count": 1632,
+          "source_vertices": 506,
+          "source_triangles": 842,
+          "vertices": 270,
+          "triangles": 544,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.08196570000000003,
+              0.026722299999999997,
+              -0.017745299999999985
+            ],
+            [
+              0.11465600000000002,
+              0.0555214,
+              0.015832133333333345
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6370",
+          "first_index": 806496,
+          "index_count": 9006,
+          "source_vertices": 1577,
+          "source_triangles": 3116,
+          "vertices": 1503,
+          "triangles": 3002,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.03109370000000002,
+              0.4461692,
+              -0.05128239999999999
+            ],
+            [
+              0.149425,
+              0.9122052,
+              0.011254300000000016
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6371",
+          "first_index": 815502,
+          "index_count": 3234,
+          "source_vertices": 599,
+          "source_triangles": 1148,
+          "vertices": 541,
+          "triangles": 1078,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.08371180000000003,
+              0.0530716,
+              -0.05231579999999999
+            ],
+            [
+              0.11950600000000001,
+              0.4370498666666667,
+              -0.022583799999999998
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6372",
+          "first_index": 818736,
+          "index_count": 702,
+          "source_vertices": 281,
+          "source_triangles": 434,
+          "vertices": 119,
+          "triangles": 234,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.23603700000000002,
+              0.8595832,
+              0.010471300000000013
+            ],
+            [
+              0.251269,
+              0.8785122,
+              0.03256230000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6373",
+          "first_index": 819438,
+          "index_count": 9120,
+          "source_vertices": 2163,
+          "source_triangles": 3734,
+          "vertices": 1519,
+          "triangles": 3040,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.13945300000000002,
+              1.1074912000000001,
+              -0.049712299999999994
+            ],
+            [
+              0.24013100000000004,
+              1.4145812,
+              -0.0005746999999999929
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6374",
+          "first_index": 828558,
+          "index_count": 966,
+          "source_vertices": 477,
+          "source_triangles": 738,
+          "vertices": 159,
+          "triangles": 322,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.00523821000000002,
+              1.5607912,
+              0.033183300000000006
+            ],
+            [
+              0.01649653333333335,
+              1.5761612000000003,
+              0.06841001428571429
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6375",
+          "first_index": 829524,
+          "index_count": 810,
+          "source_vertices": 291,
+          "source_triangles": 450,
+          "vertices": 136,
+          "triangles": 270,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.08111000000000002,
+              0.04365434,
+              0.008896800000000005
+            ],
+            [
+              0.10118150000000002,
+              0.06661917272727272,
+              0.029803300000000008
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6376",
+          "first_index": 830334,
+          "index_count": 846,
+          "source_vertices": 390,
+          "source_triangles": 634,
+          "vertices": 139,
+          "triangles": 282,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.00811623000000002,
+              1.5759162,
+              0.05216590000000001
+            ],
+            [
+              0.01837972857142859,
+              1.6047012000000003,
+              0.0639213
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6377",
+          "first_index": 831180,
+          "index_count": 168,
+          "source_vertices": 86,
+          "source_triangles": 96,
+          "vertices": 30,
+          "triangles": 56,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.08655600000000002,
+              0.010092799999999997,
+              0.07474630000000002
+            ],
+            [
+              0.09340830000000003,
+              0.016604599999999994,
+              0.08381558571428573
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6378",
+          "first_index": 831348,
+          "index_count": 1110,
+          "source_vertices": 402,
+          "source_triangles": 652,
+          "vertices": 185,
+          "triangles": 370,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.08658230000000001,
+              0.03753334999999999,
+              0.0003187285714285772
+            ],
+            [
+              0.11215200000000002,
+              0.06323419999999999,
+              0.023998300000000014
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6379",
+          "first_index": 832458,
+          "index_count": 468,
+          "source_vertices": 160,
+          "source_triangles": 216,
+          "vertices": 79,
+          "triangles": 156,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.23596500000000004,
+              0.8756116285714286,
+              0.009904300000000007
+            ],
+            [
+              0.252024,
+              0.8878342,
+              0.026329300000000003
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6380",
+          "first_index": 832926,
+          "index_count": 7098,
+          "source_vertices": 3460,
+          "source_triangles": 5086,
+          "vertices": 1127,
+          "triangles": 2366,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.0019431709090908895,
+              1.5420612,
+              0.026218300000000014
+            ],
+            [
+              0.046144955555555575,
+              1.6110445333333334,
+              0.08187630000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6381",
+          "first_index": 840024,
+          "index_count": 198,
+          "source_vertices": 78,
+          "source_triangles": 84,
+          "vertices": 35,
+          "triangles": 66,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.09401820000000002,
+              0.009075699999999997,
+              0.0699593
+            ],
+            [
+              0.10223400000000002,
+              0.016119899999999993,
+              0.08285930000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6382",
+          "first_index": 840222,
+          "index_count": 1524,
+          "source_vertices": 615,
+          "source_triangles": 952,
+          "vertices": 254,
+          "triangles": 508,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.06549744000000002,
+              0.0335003,
+              0.011317300000000002
+            ],
+            [
+              0.09338660000000001,
+              0.06380509999999999,
+              0.0399503
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6383",
+          "first_index": 841746,
+          "index_count": 630,
+          "source_vertices": 295,
+          "source_triangles": 500,
+          "vertices": 106,
+          "triangles": 210,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.0009824199999999804,
+              1.5799812,
+              0.0687793
+            ],
+            [
+              0.00796285000000002,
+              1.6111337000000001,
+              0.08986005000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6384",
+          "first_index": 842376,
+          "index_count": 2598,
+          "source_vertices": 1137,
+          "source_triangles": 1844,
+          "vertices": 425,
+          "triangles": 866,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.0009958099999999802,
+              1.5484445333333332,
+              0.0028389923076923155
+            ],
+            [
+              0.02788216250000002,
+              1.5924827384615385,
+              0.049158299999999995
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6385",
+          "first_index": 844974,
+          "index_count": 13152,
+          "source_vertices": 8343,
+          "source_triangles": 13152,
+          "vertices": 2122,
+          "triangles": 4384,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.006784291999999981,
+              1.5959854857142857,
+              -0.1155214
+            ],
+            [
+              0.07551500000000001,
+              1.7143012000000002,
+              0.030733728571428587
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6386",
+          "first_index": 858126,
+          "index_count": 858,
+          "source_vertices": 178,
+          "source_triangles": 308,
+          "vertices": 145,
+          "triangles": 286,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.05983890000000001,
+              0.4396252,
+              0.0004453000000000031
+            ],
+            [
+              0.10157100000000002,
+              0.47874520000000004,
+              0.022016300000000016
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6387",
+          "first_index": 858984,
+          "index_count": 312,
+          "source_vertices": 92,
+          "source_triangles": 140,
+          "vertices": 54,
+          "triangles": 104,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.23133300000000004,
+              0.8678182,
+              0.026299500000000014
+            ],
+            [
+              0.239461,
+              0.8794392,
+              0.036670299999999996
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6391",
+          "first_index": 859296,
+          "index_count": 8316,
+          "source_vertices": 2973,
+          "source_triangles": 4908,
+          "vertices": 1365,
+          "triangles": 2772,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.01221310000000002,
+              1.5537937,
+              -0.06556019999999999
+            ],
+            [
+              0.07318356000000001,
+              1.6293991999999995,
+              0.0322505
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6392",
+          "first_index": 867612,
+          "index_count": 4842,
+          "source_vertices": 873,
+          "source_triangles": 1688,
+          "vertices": 809,
+          "triangles": 1614,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.03568110000000002,
+              0.07199725,
+              -0.04894489999999999
+            ],
+            [
+              0.11000600000000002,
+              0.4520152,
+              0.014045300000000012
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6393",
+          "first_index": 872454,
+          "index_count": 654,
+          "source_vertices": 233,
+          "source_triangles": 350,
+          "vertices": 110,
+          "triangles": 218,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.2642948,
+              0.8639868666666667,
+              0.016847300000000003
+            ],
+            [
+              0.2809920000000001,
+              0.883345109090909,
+              0.0336703
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6394",
+          "first_index": 873108,
+          "index_count": 492,
+          "source_vertices": 264,
+          "source_triangles": 342,
+          "vertices": 84,
+          "triangles": 164,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.26160728571428565,
+              0.8612785333333334,
+              0.012880300000000006
+            ],
+            [
+              0.272596,
+              0.8735072,
+              0.027681800000000006
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6395",
+          "first_index": 873600,
+          "index_count": 432,
+          "source_vertices": 159,
+          "source_triangles": 228,
+          "vertices": 73,
+          "triangles": 144,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.23112800000000003,
+              0.8670992000000001,
+              0.013614300000000015
+            ],
+            [
+              0.24196300000000004,
+              0.8804462000000001,
+              0.028879966666666684
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6396",
+          "first_index": 874032,
+          "index_count": 2088,
+          "source_vertices": 515,
+          "source_triangles": 824,
+          "vertices": 350,
+          "triangles": 696,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.19621400000000003,
+              0.8833884857142857,
+              -0.05580529999999999
+            ],
+            [
+              0.246674,
+              1.1304112,
+              0.022639300000000005
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6397",
+          "first_index": 876120,
+          "index_count": 2244,
+          "source_vertices": 972,
+          "source_triangles": 1610,
+          "vertices": 364,
+          "triangles": 748,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.03255660000000002,
+              1.5590811999999998,
+              0.02097630000000001
+            ],
+            [
+              0.06375150000000002,
+              1.6148512000000002,
+              0.06059463333333335
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6399",
+          "first_index": 878364,
+          "index_count": 10215,
+          "source_vertices": 2824,
+          "source_triangles": 5544,
+          "vertices": 1695,
+          "triangles": 3405,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.05315189999999998,
+              1.4997612000000002,
+              -0.010874599999999986
+            ],
+            [
+              0.05312170000000002,
+              1.5841911999999998,
+              0.0728753
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6401",
+          "first_index": 888579,
+          "index_count": 618,
+          "source_vertices": 211,
+          "source_triangles": 344,
+          "vertices": 103,
+          "triangles": 206,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.24213600000000002,
+              0.7480671999999999,
+              0.05592410000000002
+            ],
+            [
+              0.25352150000000007,
+              0.7717368666666667,
+              0.07962246666666667
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6403",
+          "first_index": 889197,
+          "index_count": 420,
+          "source_vertices": 185,
+          "source_triangles": 300,
+          "vertices": 72,
+          "triangles": 140,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.13828000000000004,
+              0.009424799999999997,
+              0.09841810000000002
+            ],
+            [
+              0.15108800000000003,
+              0.016938249999999995,
+              0.11490930000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6404",
+          "first_index": 889617,
+          "index_count": 432,
+          "source_vertices": 177,
+          "source_triangles": 266,
+          "vertices": 73,
+          "triangles": 144,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.148424,
+              0.008398299999999992,
+              0.08476330000000001
+            ],
+            [
+              0.16069333333333335,
+              0.016174299999999996,
+              0.09782579999999999
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6405",
+          "first_index": 890049,
+          "index_count": 450,
+          "source_vertices": 182,
+          "source_triangles": 296,
+          "vertices": 77,
+          "triangles": 150,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.293764,
+              0.749394088888889,
+              0.050573300000000015
+            ],
+            [
+              0.30796500000000004,
+              0.7692945750000001,
+              0.07127196666666667
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6406",
+          "first_index": 890499,
+          "index_count": 342,
+          "source_vertices": 163,
+          "source_triangles": 206,
+          "vertices": 59,
+          "triangles": 114,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.21830700000000003,
+              0.7657407,
+              0.0541183
+            ],
+            [
+              0.2297951818181818,
+              0.7850347,
+              0.07030905000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6407",
+          "first_index": 890841,
+          "index_count": 240,
+          "source_vertices": 109,
+          "source_triangles": 158,
+          "vertices": 40,
+          "triangles": 80,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.15756500000000004,
+              0.007995099999999993,
+              0.07086830000000002
+            ],
+            [
+              0.16566700000000004,
+              0.014288499999999999,
+              0.07796363333333334
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6408",
+          "first_index": 891081,
+          "index_count": 642,
+          "source_vertices": 216,
+          "source_triangles": 338,
+          "vertices": 109,
+          "triangles": 214,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.265903,
+              0.7408842,
+              0.0571653
+            ],
+            [
+              0.27948199999999995,
+              0.7658452,
+              0.08009563333333336
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6409",
+          "first_index": 891723,
+          "index_count": 1164,
+          "source_vertices": 471,
+          "source_triangles": 708,
+          "vertices": 192,
+          "triangles": 388,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.05726650000000002,
+              0.047226699999999996,
+              -0.006332299999999989
+            ],
+            [
+              0.09577210000000003,
+              0.07188186,
+              0.02003330000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6410",
+          "first_index": 892887,
+          "index_count": 1092,
+          "source_vertices": 446,
+          "source_triangles": 698,
+          "vertices": 181,
+          "triangles": 364,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.09591557499999998,
+              0.0473356,
+              -0.006234742857142849
+            ],
+            [
+              -0.05751139999999998,
+              0.0717183,
+              0.020225300000000005
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6411",
+          "first_index": 893979,
+          "index_count": 17211,
+          "source_vertices": 6947,
+          "source_triangles": 12382,
+          "vertices": 2821,
+          "triangles": 5737,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.06137279999999998,
+              1.5559287,
+              -0.11873079999999998
+            ],
+            [
+              0.061174233333333355,
+              1.6624796210526316,
+              4.58000000000105e-05
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6414",
+          "first_index": 911190,
+          "index_count": 630,
+          "source_vertices": 209,
+          "source_triangles": 314,
+          "vertices": 107,
+          "triangles": 210,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.2979946666666667,
+              0.8137092,
+              0.04184530000000001
+            ],
+            [
+              0.31806075000000006,
+              0.8449927,
+              0.0640353
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6415",
+          "first_index": 911820,
+          "index_count": 690,
+          "source_vertices": 246,
+          "source_triangles": 422,
+          "vertices": 116,
+          "triangles": 230,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.11094200000000003,
+              0.011507585714285713,
+              0.08288601428571431
+            ],
+            [
+              0.13287600000000002,
+              0.023564299999999996,
+              0.11087430000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6416",
+          "first_index": 912510,
+          "index_count": 678,
+          "source_vertices": 273,
+          "source_triangles": 434,
+          "vertices": 114,
+          "triangles": 226,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.12450400000000002,
+              0.010792179999999998,
+              0.0738833
+            ],
+            [
+              0.145022,
+              0.0221693,
+              0.1019873
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6417",
+          "first_index": 913188,
+          "index_count": 594,
+          "source_vertices": 238,
+          "source_triangles": 364,
+          "vertices": 100,
+          "triangles": 198,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.13395600000000002,
+              0.008610442857142854,
+              0.0637758
+            ],
+            [
+              0.15522600000000003,
+              0.021502699999999996,
+              0.08753946666666669
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6419",
+          "first_index": 913782,
+          "index_count": 630,
+          "source_vertices": 210,
+          "source_triangles": 322,
+          "vertices": 106,
+          "triangles": 210,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.22154300000000002,
+              0.7816638666666668,
+              0.0381473
+            ],
+            [
+              0.23571,
+              0.8140922,
+              0.05867130000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6421",
+          "first_index": 914412,
+          "index_count": 936,
+          "source_vertices": 252,
+          "source_triangles": 452,
+          "vertices": 156,
+          "triangles": 312,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.25855700000000004,
+              0.7626042,
+              0.034317300000000016
+            ],
+            [
+              0.27675800000000006,
+              0.8030227,
+              0.06343080000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6422",
+          "first_index": 915348,
+          "index_count": 786,
+          "source_vertices": 224,
+          "source_triangles": 372,
+          "vertices": 132,
+          "triangles": 262,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              0.239766,
+              0.7682102,
+              0.03500030000000001
+            ],
+            [
+              0.25303600000000004,
+              0.8070322000000001,
+              0.06103630000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6423",
+          "first_index": 916134,
+          "index_count": 612,
+          "source_vertices": 199,
+          "source_triangles": 312,
+          "vertices": 104,
+          "triangles": 204,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.31799,
+              0.8136341999999999,
+              0.04188130000000001
+            ],
+            [
+              -0.29820349999999995,
+              0.8451791999999999,
+              0.06386205
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6443",
+          "first_index": 916746,
+          "index_count": 1812,
+          "source_vertices": 385,
+          "source_triangles": 656,
+          "vertices": 304,
+          "triangles": 604,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.278648,
+              0.8839462000000001,
+              -0.03962379999999999
+            ],
+            [
+              -0.219186,
+              1.1131612,
+              0.026141300000000017
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6444",
+          "first_index": 918558,
+          "index_count": 1062,
+          "source_vertices": 309,
+          "source_triangles": 576,
+          "vertices": 176,
+          "triangles": 354,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.30869499999999994,
+              0.8386032,
+              0.022858300000000015
+            ],
+            [
+              -0.2718028333333333,
+              0.8753522,
+              0.052976300000000004
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6445",
+          "first_index": 919620,
+          "index_count": 2244,
+          "source_vertices": 605,
+          "source_triangles": 1124,
+          "vertices": 375,
+          "triangles": 748,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.10362122222222221,
+              0.013006699999999994,
+              0.029177300000000003
+            ],
+            [
+              -0.07431769999999999,
+              0.055976099999999994,
+              0.09142430000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6446",
+          "first_index": 921864,
+          "index_count": 1536,
+          "source_vertices": 414,
+          "source_triangles": 736,
+          "vertices": 257,
+          "triangles": 512,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.29203999999999997,
+              0.7970462,
+              0.016439300000000004
+            ],
+            [
+              -0.261173,
+              0.8648012,
+              0.042019300000000016
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6447",
+          "first_index": 923400,
+          "index_count": 1467,
+          "source_vertices": 493,
+          "source_triangles": 750,
+          "vertices": 243,
+          "triangles": 489,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.12052199999999998,
+              0.011733899999999992,
+              0.021680300000000003
+            ],
+            [
+              -0.09016429999999998,
+              0.05977306666666666,
+              0.0867063
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6449",
+          "first_index": 924867,
+          "index_count": 1524,
+          "source_vertices": 409,
+          "source_triangles": 698,
+          "vertices": 255,
+          "triangles": 508,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.132872,
+              0.011834299999999999,
+              0.01792063333333335
+            ],
+            [
+              -0.09789014999999997,
+              0.054350733333333325,
+              0.0800893
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6450",
+          "first_index": 926391,
+          "index_count": 1062,
+          "source_vertices": 327,
+          "source_triangles": 528,
+          "vertices": 179,
+          "triangles": 354,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.253093,
+              0.8033942,
+              0.015178300000000007
+            ],
+            [
+              -0.240747,
+              0.8630997,
+              0.04117830000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6452",
+          "first_index": 927453,
+          "index_count": 1050,
+          "source_vertices": 287,
+          "source_triangles": 498,
+          "vertices": 176,
+          "triangles": 350,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.24465999999999996,
+              0.8101282000000001,
+              0.019434966666666675
+            ],
+            [
+              -0.22462399999999996,
+              0.8649328666666666,
+              0.043618300000000006
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6453",
+          "first_index": 928503,
+          "index_count": 1692,
+          "source_vertices": 420,
+          "source_triangles": 792,
+          "vertices": 284,
+          "triangles": 564,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.151685,
+              0.008497549999999996,
+              -0.011305499999999994
+            ],
+            [
+              -0.10601399999999998,
+              0.038072199999999994,
+              0.05416630000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6454",
+          "first_index": 930195,
+          "index_count": 3018,
+          "source_vertices": 740,
+          "source_triangles": 1258,
+          "vertices": 505,
+          "triangles": 1006,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.10013299999999999,
+              0.009683599999999999,
+              -0.07677399999999998
+            ],
+            [
+              -0.044317149999999986,
+              0.0588005,
+              -0.00662274999999999
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6455",
+          "first_index": 933213,
+          "index_count": 774,
+          "source_vertices": 256,
+          "source_triangles": 428,
+          "vertices": 130,
+          "triangles": 258,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.26383500000000004,
+              0.8604627,
+              0.009766300000000016
+            ],
+            [
+              -0.2478075,
+              0.8827082,
+              0.02664930000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6459",
+          "first_index": 933987,
+          "index_count": 8886,
+          "source_vertices": 1568,
+          "source_triangles": 3106,
+          "vertices": 1482,
+          "triangles": 2962,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.149338,
+              0.4462552,
+              -0.051128899999999984
+            ],
+            [
+              -0.031241999999999978,
+              0.9123562,
+              0.011459300000000013
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6460",
+          "first_index": 942873,
+          "index_count": 3186,
+          "source_vertices": 585,
+          "source_triangles": 1144,
+          "vertices": 533,
+          "triangles": 1062,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.11950299999999998,
+              0.05284735,
+              -0.05217924999999999
+            ],
+            [
+              -0.08369749999999998,
+              0.4371122,
+              -0.022683199999999987
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6461",
+          "first_index": 946059,
+          "index_count": 702,
+          "source_vertices": 301,
+          "source_triangles": 462,
+          "vertices": 115,
+          "triangles": 234,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.25107,
+              0.8597358666666665,
+              0.010637300000000011
+            ],
+            [
+              -0.23589,
+              0.8786026285714286,
+              0.03281270000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6462",
+          "first_index": 946761,
+          "index_count": 8964,
+          "source_vertices": 2181,
+          "source_triangles": 3710,
+          "vertices": 1490,
+          "triangles": 2988,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.24011424999999997,
+              1.1073112,
+              -0.04982489999999999
+            ],
+            [
+              -0.13944299999999998,
+              1.4145412000000002,
+              -0.0006206999999999923
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6463",
+          "first_index": 955725,
+          "index_count": 912,
+          "source_vertices": 570,
+          "source_triangles": 714,
+          "vertices": 150,
+          "triangles": 304,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.015771733333333312,
+              1.5567578666666666,
+              0.0291943
+            ],
+            [
+              -0.006200283333333313,
+              1.5763925333333335,
+              0.0653623
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6465",
+          "first_index": 956637,
+          "index_count": 684,
+          "source_vertices": 348,
+          "source_triangles": 554,
+          "vertices": 116,
+          "triangles": 228,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.01773719999999998,
+              1.5795934222222223,
+              0.0522483
+            ],
+            [
+              -0.00921550999999998,
+              1.6045711999999999,
+              0.06343180000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6467",
+          "first_index": 957321,
+          "index_count": 510,
+          "source_vertices": 196,
+          "source_triangles": 332,
+          "vertices": 87,
+          "triangles": 170,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.252003,
+              0.8755734000000001,
+              0.009867300000000015
+            ],
+            [
+              -0.23585499999999998,
+              0.8879312,
+              0.026156300000000014
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6468",
+          "first_index": 957831,
+          "index_count": 7167,
+          "source_vertices": 3549,
+          "source_triangles": 5358,
+          "vertices": 1149,
+          "triangles": 2389,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.04670537499999998,
+              1.5424076705882357,
+              0.028669300000000023
+            ],
+            [
+              0.0002481170000000198,
+              1.6110312000000002,
+              0.08326430000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6470",
+          "first_index": 964998,
+          "index_count": 642,
+          "source_vertices": 275,
+          "source_triangles": 468,
+          "vertices": 106,
+          "triangles": 214,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.008361329999999981,
+              1.5791036999999999,
+              0.0689213
+            ],
+            [
+              0.0008557993333333531,
+              1.6110523111111112,
+              0.09010030000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6471",
+          "first_index": 965640,
+          "index_count": 2712,
+          "source_vertices": 1162,
+          "source_triangles": 1868,
+          "vertices": 443,
+          "triangles": 904,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.02805875999999998,
+              1.5487612000000002,
+              0.002699376923076928
+            ],
+            [
+              0.0007166999000000198,
+              1.5914474500000002,
+              0.04906090000000002
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6472",
+          "first_index": 968352,
+          "index_count": 13146,
+          "source_vertices": 7985,
+          "source_triangles": 12944,
+          "vertices": 2123,
+          "triangles": 4382,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.07552329999999997,
+              1.5960112000000002,
+              -0.11534132307692306
+            ],
+            [
+              0.00557773250000002,
+              1.7143762000000002,
+              0.027050300000000006
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6473",
+          "first_index": 981498,
+          "index_count": 852,
+          "source_vertices": 178,
+          "source_triangles": 306,
+          "vertices": 143,
+          "triangles": 284,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.10164099999999998,
+              0.43959719999999997,
+              0.00022430000000001372
+            ],
+            [
+              -0.059964199999999974,
+              0.4789072,
+              0.02194630000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6474",
+          "first_index": 982350,
+          "index_count": 324,
+          "source_vertices": 110,
+          "source_triangles": 190,
+          "vertices": 56,
+          "triangles": 108,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.23957299999999998,
+              0.8678655333333332,
+              0.026481300000000006
+            ],
+            [
+              -0.23130999999999996,
+              0.8792812,
+              0.036854300000000006
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6475",
+          "first_index": 982674,
+          "index_count": 630,
+          "source_vertices": 195,
+          "source_triangles": 322,
+          "vertices": 106,
+          "triangles": 210,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.27227825000000005,
+              0.8747157999999999,
+              0.010805300000000002
+            ],
+            [
+              -0.24868499999999996,
+              0.8899012000000001,
+              0.025895300000000007
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6477",
+          "first_index": 983304,
+          "index_count": 2820,
+          "source_vertices": 816,
+          "source_triangles": 1376,
+          "vertices": 471,
+          "triangles": 940,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.08946649999999998,
+              0.0469551,
+              -0.051800824999999995
+            ],
+            [
+              -0.049282899999999984,
+              0.08082228,
+              0.004752300000000005
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6478",
+          "first_index": 986124,
+          "index_count": 8121,
+          "source_vertices": 3065,
+          "source_triangles": 4904,
+          "vertices": 1332,
+          "triangles": 2707,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.07320409999999998,
+              1.5538637,
+              -0.06545507142857143
+            ],
+            [
+              -0.01216571999999998,
+              1.6294462,
+              0.032560900000000004
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6479",
+          "first_index": 994245,
+          "index_count": 4812,
+          "source_vertices": 859,
+          "source_triangles": 1680,
+          "vertices": 804,
+          "triangles": 1604,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.10999299999999998,
+              0.07207250999999999,
+              -0.04891049999999999
+            ],
+            [
+              -0.03580589999999998,
+              0.4519112,
+              0.014032300000000006
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6480",
+          "first_index": 999057,
+          "index_count": 708,
+          "source_vertices": 277,
+          "source_triangles": 434,
+          "vertices": 120,
+          "triangles": 236,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.28084099999999995,
+              0.8640478,
+              0.016962300000000013
+            ],
+            [
+              -0.2644524999999999,
+              0.8836548666666667,
+              0.0335733
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6481",
+          "first_index": 999765,
+          "index_count": 372,
+          "source_vertices": 139,
+          "source_triangles": 170,
+          "vertices": 62,
+          "triangles": 124,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.24202833333333332,
+              0.8671397000000001,
+              0.014174300000000003
+            ],
+            [
+              -0.23155499999999998,
+              0.8807012,
+              0.0289683
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6482",
+          "first_index": 1000137,
+          "index_count": 2136,
+          "source_vertices": 500,
+          "source_triangles": 818,
+          "vertices": 355,
+          "triangles": 712,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.246632,
+              0.8832832,
+              -0.05597549999999999
+            ],
+            [
+              -0.196235,
+              1.1305612,
+              0.022727300000000013
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6483",
+          "first_index": 1002273,
+          "index_count": 1980,
+          "source_vertices": 910,
+          "source_triangles": 1508,
+          "vertices": 327,
+          "triangles": 660,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.06383429999999998,
+              1.5589912000000001,
+              0.021083550000000006
+            ],
+            [
+              -0.03271343333333331,
+              1.6148312,
+              0.060511300000000004
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6484",
+          "first_index": 1004253,
+          "index_count": 21567,
+          "source_vertices": 5251,
+          "source_triangles": 9844,
+          "vertices": 3554,
+          "triangles": 7189,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.05905099999999998,
+              0.8611858666666667,
+              -0.10801370999999999
+            ],
+            [
+              0.05892690000000002,
+              1.0050779777777779,
+              -0.01968719999999999
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6485",
+          "first_index": 1025820,
+          "index_count": 12300,
+          "source_vertices": 4920,
+          "source_triangles": 8034,
+          "vertices": 1988,
+          "triangles": 4100,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.05567169999999998,
+              1.557399325,
+              -0.01009949999999999
+            ],
+            [
+              0.05543907142857145,
+              1.6265778666666666,
+              0.04403900000000001
+            ]
+          ]
+        },
+        {
+          "element_id": "FJ6486",
+          "first_index": 1038120,
+          "index_count": 3624,
+          "source_vertices": 3559,
+          "source_triangles": 7102,
+          "vertices": 552,
+          "triangles": 1208,
+          "cell_mm": 2.0,
+          "bounds_m": [
+            [
+              -0.0038940022222222026,
+              1.5560133428571425,
+              0.007866966666666678
+            ],
+            [
+              0.004024581111111131,
+              1.594893485714286,
+              0.07546030000000002
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "payload_bytes": 15690340,
+  "decoded_geometry_bytes": 15685764,
+  "limitations": [
+    "Source model may contain anatomical/concept-assignment errors; independent anatomical expert review not performed.",
+    "Whole-heart compound mapping is incomplete; preview explicitly selects three named chamber-wall surfaces.",
+    "Skin is an adult male reference; no claims about individual crew anatomy or sex.",
+    "No texture maps, compression extensions, skinning or animations. Derived meshes retain CC BY-SA 2.1 Japan."
+  ]
+}

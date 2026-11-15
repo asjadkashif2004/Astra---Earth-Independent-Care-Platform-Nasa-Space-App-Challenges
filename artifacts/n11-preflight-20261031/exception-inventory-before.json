@@ -1,0 +1,59 @@
+{
+  "N11_specific_exception_found": false,
+  "exceptions": [
+    {
+      "path": "docs/DE_AC20_01.md",
+      "sha256": "d1e6c8c912ca500162b2aec01de2bfa2a45ef98b78591f7aaa9cce8bb3b950a7"
+    },
+    {
+      "path": "docs/DE_N07_N13_01.md",
+      "sha256": "c319dd8e0fab8969b99b8ebe3ee15a7e1b58630842f32a65034b352e2155ed70"
+    },
+    {
+      "path": "docs/DE_N07_N13_01_N13_02.md",
+      "sha256": "7b40bdf9b0cfc22d6e8db36e8d8b31716a4316096e872bba6ca39880d14e22c6"
+    },
+    {
+      "path": "docs/DE_N07_N13_01_N13_03.md",
+      "sha256": "c8d1e220e38ea192dbb606d8ff07258ee10793e148ef65dcc9c7ef52fa5c5584"
+    },
+    {
+      "path": "docs/DE_N08_SYNTHETIC_01.md",
+      "sha256": "10c33ff36747e60e8aa9c8202ffcd590b495b43fd8d13181baec50660cdaa32d"
+    },
+    {
+      "path": "docs/DE_N09_DEMO_01.md",
+      "sha256": "89683bba72b91f5ab9973c3ca4e62802fef9c6e7a61fed2593fd2538735a8ed9"
+    },
+    {
+      "path": "docs/DE_N09_SYNTHETIC_01.md",
+      "sha256": "ca419495ed5cb9093d27e5de35bf81da029de57291d2b385bc029ceeaa02074e"
+    },
+    {
+      "path": "docs/DE_N10_SYNTHETIC_01.md",
+      "sha256": "d15d949b8cf75d0dc088bd7b6a632a9103deea10bfb298da0bfe834523f4c739"
+    },
+    {
+      "path": "docs/DE_N13_N14_01.md",
+      "sha256": "289a7c6784030b9e8106321084519743dacf1ae3ec2f7d6f10e1962fce7453ed"
+    },
+    {
+      "path": "docs/DE_N14_N15_01.md",
+      "sha256": "f0f53d4ca0c35003f5f1d50cf8db284d392e562537dc668cc9b81f37b281a337"
+    },
+    {
+      "path": "docs/DE_N16_DESIGNATED_READ_01.md",
+      "sha256": "4546413cc55df81b1d153e088f8428a662e86f1872d17ca13233f5550142d7d5"
+    },
+    {
+      "path": "docs/DE_N16_READONLY_01.md",
+      "sha256": "6ea1dc810f048c2b86e000f9edc98477cd7d810eb9e8928fe2fca342b9bda834"
+    },
+    {
+      "path": "docs/DE_N16_SQLITE_FIXTURE_01.md",
+      "sha256": "a156389047bad32ea690d4036a7828806c76bac36fbb73227cf5d2f32e7a938f"
+    }
+  ],
+  "owner_phase_3_4": "Newly authored exception may be proposed but not activated in this task",
+  "N11_feature_implementation_admitted": false
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "local_document_links_verified": 26,
+  "authentic_saved_synthetic_inputs": 2,
+  "source_bytes_match_committed_SHA": true,
+  "mutated_copy_rejected": true,
+  "positive_and_negative_pin_controls": true,
+  "historical_protected_pin_counts": {
+    "artifacts/n08-final-20261030/": 35,
+    "artifacts/n07-final-20261030/": 87,
+    "artifacts/n10-final-20261030/": 121,
+    "artifacts/n16-final-20261030/": 252
+  },
+  "no_operational_or_sealed_DB_read": true,
+  "no_Qwen_or_native_N16_execution": true,
+  "formal_N08": "In Progress",
+  "external_gates_open": true
+}

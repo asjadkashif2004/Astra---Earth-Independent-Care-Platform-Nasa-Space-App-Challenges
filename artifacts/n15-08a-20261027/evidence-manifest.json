@@ -1,0 +1,85 @@
+{
+  "task": "N15-08A",
+  "files": [
+    {
+      "path": "assessment.json",
+      "bytes": 837,
+      "sha256": "db27affb2aff74d5151cab609966e3cbe25ce4aee0cd47dab68003af76d0bf20"
+    },
+    {
+      "path": "control/STOPPED.json",
+      "bytes": 405,
+      "sha256": "3560b7e220d195be6fc1084a83eb8a0c5a5586d28198d60d05a6e0a13a27ad83"
+    },
+    {
+      "path": "control/artifact-preflight.json",
+      "bytes": 1182,
+      "sha256": "5e1376a5e1058a4c381a3266ffe0779972983adf8f12ed1cfe72df8ac5f2a07e"
+    },
+    {
+      "path": "control/authorization.json",
+      "bytes": 438,
+      "sha256": "763ca271fc96d1c2765a4b314d82000cbeec15910ac3306d14ec7d0f940ace64"
+    },
+    {
+      "path": "control/candidate.json",
+      "bytes": 24194,
+      "sha256": "9825b814300d658a2289bed727edba542f25cfe4378c145d255841f431c80d16"
+    },
+    {
+      "path": "control/correction.json",
+      "bytes": 474,
+      "sha256": "fcebe82143e5d3932036a45f3b6fdf7966334223eb673a8f46f4a5604334bb4c"
+    },
+    {
+      "path": "control/driver.mjs",
+      "bytes": 15010,
+      "sha256": "be685f013933b660d5c0c058f9cea306a59506e090ed383b665a7df410e3c7a0"
+    },
+    {
+      "path": "control/preservation-before.json",
+      "bytes": 986925,
+      "sha256": "ca14c94e35c85de46a7950dc629395c24d8dbe59c7aa8aa40311eaee18f01c54"
+    },
+    {
+      "path": "delivery-accounting.json",
+      "bytes": 339,
+      "sha256": "fe850a011a31c7cf07e3a47da8f75f268f6f2ceeba370404e6426c7fdbb83ab3"
+    },
+    {
+      "path": "dependency-diagnosis.json",
+      "bytes": 1032,
+      "sha256": "4e29fdcef591a3d6724495e2cdf630a32b5075c82822bb6c9668113957f3231c"
+    },
+    {
+      "path": "preservation.json",
+      "bytes": 1438,
+      "sha256": "8983ff2f36fa2f6fcd189cac85daceff6731d5a2a066406a14e1fd022a176ba5"
+    },
+    {
+      "path": "qa-results.json",
+      "bytes": 16141,
+      "sha256": "2f087f5bb17574432c3160f8185d1fda64347043bdd8e0d98312a816ffc94319"
+    },
+    {
+      "path": "sources/tests__n15-prompt-controller.test.mjs.txt",
+      "bytes": 6402,
+      "sha256": "37ce0beeaa0432a99416b7e448e7ec3f2790b9ece448b0b2c94d4505096a3b6e"
+    },
+    {
+      "path": "task-sources/astra-n15-08a-close.py",
+      "bytes": 6914,
+      "sha256": "da54d3bd1e539541889951292e4f492c9d208680a6c32cd8258f7f27556d8b83"
+    },
+    {
+      "path": "task-sources/astra-n15-08a-prepare.py",
+      "bytes": 3254,
+      "sha256": "59afc49395d4d76c9839f408ac1d0dc369d7033c98e1ed34e8b9c2d237042d55"
+    },
+    {
+      "path": "task-sources/astra-n15-08a-stage.py",
+      "bytes": 7996,
+      "sha256": "c4f5e4fc587d17ff99edc592bee91fc94693b3475dfad738eb7f1a0bf5cd6501"
+    }
+  ]
+}

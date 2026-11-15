@@ -1,0 +1,11 @@
+{
+  "args": [
+    "readelf",
+    "--version-info",
+    "--wide",
+    "/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669/llama-completion"
+  ],
+  "returncode": 0,
+  "stdout": "\nVersion symbols section '.gnu.version' contains 7 entries:\n Addr: 0x0000000000000546  Offset: 0x00000546  Link: 6 (.dynsym)\n  000:   0 (*local*)       1 (*global*)      1 (*global*)      1 (*global*)   \n  004:   1 (*global*)      3 (GLIBC_2.34)    2 (GLIBC_2.2.5)\n\nVersion needs section '.gnu.version_r' contains 1 entry:\n Addr: 0x0000000000000558  Offset: 0x00000558  Link: 7 (.dynstr)\n  000000: Version: 1  File: libc.so.6  Cnt: 2\n  0x0010:   Name: GLIBC_2.34  Flags: none  Version: 3\n  0x0020:   Name: GLIBC_2.2.5  Flags: none  Version: 2\n",
+  "stderr": ""
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": "astra.presentation.startup.v1",
+  "runtime": "v24.21.0",
+  "platform": "linux",
+  "isolated": true,
+  "launches": [
+    {
+      "startup_and_authenticated_shell_ms": 764.425662,
+      "crew": [
+        "CREW-01",
+        "CREW-02",
+        "CREW-03",
+        "CREW-04",
+        "CREW-05",
+        "CREW-06"
+      ],
+      "at": "2026-11-08T21:46:18.605Z",
+      "url": "http://127.0.0.1:38353",
+      "PID": 1925
+    },
+    {
+      "startup_and_authenticated_shell_ms": 527.2037069999999,
+      "crew": [
+        "CREW-01",
+        "CREW-02",
+        "CREW-03",
+        "CREW-04",
+        "CREW-05",
+        "CREW-06"
+      ],
+      "at": "2026-11-08T21:46:19.143Z",
+      "url": "http://127.0.0.1:38353",
+      "PID": 1938
+    }
+  ],
+  "operational_database_opened": false,
+  "last_stop": {
+    "code": 0,
+    "signal": null
+  },
+  "same_database_recovered": true,
+  "temporary_SQLite_bytes": 6254592,
+  "status": "PASS",
+  "temporary_files_removed": true
+}

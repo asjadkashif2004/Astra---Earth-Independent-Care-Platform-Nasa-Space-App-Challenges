@@ -1,0 +1,29 @@
+{
+  "task": "N15-08A",
+  "outcome": "BLOCKED_QA",
+  "timer_interface_fix": "confirmed; no unref TypeError",
+  "mandatory_QA": {
+    "total": 116,
+    "passed": 112,
+    "failed": 4
+  },
+  "remaining_fixture_gap": "VM does not supply Buffer",
+  "live_cases": {
+    "supported": "NOT_RUN",
+    "unsupported": "NOT_RUN"
+  },
+  "native_commands": 0,
+  "model_loading": 0,
+  "generations": 0,
+  "downloads": 0,
+  "network": 0,
+  "native_timing_RSS_tokens": "NOT_MEASURED",
+  "returned_quotations": 0,
+  "returned_citations": 0,
+  "discrimination": "NOT_EVALUATED",
+  "positive_live_quotation_gate": "OPEN",
+  "N15": "In Progress",
+  "N16": "Not Started",
+  "candidate_original_sha256": "eeaa137cdf237561a1de8a3fd28859955204841b852b20915538ae061709f401",
+  "resource_authority": "expires at blocked delivery; no unused-request continuation"
+}

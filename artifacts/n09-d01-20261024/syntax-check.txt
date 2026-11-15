@@ -1,0 +1,5 @@
+
+> astra-command@0.1.0 check
+> node scripts/check.mjs
+
+110 JavaScript files parsed and local imports checked; 0 errors. This is syntax/contract validation, not TypeScript compilation.

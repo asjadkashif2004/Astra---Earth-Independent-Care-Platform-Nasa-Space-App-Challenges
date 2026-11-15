@@ -1,0 +1,601 @@
+{
+  "status": "passed",
+  "started_at": "2026-10-23T07:02:43.461Z",
+  "checks": [
+    {
+      "name": "N05-01 native200% anatomy reflow/accessibility 1920x1080",
+      "status": "passed"
+    },
+    {
+      "name": "N05-01 native200% anatomy reflow/accessibility 1366x768",
+      "status": "passed"
+    },
+    {
+      "name": "N05-01 native200% anatomy reflow/accessibility 768x1024",
+      "status": "passed"
+    },
+    {
+      "name": "N05-01 native200% anatomy reflow/accessibility 390x844",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    "anatomy-native200-1920x1080.png",
+    "anatomy-native200-1366x768.png",
+    "anatomy-native200-768x1024.png",
+    "anatomy-native200-390x844.png"
+  ],
+  "console_errors": [],
+  "http_errors": [
+    {
+      "url": "http://127.0.0.1:49963/v1/auth/me",
+      "status": 401,
+      "stage": "startup"
+    }
+  ],
+  "viewports": [],
+  "caveats": [
+    "No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation.",
+    "Pointer/keyboard/rendered DOM checks and screenshots supplement human visual, text-contrast and assistive-technology review; they do not establish WCAG conformance."
+  ],
+  "native_zoom_preferences": {
+    "factor": 2,
+    "partition_key": "x",
+    "level": 3.8017840169239308,
+    "disposable_profile": true
+  },
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/155.0.8059.86",
+    "revision": "@804d6b05f089b27af8342622a36558c49401a1d4",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "jsVersion": "15.5.35.25"
+  },
+  "anatomy_accessibility": [
+    {
+      "physical_width": 1920,
+      "physical_height": 1080,
+      "layout": {
+        "innerWidth": 960,
+        "innerHeight": 540,
+        "dpr": 2,
+        "documentWidth": 952,
+        "cssZoom": "1",
+        "bodyZoom": "1"
+      },
+      "axe": {
+        "version": "4.11.1",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                ".anatomy-load-state"
+              ]
+            ]
+          }
+        ]
+      },
+      "keyboard": [
+        {
+          "name": "Data-linked schematic",
+          "focus": true,
+          "outline": 2,
+          "left": 236,
+          "right": 373.3515625,
+          "top": 339.7578125,
+          "bottom": 375.7578125
+        },
+        {
+          "name": "Generic adult male reference anatomy. Static body, skeleton, heart and lungs. Drag to orbit; arrow keys rotate; plus and minus zoom; Home resets. Not individual astronaut anatomy.",
+          "focus": true,
+          "outline": 2,
+          "left": 215,
+          "right": 493.59375,
+          "top": 15.7578125,
+          "bottom": 535.7578125
+        },
+        {
+          "name": "Body envelope",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 333.4296875,
+          "top": 177.7578125,
+          "bottom": 213.7578125
+        },
+        {
+          "name": "Skeleton",
+          "focus": true,
+          "outline": 2,
+          "left": 341.4296875,
+          "right": 407.1171875,
+          "top": 177.7578125,
+          "bottom": 213.7578125
+        },
+        {
+          "name": "Heart & lungs",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 328.96875,
+          "top": 221.7578125,
+          "bottom": 257.7578125
+        },
+        {
+          "name": "Orbit left",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 302.5390625,
+          "top": 269.7578125,
+          "bottom": 305.7578125
+        },
+        {
+          "name": "Orbit right",
+          "focus": true,
+          "outline": 2,
+          "left": 310.5390625,
+          "right": 386.078125,
+          "top": 269.7578125,
+          "bottom": 305.7578125
+        },
+        {
+          "name": "Tilt up",
+          "focus": true,
+          "outline": 2,
+          "left": 394.078125,
+          "right": 447.3828125,
+          "top": 269.7578125,
+          "bottom": 305.7578125
+        },
+        {
+          "name": "Tilt down",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 304.015625,
+          "top": 313.7578125,
+          "bottom": 349.7578125
+        },
+        {
+          "name": "Zoom in",
+          "focus": true,
+          "outline": 2,
+          "left": 312.015625,
+          "right": 376.2421875,
+          "top": 313.7578125,
+          "bottom": 349.7578125
+        },
+        {
+          "name": "Zoom out",
+          "focus": true,
+          "outline": 2,
+          "left": 384.2421875,
+          "right": 456.6640625,
+          "top": 313.7578125,
+          "bottom": 349.7578125
+        },
+        {
+          "name": "Reset camera",
+          "focus": true,
+          "outline": 2,
+          "left": 235,
+          "right": 325.359375,
+          "top": 339.7578125,
+          "bottom": 375.7578125
+        }
+      ]
+    },
+    {
+      "physical_width": 1366,
+      "physical_height": 768,
+      "layout": {
+        "innerWidth": 683,
+        "innerHeight": 384,
+        "dpr": 2,
+        "documentWidth": 675,
+        "cssZoom": "1",
+        "bodyZoom": "1"
+      },
+      "axe": {
+        "version": "4.11.1",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                ".anatomy-load-state"
+              ]
+            ]
+          }
+        ]
+      },
+      "keyboard": [
+        {
+          "name": "Data-linked schematic",
+          "focus": true,
+          "outline": 2,
+          "left": 245.71875,
+          "right": 383.0703125,
+          "top": 99.7578125,
+          "bottom": 135.7578125
+        },
+        {
+          "name": "Generic adult male reference anatomy. Static body, skeleton, heart and lungs. Drag to orbit; arrow keys rotate; plus and minus zoom; Home resets. Not individual astronaut anatomy.",
+          "focus": true,
+          "outline": 2,
+          "left": 95,
+          "right": 656.5,
+          "top": 15.7578125,
+          "bottom": 535.7578125
+        },
+        {
+          "name": "Body envelope",
+          "focus": true,
+          "outline": 2,
+          "left": 115,
+          "right": 213.4296875,
+          "top": 99.7578125,
+          "bottom": 135.7578125
+        },
+        {
+          "name": "Skeleton",
+          "focus": true,
+          "outline": 2,
+          "left": 221.4296875,
+          "right": 287.1171875,
+          "top": 99.7578125,
+          "bottom": 135.7578125
+        },
+        {
+          "name": "Heart & lungs",
+          "focus": true,
+          "outline": 2,
+          "left": 295.1171875,
+          "right": 389.0859375,
+          "top": 99.7578125,
+          "bottom": 135.7578125
+        },
+        {
+          "name": "Orbit left",
+          "focus": true,
+          "outline": 2,
+          "left": 115,
+          "right": 182.5390625,
+          "top": 147.7578125,
+          "bottom": 183.7578125
+        },
+        {
+          "name": "Orbit right",
+          "focus": true,
+          "outline": 2,
+          "left": 190.5390625,
+          "right": 266.078125,
+          "top": 147.7578125,
+          "bottom": 183.7578125
+        },
+        {
+          "name": "Tilt up",
+          "focus": true,
+          "outline": 2,
+          "left": 274.078125,
+          "right": 327.3828125,
+          "top": 147.7578125,
+          "bottom": 183.7578125
+        },
+        {
+          "name": "Tilt down",
+          "focus": true,
+          "outline": 2,
+          "left": 335.3828125,
+          "right": 404.3984375,
+          "top": 147.7578125,
+          "bottom": 183.7578125
+        },
+        {
+          "name": "Zoom in",
+          "focus": true,
+          "outline": 2,
+          "left": 412.3984375,
+          "right": 476.625,
+          "top": 147.7578125,
+          "bottom": 183.7578125
+        },
+        {
+          "name": "Zoom out",
+          "focus": true,
+          "outline": 2,
+          "left": 484.625,
+          "right": 557.046875,
+          "top": 147.7578125,
+          "bottom": 183.7578125
+        },
+        {
+          "name": "Reset camera",
+          "focus": true,
+          "outline": 2,
+          "left": 115,
+          "right": 205.359375,
+          "top": 183.7578125,
+          "bottom": 219.7578125
+        }
+      ]
+    },
+    {
+      "physical_width": 768,
+      "physical_height": 1024,
+      "layout": {
+        "innerWidth": 384,
+        "innerHeight": 512,
+        "dpr": 2,
+        "documentWidth": 376,
+        "cssZoom": "1",
+        "bodyZoom": "1"
+      },
+      "axe": {
+        "version": "4.11.1",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                ".anatomy-load-state"
+              ]
+            ]
+          }
+        ]
+      },
+      "keyboard": [
+        {
+          "name": "Data-linked schematic",
+          "focus": true,
+          "outline": 2,
+          "left": 167.71875,
+          "right": 305.0703125,
+          "top": 56.7578125,
+          "bottom": 92.7578125
+        },
+        {
+          "name": "Generic adult male reference anatomy. Static body, skeleton, heart and lungs. Drag to orbit; arrow keys rotate; plus and minus zoom; Home resets. Not individual astronaut anatomy.",
+          "focus": true,
+          "outline": 2,
+          "left": 17,
+          "right": 359.5,
+          "top": 15.7578125,
+          "bottom": 535.7578125
+        },
+        {
+          "name": "Body envelope",
+          "focus": true,
+          "outline": 2,
+          "left": 37,
+          "right": 135.4296875,
+          "top": 163.7578125,
+          "bottom": 199.7578125
+        },
+        {
+          "name": "Skeleton",
+          "focus": true,
+          "outline": 2,
+          "left": 143.4296875,
+          "right": 209.1171875,
+          "top": 163.7578125,
+          "bottom": 199.7578125
+        },
+        {
+          "name": "Heart & lungs",
+          "focus": true,
+          "outline": 2,
+          "left": 217.1171875,
+          "right": 311.0859375,
+          "top": 163.7578125,
+          "bottom": 199.7578125
+        },
+        {
+          "name": "Orbit left",
+          "focus": true,
+          "outline": 2,
+          "left": 37,
+          "right": 104.5390625,
+          "top": 211.7578125,
+          "bottom": 247.7578125
+        },
+        {
+          "name": "Orbit right",
+          "focus": true,
+          "outline": 2,
+          "left": 112.5390625,
+          "right": 188.078125,
+          "top": 211.7578125,
+          "bottom": 247.7578125
+        },
+        {
+          "name": "Tilt up",
+          "focus": true,
+          "outline": 2,
+          "left": 196.078125,
+          "right": 249.3828125,
+          "top": 211.7578125,
+          "bottom": 247.7578125
+        },
+        {
+          "name": "Tilt down",
+          "focus": true,
+          "outline": 2,
+          "left": 257.3828125,
+          "right": 326.3984375,
+          "top": 211.7578125,
+          "bottom": 247.7578125
+        },
+        {
+          "name": "Zoom in",
+          "focus": true,
+          "outline": 2,
+          "left": 37,
+          "right": 101.2265625,
+          "top": 255.7578125,
+          "bottom": 291.7578125
+        },
+        {
+          "name": "Zoom out",
+          "focus": true,
+          "outline": 2,
+          "left": 109.2265625,
+          "right": 181.6484375,
+          "top": 255.7578125,
+          "bottom": 291.7578125
+        },
+        {
+          "name": "Reset camera",
+          "focus": true,
+          "outline": 2,
+          "left": 189.6484375,
+          "right": 280.0078125,
+          "top": 255.7578125,
+          "bottom": 291.7578125
+        }
+      ]
+    },
+    {
+      "physical_width": 390,
+      "physical_height": 844,
+      "layout": {
+        "innerWidth": 195,
+        "innerHeight": 422,
+        "dpr": 2,
+        "documentWidth": 187,
+        "cssZoom": "1",
+        "bodyZoom": "1"
+      },
+      "axe": {
+        "version": "4.11.1",
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                ".anatomy-load-state"
+              ]
+            ]
+          }
+        ]
+      },
+      "keyboard": [
+        {
+          "name": "Data-linked schematic",
+          "focus": true,
+          "outline": 2,
+          "left": 32,
+          "right": 155.5,
+          "top": 195.65625,
+          "bottom": 243.25
+        },
+        {
+          "name": "Generic adult male reference anatomy. Static body, skeleton, heart and lungs. Drag to orbit; arrow keys rotate; plus and minus zoom; Home resets. Not individual astronaut anatomy.",
+          "focus": true,
+          "outline": 2,
+          "left": 11,
+          "right": 176.5,
+          "top": 15.75,
+          "bottom": 535.75
+        },
+        {
+          "name": "Body envelope",
+          "focus": true,
+          "outline": 2,
+          "left": 31,
+          "right": 129.4296875,
+          "top": 118.75,
+          "bottom": 154.75
+        },
+        {
+          "name": "Skeleton",
+          "focus": true,
+          "outline": 2,
+          "left": 31,
+          "right": 96.6875,
+          "top": 162.75,
+          "bottom": 198.75
+        },
+        {
+          "name": "Heart & lungs",
+          "focus": true,
+          "outline": 2,
+          "left": 31,
+          "right": 124.96875,
+          "top": 206.75,
+          "bottom": 242.75
+        },
+        {
+          "name": "Orbit left",
+          "focus": true,
+          "outline": 2,
+          "left": 31,
+          "right": 98.5390625,
+          "top": 221.75,
+          "bottom": 257.75
+        },
+        {
+          "name": "Orbit right",
+          "focus": true,
+          "outline": 2,
+          "left": 31,
+          "right": 106.5390625,
+          "top": 221.75,
+          "bottom": 257.75
+        },
+        {
+          "name": "Tilt up",
+          "focus": true,
+          "outline": 2,
+          "left": 31,
+          "right": 84.3046875,
+          "top": 221.75,
+          "bottom": 257.75
+        },
+        {
+          "name": "Tilt down",
+          "focus": true,
+          "outline": 2,
+          "left": 31,
+          "right": 100.015625,
+          "top": 221.75,
+          "bottom": 257.75
+        },
+        {
+          "name": "Zoom in",
+          "focus": true,
+          "outline": 2,
+          "left": 31,
+          "right": 95.2265625,
+          "top": 221.75,
+          "bottom": 257.75
+        },
+        {
+          "name": "Zoom out",
+          "focus": true,
+          "outline": 2,
+          "left": 31,
+          "right": 103.421875,
+          "top": 221.75,
+          "bottom": 257.75
+        },
+        {
+          "name": "Reset camera",
+          "focus": true,
+          "outline": 2,
+          "left": 31,
+          "right": 121.359375,
+          "top": 221.75,
+          "bottom": 257.75
+        }
+      ]
+    }
+  ],
+  "finished_at": "2026-10-23T07:02:48.123Z"
+}

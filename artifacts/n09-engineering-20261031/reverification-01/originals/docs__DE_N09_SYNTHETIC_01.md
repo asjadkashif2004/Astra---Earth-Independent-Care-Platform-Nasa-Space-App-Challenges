@@ -1,0 +1,17 @@
+# DE-N09-SYNTHETIC-01 — owner-activated synthetic engineering sequencing exception
+
+2026-10-31. **ACTIVATED for this one consolidated N09 mission.** The owner's N09 Full Module Engineering Completion directive explicitly authorizes preparation and activation where the repository procedure permits an explicit owner sequencing decision. CORE_AI_PRIORITY requires a new explicit decision for unfinished N07/N08; it does not require a second turn or an independent scientific signature for a synthetic sequencing decision. No existing full-synthetic N09 exception exists. DE-N09-DEMO-01 remains unchanged and exhausted; it is not expanded.
+
+Permitted: new authored six-fictional-crew schedules/scenarios, dated synthetic baseline evidence, independent quality labels, versioned deterministic multiday engine and bounded controls; fresh synthetic application/test persistence, actual N02 canonical ingestion/detection integration, read-only synthetic N08 consumption, nonprivate authored N10 schedule/exercise integration through existing validated APIs, consent-preserving N10 read context, Scenario Lab UI, deterministic and installed-browser QA, traces, preservation and documentation. No read-side source creation. Ordinary defects may be repaired within this task.
+
+Only new explicit versioned N09 mode uses the new generator; original legacy scenarios and selected-crew HR demo retain their contracts. Scenario labels never decide detector alerts. N02 detector/environment rules, acknowledgement and Earth delivery authority stay unchanged. No clinical cause-effect model, medical advice, private mood/task fabrication or automatic consent is permitted.
+
+N07 remains In Progress with missing authentic data/rights/grouping/review obligations. N08 remains In Progress with authentic-source/N06/release gates open; only its already-qualified synthetic reader is eligible here. N03 Partial/AC-20 Open and N06 deferred stay unchanged. N10 scientific/privacy/release, N11/N12/full N16 prerequisites, N13/N14/N15 independent review and all original release gates remain. No full prerequisite is declared Complete.
+
+No operational database, private medical record, N16 sealed source/worker, Qwen/model, acquisition/download/install, operational deployment, alert-rule change, anatomy or unrelated exception/module is authorized. Fresh memory/OS-temp synthetic instances and artifacts/n09-engineering-20261031 only. The current explicit mission does not reuse an old startup/resource permission. See N09_SYNTHETIC_CONTRACT.md for frozen finite limits and clocks.
+
+This is owner sequencing approval, not independent scientific/medical review. No reviewer/signature is fabricated. Task authority expires at delivery or a mandatory safety/authority boundary; no automatic N11/N12/N16 or authentic-source acquisition follows. Formal N09 remains In Progress unless every original acceptance gate is legitimately met.
+
+## Delivered scope and expiry —2026-10-31
+
+[Final completion](N09_FINAL_ENGINEERING_COMPLETION.md): all10synthetic audit groups qualified,662automated passes/0fail/1existing real-source skip and12real Chrome groups. Full scientific/source/prerequisite/release gates remain; formal N09 In Progress. This records the activated decision historically; its one-mission implementation/execution authority is now exhausted and expires at delivery. No automatic acquisition, next module or operational integration is authorized.

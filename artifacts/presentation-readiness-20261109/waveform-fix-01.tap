@@ -1,0 +1,20 @@
+✔ Presentation waveform import follows committed cutoff only when user has not edited it: false (412.819885ms)
+✔ Presentation waveform import follows committed cutoff only when user has not edited it: true (278.115982ms)
+✔ W4 actual application navigation loads UNKNOWN from backend with honest inactive twin labels (284.927747ms)
+✔ W4/W5 real source window renders SVG extrema/gap and authenticated metadata (272.850995ms)
+✔ W9 viewer sees denied state and launches no waveform request (238.57126ms)
+✔ W9 researcher sees denied state and launches no waveform request (254.219655ms)
+✔ W4 historical empty cutoff and invalid range remain honest without writes (283.539782ms)
+✔ W4 old asynchronous list cannot replace a newer historical projection (246.836716ms)
+✔ W4 list success followed by failed window cannot be reported as Loaded/PASS (233.49491ms)
+✔ W4 disposing a pending replay prevents stale rendering in another workspace (244.40034ms)
+✔ W2 UI refuses import without explicit authored-source confirmation (225.33783ms)
+✔ W4 changing source clears old samples while the actual replacement window is pending (237.995066ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3654.575507

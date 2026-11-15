@@ -1,0 +1,15 @@
+{
+  "schema_version":"astra.n15-06.demo-plan.v1",
+  "scope":"One seen research-only structural-reliability demonstration, not held-out/scientific/clinical validation",
+  "question":"What environmental accommodations must a spacecraft system provide for crew sleep?",
+  "generation_limit":1,
+  "retrieval":{"method":"unchanged metadata-rich lexical","k":1,"minimum":3,"eligible_units":33},
+  "selection_contract":{"decision":"SELECT or ABSTAIN","evidence_ids":"Exactly one retrieved canonical ID for SELECT; empty array for ABSTAIN","other_keys":false},
+  "mechanism":"Inline --grammar with a finite GBNF union of two complete ASCII JSON literals, derived only from the actual retrieved canonical ID",
+  "strict_parser":"services/research-answer/selection.mjs unchanged",
+  "citation_contract":"N14-02 unchanged; literal attribution only, no paraphrase entailment",
+  "generation":{"context":2048,"output_tokens":192,"threads":2,"deadline_s":120,"prompt_byte_limit":1536},
+  "resources":{"monitored_storage":1500000000,"precautionary_stop":1350000000,"process_RSS":2000000000,"network":0,"downloads":0},
+  "stop":"No retry, output repair, parser relaxation or grammar/prompt change after observing the completion",
+  "reviews":"All N07/N13/N14 independent scientific/medical obligations remain pending"
+}

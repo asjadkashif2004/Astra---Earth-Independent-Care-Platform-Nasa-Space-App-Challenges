@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "final_driver_syntax_exit": 0,
+  "scope": "Only measurement label changed after actual campaign07; full280file parser/import check retained, all code otherwise unchanged",
+  "blank_packet_exit": 2,
+  "blank_packet_status": "NOT_VERIFIED"
+}

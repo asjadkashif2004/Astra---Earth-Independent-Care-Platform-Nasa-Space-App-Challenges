@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "index_sha256": "56f62593fa9a6a80d010be77bf0654c1225198d1d052704e9301a61f4f65d39c",
+  "consumer_windows_sha256": "899967c4aac5a8695ef273ce46af58e67f51ab6b7313bc90a4f8b307a5d8b615",
+  "retained_index_windows_sha256": "899967c4aac5a8695ef273ce46af58e67f51ab6b7313bc90a4f8b307a5d8b615",
+  "windows": 34,
+  "question_labels_in_consumer": false,
+  "index_schema": "astra.n14.index.v1",
+  "retrieval_policy_changed": false,
+  "embedding_inference": 0,
+  "factual_rules_activated": 0
+}

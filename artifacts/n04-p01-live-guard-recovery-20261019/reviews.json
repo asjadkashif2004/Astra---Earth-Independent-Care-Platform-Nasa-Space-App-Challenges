@@ -1,0 +1,182 @@
+[
+  {
+    "source_directory": "artifacts/n04-p01-live-guard-smoke-20261019",
+    "file": "1x-crew-standard-2-0.png",
+    "id": 0,
+    "crew_id": "CREW-01",
+    "metric": "heart_rate",
+    "expected": "67",
+    "screenshot_sha256": "8b296c178cb5bbbc510b76aca47d5b7452a1170debddaf6561791124b93a6169",
+    "rect": {
+      "x": 6.2249755859375,
+      "y": 6.43182373046875,
+      "width": 49.125,
+      "height": 67.199951171875
+    },
+    "glyph": {
+      "sha256": "eb406ee55ffd91d115e03f04bc775a267a23d326abfbe8a3805fc87583ea0eac",
+      "width": 44,
+      "height": 34,
+      "ink_pixels": 194
+    },
+    "reviewed_numeric": "67",
+    "reviewed_by": "Codex direct visual inspection of original PNG at original resolution",
+    "reviewed_at": "2026-10-19T16:41:37.531Z",
+    "method": "Direct unambiguous reading at the exact original target;SHA256-bound screenshot and nonempty exact glyph mask. No image alteration,fuzzy matching,digit substitution or inferred value.",
+    "original_ocr": {
+      "expected": "67",
+      "id": 0,
+      "recognized": "67 +02 SD",
+      "method": "Same captured bitmap;bounded numeric crop offline scale2 padding16",
+      "matched": false,
+      "crew_id": "CREW-01",
+      "metric": "heart_rate",
+      "numeric": "6702"
+    },
+    "ocr_failure_reason": "OCR returned 67 +02 SD;numeric extraction 6702 includes neighboring baseline digits."
+  },
+  {
+    "source_directory": "artifacts/n04-p01-live-guard-smoke-20261019",
+    "file": "1x-crew-standard-2-10.png",
+    "id": 60,
+    "crew_id": "CREW-02",
+    "metric": "heart_rate",
+    "expected": "68",
+    "screenshot_sha256": "2520ec7415c770cc38afb6adee9baf834fa660ba0d2a8bac51b7306669d5516f",
+    "rect": {
+      "x": 6.2249755859375,
+      "y": 7.6575927734375,
+      "width": 49.125,
+      "height": 67.20001220703125
+    },
+    "glyph": {
+      "sha256": "9fc465acac9d409b28068d6969a40c30f41ea63fb02e3ee750c926e270ffdd2d",
+      "width": 45,
+      "height": 35,
+      "ink_pixels": 432
+    },
+    "reviewed_numeric": "68",
+    "reviewed_by": "Codex direct visual inspection of original PNG at original resolution",
+    "reviewed_at": "2026-10-19T16:41:37.560Z",
+    "method": "Direct unambiguous reading at the exact original target;SHA256-bound screenshot and nonempty exact glyph mask. No image alteration,fuzzy matching,digit substitution or inferred value.",
+    "original_ocr": {
+      "expected": "68",
+      "id": 60,
+      "recognized": "",
+      "method": "Same captured bitmap;bounded numeric crop offline scale2 padding16",
+      "matched": false,
+      "crew_id": "CREW-02",
+      "metric": "heart_rate",
+      "numeric": ""
+    },
+    "ocr_failure_reason": "OCR returned an empty reading;underlying recognition reason is not established."
+  },
+  {
+    "source_directory": "artifacts/n04-p01-live-guard-smoke-20261019",
+    "file": "1x-crew-standard-2-20.png",
+    "id": 120,
+    "crew_id": "CREW-03",
+    "metric": "heart_rate",
+    "expected": "68",
+    "screenshot_sha256": "8568d71e7c7c80a1825dfc8e732791008daad2f2af8a3adec5eccc75d294b858",
+    "rect": {
+      "x": 6.2249755859375,
+      "y": 7.6549072265625,
+      "width": 49.125,
+      "height": 67.20001220703125
+    },
+    "glyph": {
+      "sha256": "afdff919d742c337e53c16cddedba746d00e1b19d0addc453ae2c60156ae7e00",
+      "width": 45,
+      "height": 35,
+      "ink_pixels": 432
+    },
+    "reviewed_numeric": "68",
+    "reviewed_by": "Codex direct visual inspection of original PNG at original resolution",
+    "reviewed_at": "2026-10-19T16:41:37.574Z",
+    "method": "Direct unambiguous reading at the exact original target;SHA256-bound screenshot and nonempty exact glyph mask. No image alteration,fuzzy matching,digit substitution or inferred value.",
+    "original_ocr": {
+      "expected": "68",
+      "id": 120,
+      "recognized": "",
+      "method": "Same captured bitmap;bounded numeric crop offline scale2 padding16",
+      "matched": false,
+      "crew_id": "CREW-03",
+      "metric": "heart_rate",
+      "numeric": ""
+    },
+    "ocr_failure_reason": "OCR returned an empty reading;underlying recognition reason is not established."
+  },
+  {
+    "source_directory": "artifacts/n04-p01-live-guard-smoke-20261019",
+    "file": "1x-crew-standard-2-20.png",
+    "id": 121,
+    "crew_id": "CREW-03",
+    "metric": "hrv",
+    "expected": "55",
+    "screenshot_sha256": "8568d71e7c7c80a1825dfc8e732791008daad2f2af8a3adec5eccc75d294b858",
+    "rect": {
+      "x": 649.199951171875,
+      "y": 7.6549072265625,
+      "width": 49.125,
+      "height": 67.20001220703125
+    },
+    "glyph": {
+      "sha256": "dd50f4d51bdd4de70c2979b685d82a4a8cc5badc4b8bf05498fefc9dc6453c00",
+      "width": 43,
+      "height": 35,
+      "ink_pixels": 301
+    },
+    "reviewed_numeric": "55",
+    "reviewed_by": "Codex direct visual inspection of original PNG at original resolution",
+    "reviewed_at": "2026-10-19T16:41:37.577Z",
+    "method": "Direct unambiguous reading at the exact original target;SHA256-bound screenshot and nonempty exact glyph mask. No image alteration,fuzzy matching,digit substitution or inferred value.",
+    "original_ocr": {
+      "expected": "55",
+      "id": 121,
+      "recognized": "556",
+      "method": "Same captured bitmap;bounded numeric crop offline scale2 padding16",
+      "matched": false,
+      "crew_id": "CREW-03",
+      "metric": "hrv",
+      "numeric": "556"
+    },
+    "ocr_failure_reason": "OCR returned 556 instead of the visibly separate 55 measurement;origin of the extra recognized 6 is not established."
+  },
+  {
+    "source_directory": "artifacts/n04-p01-live-guard-smoke-20261019",
+    "file": "1x-crew-standard-2-40.png",
+    "id": 240,
+    "crew_id": "CREW-05",
+    "metric": "heart_rate",
+    "expected": "69",
+    "screenshot_sha256": "a837bab9fb7d1848537ab30316a29737aa56684220119941a212a3e1bd748690",
+    "rect": {
+      "x": 6.2249755859375,
+      "y": 7.658447265625,
+      "width": 49.125,
+      "height": 67.20001220703125
+    },
+    "glyph": {
+      "sha256": "7ca82bb5aca9836cdf5a3e05e1d03e887dc86040d3e01327fa947fc583e3b9f6",
+      "width": 45,
+      "height": 34,
+      "ink_pixels": 373
+    },
+    "reviewed_numeric": "69",
+    "reviewed_by": "Codex direct visual inspection of original PNG at original resolution",
+    "reviewed_at": "2026-10-19T16:41:37.592Z",
+    "method": "Direct unambiguous reading at the exact original target;SHA256-bound screenshot and nonempty exact glyph mask. No image alteration,fuzzy matching,digit substitution or inferred value.",
+    "original_ocr": {
+      "expected": "69",
+      "id": 240,
+      "recognized": "",
+      "method": "Same captured bitmap;bounded numeric crop offline scale2 padding16",
+      "matched": false,
+      "crew_id": "CREW-05",
+      "metric": "heart_rate",
+      "numeric": ""
+    },
+    "ocr_failure_reason": "OCR returned an empty reading;underlying recognition reason is not established."
+  }
+]

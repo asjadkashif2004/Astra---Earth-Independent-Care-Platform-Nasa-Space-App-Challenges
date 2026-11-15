@@ -1,0 +1,49 @@
+from pathlib import Path
+import hashlib,json,os,shutil,stat,sys,time
+sys.dont_write_bytecode=True
+p=Path('/mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai').resolve()
+sys.path.insert(0,str(p/'scripts'))
+import n15_probe_accounting as accounting
+pointer=json.loads(Path('/tmp/astra-n15-07b-root.json').read_text());control=Path(pointer['control'])
+assert (control/'artifact-preflight.json').is_file()
+for name,source in [('driver.mjs',Path('/tmp/astra-n15-07b-driver.mjs')),
+ ('prepare-source.txt',Path('/tmp/astra-n15-07b-prepare.py')),('stage-source.txt',Path(__file__)),
+ ('qa-results.json',p/'artifacts/n15-07b-20261027/qa-results.json')]:
+    with (control/name).open('xb') as f:f.write(source.read_bytes());f.flush();os.fsync(f.fileno())
+mounts=[]
+for line in Path('/proc/self/mountinfo').read_text().splitlines():
+    fields=line.split();sep=fields.index('-');target=fields[4]
+    if str(control)==target or str(control).startswith(target.rstrip('/')+'/'):
+        mounts.append((len(target),target,fields[sep+1],fields[sep+2]))
+mount=max(mounts);assert mount[2] not in {'tmpfs','ramfs'},mount
+roots=[control,Path('/var/tmp/astra-n15-04b-0zd6xkaq'),Path('/var/tmp/astra-n15-03-swuxjpfe'),
+ Path('/var/tmp/astra-n15-03d-4s2m9qlg'),Path('/var/tmp/astra-n15-03f-bat9chx9'),Path('/var/tmp/astra-n15-03h-0oauyxf2')]
+roots += [x for pattern in ['astra-n15-05-*','astra-n15-06-*'] for x in Path('/var/tmp').glob(pattern)
+          if x!=control and x.is_dir() and not x.is_symlink()]
+roots += [p/x for x in ['artifacts/n15-metadata-20261025','artifacts/n15-03e-20261026','artifacts/n15-03g-20261027',
+ 'artifacts/n15-03h-20261027','artifacts/n15-04b-20261027','artifacts/n15-04c-20261027',
+ 'artifacts/n15-05-20261027','artifacts/n15-06-20261027','data/corpus','data/research/n14-01/index',
+ 'data/research/n15-05','services/research-answer','services/research-retrieval',
+ 'artifacts/n15-07a-20261027','artifacts/n15-07b-20261027']]
+apparent=allocated=0
+for root in roots:
+    a,b=accounting.disk_usage(root);apparent+=a;allocated+=b
+    s=root.lstat();apparent+=s.st_size;allocated+=s.st_blocks*512
+    for parent,dirs,files in os.walk(root,followlinks=False):
+        for name in dirs+files:
+            s=(Path(parent)/name).lstat()
+            if stat.S_ISLNK(s.st_mode):apparent+=s.st_size;allocated+=s.st_blocks*512
+# Conservatively include all pinned local sources/evidence as external files too.
+before=json.loads((control/'preservation-before.json').read_text())
+for name in before['pins']:
+    s=(p/name).stat();apparent+=s.st_size;allocated+=s.st_blocks*512
+assert max(apparent,allocated)<1350000000,(apparent,allocated)
+free=shutil.disk_usage(control).free;assert free>50000000,free
+record={'status':'PASS','counted_apparent':apparent,'counted_allocated':allocated,
+ 'roots':[str(x) for x in roots],'extra_QA_evidence_counted':True,'method':'same accounting totals with conservative extra QA evidence/source counts',
+ 'watermark':1350000000,'ceiling':1500000000,'disk_free':free,
+ 'filesystem':{'mount':mount[1],'type':mount[2],'source':mount[3]},
+ 'native_process_limit':2000000000,'native_deadline':120,'downloads':0,'network':0,
+ 'actual_sandbox_preflight':'frozen blocked-child view must pass before each native release'}
+with (control/'storage-preflight.json').open('x') as f:json.dump(record,f,indent=2);f.write('\n');f.flush();os.fsync(f.fileno())
+print(json.dumps({'status':'PASS','root':str(control),'apparent':apparent,'allocated':allocated,'filesystem':mount[2]}))

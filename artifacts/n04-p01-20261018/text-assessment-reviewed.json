@@ -1,0 +1,451 @@
+{
+  "method": "Strict OCR plus exact thresholded numeric glyph identity to OCR/manual-reviewed PNG references;no fuzzy matching,digit substitution,physical display or pixel-perfect claim",
+  "threshold_luminance": 145,
+  "runs": [
+    {
+      "directory": "/mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/artifacts/n04-p01-20261018/acceptance-1x-overview",
+      "headed": true,
+      "protocol": {
+        "rate": 1,
+        "context": "overview",
+        "trials": 3,
+        "firstTrial": 1,
+        "modes": [
+          "standard",
+          "performance"
+        ],
+        "seconds": 60,
+        "warmup_seconds": 10,
+        "viewport": [
+          1920,
+          1080
+        ],
+        "scalar_observations_per_second": 60,
+        "diagnostic_only": false,
+        "clock": "Host1Hz deadlines;source/host receipt/DOM/compositor/capture clocks retained separately",
+        "capture": "Actual browser PNG completion is a conservative rendered-capture bound,not physical panel timing. Offline OCR validates visible captured text separately.",
+        "png_encoding": {
+          "lossless": true,
+          "optimizeForSpeed": true,
+          "scale": "min(2,2500/visible numeric union width);application viewport/render quality unchanged"
+        }
+      },
+      "status": "failed",
+      "console_errors": [],
+      "images": 121,
+      "numbers": 2640,
+      "trials": [
+        {
+          "name": "1x-overview-standard-1",
+          "rate": 1,
+          "context": "overview",
+          "mode": "standard",
+          "passed": true,
+          "errors": [],
+          "groups": [
+            {
+              "key": "CREW-01:heart_rate",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 49,
+              "capture_bound_p95_ms": 321
+            },
+            {
+              "key": "CREW-01:spo2",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 49,
+              "capture_bound_p95_ms": 321
+            },
+            {
+              "key": "CREW-01:sleep_duration",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 49,
+              "capture_bound_p95_ms": 321
+            },
+            {
+              "key": "CREW-02:heart_rate",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 49,
+              "capture_bound_p95_ms": 321
+            },
+            {
+              "key": "CREW-02:spo2",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 49,
+              "capture_bound_p95_ms": 321
+            },
+            {
+              "key": "CREW-02:sleep_duration",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 49,
+              "capture_bound_p95_ms": 321
+            },
+            {
+              "key": "CREW-03:heart_rate",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 49,
+              "capture_bound_p95_ms": 321
+            },
+            {
+              "key": "CREW-03:spo2",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 50,
+              "capture_bound_p95_ms": 321
+            },
+            {
+              "key": "CREW-03:sleep_duration",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 50,
+              "capture_bound_p95_ms": 321
+            },
+            {
+              "key": "CREW-04:heart_rate",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 50,
+              "capture_bound_p95_ms": 321
+            },
+            {
+              "key": "CREW-04:spo2",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 50,
+              "capture_bound_p95_ms": 321
+            },
+            {
+              "key": "CREW-04:sleep_duration",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 50,
+              "capture_bound_p95_ms": 321
+            },
+            {
+              "key": "CREW-05:heart_rate",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 50,
+              "capture_bound_p95_ms": 321
+            },
+            {
+              "key": "CREW-05:spo2",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 50,
+              "capture_bound_p95_ms": 321
+            },
+            {
+              "key": "CREW-05:sleep_duration",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 50,
+              "capture_bound_p95_ms": 321
+            },
+            {
+              "key": "CREW-06:heart_rate",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 50,
+              "capture_bound_p95_ms": 321
+            },
+            {
+              "key": "CREW-06:spo2",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 50,
+              "capture_bound_p95_ms": 321
+            },
+            {
+              "key": "CREW-06:sleep_duration",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 50,
+              "capture_bound_p95_ms": 321
+            },
+            {
+              "key": "CABIN:co2_ppm",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 58,
+              "capture_bound_p95_ms": 330
+            },
+            {
+              "key": "CABIN:temperature_c",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 58,
+              "capture_bound_p95_ms": 330
+            },
+            {
+              "key": "CABIN:humidity_percent",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 58,
+              "capture_bound_p95_ms": 330
+            },
+            {
+              "key": "CABIN:dose_rate_msv_h",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 58,
+              "capture_bound_p95_ms": 330
+            }
+          ],
+          "tick_p95_ms": 45.06590000000142,
+          "deadline_lateness_max_ms": 868.9075000000012,
+          "dom_p95_ms": 52,
+          "capture_bound_p95_ms": 321,
+          "transport_to_receipt_p95_ms": 3,
+          "server_before_write_p95_ms": 40,
+          "receipt_to_dom_p95_ms": 10,
+          "frame_feedback_scope": "Compositor feedback only;headless mode and physical presentation limitations remain report-level constraints"
+        },
+        {
+          "name": "1x-overview-standard-2",
+          "rate": 1,
+          "context": "overview",
+          "mode": "standard",
+          "passed": true,
+          "errors": [],
+          "groups": [
+            {
+              "key": "CREW-01:heart_rate",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 44,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-01:spo2",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 44,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-01:sleep_duration",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 44,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-02:heart_rate",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 44,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-02:spo2",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 44,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-02:sleep_duration",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 44,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-03:heart_rate",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 44,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-03:spo2",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 44,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-03:sleep_duration",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 44,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-04:heart_rate",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 44,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-04:spo2",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 44,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-04:sleep_duration",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 44,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-05:heart_rate",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 44,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-05:spo2",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 44,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-05:sleep_duration",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 44,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-06:heart_rate",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 44,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-06:spo2",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 44,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CREW-06:sleep_duration",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 44,
+              "capture_bound_p95_ms": 286
+            },
+            {
+              "key": "CABIN:co2_ppm",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 52,
+              "capture_bound_p95_ms": 293
+            },
+            {
+              "key": "CABIN:temperature_c",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 52,
+              "capture_bound_p95_ms": 293
+            },
+            {
+              "key": "CABIN:humidity_percent",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 52,
+              "capture_bound_p95_ms": 293
+            },
+            {
+              "key": "CABIN:dose_rate_msv_h",
+              "count": 60,
+              "expected_count": 60,
+              "dom_p95_ms": 52,
+              "capture_bound_p95_ms": 293
+            }
+          ],
+          "tick_p95_ms": 41.72969999999623,
+          "deadline_lateness_max_ms": 16.455199999996694,
+          "dom_p95_ms": 46,
+          "capture_bound_p95_ms": 286,
+          "transport_to_receipt_p95_ms": 3,
+          "server_before_write_p95_ms": 36,
+          "receipt_to_dom_p95_ms": 10,
+          "frame_feedback_scope": "Compositor feedback only;headless mode and physical presentation limitations remain report-level constraints"
+        }
+      ]
+    }
+  ],
+  "unverified": [],
+  "verified_numbers": 2640,
+  "total_numbers": 2640,
+  "coverage": [
+    {
+      "rate": 1,
+      "context": "overview",
+      "mode": "standard",
+      "trials": [
+        "1x-overview-standard-1",
+        "1x-overview-standard-2"
+      ],
+      "complete": false
+    },
+    {
+      "rate": 1,
+      "context": "overview",
+      "mode": "performance",
+      "trials": [],
+      "complete": false
+    },
+    {
+      "rate": 1,
+      "context": "crew",
+      "mode": "standard",
+      "trials": [],
+      "complete": false
+    },
+    {
+      "rate": 1,
+      "context": "crew",
+      "mode": "performance",
+      "trials": [],
+      "complete": false
+    },
+    {
+      "rate": 30,
+      "context": "overview",
+      "mode": "standard",
+      "trials": [],
+      "complete": false
+    },
+    {
+      "rate": 30,
+      "context": "overview",
+      "mode": "performance",
+      "trials": [],
+      "complete": false
+    },
+    {
+      "rate": 30,
+      "context": "crew",
+      "mode": "standard",
+      "trials": [],
+      "complete": false
+    },
+    {
+      "rate": 30,
+      "context": "crew",
+      "mode": "performance",
+      "trials": [],
+      "complete": false
+    }
+  ],
+  "all_trial_bounds_pass": false,
+  "headed_acceptance_supported": false
+}

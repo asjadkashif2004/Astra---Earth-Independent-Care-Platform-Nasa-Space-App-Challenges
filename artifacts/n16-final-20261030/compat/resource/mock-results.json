@@ -1,0 +1,66 @@
+{
+  "scope": "QA_ONLY_MOCK_OR_DISPOSABLE_JSONL",
+  "native_worker_starts": 0,
+  "SQLite_connections": 0,
+  "SQL_operations": 0,
+  "sealed_database_reads": 0,
+  "mount_changes": 0,
+  "reports": [
+    {
+      "case": "valid_count_0",
+      "samples": 0,
+      "events": 0,
+      "rows": 0,
+      "head": "GENESIS"
+    },
+    {
+      "case": "valid_count_1",
+      "samples": 1,
+      "events": 1,
+      "rows": 2,
+      "head": "89de753cc66fad03e0ece60601a3dca0a37d57665829e04fb2282aa751583fee"
+    },
+    {
+      "case": "valid_count_2",
+      "samples": 2,
+      "events": 1,
+      "rows": 3,
+      "head": "f348b6fbc880c0f29b79a7e3b6f9acd5e92a442f8d043ce5864dc3507f6202f7"
+    },
+    {
+      "case": "valid_count_7",
+      "samples": 7,
+      "events": 4,
+      "rows": 11,
+      "head": "3adc8f39fb649265617a12c3af0a7d0c3ee652fb06ab83f5d7fc959148825ecb"
+    },
+    {
+      "case": "valid_count_11",
+      "samples": 11,
+      "events": 6,
+      "rows": 17,
+      "head": "539c2222c6f399d4ce058b94416133029c2cdf3b2da3f0f675b3429890e8d511"
+    },
+    {
+      "case": "synthetic_7_controller_5_journal",
+      "samples_reported": 7,
+      "sample_rows": 5,
+      "event_rows": 3,
+      "rejected": true
+    },
+    {
+      "case": "legacy_execution_with_injected_IO",
+      "overlapping_handles": 2,
+      "count_before_ack": 1,
+      "actual_files_or_workers": 0,
+      "historical_record_loss_cause": "NOT ESTABLISHED"
+    },
+    {
+      "case": "disposable_mock_disk_journal",
+      "path": "/mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/artifacts/n16-final-20261030/compat/resource/qa/disk-journal-sUUp4l",
+      "rows": 3,
+      "head": "f9a3c2ea491b11488a59eea7be60369bfccd09effa29a58eb3e7cbd2b4d86480",
+      "SQL": 0
+    }
+  ]
+}

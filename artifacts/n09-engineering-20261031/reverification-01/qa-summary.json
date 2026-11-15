@@ -1,0 +1,60 @@
+{
+  "mission_outcome": "ENGINEERING COMPLETE WITH EXTERNAL GATES",
+  "N09_synthetic_groups_implemented": 10,
+  "N09_synthetic_groups_qualified": 10,
+  "production_code_changes": 0,
+  "fresh_tests": {
+    "passed": 116,
+    "failed": 0,
+    "skipped": 0,
+    "cancelled": 0,
+    "Node_test_duration_ms": 34983.59015,
+    "harness_duration_ms": 35126.44192499999,
+    "scope": "All N09/evaluation,legacy-HR demo and N02 monitoring controls; these overlap the retained full suite"
+  },
+  "retained_full_suite": {
+    "passed": 662,
+    "failed": 0,
+    "skipped": 1,
+    "not_freshly_rerun": true
+  },
+  "retained_actual_browser": {
+    "passed_groups": 12,
+    "failed": 0,
+    "exact_code_pins_match": true,
+    "new_launches": 0
+  },
+  "browser_note": "Actual Chrome05 result/source pins reverified; no new browser launch and no DOM-as-browser claim",
+  "cold_recovery": "PASS,zero replay,actual fresh child process",
+  "resources": {
+    "command": [
+      "node",
+      "--experimental-vm-modules",
+      "--test",
+      "--test-isolation=none",
+      "tests/n09.test.mjs",
+      "tests/n09-evaluation.test.mjs",
+      "tests/scenario-demo.test.mjs",
+      "tests/monitoring-integrity.test.mjs"
+    ],
+    "exit_code": 0,
+    "duration_ms": 35126.44192499999,
+    "samples": 140,
+    "max_sampled_tree_RSS_bytes": 500576256,
+    "child_kernel_max_RSS_KiB": 437168,
+    "max_sampled_scratch_logical_bytes": 82828929,
+    "scratch_bytes_before_cleanup": 0,
+    "scratch_removed": true,
+    "timed_out": false,
+    "new_browser_launches": 0,
+    "N16_native_starts": 0,
+    "Qwen_inference": 0,
+    "external_acquisition": 0,
+    "limitations": "Observed250ms samples and kernel child high-water, not hard RSS/disk caps or target-hardware acceptance. No N16 resource allowance reused."
+  },
+  "formal_N09": "In Progress",
+  "N11_status": "Not Started \u2014 exception/dependency blocked",
+  "N11_proposal": "INACTIVE",
+  "preservation": "PASS",
+  "no_automatic_next_module": true
+}

@@ -1,0 +1,29 @@
+{
+  "task": "N16-06H",
+  "outcome": "QA_ONLY_PASS",
+  "tests": {
+    "pass": 37,
+    "fail": 0,
+    "skip": 0
+  },
+  "historical_G_outcome": "INCONCLUSIVE",
+  "historical_missing_record_cause": "UNCONFIRMED",
+  "native_worker_starts": 0,
+  "SQLite_connections": 0,
+  "SQL_statements": 0,
+  "sealed_database_byte_reads": 0,
+  "mount_changes": 0,
+  "network_requests": 0,
+  "downloads_or_installs": 0,
+  "resource_or_exception_renewal": false,
+  "existing_code_changed": [
+    "scripts/n16-quality-qualification.mjs"
+  ],
+  "new_code_and_tests": [
+    "services/agent/resource-journal.mjs",
+    "tests/n16-resource-journal.test.mjs"
+  ],
+  "historical_journal_sha256": "a75aa2268516135262a82fdd22ea06a7648bf2ce88c271cbb18f37a87a482a05",
+  "source_integrity_reverified": false,
+  "next_task": "Separate fresh one-start get_data_quality single-SELECT qualification with new output/pins and explicit source/resource permission; not executed."
+}

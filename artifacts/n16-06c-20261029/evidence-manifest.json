@@ -1,0 +1,106 @@
+{
+  "schema_version": "astra.n16-06c.evidence.v1",
+  "scope": "QA-only resolver correction, no preflight/probe/SQL authority; manifest excludes itself",
+  "files": {
+    "scripts/n16-containment-probe.mjs": {
+      "bytes": 17391,
+      "sha256": "c4935fb08f97b43f6208707cff06c7e7fd8c0736979818b4e3ef8b57e51b4dc6"
+    },
+    "services/agent/dependency-pins.mjs": {
+      "bytes": 4686,
+      "sha256": "57b1f5988946314ed5b1bd30a36f01b15e0c597896aea905ae938f23cfafc374"
+    },
+    "tests/n16-dependency-pins.test.mjs": {
+      "bytes": 14394,
+      "sha256": "e7500dbb8edaad5fad55c1243356aa979117c55855a86ec2a1c98031f05fcbfc"
+    },
+    "AGENTS.md": {
+      "bytes": 94446,
+      "sha256": "903f6c722339d27584602163b9f211aee9bd50adab0bb34c7d9ae5aae6a4c979"
+    },
+    "docs/SESSION_HANDOFF.md": {
+      "bytes": 385263,
+      "sha256": "003612af9167dba0775df05aba28cbfb31db9854d4bbfbfabf9e0f92e47eb3b4"
+    },
+    "docs/MODULE_TRACKER.md": {
+      "bytes": 159940,
+      "sha256": "8766e30774400b0613c673e7cfc3529b31380f5244a9937a25dbed6fba4cd7be"
+    },
+    "docs/FEATURE_AUDIT.md": {
+      "bytes": 135921,
+      "sha256": "15e618648a98c04a4e36e7218d6791f467d94018fe86fd47e6b08215767979cc"
+    },
+    "docs/MASTER_PLAN.md": {
+      "bytes": 77585,
+      "sha256": "4c276dd07b3ab5cf7b1286887a4c3c92873ab0297dbfaee538e25d43ad45b358"
+    },
+    "docs/CORE_AI_PRIORITY.md": {
+      "bytes": 51069,
+      "sha256": "ec10d1a6f1f4358076e26fd0d82aeb53fa578bc1ebc2ca211571b09186fe0134"
+    },
+    "docs/DECISIONS.md": {
+      "bytes": 79566,
+      "sha256": "f3893dd87becdd0dc155709f1fb2c043276c1611ca7ef97d74a26ab2b7d10d23"
+    },
+    "docs/N16_06C_COMPLETION.md": {
+      "bytes": 8101,
+      "sha256": "31accabe8e4b748f69cc6c10239123bae90c1e24e5a101ab0aca2c4c8bc085f4"
+    },
+    "artifacts/n16-06c-20261029/corrected-code-plan.json": {
+      "bytes": 1302,
+      "sha256": "582bf5e5f8f056c30f77c1c64305af558b977e9d8c08e61d9d6c457221a31e35"
+    },
+    "artifacts/n16-06c-20261029/final-validation.json": {
+      "bytes": 2048,
+      "sha256": "2363d50d1b4f6bc029c59ed2492c3a9b70836ea247998ae5b6d72a31553e214b"
+    },
+    "artifacts/n16-06c-20261029/outcome.json": {
+      "bytes": 537,
+      "sha256": "a3d6df8a14f2761fb6b7fffb558316f514ffb13790ee26a91368e7d7248a723e"
+    },
+    "artifacts/n16-06c-20261029/preservation-before.json": {
+      "bytes": 1069339,
+      "sha256": "57b81a26580f7bd8e9012c88465ae7adca0d70db6e670ede67c4959dcd9f5a5d"
+    },
+    "artifacts/n16-06c-20261029/preservation-check.json": {
+      "bytes": 370,
+      "sha256": "69a4f43011c9cc928191bee91f1956707946a7aed756759eeac26aaa35d6255f"
+    },
+    "artifacts/n16-06c-20261029/qa-controls.json": {
+      "bytes": 3203,
+      "sha256": "90b9078a33132a1117d79f16a55f76088193940fef1532184423e56e18935b51"
+    },
+    "artifacts/n16-06c-20261029/qa-final.txt": {
+      "bytes": 2855,
+      "sha256": "a353a6f765caa80acb276575708c01f1c3b1f88010dbc6c3eb2350daccedfe30"
+    },
+    "artifacts/n16-06c-20261029/qa-first.txt": {
+      "bytes": 2748,
+      "sha256": "de6256dbdd6699127bfffdae4c15f2086bca85c6506c2a82b105c78bee20e746"
+    },
+    "artifacts/n16-06c-20261029/runner-change.diff.txt": {
+      "bytes": 4118,
+      "sha256": "7378fb3fee63bd8cc34a40c6ac6604e1877688ee94de8c0256b1d35239ce8bb8"
+    },
+    "artifacts/n16-06c-20261029/runner-original.mjs.txt": {
+      "bytes": 17327,
+      "sha256": "bafd9060a49fab11a60d85993884dcd9d138f1e626ccda33be370a0f7f0b1b7c"
+    },
+    "artifacts/n16-06c-20261029/syntax.json": {
+      "bytes": 590,
+      "sha256": "e517420677398b02a86bbb54155156c7872b2b18897e2ed8e2c45dc79d0bdb4d"
+    },
+    "artifacts/n16-06c-20261029/source-snapshots/dependency-pins.mjs.txt": {
+      "bytes": 4686,
+      "sha256": "57b1f5988946314ed5b1bd30a36f01b15e0c597896aea905ae938f23cfafc374"
+    },
+    "artifacts/n16-06c-20261029/source-snapshots/n16-containment-probe.mjs.txt": {
+      "bytes": 17391,
+      "sha256": "c4935fb08f97b43f6208707cff06c7e7fd8c0736979818b4e3ef8b57e51b4dc6"
+    },
+    "artifacts/n16-06c-20261029/source-snapshots/n16-dependency-pins.test.mjs.txt": {
+      "bytes": 14394,
+      "sha256": "e7500dbb8edaad5fad55c1243356aa979117c55855a86ec2a1c98031f05fcbfc"
+    }
+  }
+}

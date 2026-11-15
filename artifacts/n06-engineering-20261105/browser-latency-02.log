@@ -1,0 +1,16 @@
+Checking: N06 native click-to-panel and actual source-to-panel latency with exact reading controls
+{
+  "status": "failed",
+  "browser": "Chrome/156.0.8078.80",
+  "checks": 1,
+  "failed": [
+    {
+      "name": "N06 native click-to-panel and actual source-to-panel latency with exact reading controls",
+      "status": "failed",
+      "reason": "The expression evaluated to a falsy value:\n\n  assert.ok(p95(selection.map(s=>s.ms))<500)\n"
+    }
+  ],
+  "screenshots": 1,
+  "reason": "The expression evaluated to a falsy value:\n\n  assert.ok(p95(selection.map(s=>s.ms))<500)\n",
+  "report": "C:\\users\\basim\\onedrive\\desktop\\astra-space-medical-ai\\artifacts\\n06-engineering-20261105\\browser-latency-02\\report.json"
+}

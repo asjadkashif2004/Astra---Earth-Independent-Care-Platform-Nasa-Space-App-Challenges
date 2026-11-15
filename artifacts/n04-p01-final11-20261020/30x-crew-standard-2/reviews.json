@@ -1,0 +1,127 @@
+[
+  {
+    "source_directory": "artifacts/n04-p01-final11-20261020/30x-crew-standard-2",
+    "file": "30x-crew-standard-2-10.png",
+    "id": 60,
+    "crew_id": "CREW-02",
+    "metric": "heart_rate",
+    "expected": "66",
+    "screenshot_sha256": "d687d38bfcfba51cca1180a55b741d57dca640f6b86f38b172a76c2c8efee62c",
+    "rect": {
+      "x": 6.2249755859375,
+      "y": 7.66180419921875,
+      "width": 49.125,
+      "height": 67.20001220703125
+    },
+    "glyph": {
+      "sha256": "f0294ca3d31a4bf86e6c47a88c4801df1bad2c179508a318eddeb0a44c9b9031",
+      "width": 46,
+      "height": 35,
+      "ink_pixels": 411
+    },
+    "reviewed_numeric": "66",
+    "reviewed_by": "Codex direct original-PNG inspection",
+    "reviewed_at": "2026-10-19T22:17:38.593023+00:00",
+    "method": "Direct inspection of original PNG pixels at exact target rectangle;bound to screenshot SHA256 and exact thresholded glyph;no image editing or expected-value override"
+  },
+  {
+    "source_directory": "artifacts/n04-p01-final11-20261020/30x-crew-standard-2",
+    "file": "30x-crew-standard-2-20.png",
+    "id": 120,
+    "crew_id": "CREW-03",
+    "metric": "heart_rate",
+    "expected": "69",
+    "screenshot_sha256": "4ebf8a9b5df6dca23474af5318804aa7aa11c0b431b872007b18f0e2ded5dc42",
+    "rect": {
+      "x": 6.2249755859375,
+      "y": 7.65435791015625,
+      "width": 49.125,
+      "height": 67.20001220703125
+    },
+    "glyph": {
+      "sha256": "12c9f6eca1d3f416f9c5990b5b8cd813a3483676d1a91f7f1c82a49ab48caf07",
+      "width": 45,
+      "height": 35,
+      "ink_pixels": 413
+    },
+    "reviewed_numeric": "69",
+    "reviewed_by": "Codex direct original-PNG inspection",
+    "reviewed_at": "2026-10-19T22:17:38.593064+00:00",
+    "method": "Direct inspection of original PNG pixels at exact target rectangle;bound to screenshot SHA256 and exact thresholded glyph;no image editing or expected-value override"
+  },
+  {
+    "source_directory": "artifacts/n04-p01-final11-20261020/30x-crew-standard-2",
+    "file": "30x-crew-standard-2-20.png",
+    "id": 121,
+    "crew_id": "CREW-03",
+    "metric": "hrv",
+    "expected": "55",
+    "screenshot_sha256": "4ebf8a9b5df6dca23474af5318804aa7aa11c0b431b872007b18f0e2ded5dc42",
+    "rect": {
+      "x": 649.199951171875,
+      "y": 7.65435791015625,
+      "width": 49.125,
+      "height": 67.20001220703125
+    },
+    "glyph": {
+      "sha256": "b7642e94e7b23eee81bad090f51eade2d72a70e791370d1d2c6bd9b26ca80adb",
+      "width": 42,
+      "height": 35,
+      "ink_pixels": 299
+    },
+    "reviewed_numeric": "55",
+    "reviewed_by": "Codex direct original-PNG inspection",
+    "reviewed_at": "2026-10-19T22:17:38.593073+00:00",
+    "method": "Direct inspection of original PNG pixels at exact target rectangle;bound to screenshot SHA256 and exact thresholded glyph;no image editing or expected-value override"
+  },
+  {
+    "source_directory": "artifacts/n04-p01-final11-20261020/30x-crew-standard-2",
+    "file": "30x-crew-standard-2-30.png",
+    "id": 180,
+    "crew_id": "CREW-04",
+    "metric": "heart_rate",
+    "expected": "69",
+    "screenshot_sha256": "488bbf91bc85f3421ee68606cf6315fcf47f103704936376fa12aae36789c547",
+    "rect": {
+      "x": 6.2249755859375,
+      "y": 6.06268310546875,
+      "width": 49.125,
+      "height": 67.199951171875
+    },
+    "glyph": {
+      "sha256": "0428d597a8745e16a9aa8ace458c9cc980a7bcbe7694e6b0873caa27e1e5e812",
+      "width": 45,
+      "height": 35,
+      "ink_pixels": 422
+    },
+    "reviewed_numeric": "69",
+    "reviewed_by": "Codex direct original-PNG inspection",
+    "reviewed_at": "2026-10-19T22:17:38.593081+00:00",
+    "method": "Direct inspection of original PNG pixels at exact target rectangle;bound to screenshot SHA256 and exact thresholded glyph;no image editing or expected-value override"
+  },
+  {
+    "source_directory": "artifacts/n04-p01-final11-20261020/30x-crew-standard-2",
+    "file": "30x-crew-standard-2-40.png",
+    "id": 240,
+    "crew_id": "CREW-05",
+    "metric": "heart_rate",
+    "expected": "69",
+    "screenshot_sha256": "3a35af58324d4214bbb4eb300d86d6e0993fff6363202d8ae6fb631f07749d71",
+    "rect": {
+      "x": 6.2249755859375,
+      "y": 7.65606689453125,
+      "width": 49.125,
+      "height": 67.20001220703125
+    },
+    "glyph": {
+      "sha256": "287c3ab6efad8ea2a5f7b64052d4f3daa64724d84c99d0684d4eb267f8577a81",
+      "width": 45,
+      "height": 34,
+      "ink_pixels": 374
+    },
+    "reviewed_numeric": "69",
+    "reviewed_by": "Codex direct original-PNG inspection",
+    "reviewed_at": "2026-10-19T22:17:38.593088+00:00",
+    "method": "Direct inspection of original PNG pixels at exact target rectangle;bound to screenshot SHA256 and exact thresholded glyph;no image editing or expected-value override"
+  }
+]

@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "protected_files": 8542,
+  "unchanged_count": 8524,
+  "changed_count": 18,
+  "missing": [],
+  "unexpected_changes": [],
+  "status_tables": {
+    "docs/MASTER_PLAN.md": {
+      "other_rows_preserved": true,
+      "old_count": 28,
+      "new_count": 28
+    },
+    "docs/MODULE_TRACKER.md": {
+      "other_rows_preserved": true,
+      "old_count": 49,
+      "new_count": 49
+    },
+    "docs/CORE_AI_PRIORITY.md": {
+      "other_rows_preserved": true,
+      "old_count": 33,
+      "new_count": 33
+    }
+  },
+  "historical_report_and_proposal_bodies_preserved": true,
+  "source_pins": {
+    "services/n12/contracts.mjs": "1f243daa8d9800686f0cf85abda01f70d87998228c21a71f619e4b6861eedd68",
+    "services/n12/experiment.mjs": "ba448e532b47823f0ddaffc8f89ce8f1ca7e1f4b2bead761ad562ed14b586c1a",
+    "services/n12/forecast.mjs": "766b334947c97a58d7a6e25873f3b7861e3e68f642afea6ab6e2a39b6508a5a3",
+    "services/n12/service.mjs": "181b97605219a5d5ca78e9186b66c341120c6d9da38263469ecc7f30f6f00754",
+    "services/n12/sources.mjs": "3eb95a73641abb13b9a82b74513b0341535dd9298c10ed853c79a32e513f689b",
+    "services/n12/worker.mjs": "004065808574500ced78efc0042eab89b20de7831d8e0078d5dbe3738fb673b5",
+    "apps/mission-control-web/n12.css": "29ae3d1754f29417b9f27eb931c83fc6086517fdc9530c54179c420af8dd507e",
+    "apps/mission-control-web/n12.mjs": "a7460a26ddfd03143969c37b7aa1c7f82154faa825b55fa6ec2ddc45dce58129",
+    "tests/n12-evidence.test.mjs": "41ef664646762be5d3ac9e156d314fb01bcd92d1db994a41f15c70b40fade1c0",
+    "tests/n12-frontend.test.mjs": "6b94e1e10745bc4eedca141bfe9dea4a44509f225896ed3be2ceb790cd1da89c",
+    "tests/n12-service.test.mjs": "cd429ddc09c95cce4906a1b1bd9d3beaee95dc30ebd95a66f2a2df32641f0a1d",
+    "tests/n12.test.mjs": "59848855d9092e32c80849096717db0d71f932cd8780bc5a62984ce3b1b5b32e",
+    "scripts/n12-acceptance.mjs": "b279d5687669f5bef35c6fdf82d2a42733eefb8c419a3acb949ad13e7cc4b634",
+    "scripts/browser-n12.mjs": "bd07ec738160ce1272afba0b78c054df7fdf0a4721951e6a19380fe32f4516ba",
+    "docs/N12_SYNTHETIC_CONTRACT.md": "c8e9ae0f656090306cf8233bc65dc5cf4e4f36503e6a2ddf314e9d4275401c26",
+    "services/api/server.mjs": "4697062bb8fd693c92cf4cb4e6f4a541f47db3b6e7f5cb2cbac43d61f6668e00",
+    "services/api/store.mjs": "3abc2550c70573b88474285cb0121af2188ce6e57d027217a187c9b155a68958",
+    "apps/mission-control-web/app.mjs": "26530af2787850801e651fd868549d625e2fb26b0cfcaa325d5b5cb1f35641e2",
+    "scripts/browser-acceptance.mjs": "56f93c043e25096f3fda36ab7fd92102f47d4dbd131552c5c07d54c0b2ff3302"
+  },
+  "all_prior_evidence_preserved": true,
+  "N16_sealed_source_bytes_read": 0,
+  "N16_worker_starts": 0,
+  "N11_fits": 0,
+  "Qwen": 0,
+  "source_dataset_hash": "d5659520a6177c8e377efd0c87fbc6253a4b737315e266b7bb934dbc63094c4c",
+  "source_before_after_integrity": "Content-addressed synthetic source/revisions verified at execution, inspection and cold recovery; original generator/scientific/history protected by full hashes",
+  "artifact_bytes_before": 9857892663,
+  "new_task_area_bytes": 18384474,
+  "artifact_growth_bytes": 16973170,
+  "sqlite_snapshots_exported": 0,
+  "formal_N12": "In Progress",
+  "outcome": "ENGINEERING COMPLETE",
+  "other_module_statuses_and_reviews_preserved": true
+}

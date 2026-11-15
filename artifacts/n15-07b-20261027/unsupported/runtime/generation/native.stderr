@@ -1,0 +1,548 @@
+         1:	file=/qualified/runtime/llama-completion [0];  generating link map
+         1:	  dynamic: 0x0000791f32541da8  base: 0x0000791f3253e000   size: 0x0000000000004018
+         1:	    entry: 0x0000791f3253f070  phdr: 0x0000791f3253e040  phnum:                 13
+         1:	
+         1:	
+         1:	file=libllama-completion-impl.so [0];  needed by /qualified/runtime/llama-completion [0]
+         1:	find library=libllama-completion-impl.so [0]; searching
+         1:	 search path=/qualified/lib/glibc-hwcaps/x86-64-v3:/qualified/lib/glibc-hwcaps/x86-64-v2:/qualified/lib		(--library-path)
+         1:	  trying file=/qualified/lib/glibc-hwcaps/x86-64-v3/libllama-completion-impl.so
+         1:	    (no such file)
+         1:	  trying file=/qualified/lib/glibc-hwcaps/x86-64-v2/libllama-completion-impl.so
+         1:	    (no such file)
+         1:	  trying file=/qualified/lib/libllama-completion-impl.so
+         1:	    (no such file)
+         1:	 search path=/qualified/runtime/glibc-hwcaps/x86-64-v3:/qualified/runtime/glibc-hwcaps/x86-64-v2:/qualified/runtime		(RUNPATH from file /qualified/runtime/llama-completion)
+         1:	  trying file=/qualified/runtime/glibc-hwcaps/x86-64-v3/libllama-completion-impl.so
+         1:	    (no such file)
+         1:	  trying file=/qualified/runtime/glibc-hwcaps/x86-64-v2/libllama-completion-impl.so
+         1:	    (no such file)
+         1:	  trying file=/qualified/runtime/libllama-completion-impl.so
+         1:	
+         1:	file=libllama-completion-impl.so [0];  generating link map
+         1:	  dynamic: 0x0000791f3253ad68  base: 0x0000791f3251f000   size: 0x000000000001c478
+         1:	    entry: 0x0000791f3251f000  phdr: 0x0000791f3251f040  phnum:                 11
+         1:	
+         1:	
+         1:	file=libc.so.6 [0];  needed by /qualified/runtime/llama-completion [0]
+         1:	find library=libc.so.6 [0]; searching
+         1:	 search path=/qualified/lib		(--library-path)
+         1:	  trying file=/qualified/lib/libc.so.6
+         1:	
+         1:	file=libc.so.6 [0];  generating link map
+         1:	  dynamic: 0x0000791f32411940  base: 0x0000791f32200000   size: 0x0000000000220d90
+         1:	    entry: 0x0000791f3222a820  phdr: 0x0000791f32200040  phnum:                 15
+         1:	
+         1:	
+         1:	file=libllama-common.so.0 [0];  needed by /qualified/runtime/libllama-completion-impl.so [0]
+         1:	find library=libllama-common.so.0 [0]; searching
+         1:	 search path=/qualified/lib		(--library-path)
+         1:	  trying file=/qualified/lib/libllama-common.so.0
+         1:	    (no such file)
+         1:	 search path=/qualified/runtime		(RUNPATH from file /qualified/runtime/llama-completion)
+         1:	  trying file=/qualified/runtime/libllama-common.so.0
+         1:	
+         1:	file=libllama-common.so.0 [0];  generating link map
+         1:	  dynamic: 0x0000791f320e7e00  base: 0x0000791f31c00000   size: 0x000000000050e990
+         1:	    entry: 0x0000791f31c00000  phdr: 0x0000791f31c00040  phnum:                 12
+         1:	
+         1:	
+         1:	file=libllama.so.0 [0];  needed by /qualified/runtime/libllama-completion-impl.so [0]
+         1:	find library=libllama.so.0 [0]; searching
+         1:	 search path=/qualified/lib		(--library-path)
+         1:	  trying file=/qualified/lib/libllama.so.0
+         1:	    (no such file)
+         1:	 search path=/qualified/runtime		(RUNPATH from file /qualified/runtime/llama-completion)
+         1:	  trying file=/qualified/runtime/libllama.so.0
+         1:	
+         1:	file=libllama.so.0 [0];  generating link map
+         1:	  dynamic: 0x0000791f31a23880  base: 0x0000791f31600000   size: 0x000000000042bcd8
+         1:	    entry: 0x0000791f31600000  phdr: 0x0000791f31600040  phnum:                 11
+         1:	
+         1:	
+         1:	file=libggml-base.so.0 [0];  needed by /qualified/runtime/libllama-completion-impl.so [0]
+         1:	find library=libggml-base.so.0 [0]; searching
+         1:	 search path=/qualified/lib		(--library-path)
+         1:	  trying file=/qualified/lib/libggml-base.so.0
+         1:	    (no such file)
+         1:	 search path=/qualified/runtime		(RUNPATH from file /qualified/runtime/llama-completion)
+         1:	  trying file=/qualified/runtime/libggml-base.so.0
+         1:	
+         1:	file=libggml-base.so.0 [0];  generating link map
+         1:	  dynamic: 0x0000791f3251cd50  base: 0x0000791f32456000   size: 0x00000000000c81f0
+         1:	    entry: 0x0000791f32456000  phdr: 0x0000791f32456040  phnum:                 11
+         1:	
+         1:	
+         1:	file=libstdc++.so.6 [0];  needed by /qualified/runtime/libllama-completion-impl.so [0]
+         1:	find library=libstdc++.so.6 [0]; searching
+         1:	 search path=/qualified/lib		(--library-path)
+         1:	  trying file=/qualified/lib/libstdc++.so.6
+         1:	
+         1:	file=libstdc++.so.6 [0];  generating link map
+         1:	  dynamic: 0x0000791f31497cb8  base: 0x0000791f31200000   size: 0x000000000029f440
+         1:	    entry: 0x0000791f31200000  phdr: 0x0000791f31200040  phnum:                 13
+         1:	
+         1:	
+         1:	file=libgcc_s.so.1 [0];  needed by /qualified/runtime/libllama-completion-impl.so [0]
+         1:	find library=libgcc_s.so.1 [0]; searching
+         1:	 search path=/qualified/lib		(--library-path)
+         1:	  trying file=/qualified/lib/libgcc_s.so.1
+         1:	
+         1:	file=libgcc_s.so.1 [0];  generating link map
+         1:	  dynamic: 0x0000791f32452db0  base: 0x0000791f32426000   size: 0x000000000002d3a8
+         1:	    entry: 0x0000791f32426000  phdr: 0x0000791f32426040  phnum:                 13
+         1:	
+         1:	
+         1:	file=libssl.so.3 [0];  needed by /qualified/runtime/libllama-common.so.0 [0]
+         1:	find library=libssl.so.3 [0]; searching
+         1:	 search path=/qualified/lib		(--library-path)
+         1:	  trying file=/qualified/lib/libssl.so.3
+         1:	
+         1:	file=libssl.so.3 [0];  generating link map
+         1:	  dynamic: 0x0000791f31bfab10  base: 0x0000791f31aef000   size: 0x00000000001107e8
+         1:	    entry: 0x0000791f31aef000  phdr: 0x0000791f31aef040  phnum:                 12
+         1:	
+         1:	
+         1:	file=libcrypto.so.3 [0];  needed by /qualified/runtime/libllama-common.so.0 [0]
+         1:	find library=libcrypto.so.3 [0]; searching
+         1:	 search path=/qualified/lib		(--library-path)
+         1:	  trying file=/qualified/lib/libcrypto.so.3
+         1:	
+         1:	file=libcrypto.so.3 [0];  generating link map
+         1:	  dynamic: 0x0000791f31013700  base: 0x0000791f30a00000   size: 0x0000000000619cb8
+         1:	    entry: 0x0000791f30a00000  phdr: 0x0000791f30a00040  phnum:                 12
+         1:	
+         1:	
+         1:	file=libggml.so.0 [0];  needed by /qualified/runtime/libllama-common.so.0 [0]
+         1:	find library=libggml.so.0 [0]; searching
+         1:	 search path=/qualified/lib		(--library-path)
+         1:	  trying file=/qualified/lib/libggml.so.0
+         1:	    (no such file)
+         1:	 search path=/qualified/runtime		(RUNPATH from file /qualified/runtime/llama-completion)
+         1:	  trying file=/qualified/runtime/libggml.so.0
+         1:	
+         1:	file=libggml.so.0 [0];  generating link map
+         1:	  dynamic: 0x0000791f321fedb8  base: 0x0000791f321f4000   size: 0x000000000000b2b0
+         1:	    entry: 0x0000791f321f4000  phdr: 0x0000791f321f4040  phnum:                 11
+         1:	
+         1:	
+         1:	file=libm.so.6 [0];  needed by /qualified/runtime/libllama-common.so.0 [0]
+         1:	find library=libm.so.6 [0]; searching
+         1:	 search path=/qualified/lib		(--library-path)
+         1:	  trying file=/qualified/lib/libm.so.6
+         1:	
+         1:	file=libm.so.6 [0];  generating link map
+         1:	  dynamic: 0x0000791f315feb98  base: 0x0000791f314da000   size: 0x0000000000125018
+         1:	    entry: 0x0000791f314da000  phdr: 0x0000791f314da040  phnum:                 12
+         1:	
+         1:	
+         1:	file=libgomp.so.1 [0];  needed by /qualified/runtime/libggml-base.so.0 [0]
+         1:	find library=libgomp.so.1 [0]; searching
+         1:	 search path=/qualified/lib		(--library-path)
+         1:	  trying file=/qualified/lib/libgomp.so.1
+         1:	
+         1:	file=libgomp.so.1 [0];  generating link map
+         1:	  dynamic: 0x0000791f321f2d78  base: 0x0000791f32195000   size: 0x000000000005ea90
+         1:	    entry: 0x0000791f32195000  phdr: 0x0000791f32195040  phnum:                 13
+         1:	
+         1:	
+         1:	file=libz.so.1 [0];  needed by /qualified/lib/libcrypto.so.3 [0]
+         1:	find library=libz.so.1 [0]; searching
+         1:	 search path=/qualified/lib		(--library-path)
+         1:	  trying file=/qualified/lib/libz.so.1
+         1:	
+         1:	file=libz.so.1 [0];  generating link map
+         1:	  dynamic: 0x0000791f32193dc0  base: 0x0000791f32177000   size: 0x000000000001d098
+         1:	    entry: 0x0000791f32177000  phdr: 0x0000791f32177040  phnum:                 12
+         1:	
+         1:	
+         1:	file=libzstd.so.1 [0];  needed by /qualified/lib/libcrypto.so.3 [0]
+         1:	find library=libzstd.so.1 [0]; searching
+         1:	 search path=/qualified/lib		(--library-path)
+         1:	  trying file=/qualified/lib/libzstd.so.1
+         1:	
+         1:	file=libzstd.so.1 [0];  generating link map
+         1:	  dynamic: 0x0000791f31aedcb8  base: 0x0000791f31a2c000   size: 0x00000000000c2030
+         1:	    entry: 0x0000791f31a2c000  phdr: 0x0000791f31a2c040  phnum:                 12
+         1:	
+         1:	checking for version `GLIBC_2.34' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/llama-completion [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/llama-completion [0]
+         1:	checking for version `GCC_3.0' in file /qualified/lib/libgcc_s.so.1 [0] required by file /qualified/runtime/libllama-completion-impl.so [0]
+         1:	checking for version `GLIBC_2.32' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama-completion-impl.so [0]
+         1:	checking for version `GLIBC_2.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama-completion-impl.so [0]
+         1:	checking for version `GLIBC_2.14' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama-completion-impl.so [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama-completion-impl.so [0]
+         1:	checking for version `GLIBCXX_3.4.26' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-completion-impl.so [0]
+         1:	checking for version `GLIBCXX_3.4.9' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-completion-impl.so [0]
+         1:	checking for version `CXXABI_1.3.9' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-completion-impl.so [0]
+         1:	checking for version `GLIBCXX_3.4.29' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-completion-impl.so [0]
+         1:	checking for version `CXXABI_1.3' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-completion-impl.so [0]
+         1:	checking for version `GLIBCXX_3.4.21' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-completion-impl.so [0]
+         1:	checking for version `GLIBCXX_3.4' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-completion-impl.so [0]
+         1:	checking for version `GLIBCXX_3.4.19' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-completion-impl.so [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/ld-linux-x86-64.so.2 [0] required by file /qualified/lib/libc.so.6 [0]
+         1:	checking for version `GLIBC_2.3' in file /qualified/lib/ld-linux-x86-64.so.2 [0] required by file /qualified/lib/libc.so.6 [0]
+         1:	checking for version `GLIBC_2.35' in file /qualified/lib/ld-linux-x86-64.so.2 [0] required by file /qualified/lib/libc.so.6 [0]
+         1:	checking for version `GLIBC_PRIVATE' in file /qualified/lib/ld-linux-x86-64.so.2 [0] required by file /qualified/lib/libc.so.6 [0]
+         1:	checking for version `GCC_3.0' in file /qualified/lib/libgcc_s.so.1 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBC_2.3' in file /qualified/lib/ld-linux-x86-64.so.2 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/libm.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBC_2.27' in file /qualified/lib/libm.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBC_2.29' in file /qualified/lib/libm.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBC_2.9' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBC_2.16' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBC_2.32' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBC_2.15' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBC_2.29' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBC_2.3' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBC_2.10' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBC_2.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBC_2.34' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBC_2.3.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBC_2.7' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBC_2.33' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBC_2.14' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `OPENSSL_3.0.0' in file /qualified/lib/libssl.so.3 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `OPENSSL_3.0.0' in file /qualified/lib/libcrypto.so.3 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.17' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.14' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.19' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.30' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `CXXABI_1.3.5' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.29' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `CXXABI_1.3.11' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.22' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.9' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `CXXABI_1.3.7' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `CXXABI_1.3.3' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `CXXABI_1.3.13' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.15' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.18' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `CXXABI_1.3.9' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.11' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `CXXABI_1.3' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.20' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `CXXABI_1.3.2' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.21' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.26' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama-common.so.0 [0]
+         1:	checking for version `GLIBC_2.3' in file /qualified/lib/ld-linux-x86-64.so.2 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GCC_3.0' in file /qualified/lib/libgcc_s.so.1 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GCC_3.4' in file /qualified/lib/libgcc_s.so.1 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBC_2.27' in file /qualified/lib/libm.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBC_2.29' in file /qualified/lib/libm.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/libm.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBC_2.33' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBC_2.32' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBC_2.7' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBC_2.34' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBC_2.14' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBC_2.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBC_2.3.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.25' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.20' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.17' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `CXXABI_1.3.3' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `CXXABI_1.3.9' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `CXXABI_1.3.11' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `CXXABI_1.3.2' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.29' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.18' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.9' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `CXXABI_1.3' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.11' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.21' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.14' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `CXXABI_1.3.5' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.15' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.22' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `CXXABI_1.3.13' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.19' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libllama.so.0 [0]
+         1:	checking for version `GCC_3.0' in file /qualified/lib/libgcc_s.so.1 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `GOMP_4.0' in file /qualified/lib/libgomp.so.1 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `GOMP_4.5' in file /qualified/lib/libgomp.so.1 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `GOMP_1.0' in file /qualified/lib/libgomp.so.1 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `GLIBC_2.29' in file /qualified/lib/libm.so.6 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `GLIBC_2.27' in file /qualified/lib/libm.so.6 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/libm.so.6 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.20' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.18' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `CXXABI_1.3.9' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.29' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.11' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `CXXABI_1.3' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.21' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `CXXABI_1.3.5' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `GLIBC_2.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `GLIBC_2.17' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `GLIBC_2.14' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `GLIBC_2.3.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libggml-base.so.0 [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/libm.so.6 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GLIBC_2.3' in file /qualified/lib/ld-linux-x86-64.so.2 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GCC_4.2.0' in file /qualified/lib/libgcc_s.so.1 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GCC_3.3' in file /qualified/lib/libgcc_s.so.1 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GCC_4.3.0' in file /qualified/lib/libgcc_s.so.1 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GCC_3.0' in file /qualified/lib/libgcc_s.so.1 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GLIBC_2.14' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GLIBC_2.38' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GLIBC_2.6' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GLIBC_2.26' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GLIBC_2.25' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GLIBC_2.18' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GLIBC_2.32' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GLIBC_2.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GLIBC_2.7' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GLIBC_2.33' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GLIBC_2.3.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GLIBC_2.17' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GLIBC_2.3' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GLIBC_2.36' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GLIBC_2.3.2' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GLIBC_2.34' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libstdc++.so.6 [0]
+         1:	checking for version `GLIBC_2.3' in file /qualified/lib/ld-linux-x86-64.so.2 [0] required by file /qualified/lib/libgcc_s.so.1 [0]
+         1:	checking for version `GLIBC_2.3.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libgcc_s.so.1 [0]
+         1:	checking for version `GLIBC_2.35' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libgcc_s.so.1 [0]
+         1:	checking for version `GLIBC_2.14' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libgcc_s.so.1 [0]
+         1:	checking for version `GLIBC_2.34' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libgcc_s.so.1 [0]
+         1:	checking for version `GLIBC_2.3.2' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libgcc_s.so.1 [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libgcc_s.so.1 [0]
+         1:	checking for version `GLIBC_2.38' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libssl.so.3 [0]
+         1:	checking for version `GLIBC_2.17' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libssl.so.3 [0]
+         1:	checking for version `GLIBC_2.3.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libssl.so.3 [0]
+         1:	checking for version `GLIBC_2.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libssl.so.3 [0]
+         1:	checking for version `GLIBC_2.3' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libssl.so.3 [0]
+         1:	checking for version `GLIBC_2.33' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libssl.so.3 [0]
+         1:	checking for version `GLIBC_2.14' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libssl.so.3 [0]
+         1:	checking for version `GLIBC_2.34' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libssl.so.3 [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libssl.so.3 [0]
+         1:	checking for version `GLIBC_2.3.2' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libssl.so.3 [0]
+         1:	checking for version `OPENSSL_3.3.0' in file /qualified/lib/libcrypto.so.3 [0] required by file /qualified/lib/libssl.so.3 [0]
+         1:	checking for version `OPENSSL_3.0.3' in file /qualified/lib/libcrypto.so.3 [0] required by file /qualified/lib/libssl.so.3 [0]
+         1:	checking for version `OPENSSL_3.4.0' in file /qualified/lib/libcrypto.so.3 [0] required by file /qualified/lib/libssl.so.3 [0]
+         1:	checking for version `OPENSSL_3.2.0' in file /qualified/lib/libcrypto.so.3 [0] required by file /qualified/lib/libssl.so.3 [0]
+         1:	checking for version `OPENSSL_3.0.0' in file /qualified/lib/libcrypto.so.3 [0] required by file /qualified/lib/libssl.so.3 [0]
+         1:	checking for version `GLIBC_2.15' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libcrypto.so.3 [0]
+         1:	checking for version `GLIBC_2.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libcrypto.so.3 [0]
+         1:	checking for version `GLIBC_2.38' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libcrypto.so.3 [0]
+         1:	checking for version `GLIBC_2.3' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libcrypto.so.3 [0]
+         1:	checking for version `GLIBC_2.25' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libcrypto.so.3 [0]
+         1:	checking for version `GLIBC_2.33' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libcrypto.so.3 [0]
+         1:	checking for version `GLIBC_2.12' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libcrypto.so.3 [0]
+         1:	checking for version `GLIBC_2.14' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libcrypto.so.3 [0]
+         1:	checking for version `GLIBC_2.3.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libcrypto.so.3 [0]
+         1:	checking for version `GLIBC_2.17' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libcrypto.so.3 [0]
+         1:	checking for version `GLIBC_2.16' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libcrypto.so.3 [0]
+         1:	checking for version `GLIBC_2.3.2' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libcrypto.so.3 [0]
+         1:	checking for version `GLIBC_2.34' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libcrypto.so.3 [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libcrypto.so.3 [0]
+         1:	checking for version `GCC_3.0' in file /qualified/lib/libgcc_s.so.1 [0] required by file /qualified/runtime/libggml.so.0 [0]
+         1:	checking for version `GLIBC_2.32' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libggml.so.0 [0]
+         1:	checking for version `GLIBC_2.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libggml.so.0 [0]
+         1:	checking for version `GLIBC_2.14' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libggml.so.0 [0]
+         1:	checking for version `GLIBC_2.34' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libggml.so.0 [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libggml.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.20' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml.so.0 [0]
+         1:	checking for version `CXXABI_1.3.9' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml.so.0 [0]
+         1:	checking for version `CXXABI_1.3' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.21' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml.so.0 [0]
+         1:	checking for version `GLIBCXX_3.4.26' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml.so.0 [0]
+         1:	checking for version `GLIBC_PRIVATE' in file /qualified/lib/ld-linux-x86-64.so.2 [0] required by file /qualified/lib/libm.so.6 [0]
+         1:	checking for version `GLIBC_ABI_DT_X86_64_PLT' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libm.so.6 [0]
+         1:	checking for version `GLIBC_ABI_DT_RELR' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libm.so.6 [0]
+         1:	checking for version `GLIBC_2.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libm.so.6 [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libm.so.6 [0]
+         1:	checking for version `GLIBC_PRIVATE' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libm.so.6 [0]
+         1:	checking for version `GLIBC_2.3' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libgomp.so.1 [0]
+         1:	checking for version `GLIBC_2.14' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libgomp.so.1 [0]
+         1:	checking for version `GLIBC_2.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libgomp.so.1 [0]
+         1:	checking for version `GLIBC_2.6' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libgomp.so.1 [0]
+         1:	checking for version `GLIBC_2.17' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libgomp.so.1 [0]
+         1:	checking for version `GLIBC_2.32' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libgomp.so.1 [0]
+         1:	checking for version `GLIBC_2.34' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libgomp.so.1 [0]
+         1:	checking for version `GLIBC_2.3.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libgomp.so.1 [0]
+         1:	checking for version `GLIBC_2.38' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libgomp.so.1 [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libgomp.so.1 [0]
+         1:	checking for version `GLIBC_2.14' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libz.so.1 [0]
+         1:	checking for version `GLIBC_2.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libz.so.1 [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libz.so.1 [0]
+         1:	checking for version `GLIBC_2.3.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libz.so.1 [0]
+         1:	checking for version `GLIBC_2.34' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libzstd.so.1 [0]
+         1:	checking for version `GLIBC_2.8' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libzstd.so.1 [0]
+         1:	checking for version `GLIBC_2.14' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libzstd.so.1 [0]
+         1:	checking for version `GLIBC_2.3.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libzstd.so.1 [0]
+         1:	checking for version `GLIBC_2.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libzstd.so.1 [0]
+         1:	checking for version `GLIBC_2.3.2' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libzstd.so.1 [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/libc.so.6 [0] required by file /qualified/lib/libzstd.so.1 [0]
+         1:	
+         1:	calling init: /qualified/lib/ld-linux-x86-64.so.2
+         1:	
+         1:	
+         1:	calling init: /qualified/lib/libc.so.6
+         1:	
+         1:	
+         1:	calling init: /qualified/lib/libzstd.so.1
+         1:	
+         1:	
+         1:	calling init: /qualified/lib/libz.so.1
+         1:	
+         1:	
+         1:	calling init: /qualified/lib/libgomp.so.1
+         1:	
+         1:	
+         1:	calling init: /qualified/lib/libm.so.6
+         1:	
+         1:	
+         1:	calling init: /qualified/lib/libgcc_s.so.1
+         1:	
+         1:	
+         1:	calling init: /qualified/lib/libstdc++.so.6
+         1:	
+         1:	
+         1:	calling init: /qualified/runtime/libggml-base.so.0
+         1:	
+         1:	
+         1:	calling init: /qualified/runtime/libggml.so.0
+         1:	
+         1:	
+         1:	calling init: /qualified/lib/libcrypto.so.3
+         1:	
+         1:	
+         1:	calling init: /qualified/lib/libssl.so.3
+         1:	
+         1:	
+         1:	calling init: /qualified/runtime/libllama.so.0
+         1:	
+         1:	
+         1:	calling init: /qualified/runtime/libllama-common.so.0
+         1:	
+         1:	
+         1:	calling init: /qualified/runtime/libllama-completion-impl.so
+         1:	
+         1:	
+         1:	initialize program: /qualified/runtime/llama-completion
+         1:	
+         1:	
+         1:	transferring control: /qualified/runtime/llama-completion
+         1:	
+         1:	
+         1:	file=/qualified/runtime/libggml-cpu-haswell.so [0];  dynamically loaded by /qualified/runtime/libggml.so.0 [0]
+         1:	file=/qualified/runtime/libggml-cpu-haswell.so [0];  generating link map
+         1:	  dynamic: 0x0000791f31179c48  base: 0x0000791f31038000   size: 0x00000000001c7ba0
+         1:	    entry: 0x0000791f31038000  phdr: 0x0000791f31038040  phnum:                 11
+         1:	
+         1:	checking for version `GCC_3.0' in file /qualified/lib/libgcc_s.so.1 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `GLIBC_2.3' in file /qualified/lib/ld-linux-x86-64.so.2 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `GLIBC_2.29' in file /qualified/lib/libm.so.6 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `GLIBC_2.27' in file /qualified/lib/libm.so.6 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/libm.so.6 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `OMP_1.0' in file /qualified/lib/libgomp.so.1 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `GOMP_4.0' in file /qualified/lib/libgomp.so.1 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `GOMP_1.0' in file /qualified/lib/libgomp.so.1 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `GLIBC_2.32' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `GLIBC_2.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `GLIBC_2.34' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `GLIBC_2.33' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `GLIBC_2.7' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `GLIBC_2.14' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `GLIBC_2.29' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `GLIBC_2.3.4' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `GLIBC_2.2.5' in file /qualified/lib/libc.so.6 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `CXXABI_1.3.9' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `GLIBCXX_3.4.29' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `GLIBCXX_3.4.11' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `CXXABI_1.3' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `GLIBCXX_3.4.21' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	checking for version `GLIBCXX_3.4' in file /qualified/lib/libstdc++.so.6 [0] required by file /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	activating NODELETE for /qualified/lib/libssl.so.3 [0]
+         1:	activating NODELETE for /qualified/lib/libcrypto.so.3 [0]
+         1:	
+         1:	calling init: /qualified/runtime/libggml-cpu-haswell.so
+         1:	
+         1:	opening file=/qualified/runtime/libggml-cpu-haswell.so [0]; direct_opencount=1
+         1:	
+warning: no usable GPU found, --gpu-layers option will be ignored
+warning: one possible reason is that llama.cpp was compiled without GPU support
+warning: consult docs/build.md for compilation instructions
+0.00.003.177 I llama_completion: llama backend init
+0.00.003.204 I llama_completion: load the model and apply lora adapter, if any
+0.00.554.903 W load: control-looking token: 128247 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.00.700.374 I cmn          init: llama threadpool init, n_threads = 2
+0.00.703.714 I 
+0.00.703.812 I system_info: n_threads = 2 (n_threads_batch = 2) / 12 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | 
+0.00.703.832 I 
+0.00.704.734 I sampler seed: 4294967295
+0.00.704.761 I sampler params: 
+	repeat_last_n = 64, repeat_penalty = 1.000, frequency_penalty = 0.000, presence_penalty = 0.000
+	dry_multiplier = 0.000, dry_base = 1.750, dry_allowed_length = 2, dry_penalty_last_n = 64
+	top_k = 40, top_p = 0.950, min_p = 0.050, xtc_probability = 0.000, xtc_threshold = 0.100, typical_p = 1.000, top_n_sigma = -1.000, temp = 0.000
+	mirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000, adaptive_target = -1.000, adaptive_decay = 0.900
+0.00.704.768 I sampler chain: logits -> ?penalties -> ?dry -> ?top-n-sigma -> top-k -> ?typical -> top-p -> min-p -> ?xtc -> temp-ext -> greedy 
+0.00.704.769 I generate: n_ctx = 2048, n_batch = 64, n_predict = 192, n_keep = 0
+0.00.704.769 I 
+0.02.956.873 I common_perf_print:    sampling time =     100.11 ms
+0.02.956.874 I common_perf_print:    samplers time =       5.40 ms /   253 tokens
+0.02.956.879 I common_perf_print:        load time =    1770.62 ms
+0.02.956.880 I common_perf_print: prompt eval time =    1769.48 ms /   237 tokens (    7.47 ms per token,   133.94 tokens per second)
+0.02.956.881 I common_perf_print:        eval time =     381.20 ms /    15 runs   (   25.41 ms per token,    39.35 tokens per second)
+0.02.956.881 I common_perf_print:       total time =    2253.17 ms /   252 tokens
+0.02.956.882 I common_perf_print: unaccounted time =       2.38 ms /   0.1 %      (total - sampling - prompt eval - eval) / (total)
+0.02.956.882 I common_perf_print:    graphs reused =         16
+0.02.956.883 I common_perf_print:   graph reallocs =          0    /     0        (same size) / (changed size)
+         1:	
+         1:	calling fini:  [0]
+         1:	
+         1:	
+         1:	calling fini: /qualified/runtime/libllama-completion-impl.so [0]
+         1:	
+         1:	
+         1:	calling fini: /qualified/runtime/libllama-common.so.0 [0]
+         1:	
+         1:	
+         1:	calling fini: /qualified/runtime/libllama.so.0 [0]
+         1:	
+         1:	
+         1:	calling fini: /qualified/lib/libssl.so.3 [0]
+         1:	
+         1:	
+         1:	calling fini: /qualified/lib/libcrypto.so.3 [0]
+         1:	
+         1:	
+         1:	calling fini: /qualified/runtime/libggml.so.0 [0]
+         1:	
+         1:	
+         1:	calling fini: /qualified/lib/libz.so.1 [0]
+         1:	
+         1:	
+         1:	calling fini: /qualified/lib/libzstd.so.1 [0]
+         1:	
+         1:	
+         1:	calling fini: /qualified/runtime/libggml-cpu-haswell.so [0]
+         1:	
+         1:	
+         1:	calling fini: /qualified/runtime/libggml-base.so.0 [0]
+         1:	
+         1:	
+         1:	calling fini: /qualified/lib/libstdc++.so.6 [0]
+         1:	
+         1:	
+         1:	calling fini: /qualified/lib/libgcc_s.so.1 [0]
+         1:	
+         1:	
+         1:	calling fini: /qualified/lib/libm.so.6 [0]
+         1:	
+         1:	
+         1:	calling fini: /qualified/lib/libgomp.so.1 [0]
+         1:	
+         1:	
+         1:	calling fini: /qualified/lib/libc.so.6 [0]
+         1:	
+         1:	
+         1:	calling fini: /qualified/lib/ld-linux-x86-64.so.2 [0]
+         1:	

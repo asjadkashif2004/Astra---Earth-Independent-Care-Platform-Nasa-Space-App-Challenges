@@ -1,0 +1,4 @@
+{"at_utc":"2026-10-27T17:31:13.978Z","event":"case-start","case_id":"supported"}
+{"at_utc":"2026-10-27T17:32:06.538Z","event":"case-durable","case_id":"supported","outcome":"conservative_miss"}
+{"at_utc":"2026-10-27T17:32:06.588Z","event":"case-start","case_id":"unsupported"}
+{"at_utc":"2026-10-27T17:32:57.677Z","event":"case-durable","case_id":"unsupported","outcome":"correct_abstention"}

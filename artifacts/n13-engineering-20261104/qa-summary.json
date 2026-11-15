@@ -1,0 +1,40 @@
+{
+  "suites": {
+    "N13_core": {
+      "tests": 96,
+      "pass": 96,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "duration_ms": 48763.000417
+    },
+    "N13_resources": {
+      "tests": 2,
+      "pass": 2,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "duration_ms": 4124.401116
+    },
+    "affected_regressions": {
+      "tests": 258,
+      "pass": 258,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0,
+      "duration_ms": 12697.116551
+    }
+  },
+  "distinct_passed": 356,
+  "failed": 0,
+  "skipped": 0,
+  "syntax": {
+    "files": 258,
+    "errors": 0,
+    "evidence": "syntax-final.txt"
+  },
+  "browser": "NOT_APPLICABLE — official N13scope is offline corpus/reviewer artifacts; no application UI changed",
+  "past_counts_not_added": true,
+  "deliberate_failing_before": "capability-failing-before.tap, preserved and repaired; not a passing test or an independent review",
+  "independent_reviews": 0
+}

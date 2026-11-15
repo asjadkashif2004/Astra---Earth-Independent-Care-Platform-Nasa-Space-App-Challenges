@@ -1,0 +1,14 @@
+{
+  "status": "blocked",
+  "started_at": "2026-10-17T20:48:58.798Z",
+  "checks": [],
+  "screenshots": [],
+  "console_errors": [],
+  "http_errors": [],
+  "viewports": [],
+  "caveats": [
+    "No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation.",
+    "Pointer/keyboard/rendered DOM checks and screenshots supplement human visual, text-contrast and assistive-technology review; they do not establish WCAG conformance."
+  ],
+  "reason": "listen EPERM: operation not permitted 127.0.0.1"
+}

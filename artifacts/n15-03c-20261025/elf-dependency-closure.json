@@ -1,0 +1,1336 @@
+{
+  "mode": "static readelf only; no ldd/native loader/runtime execution",
+  "roots": [
+    "llama-completion",
+    "libggml-cpu-haswell.so"
+  ],
+  "files": {
+    "llama-completion": {
+      "path": "/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669/llama-completion",
+      "sha256": "7119bef261611b26f326f7c4da4dc3fdeb7bb28e2faf1ec392bda7b21215ef52",
+      "needed": [
+        "libllama-completion-impl.so",
+        "libc.so.6"
+      ],
+      "required_versions": {
+        "libc.so.6": [
+          "GLIBC_2.34",
+          "GLIBC_2.2.5"
+        ]
+      },
+      "defined_versions": [],
+      "gomp_omp_undefined_symbols": []
+    },
+    "libggml-cpu-haswell.so": {
+      "path": "/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669/libggml-cpu-haswell.so",
+      "sha256": "aec8dcc1487baeac0914aa3f6ba747beb868b61cd398e10c40c39addd2f80b64",
+      "needed": [
+        "libggml-base.so.0",
+        "libgomp.so.1",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-x86-64.so.2"
+      ],
+      "required_versions": {
+        "libgcc_s.so.1": [
+          "GCC_3.0"
+        ],
+        "ld-linux-x86-64.so.2": [
+          "GLIBC_2.3"
+        ],
+        "libm.so.6": [
+          "GLIBC_2.29",
+          "GLIBC_2.27",
+          "GLIBC_2.2.5"
+        ],
+        "libgomp.so.1": [
+          "OMP_1.0",
+          "GOMP_4.0",
+          "GOMP_1.0"
+        ],
+        "libc.so.6": [
+          "GLIBC_2.32",
+          "GLIBC_2.4",
+          "GLIBC_2.34",
+          "GLIBC_2.33",
+          "GLIBC_2.7",
+          "GLIBC_2.14",
+          "GLIBC_2.29",
+          "GLIBC_2.3.4",
+          "GLIBC_2.2.5"
+        ],
+        "libstdc++.so.6": [
+          "CXXABI_1.3.9",
+          "GLIBCXX_3.4.29",
+          "GLIBCXX_3.4.11",
+          "CXXABI_1.3",
+          "GLIBCXX_3.4.21",
+          "GLIBCXX_3.4"
+        ]
+      },
+      "defined_versions": [],
+      "gomp_omp_undefined_symbols": [
+        "10: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND GOMP_single_start@GOMP_1.0 (4)",
+        "95: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND GOMP_parallel@GOMP_4.0 (18)",
+        "104: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND omp_get_thread_num@OMP_1.0 (20)",
+        "130: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND GOMP_barrier@GOMP_1.0 (4)",
+        "135: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND omp_get_num_threads@OMP_1.0 (20)"
+      ]
+    },
+    "libllama-completion-impl.so": {
+      "path": "/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669/libllama-completion-impl.so",
+      "sha256": "ecfa98316c65d1870a6a9108cbf7233bb41d8cf9a2f83b6a0ae0439b79388851",
+      "needed": [
+        "libllama-common.so.0",
+        "libllama.so.0",
+        "libggml-base.so.0",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6"
+      ],
+      "required_versions": {
+        "libgcc_s.so.1": [
+          "GCC_3.0"
+        ],
+        "libc.so.6": [
+          "GLIBC_2.32",
+          "GLIBC_2.4",
+          "GLIBC_2.14",
+          "GLIBC_2.2.5"
+        ],
+        "libstdc++.so.6": [
+          "GLIBCXX_3.4.26",
+          "GLIBCXX_3.4.9",
+          "CXXABI_1.3.9",
+          "GLIBCXX_3.4.29",
+          "CXXABI_1.3",
+          "GLIBCXX_3.4.21",
+          "GLIBCXX_3.4",
+          "GLIBCXX_3.4.19"
+        ]
+      },
+      "defined_versions": [],
+      "gomp_omp_undefined_symbols": []
+    },
+    "libc.so.6": {
+      "path": "/usr/lib/x86_64-linux-gnu/libc.so.6",
+      "sha256": "85e64f97e348786a8fb4d9f3d52fec289e2fb86bba20f0731dfe61990525e0f7",
+      "needed": [
+        "ld-linux-x86-64.so.2"
+      ],
+      "required_versions": {
+        "ld-linux-x86-64.so.2": [
+          "GLIBC_2.2.5",
+          "GLIBC_2.3",
+          "GLIBC_2.35",
+          "GLIBC_PRIVATE"
+        ]
+      },
+      "defined_versions": [
+        "GLIBC_2.10",
+        "GLIBC_2.11",
+        "GLIBC_2.12",
+        "GLIBC_2.13",
+        "GLIBC_2.14",
+        "GLIBC_2.15",
+        "GLIBC_2.16",
+        "GLIBC_2.17",
+        "GLIBC_2.18",
+        "GLIBC_2.2.5",
+        "GLIBC_2.2.6",
+        "GLIBC_2.22",
+        "GLIBC_2.23",
+        "GLIBC_2.24",
+        "GLIBC_2.25",
+        "GLIBC_2.26",
+        "GLIBC_2.27",
+        "GLIBC_2.28",
+        "GLIBC_2.29",
+        "GLIBC_2.3",
+        "GLIBC_2.3.2",
+        "GLIBC_2.3.3",
+        "GLIBC_2.3.4",
+        "GLIBC_2.30",
+        "GLIBC_2.31",
+        "GLIBC_2.32",
+        "GLIBC_2.33",
+        "GLIBC_2.34",
+        "GLIBC_2.35",
+        "GLIBC_2.36",
+        "GLIBC_2.38",
+        "GLIBC_2.39",
+        "GLIBC_2.4",
+        "GLIBC_2.41",
+        "GLIBC_2.42",
+        "GLIBC_2.43",
+        "GLIBC_2.5",
+        "GLIBC_2.6",
+        "GLIBC_2.7",
+        "GLIBC_2.8",
+        "GLIBC_2.9",
+        "GLIBC_ABI_DT_RELR",
+        "GLIBC_ABI_DT_X86_64_PLT",
+        "GLIBC_ABI_GNU2_TLS",
+        "GLIBC_PRIVATE",
+        "libc.so.6"
+      ],
+      "gomp_omp_undefined_symbols": []
+    },
+    "libggml-base.so.0": {
+      "path": "/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669/libggml-base.so.0.27.0",
+      "sha256": "2c6ac9a8ae7c1455382c50587fe7d275e0607dfdaec4dcdb18689f31f6174c65",
+      "needed": [
+        "libgomp.so.1",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6"
+      ],
+      "required_versions": {
+        "libgcc_s.so.1": [
+          "GCC_3.0"
+        ],
+        "libgomp.so.1": [
+          "GOMP_4.0",
+          "GOMP_4.5",
+          "GOMP_1.0"
+        ],
+        "libm.so.6": [
+          "GLIBC_2.29",
+          "GLIBC_2.27",
+          "GLIBC_2.2.5"
+        ],
+        "libstdc++.so.6": [
+          "GLIBCXX_3.4.20",
+          "GLIBCXX_3.4.18",
+          "CXXABI_1.3.9",
+          "GLIBCXX_3.4.29",
+          "GLIBCXX_3.4.11",
+          "CXXABI_1.3",
+          "GLIBCXX_3.4.21",
+          "CXXABI_1.3.5",
+          "GLIBCXX_3.4"
+        ],
+        "libc.so.6": [
+          "GLIBC_2.4",
+          "GLIBC_2.17",
+          "GLIBC_2.14",
+          "GLIBC_2.2.5",
+          "GLIBC_2.3.4"
+        ]
+      },
+      "defined_versions": [],
+      "gomp_omp_undefined_symbols": [
+        "25: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND GOMP_atomic_start@GOMP_1.0 (9)",
+        "37: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND GOMP_atomic_end@GOMP_1.0 (9)",
+        "62: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND GOMP_loop_nonmonotonic_dynamic_next@GOMP_4.5 (16)",
+        "82: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND GOMP_parallel@GOMP_4.0 (19)",
+        "93: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND GOMP_loop_nonmonotonic_dynamic_start@GOMP_4.5 (16)",
+        "99: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND GOMP_loop_end@GOMP_1.0 (9)"
+      ]
+    },
+    "libstdc++.so.6": {
+      "path": "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.35",
+      "sha256": "5bb0d21308f123b6ad46c6f35b42cedfcb8d6d439a53aa3dae04d880aaffdde3",
+      "needed": [
+        "libm.so.6",
+        "libc.so.6",
+        "ld-linux-x86-64.so.2",
+        "libgcc_s.so.1"
+      ],
+      "required_versions": {
+        "libm.so.6": [
+          "GLIBC_2.2.5"
+        ],
+        "ld-linux-x86-64.so.2": [
+          "GLIBC_2.3"
+        ],
+        "libgcc_s.so.1": [
+          "GCC_4.2.0",
+          "GCC_3.3",
+          "GCC_4.3.0",
+          "GCC_3.0"
+        ],
+        "libc.so.6": [
+          "GLIBC_2.14",
+          "GLIBC_2.38",
+          "GLIBC_2.6",
+          "GLIBC_2.26",
+          "GLIBC_2.25",
+          "GLIBC_2.18",
+          "GLIBC_2.32",
+          "GLIBC_2.4",
+          "GLIBC_2.7",
+          "GLIBC_2.33",
+          "GLIBC_2.3.4",
+          "GLIBC_2.17",
+          "GLIBC_2.3",
+          "GLIBC_2.36",
+          "GLIBC_2.3.2",
+          "GLIBC_2.34",
+          "GLIBC_2.2.5"
+        ]
+      },
+      "defined_versions": [
+        "CXXABI_1.3",
+        "CXXABI_1.3.1",
+        "CXXABI_1.3.10",
+        "CXXABI_1.3.11",
+        "CXXABI_1.3.12",
+        "CXXABI_1.3.13",
+        "CXXABI_1.3.14",
+        "CXXABI_1.3.15",
+        "CXXABI_1.3.17",
+        "CXXABI_1.3.2",
+        "CXXABI_1.3.3",
+        "CXXABI_1.3.4",
+        "CXXABI_1.3.5",
+        "CXXABI_1.3.6",
+        "CXXABI_1.3.7",
+        "CXXABI_1.3.8",
+        "CXXABI_1.3.9",
+        "CXXABI_FLOAT128",
+        "CXXABI_TM_1",
+        "GLIBCXX_3.4",
+        "GLIBCXX_3.4.1",
+        "GLIBCXX_3.4.10",
+        "GLIBCXX_3.4.11",
+        "GLIBCXX_3.4.12",
+        "GLIBCXX_3.4.13",
+        "GLIBCXX_3.4.14",
+        "GLIBCXX_3.4.15",
+        "GLIBCXX_3.4.16",
+        "GLIBCXX_3.4.17",
+        "GLIBCXX_3.4.18",
+        "GLIBCXX_3.4.19",
+        "GLIBCXX_3.4.2",
+        "GLIBCXX_3.4.20",
+        "GLIBCXX_3.4.21",
+        "GLIBCXX_3.4.22",
+        "GLIBCXX_3.4.23",
+        "GLIBCXX_3.4.24",
+        "GLIBCXX_3.4.25",
+        "GLIBCXX_3.4.26",
+        "GLIBCXX_3.4.27",
+        "GLIBCXX_3.4.28",
+        "GLIBCXX_3.4.29",
+        "GLIBCXX_3.4.3",
+        "GLIBCXX_3.4.30",
+        "GLIBCXX_3.4.31",
+        "GLIBCXX_3.4.32",
+        "GLIBCXX_3.4.33",
+        "GLIBCXX_3.4.34",
+        "GLIBCXX_3.4.35",
+        "GLIBCXX_3.4.4",
+        "GLIBCXX_3.4.5",
+        "GLIBCXX_3.4.6",
+        "GLIBCXX_3.4.7",
+        "GLIBCXX_3.4.8",
+        "GLIBCXX_3.4.9",
+        "libstdc++.so.6"
+      ],
+      "gomp_omp_undefined_symbols": []
+    },
+    "libm.so.6": {
+      "path": "/usr/lib/x86_64-linux-gnu/libm.so.6",
+      "sha256": "1c488db6f4fe8cecb72456bc018de000b7a9b539c2994864b0416b5e8371b3d8",
+      "needed": [
+        "libc.so.6",
+        "ld-linux-x86-64.so.2"
+      ],
+      "required_versions": {
+        "ld-linux-x86-64.so.2": [
+          "GLIBC_PRIVATE"
+        ],
+        "libc.so.6": [
+          "GLIBC_ABI_DT_X86_64_PLT",
+          "GLIBC_ABI_DT_RELR",
+          "GLIBC_2.4",
+          "GLIBC_2.2.5",
+          "GLIBC_PRIVATE"
+        ]
+      },
+      "defined_versions": [
+        "GLIBC_2.15",
+        "GLIBC_2.18",
+        "GLIBC_2.2.5",
+        "GLIBC_2.23",
+        "GLIBC_2.24",
+        "GLIBC_2.25",
+        "GLIBC_2.26",
+        "GLIBC_2.27",
+        "GLIBC_2.28",
+        "GLIBC_2.29",
+        "GLIBC_2.31",
+        "GLIBC_2.32",
+        "GLIBC_2.35",
+        "GLIBC_2.38",
+        "GLIBC_2.39",
+        "GLIBC_2.4",
+        "GLIBC_2.40",
+        "GLIBC_2.41",
+        "GLIBC_2.42",
+        "GLIBC_2.43",
+        "libm.so.6"
+      ],
+      "gomp_omp_undefined_symbols": []
+    },
+    "libgcc_s.so.1": {
+      "path": "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1",
+      "sha256": "9d339ecb409578d6a5d587e6c537a8f9589b8a13fefba30d167433a4b5758bee",
+      "needed": [
+        "libc.so.6",
+        "ld-linux-x86-64.so.2"
+      ],
+      "required_versions": {
+        "ld-linux-x86-64.so.2": [
+          "GLIBC_2.3"
+        ],
+        "libc.so.6": [
+          "GLIBC_2.3.4",
+          "GLIBC_2.35",
+          "GLIBC_2.14",
+          "GLIBC_2.34",
+          "GLIBC_2.3.2",
+          "GLIBC_2.2.5"
+        ]
+      },
+      "defined_versions": [
+        "GCC_12.0.0",
+        "GCC_13.0.0",
+        "GCC_14.0.0",
+        "GCC_3.0",
+        "GCC_3.3",
+        "GCC_3.3.1",
+        "GCC_3.4",
+        "GCC_3.4.2",
+        "GCC_3.4.4",
+        "GCC_4.0.0",
+        "GCC_4.2.0",
+        "GCC_4.3.0",
+        "GCC_4.7.0",
+        "GCC_4.8.0",
+        "GCC_7.0.0",
+        "libgcc_s.so.1"
+      ],
+      "gomp_omp_undefined_symbols": []
+    },
+    "ld-linux-x86-64.so.2": {
+      "path": "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2",
+      "sha256": "bda779ea9e9ad234f60315477d7cfd0bdde861cd8ddd9df8cdaf62f18c4cec14",
+      "needed": [],
+      "required_versions": {},
+      "defined_versions": [
+        "GLIBC_2.2.5",
+        "GLIBC_2.3",
+        "GLIBC_2.34",
+        "GLIBC_2.35",
+        "GLIBC_2.4",
+        "GLIBC_PRIVATE",
+        "ld-linux-x86-64.so.2"
+      ],
+      "gomp_omp_undefined_symbols": []
+    },
+    "libllama-common.so.0": {
+      "path": "/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669/libllama-common.so.0.7.0",
+      "sha256": "462f7e9ce1c4c537533f1d4530b37201452599d90128c3c602507b315934e795",
+      "needed": [
+        "libllama.so.0",
+        "libssl.so.3",
+        "libcrypto.so.3",
+        "libggml.so.0",
+        "libggml-base.so.0",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-x86-64.so.2"
+      ],
+      "required_versions": {
+        "libgcc_s.so.1": [
+          "GCC_3.0"
+        ],
+        "ld-linux-x86-64.so.2": [
+          "GLIBC_2.3"
+        ],
+        "libm.so.6": [
+          "GLIBC_2.2.5",
+          "GLIBC_2.27",
+          "GLIBC_2.29"
+        ],
+        "libc.so.6": [
+          "GLIBC_2.9",
+          "GLIBC_2.16",
+          "GLIBC_2.32",
+          "GLIBC_2.15",
+          "GLIBC_2.29",
+          "GLIBC_2.3",
+          "GLIBC_2.10",
+          "GLIBC_2.4",
+          "GLIBC_2.34",
+          "GLIBC_2.3.4",
+          "GLIBC_2.7",
+          "GLIBC_2.33",
+          "GLIBC_2.14",
+          "GLIBC_2.2.5"
+        ],
+        "libssl.so.3": [
+          "OPENSSL_3.0.0"
+        ],
+        "libcrypto.so.3": [
+          "OPENSSL_3.0.0"
+        ],
+        "libstdc++.so.6": [
+          "GLIBCXX_3.4.17",
+          "GLIBCXX_3.4.14",
+          "GLIBCXX_3.4.19",
+          "GLIBCXX_3.4.30",
+          "CXXABI_1.3.5",
+          "GLIBCXX_3.4.29",
+          "CXXABI_1.3.11",
+          "GLIBCXX_3.4.22",
+          "GLIBCXX_3.4.9",
+          "CXXABI_1.3.7",
+          "CXXABI_1.3.3",
+          "CXXABI_1.3.13",
+          "GLIBCXX_3.4.15",
+          "GLIBCXX_3.4.18",
+          "CXXABI_1.3.9",
+          "GLIBCXX_3.4.11",
+          "CXXABI_1.3",
+          "GLIBCXX_3.4.20",
+          "CXXABI_1.3.2",
+          "GLIBCXX_3.4.21",
+          "GLIBCXX_3.4",
+          "GLIBCXX_3.4.26"
+        ]
+      },
+      "defined_versions": [],
+      "gomp_omp_undefined_symbols": []
+    },
+    "libllama.so.0": {
+      "path": "/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669/libllama.so.0.7.0",
+      "sha256": "522213ae6b6019ba8d2673e9254990c52f0a1a5fb047c75bfb93be1b34fad839",
+      "needed": [
+        "libggml.so.0",
+        "libggml-base.so.0",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-x86-64.so.2"
+      ],
+      "required_versions": {
+        "ld-linux-x86-64.so.2": [
+          "GLIBC_2.3"
+        ],
+        "libgcc_s.so.1": [
+          "GCC_3.0",
+          "GCC_3.4"
+        ],
+        "libm.so.6": [
+          "GLIBC_2.27",
+          "GLIBC_2.29",
+          "GLIBC_2.2.5"
+        ],
+        "libc.so.6": [
+          "GLIBC_2.33",
+          "GLIBC_2.32",
+          "GLIBC_2.7",
+          "GLIBC_2.34",
+          "GLIBC_2.14",
+          "GLIBC_2.4",
+          "GLIBC_2.3.4",
+          "GLIBC_2.2.5"
+        ],
+        "libstdc++.so.6": [
+          "GLIBCXX_3.4.25",
+          "GLIBCXX_3.4.20",
+          "GLIBCXX_3.4.17",
+          "CXXABI_1.3.3",
+          "CXXABI_1.3.9",
+          "CXXABI_1.3.11",
+          "CXXABI_1.3.2",
+          "GLIBCXX_3.4.29",
+          "GLIBCXX_3.4.18",
+          "GLIBCXX_3.4.9",
+          "CXXABI_1.3",
+          "GLIBCXX_3.4.11",
+          "GLIBCXX_3.4.21",
+          "GLIBCXX_3.4.14",
+          "CXXABI_1.3.5",
+          "GLIBCXX_3.4.15",
+          "GLIBCXX_3.4.22",
+          "CXXABI_1.3.13",
+          "GLIBCXX_3.4.19",
+          "GLIBCXX_3.4"
+        ]
+      },
+      "defined_versions": [],
+      "gomp_omp_undefined_symbols": []
+    },
+    "libssl.so.3": {
+      "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3",
+      "sha256": "63b47f444efa588e291e9b650a5ba2ab02f856356f2d50f13a2e477db9119e09",
+      "needed": [
+        "libcrypto.so.3",
+        "libc.so.6"
+      ],
+      "required_versions": {
+        "libc.so.6": [
+          "GLIBC_2.38",
+          "GLIBC_2.17",
+          "GLIBC_2.3.4",
+          "GLIBC_2.4",
+          "GLIBC_2.3",
+          "GLIBC_2.33",
+          "GLIBC_2.14",
+          "GLIBC_2.34",
+          "GLIBC_2.2.5",
+          "GLIBC_2.3.2"
+        ],
+        "libcrypto.so.3": [
+          "OPENSSL_3.3.0",
+          "OPENSSL_3.0.3",
+          "OPENSSL_3.4.0",
+          "OPENSSL_3.2.0",
+          "OPENSSL_3.0.0"
+        ]
+      },
+      "defined_versions": [
+        "OPENSSL_3.0.0",
+        "OPENSSL_3.2.0",
+        "OPENSSL_3.3.0",
+        "OPENSSL_3.4.0",
+        "OPENSSL_3.5.0",
+        "libssl.so.3"
+      ],
+      "gomp_omp_undefined_symbols": [
+        "83: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND COMP_CTX_get_method@OPENSSL_3.0.0 (7)",
+        "96: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND COMP_compress_block@OPENSSL_3.0.0 (7)",
+        "204: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND COMP_CTX_new@OPENSSL_3.0.0 (7)",
+        "337: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND COMP_zlib_oneshot@OPENSSL_3.2.0 (11)",
+        "343: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND COMP_get_name@OPENSSL_3.0.0 (7)",
+        "391: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND COMP_zlib@OPENSSL_3.0.0 (7)",
+        "419: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND COMP_CTX_free@OPENSSL_3.0.0 (7)",
+        "456: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND COMP_zstd_oneshot@OPENSSL_3.2.0 (11)",
+        "469: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND COMP_get_type@OPENSSL_3.0.0 (7)",
+        "481: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND COMP_brotli_oneshot@OPENSSL_3.2.0 (11)",
+        "510: 0000000000000000     0 FUNC    GLOBAL DEFAULT  UND COMP_expand_block@OPENSSL_3.0.0 (7)"
+      ]
+    },
+    "libcrypto.so.3": {
+      "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3",
+      "sha256": "5385f0436ac2e284ba8c5fb1488874057c29c04be72dea32add832694f381e28",
+      "needed": [
+        "libz.so.1",
+        "libzstd.so.1",
+        "libc.so.6"
+      ],
+      "required_versions": {
+        "libc.so.6": [
+          "GLIBC_2.15",
+          "GLIBC_2.4",
+          "GLIBC_2.38",
+          "GLIBC_2.3",
+          "GLIBC_2.25",
+          "GLIBC_2.33",
+          "GLIBC_2.12",
+          "GLIBC_2.14",
+          "GLIBC_2.3.4",
+          "GLIBC_2.17",
+          "GLIBC_2.16",
+          "GLIBC_2.3.2",
+          "GLIBC_2.34",
+          "GLIBC_2.2.5"
+        ]
+      },
+      "defined_versions": [
+        "OPENSSL_3.0.0",
+        "OPENSSL_3.0.3",
+        "OPENSSL_3.0.8",
+        "OPENSSL_3.0.9",
+        "OPENSSL_3.1.0",
+        "OPENSSL_3.2.0",
+        "OPENSSL_3.3.0",
+        "OPENSSL_3.4.0",
+        "OPENSSL_3.5.0",
+        "libcrypto.so.3"
+      ],
+      "gomp_omp_undefined_symbols": []
+    },
+    "libggml.so.0": {
+      "path": "/var/tmp/astra-n15-03-swuxjpfe/extracted/llama-b11669/libggml.so.0.27.0",
+      "sha256": "8643a58bb37af6fb153e2ea98b48efa227855725ee51c05f4ca76b9867956463",
+      "needed": [
+        "libggml-base.so.0",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6"
+      ],
+      "required_versions": {
+        "libgcc_s.so.1": [
+          "GCC_3.0"
+        ],
+        "libc.so.6": [
+          "GLIBC_2.32",
+          "GLIBC_2.4",
+          "GLIBC_2.14",
+          "GLIBC_2.34",
+          "GLIBC_2.2.5"
+        ],
+        "libstdc++.so.6": [
+          "GLIBCXX_3.4.20",
+          "CXXABI_1.3.9",
+          "GLIBCXX_3.4",
+          "CXXABI_1.3",
+          "GLIBCXX_3.4.21",
+          "GLIBCXX_3.4.26"
+        ]
+      },
+      "defined_versions": [],
+      "gomp_omp_undefined_symbols": []
+    },
+    "libz.so.1": {
+      "path": "/usr/lib/x86_64-linux-gnu/libz.so.1.3.1",
+      "sha256": "47b61967895b30e8c0c6818dd633ffeb87711cf637c688f981896f0dd84ce23b",
+      "needed": [
+        "libc.so.6"
+      ],
+      "required_versions": {
+        "libc.so.6": [
+          "GLIBC_2.14",
+          "GLIBC_2.4",
+          "GLIBC_2.2.5",
+          "GLIBC_2.3.4"
+        ]
+      },
+      "defined_versions": [
+        "ZLIB_1.2.0",
+        "ZLIB_1.2.0.2",
+        "ZLIB_1.2.0.8",
+        "ZLIB_1.2.12",
+        "ZLIB_1.2.2",
+        "ZLIB_1.2.2.3",
+        "ZLIB_1.2.2.4",
+        "ZLIB_1.2.3.3",
+        "ZLIB_1.2.3.4",
+        "ZLIB_1.2.3.5",
+        "ZLIB_1.2.5.1",
+        "ZLIB_1.2.5.2",
+        "ZLIB_1.2.7.1",
+        "ZLIB_1.2.9",
+        "libz.so.1"
+      ],
+      "gomp_omp_undefined_symbols": []
+    },
+    "libzstd.so.1": {
+      "path": "/usr/lib/x86_64-linux-gnu/libzstd.so.1.5.7",
+      "sha256": "060eeb79531d435306665fd78329d8a9dd579f95876c5960bb67937825362a80",
+      "needed": [
+        "libc.so.6"
+      ],
+      "required_versions": {
+        "libc.so.6": [
+          "GLIBC_2.34",
+          "GLIBC_2.8",
+          "GLIBC_2.14",
+          "GLIBC_2.3.4",
+          "GLIBC_2.4",
+          "GLIBC_2.3.2",
+          "GLIBC_2.2.5"
+        ]
+      },
+      "defined_versions": [],
+      "gomp_omp_undefined_symbols": []
+    }
+  },
+  "unresolved": [
+    "libgomp.so.1"
+  ],
+  "version_node_checks": [
+    {
+      "consumer": "llama-completion",
+      "provider": "libc.so.6",
+      "required": [
+        "GLIBC_2.34",
+        "GLIBC_2.2.5"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libggml-cpu-haswell.so",
+      "provider": "libgcc_s.so.1",
+      "required": [
+        "GCC_3.0"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libggml-cpu-haswell.so",
+      "provider": "ld-linux-x86-64.so.2",
+      "required": [
+        "GLIBC_2.3"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libggml-cpu-haswell.so",
+      "provider": "libm.so.6",
+      "required": [
+        "GLIBC_2.29",
+        "GLIBC_2.27",
+        "GLIBC_2.2.5"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libggml-cpu-haswell.so",
+      "provider": "libgomp.so.1",
+      "required": [
+        "OMP_1.0",
+        "GOMP_4.0",
+        "GOMP_1.0"
+      ],
+      "status": "UNRESOLVED_PROVIDER",
+      "missing_versions": null
+    },
+    {
+      "consumer": "libggml-cpu-haswell.so",
+      "provider": "libc.so.6",
+      "required": [
+        "GLIBC_2.32",
+        "GLIBC_2.4",
+        "GLIBC_2.34",
+        "GLIBC_2.33",
+        "GLIBC_2.7",
+        "GLIBC_2.14",
+        "GLIBC_2.29",
+        "GLIBC_2.3.4",
+        "GLIBC_2.2.5"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libggml-cpu-haswell.so",
+      "provider": "libstdc++.so.6",
+      "required": [
+        "CXXABI_1.3.9",
+        "GLIBCXX_3.4.29",
+        "GLIBCXX_3.4.11",
+        "CXXABI_1.3",
+        "GLIBCXX_3.4.21",
+        "GLIBCXX_3.4"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libllama-completion-impl.so",
+      "provider": "libgcc_s.so.1",
+      "required": [
+        "GCC_3.0"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libllama-completion-impl.so",
+      "provider": "libc.so.6",
+      "required": [
+        "GLIBC_2.32",
+        "GLIBC_2.4",
+        "GLIBC_2.14",
+        "GLIBC_2.2.5"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libllama-completion-impl.so",
+      "provider": "libstdc++.so.6",
+      "required": [
+        "GLIBCXX_3.4.26",
+        "GLIBCXX_3.4.9",
+        "CXXABI_1.3.9",
+        "GLIBCXX_3.4.29",
+        "CXXABI_1.3",
+        "GLIBCXX_3.4.21",
+        "GLIBCXX_3.4",
+        "GLIBCXX_3.4.19"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libc.so.6",
+      "provider": "ld-linux-x86-64.so.2",
+      "required": [
+        "GLIBC_2.2.5",
+        "GLIBC_2.3",
+        "GLIBC_2.35",
+        "GLIBC_PRIVATE"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libggml-base.so.0",
+      "provider": "libgcc_s.so.1",
+      "required": [
+        "GCC_3.0"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libggml-base.so.0",
+      "provider": "libgomp.so.1",
+      "required": [
+        "GOMP_4.0",
+        "GOMP_4.5",
+        "GOMP_1.0"
+      ],
+      "status": "UNRESOLVED_PROVIDER",
+      "missing_versions": null
+    },
+    {
+      "consumer": "libggml-base.so.0",
+      "provider": "libm.so.6",
+      "required": [
+        "GLIBC_2.29",
+        "GLIBC_2.27",
+        "GLIBC_2.2.5"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libggml-base.so.0",
+      "provider": "libstdc++.so.6",
+      "required": [
+        "GLIBCXX_3.4.20",
+        "GLIBCXX_3.4.18",
+        "CXXABI_1.3.9",
+        "GLIBCXX_3.4.29",
+        "GLIBCXX_3.4.11",
+        "CXXABI_1.3",
+        "GLIBCXX_3.4.21",
+        "CXXABI_1.3.5",
+        "GLIBCXX_3.4"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libggml-base.so.0",
+      "provider": "libc.so.6",
+      "required": [
+        "GLIBC_2.4",
+        "GLIBC_2.17",
+        "GLIBC_2.14",
+        "GLIBC_2.2.5",
+        "GLIBC_2.3.4"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libstdc++.so.6",
+      "provider": "libm.so.6",
+      "required": [
+        "GLIBC_2.2.5"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libstdc++.so.6",
+      "provider": "ld-linux-x86-64.so.2",
+      "required": [
+        "GLIBC_2.3"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libstdc++.so.6",
+      "provider": "libgcc_s.so.1",
+      "required": [
+        "GCC_4.2.0",
+        "GCC_3.3",
+        "GCC_4.3.0",
+        "GCC_3.0"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libstdc++.so.6",
+      "provider": "libc.so.6",
+      "required": [
+        "GLIBC_2.14",
+        "GLIBC_2.38",
+        "GLIBC_2.6",
+        "GLIBC_2.26",
+        "GLIBC_2.25",
+        "GLIBC_2.18",
+        "GLIBC_2.32",
+        "GLIBC_2.4",
+        "GLIBC_2.7",
+        "GLIBC_2.33",
+        "GLIBC_2.3.4",
+        "GLIBC_2.17",
+        "GLIBC_2.3",
+        "GLIBC_2.36",
+        "GLIBC_2.3.2",
+        "GLIBC_2.34",
+        "GLIBC_2.2.5"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libm.so.6",
+      "provider": "ld-linux-x86-64.so.2",
+      "required": [
+        "GLIBC_PRIVATE"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libm.so.6",
+      "provider": "libc.so.6",
+      "required": [
+        "GLIBC_ABI_DT_X86_64_PLT",
+        "GLIBC_ABI_DT_RELR",
+        "GLIBC_2.4",
+        "GLIBC_2.2.5",
+        "GLIBC_PRIVATE"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libgcc_s.so.1",
+      "provider": "ld-linux-x86-64.so.2",
+      "required": [
+        "GLIBC_2.3"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libgcc_s.so.1",
+      "provider": "libc.so.6",
+      "required": [
+        "GLIBC_2.3.4",
+        "GLIBC_2.35",
+        "GLIBC_2.14",
+        "GLIBC_2.34",
+        "GLIBC_2.3.2",
+        "GLIBC_2.2.5"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libllama-common.so.0",
+      "provider": "libgcc_s.so.1",
+      "required": [
+        "GCC_3.0"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libllama-common.so.0",
+      "provider": "ld-linux-x86-64.so.2",
+      "required": [
+        "GLIBC_2.3"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libllama-common.so.0",
+      "provider": "libm.so.6",
+      "required": [
+        "GLIBC_2.2.5",
+        "GLIBC_2.27",
+        "GLIBC_2.29"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libllama-common.so.0",
+      "provider": "libc.so.6",
+      "required": [
+        "GLIBC_2.9",
+        "GLIBC_2.16",
+        "GLIBC_2.32",
+        "GLIBC_2.15",
+        "GLIBC_2.29",
+        "GLIBC_2.3",
+        "GLIBC_2.10",
+        "GLIBC_2.4",
+        "GLIBC_2.34",
+        "GLIBC_2.3.4",
+        "GLIBC_2.7",
+        "GLIBC_2.33",
+        "GLIBC_2.14",
+        "GLIBC_2.2.5"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libllama-common.so.0",
+      "provider": "libssl.so.3",
+      "required": [
+        "OPENSSL_3.0.0"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libllama-common.so.0",
+      "provider": "libcrypto.so.3",
+      "required": [
+        "OPENSSL_3.0.0"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libllama-common.so.0",
+      "provider": "libstdc++.so.6",
+      "required": [
+        "GLIBCXX_3.4.17",
+        "GLIBCXX_3.4.14",
+        "GLIBCXX_3.4.19",
+        "GLIBCXX_3.4.30",
+        "CXXABI_1.3.5",
+        "GLIBCXX_3.4.29",
+        "CXXABI_1.3.11",
+        "GLIBCXX_3.4.22",
+        "GLIBCXX_3.4.9",
+        "CXXABI_1.3.7",
+        "CXXABI_1.3.3",
+        "CXXABI_1.3.13",
+        "GLIBCXX_3.4.15",
+        "GLIBCXX_3.4.18",
+        "CXXABI_1.3.9",
+        "GLIBCXX_3.4.11",
+        "CXXABI_1.3",
+        "GLIBCXX_3.4.20",
+        "CXXABI_1.3.2",
+        "GLIBCXX_3.4.21",
+        "GLIBCXX_3.4",
+        "GLIBCXX_3.4.26"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libllama.so.0",
+      "provider": "ld-linux-x86-64.so.2",
+      "required": [
+        "GLIBC_2.3"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libllama.so.0",
+      "provider": "libgcc_s.so.1",
+      "required": [
+        "GCC_3.0",
+        "GCC_3.4"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libllama.so.0",
+      "provider": "libm.so.6",
+      "required": [
+        "GLIBC_2.27",
+        "GLIBC_2.29",
+        "GLIBC_2.2.5"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libllama.so.0",
+      "provider": "libc.so.6",
+      "required": [
+        "GLIBC_2.33",
+        "GLIBC_2.32",
+        "GLIBC_2.7",
+        "GLIBC_2.34",
+        "GLIBC_2.14",
+        "GLIBC_2.4",
+        "GLIBC_2.3.4",
+        "GLIBC_2.2.5"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libllama.so.0",
+      "provider": "libstdc++.so.6",
+      "required": [
+        "GLIBCXX_3.4.25",
+        "GLIBCXX_3.4.20",
+        "GLIBCXX_3.4.17",
+        "CXXABI_1.3.3",
+        "CXXABI_1.3.9",
+        "CXXABI_1.3.11",
+        "CXXABI_1.3.2",
+        "GLIBCXX_3.4.29",
+        "GLIBCXX_3.4.18",
+        "GLIBCXX_3.4.9",
+        "CXXABI_1.3",
+        "GLIBCXX_3.4.11",
+        "GLIBCXX_3.4.21",
+        "GLIBCXX_3.4.14",
+        "CXXABI_1.3.5",
+        "GLIBCXX_3.4.15",
+        "GLIBCXX_3.4.22",
+        "CXXABI_1.3.13",
+        "GLIBCXX_3.4.19",
+        "GLIBCXX_3.4"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libssl.so.3",
+      "provider": "libc.so.6",
+      "required": [
+        "GLIBC_2.38",
+        "GLIBC_2.17",
+        "GLIBC_2.3.4",
+        "GLIBC_2.4",
+        "GLIBC_2.3",
+        "GLIBC_2.33",
+        "GLIBC_2.14",
+        "GLIBC_2.34",
+        "GLIBC_2.2.5",
+        "GLIBC_2.3.2"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libssl.so.3",
+      "provider": "libcrypto.so.3",
+      "required": [
+        "OPENSSL_3.3.0",
+        "OPENSSL_3.0.3",
+        "OPENSSL_3.4.0",
+        "OPENSSL_3.2.0",
+        "OPENSSL_3.0.0"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libcrypto.so.3",
+      "provider": "libc.so.6",
+      "required": [
+        "GLIBC_2.15",
+        "GLIBC_2.4",
+        "GLIBC_2.38",
+        "GLIBC_2.3",
+        "GLIBC_2.25",
+        "GLIBC_2.33",
+        "GLIBC_2.12",
+        "GLIBC_2.14",
+        "GLIBC_2.3.4",
+        "GLIBC_2.17",
+        "GLIBC_2.16",
+        "GLIBC_2.3.2",
+        "GLIBC_2.34",
+        "GLIBC_2.2.5"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libggml.so.0",
+      "provider": "libgcc_s.so.1",
+      "required": [
+        "GCC_3.0"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libggml.so.0",
+      "provider": "libc.so.6",
+      "required": [
+        "GLIBC_2.32",
+        "GLIBC_2.4",
+        "GLIBC_2.14",
+        "GLIBC_2.34",
+        "GLIBC_2.2.5"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libggml.so.0",
+      "provider": "libstdc++.so.6",
+      "required": [
+        "GLIBCXX_3.4.20",
+        "CXXABI_1.3.9",
+        "GLIBCXX_3.4",
+        "CXXABI_1.3",
+        "GLIBCXX_3.4.21",
+        "GLIBCXX_3.4.26"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libz.so.1",
+      "provider": "libc.so.6",
+      "required": [
+        "GLIBC_2.14",
+        "GLIBC_2.4",
+        "GLIBC_2.2.5",
+        "GLIBC_2.3.4"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    },
+    {
+      "consumer": "libzstd.so.1",
+      "provider": "libc.so.6",
+      "required": [
+        "GLIBC_2.34",
+        "GLIBC_2.8",
+        "GLIBC_2.14",
+        "GLIBC_2.3.4",
+        "GLIBC_2.4",
+        "GLIBC_2.3.2",
+        "GLIBC_2.2.5"
+      ],
+      "status": "PASS",
+      "missing_versions": []
+    }
+  ],
+  "limitation": "Version-node existence is not per-symbol binding, native execution, CPU backend auto-selection or full dependency security clearance."
+}

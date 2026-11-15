@@ -1,0 +1,6 @@
+{
+  "apparent_bytes": 590948045,
+  "allocated_bytes": 592453632,
+  "watermark": 1350000000,
+  "policy": "Monitored not hard quota; final accounting includes controller fragments, output and complete changed documents, conservatively duplicate-counted paths."
+}

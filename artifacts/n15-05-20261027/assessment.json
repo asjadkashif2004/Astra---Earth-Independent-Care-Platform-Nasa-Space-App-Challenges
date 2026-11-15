@@ -1,0 +1,127 @@
+{
+  "task": "N15-05",
+  "outcome": "PARTIAL",
+  "implementation": "DELIVERED",
+  "main_demo": "ABSTAIN",
+  "positive_live_quotation_gate": "OPEN; supported case produced invalid selection schema",
+  "real_native_generations": 1,
+  "native_exit_code": 0,
+  "prior_pre_native_controller_failures": 1,
+  "prior_native_commands": 0,
+  "prior_reason": "Missing stdlib struct import required by frozen sandbox generator; fixed and regression-checked before first native execution.",
+  "frozen_source_integrity": "PASS; final freeze unchanged after native generation",
+  "raw_model_selection": "{\"decision\": \"SELECT\", \"evidence_id\": \"window-ac8d6151e692badfd03a7755d10976b91434022f57fb270e7a0e92855eb7eb84\"} [end of text]\n\n\n",
+  "required_contract": {
+    "decision": "SELECT or ABSTAIN",
+    "evidence_ids": "array of exactly one retrieved ID for SELECT, empty for ABSTAIN"
+  },
+  "rejection": "Model emitted singular evidence_id string. Parser was not relaxed, output was not repaired and no further generation ran.",
+  "returned_quotations": 0,
+  "returned_supporting_citations": 0,
+  "question_entailment": "not_independently_verified",
+  "canonical_expected_source_for_scope_only": {
+    "document_id": "nasa-std-3001-v2-f",
+    "role": "formal_requirement",
+    "physical_page_index": 134,
+    "section": "7.9.1 / V2 7070",
+    "original_sha256": "a09e0a3853306f59a62b5ab494734c25afc8f83eadb159fdb5825706bc36d48f"
+  },
+  "expected_source_note": "Input provenance only, not supporting evidence returned by the failed main selection.",
+  "focused_tests": {
+    "Node": 53,
+    "Python": 7,
+    "all_pass": true,
+    "scope": "Independent fixtures/mocks and unchanged N14-02 claim tests; not medical/scientific or generalization evidence"
+  },
+  "cases": [
+    {
+      "id": "supported",
+      "execution": "real Qwen",
+      "result": "ABSTAIN; malformed schema, not absent/corrupt evidence"
+    },
+    {
+      "id": "insufficient",
+      "execution": "canonical preparation/no model",
+      "result": "ABSTAIN/no eligible evidence"
+    },
+    {
+      "id": "clinical",
+      "execution": "canonical preparation and fixture/no model",
+      "result": "ABSTAIN/outside research scope"
+    },
+    {
+      "id": "source-injection",
+      "execution": "independent fictional fixture/no model",
+      "result": "ABSTAIN before execution; NASA sources unchanged"
+    },
+    {
+      "id": "fabricated-id",
+      "execution": "mock",
+      "result": "ABSTAIN/id outside retrieved set"
+    },
+    {
+      "id": "timeout-or-malformed",
+      "execution": "mock timeout and actual malformed completion",
+      "result": "ABSTAIN; live timeout fault was not exercised"
+    }
+  ],
+  "performance": {
+    "counted_storage_bytes": 608333824,
+    "decode_runs": 71,
+    "exit_code": 0,
+    "kernel_command_tree_peak_RSS_bytes": 615636992,
+    "native_commands": 1,
+    "native_sampled_peak_RSS_bytes": 615993344,
+    "native_wall_s": 9.652365191999706,
+    "network_requests": 0,
+    "new_download_bytes": 0,
+    "performance": {
+      "decode_eval": [
+        4021.39,
+        71,
+        17.66
+      ],
+      "load_ms": [
+        3827.21
+      ],
+      "prompt_eval": [
+        3822.26,
+        230,
+        60.17
+      ]
+    },
+    "stdout": "{\"decision\": \"SELECT\", \"evidence_id\": \"window-ac8d6151e692badfd03a7755d10976b91434022f57fb270e7a0e92855eb7eb84\"} [end of text]\n\n\n",
+    "timeout_hit": false,
+    "verified_isolation": true
+  },
+  "native_supervisor_elapsed_s": 149.19115858000032,
+  "controller_elapsed_ms": 150309.440188,
+  "controller_lifetime_peak_RSS_bytes": 622874624,
+  "resources": {
+    "elapsed_s": 149.19115858000032,
+    "observations": 22,
+    "final_apparent": 606669505,
+    "final_allocated": 608333824,
+    "max_sampled_allocated": 608333824,
+    "process_RSS_peaks": {
+      "3328": 34631680,
+      "3377": 615993344,
+      "3376": 2412544
+    },
+    "supervisor_kernel_lifetime_RSS_bytes": 34631680,
+    "max_reaped_child_kernel_RSS_bytes": 615636992,
+    "owned_processes_remaining": 0,
+    "observer_alive": false
+  },
+  "zero_network_requests": true,
+  "new_acquisition_bytes": 0,
+  "supervisor_max_observation_gap_s": 13.901338365000356,
+  "native_max_observation_gap_s": 1.2643753090001155,
+  "native_observations": 343,
+  "sampling_note": "Sampled, not continuous. Hard 2GB address-space guard and native timer retained; no hard storage quota.",
+  "N15": "In Progress",
+  "N16": "Not Started",
+  "independent_review": "pending",
+  "resource_authority": "N15-05 only; expires at delivery",
+  "next_task": "Separately approved constrained-selection reliability task, e.g. pinned-runtime grammar qualification plus one offline trial. Preserve strict parser and N14 semantics; fresh resources, no integration. N16 N10/N12/review prerequisites remain."
+}

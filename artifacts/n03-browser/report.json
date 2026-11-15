@@ -1,0 +1,10 @@
+{
+  "status": "blocked",
+  "checks": [],
+  "screenshots": [],
+  "console_errors": [],
+  "caveats": [
+    "No FPS/physical Internet-off/clinical acceptance is inferred. Headless rendering is not target-laptop hardware validation."
+  ],
+  "reason": "No usable Chromium configured. Set ASTRA_BROWSER_BIN to a Linux Chrome/Chromium executable in normal WSL."
+}

@@ -1,0 +1,16 @@
+{
+  "args": [
+    "dpkg-query",
+    "-W",
+    "-f=${binary:Package}\t${Version}\t${Architecture}\n",
+    "gcc-16-base",
+    "libc6",
+    "libgcc-s1",
+    "libstdc++6",
+    "ubuntu-keyring",
+    "libssl3t64"
+  ],
+  "returncode": 0,
+  "stdout": "gcc-16-base:amd64\t16-20260322-1ubuntu1\tamd64\nlibc6:amd64\t2.43-2ubuntu2.4\tamd64\nlibgcc-s1:amd64\t16-20260322-1ubuntu1\tamd64\nlibssl3t64:amd64\t3.5.5-1ubuntu3.7\tamd64\nlibstdc++6:amd64\t16-20260322-1ubuntu1\tamd64\nubuntu-keyring\t2023.11.28.1build1\tall\n",
+  "stderr": ""
+}

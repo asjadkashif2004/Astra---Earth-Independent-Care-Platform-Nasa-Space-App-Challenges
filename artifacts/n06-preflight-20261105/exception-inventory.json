@@ -1,0 +1,103 @@
+{
+  "records": [
+    {
+      "path": "docs/DE_AC20_01.md",
+      "sha256": "d1e6c8c912ca500162b2aec01de2bfa2a45ef98b78591f7aaa9cce8bb3b950a7",
+      "N06_specific": false
+    },
+    {
+      "path": "docs/DE_N06_SYNTHETIC_01.md",
+      "sha256": "91dbf80d67a363509229193ad4aa207f39645220e370d3dc0afed9fa84e48ee8",
+      "N06_specific": true
+    },
+    {
+      "path": "docs/DE_N07_N13_01.md",
+      "sha256": "c319dd8e0fab8969b99b8ebe3ee15a7e1b58630842f32a65034b352e2155ed70",
+      "N06_specific": false
+    },
+    {
+      "path": "docs/DE_N07_N13_01_ENGINEERING_20261104.md",
+      "sha256": "763965eb06526571cbc6afe68bc28dd02cb77b2095ca4531fe1c5f147199c234",
+      "N06_specific": false
+    },
+    {
+      "path": "docs/DE_N07_N13_01_N13_02.md",
+      "sha256": "7b40bdf9b0cfc22d6e8db36e8d8b31716a4316096e872bba6ca39880d14e22c6",
+      "N06_specific": false
+    },
+    {
+      "path": "docs/DE_N07_N13_01_N13_03.md",
+      "sha256": "c8d1e220e38ea192dbb606d8ff07258ee10793e148ef65dcc9c7ef52fa5c5584",
+      "N06_specific": false
+    },
+    {
+      "path": "docs/DE_N08_SYNTHETIC_01.md",
+      "sha256": "10c33ff36747e60e8aa9c8202ffcd590b495b43fd8d13181baec50660cdaa32d",
+      "N06_specific": false
+    },
+    {
+      "path": "docs/DE_N09_DEMO_01.md",
+      "sha256": "89683bba72b91f5ab9973c3ca4e62802fef9c6e7a61fed2593fd2538735a8ed9",
+      "N06_specific": false
+    },
+    {
+      "path": "docs/DE_N09_SYNTHETIC_01.md",
+      "sha256": "34367c668c2de28775fef957b9b85ef475d7cee206c86d50a62262efee2026ba",
+      "N06_specific": false
+    },
+    {
+      "path": "docs/DE_N10_SYNTHETIC_01.md",
+      "sha256": "d15d949b8cf75d0dc088bd7b6a632a9103deea10bfb298da0bfe834523f4c739",
+      "N06_specific": false
+    },
+    {
+      "path": "docs/DE_N11_SYNTHETIC_01.md",
+      "sha256": "63c0a5eeed7ca4242c1836e3c612be2561978775ce87bcf3588160247f0c1776",
+      "N06_specific": false
+    },
+    {
+      "path": "docs/DE_N12_SYNTHETIC_01.md",
+      "sha256": "bf821c77603311042461e8386c86fb023ac321f49a8254aebda69d2cba494b24",
+      "N06_specific": false
+    },
+    {
+      "path": "docs/DE_N13_N14_01.md",
+      "sha256": "289a7c6784030b9e8106321084519743dacf1ae3ec2f7d6f10e1962fce7453ed",
+      "N06_specific": false
+    },
+    {
+      "path": "docs/DE_N13_N14_01_ENGINEERING_20261104.md",
+      "sha256": "e82ef5755404117aa73e7b31c2a5ccaceb5e7a03411ce98efa04c8113e3c0e6a",
+      "N06_specific": false
+    },
+    {
+      "path": "docs/DE_N14_N15_01.md",
+      "sha256": "f0f53d4ca0c35003f5f1d50cf8db284d392e562537dc668cc9b81f37b281a337",
+      "N06_specific": false
+    },
+    {
+      "path": "docs/DE_N14_N15_01_ENGINEERING_20261104.md",
+      "sha256": "57e5e521efa8f9d55b82bf455c2f30c93aaf5f6e9cca89d6bd84db071b9245e5",
+      "N06_specific": false
+    },
+    {
+      "path": "docs/DE_N16_DESIGNATED_READ_01.md",
+      "sha256": "4546413cc55df81b1d153e088f8428a662e86f1872d17ca13233f5550142d7d5",
+      "N06_specific": false
+    },
+    {
+      "path": "docs/DE_N16_READONLY_01.md",
+      "sha256": "6ea1dc810f048c2b86e000f9edc98477cd7d810eb9e8928fe2fca342b9bda834",
+      "N06_specific": false
+    },
+    {
+      "path": "docs/DE_N16_SQLITE_FIXTURE_01.md",
+      "sha256": "a156389047bad32ea690d4036a7828806c76bac36fbb73227cf5d2f32e7a938f",
+      "N06_specific": false
+    }
+  ],
+  "preexisting_N06_specific_proposals": 0,
+  "new_proposal": "docs/DE_N06_SYNTHETIC_01.md",
+  "new_proposal_status": "PROPOSED / INACTIVE",
+  "note": "The N06 record was created only after pre-change rg/docs inventory established its absence; the new document cannot be treated as preexisting activation authority."
+}

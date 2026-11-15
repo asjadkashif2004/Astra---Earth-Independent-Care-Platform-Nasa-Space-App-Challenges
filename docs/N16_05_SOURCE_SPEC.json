@@ -1,0 +1,243 @@
+{
+  "schema_version": "astra.n16-05.source-proposal.v1",
+  "status": "PROPOSED_INACTIVE",
+  "source_id": "astra.n16.designated-synthetic.elevated.v1",
+  "source_kind": "designated_synthetic_archive",
+  "owner": "ASTRA project owner",
+  "custodian": "Future owner-controlled offline fixture publisher; no publisher appointed or approval fabricated",
+  "materialized_by_N16_05": false,
+  "historical_donor": {
+    "root": "/var/tmp/astra-n16-04-gJ6VxS",
+    "relative_file": "originals/elevated/source.sqlite",
+    "source_edition": "astra.n16.scratch-sqlite.v1",
+    "profile": "elevated",
+    "generation": 0,
+    "files": {
+      "source.sqlite": {
+        "bytes": 65536,
+        "sha256": "4b1a3d8d9bdb832ae54b35a43e4412f18914756984893f8cb181b37955caff73"
+      },
+      "source.sqlite-wal": null,
+      "source.sqlite-shm": null
+    },
+    "rows_sha256": "414e60b782176a34c297c1d55da519f1892332a9684e41a93be98fc6fd1d0e0e",
+    "verification": "Pins copied from preserved N16-04 evidence; database bytes not accessed or reverified in N16-05"
+  },
+  "proposed_preparation": {
+    "method": "One byte-identical copy of the closed sealed donor into a fresh disk-backed disposable source directory; verify full hash before publishing",
+    "staging_root_pattern": "/var/tmp/astra-n16-designated-*",
+    "source_basename": "source.sqlite",
+    "allowed_source_members": [
+      "source.sqlite"
+    ],
+    "runtime_path_selection": "Trusted launcher registration only, no client path or URI",
+    "manifest_location": "Separate controller metadata directory, not the child source directory",
+    "SQL_construction": false,
+    "live_database_export": false,
+    "WAL_or_SHM_permitted": false
+  },
+  "mission_id": "MARS-DEMO-01",
+  "crew_scope": [
+    "CREW-01",
+    "CREW-02",
+    "CREW-03",
+    "CREW-04",
+    "CREW-05",
+    "CREW-06"
+  ],
+  "metrics": [
+    "heart_rate",
+    "respiratory_rate",
+    "spo2"
+  ],
+  "source_as_of": "2026-11-14T11:00:00.000Z",
+  "source_provenance": {
+    "synthetic": true,
+    "generator_version": "astra.n16.scratch-sqlite.v1",
+    "scenario_id": "n16-sql-elevated",
+    "seed": 42017,
+    "clock": "mission_simulation",
+    "host_currency": "NOT_LIVE_ARCHIVE",
+    "monitoring_health": "UNKNOWN",
+    "risk_origin": "authored_synthetic_fixture",
+    "actual_N02_event": false,
+    "N02_provenance": "UNKNOWN"
+  },
+  "tools": {
+    "get_current_vitals": {
+      "schema_version": "astra.n16.read-tools.v1",
+      "additionalProperties": false,
+      "required": [
+        "crew_id",
+        "metrics"
+      ],
+      "crew_ids": [
+        "CREW-01",
+        "CREW-02",
+        "CREW-03",
+        "CREW-04",
+        "CREW-05",
+        "CREW-06"
+      ],
+      "metrics": [
+        "heart_rate",
+        "respiratory_rate",
+        "spo2"
+      ],
+      "limit": [
+        1,
+        20
+      ]
+    },
+    "get_data_quality": {
+      "schema_version": "astra.n16.read-tools.v1",
+      "additionalProperties": false,
+      "required": [
+        "crew_id",
+        "metrics"
+      ],
+      "crew_ids": [
+        "CREW-01",
+        "CREW-02",
+        "CREW-03",
+        "CREW-04",
+        "CREW-05",
+        "CREW-06"
+      ],
+      "metrics": [
+        "heart_rate",
+        "respiratory_rate",
+        "spo2"
+      ],
+      "limit": [
+        1,
+        20
+      ]
+    },
+    "get_personal_baseline": {
+      "schema_version": "astra.n16.read-tools.v1",
+      "additionalProperties": false,
+      "required": [
+        "crew_id",
+        "metrics"
+      ],
+      "crew_ids": [
+        "CREW-01",
+        "CREW-02",
+        "CREW-03",
+        "CREW-04",
+        "CREW-05",
+        "CREW-06"
+      ],
+      "metrics": [
+        "heart_rate",
+        "respiratory_rate",
+        "spo2"
+      ],
+      "limit": [
+        1,
+        20
+      ]
+    },
+    "get_open_risk_events": {
+      "schema_version": "astra.n16.read-tools.v1",
+      "additionalProperties": false,
+      "required": [
+        "crew_id",
+        "limit"
+      ],
+      "crew_ids": [
+        "CREW-01",
+        "CREW-02",
+        "CREW-03",
+        "CREW-04",
+        "CREW-05",
+        "CREW-06"
+      ],
+      "metrics": [
+        "heart_rate",
+        "respiratory_rate",
+        "spo2"
+      ],
+      "limit": [
+        1,
+        20
+      ]
+    }
+  },
+  "fixed_queries": {
+    "metadata": "SELECT key,json FROM fixture_meta WHERE key IN (?,?,?) ORDER BY key",
+    "observation": "SELECT crew_id,metric,json,sha256 FROM observations WHERE crew_id=? AND metric=?",
+    "baseline": "SELECT crew_id,metric,json,sha256 FROM baselines WHERE crew_id=? AND metric=?",
+    "risks": "SELECT id,crew_id,status,json,sha256 FROM risks WHERE crew_id=? AND status=? ORDER BY id LIMIT ?"
+  },
+  "query_sha256": "28ccea558700a6b067c526bce0fbfc1a2e947abc48263828096a2cf26def0896",
+  "schema_definition": "CREATE TABLE fixture_meta(key TEXT PRIMARY KEY,json TEXT NOT NULL);\nCREATE TABLE observations(crew_id TEXT NOT NULL,metric TEXT NOT NULL,json TEXT NOT NULL,sha256 TEXT NOT NULL,PRIMARY KEY(crew_id,metric));\nCREATE TABLE baselines(crew_id TEXT NOT NULL,metric TEXT NOT NULL,json TEXT NOT NULL,sha256 TEXT NOT NULL,PRIMARY KEY(crew_id,metric));\nCREATE TABLE risks(id TEXT PRIMARY KEY,crew_id TEXT NOT NULL,status TEXT NOT NULL,json TEXT NOT NULL,sha256 TEXT NOT NULL);\nCREATE INDEX risk_scope ON risks(crew_id,status,id);",
+  "authorization": {
+    "source": "Trusted launcher-owned opaque caller context, never tool JSON, CLI role arguments or environment",
+    "policy": "Existing requirePermission(read, crew) intersected with source mission/crew/read-only archive scope; astronaut self-only",
+    "untrusted_fields_forbidden": [
+      "role",
+      "principal",
+      "source_path",
+      "source_id",
+      "SQL",
+      "as_of",
+      "permissions"
+    ],
+    "production_authentication_claim": false
+  },
+  "freshness": {
+    "mode": "ARCHIVE_ONLY",
+    "read_as_of_default": "2026-11-14T11:00:00.000Z",
+    "mission_age_rule": "max(5000, 3000/sampling_hz) milliseconds; stale, future, invalid or unreliable observations UNKNOWN",
+    "stale_QA_context": "Trusted QA-only read_as_of source_as_of plus 20000 ms; source bytes unchanged",
+    "host_capture_is_observation_receipt": false,
+    "live_current_values_permitted": false
+  },
+  "result_contract": {
+    "proposed_wrapper_version": "astra.n16.designated-result.v1",
+    "existing_projection_version": "astra.n16.sqlite-result.v1",
+    "execution_and_data_status_separate": true,
+    "source_attribution_is_scientific_or_medical_approval": false,
+    "empty_risks_is_all_clear": false
+  },
+  "proposed_future_bounds": {
+    "authorization_status": "REQUIRES_SEPARATE_ACTIVATION_AND_TASK_APPROVAL",
+    "main_database_max_bytes": 1048576,
+    "source_sidecars_max_count": 0,
+    "counted_storage_max_bytes": 67108864,
+    "process_RSS_max_bytes": 536870912,
+    "reader_timeout_ms": 1000,
+    "workflow_timeout_ms": 10000,
+    "read_transaction_target_ms": 250,
+    "termination_escalation_ms": 250,
+    "result_max_bytes": 65536,
+    "busy_timeout_ms": 0,
+    "reader_concurrency": 1,
+    "workflow_calls": 4,
+    "network_requests": 0,
+    "model_generations": 0,
+    "storage_enforcement": "Monitored, not hard quota; include donor, retained N16 roots used by task, new source/copies, artifacts, temporary files and external traces; disclose open-unlinked charges and sampling limits"
+  },
+  "existing_evidence": {
+    "artifacts/n16-04-20261028/fixtures-manifest.json": {
+      "bytes": 3252,
+      "sha256": "760b12d8e95ba42c1da33c64a670d7ae80e055cab10f2a5337d91a7217257119"
+    },
+    "docs/N16_04_SQL_CONTRACT.json": {
+      "bytes": 3739,
+      "sha256": "9ae5620b72f76a3c63b05645739d078c023e38b8fdb0fb89c5858c0d75ca045f"
+    },
+    "docs/N16_04_COMPLETION.md": {
+      "bytes": 12291,
+      "sha256": "029df431389b5a422493ad4bc72a396f681f803cc5fff31eb34cabb493865955"
+    },
+    "docs/N16_04_CONTRACT.md": {
+      "bytes": 9710,
+      "sha256": "ae065eedf1a57c2d853d90c8ceb9b4caafba06a1fe823ad91577a37c1d9f56fd"
+    }
+  },
+  "exception_id": "DE-N16-DESIGNATED-READ-01",
+  "current_authorization": "DOCUMENTATION_ONLY; no activation, database access, SQL execution or source preparation"
+}
