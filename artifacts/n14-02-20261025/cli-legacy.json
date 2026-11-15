@@ -1,4 +1,0 @@
-{
-  "exit_code": 1,
-  "stderr": "{\"status\":\"BLOCKED\",\"code\":\"Error\",\"message\":\"Claim mode requires --request=bound-claim.json; bare --text/--role is unsupported.\"}\n"
-}

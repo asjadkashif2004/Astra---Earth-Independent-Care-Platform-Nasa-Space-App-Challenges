@@ -1,4 +1,0 @@
-{"elapsed_s": 1.2861094799991406, "event": "phase", "name": "verified-acquisition-and-native-preflight"}
-{"elapsed_s": 13.842601352000202, "event": "phase", "name": "one-network-isolated-generation"}
-{"elapsed_s": 15.199288103000072, "event": "phase", "name": "verify-actual-blocked-filesystem-and-network-view"}
-{"elapsed_s": 16.21322093100025, "event": "failure", "stage": "verify-actual-blocked-filesystem-and-network-view", "type": "RuntimeError", "reason": "First generation did not produce successful nonempty output"}

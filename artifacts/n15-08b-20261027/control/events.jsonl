@@ -1,4 +1,0 @@
-{"at_utc":"2026-10-27T18:27:48.778Z","event":"case-start","case_id":"supported"}
-{"at_utc":"2026-10-27T18:28:41.034Z","event":"case-durable","case_id":"supported","outcome":"supported_selection"}
-{"at_utc":"2026-10-27T18:28:41.113Z","event":"case-start","case_id":"unsupported"}
-{"at_utc":"2026-10-27T18:29:34.257Z","event":"case-durable","case_id":"unsupported","outcome":"false_positive"}

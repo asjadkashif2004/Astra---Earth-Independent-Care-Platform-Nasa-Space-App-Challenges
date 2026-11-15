@@ -1,8 +1,0 @@
-{
-  "state": "DELIVERED_BLOCKED_STOP",
-  "N08_feature_implementation_started": false,
-  "N08_exception_active": false,
-  "proposal_sha256": "4255454d34192bd04398957884c57fe872fbb4c31f07ee0430445a9ac6a32ce1",
-  "new_native_worker_or_source_acquisition_authority": false,
-  "automatic_resume": false
-}

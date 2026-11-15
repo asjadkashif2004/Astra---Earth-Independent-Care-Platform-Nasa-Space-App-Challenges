@@ -1,3 +1,0 @@
-{"elapsed_s": 10.352983255000254, "event": "phase", "name": "verify-reused-model-and-native-identities"}
-{"elapsed_s": 123.57083545200021, "event": "phase", "name": "one-offline-research-selection"}
-{"elapsed_s": 127.04665124099984, "event": "failure", "stage": "one-offline-research-selection", "type": "NameError", "reason": "name 'struct' is not defined"}

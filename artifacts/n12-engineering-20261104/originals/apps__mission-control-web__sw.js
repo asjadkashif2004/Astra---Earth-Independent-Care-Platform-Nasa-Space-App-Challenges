@@ -1,9 +1,0 @@
-const CACHE = 'astra-shell-v10-n11';
-const SHELL = ['/', '/index.html', '/styles.css', '/mission.css', '/anatomy.css', '/anatomy.mjs', '/n11.mjs', '/n11.css', '/n09.mjs', '/n09.css', '/n10.mjs', '/n10.css', '/waveforms.mjs', '/waveforms.css', '/shared/waveforms.mjs', '/fixture-trace.mjs', '/app.mjs', '/scenes.mjs', '/earth.mjs', '/ui.mjs', '/shared/contracts.mjs', '/shared/presentation.mjs', '/icon.svg', '/manifest.webmanifest'];
-self.addEventListener('install', event => { event.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
-self.addEventListener('activate', event => { event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k.startsWith('astra-shell-') && k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
-self.addEventListener('fetch', event => {
-  const url = new URL(event.request.url);
-  if (event.request.method !== 'GET' || url.origin !== self.location.origin || url.pathname.startsWith('/v1/')) return;
-  event.respondWith(fetch(event.request).then(response => { if (response.ok) { const copy = response.clone(); caches.open(CACHE).then(c => c.put(event.request, copy)); } return response; }).catch(() => caches.match(event.request).then(cached => cached || (event.request.mode === 'navigate' ? caches.match('/') : Response.error()))));
-});

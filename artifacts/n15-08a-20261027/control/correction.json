@@ -1,9 +1,0 @@
-{
-  "status": "PASS",
-  "original_six_assertion_bodies": "byte-identical",
-  "fixture_correction": "Node-like unref()/clearInterval handle plus cancellation tracking",
-  "controller_behavior": "byte-identical except N15-08A metadata labels",
-  "native_deadlines_and_process_controls": "unchanged",
-  "driver_sha256": "be685f013933b660d5c0c058f9cea306a59506e090ed383b665a7df410e3c7a0",
-  "fixture_sha256": "37ce0beeaa0432a99416b7e448e7ec3f2790b9ece448b0b2c94d4505096a3b6e"
-}

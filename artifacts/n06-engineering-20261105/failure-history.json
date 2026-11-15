@@ -1,9 +1,0 @@
-{
-  "initial_QA": "initial-01/focused-02/n06-01 failures retained: Node import mapping, the old N05 inactive assertion under new approval, and malformed authored fixtures. Corrected controls passed.",
-  "cold_audit": "qualification-01/02 failed accounting, not source hash equality; actual hashes matched. totalChanges is not a supported driver property; real total_changes() counter and six row counts now verify noninterference.",
-  "browser_intermediate": "All16 reports retained. Failed readiness/offscreen fixture assumptions, manual-packet latency observations and GPU-call/frame-unit mismatch are recorded; narrow native200% evidence-table keyboard focus was a real accessibility defect and was fixed.",
-  "source_phase_defects": "Valid30second source intervals were previously capped to5seconds. Repaired source/freshness horizons and declared clock interpolation; actual browser arithmetic matches. Historical unknown previously could inherit a later visible phase; now blocked and tested in real Chrome.",
-  "approval_interruption": "Automatic review could not complete one authorized Python edit due usage limit. That command was not executed; the preceding two-file phase patch had executed. Owner explicitly resumed; the same requested command passed approval on retry. No unsafe-action approval was bypassed.",
-  "unchanged_scientific_rules": true,
-  "independent_reviews_fabricated": 0
-}

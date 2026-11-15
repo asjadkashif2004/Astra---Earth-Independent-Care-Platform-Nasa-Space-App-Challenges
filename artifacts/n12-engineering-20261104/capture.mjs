@@ -1,9 +1,0 @@
-import{readFileSync,writeFileSync,mkdirSync,copyFileSync,readdirSync,statSync}from'node:fs';import{createHash}from'node:crypto';
-const root='artifacts/n12-engineering-20261104',sha=b=>createHash('sha256').update(b).digest('hex');mkdirSync(root+'/originals',{recursive:true});
-const paths=new Set(Object.keys(JSON.parse(readFileSync('artifacts/n12-preflight-20261104/preservation-before.json')).files));
-function scan(p){for(const name of readdirSync(p)){const q=p+'/'+name,s=statSync(q);if(s.isDirectory())scan(q);else paths.add(q);}}
-scan('artifacts/n12-preflight-20261104');for(const p of ['docs/DE_N12_SYNTHETIC_01.md','docs/N12_FINAL_ENGINEERING_COMPLETION.md'])paths.add(p);
-const files={};for(const p of paths)files[p]=sha(readFileSync(p));const edited=['AGENTS.md',...['MASTER_PLAN','MODULE_TRACKER','CORE_AI_PRIORITY','FEATURE_AUDIT','DECISIONS','SESSION_HANDOFF','N12_FINAL_ENGINEERING_COMPLETION','DE_N12_SYNTHETIC_01'].map(n=>'docs/'+n+'.md'),'services/api/store.mjs','services/api/server.mjs','apps/mission-control-web/app.mjs','apps/mission-control-web/index.html','apps/mission-control-web/sw.js','tests/dom-harness.mjs','tests/sleep-lifecycle.test.mjs','scripts/frontend-smoke.mjs','scripts/browser-acceptance.mjs'];for(const p of edited)copyFileSync(p,root+'/originals/'+p.replaceAll('/','__'));
-const tables=Object.fromEntries(['docs/MASTER_PLAN.md','docs/MODULE_TRACKER.md','docs/CORE_AI_PRIORITY.md'].map(p=>[p,readFileSync(p,'utf8').split('\n').filter(s=>s.startsWith('|'))]));
-function bytes(p){let total=0;for(const n of readdirSync(p)){const q=p+'/'+n,s=statSync(q);total+=s.isDirectory()?bytes(q):s.size;}return total;}
-writeFileSync(root+'/preservation-before.json',JSON.stringify({files,tables,edited,artifact_bytes_before:bytes('artifacts')},null,2));console.log(JSON.stringify({protected_files:paths.size,proposal_sha256:files['docs/DE_N12_SYNTHETIC_01.md'],model_or_database_binaries_read:0}));

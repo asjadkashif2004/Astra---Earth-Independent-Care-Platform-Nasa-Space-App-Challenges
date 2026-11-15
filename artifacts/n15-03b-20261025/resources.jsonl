@@ -1,7 +1,0 @@
-{"elapsed_seconds": 0.018045870998321334, "apparent_bytes": 64702168, "allocated_bytes": 65241088, "RSS_bytes": {"17271": 21733376}, "peak_observed_RSS": {"17271": 21733376}, "MemAvailable": 6278295552}
-{"elapsed_seconds": 0.269222989998525, "apparent_bytes": 64703245, "allocated_bytes": 65257472, "RSS_bytes": {"17271": 22056960}, "peak_observed_RSS": {"17271": 22061056}, "MemAvailable": 6277963776}
-{"elapsed_seconds": 0.5205895849976514, "apparent_bytes": 64703442, "allocated_bytes": 65257472, "RSS_bytes": {"17271": 22056960}, "peak_observed_RSS": {"17271": 22061056}, "MemAvailable": 6277963776}
-{"elapsed_seconds": 0.7693047149987251, "apparent_bytes": 64703644, "allocated_bytes": 65257472, "RSS_bytes": {"17271": 22061056}, "peak_observed_RSS": {"17271": 22065152}, "MemAvailable": 6277763072}
-{"elapsed_seconds": 1.0196956469990255, "apparent_bytes": 64703845, "allocated_bytes": 65257472, "RSS_bytes": {"17271": 22065152}, "peak_observed_RSS": {"17271": 22069248}, "MemAvailable": 6277763072}
-{"elapsed_seconds": 1.2730733819989837, "apparent_bytes": 64706364, "allocated_bytes": 65265664, "RSS_bytes": {"17271": 22945792}, "peak_observed_RSS": {"17271": 22945792}, "MemAvailable": 6271590400}
-{"elapsed_seconds": 1.5201247129989497, "apparent_bytes": 64780439, "allocated_bytes": 65347584, "RSS_bytes": {"17271": 23015424}, "peak_observed_RSS": {"17271": 23015424}, "MemAvailable": 6269263872}

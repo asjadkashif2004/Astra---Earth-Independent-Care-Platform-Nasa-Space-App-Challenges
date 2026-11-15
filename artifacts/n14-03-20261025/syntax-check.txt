@@ -1,2 +1,0 @@
-Command: npm run check
-125 JavaScript files parsed and local imports checked; 0 errors. This is syntax/contract validation, not TypeScript compilation.

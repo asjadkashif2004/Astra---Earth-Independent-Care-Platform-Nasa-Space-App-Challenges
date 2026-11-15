@@ -1,9 +1,0 @@
-{
-  "schema_version": "astra.n06.preflight-preservation.v1",
-  "fresh_hash_unchanged_count": 8972,
-  "missing": [],
-  "mismatches": [],
-  "duration_ms": 113080.168,
-  "database_model_records_retained_without_byte_access": 37,
-  "scope": "Before explicit governance documentation addenda; all inherited non-database/large qualification file pins were freshly compared. No model/sealed/operational database read."
-}

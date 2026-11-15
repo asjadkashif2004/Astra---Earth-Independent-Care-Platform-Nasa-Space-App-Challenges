@@ -1,9 +1,0 @@
-{
-  "exception": "DE-N11-SYNTHETIC-01",
-  "original_sha256": "11e6f0652c5c7d236d09a3146811427d9b7452ee6cccf24bdea0b439987863bf",
-  "owner_directive": "Current explicit activation of existing proposal subject to ten restrictions",
-  "scope_consistent": true,
-  "independent_review_claimed": false,
-  "status": "ACTIVATED",
-  "scientific_gates": "OPEN"
-}

@@ -1,1 +1,0 @@
-Initial finalizer completed preservation/QA checks but checked the artifact-manifest link before publishing that file. AssertionError: ../artifacts/n11-engineering-20261031/artifact-manifest.json. No code/runtime/source change. Finalization order corrected; original receipt retained separately.

@@ -1,9 +1,0 @@
-{
-  "scope": "MOCKED DATABASE/FILESYSTEM + TEXT/TRACES ONLY",
-  "actual_SQLite_connections": 0,
-  "actual_SQL_statements": 0,
-  "worker_startups": 0,
-  "source_database_reads": 0,
-  "accept_all_detected": true,
-  "reject_all_detected": true
-}

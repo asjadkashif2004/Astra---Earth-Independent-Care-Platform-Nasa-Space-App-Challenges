@@ -1,5 +1,0 @@
-Traceback (most recent call last):
-  File "/mnt/c/users/basim/onedrive/desktop/astra-space-medical-ai/artifacts/n10-final-20261030/finalize.py", line 57, in <module>
-    assert p.exists(),'Original sleep lifecycle test must match the preserved full hash'
-           ~~~~~~~~^^
-AssertionError: Original sleep lifecycle test must match the preserved full hash

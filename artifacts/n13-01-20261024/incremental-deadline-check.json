@@ -1,9 +1,0 @@
-{
-  "command": "node --check services/corpus/acquire.mjs; node --check tests/research-corpus.test.mjs; node --test --test-isolation=none --test-name-pattern='monotonic deadline' tests/research-corpus.test.mjs",
-  "exit_code": 0,
-  "tests": 1,
-  "pass": 1,
-  "fail": 0,
-  "skip": 0,
-  "note": "Executed after adding monotonic checks; prior 18 N13 + 72 N07 compatibility passes and one existing Sleep-EDF skip reused. No browser/network collection."
-}

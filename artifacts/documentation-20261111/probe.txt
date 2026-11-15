@@ -1,3 +1,0 @@
-PAGE 1
-ASTRA PDF validation
-Searchable text and correct rendering. 12345.

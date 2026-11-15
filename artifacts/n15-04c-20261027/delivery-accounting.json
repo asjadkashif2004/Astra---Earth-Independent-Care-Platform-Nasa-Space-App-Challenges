@@ -1,7 +1,0 @@
-{
-  "apparent_bytes": 592933704,
-  "allocated_bytes": 594550784,
-  "watermark": 1350000000,
-  "ceiling": 1500000000,
-  "policy": "Monitored not hard quota. Inclusive used-cache/source/notice/controller/evidence/QA/docs accounting; some duplicates counted conservatively. No model/native payload copy."
-}

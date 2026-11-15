@@ -1,3 +1,0 @@
-{"at":"2026-10-19T15:46:14.477Z","elapsed_ms":648,"phase":"setup","kind":"page","event":"initial","page_at":"2026-10-19T15:46:14.475Z","visibility":"visible","focused":true}
-{"at":"2026-10-19T15:46:15.195Z","elapsed_ms":1366,"phase":"setup","kind":"native_focus","restore_previous_visibility":true,"foreground_request_returned":false,"pid":16868,"foreground_is_test_window":false,"method":"Supported ShowWindow/SetForegroundWindow only;no foreground-lock override,topmost change or session unlock"}
-{"at":"2026-10-19T15:46:15.196Z","elapsed_ms":1367,"phase":"setup","kind":"tooling_error","message":"Supported native focus did not establish ownership."}

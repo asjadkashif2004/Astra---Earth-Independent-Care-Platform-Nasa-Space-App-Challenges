@@ -1,9 +1,0 @@
-{
-  "phase": "source staging before freeze or native execution",
-  "issue": "An overly broad source-generation assertion matched the intentional historical replay-overlay filename in baseline provenance metadata.",
-  "correction": "Check for obsolete read calls instead of rejecting the preserved baseline filename.",
-  "prompt_policy_changes": 0,
-  "mandatory_QA_failures": 0,
-  "native_requests": 0,
-  "guard_or_resource_relaxation": false
-}

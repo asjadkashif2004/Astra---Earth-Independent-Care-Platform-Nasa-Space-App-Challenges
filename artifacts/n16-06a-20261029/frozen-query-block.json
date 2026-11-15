@@ -1,7 +1,0 @@
-{
-  "original_worker": "services/agent/sqlite-fixture-process.mjs",
-  "new_diagnostic_worker": "services/agent/designated-worker.mjs",
-  "query_block_bytes": 3145,
-  "query_block_sha256": "c724b37a94955a91943bb2b71914d6e6a65c73697720737a23127bf4c165081e",
-  "statement": "Byte-identical query/SQLite constructor/authorizer/result block; neither worker executed in N16-06A"
-}

@@ -1,1 +1,0 @@
-{"attempts":1,"first_failure":{"attempts":1,"code":"UNAUTHORIZED_SQL","stage":"master_call"},"hash":"c02c2acac767b937ef969dff6629b27abfdab33acd40d6ea5990ecd785c92d45","schema_version":"astra.n16.batch-failure.v1"}

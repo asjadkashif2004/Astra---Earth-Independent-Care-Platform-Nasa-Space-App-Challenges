@@ -1,9 +1,0 @@
-{
-  "scope": "non-generative fixtures only; no historical result reassessment",
-  "python": {"tests": 18, "passed": 17, "failed": 1},
-  "node": {"tests": 21, "passed": 18, "failed": 3},
-  "findings": [
-    "A subsequent shutdown failure replaced the startup failure's short receipt; correction retains all sticky reasons in every failure receipt.",
-    "Three new JavaScript assertions assumed fixture window 0 was retrieved; the fixture query actually ranks another window first. Tests now check and corrupt the actual retrieved canonical binding. Scoring/ranking semantics unchanged."
-  ]
-}

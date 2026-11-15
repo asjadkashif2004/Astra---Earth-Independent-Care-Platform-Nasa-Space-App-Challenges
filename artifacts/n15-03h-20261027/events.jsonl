@@ -1,5 +1,0 @@
-{"elapsed_s": 0.9661246010000468, "event": "phase", "name": "accounting-QA-and-disk-backed-scratch"}
-{"elapsed_s": 3.9038361809998605, "event": "phase", "name": "approved-artifact-and-whitelist-integrity"}
-{"elapsed_s": 53.440670986999976, "event": "phase", "name": "construct-single-blocked-sandbox"}
-{"elapsed_s": 54.43656569899986, "event": "phase", "name": "verify-actual-blocked-filesystem-and-network-view"}
-{"elapsed_s": 55.005447344000004, "event": "phase", "name": "single-native-release"}

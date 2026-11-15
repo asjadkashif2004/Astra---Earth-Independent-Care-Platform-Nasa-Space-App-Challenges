@@ -1,8 +1,0 @@
-{
-  "phase": "QA source staging, before mandatory tests or native execution",
-  "event": "Automatic permission approval review did not finish before its deadline",
-  "safety_rejection": false,
-  "process_started_on_timed_out_call": false,
-  "resolution": "The tool permitted one retry; that retry was approved and completed",
-  "native_retries": 0
-}

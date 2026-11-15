@@ -1,6 +1,0 @@
-{
-  "result": "local-link checker stopped",
-  "reason": "The checker treated an existing percent-encoded PDF filename as a literal filesystem path.",
-  "correction": "Decode local Markdown URL paths before checking existence. No documentation link or evidence change.",
-  "production_or_experiment_failure": false
-}

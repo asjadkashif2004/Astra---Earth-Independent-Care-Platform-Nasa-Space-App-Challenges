@@ -1,6 +1,0 @@
-{
-  "task": "N15-07",
-  "initial_staging": "rename returned EXDEV before any inference; own new files moved across filesystems with complete hash verification",
-  "native_requests": 0,
-  "historical_files_changed": 0
-}

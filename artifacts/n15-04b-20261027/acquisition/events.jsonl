@@ -1,4 +1,0 @@
-{"elapsed_s": 1.2536810959991271, "event": "phase", "name": "metadata-rights-resources-preflight"}
-{"elapsed_s": 23.770798370000193, "event": "phase", "name": "retained-runtime-and-library-hash-preflight"}
-{"elapsed_s": 37.111554756998885, "event": "phase", "name": "single-approved-model-download"}
-{"elapsed_s": 162.94214633199954, "event": "phase", "name": "complete-model-hash-and-static-GGUF"}
