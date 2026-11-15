@@ -50,7 +50,12 @@ const MODEL_CARDS = [
   { id: 'curated-lexical-v2', name: 'Onboard source retrieval', kind: 'lexical retrieval with light stemming, synonyms and rarity ranking; no LLM', inputs: '29 checked source summaries (NASA HRP risks, hazards and ongoing research; CSA; NTRS; PhysioNet; NIST), versioned and SHA-256 hashed.', output: 'Up to three matched paraphrases with citations, or abstention.', limitations: 'Small curated corpus of project-authored paraphrases. Keyword-based, not semantic understanding; not a protocol manual or medical question-answering model. Check the original source.' },
 ];
 
-export function createApp({ dbPath = ':memory:', speed = 30, autoTick = true, demo = true, ingestToken = '', clock = Date.now, caseBuilder = null, enrichmentRunner = null } = {}) {
+const LOOPBACK_HOSTS = ['localhost', '127.0.0.1', '[::1]'];
+const hostnameOf = value => { try { return new URL(`http://${value ?? ''}`).hostname.toLowerCase(); } catch { return ''; } };
+// publicDemo: an explicitly enabled, shared fictional demo behind an HTTPS proxy (for example Render).
+// Only the listed publicHosts are accepted besides loopback, so DNS-rebinding protection stays on.
+export function createApp({ dbPath = ':memory:', speed = 30, autoTick = true, demo = true, ingestToken = '', clock = Date.now, caseBuilder = null, enrichmentRunner = null, publicDemo = false, publicHosts = [] } = {}) {
+  const allowedHosts = new Set(publicDemo ? publicHosts.map(h => hostnameOf(h)).filter(Boolean) : []);
   const store = new Store(dbPath); const engine = new Engine(store, { speed, clock, caseBuilder, enrichmentRunner });
   let knowledgeReady = false;
   const syncKnowledge = () => {
@@ -87,9 +92,11 @@ export function createApp({ dbPath = ':memory:', speed = 30, autoTick = true, de
   const handleRequest = async (req, res) => {
     try {
       const url = new URL(req.url, 'http://localhost'); const path = url.pathname;
-      let hostname;
-      try { hostname = new URL(`http://${req.headers.host ?? ''}`).hostname; } catch { hostname = ''; }
-      if (!['localhost', '127.0.0.1', '[::1]'].includes(hostname)) throw new AppError(421, 'HOST_REJECTED', 'This local simulation accepts only loopback hostnames.');
+      const header = name => String(req.headers[name] ?? '').split(',')[0].trim();
+      let requestHost = req.headers.host ?? ''; let hostname = hostnameOf(requestHost);
+      if (publicDemo && !LOOPBACK_HOSTS.includes(hostname) && !allowedHosts.has(hostname) && allowedHosts.has(hostnameOf(header('x-forwarded-host')))) { requestHost = header('x-forwarded-host'); hostname = hostnameOf(requestHost); }
+      if (!LOOPBACK_HOSTS.includes(hostname) && !allowedHosts.has(hostname)) throw new AppError(421, 'HOST_REJECTED', publicDemo ? 'This public demo accepts only its configured hostname.' : 'This local simulation accepts only loopback hostnames.');
+      const cookieSecurity = publicDemo && header('x-forwarded-proto') === 'https' ? '; Secure' : '';
       if (req.method !== 'GET' && req.method !== 'POST') throw new AppError(405, 'METHOD_NOT_ALLOWED', 'Only GET and POST are supported.');
       if (!path.startsWith('/v1/')) {
         if (req.method !== 'GET') throw new AppError(405, 'METHOD_NOT_ALLOWED', 'Static resources are read only.');
@@ -100,7 +107,8 @@ export function createApp({ dbPath = ':memory:', speed = 30, autoTick = true, de
         const info = await stat(file).catch(() => null); if (!info?.isFile() || !MIME[extname(file)]) throw new AppError(404, 'NOT_FOUND', 'File not found.');
         res.writeHead(200, { ...headers, 'Content-Type': MIME[extname(file)], 'Cache-Control': 'no-cache' }); res.end(await readFile(file)); return;
       }
-      const rateKey = req.socket.remoteAddress ?? 'local'; const now = Date.now();
+      // Behind the public-demo proxy every request shares the proxy's address, so budget per original visitor.
+      const rateKey = (publicDemo && (header('cf-connecting-ip') || header('x-forwarded-for'))) || req.socket.remoteAddress || 'local'; const now = Date.now();
       if (rates.size > 1000) rates.clear();
       const budget = rates.get(rateKey) ?? { reset: now + 60_000, n: 0 };
       if (now > budget.reset) { budget.reset = now + 60_000; budget.n = 0; }
@@ -110,17 +118,17 @@ export function createApp({ dbPath = ':memory:', speed = 30, autoTick = true, de
         let origin;
         try { origin = new URL(req.headers.origin); } catch { throw new AppError(400, 'INVALID_ORIGIN', 'Origin must be a serialized HTTP origin.'); }
         if (origin.origin !== req.headers.origin || origin.username || origin.password) throw new AppError(400, 'INVALID_ORIGIN', 'Origin must not contain credentials, paths or query parameters.');
-        if (origin.host !== req.headers.host || !['http:', 'https:'].includes(origin.protocol)) throw new AppError(403, 'ORIGIN_REJECTED', 'Cross-origin writes are not allowed.');
+        if (origin.host !== requestHost || !['http:', 'https:'].includes(origin.protocol)) throw new AppError(403, 'ORIGIN_REJECTED', 'Cross-origin writes are not allowed.');
       }
       if (req.method === 'GET' && path === '/v1/health') {
         const health = engine.monitor.report(store, { automatic: autoTick, enrichmentFault: engine.enrichmentFault, knowledgeReady: knowledgeReady && KNOWLEDGE_STATUS.ready });
         json(res, health.ready ? 200 : 503, health); return;
       }
-      if (req.method === 'GET' && path === '/v1/auth/config') { json(res, 200, { demo, roles: demo ? ROLES : [] }); return; }
+      if (req.method === 'GET' && path === '/v1/auth/config') { json(res, 200, { demo, roles: demo ? ROLES : [], public_demo: publicDemo }); return; }
       if (req.method === 'POST' && path === '/v1/auth/demo') {
         if (!demo) throw new AppError(403, 'DEMO_DISABLED', 'Local demo identity selection is disabled.');
         const b = await body(req); const session = createSession(store, b.role ?? 'demo_admin');
-        json(res, 200, { identity: session.identity, expires_at: session.expires }, { 'Set-Cookie': `astra_session=${session.token}; HttpOnly; SameSite=Strict; Path=/; Max-Age=7200` }); return;
+        json(res, 200, { identity: session.identity, expires_at: session.expires }, { 'Set-Cookie': `astra_session=${session.token}; HttpOnly; SameSite=Strict; Path=/; Max-Age=7200${cookieSecurity}` }); return;
       }
       const identity = getIdentity(store, req.headers.cookie);
       if (req.method === 'POST' && path === '/v1/ingest/telemetry') {
@@ -133,7 +141,7 @@ export function createApp({ dbPath = ':memory:', speed = 30, autoTick = true, de
       if (req.method === 'POST' && path === '/v1/auth/logout') {
         const token = /astra_session=([a-f0-9]{64})/.exec(req.headers.cookie ?? '')?.[1];
         if (token) store.db.prepare('DELETE FROM sessions WHERE token_hash=?').run(hash(token));
-        store.audit(identity.id, 'auth.logout', identity.id); json(res, 200, { ok: true }, { 'Set-Cookie': 'astra_session=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0' }); return;
+        store.audit(identity.id, 'auth.logout', identity.id); json(res, 200, { ok: true }, { 'Set-Cookie': `astra_session=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0${cookieSecurity}` }); return;
       }
       let match;
       if((match=/^\/v1\/crew\/(CREW-\d{2})\/waveforms(?:\/([A-Za-z0-9_.-]+)(?:\/chunks\/(ECG|PPG|RESP)\/(\d+))?)?$/.exec(path))
@@ -392,10 +400,14 @@ function openapi() {
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   const host = process.env.HOST ?? '127.0.0.1';
-  if (!['127.0.0.1', 'localhost', '::1'].includes(host)) throw new Error('The local role-selecting demo must bind to loopback. Deploy behind real authentication before allowing remote access.');
+  const publicDemo = process.env.ASTRA_PUBLIC_DEMO === 'true';
+  const publicHosts = String(process.env.ASTRA_PUBLIC_HOSTS || process.env.RENDER_EXTERNAL_HOSTNAME || '').split(',').map(h => h.trim()).filter(Boolean);
+  if (!publicDemo && !['127.0.0.1', 'localhost', '::1'].includes(host)) throw new Error('The local role-selecting demo must bind to loopback. Deploy behind real authentication before allowing remote access. For a shared fictional demo only, set ASTRA_PUBLIC_DEMO=true and ASTRA_PUBLIC_HOSTS.');
+  if (publicDemo && !publicHosts.length) throw new Error('ASTRA_PUBLIC_DEMO=true needs ASTRA_PUBLIC_HOSTS, the public hostname such as astra.onrender.com (on Render it is read from RENDER_EXTERNAL_HOSTNAME).');
   const port = Number(process.env.PORT ?? 3000); const speed = Number(process.env.ASTRA_SPEED ?? 30);
   if (!Number.isInteger(port) || port < 1 || port > 65535 || !Number.isFinite(speed) || speed < 1 || speed > 3600) throw new Error('Invalid PORT or ASTRA_SPEED.');
-  const app = createApp({ dbPath: process.env.ASTRA_DB ?? resolve(ROOT, 'data/runtime/astra.sqlite'), speed, demo: process.env.ASTRA_DEMO !== 'false', ingestToken: process.env.ASTRA_INGEST_TOKEN ?? '' });
+  const app = createApp({ dbPath: process.env.ASTRA_DB ?? resolve(ROOT, 'data/runtime/astra.sqlite'), speed, demo: process.env.ASTRA_DEMO !== 'false', ingestToken: process.env.ASTRA_INGEST_TOKEN ?? '', publicDemo, publicHosts });
+  if (publicDemo) console.warn(`PUBLIC DEMO MODE for ${publicHosts.join(', ')}: anyone with the link can choose any fictional role and everyone shares one mission. Fictional data only; never add real health records.`);
   app.server.once('error', async error => {
     console.error(`ASTRA could not open its local listener (${error.code}). Run npm start in a normal terminal with loopback networking enabled.`);
     await app.close(); process.exitCode = 1;

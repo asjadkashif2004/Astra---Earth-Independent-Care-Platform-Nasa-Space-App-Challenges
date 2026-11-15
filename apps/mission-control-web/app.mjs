@@ -597,11 +597,13 @@ async function renderLogin(){
         </select></label>
         <button class="button primary">Enter simulation ${icon('arrow',15)}</button>
         <p class="login-note">Local role selection is a demonstration convenience, not production authentication. All telemetry is synthetic. Not a medical device, NASA-certified or flight-qualified. No credentials or external AI service required.</p>
+        <p class="login-note" id="login-public" hidden><strong>Shared public demo:</strong> everyone with this link sees the same fictional mission, and it starts fresh whenever the server restarts.</p>
         <p class="login-note" id="login-error" role="status"></p>
       </form>
     </main>
   </div>`;
   createScene('login-earth','earth');syncGraphics();
+  fetch('/v1/auth/config',{credentials:'same-origin'}).then(r=>r.ok?r.json():null).then(c=>{if(c?.public_demo)document.querySelector('#login-public')?.removeAttribute('hidden');}).catch(()=>{});
 }
 
 document.addEventListener('click',async event=>{

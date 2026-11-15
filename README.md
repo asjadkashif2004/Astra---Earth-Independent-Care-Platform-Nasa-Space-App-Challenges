@@ -147,14 +147,18 @@ Then open **http://localhost:3000** in Chrome, Edge or Firefox, pick a demo role
 
 A step-by-step guide with screenshots (in Roman Urdu) is in [docs/demo/ASTRA_Demo_Guide_Roman_Urdu.pdf](docs/demo/ASTRA_Demo_Guide_Roman_Urdu.pdf).
 
+### Put it online for free (Render)
+
+The repository includes a [render.yaml](render.yaml) Blueprint. Sign in to [render.com](https://render.com) with GitHub, click **New + → Blueprint**, pick this repository and click **Deploy Blueprint**. The free web service needs no credit card. Everyone with the link shares one fictional mission, it sleeps after about 15 minutes without visitors, and it starts fresh on every restart. Full step-by-step guide: [docs/DEPLOY_RENDER.md](docs/DEPLOY_RENDER.md).
+
 ### Run the tests
 
 ```bash
 npm run check
-node --test --test-isolation=none tests/foundation.test.mjs tests/integration.test.mjs tests/web.test.mjs tests/frontend-correctness.test.mjs tests/self-health.test.mjs tests/symptom-report.test.mjs tests/research-library.test.mjs tests/anatomy-linkage-ui.test.mjs tests/sleep-lifecycle.test.mjs
+node --test --test-isolation=none tests/foundation.test.mjs tests/integration.test.mjs tests/web.test.mjs tests/frontend-correctness.test.mjs tests/self-health.test.mjs tests/symptom-report.test.mjs tests/research-library.test.mjs tests/anatomy-linkage-ui.test.mjs tests/sleep-lifecycle.test.mjs tests/public-demo.test.mjs
 ```
 
-The first command checks every JavaScript file. The second runs the core tests (83 tests, about a minute); GitHub Actions runs the same set on every push. The full `npm test` suite also includes long native-runtime experiments that need extra local setup, so use the commands above for a quick check.
+The first command checks every JavaScript file. The second runs the core tests (89 tests, about a minute); GitHub Actions runs the same set on every push. The full `npm test` suite also includes long native-runtime experiments that need extra local setup, so use the commands above for a quick check.
 
 ---
 
@@ -182,7 +186,7 @@ The first command checks every JavaScript file. The second runs the core tests (
 - All crew members and all health data are **fictional and synthetic**. ASTRA has not been tested with real astronauts or real wearable devices.
 - Review levels are for demonstration only. They are **not** NASA medical limits.
 - Not tracked yet: total radiation dose, neutron dose, bone density, muscle strength, balance, eye changes and immune markers. Connecting real wearables and these measurements is the next step.
-- The demo login lets you pick any role. That is fine on your own computer, but a public server would need real logins first, so the server only listens on your own machine (`127.0.0.1`) by default.
+- The demo login lets you pick any role. That is fine on your own computer, but a real public service would need real logins first, so the server only listens on your own machine (`127.0.0.1`) by default. The optional shared public demo mode (used for Render) must be switched on on purpose and is meant only for fictional data.
 
 ## Use of AI
 

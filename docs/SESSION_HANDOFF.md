@@ -1,5 +1,9 @@
 # ASTRA session handoff — presentation READY WITH LIMITATIONS; STOP
 
+## Free public demo on Render — 2026-11-15 (delivered, STOP)
+
+The repository is public at github.com/asjadkashif2004/Astra---Earth-Independent-Care-Platform-Nasa-Space-App-Challenges and now carries an opt-in shared public demo mode plus `render.yaml`. Follow `docs/DEPLOY_RENDER.md` (sign in to Render with GitHub → New + → Blueprint → Deploy). Local `npm start` is unchanged and still loopback-only. Verified by 6 new tests, a 118-test regression and a Render-style headless Chrome run; the real Render deployment is not yet verified. The 30-second video `docs/demo/ASTRA_30s_demo.mp4` and the corrected submission text are local only until the owner approves pushing them. STOP.
+
 ## Anatomy & health linkage panel redesign — 2026-11-15 (delivered, STOP)
 
 The Crew health → "Anatomy & health linkage" panel is now a banner + chips + status strip + reading cards + monitoring/scenario cards + drawers, matching the project's dark card style. Presentation only: same reads, IDs, data attributes and safety wording. Verified in headless Chrome at desktop and phone width and by 163 related tests. Nothing committed. STOP.

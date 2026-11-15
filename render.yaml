@@ -1,0 +1,26 @@
+# Render Blueprint — one free web service running ASTRA as a shared public demo.
+# Fictional crew and synthetic data only. Everyone with the link shares one mission,
+# and the data starts fresh whenever the service restarts or redeploys.
+# Step-by-step guide: docs/DEPLOY_RENDER.md
+services:
+  - type: web
+    name: astra-earth-independent-care
+    runtime: node
+    plan: free
+    branch: main
+    # ASTRA has no npm dependencies to install (Three.js is vendored), so the build only prints the Node version.
+    buildCommand: node --version
+    startCommand: node services/api/server.mjs
+    envVars:
+      - key: NODE_VERSION
+        value: 24.21.0
+      # Listen on all interfaces so Render can route traffic to the service.
+      - key: HOST
+        value: 0.0.0.0
+      # Explicit opt-in for the shared public demo. The public hostname is read
+      # automatically from Render's RENDER_EXTERNAL_HOSTNAME variable.
+      - key: ASTRA_PUBLIC_DEMO
+        value: "true"
+      # Mission clock speed: 30x makes scenario changes and the 12-minute Earth delay visible within a minute.
+      - key: ASTRA_SPEED
+        value: "30"

@@ -1,4 +1,4 @@
-const CACHE = 'astra-shell-v17-self-health';
+const CACHE = 'astra-shell-v18-public-demo';
 const SHELL = ['/', '/index.html', '/styles.css', '/mission.css', '/anatomy.css', '/anatomy.mjs', '/n11.mjs', '/n11.css', '/n09.mjs', '/n09.css', '/n10.mjs', '/n10.css', '/waveforms.mjs', '/waveforms.css', '/shared/waveforms.mjs', '/fixture-trace.mjs', '/app.mjs', '/scenes.mjs', '/earth.mjs', '/ui.mjs', '/shared/contracts.mjs', '/shared/presentation.mjs', '/icon.svg', '/manifest.webmanifest'];
 SHELL.push('/n12.mjs','/n12.css');
 SHELL.push('/anatomy-lod.mjs','/anatomy-phase.mjs','/anatomy-health.mjs','/shared/anatomy-link.mjs');
