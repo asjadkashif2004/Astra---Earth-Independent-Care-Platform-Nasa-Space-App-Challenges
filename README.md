@@ -8,6 +8,9 @@ ASTRA is a health-monitoring app for astronauts on long missions, such as a trip
 
 ![ASTRA mission overview](docs/demo/guide-images/02-overview.jpg)
 
+Live demo: https://astra-earth-independent-care.onrender.com 
+(free server — the first load may take about a minute while it wakes up; all crew and data are fictional)
+
 ---
 
 ## The problem, in simple words
