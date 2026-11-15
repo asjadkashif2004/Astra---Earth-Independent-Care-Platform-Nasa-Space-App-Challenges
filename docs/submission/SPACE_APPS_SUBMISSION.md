@@ -40,7 +40,7 @@ ASTRA turns NASA's five spaceflight hazards and 17 health risks into a working t
 
 ## 3. Final Project Link
 
-https://github.com/basim-x/NASAstra
+https://github.com/asjadkashif2004/Astra---Earth-Independent-Care-Platform-Nasa-Space-App-Challenges
 (Public repository with source code, run instructions, documentation, tests and a Roman Urdu demo guide.)
 
 ---

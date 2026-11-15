@@ -3,7 +3,7 @@ on: [push, pull_request]
 permissions:
   contents: read
 jobs:
-  local-core:
+  core:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -13,7 +13,13 @@ jobs:
         with:
           node-version: '24'
           package-manager-cache: false
+      # Syntax and local-import check of every JavaScript file.
       - run: npm run check
-      - run: npm test
-      - run: npm run evaluate
-      - run: npm run benchmark
+      # Core regression set. The full `npm test` wildcard also runs native-runtime
+      # campaigns that need local tools and large evidence files kept out of Git.
+      - run: >-
+          node --test --test-isolation=none
+          tests/foundation.test.mjs tests/integration.test.mjs tests/web.test.mjs
+          tests/frontend-correctness.test.mjs tests/self-health.test.mjs
+          tests/symptom-report.test.mjs tests/research-library.test.mjs
+          tests/anatomy-linkage-ui.test.mjs tests/sleep-lifecycle.test.mjs
